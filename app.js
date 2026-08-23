@@ -299,6 +299,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   e.preventDefault();
   const cropKey = document.getElementById('crop-select').value;
   const fertilizer = document.getElementById('crop-fert').value;
+  const location = document.getElementById('crop-loc').value;
   const agriculturist = false;
 
   const crop = CROP_GROWTH_PRESETS[cropKey];
@@ -308,7 +309,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   const plantTask = {
     id: 'plant_' + Date.now(),
     type: 'plant',
-    label: `🌱 Plant ${crop.name}`
+    label: `🌱 Plant ${crop.name} (${location})`
   };
   const currentYearSchedule = getYearSchedule(currentYear);
   if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
@@ -319,7 +320,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   const harvestTask = {
     id: 'harvest_' + Date.now(),
     type: 'harvest',
-    label: `🌾 Harvest ${crop.name}`,
+    label: `🌾 Harvest ${crop.name} (${location})`,
     sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
   };
   
@@ -335,7 +336,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
       const regrowTask = {
         id: 'harvest_regrow_' + Date.now() + '_' + i,
         type: 'harvest',
-        label: `🌾 Harvest ${crop.name} (Regrow)`,
+        label: `🌾 Harvest ${crop.name} (Regrow - ${location})`,
         sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
       };
       
@@ -355,13 +356,14 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
 document.getElementById('form-machine').addEventListener('submit', (e) => {
   e.preventDefault();
   const machineKey = document.getElementById('machine-select').value;
+  const location = document.getElementById('machine-loc').value;
   const preset = MACHINE_PRESETS[machineKey];
 
   // 1. Add Load Task to selected day
   const loadTask = {
     id: 'load_' + Date.now(),
     type: machineKey.includes('keg') ? 'keg' : 'cask',
-    label: `📥 Load ${preset.name}`
+    label: `📥 Load ${preset.name} (${location})`
   };
   const currentYearSchedule = getYearSchedule(currentYear);
   if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
@@ -372,7 +374,7 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   const readyTask = {
     id: 'ready_' + Date.now(),
     type: machineKey.includes('keg') ? 'keg' : 'cask',
-    label: `📦 ${preset.name} Ready`,
+    label: `📦 ${preset.name} Ready (${location})`,
     sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
   };
   
