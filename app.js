@@ -269,8 +269,8 @@ function renderTasksForDay(day) {
     const crop = CROP_GROWTH_PRESETS[plant.task.cropKey];
     if (!crop) return;
     
-    const growthDays = crop.getDays(plant.task.fertilizer, false);
-    const firstHarvestAbs = plantAbs + growthDays;
+    const growthDays = plant.task.stage === 'regrow' ? 0 : crop.getDays(plant.task.fertilizer, false);
+    const firstHarvestAbs = plantAbs + growthDays + (plant.task.stage === 'regrow' ? crop.regrow : 0);
 
     // Only calculate if the crop planting is on or before the current day,
     // and the viewed day is on or after the first harvest day,
@@ -359,7 +359,14 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   const cropKey = document.getElementById('crop-select').value;
   const fertilizer = document.getElementById('crop-fert').value;
   const location = document.getElementById('crop-loc').value;
+  const cropStage = document.getElementById('crop-stage').value;
   const crop = CROP_GROWTH_PRESETS[cropKey];
+  
+  if (cropStage === 'regrow' && crop.regrow === 0) {
+    alert(`❌ ${crop.name} is a single-harvest crop and does not support regrow cycles.`);
+    return;
+  }
+
   const groupId = 'crop_group_' + Date.now();
 
   const plantTask = {
@@ -368,7 +375,8 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     cropKey: cropKey,
     fertilizer: fertilizer,
     location: location,
-    label: `🌱 Plant ${crop.name} (${location})`,
+    stage: cropStage,
+    label: cropStage === 'regrow' ? `🌱 Regrow Start: ${crop.name} (${location})` : `🌱 Plant ${crop.name} (${location})`,
     groupId: groupId
   };
 
