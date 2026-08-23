@@ -59,7 +59,16 @@ const CROP_IMAGES = {
   'apple': 'https://stardewvalleywiki.com/mediawiki/images/7/7d/Apple.png',
   'pomegranate': 'https://stardewvalleywiki.com/mediawiki/images/1/1b/Pomegranate.png',
   'banana': 'https://stardewvalleywiki.com/mediawiki/images/6/69/Banana.png',
-  'mango': 'https://stardewvalleywiki.com/mediawiki/images/3/38/Mango.png',
+};
+
+const MACHINE_IMAGES = {
+  'keg_wine': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png',
+  'keg_beer': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png',
+  'preserves': 'https://stardewvalleywiki.com/mediawiki/images/1/1e/Preserves_Jar.png',
+  'cask_silver': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
+  'cask_gold': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
+  'cask_iridium': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
+  'solar_panel': 'https://stardewvalleywiki.com/mediawiki/images/5/5d/Solar_Panel.png'
 };
 
 // Initialize current year structure if not present (guarantees all seasons exist)
@@ -186,6 +195,8 @@ function renderTasksForDay(day) {
     let iconHtml = '';
     if (task.cropKey && CROP_IMAGES[task.cropKey]) {
       iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 4px; vertical-align: middle;">`;
+    } else if (task.machineKey && MACHINE_IMAGES[task.machineKey]) {
+      iconHtml = `<img src="${MACHINE_IMAGES[task.machineKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 4px; vertical-align: middle;">`;
     }
     
     item.innerHTML = `
@@ -225,6 +236,8 @@ window.openModal = function(day) {
       let iconHtml = '';
       if (task.cropKey && CROP_IMAGES[task.cropKey]) {
         iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 6px; vertical-align: middle;">`;
+      } else if (task.machineKey && MACHINE_IMAGES[task.machineKey]) {
+        iconHtml = `<img src="${MACHINE_IMAGES[task.machineKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 6px; vertical-align: middle;">`;
       }
       
       item.innerHTML = `
@@ -391,7 +404,8 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   // 1. Add Load Task to selected day
   const loadTask = {
     id: 'load_' + Date.now(),
-    type: machineKey.includes('keg') ? 'keg' : 'cask',
+    type: machineKey.includes('keg') ? 'keg' : (machineKey === 'solar_panel' ? 'solar' : 'cask'),
+    machineKey: machineKey,
     label: `📥 Load ${preset.name} (${location})`,
     groupId: groupId,
     absDay: loadAbs
@@ -405,7 +419,8 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   const readyAbs = getAbsoluteDay(readyDate.year, readyDate.season, readyDate.day);
   const readyTask = {
     id: 'ready_' + Date.now(),
-    type: machineKey.includes('keg') ? 'keg' : 'cask',
+    type: machineKey.includes('keg') ? 'keg' : (machineKey === 'solar_panel' ? 'solar' : 'cask'),
+    machineKey: machineKey,
     label: `📦 ${preset.name} Ready (${location})`,
     sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
     groupId: groupId,
