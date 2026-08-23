@@ -21,13 +21,37 @@ if (rawSchedule.spring || rawSchedule.summer || rawSchedule.fall || rawSchedule.
 }
 
 const CROP_IMAGES = {
-  'starfruit': 'https://stardewvalleywiki.com/mediawiki/images/d/db/Starfruit.png',
-  'ancient': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Ancient_Fruit.png',
-  'rhubarb': 'https://stardewvalleywiki.com/mediawiki/images/6/6e/Rhubarb.png',
-  'sweetgem': 'https://stardewvalleywiki.com/mediawiki/images/8/88/Sweet_Gem_Berry.png',
+  'parsnip': 'https://stardewvalleywiki.com/mediawiki/images/d/db/Parsnip.png',
+  'potato': 'https://stardewvalleywiki.com/mediawiki/images/c/c2/Potato.png',
+  'cauliflower': 'https://stardewvalleywiki.com/mediawiki/images/a/aa/Cauliflower.png',
+  'kale': 'https://stardewvalleywiki.com/mediawiki/images/d/d1/Kale.png',
+  'garlic': 'https://stardewvalleywiki.com/mediawiki/images/c/cc/Garlic.png',
+  'unmilled_rice': 'https://stardewvalleywiki.com/mediawiki/images/f/fe/Unmilled_Rice.png',
   'strawberry': 'https://stardewvalleywiki.com/mediawiki/images/6/6d/Strawberry.png',
-  'cranberries': 'https://stardewvalleywiki.com/mediawiki/images/6/6e/Cranberries.png',
-  'blueberries': 'https://stardewvalleywiki.com/mediawiki/images/a/af/Blueberries.png',
+  'rhubarb': 'https://stardewvalleywiki.com/mediawiki/images/6/6e/Rhubarb.png',
+  'green_bean': 'https://stardewvalleywiki.com/mediawiki/images/5/5c/Green_Bean.png',
+  'melon': 'https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png',
+  'blueberry': 'https://stardewvalleywiki.com/mediawiki/images/a/af/Blueberries.png',
+  'starfruit': 'https://stardewvalleywiki.com/mediawiki/images/d/db/Starfruit.png',
+  'corn': 'https://stardewvalleywiki.com/mediawiki/images/f/f8/Corn.png',
+  'hot_pepper': 'https://stardewvalleywiki.com/mediawiki/images/f/f1/Hot_Pepper.png',
+  'tomato': 'https://stardewvalleywiki.com/mediawiki/images/9/9d/Tomato.png',
+  'radish': 'https://stardewvalleywiki.com/mediawiki/images/d/d5/Radish.png',
+  'red_cabbage': 'https://stardewvalleywiki.com/mediawiki/images/2/2d/Red_Cabbage.png',
+  'hops': 'https://stardewvalleywiki.com/mediawiki/images/5/59/Hops.png',
+  'pumpkin': 'https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png',
+  'cranberry': 'https://stardewvalleywiki.com/mediawiki/images/6/6e/Cranberries.png',
+  'grape': 'https://stardewvalleywiki.com/mediawiki/images/c/c2/Grape.png',
+  'eggplant': 'https://stardewvalleywiki.com/mediawiki/images/8/8f/Eggplant.png',
+  'amaranth': 'https://stardewvalleywiki.com/mediawiki/images/f/f6/Amaranth.png',
+  'artichoke': 'https://stardewvalleywiki.com/mediawiki/images/d/dd/Artichoke.png',
+  'beet': 'https://stardewvalleywiki.com/mediawiki/images/a/a4/Beet.png',
+  'bok_choy': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Bok_Choy.png',
+  'sweetgem': 'https://stardewvalleywiki.com/mediawiki/images/8/88/Sweet_Gem_Berry.png',
+  'ancient': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Ancient_Fruit.png',
+  'pineapple': 'https://stardewvalleywiki.com/mediawiki/images/f/fb/Pineapple.png',
+  'taro': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Taro_Root.png',
+  'coffee': 'https://stardewvalleywiki.com/mediawiki/images/3/33/Coffee_Bean.png',
   'cherry': 'https://stardewvalleywiki.com/mediawiki/images/2/20/Cherry.png',
   'apricot': 'https://stardewvalleywiki.com/mediawiki/images/f/fc/Apricot.png',
   'orange': 'https://stardewvalleywiki.com/mediawiki/images/4/43/Orange.png',
@@ -52,113 +76,7 @@ function getYearSchedule(year) {
   return schedule[year];
 }
 
-// Crop Growth Table (Pre-calculated exact values to match Stardew Wiki)
-const CROP_GROWTH_PRESETS = {
-  starfruit: {
-    name: 'Starfruit',
-    base: 13,
-    regrow: 0,
-    getDays: (fert, agri) => {
-      if (fert === 'none' && !agri) return 13;
-      if (fert === 'speed' && !agri) return 11;
-      if (fert === 'deluxe' && !agri) return 9;
-      if (fert === 'hyper' && !agri) return 8;
-      if (fert === 'none' && agri) return 11;
-      if (fert === 'speed' && agri) return 10;
-      if (fert === 'deluxe' && agri) return 8;
-      if (fert === 'hyper' && agri) return 7;
-      return 13;
-    }
-  },
-  ancient: {
-    name: 'Ancient Fruit',
-    base: 28,
-    regrow: 7,
-    getDays: (fert, agri) => {
-      if (fert === 'none' && !agri) return 28;
-      if (fert === 'speed' && !agri) return 25;
-      if (fert === 'deluxe' && !agri) return 21;
-      if (fert === 'hyper' && !agri) return 18;
-      if (fert === 'none' && agri) return 25;
-      if (fert === 'speed' && agri) return 22;
-      if (fert === 'deluxe' && agri) return 18;
-      if (fert === 'hyper' && agri) return 15;
-      return 28;
-    }
-  },
-  strawberry: {
-    name: 'Strawberry',
-    base: 8,
-    regrow: 4,
-    getDays: (fert, agri) => {
-      if (fert === 'none' && !agri) return 8;
-      if (fert === 'speed' && !agri) return 7;
-      if (fert === 'deluxe' && !agri) return 6;
-      if (fert === 'hyper' && !agri) return 5;
-      if (fert === 'none' && agri) return 7;
-      if (fert === 'speed' && agri) return 6;
-      if (fert === 'deluxe' && agri) return 5;
-      if (fert === 'hyper' && agri) return 4;
-      return 8;
-    }
-  },
-  rhubarb: {
-    name: 'Rhubarb',
-    base: 13,
-    regrow: 0,
-    getDays: (fert, agri) => {
-      if (fert === 'none' && !agri) return 13;
-      if (fert === 'speed' && !agri) return 11;
-      if (fert === 'deluxe' && !agri) return 9;
-      if (fert === 'hyper' && !agri) return 8;
-      if (fert === 'none' && agri) return 11;
-      if (fert === 'speed' && agri) return 10;
-      if (fert === 'deluxe' && agri) return 8;
-      if (fert === 'hyper' && agri) return 7;
-      return 13;
-    }
-  },
-  blueberries: {
-    name: 'Blueberries',
-    base: 13,
-    regrow: 4,
-    getDays: (fert, agri) => {
-      if (fert === 'none' && !agri) return 13;
-      if (fert === 'speed' && !agri) return 11;
-      if (fert === 'deluxe' && !agri) return 9;
-      if (fert === 'hyper' && !agri) return 8;
-      if (fert === 'none' && agri) return 11;
-      if (fert === 'speed' && agri) return 10;
-      if (fert === 'deluxe' && agri) return 8;
-      if (fert === 'hyper' && agri) return 7;
-      return 13;
-    }
-  },
-  sweetgem: {
-    name: 'Sweet Gem Berry',
-    base: 24,
-    regrow: 0,
-    getDays: (fert, agri) => {
-      if (fert === 'none' && !agri) return 24;
-      if (fert === 'speed' && !agri) return 21;
-      if (fert === 'deluxe' && !agri) return 18;
-      if (fert === 'hyper' && !agri) return 16;
-      if (fert === 'none' && agri) return 21;
-      if (fert === 'speed' && agri) return 19;
-      if (fert === 'deluxe' && agri) return 15;
-      if (fert === 'hyper' && agri) return 13;
-      return 24;
-    }
-  },
-  cherry: { name: 'Cherry Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', getDays: () => 28 },
-  apricot: { name: 'Apricot Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', getDays: () => 28 },
-  orange: { name: 'Orange Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', getDays: () => 28 },
-  peach: { name: 'Peach Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', getDays: () => 28 },
-  apple: { name: 'Apple Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', getDays: () => 28 },
-  pomegranate: { name: 'Pomegranate Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', getDays: () => 28 },
-  banana: { name: 'Banana Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', getDays: () => 28 },
-  mango: { name: 'Mango Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', getDays: () => 28 }
-};
+const CROP_GROWTH_PRESETS = {};
 
 const MACHINE_PRESETS = {
   keg_wine: { name: 'Keg (Wine)', duration: 7 },
@@ -787,4 +705,191 @@ document.getElementById('form-sync').addEventListener('submit', (e) => {
     alert("⚡ Database URL saved! Connecting to cloud database...");
   }
   window.location.reload();
+});
+
+// MASTER CROPS DATA & SELECTION MANAGER
+const MASTER_CROPS = [
+  // Spring
+  { key: 'parsnip', name: 'Parsnip', base: 4, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'potato', name: 'Potato', base: 6, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'cauliflower', name: 'Cauliflower', base: 12, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'kale', name: 'Kale', base: 6, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'garlic', name: 'Garlic', base: 4, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'unmilled_rice', name: 'Unmilled Rice', base: 8, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'strawberry', name: 'Strawberry', base: 8, regrow: 4, season: 'spring', type: 'Spring' },
+  { key: 'rhubarb', name: 'Rhubarb', base: 13, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'green_bean', name: 'Green Bean', base: 10, regrow: 3, season: 'spring', type: 'Spring' },
+  // Summer
+  { key: 'melon', name: 'Melon', base: 12, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'blueberry', name: 'Blueberry', base: 13, regrow: 4, season: 'summer', type: 'Summer' },
+  { key: 'starfruit', name: 'Starfruit', base: 13, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'corn', name: 'Corn', base: 14, regrow: 4, season: 'summer', type: 'Summer' },
+  { key: 'hot_pepper', name: 'Hot Pepper', base: 5, regrow: 3, season: 'summer', type: 'Summer' },
+  { key: 'tomato', name: 'Tomato', base: 11, regrow: 4, season: 'summer', type: 'Summer' },
+  { key: 'radish', name: 'Radish', base: 6, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'red_cabbage', name: 'Red Cabbage', base: 9, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'hops', name: 'Hops', base: 11, regrow: 1, season: 'summer', type: 'Summer' },
+  // Fall
+  { key: 'pumpkin', name: 'Pumpkin', base: 13, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'cranberry', name: 'Cranberries', base: 7, regrow: 5, season: 'fall', type: 'Fall' },
+  { key: 'grape', name: 'Grape', base: 10, regrow: 3, season: 'fall', type: 'Fall' },
+  { key: 'eggplant', name: 'Eggplant', base: 7, regrow: 5, season: 'fall', type: 'Fall' },
+  { key: 'amaranth', name: 'Amaranth', base: 7, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'artichoke', name: 'Artichoke', base: 8, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'beet', name: 'Beet', base: 6, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'bok_choy', name: 'Bok Choy', base: 4, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'sweetgem', name: 'Sweet Gem Berry', base: 24, regrow: 0, season: 'fall', type: 'Fall' },
+  // Special / Trees
+  { key: 'ancient', name: 'Ancient Fruit', base: 28, regrow: 7, season: 'spring', type: 'Special' },
+  { key: 'pineapple', name: 'Pineapple', base: 14, regrow: 7, season: 'summer', type: 'Special' },
+  { key: 'taro', name: 'Taro Root', base: 10, regrow: 0, season: 'summer', type: 'Special' },
+  { key: 'coffee', name: 'Coffee Bean', base: 10, regrow: 2, season: 'spring', type: 'Special' },
+  { key: 'cherry', name: 'Cherry Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
+  { key: 'apricot', name: 'Apricot Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
+  { key: 'orange', name: 'Orange Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'peach', name: 'Peach Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'apple', name: 'Apple Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', type: 'Tree' },
+  { key: 'pomegranate', name: 'Pomegranate Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', type: 'Tree' },
+  { key: 'banana', name: 'Banana Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'mango', name: 'Mango Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' }
+];
+
+// Helper to calculate speed growth days dynamically
+function calculateGrowthDays(baseDays, fertilizer, hasAgriculturist) {
+  let multiplier = 1.0;
+  if (fertilizer === 'speed') multiplier -= 0.1;
+  if (fertilizer === 'deluxe') multiplier -= 0.25;
+  if (fertilizer === 'hyper') multiplier -= 0.33;
+  if (hasAgriculturist) multiplier -= 0.1;
+  return Math.max(1, Math.floor(baseDays * multiplier));
+}
+
+// Populate presets table dynamically
+MASTER_CROPS.forEach(c => {
+  CROP_GROWTH_PRESETS[c.key] = {
+    name: c.name,
+    base: c.base,
+    regrow: c.regrow,
+    isTree: c.isTree || false,
+    activeSeason: c.activeSeason || c.season,
+    getDays: (fert, agri) => {
+      if (c.isTree) return 28;
+      return calculateGrowthDays(c.base, fert, agri);
+    }
+  };
+});
+
+// Crop Manager DOM Elements
+const cropManagerOverlay = document.getElementById('crop-manager-overlay');
+const cropManagerClose = document.getElementById('crop-manager-close');
+const cropManagerSave = document.getElementById('crop-manager-save');
+const cropSearchInput = document.getElementById('crop-search-input');
+const cropManagerList = document.getElementById('crop-manager-list');
+const btnManageCrops = document.getElementById('btn-manage-crops');
+
+// Populate crop select field based on active list
+function populateCropDropdown() {
+  const activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
+  const select = document.getElementById('crop-select');
+  if (!select) return;
+  select.innerHTML = '';
+  
+  const activeCrops = MASTER_CROPS.filter(c => activeKeys.includes(c.key));
+  activeCrops.forEach(c => {
+    const option = document.createElement('option');
+    option.value = c.key;
+    let label = `${c.name} (${c.base}d`;
+    if (c.regrow > 0) label += ` + ${c.regrow}d regrow`;
+    if (c.isTree) label += `, ${c.activeSeason.toUpperCase()}`;
+    label += `)`;
+    option.innerText = label;
+    select.appendChild(option);
+  });
+}
+
+// Initial populate
+populateCropDropdown();
+
+// Render selector list inside Crop Manager
+function renderCropManagerList() {
+  const query = cropSearchInput.value.toLowerCase().trim();
+  const activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
+  
+  cropManagerList.innerHTML = '';
+  
+  const filtered = MASTER_CROPS.filter(c => c.name.toLowerCase().includes(query) || c.type.toLowerCase().includes(query));
+  
+  filtered.forEach(c => {
+    const div = document.createElement('div');
+    div.style.display = 'flex';
+    div.style.alignItems = 'center';
+    div.style.justifyContent = 'space-between';
+    div.style.padding = '0.35rem 0.5rem';
+    div.style.background = 'rgba(255,255,255,0.02)';
+    div.style.borderRadius = '6px';
+    div.style.border = '1px solid rgba(255,255,255,0.05)';
+    div.style.marginBottom = '0.35rem';
+    
+    const isChecked = activeKeys.includes(c.key) ? 'checked' : '';
+    
+    const imgUrl = CROP_IMAGES[c.key] || '';
+    const imgHtml = imgUrl ? `<img src="${imgUrl}" style="width: 20px; height: 20px; object-fit: contain; margin-right: 8px; vertical-align: middle;">` : '';
+    
+    div.innerHTML = `
+      <div style="display: flex; align-items: center; color: var(--text-main); font-size: 0.9rem;">
+        ${imgHtml}
+        <span>${c.name} <span style="font-size: 0.75rem; color: var(--text-muted);">(${c.type})</span></span>
+      </div>
+      <input type="checkbox" class="crop-select-checkbox" data-key="${c.key}" ${isChecked} style="width: 18px; height: 18px; cursor: pointer;">
+    `;
+    cropManagerList.appendChild(div);
+  });
+}
+
+// Open Crop Manager Overlay
+btnManageCrops.addEventListener('click', () => {
+  cropSearchInput.value = '';
+  renderCropManagerList();
+  cropManagerOverlay.style.display = 'flex';
+});
+
+// Close Crop Manager Overlay
+cropManagerClose.addEventListener('click', () => {
+  cropManagerOverlay.style.display = 'none';
+});
+
+cropManagerOverlay.addEventListener('click', (e) => {
+  if (e.target === cropManagerOverlay) {
+    cropManagerOverlay.style.display = 'none';
+  }
+});
+
+// Filter search input
+cropSearchInput.addEventListener('input', renderCropManagerList);
+
+// Save selected crops
+cropManagerSave.addEventListener('click', () => {
+  const checkboxes = document.querySelectorAll('.crop-select-checkbox');
+  const activeKeys = [];
+  checkboxes.forEach(cb => {
+    if (cb.checked) {
+      activeKeys.push(cb.dataset.key);
+    }
+  });
+  
+  // Also preserve checked keys that were filtered out during search
+  const currentActive = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
+  const query = cropSearchInput.value.toLowerCase().trim();
+  if (query) {
+    currentActive.forEach(key => {
+      const match = MASTER_CROPS.find(c => c.key === key);
+      if (match && !match.name.toLowerCase().includes(query) && !match.type.toLowerCase().includes(query)) {
+        activeKeys.push(key);
+      }
+    });
+  }
+  
+  localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
+  populateCropDropdown();
+  cropManagerOverlay.style.display = 'none';
 });

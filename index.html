@@ -85,22 +85,10 @@
         <form id="form-crop" class="dialog-section">
           <h4 class="section-title">🌱 Plant Crop & Forecast</h4>
           <div class="form-group-row">
-            <select id="crop-select">
-              <option value="starfruit">Starfruit (13 days)</option>
-              <option value="ancient">Ancient Fruit (28d + 7d regrow)</option>
-              <option value="strawberry">Strawberry (8d + 4d regrow)</option>
-              <option value="rhubarb">Rhubarb (13 days)</option>
-              <option value="blueberries">Blueberries (13d + 4d regrow)</option>
-              <option value="sweetgem">Sweet Gem Berry (24 days)</option>
-              <option value="cherry">Cherry Tree (28d growth, Spring)</option>
-              <option value="apricot">Apricot Tree (28d growth, Spring)</option>
-              <option value="orange">Orange Tree (28d growth, Summer)</option>
-              <option value="peach">Peach Tree (28d growth, Summer)</option>
-              <option value="apple">Apple Tree (28d growth, Fall)</option>
-              <option value="pomegranate">Pomegranate Tree (28d growth, Fall)</option>
-              <option value="banana">Banana Tree (28d growth, Summer)</option>
-              <option value="mango">Mango Tree (28d growth, Summer)</option>
-            </select>
+            <div style="display: flex; gap: 0.35rem; width: 100%;">
+              <select id="crop-select" style="flex-grow: 1;"></select>
+              <button type="button" id="btn-manage-crops" class="btn btn-inline" style="background: rgba(255,255,255,0.06); padding: 0.45rem 0.6rem; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 6px; white-space: nowrap;">⚙️ Manage</button>
+            </div>
             <select id="crop-stage">
               <option value="seed">Fresh Seed</option>
               <option value="regrow">Existing Plant (Regrow)</option>
@@ -162,6 +150,25 @@
           </div>
           <div id="sync-status-msg" style="font-size: 0.72rem; margin-top: 0.35rem; font-weight: 600; color: #f59e0b;">🔴 Not Connected (Local Storage fallback)</div>
         </form>
+      </div>
+    </div>
+  </div>
+  <!-- Manage Crops Modal Overlay -->
+  <div class="modal-overlay" id="crop-manager-overlay" style="display: none; z-index: 1100;">
+    <div class="modal" style="width: 450px; max-width: 95%;">
+      <div class="modal-header">
+        <h3>⚙️ Manage Crops list</h3>
+        <button class="modal-close" id="crop-manager-close">×</button>
+      </div>
+      <div style="padding: 1rem 0;">
+        <input type="text" id="crop-search-input" placeholder="Search crops (e.g. Starfruit, Ancient)..." style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-glass); background: rgba(255,255,255,0.03); color: var(--text-main); font-size: 0.9rem; margin-bottom: 1rem;">
+        
+        <div id="crop-manager-list" style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 300px; overflow-y: auto; background: rgba(0,0,0,0.2); border-radius: 8px; padding: 0.5rem; border: 1px solid var(--border-glass);">
+          <!-- Dynamically rendered checkbox list of crops -->
+        </div>
+      </div>
+      <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1rem;">
+        <button id="crop-manager-save" class="btn">Save Selection</button>
       </div>
     </div>
   </div>
