@@ -680,6 +680,28 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   if (!targetYearSchedule[readyDate.season][readyDate.day]) targetYearSchedule[readyDate.season][readyDate.day] = [];
   targetYearSchedule[readyDate.season][readyDate.day].push(readyTask);
 
+  // 3. If Solar Panel, schedule repeating yields every 10 days indefinitely (placed once, produces forever)
+  if (machineKey === 'solar_panel') {
+    let nextReadyDate = getFutureDate(readyDate.year, readyDate.season, readyDate.day, 10);
+    for (let i = 0; i < 60; i++) {
+      const nextReadyAbs = getAbsoluteDay(nextReadyDate.year, nextReadyDate.season, nextReadyDate.day);
+      const repeatTask = {
+        id: 'ready_repeat_' + Date.now() + '_' + i,
+        type: 'solar',
+        machineKey: machineKey,
+        label: `📦 ${preset.name} Ready (${location})`,
+        sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
+        groupId: groupId,
+        absDay: nextReadyAbs
+      };
+      const ys = getYearSchedule(nextReadyDate.year);
+      if (!ys[nextReadyDate.season][nextReadyDate.day]) ys[nextReadyDate.season][nextReadyDate.day] = [];
+      ys[nextReadyDate.season][nextReadyDate.day].push(repeatTask);
+      
+      nextReadyDate = getFutureDate(nextReadyDate.year, nextReadyDate.season, nextReadyDate.day, 10);
+    }
+  }
+
   saveSchedule();
   
   // Auto-switch view to the target season/year so the user sees the ready task immediately
