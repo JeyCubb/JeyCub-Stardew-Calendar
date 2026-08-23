@@ -521,3 +521,42 @@ yearDownBtn.addEventListener('click', () => {
 // Init
 renderCalendar();
 updateMetaStats();
+
+// Backup & Restore Actions (JSON export/import for device syncing)
+document.getElementById('btn-export').addEventListener('click', () => {
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(schedule));
+  const downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", `stardew_calendar_backup_y${currentYear}.json`);
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
+});
+
+document.getElementById('btn-import').addEventListener('click', () => {
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = '.json';
+  fileInput.onchange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      try {
+        const importedData = JSON.parse(evt.target.result);
+        if (typeof importedData === 'object' && importedData !== null) {
+          schedule = importedData;
+          saveSchedule();
+          renderCalendar();
+          alert("📅 Calendar data successfully imported!");
+        } else {
+          alert("❌ Invalid backup file format.");
+        }
+      } catch (err) {
+        alert("❌ Failed to parse backup file.");
+      }
+    };
+    reader.readAsText(file);
+  };
+  fileInput.click();
+});
