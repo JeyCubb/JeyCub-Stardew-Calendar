@@ -4,10 +4,17 @@ let currentSeason = localStorage.getItem('stardew_current_season') || 'spring';
 let activeDay = 1;
 
 // Migrate old data if necessary
+// Migrate old data if necessary (and save clean version back)
 let rawSchedule = JSON.parse(localStorage.getItem('stardew_schedule')) || {};
 let schedule = {};
 if (rawSchedule.spring || rawSchedule.summer || rawSchedule.fall || rawSchedule.winter) {
-  schedule[1] = rawSchedule;
+  schedule[1] = {
+    spring: rawSchedule.spring || {},
+    summer: rawSchedule.summer || {},
+    fall: rawSchedule.fall || {},
+    winter: rawSchedule.winter || {}
+  };
+  localStorage.setItem('stardew_schedule', JSON.stringify(schedule));
 } else {
   schedule = rawSchedule;
 }
@@ -245,7 +252,10 @@ function updateMetaStats() {
 
   const seasons = ['spring', 'summer', 'fall', 'winter'];
   Object.keys(schedule).forEach(y => {
+    if (isNaN(y)) return; // Ignore any non-numeric legacy keys
+    
     seasons.forEach(s => {
+      if (!schedule[y] || !schedule[y][s]) return;
       for (let d = 1; d <= 28; d++) {
         const dayTasks = schedule[y][s][d] || [];
         dayTasks.forEach(task => {
