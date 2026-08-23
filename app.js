@@ -398,14 +398,27 @@ window.deleteTask = function(day, id, event) {
   renderTasksForDay(day);
 };
 
+// Season selection helper
+function switchSeason(newSeason) {
+  currentSeason = newSeason;
+  localStorage.setItem('stardew_current_season', currentSeason);
+  
+  // Update button active states
+  seasonBtns.forEach(btn => {
+    if (btn.dataset.season === currentSeason) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+  
+  renderCalendar();
+}
+
 // Season selection events
 seasonBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    seasonBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentSeason = btn.dataset.season;
-    localStorage.setItem('stardew_current_season', currentSeason);
-    renderCalendar();
+    switchSeason(btn.dataset.season);
   });
 });
 
@@ -415,6 +428,25 @@ seasonBtns.forEach(btn => {
     btn.classList.add('active');
   } else {
     btn.classList.remove('active');
+  }
+});
+
+// Keyboard Navigation (Arrow keys toggle between seasons)
+window.addEventListener('keydown', (e) => {
+  // Prevent switching if user is actively typing in inputs
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+    return;
+  }
+
+  const seasons = ['spring', 'summer', 'fall', 'winter'];
+  let currentIdx = seasons.indexOf(currentSeason);
+
+  if (e.key === 'ArrowRight') {
+    currentIdx = (currentIdx + 1) % 4;
+    switchSeason(seasons[currentIdx]);
+  } else if (e.key === 'ArrowLeft') {
+    currentIdx = (currentIdx - 1 + 4) % 4;
+    switchSeason(seasons[currentIdx]);
   }
 });
 
