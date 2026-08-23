@@ -2,6 +2,8 @@
 let currentYear = parseInt(localStorage.getItem('stardew_current_year')) || 1;
 let currentSeason = localStorage.getItem('stardew_current_season') || 'spring';
 let activeDay = 1;
+let firebaseDb = null;
+let syncKey = null;
 
 // Migrate old data if necessary (and save clean version back)
 let rawSchedule = JSON.parse(localStorage.getItem('stardew_schedule')) || {};
@@ -157,7 +159,16 @@ yearDisplay.innerText = currentYear;
 
 // Helper to save schedule
 function saveSchedule() {
+  const lastUpdated = Date.now();
   localStorage.setItem('stardew_schedule', JSON.stringify(schedule));
+  localStorage.setItem('stardew_last_updated', lastUpdated);
+  
+  if (firebaseDb && syncKey) {
+    firebaseDb.ref(`stardew_calendar/${syncKey}`).set({
+      schedule: schedule,
+      lastUpdated: lastUpdated
+    }).catch(err => console.warn("Firebase save error:", err));
+  }
 }
 
 // Date conversion helpers
@@ -550,3 +561,48 @@ yearDownBtn.addEventListener('click', () => {
 
 // Init
 renderCalendar();
+initFirebase();
+
+function initFirebase() {
+  try {
+    if (typeof firebase !== 'undefined') {
+      const DEFAULT_FIREBASE_CONFIG = {
+        databaseURL: "https://fluid-mechanics-reviewer-default-rtdb.firebaseio.com"
+      };
+      if (!firebase.apps.length) {
+        firebase.initializeApp(DEFAULT_FIREBASE_CONFIG);
+      }
+      firebaseDb = firebase.database();
+      
+      // Use subdomain as sync key (e.g. 'jeycubb' from 'jeycubb.github.io')
+      syncKey = window.location.hostname.split('.')[0] || 'default_local';
+      // Sanitize syncKey (Firebase paths cannot contain '.', '#', '$', '[', or ']')
+      syncKey = syncKey.replace(/[\.#\$\[\]]/g, '_');
+
+      // Listen for remote updates
+      firebaseDb.ref(`stardew_calendar/${syncKey}`).on('value', snapshot => {
+        const data = snapshot.val();
+        if (data && data.schedule) {
+          const localLastUpdated = parseInt(localStorage.getItem('stardew_last_updated')) || 0;
+          const remoteLastUpdated = data.lastUpdated || 0;
+
+          if (remoteLastUpdated > localLastUpdated) {
+            // Remote data is newer, apply it
+            schedule = data.schedule;
+            localStorage.setItem('stardew_schedule', JSON.stringify(schedule));
+            localStorage.setItem('stardew_last_updated', remoteLastUpdated);
+            renderCalendar();
+          } else if (localLastUpdated > remoteLastUpdated) {
+            // Local data is newer, push to cloud
+            saveSchedule();
+          }
+        } else {
+          // No remote data yet, push local data to initialize it
+          saveSchedule();
+        }
+      });
+    }
+  } catch (e) {
+    console.warn("Firebase initialization failed:", e);
+  }
+}
