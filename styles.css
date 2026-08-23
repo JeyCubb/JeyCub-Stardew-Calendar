@@ -369,3 +369,124 @@ header h1 {
 .btn-inline {
   flex-shrink: 0;
 }
+
+/* Responsive / Mobile Optimization (under 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  .year-selector {
+    margin-right: 0 !important;
+  }
+
+  /* Keep weekdays row compact */
+  .weekdays-grid {
+    font-size: 0.65rem;
+    padding: 0.25rem 0;
+  }
+
+  /* Make grid fit mobile screen height or scrollable */
+  .calendar-grid {
+    grid-template-rows: repeat(4, minmax(65px, 1fr));
+    gap: 3px;
+    height: auto;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-bottom: 1rem;
+  }
+
+  .day-card {
+    padding: 3px;
+    min-height: 65px;
+  }
+
+  .day-header {
+    margin-bottom: 2px;
+  }
+
+  .day-number {
+    font-size: 0.75rem;
+  }
+
+  /* Hide weekday names inside individual cards to save horizontal space */
+  .day-name {
+    display: none !important;
+  }
+
+  .add-task-btn {
+    width: 14px;
+    height: 14px;
+    font-size: 0.7rem;
+    opacity: 1; /* Always visible on mobile tap */
+  }
+
+  /* Render tasks as compact emoji badges */
+  .tasks-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: flex-start;
+    overflow-y: visible;
+  }
+
+  .task-item {
+    font-size: 0.8rem;
+    padding: 0;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    margin: 0;
+    border: none;
+  }
+
+  .task-item span {
+    width: 0;
+    display: none;
+  }
+
+  .task-delete {
+    display: none !important;
+  }
+
+  /* Modal Mobile Layout */
+  .modal {
+    width: 95%;
+    padding: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .form-group-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .form-group-row select, 
+  .form-group-row input,
+  .form-group-row button {
+    width: 100% !important;
+  }
+}

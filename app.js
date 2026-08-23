@@ -257,6 +257,37 @@ function renderTasksForDay(day) {
 window.openModal = function(day) {
   activeDay = day;
   modalTitle.innerText = `Year ${currentYear} - ${currentSeason.toUpperCase()} - Day ${day}`;
+  
+  const modalTasksSection = document.getElementById('modal-tasks-section');
+  const modalTasksList = document.getElementById('modal-tasks-list');
+  
+  const currentYearSchedule = getYearSchedule(currentYear);
+  const dayTasks = currentYearSchedule[currentSeason][day] || [];
+  
+  if (dayTasks.length > 0) {
+    modalTasksSection.style.display = 'block';
+    modalTasksList.innerHTML = '';
+    dayTasks.forEach(task => {
+      const item = document.createElement('div');
+      item.className = `task-item ${task.type}`;
+      item.style.display = 'flex';
+      item.style.justifyContent = 'space-between';
+      item.style.alignItems = 'center';
+      item.style.padding = '0.35rem 0.5rem';
+      item.style.borderRadius = '6px';
+      item.style.fontSize = '0.85rem';
+      item.style.margin = '0.2rem 0';
+      
+      item.innerHTML = `
+        <span>${task.label}</span>
+        <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)" style="background: none; border: none; color: rgba(255,255,255,0.6); cursor: pointer; font-size: 1.15rem; font-weight: bold; padding: 0 0.25rem;">×</button>
+      `;
+      modalTasksList.appendChild(item);
+    });
+  } else {
+    modalTasksSection.style.display = 'none';
+  }
+  
   modalOverlay.style.display = 'flex';
 };
 
@@ -474,6 +505,11 @@ window.deleteTask = function(day, id, event) {
   
   saveSchedule();
   renderCalendar();
+  
+  // If deletion occurred from within the modal list, refresh it
+  if (modalOverlay.style.display === 'flex') {
+    openModal(activeDay);
+  }
 };
 
 // Season selection helper
