@@ -268,7 +268,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   e.preventDefault();
   const cropKey = document.getElementById('crop-select').value;
   const fertilizer = document.getElementById('crop-fert').value;
-  const agriculturist = document.getElementById('crop-agri').checked;
+  const agriculturist = false;
 
   const crop = CROP_GROWTH_PRESETS[cropKey];
   const growthDays = crop.getDays(fertilizer, agriculturist);
