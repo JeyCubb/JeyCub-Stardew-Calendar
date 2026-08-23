@@ -431,7 +431,7 @@ seasonBtns.forEach(btn => {
   }
 });
 
-// Keyboard Navigation (Arrow keys toggle between seasons)
+// Keyboard Navigation (Arrow keys toggle between seasons and transition years)
 window.addEventListener('keydown', (e) => {
   // Prevent switching if user is actively typing in inputs
   if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
@@ -442,11 +442,29 @@ window.addEventListener('keydown', (e) => {
   let currentIdx = seasons.indexOf(currentSeason);
 
   if (e.key === 'ArrowRight') {
-    currentIdx = (currentIdx + 1) % 4;
-    switchSeason(seasons[currentIdx]);
+    if (currentIdx === 3) { // Winter -> Spring (Next Year)
+      currentYear++;
+      yearDisplay.innerText = currentYear;
+      localStorage.setItem('stardew_current_year', currentYear);
+      saveSchedule();
+      switchSeason('spring');
+      updateMetaStats();
+    } else {
+      switchSeason(seasons[currentIdx + 1]);
+    }
   } else if (e.key === 'ArrowLeft') {
-    currentIdx = (currentIdx - 1 + 4) % 4;
-    switchSeason(seasons[currentIdx]);
+    if (currentIdx === 0) { // Spring -> Winter (Previous Year)
+      if (currentYear > 1) {
+        currentYear--;
+        yearDisplay.innerText = currentYear;
+        localStorage.setItem('stardew_current_year', currentYear);
+        saveSchedule();
+        switchSeason('winter');
+        updateMetaStats();
+      }
+    } else {
+      switchSeason(seasons[currentIdx - 1]);
+    }
   }
 });
 
