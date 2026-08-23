@@ -369,30 +369,3 @@ header h1 {
 .btn-inline {
   flex-shrink: 0;
 }
-
-.meta-stats {
-  display: flex;
-  justify-content: space-around;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-glass);
-  border-radius: 12px;
-  padding: 0.6rem 1rem;
-  margin-top: 0.5rem;
-  flex-shrink: 0;
-}
-
-.meta-box {
-  text-align: center;
-}
-
-.meta-val {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--accent-gold);
-}
-
-.meta-lbl {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  margin-top: 0.15rem;
-}

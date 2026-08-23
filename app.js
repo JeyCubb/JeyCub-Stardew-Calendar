@@ -159,7 +159,6 @@ yearDisplay.innerText = currentYear;
 // Helper to save schedule
 function saveSchedule() {
   localStorage.setItem('stardew_schedule', JSON.stringify(schedule));
-  updateMetaStats();
 }
 
 // Calculate future date helper (handles Season AND Year rollover)
@@ -243,34 +242,6 @@ modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', (e) => {
   if (e.target === modalOverlay) closeModal();
 });
-
-// Gifting & Professions change trigger
-function updateMetaStats() {
-  let cropCount = 0;
-  let kegCount = 0;
-  let caskCount = 0;
-
-  const seasons = ['spring', 'summer', 'fall', 'winter'];
-  Object.keys(schedule).forEach(y => {
-    if (isNaN(y)) return; // Ignore any non-numeric legacy keys
-    
-    seasons.forEach(s => {
-      if (!schedule[y] || !schedule[y][s]) return;
-      for (let d = 1; d <= 28; d++) {
-        const dayTasks = schedule[y][s][d] || [];
-        dayTasks.forEach(task => {
-          if (task.type === 'harvest') cropCount++;
-          if (task.label.includes('Keg Ready')) kegCount++;
-          if (task.label.includes('Cask Ready')) caskCount++;
-        });
-      }
-    });
-  });
-
-  document.getElementById('stat-crops').innerText = cropCount;
-  document.getElementById('stat-kegs').innerText = kegCount;
-  document.getElementById('stat-casks').innerText = caskCount;
-}
 
 // Schedule Manual Note
 document.getElementById('form-manual').addEventListener('submit', (e) => {
@@ -477,7 +448,6 @@ window.addEventListener('keydown', (e) => {
       localStorage.setItem('stardew_current_year', currentYear);
       saveSchedule();
       switchSeason('spring');
-      updateMetaStats();
     } else {
       switchSeason(seasons[currentIdx + 1]);
     }
@@ -489,7 +459,6 @@ window.addEventListener('keydown', (e) => {
         localStorage.setItem('stardew_current_year', currentYear);
         saveSchedule();
         switchSeason('winter');
-        updateMetaStats();
       }
     } else {
       switchSeason(seasons[currentIdx - 1]);
@@ -504,7 +473,6 @@ yearUpBtn.addEventListener('click', () => {
   localStorage.setItem('stardew_current_year', currentYear);
   saveSchedule(); // Persist newly initialized year structure
   renderCalendar();
-  updateMetaStats();
 });
 
 yearDownBtn.addEventListener('click', () => {
@@ -514,13 +482,11 @@ yearDownBtn.addEventListener('click', () => {
     localStorage.setItem('stardew_current_year', currentYear);
     saveSchedule();
     renderCalendar();
-    updateMetaStats();
   }
 });
 
 // Init
 renderCalendar();
-updateMetaStats();
 
 // Backup & Restore Actions (JSON export/import for device syncing)
 document.getElementById('btn-export').addEventListener('click', () => {
