@@ -68,7 +68,14 @@ const MACHINE_IMAGES = {
   'cask_silver': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
   'cask_gold': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
   'cask_iridium': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
-  'solar_panel': 'https://stardewvalleywiki.com/mediawiki/images/5/5d/Solar_Panel.png'
+  'solar_panel': 'https://stardewvalleywiki.com/mediawiki/images/5/5d/Solar_Panel.png',
+  'crystal_diamond': 'https://stardewvalleywiki.com/mediawiki/images/e/ea/Diamond.png',
+  'crystal_ruby': 'https://stardewvalleywiki.com/mediawiki/images/a/a9/Ruby.png',
+  'crystal_jade': 'https://stardewvalleywiki.com/mediawiki/images/7/7e/Jade.png',
+  'crystal_emerald': 'https://stardewvalleywiki.com/mediawiki/images/6/6a/Emerald.png',
+  'crystal_aquamarine': 'https://stardewvalleywiki.com/mediawiki/images/a/a2/Aquamarine.png',
+  'crystal_topaz': 'https://stardewvalleywiki.com/mediawiki/images/a/a5/Topaz.png',
+  'crystal_amethyst': 'https://stardewvalleywiki.com/mediawiki/images/2/2e/Amethyst.png'
 };
 
 // Initialize current year structure if not present (guarantees all seasons exist)
@@ -159,15 +166,31 @@ MASTER_CROPS.forEach(c => {
   };
 });
 
-const MACHINE_PRESETS = {
-  keg_wine: { name: 'Keg (Wine)', duration: 7 },
-  keg_beer: { name: 'Keg (Beer/Pale Ale)', duration: 2 },
-  preserves: { name: 'Preserves Jar', duration: 3 },
-  cask_silver: { name: 'Cask aging (Silver)', duration: 14 },
-  cask_gold: { name: 'Cask aging (Gold)', duration: 28 },
-  cask_iridium: { name: 'Cask aging (Iridium)', duration: 56 },
-  solar_panel: { name: 'Solar Panel', duration: 10 }
-};
+const MASTER_MACHINES = [
+  { key: 'keg_wine', name: 'Keg (Wine)', duration: 7, type: 'Keg' },
+  { key: 'keg_beer', name: 'Keg (Beer/Pale Ale)', duration: 2, type: 'Keg' },
+  { key: 'preserves', name: 'Preserves Jar', duration: 3, type: 'Jar' },
+  { key: 'cask_silver', name: 'Cask aging (Silver)', duration: 14, type: 'Cask' },
+  { key: 'cask_gold', name: 'Cask aging (Gold)', duration: 28, type: 'Cask' },
+  { key: 'cask_iridium', name: 'Cask aging (Iridium)', duration: 56, type: 'Cask' },
+  { key: 'solar_panel', name: 'Solar Panel', duration: 10, isRepeating: true, type: 'Utility' },
+  { key: 'crystal_diamond', name: 'Crystalarium: Diamond', duration: 5, isRepeating: true, type: 'Crystalarium' },
+  { key: 'crystal_ruby', name: 'Crystalarium: Ruby', duration: 2, isRepeating: true, type: 'Crystalarium' },
+  { key: 'crystal_jade', name: 'Crystalarium: Jade', duration: 2, isRepeating: true, type: 'Crystalarium' },
+  { key: 'crystal_emerald', name: 'Crystalarium: Emerald', duration: 2, isRepeating: true, type: 'Crystalarium' },
+  { key: 'crystal_aquamarine', name: 'Crystalarium: Aquamarine', duration: 2, isRepeating: true, type: 'Crystalarium' },
+  { key: 'crystal_topaz', name: 'Crystalarium: Topaz', duration: 1, isRepeating: true, type: 'Crystalarium' },
+  { key: 'crystal_amethyst', name: 'Crystalarium: Amethyst', duration: 1, isRepeating: true, type: 'Crystalarium' }
+];
+
+const MACHINE_PRESETS = {};
+MASTER_MACHINES.forEach(m => {
+  MACHINE_PRESETS[m.key] = {
+    name: m.name,
+    duration: m.duration,
+    isRepeating: m.isRepeating || false
+  };
+});
 
 // UI Elements
 const calendarGrid = document.getElementById('calendar-grid');
@@ -288,6 +311,13 @@ const ITEM_COLORS = {
   'cask_gold': '#fbbf24',    // Gold yellow
   'cask_iridium': '#c084fc', // Purple iridium
   'solar_panel': '#38bdf8',  // Sky blue battery
+  'crystal_diamond': '#e0f2fe',
+  'crystal_ruby': '#ef4444',
+  'crystal_jade': '#059669',
+  'crystal_emerald': '#10b981',
+  'crystal_aquamarine': '#38bdf8',
+  'crystal_topaz': '#f59e0b',
+  'crystal_amethyst': '#a855f7'
 };
 
 function applyTaskItemColor(item, task) {
@@ -357,6 +387,9 @@ function getTaskIconUrl(task) {
       return 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png';
     }
   } else {
+    if (task.machineKey && task.machineKey.startsWith('crystal_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
+      return 'https://stardewvalleywiki.com/mediawiki/images/d/d4/Crystalarium.png';
+    }
     if (task.machineKey === 'solar_panel' && task.id && typeof task.id === 'string' && task.id.includes('ready')) {
        return 'https://stardewvalleywiki.com/mediawiki/images/2/25/Battery_Pack.png';
     }
@@ -651,11 +684,14 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
 
   // 1. Add Load/Place Task to selected day
   const isSolar = machineKey === 'solar_panel';
+  const isCrystal = machineKey.startsWith('crystal_');
+  const isPlaceAction = isSolar || isCrystal;
+  
   const loadTask = {
     id: 'load_' + Date.now(),
-    type: isSolar ? 'solar' : (machineKey.includes('keg') ? 'keg' : 'cask'),
+    type: isPlaceAction ? 'solar' : (machineKey.includes('keg') ? 'keg' : 'cask'),
     machineKey: machineKey,
-    label: isSolar ? `📥 Place ${preset.name} (${location})` : `📥 Load ${preset.name} (${location})`,
+    label: isPlaceAction ? `📥 Place ${preset.name} (${location})` : `📥 Load ${preset.name} (${location})`,
     groupId: groupId,
     absDay: loadAbs
   };
@@ -668,7 +704,7 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   const readyAbs = getAbsoluteDay(readyDate.year, readyDate.season, readyDate.day);
   const readyTask = {
     id: 'ready_' + Date.now(),
-    type: machineKey.includes('keg') ? 'keg' : (machineKey === 'solar_panel' ? 'solar' : 'cask'),
+    type: isPlaceAction ? 'solar' : (machineKey.includes('keg') ? 'keg' : 'cask'),
     machineKey: machineKey,
     label: `📦 ${preset.name} Ready (${location})`,
     sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
@@ -680,14 +716,14 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   if (!targetYearSchedule[readyDate.season][readyDate.day]) targetYearSchedule[readyDate.season][readyDate.day] = [];
   targetYearSchedule[readyDate.season][readyDate.day].push(readyTask);
 
-  // 3. If Solar Panel, schedule repeating yields every 10 days indefinitely (placed once, produces forever)
-  if (machineKey === 'solar_panel') {
-    let nextReadyDate = getFutureDate(readyDate.year, readyDate.season, readyDate.day, 10);
+  // 3. If repeating machine (Solar Panel or Crystalariums), schedule repeating yields indefinitely
+  if (preset.isRepeating) {
+    let nextReadyDate = getFutureDate(readyDate.year, readyDate.season, readyDate.day, preset.duration);
     for (let i = 0; i < 60; i++) {
       const nextReadyAbs = getAbsoluteDay(nextReadyDate.year, nextReadyDate.season, nextReadyDate.day);
       const repeatTask = {
         id: 'ready_repeat_' + Date.now() + '_' + i,
-        type: 'solar',
+        type: isPlaceAction ? 'solar' : (machineKey.includes('keg') ? 'keg' : 'cask'),
         machineKey: machineKey,
         label: `📦 ${preset.name} Ready (${location})`,
         sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
@@ -698,7 +734,7 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
       if (!ys[nextReadyDate.season][nextReadyDate.day]) ys[nextReadyDate.season][nextReadyDate.day] = [];
       ys[nextReadyDate.season][nextReadyDate.day].push(repeatTask);
       
-      nextReadyDate = getFutureDate(nextReadyDate.year, nextReadyDate.season, nextReadyDate.day, 10);
+      nextReadyDate = getFutureDate(nextReadyDate.year, nextReadyDate.season, nextReadyDate.day, preset.duration);
     }
   }
 
@@ -964,12 +1000,23 @@ function initFirebase() {
   }
 }
 
-// Crop Manager DOM Elements
+// Settings / Items Manager DOM Elements
 const cropManagerOverlay = document.getElementById('crop-manager-overlay');
 const cropManagerClose = document.getElementById('crop-manager-close');
 const cropSearchInput = document.getElementById('crop-search-input');
 const cropManagerList = document.getElementById('crop-manager-list');
 const btnManageCrops = document.getElementById('btn-manage-crops');
+const btnManageMachines = document.getElementById('btn-manage-machines');
+const tabBtnCrops = document.getElementById('tab-btn-crops');
+const tabBtnMachines = document.getElementById('tab-btn-machines');
+const managerTitle = document.getElementById('manager-title');
+
+let activeManagerTab = 'crops'; // 'crops' or 'machines'
+
+const DEFAULT_ACTIVE_MACHINES = [
+  'keg_wine', 'keg_beer', 'preserves', 'cask_silver', 'cask_gold', 'cask_iridium', 'solar_panel',
+  'crystal_diamond', 'crystal_ruby', 'crystal_jade', 'crystal_emerald', 'crystal_aquamarine', 'crystal_topaz', 'crystal_amethyst'
+];
 
 // Populate crop select field based on active list
 function populateCropDropdown() {
@@ -991,53 +1038,132 @@ function populateCropDropdown() {
   });
 }
 
-// Initial populate
-populateCropDropdown();
-
-// Render selector list inside Crop Manager
-function renderCropManagerList() {
-  const query = cropSearchInput.value.toLowerCase().trim();
-  const activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
+// Populate machine select field based on active list
+function populateMachineDropdown() {
+  const activeKeys = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
+  const select = document.getElementById('machine-select');
+  if (!select) return;
+  select.innerHTML = '';
   
-  cropManagerList.innerHTML = '';
-  
-  const filtered = MASTER_CROPS.filter(c => c.name.toLowerCase().includes(query) || c.type.toLowerCase().includes(query));
-  
-  filtered.forEach(c => {
-    const div = document.createElement('div');
-    div.style.display = 'flex';
-    div.style.alignItems = 'center';
-    div.style.justifyContent = 'space-between';
-    div.style.padding = '0.35rem 0.5rem';
-    div.style.background = 'rgba(255,255,255,0.02)';
-    div.style.borderRadius = '6px';
-    div.style.border = '1px solid rgba(255,255,255,0.05)';
-    div.style.marginBottom = '0.35rem';
-    
-    const isChecked = activeKeys.includes(c.key) ? 'checked' : '';
-    
-    const imgUrl = CROP_IMAGES[c.key] || '';
-    const imgHtml = imgUrl ? `<img src="${imgUrl}" style="width: 20px; height: 20px; object-fit: contain; margin-right: 8px; vertical-align: middle;">` : '';
-    
-    div.innerHTML = `
-      <div style="display: flex; align-items: center; color: var(--text-main); font-size: 0.9rem;">
-        ${imgHtml}
-        <span>${c.name} <span style="font-size: 0.75rem; color: var(--text-muted);">(${c.type})</span></span>
-      </div>
-      <input type="checkbox" class="crop-select-checkbox" data-key="${c.key}" ${isChecked} style="width: 18px; height: 18px; cursor: pointer;">
-    `;
-    cropManagerList.appendChild(div);
+  const activeMachines = MASTER_MACHINES.filter(m => activeKeys.includes(m.key));
+  activeMachines.forEach(m => {
+    const option = document.createElement('option');
+    option.value = m.key;
+    let label = `${m.name} (${m.duration}d`;
+    if (m.isRepeating) label += ` repeating`;
+    label += `)`;
+    option.innerText = label;
+    select.appendChild(option);
   });
 }
 
-// Open Crop Manager Overlay
-btnManageCrops.addEventListener('click', () => {
+// Initial populate
+populateCropDropdown();
+populateMachineDropdown();
+
+// Render selector list inside Settings Manager Modal
+function renderManagerList() {
+  const query = cropSearchInput.value.toLowerCase().trim();
+  cropManagerList.innerHTML = '';
+  
+  if (activeManagerTab === 'crops') {
+    const activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
+    const filtered = MASTER_CROPS.filter(c => c.name.toLowerCase().includes(query) || c.type.toLowerCase().includes(query));
+    
+    filtered.forEach(c => {
+      const div = document.createElement('div');
+      div.style.display = 'flex';
+      div.style.alignItems = 'center';
+      div.style.justifyContent = 'space-between';
+      div.style.padding = '0.35rem 0.5rem';
+      div.style.background = 'rgba(255,255,255,0.02)';
+      div.style.borderRadius = '6px';
+      div.style.border = '1px solid rgba(255,255,255,0.05)';
+      div.style.marginBottom = '0.35rem';
+      
+      const isChecked = activeKeys.includes(c.key) ? 'checked' : '';
+      const imgUrl = CROP_IMAGES[c.key] || '';
+      const imgHtml = imgUrl ? `<img src="${imgUrl}" style="width: 20px; height: 20px; object-fit: contain; margin-right: 8px; vertical-align: middle;">` : '';
+      
+      div.innerHTML = `
+        <div style="display: flex; align-items: center; color: var(--text-main); font-size: 0.9rem;">
+          ${imgHtml}
+          <span>${c.name} <span style="font-size: 0.75rem; color: var(--text-muted);">(${c.type})</span></span>
+        </div>
+        <input type="checkbox" class="crop-select-checkbox" data-key="${c.key}" ${isChecked} style="width: 18px; height: 18px; cursor: pointer;">
+      `;
+      cropManagerList.appendChild(div);
+    });
+  } else {
+    // Machines Tab
+    const activeKeys = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
+    const filtered = MASTER_MACHINES.filter(m => m.name.toLowerCase().includes(query) || m.type.toLowerCase().includes(query));
+    
+    filtered.forEach(m => {
+      const div = document.createElement('div');
+      div.style.display = 'flex';
+      div.style.alignItems = 'center';
+      div.style.justifyContent = 'space-between';
+      div.style.padding = '0.35rem 0.5rem';
+      div.style.background = 'rgba(255,255,255,0.02)';
+      div.style.borderRadius = '6px';
+      div.style.border = '1px solid rgba(255,255,255,0.05)';
+      div.style.marginBottom = '0.35rem';
+      
+      const isChecked = activeKeys.includes(m.key) ? 'checked' : '';
+      const imgUrl = MACHINE_IMAGES[m.key] || '';
+      const imgHtml = imgUrl ? `<img src="${imgUrl}" style="width: 20px; height: 20px; object-fit: contain; margin-right: 8px; vertical-align: middle;">` : '';
+      
+      div.innerHTML = `
+        <div style="display: flex; align-items: center; color: var(--text-main); font-size: 0.9rem;">
+          ${imgHtml}
+          <span>${m.name} <span style="font-size: 0.75rem; color: var(--text-muted);">(${m.type})</span></span>
+        </div>
+        <input type="checkbox" class="machine-select-checkbox" data-key="${m.key}" ${isChecked} style="width: 18px; height: 18px; cursor: pointer;">
+      `;
+      cropManagerList.appendChild(div);
+    });
+  }
+}
+
+// Switch Tab logic
+function switchManagerTab(tab) {
+  activeManagerTab = tab;
   cropSearchInput.value = '';
-  renderCropManagerList();
+  
+  if (tab === 'crops') {
+    tabBtnCrops.classList.add('active');
+    tabBtnMachines.classList.remove('active');
+    managerTitle.innerText = '⚙️ Manage Crops list';
+    cropSearchInput.placeholder = 'Search crops (e.g. Starfruit, Ancient)...';
+  } else {
+    tabBtnCrops.classList.remove('active');
+    tabBtnMachines.classList.add('active');
+    managerTitle.innerText = '⚙️ Manage Machines list';
+    cropSearchInput.placeholder = 'Search machines (e.g. Keg, Diamond)...';
+  }
+  
+  renderManagerList();
+}
+
+// Tab Click Events
+tabBtnCrops.addEventListener('click', () => switchManagerTab('crops'));
+tabBtnMachines.addEventListener('click', () => switchManagerTab('machines'));
+
+// Open Managers
+btnManageCrops.addEventListener('click', () => {
+  switchManagerTab('crops');
   cropManagerOverlay.style.display = 'flex';
 });
 
-// Close Crop Manager Overlay
+if (btnManageMachines) {
+  btnManageMachines.addEventListener('click', () => {
+    switchManagerTab('machines');
+    cropManagerOverlay.style.display = 'flex';
+  });
+}
+
+// Close managers
 cropManagerClose.addEventListener('click', () => {
   cropManagerOverlay.style.display = 'none';
 });
@@ -1049,34 +1175,56 @@ cropManagerOverlay.addEventListener('click', (e) => {
 });
 
 // Filter search input
-cropSearchInput.addEventListener('input', renderCropManagerList);
+cropSearchInput.addEventListener('input', renderManagerList);
 
-// Auto-save crop selections on change
+// Auto-save item selections on change
 cropManagerList.addEventListener('change', (e) => {
-  if (e.target.classList.contains('crop-select-checkbox')) {
-    const checkboxes = document.querySelectorAll('.crop-select-checkbox');
-    const activeKeys = [];
-    checkboxes.forEach(cb => {
-      if (cb.checked) {
-        activeKeys.push(cb.dataset.key);
-      }
-    });
-    
-    // Also preserve checked keys that were filtered out during search
-    const currentActive = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
-    const query = cropSearchInput.value.toLowerCase().trim();
-    if (query) {
-      currentActive.forEach(key => {
-        const match = MASTER_CROPS.find(c => c.key === key);
-        if (match && !match.name.toLowerCase().includes(query) && !match.type.toLowerCase().includes(query)) {
-          if (!activeKeys.includes(key)) {
-            activeKeys.push(key);
-          }
-        }
+  if (activeManagerTab === 'crops') {
+    if (e.target.classList.contains('crop-select-checkbox')) {
+      const checkboxes = document.querySelectorAll('.crop-select-checkbox');
+      const activeKeys = [];
+      checkboxes.forEach(cb => {
+        if (cb.checked) activeKeys.push(cb.dataset.key);
       });
+      
+      // Preserve checked keys that were filtered out during search
+      const currentActive = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
+      const query = cropSearchInput.value.toLowerCase().trim();
+      if (query) {
+        currentActive.forEach(key => {
+          const match = MASTER_CROPS.find(c => c.key === key);
+          if (match && !match.name.toLowerCase().includes(query) && !match.type.toLowerCase().includes(query)) {
+            if (!activeKeys.includes(key)) activeKeys.push(key);
+          }
+        });
+      }
+      
+      localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
+      populateCropDropdown();
     }
-    
-    localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
-    populateCropDropdown();
+  } else {
+    // Machines Tab save
+    if (e.target.classList.contains('machine-select-checkbox')) {
+      const checkboxes = document.querySelectorAll('.machine-select-checkbox');
+      const activeKeys = [];
+      checkboxes.forEach(cb => {
+        if (cb.checked) activeKeys.push(cb.dataset.key);
+      });
+      
+      // Preserve checked keys that were filtered out during search
+      const currentActive = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
+      const query = cropSearchInput.value.toLowerCase().trim();
+      if (query) {
+        currentActive.forEach(key => {
+          const match = MASTER_MACHINES.find(m => m.key === key);
+          if (match && !match.name.toLowerCase().includes(query) && !match.type.toLowerCase().includes(query)) {
+            if (!activeKeys.includes(key)) activeKeys.push(key);
+          }
+        });
+      }
+      
+      localStorage.setItem('stardew_active_machines', JSON.stringify(activeKeys));
+      populateMachineDropdown();
+    }
   }
 });
