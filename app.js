@@ -682,7 +682,19 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   targetYearSchedule[readyDate.season][readyDate.day].push(readyTask);
 
   saveSchedule();
-  renderCalendar();
+  
+  // Auto-switch view to the target season/year so the user sees the ready task immediately
+  if (readyDate.year !== currentYear) {
+    currentYear = readyDate.year;
+    localStorage.setItem('stardew_current_year', currentYear);
+    document.getElementById('year-display').innerText = currentYear;
+  }
+  if (readyDate.season !== currentSeason) {
+    switchSeason(readyDate.season);
+  } else {
+    renderCalendar();
+  }
+  
   closeModal();
 });
 
