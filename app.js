@@ -1,6 +1,6 @@
 // App State
 let currentYear = parseInt(localStorage.getItem('stardew_current_year')) || 1;
-let currentSeason = 'spring';
+let currentSeason = localStorage.getItem('stardew_current_season') || 'spring';
 let activeDay = 1;
 
 // Migrate old data if necessary
@@ -392,8 +392,18 @@ seasonBtns.forEach(btn => {
     seasonBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     currentSeason = btn.dataset.season;
+    localStorage.setItem('stardew_current_season', currentSeason);
     renderCalendar();
   });
+});
+
+// Set active season button on load
+seasonBtns.forEach(btn => {
+  if (btn.dataset.season === currentSeason) {
+    btn.classList.add('active');
+  } else {
+    btn.classList.remove('active');
+  }
 });
 
 // Year selection events
