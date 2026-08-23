@@ -797,7 +797,6 @@ MASTER_CROPS.forEach(c => {
 // Crop Manager DOM Elements
 const cropManagerOverlay = document.getElementById('crop-manager-overlay');
 const cropManagerClose = document.getElementById('crop-manager-close');
-const cropManagerSave = document.getElementById('crop-manager-save');
 const cropSearchInput = document.getElementById('crop-search-input');
 const cropManagerList = document.getElementById('crop-manager-list');
 const btnManageCrops = document.getElementById('btn-manage-crops');
@@ -882,29 +881,32 @@ cropManagerOverlay.addEventListener('click', (e) => {
 // Filter search input
 cropSearchInput.addEventListener('input', renderCropManagerList);
 
-// Save selected crops
-cropManagerSave.addEventListener('click', () => {
-  const checkboxes = document.querySelectorAll('.crop-select-checkbox');
-  const activeKeys = [];
-  checkboxes.forEach(cb => {
-    if (cb.checked) {
-      activeKeys.push(cb.dataset.key);
-    }
-  });
-  
-  // Also preserve checked keys that were filtered out during search
-  const currentActive = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
-  const query = cropSearchInput.value.toLowerCase().trim();
-  if (query) {
-    currentActive.forEach(key => {
-      const match = MASTER_CROPS.find(c => c.key === key);
-      if (match && !match.name.toLowerCase().includes(query) && !match.type.toLowerCase().includes(query)) {
-        activeKeys.push(key);
+// Auto-save crop selections on change
+cropManagerList.addEventListener('change', (e) => {
+  if (e.target.classList.contains('crop-select-checkbox')) {
+    const checkboxes = document.querySelectorAll('.crop-select-checkbox');
+    const activeKeys = [];
+    checkboxes.forEach(cb => {
+      if (cb.checked) {
+        activeKeys.push(cb.dataset.key);
       }
     });
+    
+    // Also preserve checked keys that were filtered out during search
+    const currentActive = JSON.parse(localStorage.getItem('stardew_active_crops')) || ['starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango'];
+    const query = cropSearchInput.value.toLowerCase().trim();
+    if (query) {
+      currentActive.forEach(key => {
+        const match = MASTER_CROPS.find(c => c.key === key);
+        if (match && !match.name.toLowerCase().includes(query) && !match.type.toLowerCase().includes(query)) {
+          if (!activeKeys.includes(key)) {
+            activeKeys.push(key);
+          }
+        }
+      });
+    }
+    
+    localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
+    populateCropDropdown();
   }
-  
-  localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
-  populateCropDropdown();
-  cropManagerOverlay.style.display = 'none';
 });
