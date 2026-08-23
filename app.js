@@ -593,6 +593,46 @@ yearDownBtn.addEventListener('click', () => {
 renderCalendar();
 initFirebase();
 
+function isScheduleEmpty() {
+  if (!schedule) return true;
+  const years = Object.keys(schedule);
+  if (years.length === 0) return true;
+  const seasons = ['spring', 'summer', 'fall', 'winter'];
+  let hasTasks = false;
+  years.forEach(y => {
+    if (isNaN(y)) return;
+    seasons.forEach(s => {
+      if (!schedule[y] || !schedule[y][s]) return;
+      for (let d = 1; d <= 28; d++) {
+        if (schedule[y][s][d] && schedule[y][s][d].length > 0) {
+          hasTasks = true;
+        }
+      }
+    });
+  });
+  return !hasTasks;
+}
+
+function isRemoteScheduleEmpty(remoteSched) {
+  if (!remoteSched) return true;
+  const years = Object.keys(remoteSched);
+  if (years.length === 0) return true;
+  const seasons = ['spring', 'summer', 'fall', 'winter'];
+  let hasTasks = false;
+  years.forEach(y => {
+    if (isNaN(y)) return;
+    seasons.forEach(s => {
+      if (!remoteSched[y] || !remoteSched[y][s]) return;
+      for (let d = 1; d <= 28; d++) {
+        if (remoteSched[y][s][d] && remoteSched[y][s][d].length > 0) {
+          hasTasks = true;
+        }
+      }
+    });
+  });
+  return !hasTasks;
+}
+
 function initFirebase() {
   try {
     if (typeof firebase !== 'undefined') {
@@ -616,7 +656,19 @@ function initFirebase() {
           const localLastUpdated = parseInt(localStorage.getItem('stardew_last_updated')) || 0;
           const remoteLastUpdated = data.lastUpdated || 0;
 
-          if (remoteLastUpdated > localLastUpdated) {
+          const localEmpty = isScheduleEmpty();
+          const remoteEmpty = isRemoteScheduleEmpty(data.schedule);
+
+          if (localEmpty && !remoteEmpty) {
+            // Local is empty, remote has tasks. ALWAYS pull remote data!
+            schedule = data.schedule;
+            localStorage.setItem('stardew_schedule', JSON.stringify(schedule));
+            localStorage.setItem('stardew_last_updated', remoteLastUpdated);
+            renderCalendar();
+          } else if (!localEmpty && remoteEmpty) {
+            // Local has tasks, remote is empty. ALWAYS push local data!
+            saveSchedule();
+          } else if (remoteLastUpdated > localLastUpdated) {
             // Remote data is newer, apply it
             schedule = data.schedule;
             localStorage.setItem('stardew_schedule', JSON.stringify(schedule));
@@ -627,8 +679,10 @@ function initFirebase() {
             saveSchedule();
           }
         } else {
-          // No remote data yet, push local data to initialize it
-          saveSchedule();
+          // No remote data yet, push local data to initialize it (only if local is not empty)
+          if (!isScheduleEmpty()) {
+            saveSchedule();
+          }
         }
       });
     }
