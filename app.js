@@ -208,32 +208,6 @@ function getFutureDate(startYear, startSeason, startDay, durationDays) {
   };
 }
 
-// Gather all plant tasks from the database
-function getAllPlants() {
-  const plants = [];
-  const seasons = ['spring', 'summer', 'fall', 'winter'];
-  Object.keys(schedule).forEach(y => {
-    if (isNaN(y)) return;
-    seasons.forEach(s => {
-      if (!schedule[y][s]) return;
-      for (let d = 1; d <= 28; d++) {
-        const dayTasks = schedule[y][s][d] || [];
-        dayTasks.forEach(task => {
-          if (task.type === 'plant') {
-            plants.push({
-              task: task,
-              year: parseInt(y),
-              season: s,
-              day: d
-            });
-          }
-        });
-      }
-    });
-  });
-  return plants;
-}
-
 // Render Calendar Day Cards
 function renderCalendar() {
   calendarGrid.innerHTML = '';
@@ -259,69 +233,13 @@ function renderCalendar() {
   }
 }
 
-// Render tasks within a day card (calculates harvest/regrow events dynamically)
+// Render tasks within a day card
 function renderTasksForDay(day) {
   const listContainer = document.getElementById(`tasks-day-${day}`);
   listContainer.innerHTML = '';
   
   const currentYearSchedule = getYearSchedule(currentYear);
-  // Copy static database tasks first
-  const dayTasks = [...(currentYearSchedule[currentSeason][day] || [])];
-  
-  // Calculate dynamic harvests and regrows on the fly
-  const viewAbs = getAbsoluteDay(currentYear, currentSeason, day);
-  const plants = getAllPlants();
-
-  plants.forEach(plant => {
-    const plantAbs = getAbsoluteDay(plant.year, plant.season, plant.day);
-    const crop = CROP_GROWTH_PRESETS[plant.task.cropKey];
-    if (!crop) return;
-    
-    const growthDays = plant.task.stage === 'regrow' ? 0 : crop.getDays(plant.task.fertilizer, false);
-    const firstHarvestAbs = plantAbs + growthDays + (plant.task.stage === 'regrow' ? crop.regrow : 0);
-
-    // Only calculate if the crop planting is on or before the current day,
-    // and the viewed day is on or after the first harvest day,
-    // and the view day is before any registered cut-off (deleteAfterAbs)
-    if (viewAbs >= firstHarvestAbs && (!plant.task.deletedAfterAbs || viewAbs < plant.task.deletedAfterAbs)) {
-      if (crop.isTree) {
-        // Main Farm trees only produce fruit during their active season
-        if (plant.task.location === 'Main Farm' && currentSeason !== crop.activeSeason) {
-          return;
-        }
-      }
-
-      let isHarvestDay = false;
-      let isRegrow = false;
-
-      if (viewAbs === firstHarvestAbs) {
-        isHarvestDay = true;
-      } else if (crop.regrow > 0 && (viewAbs - firstHarvestAbs) % crop.regrow === 0) {
-        isHarvestDay = true;
-        isRegrow = true;
-      }
-
-      if (isHarvestDay) {
-        const harvestPrefix = crop.isTree ? '🌳' : '🌾';
-        const label = crop.isTree 
-          ? `🌳 Harvest ${crop.name} (${plant.task.location})` 
-          : (isRegrow ? `🌾 Harvest ${crop.name} (Regrow - ${plant.task.location})` : `🌾 Harvest ${crop.name} (${plant.task.location})`);
-
-        dayTasks.push({
-          id: isRegrow ? `dyn_regrow_${plant.task.id}_${viewAbs}` : `dyn_harvest_${plant.task.id}`,
-          type: 'harvest',
-          label: label,
-          groupId: plant.task.groupId,
-          isDynamic: true,
-          parentPlantId: plant.task.id,
-          parentPlantDay: plant.day,
-          parentPlantSeason: plant.season,
-          parentPlantYear: plant.year,
-          viewAbs: viewAbs
-        });
-      }
-    }
-  });
+  const dayTasks = currentYearSchedule[currentSeason][day] || [];
 
   // Render all gathered tasks
   dayTasks.forEach(task => {
@@ -373,7 +291,7 @@ document.getElementById('form-manual').addEventListener('submit', (e) => {
   document.getElementById('manual-label').value = '';
 });
 
-// Schedule Crop Planting (No longer writes static harvests, only writes the 'plant' task)
+// Schedule Crop Planting
 document.getElementById('form-crop').addEventListener('submit', (e) => {
   e.preventDefault();
   const cropKey = document.getElementById('crop-select').value;
@@ -388,7 +306,9 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   }
 
   const groupId = 'crop_group_' + Date.now();
+  const plantAbs = getAbsoluteDay(currentYear, currentSeason, activeDay);
 
+  // 1. Save the planting/regrow-start task
   const plantTask = {
     id: 'plant_' + Date.now(),
     type: 'plant',
@@ -399,12 +319,75 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     label: cropStage === 'regrow' 
       ? (crop.isTree ? `🌳 Mature Tree: ${crop.name} (${location})` : `🌱 Regrow Start: ${crop.name} (${location})`) 
       : (crop.isTree ? `🌳 Plant ${crop.name} (${location})` : `🌱 Plant ${crop.name} (${location})`),
-    groupId: groupId
+    groupId: groupId,
+    absDay: plantAbs
   };
 
   const currentYearSchedule = getYearSchedule(currentYear);
   if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
   currentYearSchedule[currentSeason][activeDay].push(plantTask);
+
+  // 2. Save future harvest & regrow tasks
+  const growthDays = cropStage === 'regrow' ? 0 : crop.getDays(fertilizer, false);
+  const firstHarvestDelay = growthDays + (cropStage === 'regrow' ? crop.regrow : 0);
+  
+  let harvestDate = getFutureDate(currentYear, currentSeason, activeDay, firstHarvestDelay);
+  let harvestAbs = getAbsoluteDay(harvestDate.year, harvestDate.season, harvestDate.day);
+
+  function addStaticTask(date, task) {
+    const ys = getYearSchedule(date.year);
+    if (!ys[date.season][date.day]) ys[date.season][date.day] = [];
+    ys[date.season][date.day].push(task);
+  }
+
+  // First Harvest Task
+  const firstHarvestTask = {
+    id: 'harvest_' + Date.now(),
+    type: 'harvest',
+    label: crop.isTree 
+      ? `🌳 Harvest ${crop.name} (${location})` 
+      : `🌾 Harvest ${crop.name} (${location})`,
+    groupId: groupId,
+    absDay: harvestAbs
+  };
+
+  let shouldAddFirst = true;
+  if (crop.isTree && location === 'Main Farm' && harvestDate.season !== crop.activeSeason) {
+    shouldAddFirst = false;
+  }
+  if (shouldAddFirst) {
+    addStaticTask(harvestDate, firstHarvestTask);
+  }
+
+  // Regrows (for multi-harvest crops or trees)
+  const regrowInterval = crop.regrow;
+  if (regrowInterval > 0) {
+    let nextHarvestDate = getFutureDate(harvestDate.year, harvestDate.season, harvestDate.day, regrowInterval);
+    // Schedule up to 60 regrows (approx 4 years of harvests)
+    for (let i = 0; i < 60; i++) {
+      const nextHarvestAbs = getAbsoluteDay(nextHarvestDate.year, nextHarvestDate.season, nextHarvestDate.day);
+      const regrowTask = {
+        id: 'harvest_regrow_' + Date.now() + '_' + i,
+        type: 'harvest',
+        label: crop.isTree 
+          ? `🌳 Harvest ${crop.name} (${location})`
+          : `🌾 Harvest ${crop.name} (Regrow - ${location})`,
+        groupId: groupId,
+        absDay: nextHarvestAbs
+      };
+
+      let shouldAddRegrow = true;
+      if (crop.isTree && location === 'Main Farm' && nextHarvestDate.season !== crop.activeSeason) {
+        shouldAddRegrow = false;
+      }
+
+      if (shouldAddRegrow) {
+        addStaticTask(nextHarvestDate, regrowTask);
+      }
+
+      nextHarvestDate = getFutureDate(nextHarvestDate.year, nextHarvestDate.season, nextHarvestDate.day, regrowInterval);
+    }
+  }
 
   saveSchedule();
   renderCalendar();
@@ -418,13 +401,15 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   const location = document.getElementById('machine-loc').value;
   const preset = MACHINE_PRESETS[machineKey];
   const groupId = 'machine_group_' + Date.now();
+  const loadAbs = getAbsoluteDay(currentYear, currentSeason, activeDay);
 
   // 1. Add Load Task to selected day
   const loadTask = {
     id: 'load_' + Date.now(),
     type: machineKey.includes('keg') ? 'keg' : 'cask',
     label: `📥 Load ${preset.name} (${location})`,
-    groupId: groupId
+    groupId: groupId,
+    absDay: loadAbs
   };
   const currentYearSchedule = getYearSchedule(currentYear);
   if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
@@ -432,12 +417,14 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
 
   // 2. Add Ready Task to future day
   const readyDate = getFutureDate(currentYear, currentSeason, activeDay, preset.duration);
+  const readyAbs = getAbsoluteDay(readyDate.year, readyDate.season, readyDate.day);
   const readyTask = {
     id: 'ready_' + Date.now(),
     type: machineKey.includes('keg') ? 'keg' : 'cask',
     label: `📦 ${preset.name} Ready (${location})`,
     sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
-    groupId: groupId
+    groupId: groupId,
+    absDay: readyAbs
   };
   
   const targetYearSchedule = getYearSchedule(readyDate.year);
@@ -449,38 +436,19 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   closeModal();
 });
 
-// Delete task (supports cascade delete on machines, crop deletion, and future cutoff limits)
+// Delete task (supports cascade delete on threads from the clicked point forward)
 window.deleteTask = function(day, id, event) {
   event.stopPropagation(); // Avoid opening modal when clicking delete
   
   const currentYearSchedule = getYearSchedule(currentYear);
   const list = currentYearSchedule[currentSeason][day] || [];
-  
-  // 1. Check if the task is a dynamic harvest event
-  if (id.startsWith('dyn_harvest_') || id.startsWith('dyn_regrow_')) {
-    // Find parent plant task to register a cut-off (deletedAfterAbs) limit
-    const viewAbs = getAbsoluteDay(currentYear, currentSeason, day);
-    const plants = getAllPlants();
-    
-    // Extract parent ID
-    const parentId = id.split('_')[2];
-    const parentPlant = plants.find(p => p.task.id === parentId);
-    
-    if (parentPlant) {
-      // Set the absolute day from which no more harvests/regrows will render
-      parentPlant.task.deletedAfterAbs = viewAbs;
-      saveSchedule();
-      renderCalendar();
-    }
-    return;
-  }
-
-  // 2. Standard static tasks delete
   const taskToDelete = list.find(t => t.id === id);
+  
   if (taskToDelete && taskToDelete.groupId) {
     const targetGroupId = taskToDelete.groupId;
+    const cutoffAbs = taskToDelete.absDay || 0;
     
-    // Cascade delete across all years, seasons, and days
+    // Cascade delete across all years, seasons, and days for tasks with the same groupId that are on or after cutoffAbs
     const seasons = ['spring', 'summer', 'fall', 'winter'];
     Object.keys(schedule).forEach(y => {
       if (isNaN(y)) return;
@@ -488,7 +456,13 @@ window.deleteTask = function(day, id, event) {
         if (!schedule[y] || !schedule[y][s]) return;
         for (let d = 1; d <= 28; d++) {
           if (schedule[y][s][d]) {
-            schedule[y][s][d] = schedule[y][s][d].filter(t => t.groupId !== targetGroupId);
+            schedule[y][s][d] = schedule[y][s][d].filter(t => {
+              if (t.groupId === targetGroupId) {
+                // Delete it if it is on or after the cutoff day
+                return t.absDay < cutoffAbs;
+              }
+              return true;
+            });
           }
         }
       });
