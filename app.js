@@ -331,8 +331,8 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   // 3. For multi-harvest crops (e.g. Ancient Fruit), schedule subsequent harvests
   if (crop.regrow > 0) {
     let nextHarvest = getFutureDate(harvestDate.year, harvestDate.season, harvestDate.day, crop.regrow);
-    // Schedule regrows for up to 3 cycles
-    for (let i = 0; i < 3; i++) {
+    // Schedule regrows for up to 60 cycles (approx 4 years of continuous weekly harvest)
+    for (let i = 0; i < 60; i++) {
       const regrowTask = {
         id: 'harvest_regrow_' + Date.now() + '_' + i,
         type: 'harvest',
