@@ -229,8 +229,8 @@ header h1 {
 }
 
 .task-item {
-  font-size: 0.65rem;
-  padding: 0.25rem 0.45rem;
+  font-size: 0.76rem;
+  padding: 0.35rem 0.5rem;
   border-radius: 6px;
   display: flex;
   justify-content: space-between;

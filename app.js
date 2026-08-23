@@ -202,14 +202,29 @@ function renderTasksForDay(day) {
     
     let iconHtml = '';
     if (task.cropKey && CROP_IMAGES[task.cropKey]) {
-      iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 4px; vertical-align: middle;">`;
+      iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">`;
     } else if (task.machineKey && MACHINE_IMAGES[task.machineKey]) {
-      iconHtml = `<img src="${MACHINE_IMAGES[task.machineKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 4px; vertical-align: middle;">`;
+      iconHtml = `<img src="${MACHINE_IMAGES[task.machineKey]}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">`;
     }
     
+    const lastIndex = task.label.lastIndexOf('(');
+    let titleText = task.label;
+    let subtitleText = '';
+    if (lastIndex !== -1) {
+      titleText = task.label.substring(0, lastIndex).trim();
+      subtitleText = task.label.substring(lastIndex + 1).replace(')', '').trim();
+    }
+    
+    const subtitleHtml = subtitleText ? `<span class="task-subtitle" style="font-size: 0.7rem; opacity: 0.75; font-weight: normal; display: block; margin-top: 1px;">${subtitleText}</span>` : '';
+    
     item.innerHTML = `
-      ${iconHtml}
-      <span>${task.label}</span>
+      <div style="display: flex; align-items: center; flex-grow: 1; min-width: 0;">
+        ${iconHtml}
+        <div style="display: flex; flex-direction: column; min-width: 0; text-align: left; line-height: 1.1;">
+          <span style="font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${titleText}</span>
+          ${subtitleHtml}
+        </div>
+      </div>
       <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)">×</button>
     `;
     listContainer.appendChild(item);
@@ -243,17 +258,30 @@ window.openModal = function(day) {
       
       let iconHtml = '';
       if (task.cropKey && CROP_IMAGES[task.cropKey]) {
-        iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 6px; vertical-align: middle;">`;
+        iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">`;
       } else if (task.machineKey && MACHINE_IMAGES[task.machineKey]) {
-        iconHtml = `<img src="${MACHINE_IMAGES[task.machineKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 6px; vertical-align: middle;">`;
+        iconHtml = `<img src="${MACHINE_IMAGES[task.machineKey]}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">`;
       }
       
+      const lastIndex = task.label.lastIndexOf('(');
+      let titleText = task.label;
+      let subtitleText = '';
+      if (lastIndex !== -1) {
+        titleText = task.label.substring(0, lastIndex).trim();
+        subtitleText = task.label.substring(lastIndex + 1).replace(')', '').trim();
+      }
+      
+      const subtitleHtml = subtitleText ? `<span class="task-subtitle" style="font-size: 0.75rem; opacity: 0.75; font-weight: normal; display: block; margin-top: 2px;">${subtitleText}</span>` : '';
+      
       item.innerHTML = `
-        <div style="display: flex; align-items: center;">
+        <div style="display: flex; align-items: center; min-width: 0;">
           ${iconHtml}
-          <span>${task.label}</span>
+          <div style="display: flex; flex-direction: column; min-width: 0; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 600;">${titleText}</span>
+            ${subtitleHtml}
+          </div>
         </div>
-        <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)" style="background: none; border: none; color: rgba(255,255,255,0.6); cursor: pointer; font-size: 1.15rem; font-weight: bold; padding: 0 0.25rem;">×</button>
+        <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)" style="background: none; border: none; color: rgba(255,255,255,0.6); cursor: pointer; font-size: 1.15rem; font-weight: bold; padding: 0 0.25rem; flex-shrink: 0; margin-left: 0.5rem;">×</button>
       `;
       modalTasksList.appendChild(item);
     });
