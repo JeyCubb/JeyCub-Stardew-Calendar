@@ -154,6 +154,109 @@ function getFutureDate(startYear, startSeason, startDay, durationDays) {
   };
 }
 
+// Helper to convert hex to RGBA
+function hexToRgba(hex, alpha) {
+  let c = hex.substring(1);
+  if (c.length === 3) c = c[0] + c[0] + c[1] + c[1] + c[2] + c[2];
+  const num = parseInt(c, 16);
+  return `rgba(${(num >> 16) & 255}, ${(num >> 8) & 255}, ${num & 255}, ${alpha})`;
+}
+
+// Master color map matching crop or machine dominant colors
+const ITEM_COLORS = {
+  // Spring crops
+  'parsnip': '#dcd1b4',      // Light cream/yellowish white
+  'potato': '#b38f6b',       // Brown
+  'cauliflower': '#e9f5db',  // Cream white
+  'kale': '#477a3d',         // Green
+  'garlic': '#f2ebd9',       // Off-white
+  'unmilled_rice': '#94a867',// Greenish gold
+  'strawberry': '#e0284c',   // Red
+  'rhubarb': '#be184a',      // Pinkish red
+  'green_bean': '#4f802f',   // Dark green
+  // Summer crops
+  'melon': '#f43f5e',        // Coral pink
+  'blueberry': '#1d4ed8',    // Royal blue
+  'starfruit': '#ffc300',    // Golden yellow
+  'corn': '#eab308',         // Yellow
+  'hot_pepper': '#dc2626',   // Bright red
+  'tomato': '#ea580c',       // Orange-red
+  'radish': '#ec4899',       // Pink
+  'red_cabbage': '#7c3aed',  // Purple
+  'hops': '#84cc16',         // Lime green
+  // Fall crops
+  'pumpkin': '#ea580c',      // Orange
+  'cranberry': '#991b1b',    // Wine red
+  'grape': '#6d28d9',        // Dark violet
+  'eggplant': '#4c1d95',     // Indigo/dark purple
+  'amaranth': '#be185d',     // Magenta
+  'artichoke': '#65a30d',    // Olive green
+  'beet': '#881337',         // Deep crimson
+  'bok_choy': '#a3e635',     // Bright green
+  'sweetgem': '#6366f1',     // Indigo
+  // Special
+  'ancient': '#00a082',      // Teal cyan
+  'pineapple': '#facc15',    // Bright yellow
+  'taro': '#854d0e',         // Brownish green
+  'coffee': '#78350f',       // Coffee brown
+  // Trees
+  'cherry': '#be123c',       // Cherry red
+  'apricot': '#f97316',      // Apricot orange
+  'orange': '#ea580c',       // Orange
+  'peach': '#fda4af',        // Peach pink
+  'apple': '#dc2626',        // Apple red
+  'pomegranate': '#991b1b',  // Crimson red
+  'banana': '#fef08a',       // Yellow
+  'mango': '#facc15',        // Yellow-orange
+  // Machines / yields
+  'keg_wine': '#a21caf',     // Wine violet
+  'keg_beer': '#b45309',     // Amber
+  'preserves': '#be185d',    // Jelly red
+  'cask_silver': '#94a3b8',  // Silver gray
+  'cask_gold': '#fbbf24',    // Gold yellow
+  'cask_iridium': '#c084fc', // Purple iridium
+  'solar_panel': '#38bdf8',  // Sky blue battery
+};
+
+function applyTaskItemColor(item, task) {
+  let baseColor = '#94a3b8'; // Slate default
+  if (task.type === 'plant') baseColor = '#22c55e'; // Green
+  else if (task.type === 'harvest') baseColor = '#eab308'; // Yellow
+  else if (task.type === 'keg') baseColor = '#a855f7'; // Purple
+  else if (task.type === 'cask') baseColor = '#f97316'; // Orange
+  else if (task.type === 'solar') baseColor = '#06b6d4'; // Cyan
+  
+  let imageKey = task.cropKey || task.machineKey;
+  if (!imageKey) {
+    const cleanLabel = task.label.toLowerCase();
+    for (const crop of MASTER_CROPS) {
+      if (cleanLabel.includes(crop.name.toLowerCase())) {
+        imageKey = crop.key;
+        break;
+      }
+    }
+    if (!imageKey) {
+      if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) imageKey = 'solar_panel';
+      else if (cleanLabel.includes('wine')) imageKey = 'keg_wine';
+      else if (cleanLabel.includes('beer')) imageKey = 'keg_beer';
+      else if (cleanLabel.includes('preserves') || cleanLabel.includes('jelly')) imageKey = 'preserves';
+      else if (cleanLabel.includes('cask')) {
+        if (cleanLabel.includes('silver')) imageKey = 'cask_silver';
+        else if (cleanLabel.includes('gold')) imageKey = 'cask_gold';
+        else if (cleanLabel.includes('iridium')) imageKey = 'cask_iridium';
+      }
+    }
+  }
+  
+  if (imageKey && ITEM_COLORS[imageKey]) {
+    baseColor = ITEM_COLORS[imageKey];
+  }
+  
+  item.style.backgroundColor = hexToRgba(baseColor, 0.16);
+  item.style.borderColor = hexToRgba(baseColor, 0.4);
+  item.style.color = '#ffffff';
+}
+
 // Helper to get image URL for a task, fallback to parsing label text
 function getTaskIconUrl(task) {
   let imageKey = task.cropKey || task.machineKey;
@@ -232,6 +335,7 @@ function renderTasksForDay(day) {
   dayTasks.forEach(task => {
     const item = document.createElement('div');
     item.className = `task-item ${task.type}`;
+    applyTaskItemColor(item, task);
     
     const imgUrl = getTaskIconUrl(task);
     const iconHtml = imgUrl ? `<img src="${imgUrl}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">` : '';
@@ -280,6 +384,7 @@ window.openModal = function(day) {
     dayTasks.forEach(task => {
       const item = document.createElement('div');
       item.className = `task-item ${task.type}`;
+      applyTaskItemColor(item, task);
       item.style.display = 'flex';
       item.style.justifyContent = 'space-between';
       item.style.alignItems = 'center';
