@@ -124,8 +124,6 @@ const seasonBtns = document.querySelectorAll('.season-btn');
 const modalOverlay = document.getElementById('modal-overlay');
 const modalClose = document.getElementById('modal-close');
 const modalTitle = document.getElementById('modal-title');
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
 
 // Helper to save schedule
 function saveSchedule() {
@@ -206,17 +204,6 @@ function closeModal() {
 modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', (e) => {
   if (e.target === modalOverlay) closeModal();
-});
-
-// Modal Tabs switching
-tabBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    tabBtns.forEach(b => b.classList.remove('active'));
-    tabContents.forEach(c => c.classList.remove('active'));
-    
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
 });
 
 // Gifting & Professions change trigger

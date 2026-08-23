@@ -272,7 +272,7 @@ header h1 {
   border: 1px solid var(--border-glass);
   border-radius: 16px;
   width: 100%;
-  max-width: 480px;
+  max-width: 580px; /* Slightly wider for side-by-side select elements */
   padding: 1.5rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -311,33 +311,42 @@ header h1 {
   color: var(--text-main);
 }
 
-.form-group {
+.modal-forms-container {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 1rem;
 }
 
-.form-group label {
-  font-size: 0.8rem;
-  font-weight: 600;
+.dialog-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
   color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-input, select {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--border-glass);
-  color: var(--text-main);
-  padding: 0.55rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  outline: none;
-  transition: all 0.2s ease;
+.form-group-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-input:focus, select:focus {
-  border-color: var(--accent-gold);
-  box-shadow: 0 0 0 2px rgba(234, 179, 8, 0.15);
+.form-group-row input,
+.form-group-row select {
+  flex: 1;
+  min-width: 0; /* Prevents overflow in flexbox */
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-glass);
+  margin: 0.25rem 0;
 }
 
 .btn {
@@ -345,7 +354,7 @@ input:focus, select:focus {
   color: #111116;
   border: none;
   font-weight: 700;
-  padding: 0.65rem;
+  padding: 0.55rem 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -357,38 +366,8 @@ input:focus, select:focus {
   transform: translateY(-1px);
 }
 
-.tabs {
-  display: flex;
-  border-bottom: 1px solid var(--border-glass);
-  margin-bottom: 0.25rem;
-}
-
-.tab-btn {
-  flex: 1;
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  padding: 0.5rem;
-  font-weight: 600;
-  font-size: 0.8rem;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.tab-btn.active {
-  color: var(--accent-gold);
-  border-bottom-color: var(--accent-gold);
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
+.btn-inline {
+  flex-shrink: 0;
 }
 
 .meta-stats {

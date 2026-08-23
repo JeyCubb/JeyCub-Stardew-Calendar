@@ -54,7 +54,7 @@
     </div>
   </main>
 
-  <!-- Task Scheduler Modal -->
+  <!-- Task Scheduler Modal (Unified layout) -->
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal">
       <div class="modal-header">
@@ -62,66 +62,56 @@
         <button class="modal-close" id="modal-close">×</button>
       </div>
 
-      <!-- Option Tabs -->
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="tab-manual">Manual Note</button>
-        <button class="tab-btn" data-tab="tab-crops">Plant Crop</button>
-        <button class="tab-btn" data-tab="tab-machines">Load Machine</button>
-      </div>
-
-      <!-- Tab Content: Manual Note -->
-      <div class="tab-content active" id="tab-manual">
-        <form id="form-manual">
-          <div class="form-group">
-            <label for="manual-label">Action Description</label>
-            <input type="text" id="manual-label" placeholder="e.g. Put starfruit on keg, sell pigs, etc." required>
+      <!-- Combined Forms Panel -->
+      <div class="modal-forms-container">
+        <!-- Section 1: Manual Note -->
+        <form id="form-manual" class="dialog-section">
+          <div class="form-group-row">
+            <input type="text" id="manual-label" placeholder="Enter manual task (e.g., Put starfruit on keg, harvest pigs)..." required>
+            <button type="submit" class="btn btn-inline">Add Note</button>
           </div>
-          <button type="submit" class="btn">Add to Calendar</button>
         </form>
-      </div>
 
-      <!-- Tab Content: Crops Scheduler -->
-      <div class="tab-content" id="tab-crops">
-        <form id="form-crop">
-          <div class="form-group">
-            <label for="crop-select">Select Crop</label>
+        <div class="divider"></div>
+
+        <!-- Section 2: Plant Crop -->
+        <form id="form-crop" class="dialog-section">
+          <h4 class="section-title">🌱 Plant Crop & Forecast</h4>
+          <div class="form-group-row">
             <select id="crop-select">
               <option value="starfruit">Starfruit (13 days)</option>
-              <option value="ancient">Ancient Fruit (28 days + 7d regrow)</option>
+              <option value="ancient">Ancient Fruit (28d + 7d regrow)</option>
               <option value="pumpkin">Pumpkin (13 days)</option>
               <option value="melon">Melon (12 days)</option>
               <option value="cauliflower">Cauliflower (12 days)</option>
               <option value="sweetgem">Sweet Gem Berry (24 days)</option>
             </select>
-          </div>
-          <div class="form-group">
-            <label for="crop-fert">Fertilizer Used</label>
             <select id="crop-fert">
-              <option value="none">None (Base speed)</option>
-              <option value="speed">Speed-Gro (10% faster)</option>
-              <option value="deluxe">Deluxe Speed-Gro (25% faster)</option>
-              <option value="hyper">Hyper Speed-Gro (33% faster)</option>
+              <option value="none">No Fertilizer</option>
+              <option value="speed">Speed-Gro (10%)</option>
+              <option value="deluxe">Deluxe Speed-Gro (25%)</option>
+              <option value="hyper">Hyper Speed-Gro (33%)</option>
             </select>
+            <button type="submit" class="btn btn-inline">Plant</button>
           </div>
-          <button type="submit" class="btn">Calculate & Schedule Harvest</button>
         </form>
-      </div>
 
-      <!-- Tab Content: Machines & Casks -->
-      <div class="tab-content" id="tab-machines">
-        <form id="form-machine">
-          <div class="form-group">
-            <label for="machine-select">Processing Machine</label>
+        <div class="divider"></div>
+
+        <!-- Section 3: Load Machine -->
+        <form id="form-machine" class="dialog-section">
+          <h4 class="section-title">📥 Load Machine or Cask</h4>
+          <div class="form-group-row">
             <select id="machine-select">
               <option value="keg_wine">Keg: Fruit -> Wine (7 days)</option>
               <option value="keg_beer">Keg: Wheat/Hops -> Beer/Pale Ale (2 days)</option>
-              <option value="preserves">Preserves Jar: Fruit/Veg -> Jelly/Pickles (3 days)</option>
-              <option value="cask_silver">Cask Aging: Silver Quality (14 days)</option>
-              <option value="cask_gold">Cask Aging: Gold Quality (28 days / 1 season)</option>
-              <option value="cask_iridium">Cask Aging: Iridium Quality (56 days / 2 seasons)</option>
+              <option value="preserves">Preserves Jar: Fruit/Veg -> Jelly (3 days)</option>
+              <option value="cask_silver">Cask: Silver Quality (14 days)</option>
+              <option value="cask_gold">Cask: Gold Quality (28 days)</option>
+              <option value="cask_iridium">Cask: Iridium Quality (56 days)</option>
             </select>
+            <button type="submit" class="btn btn-inline">Load</button>
           </div>
-          <button type="submit" class="btn">Schedule Processing</button>
         </form>
       </div>
     </div>
