@@ -2,8 +2,8 @@
   --bg-dark: #111116;
   --bg-card: rgba(26, 26, 36, 0.7);
   --border-glass: rgba(255, 255, 255, 0.08);
-  --accent-gold: #eab308;
-  --accent-gold-hover: #facc15;
+  --accent-gold: #f97316; /* Stardew Orange */
+  --accent-gold-hover: #fb923c; /* Light Orange */
   --text-main: #f1f5f9;
   --text-muted: #94a3b8;
   --spring-color: #ec4899;
@@ -26,7 +26,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #111116 100%);
+  background-image: radial-gradient(circle at 50% 50%, #2e1a05 0%, #111116 100%); /* Orange-tinted background */
   overflow: hidden;
 }
 
@@ -44,7 +44,7 @@ header {
 header h1 {
   font-size: 1.35rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, #f97316, #ea580c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: flex;
