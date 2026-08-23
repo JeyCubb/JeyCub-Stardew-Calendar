@@ -144,7 +144,7 @@ const MACHINE_PRESETS = {
 
 // UI Elements
 const calendarGrid = document.getElementById('calendar-grid');
-const seasonBtns = document.querySelectorAll('.season-btn');
+const seasonBtns = document.querySelectorAll('.season-selector .season-btn');
 const modalOverlay = document.getElementById('modal-overlay');
 const modalClose = document.getElementById('modal-close');
 const modalTitle = document.getElementById('modal-title');
@@ -421,6 +421,7 @@ yearUpBtn.addEventListener('click', () => {
   currentYear++;
   yearDisplay.innerText = currentYear;
   localStorage.setItem('stardew_current_year', currentYear);
+  saveSchedule(); // Persist newly initialized year structure
   renderCalendar();
   updateMetaStats();
 });
@@ -430,6 +431,7 @@ yearDownBtn.addEventListener('click', () => {
     currentYear--;
     yearDisplay.innerText = currentYear;
     localStorage.setItem('stardew_current_year', currentYear);
+    saveSchedule();
     renderCalendar();
     updateMetaStats();
   }
