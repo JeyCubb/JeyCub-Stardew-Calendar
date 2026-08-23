@@ -12,16 +12,17 @@ if (rawSchedule.spring || rawSchedule.summer || rawSchedule.fall || rawSchedule.
   schedule = rawSchedule;
 }
 
-// Initialize current year structure if not present
+// Initialize current year structure if not present (guarantees all seasons exist)
 function getYearSchedule(year) {
   if (!schedule[year]) {
-    schedule[year] = {
-      spring: {},
-      summer: {},
-      fall: {},
-      winter: {}
-    };
+    schedule[year] = {};
   }
+  const seasons = ['spring', 'summer', 'fall', 'winter'];
+  seasons.forEach(s => {
+    if (!schedule[year][s]) {
+      schedule[year][s] = {};
+    }
+  });
   return schedule[year];
 }
 
