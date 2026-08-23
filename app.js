@@ -429,7 +429,7 @@ function renderTasksForDay(day) {
       <div style="display: flex; align-items: center; flex-grow: 1; min-width: 0;">
         ${iconHtml}
         <div class="task-text-container" style="display: flex; flex-direction: column; min-width: 0; text-align: left; line-height: 1.1;">
-          <span style="font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${titleText}</span>
+          <span style="font-weight: 600; word-break: break-word;">${titleText}</span>
           ${subtitleHtml}
         </div>
       </div>
