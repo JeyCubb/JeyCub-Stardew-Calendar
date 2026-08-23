@@ -131,7 +131,15 @@ const CROP_GROWTH_PRESETS = {
       if (fert === 'hyper' && agri) return 13;
       return 24;
     }
-  }
+  },
+  cherry: { name: 'Cherry Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', getDays: () => 28 },
+  apricot: { name: 'Apricot Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', getDays: () => 28 },
+  orange: { name: 'Orange Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', getDays: () => 28 },
+  peach: { name: 'Peach Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', getDays: () => 28 },
+  apple: { name: 'Apple Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', getDays: () => 28 },
+  pomegranate: { name: 'Pomegranate Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', getDays: () => 28 },
+  banana: { name: 'Banana Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', getDays: () => 28 },
+  mango: { name: 'Mango Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', getDays: () => 28 }
 };
 
 const MACHINE_PRESETS = {
@@ -276,6 +284,13 @@ function renderTasksForDay(day) {
     // and the viewed day is on or after the first harvest day,
     // and the view day is before any registered cut-off (deleteAfterAbs)
     if (viewAbs >= firstHarvestAbs && (!plant.task.deletedAfterAbs || viewAbs < plant.task.deletedAfterAbs)) {
+      if (crop.isTree) {
+        // Main Farm trees only produce fruit during their active season
+        if (plant.task.location === 'Main Farm' && currentSeason !== crop.activeSeason) {
+          return;
+        }
+      }
+
       let isHarvestDay = false;
       let isRegrow = false;
 
@@ -287,10 +302,15 @@ function renderTasksForDay(day) {
       }
 
       if (isHarvestDay) {
+        const harvestPrefix = crop.isTree ? '🌳' : '🌾';
+        const label = crop.isTree 
+          ? `🌳 Harvest ${crop.name} (${plant.task.location})` 
+          : (isRegrow ? `🌾 Harvest ${crop.name} (Regrow - ${plant.task.location})` : `🌾 Harvest ${crop.name} (${plant.task.location})`);
+
         dayTasks.push({
           id: isRegrow ? `dyn_regrow_${plant.task.id}_${viewAbs}` : `dyn_harvest_${plant.task.id}`,
           type: 'harvest',
-          label: isRegrow ? `🌾 Harvest ${crop.name} (Regrow - ${plant.task.location})` : `🌾 Harvest ${crop.name} (${plant.task.location})`,
+          label: label,
           groupId: plant.task.groupId,
           isDynamic: true,
           parentPlantId: plant.task.id,
@@ -376,7 +396,9 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     fertilizer: fertilizer,
     location: location,
     stage: cropStage,
-    label: cropStage === 'regrow' ? `🌱 Regrow Start: ${crop.name} (${location})` : `🌱 Plant ${crop.name} (${location})`,
+    label: cropStage === 'regrow' 
+      ? (crop.isTree ? `🌳 Mature Tree: ${crop.name} (${location})` : `🌱 Regrow Start: ${crop.name} (${location})`) 
+      : (crop.isTree ? `🌳 Plant ${crop.name} (${location})` : `🌱 Plant ${crop.name} (${location})`),
     groupId: groupId
   };
 
