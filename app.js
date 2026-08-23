@@ -85,7 +85,79 @@ function getYearSchedule(year) {
   return schedule[year];
 }
 
+// MASTER CROPS DATA & SELECTION MANAGER
+const MASTER_CROPS = [
+  // Spring
+  { key: 'parsnip', name: 'Parsnip', base: 4, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'potato', name: 'Potato', base: 6, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'cauliflower', name: 'Cauliflower', base: 12, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'kale', name: 'Kale', base: 6, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'garlic', name: 'Garlic', base: 4, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'unmilled_rice', name: 'Unmilled Rice', base: 8, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'strawberry', name: 'Strawberry', base: 8, regrow: 4, season: 'spring', type: 'Spring' },
+  { key: 'rhubarb', name: 'Rhubarb', base: 13, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'green_bean', name: 'Green Bean', base: 10, regrow: 3, season: 'spring', type: 'Spring' },
+  // Summer
+  { key: 'melon', name: 'Melon', base: 12, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'blueberry', name: 'Blueberry', base: 13, regrow: 4, season: 'summer', type: 'Summer' },
+  { key: 'starfruit', name: 'Starfruit', base: 13, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'corn', name: 'Corn', base: 14, regrow: 4, season: 'summer', type: 'Summer' },
+  { key: 'hot_pepper', name: 'Hot Pepper', base: 5, regrow: 3, season: 'summer', type: 'Summer' },
+  { key: 'tomato', name: 'Tomato', base: 11, regrow: 4, season: 'summer', type: 'Summer' },
+  { key: 'radish', name: 'Radish', base: 6, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'red_cabbage', name: 'Red Cabbage', base: 9, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'hops', name: 'Hops', base: 11, regrow: 1, season: 'summer', type: 'Summer' },
+  // Fall
+  { key: 'pumpkin', name: 'Pumpkin', base: 13, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'cranberry', name: 'Cranberries', base: 7, regrow: 5, season: 'fall', type: 'Fall' },
+  { key: 'grape', name: 'Grape', base: 10, regrow: 3, season: 'fall', type: 'Fall' },
+  { key: 'eggplant', name: 'Eggplant', base: 7, regrow: 5, season: 'fall', type: 'Fall' },
+  { key: 'amaranth', name: 'Amaranth', base: 7, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'artichoke', name: 'Artichoke', base: 8, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'beet', name: 'Beet', base: 6, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'bok_choy', name: 'Bok Choy', base: 4, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'sweetgem', name: 'Sweet Gem Berry', base: 24, regrow: 0, season: 'fall', type: 'Fall' },
+  // Special / Trees
+  { key: 'ancient', name: 'Ancient Fruit', base: 28, regrow: 7, season: 'spring', type: 'Special' },
+  { key: 'pineapple', name: 'Pineapple', base: 14, regrow: 7, season: 'summer', type: 'Special' },
+  { key: 'taro', name: 'Taro Root', base: 10, regrow: 0, season: 'summer', type: 'Special' },
+  { key: 'coffee', name: 'Coffee Bean', base: 10, regrow: 2, season: 'spring', type: 'Special' },
+  { key: 'cherry', name: 'Cherry Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
+  { key: 'apricot', name: 'Apricot Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
+  { key: 'orange', name: 'Orange Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'peach', name: 'Peach Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'apple', name: 'Apple Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', type: 'Tree' },
+  { key: 'pomegranate', name: 'Pomegranate Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', type: 'Tree' },
+  { key: 'banana', name: 'Banana Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'mango', name: 'Mango Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' }
+];
+
+// Helper to calculate speed growth days dynamically
+function calculateGrowthDays(baseDays, fertilizer, hasAgriculturist) {
+  let multiplier = 1.0;
+  if (fertilizer === 'speed') multiplier -= 0.1;
+  if (fertilizer === 'deluxe') multiplier -= 0.25;
+  if (fertilizer === 'hyper') multiplier -= 0.33;
+  if (hasAgriculturist) multiplier -= 0.1;
+  return Math.max(1, Math.floor(baseDays * multiplier));
+}
+
 const CROP_GROWTH_PRESETS = {};
+
+// Populate presets table dynamically
+MASTER_CROPS.forEach(c => {
+  CROP_GROWTH_PRESETS[c.key] = {
+    name: c.name,
+    base: c.base,
+    regrow: c.regrow,
+    isTree: c.isTree || false,
+    activeSeason: c.activeSeason || c.season,
+    getDays: (fert, agri) => {
+      if (c.isTree) return 28;
+      return calculateGrowthDays(c.base, fert, agri);
+    }
+  };
+});
 
 const MACHINE_PRESETS = {
   keg_wine: { name: 'Keg (Wine)', duration: 7 },
@@ -892,78 +964,6 @@ document.getElementById('form-sync').addEventListener('submit', (e) => {
     alert("⚡ Database URL saved! Connecting to cloud database...");
   }
   window.location.reload();
-});
-
-// MASTER CROPS DATA & SELECTION MANAGER
-const MASTER_CROPS = [
-  // Spring
-  { key: 'parsnip', name: 'Parsnip', base: 4, regrow: 0, season: 'spring', type: 'Spring' },
-  { key: 'potato', name: 'Potato', base: 6, regrow: 0, season: 'spring', type: 'Spring' },
-  { key: 'cauliflower', name: 'Cauliflower', base: 12, regrow: 0, season: 'spring', type: 'Spring' },
-  { key: 'kale', name: 'Kale', base: 6, regrow: 0, season: 'spring', type: 'Spring' },
-  { key: 'garlic', name: 'Garlic', base: 4, regrow: 0, season: 'spring', type: 'Spring' },
-  { key: 'unmilled_rice', name: 'Unmilled Rice', base: 8, regrow: 0, season: 'spring', type: 'Spring' },
-  { key: 'strawberry', name: 'Strawberry', base: 8, regrow: 4, season: 'spring', type: 'Spring' },
-  { key: 'rhubarb', name: 'Rhubarb', base: 13, regrow: 0, season: 'spring', type: 'Spring' },
-  { key: 'green_bean', name: 'Green Bean', base: 10, regrow: 3, season: 'spring', type: 'Spring' },
-  // Summer
-  { key: 'melon', name: 'Melon', base: 12, regrow: 0, season: 'summer', type: 'Summer' },
-  { key: 'blueberry', name: 'Blueberry', base: 13, regrow: 4, season: 'summer', type: 'Summer' },
-  { key: 'starfruit', name: 'Starfruit', base: 13, regrow: 0, season: 'summer', type: 'Summer' },
-  { key: 'corn', name: 'Corn', base: 14, regrow: 4, season: 'summer', type: 'Summer' },
-  { key: 'hot_pepper', name: 'Hot Pepper', base: 5, regrow: 3, season: 'summer', type: 'Summer' },
-  { key: 'tomato', name: 'Tomato', base: 11, regrow: 4, season: 'summer', type: 'Summer' },
-  { key: 'radish', name: 'Radish', base: 6, regrow: 0, season: 'summer', type: 'Summer' },
-  { key: 'red_cabbage', name: 'Red Cabbage', base: 9, regrow: 0, season: 'summer', type: 'Summer' },
-  { key: 'hops', name: 'Hops', base: 11, regrow: 1, season: 'summer', type: 'Summer' },
-  // Fall
-  { key: 'pumpkin', name: 'Pumpkin', base: 13, regrow: 0, season: 'fall', type: 'Fall' },
-  { key: 'cranberry', name: 'Cranberries', base: 7, regrow: 5, season: 'fall', type: 'Fall' },
-  { key: 'grape', name: 'Grape', base: 10, regrow: 3, season: 'fall', type: 'Fall' },
-  { key: 'eggplant', name: 'Eggplant', base: 7, regrow: 5, season: 'fall', type: 'Fall' },
-  { key: 'amaranth', name: 'Amaranth', base: 7, regrow: 0, season: 'fall', type: 'Fall' },
-  { key: 'artichoke', name: 'Artichoke', base: 8, regrow: 0, season: 'fall', type: 'Fall' },
-  { key: 'beet', name: 'Beet', base: 6, regrow: 0, season: 'fall', type: 'Fall' },
-  { key: 'bok_choy', name: 'Bok Choy', base: 4, regrow: 0, season: 'fall', type: 'Fall' },
-  { key: 'sweetgem', name: 'Sweet Gem Berry', base: 24, regrow: 0, season: 'fall', type: 'Fall' },
-  // Special / Trees
-  { key: 'ancient', name: 'Ancient Fruit', base: 28, regrow: 7, season: 'spring', type: 'Special' },
-  { key: 'pineapple', name: 'Pineapple', base: 14, regrow: 7, season: 'summer', type: 'Special' },
-  { key: 'taro', name: 'Taro Root', base: 10, regrow: 0, season: 'summer', type: 'Special' },
-  { key: 'coffee', name: 'Coffee Bean', base: 10, regrow: 2, season: 'spring', type: 'Special' },
-  { key: 'cherry', name: 'Cherry Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
-  { key: 'apricot', name: 'Apricot Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
-  { key: 'orange', name: 'Orange Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
-  { key: 'peach', name: 'Peach Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
-  { key: 'apple', name: 'Apple Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', type: 'Tree' },
-  { key: 'pomegranate', name: 'Pomegranate Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', type: 'Tree' },
-  { key: 'banana', name: 'Banana Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
-  { key: 'mango', name: 'Mango Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' }
-];
-
-// Helper to calculate speed growth days dynamically
-function calculateGrowthDays(baseDays, fertilizer, hasAgriculturist) {
-  let multiplier = 1.0;
-  if (fertilizer === 'speed') multiplier -= 0.1;
-  if (fertilizer === 'deluxe') multiplier -= 0.25;
-  if (fertilizer === 'hyper') multiplier -= 0.33;
-  if (hasAgriculturist) multiplier -= 0.1;
-  return Math.max(1, Math.floor(baseDays * multiplier));
-}
-
-// Populate presets table dynamically
-MASTER_CROPS.forEach(c => {
-  CROP_GROWTH_PRESETS[c.key] = {
-    name: c.name,
-    base: c.base,
-    regrow: c.regrow,
-    isTree: c.isTree || false,
-    activeSeason: c.activeSeason || c.season,
-    getDays: (fert, agri) => {
-      if (c.isTree) return 28;
-      return calculateGrowthDays(c.base, fert, agri);
-    }
-  };
 });
 
 // Crop Manager DOM Elements
