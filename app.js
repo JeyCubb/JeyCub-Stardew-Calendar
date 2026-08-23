@@ -341,7 +341,7 @@ function getTaskIconUrl(task) {
       }
     }
     if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) {
-      return 'https://stardewvalleywiki.com/mediawiki/images/2/2a/Battery_Pack.png';
+      return 'https://stardewvalleywiki.com/mediawiki/images/2/25/Battery_Pack.png';
     }
     if (cleanLabel.includes('keg')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png';
@@ -354,7 +354,7 @@ function getTaskIconUrl(task) {
     }
   } else {
     if (task.machineKey === 'solar_panel' && task.id.includes('ready')) {
-      return 'https://stardewvalleywiki.com/mediawiki/images/2/2a/Battery_Pack.png';
+       return 'https://stardewvalleywiki.com/mediawiki/images/2/25/Battery_Pack.png';
     }
     if (CROP_IMAGES[imageKey]) return CROP_IMAGES[imageKey];
     if (MACHINE_IMAGES[imageKey]) return MACHINE_IMAGES[imageKey];
