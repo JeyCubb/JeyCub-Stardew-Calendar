@@ -1,13 +1,29 @@
 // App State
+let currentYear = parseInt(localStorage.getItem('stardew_current_year')) || 1;
 let currentSeason = 'spring';
 let activeDay = 1;
-// Schedule structure: { season: { day_number: [ { id, type, label, sourceDay } ] } }
-let schedule = JSON.parse(localStorage.getItem('stardew_schedule')) || {
-  spring: {},
-  summer: {},
-  fall: {},
-  winter: {}
-};
+
+// Migrate old data if necessary
+let rawSchedule = JSON.parse(localStorage.getItem('stardew_schedule')) || {};
+let schedule = {};
+if (rawSchedule.spring || rawSchedule.summer || rawSchedule.fall || rawSchedule.winter) {
+  schedule[1] = rawSchedule;
+} else {
+  schedule = rawSchedule;
+}
+
+// Initialize current year structure if not present
+function getYearSchedule(year) {
+  if (!schedule[year]) {
+    schedule[year] = {
+      spring: {},
+      summer: {},
+      fall: {},
+      winter: {}
+    };
+  }
+  return schedule[year];
+}
 
 // Crop Growth Table (Pre-calculated exact values to match Stardew Wiki)
 const CROP_GROWTH_PRESETS = {
@@ -125,24 +141,37 @@ const modalOverlay = document.getElementById('modal-overlay');
 const modalClose = document.getElementById('modal-close');
 const modalTitle = document.getElementById('modal-title');
 
+const yearDisplay = document.getElementById('year-display');
+const yearUpBtn = document.getElementById('year-up');
+const yearDownBtn = document.getElementById('year-down');
+
+// Initialize year display
+yearDisplay.innerText = currentYear;
+
 // Helper to save schedule
 function saveSchedule() {
   localStorage.setItem('stardew_schedule', JSON.stringify(schedule));
   updateMetaStats();
 }
 
-// Calculate future date helper
-function getFutureDate(startSeason, startDay, durationDays) {
+// Calculate future date helper (handles Season AND Year rollover)
+function getFutureDate(startYear, startSeason, startDay, durationDays) {
   const seasonsOrder = ['spring', 'summer', 'fall', 'winter'];
+  let y = startYear;
   let currentSeasonIdx = seasonsOrder.indexOf(startSeason);
   let targetDay = startDay + durationDays;
 
   while (targetDay > 28) {
     targetDay -= 28;
-    currentSeasonIdx = (currentSeasonIdx + 1) % 4;
+    currentSeasonIdx++;
+    if (currentSeasonIdx >= 4) {
+      currentSeasonIdx = 0;
+      y++;
+    }
   }
 
   return {
+    year: y,
     season: seasonsOrder[currentSeasonIdx],
     day: targetDay
   };
@@ -178,7 +207,8 @@ function renderTasksForDay(day) {
   const listContainer = document.getElementById(`tasks-day-${day}`);
   listContainer.innerHTML = '';
   
-  const dayTasks = schedule[currentSeason][day] || [];
+  const currentYearSchedule = getYearSchedule(currentYear);
+  const dayTasks = currentYearSchedule[currentSeason][day] || [];
   dayTasks.forEach(task => {
     const item = document.createElement('div');
     item.className = `task-item ${task.type}`;
@@ -193,7 +223,7 @@ function renderTasksForDay(day) {
 // Modal handling
 window.openModal = function(day) {
   activeDay = day;
-  modalTitle.innerText = `Day ${day} of ${currentSeason.toUpperCase()}`;
+  modalTitle.innerText = `Year ${currentYear} - ${currentSeason.toUpperCase()} - Day ${day}`;
   modalOverlay.style.display = 'flex';
 };
 
@@ -213,15 +243,17 @@ function updateMetaStats() {
   let caskCount = 0;
 
   const seasons = ['spring', 'summer', 'fall', 'winter'];
-  seasons.forEach(s => {
-    for (let d = 1; d <= 28; d++) {
-      const dayTasks = schedule[s][d] || [];
-      dayTasks.forEach(task => {
-        if (task.type === 'harvest') cropCount++;
-        if (task.label.includes('Keg Ready')) kegCount++;
-        if (task.label.includes('Cask Ready')) caskCount++;
-      });
-    }
+  Object.keys(schedule).forEach(y => {
+    seasons.forEach(s => {
+      for (let d = 1; d <= 28; d++) {
+        const dayTasks = schedule[y][s][d] || [];
+        dayTasks.forEach(task => {
+          if (task.type === 'harvest') cropCount++;
+          if (task.label.includes('Keg Ready')) kegCount++;
+          if (task.label.includes('Cask Ready')) caskCount++;
+        });
+      }
+    });
   });
 
   document.getElementById('stat-crops').innerText = cropCount;
@@ -232,7 +264,7 @@ function updateMetaStats() {
 // Schedule Manual Note
 document.getElementById('form-manual').addEventListener('submit', (e) => {
   e.preventDefault();
-  const label = document.getElementById('manual-label').value.strip || document.getElementById('manual-label').value;
+  const label = document.getElementById('manual-label').value.trim() || document.getElementById('manual-label').value;
   if (!label) return;
 
   const task = {
@@ -241,8 +273,9 @@ document.getElementById('form-manual').addEventListener('submit', (e) => {
     label: label
   };
 
-  if (!schedule[currentSeason][activeDay]) schedule[currentSeason][activeDay] = [];
-  schedule[currentSeason][activeDay].push(task);
+  const currentYearSchedule = getYearSchedule(currentYear);
+  if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
+  currentYearSchedule[currentSeason][activeDay].push(task);
   
   saveSchedule();
   renderTasksForDay(activeDay);
@@ -266,34 +299,39 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     type: 'plant',
     label: `🌱 Plant ${crop.name}`
   };
-  if (!schedule[currentSeason][activeDay]) schedule[currentSeason][activeDay] = [];
-  schedule[currentSeason][activeDay].push(plantTask);
+  const currentYearSchedule = getYearSchedule(currentYear);
+  if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
+  currentYearSchedule[currentSeason][activeDay].push(plantTask);
 
   // 2. Add "Harvest [Crop]" to future day
-  const harvestDate = getFutureDate(currentSeason, activeDay, growthDays);
+  const harvestDate = getFutureDate(currentYear, currentSeason, activeDay, growthDays);
   const harvestTask = {
     id: 'harvest_' + Date.now(),
     type: 'harvest',
     label: `🌾 Harvest ${crop.name}`,
-    sourceDay: `${currentSeason}_${activeDay}`
+    sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
   };
-  if (!schedule[harvestDate.season][harvestDate.day]) schedule[harvestDate.season][harvestDate.day] = [];
-  schedule[harvestDate.season][harvestDate.day].push(harvestTask);
+  
+  const targetYearSchedule = getYearSchedule(harvestDate.year);
+  if (!targetYearSchedule[harvestDate.season][harvestDate.day]) targetYearSchedule[harvestDate.season][harvestDate.day] = [];
+  targetYearSchedule[harvestDate.season][harvestDate.day].push(harvestTask);
 
   // 3. For multi-harvest crops (e.g. Ancient Fruit), schedule subsequent harvests
   if (crop.regrow > 0) {
-    let nextHarvest = getFutureDate(harvestDate.season, harvestDate.day, crop.regrow);
-    // Let's schedule regrows for up to 3 cycles (or end of season)
+    let nextHarvest = getFutureDate(harvestDate.year, harvestDate.season, harvestDate.day, crop.regrow);
+    // Schedule regrows for up to 3 cycles
     for (let i = 0; i < 3; i++) {
       const regrowTask = {
         id: 'harvest_regrow_' + Date.now() + '_' + i,
         type: 'harvest',
         label: `🌾 Harvest ${crop.name} (Regrow)`,
-        sourceDay: `${currentSeason}_${activeDay}`
+        sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
       };
-      if (!schedule[nextHarvest.season][nextHarvest.day]) schedule[nextHarvest.season][nextHarvest.day] = [];
-      schedule[nextHarvest.season][nextHarvest.day].push(regrowTask);
-      nextHarvest = getFutureDate(nextHarvest.season, nextHarvest.day, crop.regrow);
+      
+      const regrowYearSchedule = getYearSchedule(nextHarvest.year);
+      if (!regrowYearSchedule[nextHarvest.season][nextHarvest.day]) regrowYearSchedule[nextHarvest.season][nextHarvest.day] = [];
+      regrowYearSchedule[nextHarvest.season][nextHarvest.day].push(regrowTask);
+      nextHarvest = getFutureDate(nextHarvest.year, nextHarvest.season, nextHarvest.day, crop.regrow);
     }
   }
 
@@ -314,19 +352,22 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
     type: machineKey.includes('keg') ? 'keg' : 'cask',
     label: `📥 Load ${preset.name}`
   };
-  if (!schedule[currentSeason][activeDay]) schedule[currentSeason][activeDay] = [];
-  schedule[currentSeason][activeDay].push(loadTask);
+  const currentYearSchedule = getYearSchedule(currentYear);
+  if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
+  currentYearSchedule[currentSeason][activeDay].push(loadTask);
 
   // 2. Add Ready Task to future day
-  const readyDate = getFutureDate(currentSeason, activeDay, preset.duration);
+  const readyDate = getFutureDate(currentYear, currentSeason, activeDay, preset.duration);
   const readyTask = {
     id: 'ready_' + Date.now(),
     type: machineKey.includes('keg') ? 'keg' : 'cask',
     label: `📦 ${preset.name} Ready`,
-    sourceDay: `${currentSeason}_${activeDay}`
+    sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
   };
-  if (!schedule[readyDate.season][readyDate.day]) schedule[readyDate.season][readyDate.day] = [];
-  schedule[readyDate.season][readyDate.day].push(readyTask);
+  
+  const targetYearSchedule = getYearSchedule(readyDate.year);
+  if (!targetYearSchedule[readyDate.season][readyDate.day]) targetYearSchedule[readyDate.season][readyDate.day] = [];
+  targetYearSchedule[readyDate.season][readyDate.day].push(readyTask);
 
   saveSchedule();
   renderCalendar();
@@ -336,8 +377,9 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
 // Delete task
 window.deleteTask = function(day, id, event) {
   event.stopPropagation(); // Avoid opening modal when clicking delete
-  const list = schedule[currentSeason][day] || [];
-  schedule[currentSeason][day] = list.filter(t => t.id !== id);
+  const currentYearSchedule = getYearSchedule(currentYear);
+  const list = currentYearSchedule[currentSeason][day] || [];
+  currentYearSchedule[currentSeason][day] = list.filter(t => t.id !== id);
   
   saveSchedule();
   renderTasksForDay(day);
@@ -351,6 +393,25 @@ seasonBtns.forEach(btn => {
     currentSeason = btn.dataset.season;
     renderCalendar();
   });
+});
+
+// Year selection events
+yearUpBtn.addEventListener('click', () => {
+  currentYear++;
+  yearDisplay.innerText = currentYear;
+  localStorage.setItem('stardew_current_year', currentYear);
+  renderCalendar();
+  updateMetaStats();
+});
+
+yearDownBtn.addEventListener('click', () => {
+  if (currentYear > 1) {
+    currentYear--;
+    yearDisplay.innerText = currentYear;
+    localStorage.setItem('stardew_current_year', currentYear);
+    renderCalendar();
+    updateMetaStats();
+  }
 });
 
 // Init
