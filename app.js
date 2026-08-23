@@ -645,18 +645,20 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   const groupId = 'machine_group_' + Date.now();
   const loadAbs = getAbsoluteDay(currentYear, currentSeason, activeDay);
 
-  // 1. Add Load Task to selected day
-  const loadTask = {
-    id: 'load_' + Date.now(),
-    type: machineKey.includes('keg') ? 'keg' : (machineKey === 'solar_panel' ? 'solar' : 'cask'),
-    machineKey: machineKey,
-    label: `📥 Load ${preset.name} (${location})`,
-    groupId: groupId,
-    absDay: loadAbs
-  };
-  const currentYearSchedule = getYearSchedule(currentYear);
-  if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
-  currentYearSchedule[currentSeason][activeDay].push(loadTask);
+  // 1. Add Load Task to selected day (skip for Solar Panels since they are placed once and don't require loading)
+  if (machineKey !== 'solar_panel') {
+    const loadTask = {
+      id: 'load_' + Date.now(),
+      type: machineKey.includes('keg') ? 'keg' : 'cask',
+      machineKey: machineKey,
+      label: `📥 Load ${preset.name} (${location})`,
+      groupId: groupId,
+      absDay: loadAbs
+    };
+    const currentYearSchedule = getYearSchedule(currentYear);
+    if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
+    currentYearSchedule[currentSeason][activeDay].push(loadTask);
+  }
 
   // 2. Add Ready Task to future day
   const readyDate = getFutureDate(currentYear, currentSeason, activeDay, preset.duration);
