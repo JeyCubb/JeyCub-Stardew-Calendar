@@ -291,6 +291,7 @@ const ITEM_COLORS = {
 };
 
 function applyTaskItemColor(item, task) {
+  if (!item || !task) return;
   let baseColor = '#94a3b8'; // Slate default
   if (task.type === 'plant') baseColor = '#22c55e'; // Green
   else if (task.type === 'harvest') baseColor = '#eab308'; // Yellow
@@ -300,6 +301,7 @@ function applyTaskItemColor(item, task) {
   
   let imageKey = task.cropKey || task.machineKey;
   if (!imageKey) {
+    if (!task.label) return;
     const cleanLabel = task.label.toLowerCase();
     for (const crop of MASTER_CROPS) {
       if (cleanLabel.includes(crop.name.toLowerCase())) {
@@ -331,9 +333,11 @@ function applyTaskItemColor(item, task) {
 
 // Helper to get image URL for a task, fallback to parsing label text
 function getTaskIconUrl(task) {
+  if (!task) return null;
   let imageKey = task.cropKey || task.machineKey;
   
   if (!imageKey) {
+    if (!task.label) return null;
     const cleanLabel = task.label.toLowerCase();
     for (const crop of MASTER_CROPS) {
       if (cleanLabel.includes(crop.name.toLowerCase())) {
@@ -353,7 +357,7 @@ function getTaskIconUrl(task) {
       return 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png';
     }
   } else {
-    if (task.machineKey === 'solar_panel' && task.id.includes('ready')) {
+    if (task.machineKey === 'solar_panel' && task.id && typeof task.id === 'string' && task.id.includes('ready')) {
        return 'https://stardewvalleywiki.com/mediawiki/images/2/25/Battery_Pack.png';
     }
     if (CROP_IMAGES[imageKey]) return CROP_IMAGES[imageKey];
