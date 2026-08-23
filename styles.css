@@ -480,9 +480,13 @@ header h1 {
     border: none;
   }
 
+  .task-item .task-text-container {
+    display: none !important;
+  }
+
   .task-item span {
     width: 0;
-    display: none;
+    display: none !important;
   }
 
   .task-item img.crop-icon {

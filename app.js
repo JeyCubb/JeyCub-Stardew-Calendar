@@ -428,7 +428,7 @@ function renderTasksForDay(day) {
     item.innerHTML = `
       <div style="display: flex; align-items: center; flex-grow: 1; min-width: 0;">
         ${iconHtml}
-        <div style="display: flex; flex-direction: column; min-width: 0; text-align: left; line-height: 1.1;">
+        <div class="task-text-container" style="display: flex; flex-direction: column; min-width: 0; text-align: left; line-height: 1.1;">
           <span style="font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${titleText}</span>
           ${subtitleHtml}
         </div>
@@ -484,7 +484,7 @@ window.openModal = function(day) {
       item.innerHTML = `
         <div style="display: flex; align-items: center; min-width: 0;">
           ${iconHtml}
-          <div style="display: flex; flex-direction: column; min-width: 0; text-align: left; line-height: 1.15;">
+          <div class="task-text-container" style="display: flex; flex-direction: column; min-width: 0; text-align: left; line-height: 1.15;">
             <span style="font-weight: 600;">${titleText}</span>
             ${subtitleHtml}
           </div>
