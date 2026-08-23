@@ -244,8 +244,8 @@ function renderTasksForDay(day) {
       subtitleText = task.label.substring(lastIndex + 1).replace(')', '').trim();
     }
     
-    // Clean starting emojis (🌱, 🌾, 🌳, 📥, 📦)
-    titleText = titleText.replace(/^[🌱🌾🌳📥📦]\s*/, '');
+    // Clean starting emojis
+    titleText = titleText.replace(/^[^\w\s]*\s*/, '');
     
     const subtitleHtml = subtitleText ? `<span class="task-subtitle" style="font-size: 0.7rem; opacity: 0.75; font-weight: normal; display: block; margin-top: 1px;">${subtitleText}</span>` : '';
     
@@ -299,8 +299,8 @@ window.openModal = function(day) {
         subtitleText = task.label.substring(lastIndex + 1).replace(')', '').trim();
       }
       
-      // Clean starting emojis (🌱, 🌾, 🌳, 📥, 📦)
-      titleText = titleText.replace(/^[🌱🌾🌳📥📦]\s*/, '');
+      // Clean starting emojis
+      titleText = titleText.replace(/^[^\w\s]*\s*/, '');
       
       const subtitleHtml = subtitleText ? `<span class="task-subtitle" style="font-size: 0.75rem; opacity: 0.75; font-weight: normal; display: block; margin-top: 2px;">${subtitleText}</span>` : '';
       
