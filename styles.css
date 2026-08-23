@@ -466,6 +466,13 @@ header h1 {
     display: none;
   }
 
+  .task-item img.crop-icon {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 0 !important;
+    border-radius: 4px;
+  }
+
   .task-delete {
     display: none !important;
   }

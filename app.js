@@ -20,6 +20,24 @@ if (rawSchedule.spring || rawSchedule.summer || rawSchedule.fall || rawSchedule.
   schedule = rawSchedule;
 }
 
+const CROP_IMAGES = {
+  'starfruit': 'https://stardewvalleywiki.com/mediawiki/images/d/db/Starfruit.png',
+  'ancient': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Ancient_Fruit.png',
+  'rhubarb': 'https://stardewvalleywiki.com/mediawiki/images/6/6e/Rhubarb.png',
+  'sweetgem': 'https://stardewvalleywiki.com/mediawiki/images/8/88/Sweet_Gem_Berry.png',
+  'strawberry': 'https://stardewvalleywiki.com/mediawiki/images/6/6d/Strawberry.png',
+  'cranberries': 'https://stardewvalleywiki.com/mediawiki/images/6/6e/Cranberries.png',
+  'blueberries': 'https://stardewvalleywiki.com/mediawiki/images/a/af/Blueberries.png',
+  'cherry': 'https://stardewvalleywiki.com/mediawiki/images/2/20/Cherry.png',
+  'apricot': 'https://stardewvalleywiki.com/mediawiki/images/f/fc/Apricot.png',
+  'orange': 'https://stardewvalleywiki.com/mediawiki/images/4/43/Orange.png',
+  'peach': 'https://stardewvalleywiki.com/mediawiki/images/e/e2/Peach.png',
+  'apple': 'https://stardewvalleywiki.com/mediawiki/images/7/7d/Apple.png',
+  'pomegranate': 'https://stardewvalleywiki.com/mediawiki/images/1/1b/Pomegranate.png',
+  'banana': 'https://stardewvalleywiki.com/mediawiki/images/6/69/Banana.png',
+  'mango': 'https://stardewvalleywiki.com/mediawiki/images/3/38/Mango.png',
+};
+
 // Initialize current year structure if not present (guarantees all seasons exist)
 function getYearSchedule(year) {
   if (!schedule[year]) {
@@ -68,8 +86,24 @@ const CROP_GROWTH_PRESETS = {
       return 28;
     }
   },
-  pumpkin: {
-    name: 'Pumpkin',
+  strawberry: {
+    name: 'Strawberry',
+    base: 8,
+    regrow: 4,
+    getDays: (fert, agri) => {
+      if (fert === 'none' && !agri) return 8;
+      if (fert === 'speed' && !agri) return 7;
+      if (fert === 'deluxe' && !agri) return 6;
+      if (fert === 'hyper' && !agri) return 5;
+      if (fert === 'none' && agri) return 7;
+      if (fert === 'speed' && agri) return 6;
+      if (fert === 'deluxe' && agri) return 5;
+      if (fert === 'hyper' && agri) return 4;
+      return 8;
+    }
+  },
+  rhubarb: {
+    name: 'Rhubarb',
     base: 13,
     regrow: 0,
     getDays: (fert, agri) => {
@@ -84,36 +118,20 @@ const CROP_GROWTH_PRESETS = {
       return 13;
     }
   },
-  melon: {
-    name: 'Melon',
-    base: 12,
-    regrow: 0,
+  blueberries: {
+    name: 'Blueberries',
+    base: 13,
+    regrow: 4,
     getDays: (fert, agri) => {
-      if (fert === 'none' && !agri) return 12;
-      if (fert === 'speed' && !agri) return 10;
+      if (fert === 'none' && !agri) return 13;
+      if (fert === 'speed' && !agri) return 11;
       if (fert === 'deluxe' && !agri) return 9;
       if (fert === 'hyper' && !agri) return 8;
-      if (fert === 'none' && agri) return 10;
-      if (fert === 'speed' && agri) return 9;
-      if (fert === 'deluxe' && agri) return 7;
-      if (fert === 'hyper' && agri) return 6;
-      return 12;
-    }
-  },
-  cauliflower: {
-    name: 'Cauliflower',
-    base: 12,
-    regrow: 0,
-    getDays: (fert, agri) => {
-      if (fert === 'none' && !agri) return 12;
-      if (fert === 'speed' && !agri) return 10;
-      if (fert === 'deluxe' && !agri) return 9;
-      if (fert === 'hyper' && !agri) return 8;
-      if (fert === 'none' && agri) return 10;
-      if (fert === 'speed' && agri) return 9;
-      if (fert === 'deluxe' && agri) return 7;
-      if (fert === 'hyper' && agri) return 6;
-      return 12;
+      if (fert === 'none' && agri) return 11;
+      if (fert === 'speed' && agri) return 10;
+      if (fert === 'deluxe' && agri) return 8;
+      if (fert === 'hyper' && agri) return 7;
+      return 13;
     }
   },
   sweetgem: {
@@ -148,7 +166,8 @@ const MACHINE_PRESETS = {
   preserves: { name: 'Preserves Jar', duration: 3 },
   cask_silver: { name: 'Cask aging (Silver)', duration: 14 },
   cask_gold: { name: 'Cask aging (Gold)', duration: 28 },
-  cask_iridium: { name: 'Cask aging (Iridium)', duration: 56 }
+  cask_iridium: { name: 'Cask aging (Iridium)', duration: 56 },
+  solar_panel: { name: 'Solar Panel', duration: 10 }
 };
 
 // UI Elements
@@ -245,7 +264,14 @@ function renderTasksForDay(day) {
   dayTasks.forEach(task => {
     const item = document.createElement('div');
     item.className = `task-item ${task.type}`;
+    
+    let iconHtml = '';
+    if (task.cropKey && CROP_IMAGES[task.cropKey]) {
+      iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 4px; vertical-align: middle;">`;
+    }
+    
     item.innerHTML = `
+      ${iconHtml}
       <span>${task.label}</span>
       <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)">×</button>
     `;
@@ -278,8 +304,16 @@ window.openModal = function(day) {
       item.style.fontSize = '0.85rem';
       item.style.margin = '0.2rem 0';
       
+      let iconHtml = '';
+      if (task.cropKey && CROP_IMAGES[task.cropKey]) {
+        iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 16px; height: 16px; object-fit: contain; margin-right: 6px; vertical-align: middle;">`;
+      }
+      
       item.innerHTML = `
-        <span>${task.label}</span>
+        <div style="display: flex; align-items: center;">
+          ${iconHtml}
+          <span>${task.label}</span>
+        </div>
         <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)" style="background: none; border: none; color: rgba(255,255,255,0.6); cursor: pointer; font-size: 1.15rem; font-weight: bold; padding: 0 0.25rem;">×</button>
       `;
       modalTasksList.appendChild(item);
@@ -375,6 +409,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   const firstHarvestTask = {
     id: 'harvest_' + Date.now(),
     type: 'harvest',
+    cropKey: cropKey,
     label: crop.isTree 
       ? `🌳 Harvest ${crop.name} (${location})` 
       : `🌾 Harvest ${crop.name} (${location})`,
@@ -400,6 +435,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
       const regrowTask = {
         id: 'harvest_regrow_' + Date.now() + '_' + i,
         type: 'harvest',
+        cropKey: cropKey,
         label: crop.isTree 
           ? `🌳 Harvest ${crop.name} (${location})`
           : `🌾 Harvest ${crop.name} (Regrow - ${location})`,
@@ -465,6 +501,13 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   saveSchedule();
   renderCalendar();
   closeModal();
+});
+
+// Auto-select Desert location when choosing Solar Panel
+document.getElementById('machine-select').addEventListener('change', function() {
+  if (this.value === 'solar_panel') {
+    document.getElementById('machine-loc').value = 'Desert';
+  }
 });
 
 // Delete task (supports cascade delete on threads from the clicked point forward)
