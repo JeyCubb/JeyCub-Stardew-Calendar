@@ -154,6 +154,39 @@ function getFutureDate(startYear, startSeason, startDay, durationDays) {
   };
 }
 
+// Helper to get image URL for a task, fallback to parsing label text
+function getTaskIconUrl(task) {
+  let imageKey = task.cropKey || task.machineKey;
+  
+  if (!imageKey) {
+    const cleanLabel = task.label.toLowerCase();
+    for (const crop of MASTER_CROPS) {
+      if (cleanLabel.includes(crop.name.toLowerCase())) {
+        return CROP_IMAGES[crop.key];
+      }
+    }
+    if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) {
+      return 'https://stardewvalleywiki.com/mediawiki/images/2/2a/Battery_Pack.png';
+    }
+    if (cleanLabel.includes('keg')) {
+      return 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png';
+    }
+    if (cleanLabel.includes('preserves') || cleanLabel.includes('jelly')) {
+      return 'https://stardewvalleywiki.com/mediawiki/images/1/1e/Preserves_Jar.png';
+    }
+    if (cleanLabel.includes('cask')) {
+      return 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png';
+    }
+  } else {
+    if (task.machineKey === 'solar_panel' && task.id.includes('ready')) {
+      return 'https://stardewvalleywiki.com/mediawiki/images/2/2a/Battery_Pack.png';
+    }
+    if (CROP_IMAGES[imageKey]) return CROP_IMAGES[imageKey];
+    if (MACHINE_IMAGES[imageKey]) return MACHINE_IMAGES[imageKey];
+  }
+  return null;
+}
+
 // Render Calendar Day Cards
 function renderCalendar() {
   calendarGrid.innerHTML = '';
@@ -200,12 +233,8 @@ function renderTasksForDay(day) {
     const item = document.createElement('div');
     item.className = `task-item ${task.type}`;
     
-    let iconHtml = '';
-    if (task.cropKey && CROP_IMAGES[task.cropKey]) {
-      iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">`;
-    } else if (task.machineKey && MACHINE_IMAGES[task.machineKey]) {
-      iconHtml = `<img src="${MACHINE_IMAGES[task.machineKey]}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">`;
-    }
+    const imgUrl = getTaskIconUrl(task);
+    const iconHtml = imgUrl ? `<img src="${imgUrl}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">` : '';
     
     const lastIndex = task.label.lastIndexOf('(');
     let titleText = task.label;
@@ -214,6 +243,9 @@ function renderTasksForDay(day) {
       titleText = task.label.substring(0, lastIndex).trim();
       subtitleText = task.label.substring(lastIndex + 1).replace(')', '').trim();
     }
+    
+    // Clean starting emojis (🌱, 🌾, 🌳, 📥, 📦)
+    titleText = titleText.replace(/^[🌱🌾🌳📥📦]\s*/, '');
     
     const subtitleHtml = subtitleText ? `<span class="task-subtitle" style="font-size: 0.7rem; opacity: 0.75; font-weight: normal; display: block; margin-top: 1px;">${subtitleText}</span>` : '';
     
@@ -256,12 +288,8 @@ window.openModal = function(day) {
       item.style.fontSize = '0.85rem';
       item.style.margin = '0.2rem 0';
       
-      let iconHtml = '';
-      if (task.cropKey && CROP_IMAGES[task.cropKey]) {
-        iconHtml = `<img src="${CROP_IMAGES[task.cropKey]}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">`;
-      } else if (task.machineKey && MACHINE_IMAGES[task.machineKey]) {
-        iconHtml = `<img src="${MACHINE_IMAGES[task.machineKey]}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">`;
-      }
+      const imgUrl = getTaskIconUrl(task);
+      const iconHtml = imgUrl ? `<img src="${imgUrl}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">` : '';
       
       const lastIndex = task.label.lastIndexOf('(');
       let titleText = task.label;
@@ -270,6 +298,9 @@ window.openModal = function(day) {
         titleText = task.label.substring(0, lastIndex).trim();
         subtitleText = task.label.substring(lastIndex + 1).replace(')', '').trim();
       }
+      
+      // Clean starting emojis (🌱, 🌾, 🌳, 📥, 📦)
+      titleText = titleText.replace(/^[🌱🌾🌳📥📦]\s*/, '');
       
       const subtitleHtml = subtitleText ? `<span class="task-subtitle" style="font-size: 0.75rem; opacity: 0.75; font-weight: normal; display: block; margin-top: 2px;">${subtitleText}</span>` : '';
       
