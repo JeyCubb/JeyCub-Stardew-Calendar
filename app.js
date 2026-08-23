@@ -158,11 +158,19 @@ function getFutureDate(startYear, startSeason, startDay, durationDays) {
 function renderCalendar() {
   calendarGrid.innerHTML = '';
   const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const currentYearSchedule = getYearSchedule(currentYear);
 
   for (let day = 1; day <= 28; day++) {
     const weekdayName = weekdays[(day - 1) % 7];
     const card = document.createElement('div');
-    card.className = 'day-card';
+    
+    const dayTasks = currentYearSchedule[currentSeason][day] || [];
+    if (dayTasks.length > 0) {
+      card.className = 'day-card has-tasks';
+    } else {
+      card.className = 'day-card empty-day';
+    }
+    
     card.dataset.day = day;
 
     card.innerHTML = `
