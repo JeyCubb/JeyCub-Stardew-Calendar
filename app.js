@@ -883,16 +883,8 @@ function isRemoteScheduleEmpty(remoteSched) {
 
 function initFirebase() {
   try {
-    const savedDbUrl = localStorage.getItem('stardew_firebase_url');
-    const dbUrlInput = document.getElementById('sync-db-url');
-    const statusMsg = document.getElementById('sync-status-msg');
-
-    if (dbUrlInput && savedDbUrl) {
-      dbUrlInput.value = savedDbUrl;
-    }
-
     if (typeof firebase !== 'undefined') {
-      const dbUrlToUse = savedDbUrl || "https://fluid-mechanics-reviewer-default-rtdb.firebaseio.com";
+      const dbUrlToUse = "https://jeycub-stardew-farm-calendar-default-rtdb.firebaseio.com/";
       const config = {
         databaseURL: dbUrlToUse
       };
@@ -906,16 +898,6 @@ function initFirebase() {
       syncKey = window.location.hostname.split('.')[0] || 'default_local';
       // Sanitize syncKey (Firebase paths cannot contain '.', '#', '$', '[', or ']')
       syncKey = syncKey.replace(/[\.#\$\[\]]/g, '_');
-
-      if (statusMsg) {
-        if (savedDbUrl) {
-          statusMsg.innerText = `🟢 Connected (Channel: ${syncKey})`;
-          statusMsg.style.color = '#10b981';
-        } else {
-          statusMsg.innerText = `🔴 Disconnected (Paste a Firebase URL to enable cloud sync)`;
-          statusMsg.style.color = '#f59e0b';
-        }
-      }
 
       // Listen for remote updates
       firebaseDb.ref(`stardew_calendar/${syncKey}`).on('value', snapshot => {
@@ -953,36 +935,13 @@ function initFirebase() {
           }
         }
       }, err => {
-        console.warn("Database sync error:", err);
-        if (statusMsg) {
-          statusMsg.innerText = `🔴 Sync error (Check database URL & rules)`;
-          statusMsg.style.color = '#ef4444';
-        }
+        console.warn("Firebase sync failed or database URL incorrect");
       });
     }
   } catch (e) {
     console.warn("Firebase initialization failed:", e);
-    const statusMsg = document.getElementById('sync-status-msg');
-    if (statusMsg) {
-      statusMsg.innerText = `🔴 Connection failed`;
-      statusMsg.style.color = '#ef4444';
-    }
   }
 }
-
-// Schedule Sync Setup listener
-document.getElementById('form-sync').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const url = document.getElementById('sync-db-url').value.trim();
-  if (!url) {
-    localStorage.removeItem('stardew_firebase_url');
-    alert("🗑️ Cloud database URL cleared. Falling back to local storage.");
-  } else {
-    localStorage.setItem('stardew_firebase_url', url);
-    alert("⚡ Database URL saved! Connecting to cloud database...");
-  }
-  window.location.reload();
-});
 
 // Crop Manager DOM Elements
 const cropManagerOverlay = document.getElementById('crop-manager-overlay');
