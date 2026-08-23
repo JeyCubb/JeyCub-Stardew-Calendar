@@ -304,12 +304,14 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
 
   const crop = CROP_GROWTH_PRESETS[cropKey];
   const growthDays = crop.getDays(fertilizer, agriculturist);
+  const groupId = 'crop_group_' + Date.now();
 
   // 1. Add "Plant [Crop]" to selected day
   const plantTask = {
     id: 'plant_' + Date.now(),
     type: 'plant',
-    label: `🌱 Plant ${crop.name} (${location})`
+    label: `🌱 Plant ${crop.name} (${location})`,
+    groupId: groupId
   };
   const currentYearSchedule = getYearSchedule(currentYear);
   if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
@@ -321,7 +323,8 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     id: 'harvest_' + Date.now(),
     type: 'harvest',
     label: `🌾 Harvest ${crop.name} (${location})`,
-    sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
+    sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
+    groupId: groupId
   };
   
   const targetYearSchedule = getYearSchedule(harvestDate.year);
@@ -337,7 +340,8 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
         id: 'harvest_regrow_' + Date.now() + '_' + i,
         type: 'harvest',
         label: `🌾 Harvest ${crop.name} (Regrow - ${location})`,
-        sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
+        sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
+        groupId: groupId
       };
       
       const regrowYearSchedule = getYearSchedule(nextHarvest.year);
@@ -358,12 +362,14 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   const machineKey = document.getElementById('machine-select').value;
   const location = document.getElementById('machine-loc').value;
   const preset = MACHINE_PRESETS[machineKey];
+  const groupId = 'machine_group_' + Date.now();
 
   // 1. Add Load Task to selected day
   const loadTask = {
     id: 'load_' + Date.now(),
     type: machineKey.includes('keg') ? 'keg' : 'cask',
-    label: `📥 Load ${preset.name} (${location})`
+    label: `📥 Load ${preset.name} (${location})`,
+    groupId: groupId
   };
   const currentYearSchedule = getYearSchedule(currentYear);
   if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
@@ -375,7 +381,8 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
     id: 'ready_' + Date.now(),
     type: machineKey.includes('keg') ? 'keg' : 'cask',
     label: `📦 ${preset.name} Ready (${location})`,
-    sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`
+    sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
+    groupId: groupId
   };
   
   const targetYearSchedule = getYearSchedule(readyDate.year);
@@ -387,15 +394,37 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   closeModal();
 });
 
-// Delete task
+// Delete task (and cascade delete linked group tasks if applicable)
 window.deleteTask = function(day, id, event) {
   event.stopPropagation(); // Avoid opening modal when clicking delete
+  
   const currentYearSchedule = getYearSchedule(currentYear);
   const list = currentYearSchedule[currentSeason][day] || [];
-  currentYearSchedule[currentSeason][day] = list.filter(t => t.id !== id);
+  const taskToDelete = list.find(t => t.id === id);
+  
+  if (taskToDelete && taskToDelete.groupId) {
+    const targetGroupId = taskToDelete.groupId;
+    
+    // Cascade delete across all years, seasons, and days
+    const seasons = ['spring', 'summer', 'fall', 'winter'];
+    Object.keys(schedule).forEach(y => {
+      if (isNaN(y)) return;
+      seasons.forEach(s => {
+        if (!schedule[y] || !schedule[y][s]) return;
+        for (let d = 1; d <= 28; d++) {
+          if (schedule[y][s][d]) {
+            schedule[y][s][d] = schedule[y][s][d].filter(t => t.groupId !== targetGroupId);
+          }
+        }
+      });
+    });
+  } else {
+    // Standard individual delete
+    currentYearSchedule[currentSeason][day] = list.filter(t => t.id !== id);
+  }
   
   saveSchedule();
-  renderTasksForDay(day);
+  renderCalendar();
 };
 
 // Season selection helper
