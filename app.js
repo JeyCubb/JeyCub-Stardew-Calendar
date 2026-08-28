@@ -568,6 +568,34 @@ document.getElementById('form-manual').addEventListener('submit', (e) => {
   document.getElementById('manual-label').value = '';
 });
 
+// Helper to determine if a crop is viable to grow on the Main Farm in a target season
+function canGrowInSeason(cropKey, targetSeason) {
+  // Ancient Fruit grows in Spring, Summer, Fall
+  if (cropKey === 'ancient') {
+    return ['spring', 'summer', 'fall'].includes(targetSeason);
+  }
+  // Coffee grows in Spring and Summer
+  if (cropKey === 'coffee') {
+    return ['spring', 'summer'].includes(targetSeason);
+  }
+  // Corn grows in Summer and Fall
+  if (cropKey === 'corn') {
+    return ['summer', 'fall'].includes(targetSeason);
+  }
+  
+  // Find from MASTER_CROPS
+  const crop = MASTER_CROPS.find(c => c.key === cropKey);
+  if (!crop) return false;
+  
+  // For fruit trees
+  if (crop.isTree) {
+    return crop.activeSeason === targetSeason;
+  }
+  
+  // Standard single-season crops
+  return crop.season === targetSeason;
+}
+
 // Schedule Crop Planting
 document.getElementById('form-crop').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -630,7 +658,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   };
 
   let shouldAddFirst = true;
-  if (crop.isTree && location === 'Main Farm' && harvestDate.season !== crop.activeSeason) {
+  if (location === 'Main Farm' && !canGrowInSeason(cropKey, harvestDate.season)) {
     shouldAddFirst = false;
   }
   if (shouldAddFirst) {
@@ -656,7 +684,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
       };
 
       let shouldAddRegrow = true;
-      if (crop.isTree && location === 'Main Farm' && nextHarvestDate.season !== crop.activeSeason) {
+      if (location === 'Main Farm' && !canGrowInSeason(cropKey, nextHarvestDate.season)) {
         shouldAddRegrow = false;
       }
 
