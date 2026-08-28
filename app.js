@@ -651,7 +651,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     stage: cropStage,
     label: cropStage === 'regrow' 
       ? (crop.isTree ? `🌳 Mature Tree: ${crop.name} (${location})` : `🌱 Regrow Start: ${crop.name} (${location})`) 
-      : (crop.isTree ? `🌳 Plant ${crop.name} (${location})` : `🌱 Plant ${crop.name} (${location})`),
+      : (crop.isTree ? `🌳 ${crop.name} Planted (${location})` : `🌱 ${crop.name} Planted (${location})`),
     groupId: groupId,
     absDay: plantAbs
   };
@@ -679,8 +679,8 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     type: 'harvest',
     cropKey: cropKey,
     label: crop.isTree 
-      ? `🌳 Harvest ${crop.name} (${location})` 
-      : `🌾 Harvest ${crop.name} (${location})`,
+      ? `🌳 ${crop.name} Ready (${location})` 
+      : `🌾 ${crop.name} Ready (${location})`,
     groupId: groupId,
     absDay: harvestAbs
   };
@@ -705,8 +705,8 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
         type: 'harvest',
         cropKey: cropKey,
         label: crop.isTree 
-          ? `🌳 Harvest ${crop.name} (${location})`
-          : `🌾 Harvest ${crop.name} (Regrow - ${location})`,
+          ? `🌳 ${crop.name} Ready (${location})`
+          : `🌾 ${crop.name} Ready (Regrow - ${location})`,
         groupId: groupId,
         absDay: nextHarvestAbs
       };
@@ -747,7 +747,7 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
     id: 'load_' + Date.now(),
     type: isPlaceAction ? 'solar' : (machineKey.includes('keg') ? 'keg' : 'cask'),
     machineKey: machineKey,
-    label: isPlaceAction ? `📥 Place ${preset.name} (${location})` : `📥 Load ${preset.name} (${location})`,
+    label: isPlaceAction ? `📥 ${preset.name} Placed (${location})` : `📥 ${preset.name} Loaded (${location})`,
     groupId: groupId,
     absDay: loadAbs
   };
