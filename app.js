@@ -472,12 +472,15 @@ function renderTasksForDay(day) {
     applyTaskItemColor(item, task);
     
     const imgUrl = getTaskIconUrl(task);
-    const iconHtml = imgUrl ? `
+    const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
+    const iconHtml = imgUrl ? (isStartTask ? `
+      <img src="${imgUrl}" class="crop-icon" alt="" style="width: 20px; height: 20px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">
+    ` : `
       <div class="task-icon-wrapper" onclick="toggleTaskCompleted(${day}, '${task.id}', event)">
         <img src="${imgUrl}" class="crop-icon" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block;">
         <div class="checkmark-overlay">✓</div>
       </div>
-    ` : '';
+    `) : '';
     
     const lastIndex = task.label.lastIndexOf('(');
     let titleText = task.label;
@@ -542,12 +545,15 @@ window.openModal = function(day) {
       item.style.margin = '0.2rem 0';
       
       const imgUrl = getTaskIconUrl(task);
-      const iconHtml = imgUrl ? `
+      const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
+      const iconHtml = imgUrl ? (isStartTask ? `
+        <img src="${imgUrl}" class="crop-icon" alt="" style="width: 20px; height: 20px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">
+      ` : `
         <div class="task-icon-wrapper" onclick="toggleTaskCompleted(${day}, '${task.id}', event)">
           <img src="${imgUrl}" class="crop-icon" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block;">
           <div class="checkmark-overlay">✓</div>
         </div>
-      ` : '';
+      `) : '';
       
       const lastIndex = task.label.lastIndexOf('(');
       let titleText = task.label;
