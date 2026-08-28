@@ -626,11 +626,11 @@ header h1 {
 }
 
 .hide-task-labels .day-card.has-tasks:hover .task-item {
-  width: 100%;
-  height: auto;
-  padding: 0.35rem 0.5rem;
-  display: flex;
-  justify-content: space-between;
+  width: 100% !important;
+  height: auto !important;
+  padding: 0.35rem 0.5rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
   font-size: 0.88rem !important; /* Larger text on hover */
 }
 
