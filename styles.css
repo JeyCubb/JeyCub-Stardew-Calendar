@@ -256,6 +256,24 @@ header h1 {
     height: 12px !important;
     margin-right: 3px !important;
   }
+
+  /* Columns 1, 2, 3 (Mon, Tue, Wed): align left and expand right */
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+2):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+3):hover .tasks-container-compact {
+    left: -1px !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  /* Columns 5, 6, 7 (Fri, Sat, Sun): align right and expand left */
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+5):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+6):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-container-compact {
+    left: auto !important;
+    right: -1px !important;
+    transform: none !important;
+  }
 }
 
 .task-item.manual { background: rgba(148, 163, 184, 0.25); border: 1px solid rgba(148, 163, 184, 0.4); }
