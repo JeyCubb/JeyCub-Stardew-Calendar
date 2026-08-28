@@ -482,12 +482,13 @@ function renderTasksForDay(day) {
       </div>
     `) : '';
     
-    const lastIndex = task.label.lastIndexOf('(');
-    let titleText = task.label;
+    const safeLabel = (task.label && typeof task.label === 'string') ? task.label : String(task.label || '');
+    const lastIndex = safeLabel.lastIndexOf('(');
+    let titleText = safeLabel;
     let subtitleText = '';
     if (lastIndex !== -1) {
-      titleText = task.label.substring(0, lastIndex).trim();
-      subtitleText = task.label.substring(lastIndex + 1).replace(')', '').trim();
+      titleText = safeLabel.substring(0, lastIndex).trim();
+      subtitleText = safeLabel.substring(lastIndex + 1).replace(')', '').trim();
     }
     
     // Clean starting emojis
@@ -555,12 +556,13 @@ window.openModal = function(day) {
         </div>
       `) : '';
       
-      const lastIndex = task.label.lastIndexOf('(');
-      let titleText = task.label;
+      const safeLabel = (task.label && typeof task.label === 'string') ? task.label : String(task.label || '');
+      const lastIndex = safeLabel.lastIndexOf('(');
+      let titleText = safeLabel;
       let subtitleText = '';
       if (lastIndex !== -1) {
-        titleText = task.label.substring(0, lastIndex).trim();
-        subtitleText = task.label.substring(lastIndex + 1).replace(')', '').trim();
+        titleText = safeLabel.substring(0, lastIndex).trim();
+        subtitleText = safeLabel.substring(lastIndex + 1).replace(')', '').trim();
       }
       
       // Clean starting emojis
