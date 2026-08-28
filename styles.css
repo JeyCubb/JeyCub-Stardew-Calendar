@@ -586,6 +586,7 @@ header h1 {
 /* Push ready tasks to top, plant/load tasks to bottom in collapsed mode */
 .hide-task-labels .tasks-container-compact {
   justify-content: space-between;
+  overflow: visible !important;
 }
 
 /* Collapse subcategory lists into rows by default */
