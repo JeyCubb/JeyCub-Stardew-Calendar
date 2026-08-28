@@ -522,7 +522,7 @@ header h1 {
 }
 
 /* --- Global Toggleable Task Labels --- */
-.hide-task-labels .day-card:hover {
+.hide-task-labels .day-card.has-tasks:hover {
   overflow: visible !important;
   z-index: 99;
 }
@@ -560,7 +560,7 @@ header h1 {
 }
 
 /* Expand into a full vertical details list on day card hover, floating over grid */
-.hide-task-labels .day-card:hover .tasks-list {
+.hide-task-labels .day-card.has-tasks:hover .tasks-list {
   position: absolute;
   top: 38px;
   left: 50%;
@@ -581,19 +581,19 @@ header h1 {
 }
 
 /* Align left on Mondays to prevent screen overflow */
-.hide-task-labels .day-card:nth-child(7n+1):hover .tasks-list {
+.hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-list {
   left: -1px;
   transform: none;
 }
 
 /* Align right on Sundays to prevent screen overflow */
-.hide-task-labels .day-card:nth-child(7n):hover .tasks-list {
+.hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-list {
   left: auto;
   right: -1px;
   transform: none;
 }
 
-.hide-task-labels .day-card:hover .task-item {
+.hide-task-labels .day-card.has-tasks:hover .task-item {
   width: 100%;
   height: auto;
   padding: 0.35rem 0.5rem;
@@ -602,21 +602,21 @@ header h1 {
   font-size: 0.88rem !important; /* Larger text on hover */
 }
 
-.hide-task-labels .day-card:hover .task-item img.crop-icon {
+.hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon {
   width: 26px !important;
   height: 26px !important;
   margin-right: 8px !important;
 }
 
-.hide-task-labels .day-card:hover .task-item .task-text-container {
+.hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container {
   display: flex !important;
 }
 
 /* Make subtitles (locations) larger on hover */
-.hide-task-labels .day-card:hover .task-item .task-subtitle {
+.hide-task-labels .day-card.has-tasks:hover .task-item .task-subtitle {
   font-size: 0.76rem !important;
 }
 
-.hide-task-labels .day-card:hover .task-item:hover .task-delete {
+.hide-task-labels .day-card.has-tasks:hover .task-item:hover .task-delete {
   display: block !important;
 }
