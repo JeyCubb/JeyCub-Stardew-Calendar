@@ -356,7 +356,7 @@ function applyTaskItemColor(item, task) {
     baseColor = ITEM_COLORS[imageKey];
   }
 
-  const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
+  const isStartTask = task.id && typeof task.id === 'string' && (task.id.startsWith('plant') || task.id.startsWith('load'));
   
   if (isStartTask) {
     item.classList.add('start-action-task');
@@ -472,7 +472,7 @@ function renderTasksForDay(day) {
     applyTaskItemColor(item, task);
     
     const imgUrl = getTaskIconUrl(task);
-    const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
+    const isStartTask = task.id && typeof task.id === 'string' && (task.id.startsWith('plant') || task.id.startsWith('load'));
     const iconHtml = imgUrl ? (isStartTask ? `
       <img src="${imgUrl}" class="crop-icon" alt="" style="width: 20px; height: 20px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">
     ` : `
@@ -506,7 +506,7 @@ function renderTasksForDay(day) {
       <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)">×</button>
     `;
 
-    const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
+    const isStartTask = task.id && typeof task.id === 'string' && (task.id.startsWith('plant') || task.id.startsWith('load'));
     if (isStartTask) {
       if (plantContainer) plantContainer.appendChild(item);
     } else {
@@ -545,7 +545,7 @@ window.openModal = function(day) {
       item.style.margin = '0.2rem 0';
       
       const imgUrl = getTaskIconUrl(task);
-      const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
+      const isStartTask = task.id && typeof task.id === 'string' && (task.id.startsWith('plant') || task.id.startsWith('load'));
       const iconHtml = imgUrl ? (isStartTask ? `
         <img src="${imgUrl}" class="crop-icon" alt="" style="width: 20px; height: 20px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">
       ` : `
