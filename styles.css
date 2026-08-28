@@ -106,7 +106,6 @@ header h1 {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  height: calc(100vh - 60px);
   min-height: 0;
 }
 
@@ -421,9 +420,6 @@ header h1 {
 @media (max-width: 768px) {
   body {
     padding: 0.5rem;
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
   }
 
   header {
@@ -453,10 +449,6 @@ header h1 {
     grid-auto-rows: minmax(50px, auto);
     grid-template-rows: none;
     gap: 3px;
-    height: auto;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    padding-bottom: 1rem;
   }
 
   .day-card.empty-day {
