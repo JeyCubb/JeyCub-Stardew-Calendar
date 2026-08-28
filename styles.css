@@ -635,6 +635,13 @@ header h1 {
   transform: none;
 }
 
+/* Align upwards for bottom row (Days 22-28) to prevent screen overflow */
+.hide-task-labels .day-card.has-tasks:nth-child(n+22):hover .tasks-list {
+  top: auto;
+  bottom: 38px;
+  box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.65);
+}
+
 .hide-task-labels .day-card.has-tasks:hover .task-item {
   width: 100%;
   height: auto;
