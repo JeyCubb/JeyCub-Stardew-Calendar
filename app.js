@@ -462,7 +462,7 @@ function renderTasksForDay(day) {
     applyTaskItemColor(item, task);
     
     const imgUrl = getTaskIconUrl(task);
-    const iconHtml = imgUrl ? `<img src="${imgUrl}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">` : '';
+    const iconHtml = imgUrl ? `<img src="${imgUrl}" class="crop-icon" alt="" style="width: 22px; height: 22px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">` : '';
     
     const lastIndex = task.label.lastIndexOf('(');
     let titleText = task.label;
@@ -517,8 +517,7 @@ window.openModal = function(day) {
       item.style.fontSize = '0.85rem';
       item.style.margin = '0.2rem 0';
       
-      const imgUrl = getTaskIconUrl(task);
-      const iconHtml = imgUrl ? `<img src="${imgUrl}" class="crop-icon" alt="" style="width: 18px; height: 18px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">` : '';
+      const iconHtml = imgUrl ? `<img src="${imgUrl}" class="crop-icon" alt="" style="width: 22px; height: 22px; object-fit: contain; margin-right: 6px; vertical-align: middle; flex-shrink: 0;">` : '';
       
       const lastIndex = task.label.lastIndexOf('(');
       let titleText = task.label;
