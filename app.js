@@ -359,6 +359,7 @@ function applyTaskItemColor(item, task) {
   const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
   
   if (isStartTask) {
+    item.classList.add('start-action-task');
     // Planting/Loading: Dashed border, darker muted background
     item.style.backgroundColor = 'rgba(24, 24, 37, 0.6)';
     item.style.borderColor = hexToRgba(baseColor, 0.45);
@@ -366,6 +367,7 @@ function applyTaskItemColor(item, task) {
     item.style.borderWidth = '1.2px';
     item.style.opacity = '0.85';
   } else {
+    item.classList.remove('start-action-task');
     // Harvesting/Ready: Solid thick border, vibrant colorful background
     item.style.backgroundColor = hexToRgba(baseColor, 0.22);
     item.style.borderColor = hexToRgba(baseColor, 0.85);

@@ -652,3 +652,9 @@ header h1 {
 .hide-task-labels .day-card.has-tasks:hover .task-item:hover .task-delete {
   display: block !important;
 }
+
+/* Darken/fade icons for starting actions (planting/loading) */
+.start-action-task img.crop-icon {
+  opacity: 0.55 !important;
+  filter: brightness(0.65) saturate(0.8) !important;
+}
