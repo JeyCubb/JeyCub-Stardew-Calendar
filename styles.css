@@ -551,12 +551,35 @@ header h1 {
   z-index: 99;
 }
 
-/* Collapse tasks into a horizontal row of square icons by default */
+/* Container for subcategories inside day-card */
+.tasks-container-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+/* Push ready tasks to top, plant/load tasks to bottom in collapsed mode */
+.hide-task-labels .tasks-container-compact {
+  justify-content: space-between;
+}
+
+/* Collapse subcategory lists into rows by default */
 .hide-task-labels .tasks-list {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.2rem;
   align-content: flex-start;
+}
+
+/* Center and align output (ready) tasks to left, input (plant/load) to right */
+.hide-task-labels .ready-tasks {
+  justify-content: flex-start;
+}
+.hide-task-labels .plant-tasks {
+  justify-content: flex-end;
 }
 
 .hide-task-labels .task-item {
@@ -584,8 +607,8 @@ header h1 {
   display: none !important;
 }
 
-/* Expand into a full vertical details list on day card hover, floating over grid */
-.hide-task-labels .day-card.has-tasks:hover .tasks-list {
+/* Expand the entire compact wrapper into a vertical overlay on hover */
+.hide-task-labels .day-card.has-tasks:hover .tasks-container-compact {
   position: absolute;
   top: 38px;
   left: 50%;
@@ -597,7 +620,7 @@ header h1 {
   padding: 0.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
   flex-direction: column;
-  flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 0.25rem;
   height: auto;
   max-height: 250px;
@@ -606,23 +629,38 @@ header h1 {
 }
 
 /* Align left on Mondays to prevent screen overflow */
-.hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-list {
+.hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact {
   left: -1px;
   transform: none;
 }
 
 /* Align right on Sundays to prevent screen overflow */
-.hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-list {
+.hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-container-compact {
   left: auto;
   right: -1px;
   transform: none;
 }
 
 /* Align upwards for bottom row (Days 22-28) to prevent screen overflow */
-.hide-task-labels .day-card.has-tasks:nth-child(n+22):hover .tasks-list {
+.hide-task-labels .day-card.has-tasks:nth-child(n+22):hover .tasks-container-compact {
   top: auto;
   bottom: 38px;
   box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.65);
+}
+
+/* Convert subcontainers back to regular vertical details list inside hover popout */
+.hide-task-labels .day-card.has-tasks:hover .tasks-list {
+  position: static !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-content: flex-start !important;
+  gap: 0.25rem !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+  border: none !important;
 }
 
 .hide-task-labels .day-card.has-tasks:hover .task-item {

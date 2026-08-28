@@ -441,7 +441,10 @@ function renderCalendar() {
         <span class="day-name">${weekdayName}</span>
         <button class="add-task-btn" onclick="openModal(${day})">+</button>
       </div>
-      <div class="tasks-list" id="tasks-day-${day}"></div>
+      <div class="tasks-container-compact" id="tasks-day-${day}">
+        <div class="tasks-list ready-tasks" id="tasks-ready-${day}"></div>
+        <div class="tasks-list plant-tasks" id="tasks-plant-${day}"></div>
+      </div>
     `;
 
     calendarGrid.appendChild(card);
@@ -451,13 +454,14 @@ function renderCalendar() {
 
 // Render tasks within a day card
 function renderTasksForDay(day) {
-  const listContainer = document.getElementById(`tasks-day-${day}`);
-  listContainer.innerHTML = '';
+  const readyContainer = document.getElementById(`tasks-ready-${day}`);
+  const plantContainer = document.getElementById(`tasks-plant-${day}`);
+  if (readyContainer) readyContainer.innerHTML = '';
+  if (plantContainer) plantContainer.innerHTML = '';
   
   const currentYearSchedule = getYearSchedule(currentYear);
   const dayTasks = currentYearSchedule[currentSeason][day] || [];
 
-  // Render all gathered tasks
   dayTasks.forEach(task => {
     const item = document.createElement('div');
     item.className = `task-item ${task.type}`;
@@ -489,7 +493,13 @@ function renderTasksForDay(day) {
       </div>
       <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)">×</button>
     `;
-    listContainer.appendChild(item);
+
+    const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
+    if (isStartTask) {
+      if (plantContainer) plantContainer.appendChild(item);
+    } else {
+      if (readyContainer) readyContainer.appendChild(item);
+    }
   });
 }
 
