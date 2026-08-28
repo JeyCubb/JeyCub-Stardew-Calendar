@@ -636,8 +636,8 @@ header h1 {
   justify-content: flex-start;
   gap: 0.25rem;
   height: auto;
-  max-height: 250px;
-  overflow-y: auto;
+  max-height: none;
+  overflow: visible;
   z-index: 100;
 }
 
