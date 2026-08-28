@@ -726,3 +726,10 @@ header h1 {
   width: auto !important;
   flex-grow: 1 !important;
 }
+
+/* Add a clean divider line between outputs (ready/harvest) and inputs (plant/load) inside hover overlay */
+.hide-task-labels .day-card.has-tasks:hover .ready-tasks:not(:empty) + .plant-tasks:not(:empty) {
+  border-top: 1.5px dashed rgba(255, 255, 255, 0.15) !important;
+  margin-top: 0.5rem !important;
+  padding-top: 0.5rem !important;
+}
