@@ -355,9 +355,24 @@ function applyTaskItemColor(item, task) {
   if (imageKey && ITEM_COLORS[imageKey]) {
     baseColor = ITEM_COLORS[imageKey];
   }
+
+  const isStartTask = task.id && (task.id.startsWith('plant') || task.id.startsWith('load'));
   
-  item.style.backgroundColor = hexToRgba(baseColor, 0.16);
-  item.style.borderColor = hexToRgba(baseColor, 0.4);
+  if (isStartTask) {
+    // Planting/Loading: Dashed border, darker muted background
+    item.style.backgroundColor = 'rgba(24, 24, 37, 0.6)';
+    item.style.borderColor = hexToRgba(baseColor, 0.45);
+    item.style.borderStyle = 'dashed';
+    item.style.borderWidth = '1.2px';
+    item.style.opacity = '0.85';
+  } else {
+    // Harvesting/Ready: Solid thick border, vibrant colorful background
+    item.style.backgroundColor = hexToRgba(baseColor, 0.22);
+    item.style.borderColor = hexToRgba(baseColor, 0.85);
+    item.style.borderStyle = 'solid';
+    item.style.borderWidth = '1.5px';
+    item.style.opacity = '1';
+  }
   item.style.color = '#ffffff';
 }
 
