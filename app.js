@@ -450,6 +450,7 @@ function renderCalendar() {
     calendarGrid.appendChild(card);
     renderTasksForDay(day);
   }
+  setTimeout(adjustTaskFontSizes, 0);
 }
 
 // Render tasks within a day card
@@ -949,6 +950,53 @@ yearDownBtn.addEventListener('click', () => {
   }
 });
 
+// Dynamic shrink-to-fit text scaling inside narrow day columns
+function adjustTaskFontSizes() {
+  if (document.body.classList.contains('hide-task-labels')) return;
+
+  const taskItems = document.querySelectorAll('.task-item');
+  taskItems.forEach(item => {
+    const textContainer = item.querySelector('.task-text-container');
+    if (!textContainer) return;
+    
+    const span = textContainer.querySelector('span');
+    if (!span) return;
+    
+    // Reset inline styles to read natural layout dimensions
+    span.style.fontSize = '';
+    span.style.whiteSpace = 'nowrap';
+    span.style.display = 'inline-block';
+    
+    const parentWidth = textContainer.clientWidth;
+    if (parentWidth <= 0) return;
+    
+    let fontSize = 11; // Base starting px size
+    span.style.fontSize = `${fontSize}px`;
+    
+    // Shrink text step-by-step until it fits within the column width
+    while (span.scrollWidth > parentWidth && fontSize > 6) {
+      fontSize -= 0.5;
+      span.style.fontSize = `${fontSize}px`;
+    }
+    
+    // If it still does not fit at the minimum readable size (6px), wrap normally
+    if (span.scrollWidth > parentWidth) {
+      span.style.whiteSpace = 'normal';
+    }
+    
+    // Auto-scale subtitle location details proportionally
+    const subtitle = textContainer.querySelector('.task-subtitle');
+    if (subtitle) {
+      subtitle.style.fontSize = '';
+      let subFontSize = Math.max(5.5, fontSize * 0.85);
+      subtitle.style.fontSize = `${subFontSize}px`;
+    }
+  });
+}
+
+// Bind resize listener to adjust font sizes on window resize
+window.addEventListener('resize', adjustTaskFontSizes);
+
 // Init
 renderCalendar();
 initFirebase();
@@ -964,6 +1012,7 @@ function setLabelsVisibility(show) {
     document.body.classList.remove('hide-task-labels');
     if (labelToggleIcon) labelToggleIcon.innerText = '👁️';
     if (labelToggleText) labelToggleText.innerText = 'Labels: On';
+    setTimeout(adjustTaskFontSizes, 0);
   } else {
     document.body.classList.add('hide-task-labels');
     if (labelToggleIcon) labelToggleIcon.innerText = '👓';
