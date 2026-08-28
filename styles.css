@@ -464,36 +464,54 @@ header h1 {
     overflow-y: visible;
   }
 
+  /* Default task list layout on mobile (labels always show if active) */
   .task-item {
     font-size: 0.8rem;
-    padding: 0;
-    border-radius: 4px;
-    width: 18px;
-    height: 18px;
-    display: inline-flex;
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: clip;
-    margin: 0;
-    border: none;
-  }
-
-  .task-item .task-text-container {
-    display: none !important;
-  }
-
-  .task-item span {
-    width: 0;
-    display: none !important;
+    gap: 0.2rem;
+    margin: 0.2rem 0;
+    width: 100%;
+    height: auto;
   }
 
   .task-item img.crop-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 6px !important;
+    border-radius: 4px;
+  }
+
+  /* When hide-task-labels is active: collapse into compact square icons */
+  .hide-task-labels .tasks-list {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 2px !important;
+  }
+
+  .hide-task-labels .task-item {
+    width: 22px !important;
+    height: 22px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hide-task-labels .task-item .task-text-container {
+    display: none !important;
+  }
+
+  .hide-task-labels .task-item img.crop-icon {
     width: 18px !important;
     height: 18px !important;
     margin-right: 0 !important;
-    border-radius: 4px;
   }
 
   .task-delete {
