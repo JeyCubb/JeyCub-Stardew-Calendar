@@ -658,3 +658,20 @@ header h1 {
   opacity: 0.55 !important;
   filter: brightness(0.65) saturate(0.8) !important;
 }
+
+/* Center task icons inside the collapsed wrapper container */
+.hide-task-labels .task-item > div {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  flex-grow: 0 !important;
+}
+
+/* Restore normal left alignment on hover popout list */
+.hide-task-labels .day-card.has-tasks:hover .task-item > div {
+  justify-content: flex-start !important;
+  width: auto !important;
+  flex-grow: 1 !important;
+}
