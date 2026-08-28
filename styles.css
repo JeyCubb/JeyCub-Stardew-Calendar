@@ -811,7 +811,8 @@ header h1 {
 /* Allow completed task checkmarks to show the reset symbol (X) on hover */
 .task-completed .task-icon-wrapper .checkmark-overlay {
   background: transparent !important;
-  color: transparent !important; /* Hide original green check mark */
+  color: transparent !important; /* Hide original green check mark color */
+  text-shadow: none !important; /* Clear original green check mark shadow outline */
 }
 .task-completed .task-icon-wrapper .checkmark-overlay::after {
   content: "×";
