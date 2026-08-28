@@ -213,16 +213,16 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  overflow-y: auto;
+  overflow: visible;
   flex-grow: 1;
   padding-right: 2px;
 }
 
-/* Scrollbar styling for tasks list */
-.tasks-list::-webkit-scrollbar {
+/* Scrollbar styling for compact container */
+.tasks-container-compact::-webkit-scrollbar {
   width: 3px;
 }
-.tasks-list::-webkit-scrollbar-thumb {
+.tasks-container-compact::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
 }
@@ -570,6 +570,7 @@ header h1 {
   gap: 0.25rem;
   flex-grow: 1;
   min-height: 0;
+  overflow-y: auto;
 }
 
 /* Push ready tasks to top, plant/load tasks to bottom in collapsed mode */
