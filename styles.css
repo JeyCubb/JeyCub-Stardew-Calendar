@@ -522,6 +522,11 @@ header h1 {
 }
 
 /* --- Global Toggleable Task Labels --- */
+.hide-task-labels .day-card:hover {
+  overflow: visible !important;
+  z-index: 99;
+}
+
 /* Collapse tasks into a horizontal row of square icons by default */
 .hide-task-labels .tasks-list {
   flex-direction: row;
@@ -548,11 +553,24 @@ header h1 {
   display: none !important;
 }
 
-/* Expand into a full vertical details list on day card hover */
+/* Expand into a full vertical details list on day card hover, floating over grid */
 .hide-task-labels .day-card:hover .tasks-list {
+  position: absolute;
+  top: 38px;
+  left: -1px;
+  right: -1px;
+  background: rgba(22, 22, 33, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 12px 12px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 0.25rem;
+  height: auto;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 100;
 }
 
 .hide-task-labels .day-card:hover .task-item {
