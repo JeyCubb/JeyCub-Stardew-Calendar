@@ -229,7 +229,7 @@ header h1 {
 }
 
 .task-item {
-  font-size: 0.76rem;
+  font-size: clamp(0.5rem, 0.75vw, 0.76rem);
   padding: 0.35rem 0.5rem;
   border-radius: 6px;
   display: flex;
@@ -240,6 +240,10 @@ header h1 {
   animation: fadeIn 0.15s ease;
   cursor: pointer;
   flex-shrink: 0;
+}
+
+.task-subtitle {
+  font-size: clamp(0.44rem, 0.6vw, 0.68rem) !important;
 }
 
 .task-item.manual { background: rgba(148, 163, 184, 0.25); border: 1px solid rgba(148, 163, 184, 0.4); }
