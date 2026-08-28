@@ -780,6 +780,11 @@ header h1 {
   margin-right: 8px;
 }
 
+/* Remove margin-right on icon wrappers in collapsed mode to keep them perfectly centered */
+.hide-task-labels .task-item .task-icon-wrapper {
+  margin-right: 0 !important;
+}
+
 .checkmark-overlay {
   position: absolute;
   top: 0;
