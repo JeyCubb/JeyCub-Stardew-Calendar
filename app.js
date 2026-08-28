@@ -507,7 +507,6 @@ function renderTasksForDay(day) {
       <button class="task-delete" onclick="deleteTask(${day}, '${task.id}', event)">×</button>
     `;
 
-    const isStartTask = task.id && typeof task.id === 'string' && (task.id.startsWith('plant') || task.id.startsWith('load'));
     if (isStartTask) {
       if (plantContainer) plantContainer.appendChild(item);
     } else {

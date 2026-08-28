@@ -12,14 +12,6 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 </head>
 <body>
-  <script>
-    window.onerror = function(msg, src, line, col, err) {
-      var d = document.createElement('div');
-      d.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#e00;color:#fff;padding:10px;z-index:99999;font:14px monospace;word-break:break-all;';
-      d.innerText = 'JS ERROR: ' + msg + '\nLine: ' + line + ' Col: ' + col + '\nSource: ' + src + '\n' + (err ? err.stack : '');
-      document.body.appendChild(d);
-    };
-  </script>
   <!-- Header -->
   <header>
     <h1>👩‍🌾 Stardew Farm Calendar</h1>
