@@ -696,31 +696,41 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   // Regrows (for multi-harvest crops or trees)
   const regrowInterval = crop.regrow;
   if (regrowInterval > 0) {
-    let nextHarvestDate = getFutureDate(harvestDate.year, harvestDate.season, harvestDate.day, regrowInterval);
-    // Schedule up to 60 regrows (approx 4 years of harvests)
-    for (let i = 0; i < 60; i++) {
-      const nextHarvestAbs = getAbsoluteDay(nextHarvestDate.year, nextHarvestDate.season, nextHarvestDate.day);
-      const regrowTask = {
-        id: 'harvest_regrow_' + Date.now() + '_' + i,
-        type: 'harvest',
-        cropKey: cropKey,
-        label: crop.isTree 
-          ? `🌳 ${crop.name} Ready (${location})`
-          : `🌾 ${crop.name} Ready (Regrow - ${location})`,
-        groupId: groupId,
-        absDay: nextHarvestAbs
-      };
+    // For normal crops on Main Farm, if the first harvest was invalid, they died and won't regrow
+    const canRegrow = crop.isTree || shouldAddFirst;
+    
+    if (canRegrow) {
+      let nextHarvestDate = getFutureDate(harvestDate.year, harvestDate.season, harvestDate.day, regrowInterval);
+      // Schedule up to 60 regrows (approx 4 years of harvests)
+      for (let i = 0; i < 60; i++) {
+        const nextHarvestAbs = getAbsoluteDay(nextHarvestDate.year, nextHarvestDate.season, nextHarvestDate.day);
+        const regrowTask = {
+          id: 'harvest_regrow_' + Date.now() + '_' + i,
+          type: 'harvest',
+          cropKey: cropKey,
+          label: crop.isTree 
+            ? `🌳 ${crop.name} Ready (${location})`
+            : `🌾 ${crop.name} Ready (Regrow - ${location})`,
+          groupId: groupId,
+          absDay: nextHarvestAbs
+        };
 
-      let shouldAddRegrow = true;
-      if (location === 'Main Farm' && !canGrowInSeason(cropKey, nextHarvestDate.season)) {
-        shouldAddRegrow = false;
+        let shouldAddRegrow = true;
+        if (location === 'Main Farm' && !canGrowInSeason(cropKey, nextHarvestDate.season)) {
+          if (!crop.isTree) {
+            // Normal crops die on the Main Farm when their season ends, stopping future years
+            break;
+          } else {
+            shouldAddRegrow = false;
+          }
+        }
+
+        if (shouldAddRegrow) {
+          addStaticTask(nextHarvestDate, regrowTask);
+        }
+
+        nextHarvestDate = getFutureDate(nextHarvestDate.year, nextHarvestDate.season, nextHarvestDate.day, regrowInterval);
       }
-
-      if (shouldAddRegrow) {
-        addStaticTask(nextHarvestDate, regrowTask);
-      }
-
-      nextHarvestDate = getFutureDate(nextHarvestDate.year, nextHarvestDate.season, nextHarvestDate.day, regrowInterval);
     }
   }
 
