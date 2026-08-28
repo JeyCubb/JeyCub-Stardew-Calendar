@@ -585,6 +585,7 @@ header h1 {
   flex-wrap: wrap;
   gap: 0.2rem;
   align-content: flex-start;
+  flex-grow: 0;
 }
 
 /* Center and align output (ready) tasks to left, input (plant/load) to right */
