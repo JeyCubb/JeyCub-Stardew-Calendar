@@ -183,8 +183,7 @@ header h1 {
 }
 
 .day-name {
-  font-size: 0.7rem;
-  color: var(--text-muted);
+  display: none !important;
 }
 
 .add-task-btn {
