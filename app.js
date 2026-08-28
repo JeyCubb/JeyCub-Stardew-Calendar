@@ -926,6 +926,35 @@ yearDownBtn.addEventListener('click', () => {
 renderCalendar();
 initFirebase();
 
+// Label Visibility Toggle Init
+const btnToggleLabels = document.getElementById('btn-toggle-labels');
+const labelToggleIcon = document.getElementById('label-toggle-icon');
+const labelToggleText = document.getElementById('label-toggle-text');
+
+function setLabelsVisibility(show) {
+  localStorage.setItem('stardew_show_labels', show);
+  if (show) {
+    document.body.classList.remove('hide-task-labels');
+    if (labelToggleIcon) labelToggleIcon.innerText = '👁️';
+    if (labelToggleText) labelToggleText.innerText = 'Labels: On';
+  } else {
+    document.body.classList.add('hide-task-labels');
+    if (labelToggleIcon) labelToggleIcon.innerText = '👓';
+    if (labelToggleText) labelToggleText.innerText = 'Labels: Hover';
+  }
+}
+
+if (btnToggleLabels) {
+  btnToggleLabels.addEventListener('click', () => {
+    const isCurrentlyShowing = localStorage.getItem('stardew_show_labels') === 'true';
+    setLabelsVisibility(!isCurrentlyShowing);
+  });
+}
+
+// Initial state load (defaults to collapsed/hover for tidy look)
+const savedShowLabels = localStorage.getItem('stardew_show_labels');
+setLabelsVisibility(savedShowLabels === 'true');
+
 function isScheduleEmpty() {
   if (!schedule) return true;
   const years = Object.keys(schedule);
