@@ -542,47 +542,6 @@ header h1 {
     width: 100% !important;
   }
 
-  /* Disable absolute positioning hover popouts on mobile/portrait viewports */
-  .hide-task-labels .day-card.has-tasks:hover {
-    overflow: hidden !important;
-    z-index: 1 !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .tasks-list {
-    position: static !important;
-    width: auto !important;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: 2px !important;
-    height: auto !important;
-    max-height: none !important;
-    overflow-y: visible !important;
-    padding: 0 !important;
-    transform: none !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .task-item {
-    width: 22px !important;
-    height: 22px !important;
-    padding: 0 !important;
-    display: inline-flex !important;
-    justify-content: center !important;
-    margin: 0 !important;
-    border: none !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon {
-    width: 18px !important;
-    height: 18px !important;
-    margin-right: 0 !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container {
-    display: none !important;
-  }
 }
 
 /* --- Global Toggleable Task Labels --- */
