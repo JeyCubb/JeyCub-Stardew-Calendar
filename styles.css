@@ -384,7 +384,7 @@ header h1 {
 }
 
 /* Responsive / Mobile Optimization (under 768px) */
-@media (max-width: 768px), (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 768px) {
   body {
     padding: 0.5rem;
     height: auto;
