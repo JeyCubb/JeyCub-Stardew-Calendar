@@ -1027,6 +1027,18 @@ function setLabelsVisibility(show) {
     document.body.classList.add('hide-task-labels');
     if (labelToggleIcon) labelToggleIcon.innerText = '👓';
     if (labelToggleText) labelToggleText.innerText = 'Labels: Hover';
+    
+    // Clear inline style overrides so hover popouts use full CSS text sizing
+    const taskSpans = document.querySelectorAll('.task-text-container span');
+    taskSpans.forEach(span => {
+      span.style.fontSize = '';
+      span.style.whiteSpace = '';
+      span.style.display = '';
+    });
+    const taskSubtitles = document.querySelectorAll('.task-subtitle');
+    taskSubtitles.forEach(sub => {
+      sub.style.fontSize = '';
+    });
   }
 }
 
