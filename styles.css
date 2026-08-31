@@ -173,16 +173,12 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  position: relative;
-  z-index: 101; /* Stay above any overflowing popovers from neighbors */
 }
 
 .day-number {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-main);
-  position: relative;
-  z-index: 102;
 }
 
 .day-name {
@@ -204,7 +200,7 @@ header h1 {
   justify-content: center;
   transition: all 0.2s ease;
   position: relative;
-  z-index: 105; /* Highest z-index to always be clickable */
+  z-index: 105; /* Keep only the + button elevated above hover popouts */
 }
 
 .add-task-btn:hover {
