@@ -1409,7 +1409,10 @@ cropManagerList.addEventListener('change', (e) => {
 
 // Toggle a task's completed state and save/re-render
 window.toggleTaskCompleted = function(day, taskId, event) {
-  if (event) event.stopPropagation();
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
   
   const currentYearSchedule = getYearSchedule(currentYear);
   const dayTasks = currentYearSchedule[currentSeason][day] || [];
@@ -1417,12 +1420,20 @@ window.toggleTaskCompleted = function(day, taskId, event) {
   if (task) {
     task.completed = !task.completed;
     saveSchedule();
-    renderCalendar();
+    renderTasksForDay(day);
     
-    // Also re-render the modal task list if open so the check/uncheck reflects there too
+    // If the modal happens to be open already, refresh the modal list state
     const modalTasksSection = document.getElementById('modal-tasks-section');
-    if (modalTasksSection && modalTasksSection.style.display === 'block') {
-      openModal(day);
+    if (modalTasksSection && modalOverlay && modalOverlay.style.display === 'flex') {
+      const modalTasksList = document.getElementById('modal-tasks-list');
+      if (modalTasksList) {
+        modalTasksList.querySelectorAll('.task-item').forEach(el => {
+          // re-sync completed class in open modal without reopening
+          if (el.innerHTML.includes(`'${taskId}'`)) {
+            el.classList.toggle('task-completed', task.completed);
+          }
+        });
+      }
     }
   }
 };
