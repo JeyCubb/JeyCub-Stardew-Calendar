@@ -1865,7 +1865,7 @@ function renderTrackerGridOnly() {
 
     card.innerHTML = `
       <div class="tracker-card-icon">
-        <img src="${item.img}" alt="${item.name}" onerror="this.style.display='none';">
+        <img src="${item.img}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.style.display='none';">
       </div>
       <div class="tracker-card-body">
         <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
