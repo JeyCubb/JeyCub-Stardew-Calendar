@@ -2398,98 +2398,6 @@ const PERFECTION_TRACKER_DATA = {
       "img": "https://stardewvalleywiki.com/Special:FilePath/Star_Shards.png"
     }
   ],
-  "scarecrows": [
-    {
-      "id": "sc_scarecrow",
-      "name": "Standard Scarecrow",
-      "type": "Craftable",
-      "day": "Any Day (Farming Lvl 1)",
-      "source": "Crafting Menu (50 Wood, 20 Fiber, 1 Coal)",
-      "notes": "Protects an 8-tile radius circle (248 tiles total). Basic farm essential.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Scarecrow.png"
-    },
-    {
-      "id": "sc_rarecrow_1",
-      "name": "Rarecrow #1 (Snowman)",
-      "type": "Rarecrow",
-      "day": "Fall 16 (Stardew Valley Fair)",
-      "source": "Fair Booth (800 Star Tokens)",
-      "notes": "Snowman in top hat & green scarf. Counts toward Deluxe Scarecrow recipe.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rarecrow_1.png"
-    },
-    {
-      "id": "sc_rarecrow_2",
-      "name": "Rarecrow #2 (Witch)",
-      "type": "Rarecrow",
-      "day": "Fall 27 (Spirit's Eve)",
-      "source": "Pierre's Festival Booth (5,000g)",
-      "notes": "Witch with hat, purple dress & broom. Counts toward Deluxe Scarecrow recipe.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rarecrow_2.png"
-    },
-    {
-      "id": "sc_rarecrow_3",
-      "name": "Rarecrow #3 (Alien)",
-      "type": "Rarecrow",
-      "day": "Any Day (Post-Desert)",
-      "source": "Oasis Casino Shop (10,000 Qi Coins)",
-      "notes": "Green alien figure. Requires Club Card to enter Casino. Counts toward Deluxe recipe.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rarecrow_3.png"
-    },
-    {
-      "id": "sc_rarecrow_4",
-      "name": "Rarecrow #4 (Snow Maiden)",
-      "type": "Rarecrow",
-      "day": "Winter 8 (Festival of Ice) / Fri & Sun",
-      "source": "Festival of Ice (5,000g) or Traveling Cart (2.5k\u201310k)",
-      "notes": "Snow Maiden in a dress with flowers. Counts toward Deluxe Scarecrow recipe.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rarecrow_4.png"
-    },
-    {
-      "id": "sc_rarecrow_5",
-      "name": "Rarecrow #5 (Farmer Girl)",
-      "type": "Rarecrow",
-      "day": "Spring 24 (Flower Dance)",
-      "source": "Pierre's Festival Booth (2,500g)",
-      "notes": "Farmer girl with blonde straw hair and sun hat. Counts toward Deluxe Scarecrow recipe.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rarecrow_5.png"
-    },
-    {
-      "id": "sc_rarecrow_6",
-      "name": "Rarecrow #6 (Dwarf / Miner)",
-      "type": "Rarecrow",
-      "day": "Any Day (Post-Mines)",
-      "source": "Dwarf Shop in Mines Entrance (2,500g)",
-      "notes": "Requires Dwarvish Translation Guide. Clear rock east side of Mines entrance.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rarecrow_6.png"
-    },
-    {
-      "id": "sc_rarecrow_7",
-      "name": "Rarecrow #7 (Raccoon)",
-      "type": "Rarecrow",
-      "day": "Any Day (20 Museum Donations)",
-      "source": "Museum Milestone from Gunther (Donate 20 items)",
-      "notes": "Raccoon figure. Gunther hands it over as an archival milestone reward.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rarecrow_7.png"
-    },
-    {
-      "id": "sc_rarecrow_8",
-      "name": "Rarecrow #8 (Tiki / Mask)",
-      "type": "Rarecrow",
-      "day": "Any Day (40 Museum Donations)",
-      "source": "Museum Milestone from Gunther (Donate 40 items)",
-      "notes": "Tribal Tiki mask figure. Gunther hands it over as an archival milestone reward.",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rarecrow_8.png"
-    },
-    {
-      "id": "sc_deluxe_scarecrow",
-      "name": "Deluxe Scarecrow",
-      "type": "Craftable (Endgame)",
-      "day": "Day After Collecting All 8 Rarecrows",
-      "source": "Unlocked via Mail (50 Wood, 1 Iridium Ore, 40 Fiber)",
-      "notes": "HUGE 16-tile radius circle (888 tiles total, 4x area of normal scarecrow!).",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Scarecrow.png"
-    }
-  ],
   "walnuts": [
     {
       "id": "wn_1",
@@ -3596,17 +3504,17 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fried Egg",
       "category": "Cooking Recipe",
       "desc": "Sunny-side up.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: .mw-parser-output .mw-parser-output .mw-parser-output .nametemplate img,.mw-parser-output .nametemplateinline img{max-width:none} Egg (1) | Buffs: 50 22",
+      "source": "Sunny-side up.",
+      "notes": "Ingredients: Egg (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Egg.png"
     },
     {
       "id": "cook_omelet",
       "name": "Omelet",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "It's super fluffy.",
+      "source": "It's super fluffy.",
+      "notes": "Ingredients: Egg (1) Milk (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Omelet.png"
     },
     {
@@ -3614,8 +3522,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Salad",
       "category": "Cooking Recipe",
       "desc": "A healthy garden salad.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Leek (1) Dandelion (1) Vinegar (1) | Buffs: 113 50",
+      "source": "A healthy garden salad.",
+      "notes": "Ingredients: Leek (1) Dandelion (1) Vinegar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Salad.png"
     },
     {
@@ -3623,17 +3531,17 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cheese Cauliflower",
       "category": "Cooking Recipe",
       "desc": "It smells great!",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Cauliflower (1) Cheese (1) | Buffs: 138 62",
+      "source": "It smells great!",
+      "notes": "Ingredients: Cauliflower (1) Cheese (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cheese_Cauliflower.png"
     },
     {
       "id": "cook_baked_fish",
       "name": "Baked Fish",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Baked fish on a bed of herbs.",
+      "source": "Baked fish on a bed of herbs.",
+      "notes": "Ingredients: Sunfish (1) Bream (1) Wheat Flour (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Baked_Fish.png"
     },
     {
@@ -3641,8 +3549,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Parsnip Soup",
       "category": "Cooking Recipe",
       "desc": "It's fresh and hearty.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Parsnip (1) Milk (1) Vinegar (1) | Buffs: 85 38",
+      "source": "It's fresh and hearty.",
+      "notes": "Ingredients: Parsnip (1) Milk (1) Vinegar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Parsnip_Soup.png"
     },
     {
@@ -3650,17 +3558,17 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Vegetable Medley",
       "category": "Cooking Recipe",
       "desc": "This is very nutritious.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Tomato (1) Beet (1) | Buffs: 165 74",
+      "source": "This is very nutritious.",
+      "notes": "Ingredients: Tomato (1) Beet (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Vegetable_Medley.png"
     },
     {
       "id": "cook_complete_breakfast",
       "name": "Complete Breakfast",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "You'll feel ready to take on the world!",
+      "source": "You'll feel ready to take on the world!",
+      "notes": "Ingredients: Fried Egg (1) Milk (1) Hashbrowns (1) Pancakes (1) | Buffs: Farming (+2) Max Energy (+50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Complete_Breakfast.png"
     },
     {
@@ -3668,8 +3576,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fried Calamari",
       "category": "Cooking Recipe",
       "desc": "It's so chewy.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Squid (1) Wheat Flour (1) Oil (1) | Buffs: 80 36",
+      "source": "It's so chewy.",
+      "notes": "Ingredients: Squid (1) Wheat Flour (1) Oil (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Calamari.png"
     },
     {
@@ -3677,17 +3585,17 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Strange Bun",
       "category": "Cooking Recipe",
       "desc": "What's inside?",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Wheat Flour (1) Periwinkle (1) Void Mayonnaise (1) | Buffs: 100 45",
+      "source": "What's inside?",
+      "notes": "Ingredients: Wheat Flour (1) Periwinkle (1) Void Mayonnaise (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Strange_Bun.png"
     },
     {
       "id": "cook_lucky_lunch",
       "name": "Lucky Lunch",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "A special little meal.",
+      "source": "A special little meal.",
+      "notes": "Ingredients: Sea Cucumber (1) Tortilla (1) Blue Jazz (1) | Buffs: Luck (+3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Lucky_Lunch.png"
     },
     {
@@ -3695,17 +3603,17 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fried Mushroom",
       "category": "Cooking Recipe",
       "desc": "Earthy and aromatic.",
-      "source": "How to Learn: Attack (+2)",
-      "notes": "Ingredients: Common Mushroom (1) Morel (1) Oil (1) | Buffs: 135 60",
+      "source": "Earthy and aromatic.",
+      "notes": "Ingredients: Common Mushroom (1) Morel (1) Oil (1) | Buffs: Attack (+2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Mushroom.png"
     },
     {
       "id": "cook_pizza",
       "name": "Pizza",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "It's popular for all the right reasons.",
+      "source": "It's popular for all the right reasons.",
+      "notes": "Ingredients: Wheat Flour (1) Tomato (1) Cheese (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pizza.png"
     },
     {
@@ -3713,44 +3621,44 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Bean Hotpot",
       "category": "Cooking Recipe",
       "desc": "It sure is healthy.",
-      "source": "How to Learn: Max Energy (+30) Magnetism (+32)",
-      "notes": "Ingredients: Green Bean (2) | Buffs: 125 56",
+      "source": "It sure is healthy.",
+      "notes": "Ingredients: Green Bean (2) | Buffs: Max Energy (+30) Magnetism (+32)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bean_Hotpot.png"
     },
     {
       "id": "cook_glazed_yams",
       "name": "Glazed Yams",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Sweet and satisfying... The sugar gives it a hint of caramel.",
+      "source": "Sweet and satisfying... The sugar gives it a hint of caramel.",
+      "notes": "Ingredients: Yam (1) Sugar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Glazed_Yams.png"
     },
     {
       "id": "cook_carp_surprise",
       "name": "Carp Surprise",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "It's bland and oily.",
+      "source": "It's bland and oily.",
+      "notes": "Ingredients: Carp (4)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Carp_Surprise.png"
     },
     {
       "id": "cook_hashbrowns",
       "name": "Hashbrowns",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Crispy and golden-brown!",
+      "source": "Crispy and golden-brown!",
+      "notes": "Ingredients: Potato (1) Oil (1) | Buffs: Farming (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Hashbrowns.png"
     },
     {
       "id": "cook_pancakes",
       "name": "Pancakes",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "A double stack of fluffy, soft pancakes.",
+      "source": "A double stack of fluffy, soft pancakes.",
+      "notes": "Ingredients: Wheat Flour (1) Egg (1) | Buffs: Foraging (+2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pancakes.png"
     },
     {
@@ -3758,8 +3666,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Salmon Dinner",
       "category": "Cooking Recipe",
       "desc": "The lemon spritz makes it special.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Salmon (1) Amaranth (1) Kale (1) | Buffs: 125 56",
+      "source": "The lemon spritz makes it special.",
+      "notes": "Ingredients: Salmon (1) Amaranth (1) Kale (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon_Dinner.png"
     },
     {
@@ -3767,8 +3675,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fish Taco",
       "category": "Cooking Recipe",
       "desc": "It smells delicious.",
-      "source": "How to Learn: Fishing (+2)",
-      "notes": "Ingredients: Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1) | Buffs: 165 74",
+      "source": "It smells delicious.",
+      "notes": "Ingredients: Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1) | Buffs: Fishing (+2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Taco.png"
     },
     {
@@ -3776,8 +3684,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Crispy Bass",
       "category": "Cooking Recipe",
       "desc": "Wow, the breading is perfect.",
-      "source": "How to Learn: Magnetism (+64)",
-      "notes": "Ingredients: Largemouth Bass (1) Wheat Flour (1) Oil (1) | Buffs: 90 40",
+      "source": "Wow, the breading is perfect.",
+      "notes": "Ingredients: Largemouth Bass (1) Wheat Flour (1) Oil (1) | Buffs: Magnetism (+64)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Crispy_Bass.png"
     },
     {
@@ -3785,17 +3693,17 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Pepper Poppers",
       "category": "Cooking Recipe",
       "desc": "Spicy breaded peppers filled with cheese.",
-      "source": "How to Learn: Farming (+2) Speed (+1)",
-      "notes": "Ingredients: Hot Pepper (1) Cheese (1) | Buffs: 130 58",
+      "source": "Spicy breaded peppers filled with cheese.",
+      "notes": "Ingredients: Hot Pepper (1) Cheese (1) | Buffs: Farming (+2) Speed (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pepper_Poppers.png"
     },
     {
       "id": "cook_bread",
       "name": "Bread",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "A crusty baguette.",
+      "source": "A crusty baguette.",
+      "notes": "Ingredients: Wheat Flour (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bread.png"
     },
     {
@@ -3803,35 +3711,35 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Tom Kha Soup",
       "category": "Cooking Recipe",
       "desc": "These flavors are incredible!",
-      "source": "How to Learn: Farming (+2) Max Energy (+30)",
-      "notes": "Ingredients: Coconut (1) Shrimp (1) Common Mushroom (1) | Buffs: 175 78",
+      "source": "These flavors are incredible!",
+      "notes": "Ingredients: Coconut (1) Shrimp (1) Common Mushroom (1) | Buffs: Farming (+2) Max Energy (+30)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tom_Kha_Soup.png"
     },
     {
       "id": "cook_trout_soup",
       "name": "Trout Soup",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Pretty salty.",
+      "source": "Pretty salty.",
+      "notes": "Ingredients: Rainbow Trout (1) Green Algae (1) | Buffs: Fishing (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Trout_Soup.png"
     },
     {
       "id": "cook_chocolate_cake",
       "name": "Chocolate Cake",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Rich and moist with a thick fudge icing.",
+      "source": "Rich and moist with a thick fudge icing.",
+      "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Chocolate_Cake.png"
     },
     {
       "id": "cook_pink_cake",
       "name": "Pink Cake",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "There's little heart candies on top.",
+      "source": "There's little heart candies on top.",
+      "notes": "Ingredients: Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pink_Cake.png"
     },
     {
@@ -3839,8 +3747,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Rhubarb Pie",
       "category": "Cooking Recipe",
       "desc": "Mmm, tangy and sweet!",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Rhubarb (1) Wheat Flour (1) Sugar (1) | Buffs: 215 96",
+      "source": "Mmm, tangy and sweet!",
+      "notes": "Ingredients: Rhubarb (1) Wheat Flour (1) Sugar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Rhubarb_Pie.png"
     },
     {
@@ -3848,8 +3756,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cookie",
       "category": "Cooking Recipe",
       "desc": "Very chewy.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1) | Buffs: 90 40",
+      "source": "Very chewy.",
+      "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cookie.png"
     },
     {
@@ -3857,8 +3765,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Spaghetti",
       "category": "Cooking Recipe",
       "desc": "An old favorite.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Wheat Flour (1) Tomato (1) | Buffs: 75 33",
+      "source": "An old favorite.",
+      "notes": "Ingredients: Wheat Flour (1) Tomato (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Spaghetti.png"
     },
     {
@@ -3866,8 +3774,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fried Eel",
       "category": "Cooking Recipe",
       "desc": "Greasy but flavorful.",
-      "source": "How to Learn: Luck (+1)",
-      "notes": "Ingredients: Eel (1) Oil (1) | Buffs: 75 33",
+      "source": "Greasy but flavorful.",
+      "notes": "Ingredients: Eel (1) Oil (1) | Buffs: Luck (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Eel.png"
     },
     {
@@ -3875,8 +3783,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Spicy Eel",
       "category": "Cooking Recipe",
       "desc": "It's really spicy! Be careful.",
-      "source": "How to Learn: Luck (+1) Speed (+1)",
-      "notes": "Ingredients: Eel (1) Hot Pepper (1) | Buffs: 115 51",
+      "source": "It's really spicy! Be careful.",
+      "notes": "Ingredients: Eel (1) Hot Pepper (1) | Buffs: Luck (+1) Speed (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Spicy_Eel.png"
     },
     {
@@ -3884,26 +3792,26 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Sashimi",
       "category": "Cooking Recipe",
       "desc": "Raw fish sliced into thin pieces.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Any Fish (1) | Buffs: 75 33",
+      "source": "Raw fish sliced into thin pieces.",
+      "notes": "Ingredients: Any Fish (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sashimi.png"
     },
     {
       "id": "cook_maki_roll",
       "name": "Maki Roll",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Fish and rice wrapped in seaweed.",
+      "source": "Fish and rice wrapped in seaweed.",
+      "notes": "Ingredients: Any Fish (1) Seaweed (1) Rice (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Maki_Roll.png"
     },
     {
       "id": "cook_tortilla",
       "name": "Tortilla",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Can be used as a vessel for food or eaten by itself.",
+      "source": "Can be used as a vessel for food or eaten by itself.",
+      "notes": "Ingredients: Corn (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tortilla.png"
     },
     {
@@ -3911,8 +3819,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Red Plate",
       "category": "Cooking Recipe",
       "desc": "Full of antioxidants.",
-      "source": "How to Learn: Max Energy (+50)",
-      "notes": "Ingredients: Red Cabbage (1) Radish (1) | Buffs: 240 108",
+      "source": "Full of antioxidants.",
+      "notes": "Ingredients: Red Cabbage (1) Radish (1) | Buffs: Max Energy (+50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Plate.png"
     },
     {
@@ -3920,8 +3828,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Eggplant Parmesan",
       "category": "Cooking Recipe",
       "desc": "Tangy, cheesy, and wonderful.",
-      "source": "How to Learn: Mining (+1) Defense (+3)",
-      "notes": "Ingredients: Eggplant (1) Tomato (1) | Buffs: 175 78",
+      "source": "Tangy, cheesy, and wonderful.",
+      "notes": "Ingredients: Eggplant (1) Tomato (1) | Buffs: Mining (+1) Defense (+3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Eggplant_Parmesan.png"
     },
     {
@@ -3929,8 +3837,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Rice Pudding",
       "category": "Cooking Recipe",
       "desc": "It's creamy, sweet, and fun to eat.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Milk (1) Sugar (1) Rice (1) | Buffs: 115 51",
+      "source": "It's creamy, sweet, and fun to eat.",
+      "notes": "Ingredients: Milk (1) Sugar (1) Rice (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Rice_Pudding.png"
     },
     {
@@ -3938,8 +3846,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Ice Cream",
       "category": "Cooking Recipe",
       "desc": "It's hard to find someone who doesn't like this.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Milk (1) Sugar (1) | Buffs: 100 45",
+      "source": "It's hard to find someone who doesn't like this.",
+      "notes": "Ingredients: Milk (1) Sugar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Cream.png"
     },
     {
@@ -3947,8 +3855,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Blueberry Tart",
       "category": "Cooking Recipe",
       "desc": "It's subtle and refreshing.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Blueberry (1) Wheat Flour (1) Sugar (1) Egg (1) | Buffs: 125 56",
+      "source": "It's subtle and refreshing.",
+      "notes": "Ingredients: Blueberry (1) Wheat Flour (1) Sugar (1) Egg (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Blueberry_Tart.png"
     },
     {
@@ -3956,8 +3864,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Autumn's Bounty",
       "category": "Cooking Recipe",
       "desc": "A taste of the season.",
-      "source": "How to Learn: Foraging (+2) Defense (+2)",
-      "notes": "Ingredients: Yam (1) Pumpkin (1) | Buffs: 220 99",
+      "source": "A taste of the season.",
+      "notes": "Ingredients: Yam (1) Pumpkin (1) | Buffs: Foraging (+2) Defense (+2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Autumn's_Bounty.png"
     },
     {
@@ -3965,8 +3873,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Pumpkin Soup",
       "category": "Cooking Recipe",
       "desc": "A seasonal favorite.",
-      "source": "How to Learn: Defense (+2) Luck (+2)",
-      "notes": "Ingredients: Pumpkin (1) Milk (1) | Buffs: 200 90",
+      "source": "A seasonal favorite.",
+      "notes": "Ingredients: Pumpkin (1) Milk (1) | Buffs: Defense (+2) Luck (+2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Soup.png"
     },
     {
@@ -3974,8 +3882,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Super Meal",
       "category": "Cooking Recipe",
       "desc": "It's a really energizing meal.",
-      "source": "How to Learn: Max Energy (+40) Speed (+1)",
-      "notes": "Ingredients: Bok Choy (1) Cranberries (1) Artichoke (1) | Buffs: 160 72",
+      "source": "It's a really energizing meal.",
+      "notes": "Ingredients: Bok Choy (1) Cranberries (1) Artichoke (1) | Buffs: Max Energy (+40) Speed (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Meal.png"
     },
     {
@@ -3983,8 +3891,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cranberry Sauce",
       "category": "Cooking Recipe",
       "desc": "A festive treat.",
-      "source": "How to Learn: Mining (+2)",
-      "notes": "Ingredients: Cranberries (1) Sugar (1) | Buffs: 125 56",
+      "source": "A festive treat.",
+      "notes": "Ingredients: Cranberries (1) Sugar (1) | Buffs: Mining (+2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Sauce.png"
     },
     {
@@ -3992,8 +3900,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stuffing",
       "category": "Cooking Recipe",
       "desc": "Ahh... the smell of warm bread and sage.",
-      "source": "How to Learn: Defense (+2)",
-      "notes": "Ingredients: Bread (1) Cranberries (1) Hazelnut (1) | Buffs: 170 76",
+      "source": "Ahh... the smell of warm bread and sage.",
+      "notes": "Ingredients: Bread (1) Cranberries (1) Hazelnut (1) | Buffs: Defense (+2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stuffing.png"
     },
     {
@@ -4001,8 +3909,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Farmer's Lunch",
       "category": "Cooking Recipe",
       "desc": "This'll keep you going.",
-      "source": "How to Learn: Farming (+3)",
-      "notes": "Ingredients: Omelet (1) Parsnip (1) | Buffs: 200 90",
+      "source": "This'll keep you going.",
+      "notes": "Ingredients: Omelet (1) Parsnip (1) | Buffs: Farming (+3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Farmer's_Lunch.png"
     },
     {
@@ -4010,8 +3918,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Survival Burger",
       "category": "Cooking Recipe",
       "desc": "A convenient snack for the explorer.",
-      "source": "How to Learn: Foraging (+3)",
-      "notes": "Ingredients: Bread (1) Cave Carrot (1) Eggplant (1) | Buffs: 125 56",
+      "source": "A convenient snack for the explorer.",
+      "notes": "Ingredients: Bread (1) Cave Carrot (1) Eggplant (1) | Buffs: Foraging (+3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Survival_Burger.png"
     },
     {
@@ -4019,8 +3927,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Dish O' The Sea",
       "category": "Cooking Recipe",
       "desc": "This'll keep you warm in the cold sea air.",
-      "source": "How to Learn: Fishing (+3)",
-      "notes": "Ingredients: Sardine (2) Hashbrowns (1) | Buffs: 150 67",
+      "source": "This'll keep you warm in the cold sea air.",
+      "notes": "Ingredients: Sardine (2) Hashbrowns (1) | Buffs: Fishing (+3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Dish_O'_The_Sea.png"
     },
     {
@@ -4028,8 +3936,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Miner's Treat",
       "category": "Cooking Recipe",
       "desc": "This should keep your energy up.",
-      "source": "How to Learn: Mining (+3) Magnetism (+32)",
-      "notes": "Ingredients: Cave Carrot (2) Sugar (1) Milk (1) | Buffs: 125 56",
+      "source": "This should keep your energy up.",
+      "notes": "Ingredients: Cave Carrot (2) Sugar (1) Milk (1) | Buffs: Mining (+3) Magnetism (+32)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Miner's_Treat.png"
     },
     {
@@ -4037,8 +3945,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Roots Platter",
       "category": "Cooking Recipe",
       "desc": "This'll get you digging for more.",
-      "source": "How to Learn: Attack (+3)",
-      "notes": "Ingredients: Cave Carrot (1) Winter Root (1) | Buffs: 125 56",
+      "source": "This'll get you digging for more.",
+      "notes": "Ingredients: Cave Carrot (1) Winter Root (1) | Buffs: Attack (+3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Roots_Platter.png"
     },
     {
@@ -4046,8 +3954,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Triple Shot Espresso",
       "category": "Cooking Recipe",
       "desc": "It's more potent than regular coffee!",
-      "source": "How to Learn: Speed (+1)",
-      "notes": "Ingredients: Coffee (3) | Buffs: 8 3",
+      "source": "It's more potent than regular coffee!",
+      "notes": "Ingredients: Coffee (3) | Buffs: Speed (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Triple_Shot_Espresso.png"
     },
     {
@@ -4055,8 +3963,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Seafoam Pudding",
       "category": "Cooking Recipe",
       "desc": "This briny pudding will really get you into the maritime mindset!",
-      "source": "How to Learn: Fishing (+4)",
-      "notes": "Ingredients: Flounder (1) Midnight Carp (1) Squid Ink (1) | Buffs: 175 78",
+      "source": "This briny pudding will really get you into the maritime mindset!",
+      "notes": "Ingredients: Flounder (1) Midnight Carp (1) Squid Ink (1) | Buffs: Fishing (+4)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Seafoam_Pudding.png"
     },
     {
@@ -4064,8 +3972,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Algae Soup",
       "category": "Cooking Recipe",
       "desc": "It's a little slimy.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Green Algae (4) | Buffs: 75 33",
+      "source": "It's a little slimy.",
+      "notes": "Ingredients: Green Algae (4)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Algae_Soup.png"
     },
     {
@@ -4073,125 +3981,125 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Pale Broth",
       "category": "Cooking Recipe",
       "desc": "A delicate broth with a hint of sulfur.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: White Algae (2) | Buffs: 125 56",
+      "source": "A delicate broth with a hint of sulfur.",
+      "notes": "Ingredients: White Algae (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pale_Broth.png"
     },
     {
       "id": "cook_plum_pudding",
       "name": "Plum Pudding",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "A traditional holiday treat.",
+      "source": "A traditional holiday treat.",
+      "notes": "Ingredients: Wild Plum (2) Wheat Flour (1) Sugar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Plum_Pudding.png"
     },
     {
       "id": "cook_artichoke_dip",
       "name": "Artichoke Dip",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "It's cool and refreshing.",
+      "source": "It's cool and refreshing.",
+      "notes": "Ingredients: Artichoke (1) Milk (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Artichoke_Dip.png"
     },
     {
       "id": "cook_stir_fry",
       "name": "Stir Fry",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Julienned vegetables on a bed of rice.",
+      "source": "Julienned vegetables on a bed of rice.",
+      "notes": "Ingredients: Cave Carrot (1) Common Mushroom (1) Kale (1) Oil (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stir_Fry.png"
     },
     {
       "id": "cook_roasted_hazelnuts",
       "name": "Roasted Hazelnuts",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "The roasting process creates a rich forest flavor.",
+      "source": "The roasting process creates a rich forest flavor.",
+      "notes": "Ingredients: Hazelnut (3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Roasted_Hazelnuts.png"
     },
     {
       "id": "cook_pumpkin_pie",
       "name": "Pumpkin Pie",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Silky pumpkin cream in a flaky crust.",
+      "source": "Silky pumpkin cream in a flaky crust.",
+      "notes": "Ingredients: Pumpkin (1) Wheat Flour (1) Milk (1) Sugar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Pie.png"
     },
     {
       "id": "cook_radish_salad",
       "name": "Radish Salad",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "The radishes are so crisp!",
+      "source": "The radishes are so crisp!",
+      "notes": "Ingredients: Oil (1) Vinegar (1) Radish (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Radish_Salad.png"
     },
     {
       "id": "cook_fruit_salad",
       "name": "Fruit Salad",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "A delicious combination of summer fruits.",
+      "source": "A delicious combination of summer fruits.",
+      "notes": "Ingredients: Blueberry (1) Melon (1) Apricot (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fruit_Salad.png"
     },
     {
       "id": "cook_blackberry_cobbler",
       "name": "Blackberry Cobbler",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "There's nothing quite like it.",
+      "source": "There's nothing quite like it.",
+      "notes": "Ingredients: Blackberry (2) Sugar (1) Wheat Flour (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Blackberry_Cobbler.png"
     },
     {
       "id": "cook_cranberry_candy",
       "name": "Cranberry Candy",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "It's sweet enough to mask the bitter fruit.",
+      "source": "It's sweet enough to mask the bitter fruit.",
+      "notes": "Ingredients: Cranberries (1) Apple (1) Sugar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Candy.png"
     },
     {
       "id": "cook_bruschetta",
       "name": "Bruschetta",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Roasted tomatoes on a crisp white bread.",
+      "source": "Roasted tomatoes on a crisp white bread.",
+      "notes": "Ingredients: Bread (1) Oil (1) Tomato (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bruschetta.png"
     },
     {
       "id": "cook_coleslaw",
       "name": "Coleslaw",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "It's light, fresh and very healthy.",
+      "source": "It's light, fresh and very healthy.",
+      "notes": "Ingredients: Red Cabbage (1) Vinegar (1) Mayonnaise (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Coleslaw.png"
     },
     {
       "id": "cook_fiddlehead_risotto",
       "name": "Fiddlehead Risotto",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
+      "source": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
+      "notes": "Ingredients: Oil (1) Fiddlehead Fern (1) Garlic (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fiddlehead_Risotto.png"
     },
     {
       "id": "cook_poppyseed_muffin",
       "name": "Poppyseed Muffin",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "It has a soothing effect.",
+      "source": "It has a soothing effect.",
+      "notes": "Ingredients: Poppy (1) Wheat Flour (1) Sugar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Poppyseed_Muffin.png"
     },
     {
@@ -4199,8 +4107,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Chowder",
       "category": "Cooking Recipe",
       "desc": "A perfect way to warm yourself after a cold night at sea.",
-      "source": "How to Learn: Fishing (+1)",
-      "notes": "Ingredients: Clam (1) Milk (1) | Buffs: 225 101",
+      "source": "A perfect way to warm yourself after a cold night at sea.",
+      "notes": "Ingredients: Clam (1) Milk (1) | Buffs: Fishing (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Chowder.png"
     },
     {
@@ -4208,8 +4116,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fish Stew",
       "category": "Cooking Recipe",
       "desc": "It smells a lot like the sea. Tastes better, though.",
-      "source": "How to Learn: Fishing (+3)",
-      "notes": "Ingredients: Crayfish (1) Mussel (1) Periwinkle (1) Tomato (1) | Buffs: 225 101",
+      "source": "It smells a lot like the sea. Tastes better, though.",
+      "notes": "Ingredients: Crayfish (1) Mussel (1) Periwinkle (1) Tomato (1) | Buffs: Fishing (+3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Stew.png"
     },
     {
@@ -4217,44 +4125,44 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Escargot",
       "category": "Cooking Recipe",
       "desc": "Butter-soaked snails cooked to perfection.",
-      "source": "How to Learn: Fishing (+2)",
-      "notes": "Ingredients: Snail (1) Garlic (1) | Buffs: 225 101",
+      "source": "Butter-soaked snails cooked to perfection.",
+      "notes": "Ingredients: Snail (1) Garlic (1) | Buffs: Fishing (+2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Escargot.png"
     },
     {
       "id": "cook_lobster_bisque",
       "name": "Lobster Bisque",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "This delicate soup is a secret family recipe of Willy's.",
+      "source": "This delicate soup is a secret family recipe of Willy's.",
+      "notes": "Ingredients: Lobster (1) Milk (1) | Buffs: Fishing (+3) Max Energy (+50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster_Bisque.png"
     },
     {
       "id": "cook_maple_bar",
       "name": "Maple Bar",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "It's a sweet doughnut topped with a rich maple glaze.",
+      "source": "It's a sweet doughnut topped with a rich maple glaze.",
+      "notes": "Ingredients: Maple Syrup (1) Sugar (1) Wheat Flour (1) | Buffs: Farming (+1) Fishing (+1) Mining (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Maple_Bar.png"
     },
     {
       "id": "cook_crab_cakes",
       "name": "Crab Cakes",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
+      "source": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
+      "notes": "Ingredients: Crab (1) Wheat Flour (1) Egg (1) Oil (1) | Buffs: Speed (+1) Defense (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Crab_Cakes.png"
     },
     {
       "id": "cook_shrimp_cocktail",
       "name": "Shrimp Cocktail",
       "category": "Cooking Recipe",
-      "desc": "",
-      "source": "How to Learn: Kitchen / Queen of Sauce",
-      "notes": "Ingredients: ",
+      "desc": "A sumptuous appetizer made with freshly-caught shrimp.",
+      "source": "A sumptuous appetizer made with freshly-caught shrimp.",
+      "notes": "Ingredients: Tomato (1) Shrimp (1) Wild Horseradish (1) | Buffs: Fishing (+1) Luck (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp_Cocktail.png"
     },
     {
@@ -4262,8 +4170,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Ginger Ale",
       "category": "Cooking Recipe",
       "desc": "A zesty soda known for its soothing effect on the stomach.",
-      "source": "How to Learn: Luck (+1)",
-      "notes": "Ingredients: Ginger (3) Sugar (1) | Buffs: 63 28",
+      "source": "A zesty soda known for its soothing effect on the stomach.",
+      "notes": "Ingredients: Ginger (3) Sugar (1) | Buffs: Luck (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Ginger_Ale.png"
     },
     {
@@ -4271,8 +4179,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Banana Pudding",
       "category": "Cooking Recipe",
       "desc": "A creamy dessert with a wonderful tropical flavor.",
-      "source": "How to Learn: Mining (+1) Luck (+1) Defense (+1)",
-      "notes": "Ingredients: Banana (1) Milk (1) Sugar (1) | Buffs: 125 56",
+      "source": "A creamy dessert with a wonderful tropical flavor.",
+      "notes": "Ingredients: Banana (1) Milk (1) Sugar (1) | Buffs: Mining (+1) Luck (+1) Defense (+1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Banana_Pudding.png"
     },
     {
@@ -4280,8 +4188,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Mango Sticky Rice",
       "category": "Cooking Recipe",
       "desc": "Sweet mango and coconut transforms this rice into something very special.",
-      "source": "How to Learn: Defense (+3)",
-      "notes": "Ingredients: Mango (1) Coconut (1) Rice (1) | Buffs: 113 50",
+      "source": "Sweet mango and coconut transforms this rice into something very special.",
+      "notes": "Ingredients: Mango (1) Coconut (1) Rice (1) | Buffs: Defense (+3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mango_Sticky_Rice.png"
     },
     {
@@ -4289,8 +4197,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Poi",
       "category": "Cooking Recipe",
       "desc": "A traditional food with a delicate, sweet flavor when eaten fresh.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Taro Root (4) | Buffs: 75 33",
+      "source": "A traditional food with a delicate, sweet flavor when eaten fresh.",
+      "notes": "Ingredients: Taro Root (4)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Poi.png"
     },
     {
@@ -4298,8 +4206,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Tropical Curry",
       "category": "Cooking Recipe",
       "desc": "An exotic, fragrant curry served in a pineapple bowl.",
-      "source": "How to Learn: Foraging (+4)",
-      "notes": "Ingredients: Coconut (1) Pineapple (1) Hot Pepper (1) | Buffs: 150 67",
+      "source": "An exotic, fragrant curry served in a pineapple bowl.",
+      "notes": "Ingredients: Coconut (1) Pineapple (1) Hot Pepper (1) | Buffs: Foraging (+4)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tropical_Curry.png"
     },
     {
@@ -4307,8 +4215,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Squid Ink Ravioli",
       "category": "Cooking Recipe",
       "desc": "Temporarily protects from debuffs.",
-      "source": "How to Learn: Mining (+1) Squid Ink Ravioli Buff",
-      "notes": "Ingredients: Squid Ink (1) Wheat Flour (1) Tomato (1) | Buffs: 125 56",
+      "source": "Temporarily protects from debuffs.",
+      "notes": "Ingredients: Squid Ink (1) Wheat Flour (1) Tomato (1) | Buffs: Mining (+1) Squid Ink Ravioli Buff",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Squid_Ink_Ravioli.png"
     },
     {
@@ -4316,8 +4224,8 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Moss Soup",
       "category": "Cooking Recipe",
       "desc": "It's thick and slimy, but edible.",
-      "source": "How to Learn: N/A",
-      "notes": "Ingredients: Moss (20) | Buffs: 70 31",
+      "source": "It's thick and slimy, but edible.",
+      "notes": "Ingredients: Moss (20)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Moss_Soup.png"
     }
   ],
