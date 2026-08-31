@@ -1499,6 +1499,7 @@ if (btnResetTracker) {
   btnResetTracker.addEventListener('click', () => {
     const sheetTitles = {
       'shipped': 'Produce & Forage Shipped',
+      'crafting': 'Crafting Recipes',
       'cooking': 'Cooking Recipes',
       'fish': 'Fish Caught',
       'museum': 'Museum Donations',
@@ -1559,6 +1560,15 @@ function renderTrackerSubfilters() {
       { key: 'tree', label: '🍎 Trees & Island' },
       { key: 'animal', label: '🧀 Animal & Artisan' },
       { key: 'resource', label: '⛏️ Ores & Resources' }
+    );
+  } else if (activeTrackerSheet === 'crafting') {
+    filters.push(
+      { key: 'bombs', label: '💣 Bombs & Combat' },
+      { key: 'fences', label: '🪵 Fences & Paths' },
+      { key: 'farming', label: '🌾 Sprinklers & Farming' },
+      { key: 'artisan', label: '⚙️ Artisan Equipment' },
+      { key: 'lighting', label: '🏮 Lighting & Torches' },
+      { key: 'rings', label: '💍 Rings & Totems' }
     );
   } else if (activeTrackerSheet === 'cooking') {
     filters.push(
@@ -1629,6 +1639,10 @@ function renderTrackerSheet() {
       title: '📦 Produce & Forage Shipped',
       desc: 'Ship one of every farm crop, forage, animal product, artisan good, and resource for the Full Shipment milestone.'
     },
+    'crafting': {
+      title: '🔨 Craft Master (Crafting Recipes)',
+      desc: 'Craft every single item in the crafting menu for the Craft Master achievement and Perfection milestone.'
+    },
     'cooking': {
       title: '🍳 Gourmet Chef (Cooking Recipes)',
       desc: 'Cook every single recipe in the kitchen for the Gourmet Chef achievement and Perfection milestone.'
@@ -1696,7 +1710,17 @@ function renderTrackerGridOnly() {
         if (currentTrackerFilter === 'tree' && !c.includes('tree') && !c.includes('island') && !c.includes('special')) return false;
         if (currentTrackerFilter === 'animal' && !c.includes('animal') && !c.includes('artisan') && !c.includes('fish pond')) return false;
         if (currentTrackerFilter === 'resource' && !c.includes('resource') && !c.includes('ore') && !c.includes('bar') && !c.includes('tapper') && !c.includes('monster')) return false;
+      } else if (activeTrackerSheet === 'crafting') {
+        const n = (item.name || '').toLowerCase();
+        const notes = (item.notes || '').toLowerCase();
+        if (currentTrackerFilter === 'bombs' && !n.includes('bomb') && !n.includes('explosive') && !n.includes('bait') && !n.includes('arrow')) return false;
+        if (currentTrackerFilter === 'fences' && !n.includes('fence') && !n.includes('gate') && !n.includes('floor') && !n.includes('path') && !n.includes('cobblestone') && !n.includes('stepping')) return false;
+        if (currentTrackerFilter === 'farming' && !n.includes('sprinkler') && !n.includes('fertilizer') && !n.includes('scarecrow') && !n.includes('soil') && !n.includes('speed-gro') && !n.includes('totem') && !n.includes('hydrator')) return false;
+        if (currentTrackerFilter === 'artisan' && !n.includes('press') && !n.includes('maker') && !n.includes('keg') && !n.includes('jar') && !n.includes('furnace') && !n.includes('cask') && !n.includes('smoker') && !n.includes('dehydrator') && !n.includes('loom') && !n.includes('kiln') && !n.includes('tapper') && !n.includes('mill') && !n.includes('incubator') && !n.includes('rod') && !n.includes('crystalarium')) return false;
+        if (currentTrackerFilter === 'lighting' && !n.includes('torch') && !n.includes('brazier') && !n.includes('lamp') && !n.includes('candle') && !n.includes('light')) return false;
+        if (currentTrackerFilter === 'rings' && !n.includes('ring') && !n.includes('band') && !n.includes('totem') && !n.includes('elixir') && !n.includes('warp')) return false;
       } else if (activeTrackerSheet === 'cooking') {
+
         const n = (item.name || '').toLowerCase();
         const notes = (item.notes || '').toLowerCase();
         if (currentTrackerFilter === 'buff' && !notes.includes('buffs:')) return false;

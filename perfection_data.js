@@ -4950,5 +4950,1357 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All | Weather: Any",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Goby.png"
     }
+  ],
+  "crafting": [
+    {
+      "id": "craft_cherry_bomb",
+      "name": "Cherry Bomb",
+      "category": "Crafting Recipe",
+      "desc": "Generates a small explosion. Stand back!",
+      "source": "Generates a small explosion. Stand back!",
+      "notes": "Ingredients: Copper Ore (4) Coal (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cherry_Bomb.png"
+    },
+    {
+      "id": "craft_bomb",
+      "name": "Bomb",
+      "category": "Crafting Recipe",
+      "desc": "Generates an explosion. Watch out!",
+      "source": "Generates an explosion. Watch out!",
+      "notes": "Ingredients: Iron Ore (4) Coal (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bomb.png"
+    },
+    {
+      "id": "craft_mega_bomb",
+      "name": "Mega Bomb",
+      "category": "Crafting Recipe",
+      "desc": "Generates a powerful explosion. Use with extreme caution.",
+      "source": "Generates a powerful explosion. Use with extreme caution.",
+      "notes": "Ingredients: Gold Ore (4) Solar Essence (1) Void Essence (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mega_Bomb.png"
+    },
+    {
+      "id": "craft_gate",
+      "name": "Gate",
+      "category": "Crafting Recipe",
+      "desc": "Allows you to pass through a fence.",
+      "source": "Allows you to pass through a fence.",
+      "notes": "Ingredients: Wood (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Gate.png"
+    },
+    {
+      "id": "craft_wood_fence",
+      "name": "Wood Fence",
+      "category": "Crafting Recipe",
+      "desc": "Keeps grass and animals contained!",
+      "source": "Keeps grass and animals contained!",
+      "notes": "Ingredients: Wood (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Fence.png"
+    },
+    {
+      "id": "craft_stone_fence",
+      "name": "Stone Fence",
+      "category": "Crafting Recipe",
+      "desc": "Lasts longer than a wood fence.",
+      "source": "Lasts longer than a wood fence.",
+      "notes": "Ingredients: Stone (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Fence.png"
+    },
+    {
+      "id": "craft_iron_fence",
+      "name": "Iron Fence",
+      "category": "Crafting Recipe",
+      "desc": "Lasts longer than a stone fence.",
+      "source": "Lasts longer than a stone fence.",
+      "notes": "Ingredients: Iron Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Iron_Fence.png"
+    },
+    {
+      "id": "craft_hardwood_fence",
+      "name": "Hardwood Fence",
+      "category": "Crafting Recipe",
+      "desc": "The most durable type of fence.",
+      "source": "The most durable type of fence.",
+      "notes": "Ingredients: Hardwood (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Hardwood_Fence.png"
+    },
+    {
+      "id": "craft_sprinkler",
+      "name": "Sprinkler",
+      "category": "Crafting Recipe",
+      "desc": "Waters the 4 adjacent tiles every morning.",
+      "source": "Waters the 4 adjacent tiles every morning.",
+      "notes": "Ingredients: Copper Bar (1) Iron Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sprinkler.png"
+    },
+    {
+      "id": "craft_quality_sprinkler",
+      "name": "Quality Sprinkler",
+      "category": "Crafting Recipe",
+      "desc": "Waters the 8 adjacent tiles every morning.",
+      "source": "Waters the 8 adjacent tiles every morning.",
+      "notes": "Ingredients: Iron Bar (1) Gold Bar (1) Refined Quartz (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Quality_Sprinkler.png"
+    },
+    {
+      "id": "craft_iridium_sprinkler",
+      "name": "Iridium Sprinkler",
+      "category": "Crafting Recipe",
+      "desc": "Waters the 24 adjacent tiles every morning.",
+      "source": "Waters the 24 adjacent tiles every morning.",
+      "notes": "Ingredients: Gold Bar (1) Iridium Bar (1) Battery Pack (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Iridium_Sprinkler.png"
+    },
+    {
+      "id": "craft_mayonnaise_machine",
+      "name": "Mayonnaise Machine",
+      "category": "Crafting Recipe",
+      "desc": "Turns eggs into mayonnaise.",
+      "source": "Turns eggs into mayonnaise.",
+      "notes": "Ingredients: Wood (15) Stone (15) Earth Crystal (1) Copper Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mayonnaise_Machine.png"
+    },
+    {
+      "id": "craft_bee_house",
+      "name": "Bee House",
+      "category": "Crafting Recipe",
+      "desc": "Place outside and wait for delicious honey! (Except in Winter).",
+      "source": "Place outside and wait for delicious honey! (Except in Winter).",
+      "notes": "Ingredients: Wood (40) Coal (8) Iron Bar (1) Maple Syrup (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bee_House.png"
+    },
+    {
+      "id": "craft_preserves_jar",
+      "name": "Preserves Jar",
+      "category": "Crafting Recipe",
+      "desc": "Turns vegetables into pickles and fruit into jam.",
+      "source": "Turns vegetables into pickles and fruit into jam.",
+      "notes": "Ingredients: Wood (50) Stone (40) Coal (8)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Preserves_Jar.png"
+    },
+    {
+      "id": "craft_cheese_press",
+      "name": "Cheese Press",
+      "category": "Crafting Recipe",
+      "desc": "Turns milk into cheese.",
+      "source": "Turns milk into cheese.",
+      "notes": "Ingredients: Wood (45) Stone (45) Hardwood (10) Copper Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cheese_Press.png"
+    },
+    {
+      "id": "craft_loom",
+      "name": "Loom",
+      "category": "Crafting Recipe",
+      "desc": "Turns raw wool into fine cloth.",
+      "source": "Turns raw wool into fine cloth.",
+      "notes": "Ingredients: Wood (60) Fiber (30) Pine Tar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Loom.png"
+    },
+    {
+      "id": "craft_keg",
+      "name": "Keg",
+      "category": "Crafting Recipe",
+      "desc": "Place a fruit or vegetable in here. Eventually it will turn into a beverage.",
+      "source": "Place a fruit or vegetable in here. Eventually it will turn into a beverage.",
+      "notes": "Ingredients: Wood (30) Copper Bar (1) Iron Bar (1) Oak Resin (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Keg.png"
+    },
+    {
+      "id": "craft_oil_maker",
+      "name": "Oil Maker",
+      "category": "Crafting Recipe",
+      "desc": "Makes gourmet truffle oil.",
+      "source": "Makes gourmet truffle oil.",
+      "notes": "Ingredients: Slime (50) Hardwood (20) Gold Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Oil_Maker.png"
+    },
+    {
+      "id": "craft_cask",
+      "name": "Cask",
+      "category": "Crafting Recipe",
+      "desc": "Use in the cellar to age products like wine and cheese.",
+      "source": "Use in the cellar to age products like wine and cheese.",
+      "notes": "Ingredients: Wood (20) Hardwood (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cask.png"
+    },
+    {
+      "id": "craft_fish_smoker",
+      "name": "Fish Smoker",
+      "category": "Crafting Recipe",
+      "desc": "Place fish inside with a piece of coal to create smoked fish, which is worth double. The quality of the fish is preserved.",
+      "source": "Place fish inside with a piece of coal to create smoked fish, which is worth double. The quality of the fish is preserved.",
+      "notes": "Ingredients: Hardwood (10) Sea Jelly (1) River Jelly (1) Cave Jelly (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Smoker.png"
+    },
+    {
+      "id": "craft_dehydrator",
+      "name": "Dehydrator",
+      "category": "Crafting Recipe",
+      "desc": "Place 5 pieces of fruit or edible mushrooms inside to dry them.",
+      "source": "Place 5 pieces of fruit or edible mushrooms inside to dry them.",
+      "notes": "Ingredients: Wood (30) Clay (2) Fire Quartz (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Dehydrator.png"
+    },
+    {
+      "id": "craft_basic_fertilizer",
+      "name": "Basic Fertilizer",
+      "category": "Crafting Recipe",
+      "desc": "Improves soil quality a little, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "source": "Improves soil quality a little, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "notes": "Ingredients: Sap (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Basic_Fertilizer.png"
+    },
+    {
+      "id": "craft_quality_fertilizer",
+      "name": "Quality Fertilizer",
+      "category": "Crafting Recipe",
+      "desc": "Improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "source": "Improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "notes": "Ingredients: Sap (4) Any Fish (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Quality_Fertilizer.png"
+    },
+    {
+      "id": "craft_deluxe_fertilizer",
+      "name": "Deluxe Fertilizer",
+      "category": "Crafting Recipe",
+      "desc": "Greatly improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "source": "Greatly improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "notes": "Ingredients: Iridium Bar (1) Sap (40)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Fertilizer.png"
+    },
+    {
+      "id": "craft_speed-gro",
+      "name": "Speed-Gro",
+      "category": "Crafting Recipe",
+      "desc": "Stimulates leaf production. Guaranteed to increase growth rate by at least 10%. Mix into tilled soil.",
+      "source": "Stimulates leaf production. Guaranteed to increase growth rate by at least 10%. Mix into tilled soil.",
+      "notes": "Ingredients: Pine Tar (1) Moss (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Speed-Gro.png"
+    },
+    {
+      "id": "craft_deluxe_speed-gro",
+      "name": "Deluxe Speed-Gro",
+      "category": "Crafting Recipe",
+      "desc": "Stimulates leaf production. Guaranteed to increase growth rate by at least 25%. Mix into tilled soil.",
+      "source": "Stimulates leaf production. Guaranteed to increase growth rate by at least 25%. Mix into tilled soil.",
+      "notes": "Ingredients: Oak Resin (1) Bone Fragment (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Speed-Gro.png"
+    },
+    {
+      "id": "craft_hyper_speed-gro",
+      "name": "Hyper Speed-Gro",
+      "category": "Crafting Recipe",
+      "desc": "Greatly stimulates leaf production. Guaranteed to increase growth rate by at least 33%. Mix into tilled soil.",
+      "source": "Greatly stimulates leaf production. Guaranteed to increase growth rate by at least 33%. Mix into tilled soil.",
+      "notes": "Ingredients: Radioactive Ore (1) Bone Fragment (3) Solar Essence (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Hyper_Speed-Gro.png"
+    },
+    {
+      "id": "craft_basic_retaining_soil",
+      "name": "Basic Retaining Soil",
+      "category": "Crafting Recipe",
+      "desc": "This soil has a chance of staying watered overnight. Mix into tilled soil.",
+      "source": "This soil has a chance of staying watered overnight. Mix into tilled soil.",
+      "notes": "Ingredients: Stone (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Basic_Retaining_Soil.png"
+    },
+    {
+      "id": "craft_quality_retaining_soil",
+      "name": "Quality Retaining Soil",
+      "category": "Crafting Recipe",
+      "desc": "This soil has a good chance of staying watered overnight. Mix into tilled soil.",
+      "source": "This soil has a good chance of staying watered overnight. Mix into tilled soil.",
+      "notes": "Ingredients: Stone (3) Clay (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Quality_Retaining_Soil.png"
+    },
+    {
+      "id": "craft_deluxe_retaining_soil",
+      "name": "Deluxe Retaining Soil",
+      "category": "Crafting Recipe",
+      "desc": "This soil has a 100% chance of staying watered overnight. Mix into tilled soil.",
+      "source": "This soil has a 100% chance of staying watered overnight. Mix into tilled soil.",
+      "notes": "Ingredients: Stone (5) Fiber (3) Clay (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Retaining_Soil.png"
+    },
+    {
+      "id": "craft_tree_fertilizer",
+      "name": "Tree Fertilizer",
+      "category": "Crafting Recipe",
+      "desc": "Sprinkle on a wild tree to ensure rapid growth, even in winter. Doesn't work on fruit trees.",
+      "source": "Sprinkle on a wild tree to ensure rapid growth, even in winter. Doesn't work on fruit trees.",
+      "notes": "Ingredients: Fiber (5) Stone (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tree_Fertilizer.png"
+    },
+    {
+      "id": "craft_wild_seeds_(sp)(spring_seeds)",
+      "name": "Wild Seeds (Sp)(Spring Seeds)",
+      "category": "Crafting Recipe",
+      "desc": "An assortment of wild spring seeds. (Note: The crafted item is called \"Spring Seeds.\" The recipe produces 10 seeds per craft.)",
+      "source": "An assortment of wild spring seeds. (Note: The crafted item is called \"Spring Seeds.\" The recipe produces 10 seeds per craft.)",
+      "notes": "Ingredients: Wild Horseradish (1) Daffodil (1) Leek (1) Dandelion (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Seeds_(Sp)(Spring_Seeds).png"
+    },
+    {
+      "id": "craft_wild_seeds_(su)(summer_seeds)",
+      "name": "Wild Seeds (Su)(Summer Seeds)",
+      "category": "Crafting Recipe",
+      "desc": "An assortment of wild summer seeds. (Note: The crafted item is called \"Summer Seeds.\" The recipe produces 10 seeds per craft.)",
+      "source": "An assortment of wild summer seeds. (Note: The crafted item is called \"Summer Seeds.\" The recipe produces 10 seeds per craft.)",
+      "notes": "Ingredients: Spice Berry (1) Grape (1) Sweet Pea (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Seeds_(Su)(Summer_Seeds).png"
+    },
+    {
+      "id": "craft_wild_seeds_(fa)(fall_seeds)",
+      "name": "Wild Seeds (Fa)(Fall Seeds)",
+      "category": "Crafting Recipe",
+      "desc": "An assortment of wild fall seeds. (Note: The crafted item is called \"Fall Seeds.\" The recipe produces 10 seeds per craft.)",
+      "source": "An assortment of wild fall seeds. (Note: The crafted item is called \"Fall Seeds.\" The recipe produces 10 seeds per craft.)",
+      "notes": "Ingredients: Common Mushroom (1) Wild Plum (1) Hazelnut (1) Blackberry (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Seeds_(Fa)(Fall_Seeds).png"
+    },
+    {
+      "id": "craft_wild_seeds_(wi)(winter_seeds)",
+      "name": "Wild Seeds (Wi)(Winter Seeds)",
+      "category": "Crafting Recipe",
+      "desc": "An assortment of wild winter seeds. (Note: The crafted item is called \"Winter Seeds.\" The recipe produces 10 seeds per craft.)",
+      "source": "An assortment of wild winter seeds. (Note: The crafted item is called \"Winter Seeds.\" The recipe produces 10 seeds per craft.)",
+      "notes": "Ingredients: Winter Root (1) Crystal Fruit (1) Snow Yam (1) Crocus (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Seeds_(Wi)(Winter_Seeds).png"
+    },
+    {
+      "id": "craft_ancient_seeds",
+      "name": "Ancient Seeds",
+      "category": "Crafting Recipe",
+      "desc": "Could these still grow?",
+      "source": "Could these still grow?",
+      "notes": "Ingredients: Ancient Seed (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ancient_Seeds.png"
+    },
+    {
+      "id": "craft_grass_starter",
+      "name": "Grass Starter",
+      "category": "Crafting Recipe",
+      "desc": "Place this on your farm to start a new patch of grass.",
+      "source": "Place this on your farm to start a new patch of grass.",
+      "notes": "Ingredients: Fiber (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Grass_Starter.png"
+    },
+    {
+      "id": "craft_blue_grass_starter",
+      "name": "Blue Grass Starter",
+      "category": "Crafting Recipe",
+      "desc": "Place this on your farm to plant a clump of blue grass.",
+      "source": "Place this on your farm to plant a clump of blue grass.",
+      "notes": "Ingredients: Fiber (25) Moss (10) Mystic Syrup (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blue_Grass_Starter.png"
+    },
+    {
+      "id": "craft_tea_sapling",
+      "name": "Tea Sapling",
+      "category": "Crafting Recipe",
+      "desc": "Takes 20 days to mature. Produces tea leaves during the final week of each season, except winter. No watering necessary!",
+      "source": "Takes 20 days to mature. Produces tea leaves during the final week of each season, except winter. No watering necessary!",
+      "notes": "Ingredients: Wild Seeds (Any) (2) Fiber (5) Wood (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tea_Sapling.png"
+    },
+    {
+      "id": "craft_fiber_seeds",
+      "name": "Fiber Seeds",
+      "category": "Crafting Recipe",
+      "desc": "Plant these in any season. Does not require watering. Harvest with the scythe. Takes 7 days to grow.",
+      "source": "Plant these in any season. Does not require watering. Harvest with the scythe. Takes 7 days to grow.",
+      "notes": "Ingredients: Mixed Seeds (1) Sap (5) Clay (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fiber_Seeds.png"
+    },
+    {
+      "id": "craft_mystic_tree_seed",
+      "name": "Mystic Tree Seed",
+      "category": "Crafting Recipe",
+      "desc": "This can be planted to grow a special tree.",
+      "source": "This can be planted to grow a special tree.",
+      "notes": "Ingredients: Acorn (5) Maple Seed (5) Pine Cone (5) Mahogany Seed (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mystic_Tree_Seed.png"
+    },
+    {
+      "id": "craft_wood_floor",
+      "name": "Wood Floor",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to decorate your floors.",
+      "source": "Place on the ground to create paths or to decorate your floors.",
+      "notes": "Ingredients: Wood (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Floor.png"
+    },
+    {
+      "id": "craft_rustic_plank_floor",
+      "name": "Rustic Plank Floor",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to decorate your floors.",
+      "source": "Place on the ground to create paths or to decorate your floors.",
+      "notes": "Ingredients: Wood (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rustic_Plank_Floor.png"
+    },
+    {
+      "id": "craft_straw_floor",
+      "name": "Straw Floor",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Wood (1) Fiber (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Straw_Floor.png"
+    },
+    {
+      "id": "craft_weathered_floor",
+      "name": "Weathered Floor",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Wood (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Weathered_Floor.png"
+    },
+    {
+      "id": "craft_crystal_floor",
+      "name": "Crystal Floor",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Refined Quartz (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crystal_Floor.png"
+    },
+    {
+      "id": "craft_stone_floor",
+      "name": "Stone Floor",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Stone (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Floor.png"
+    },
+    {
+      "id": "craft_stone_walkway_floor",
+      "name": "Stone Walkway Floor",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to decorate your floors.",
+      "source": "Place on the ground to create paths or to decorate your floors.",
+      "notes": "Ingredients: Stone (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Walkway_Floor.png"
+    },
+    {
+      "id": "craft_brick_floor",
+      "name": "Brick Floor",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to decorate your floors.",
+      "source": "Place on the ground to create paths or to decorate your floors.",
+      "notes": "Ingredients: Clay (2) Stone (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Brick_Floor.png"
+    },
+    {
+      "id": "craft_wood_path",
+      "name": "Wood Path",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Wood (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Path.png"
+    },
+    {
+      "id": "craft_gravel_path",
+      "name": "Gravel Path",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Stone (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Gravel_Path.png"
+    },
+    {
+      "id": "craft_cobblestone_path",
+      "name": "Cobblestone Path",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Stone (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cobblestone_Path.png"
+    },
+    {
+      "id": "craft_stepping_stone_path",
+      "name": "Stepping Stone Path",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Stone (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stepping_Stone_Path.png"
+    },
+    {
+      "id": "craft_crystal_path",
+      "name": "Crystal Path",
+      "category": "Crafting Recipe",
+      "desc": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "notes": "Ingredients: Refined Quartz (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crystal_Path.png"
+    },
+    {
+      "id": "craft_spinner",
+      "name": "Spinner",
+      "category": "Crafting Recipe",
+      "desc": "The shape makes it spin around in the water. Slightly increases the bite-rate when fishing.",
+      "source": "The shape makes it spin around in the water. Slightly increases the bite-rate when fishing.",
+      "notes": "Ingredients: Iron Bar (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Spinner.png"
+    },
+    {
+      "id": "craft_trap_bobber",
+      "name": "Trap Bobber",
+      "category": "Crafting Recipe",
+      "desc": "Causes fish to escape slower when you aren't reeling them in.",
+      "source": "Causes fish to escape slower when you aren't reeling them in.",
+      "notes": "Ingredients: Copper Bar (1) Sap (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Trap_Bobber.png"
+    },
+    {
+      "id": "craft_sonar_bobber",
+      "name": "Sonar Bobber",
+      "category": "Crafting Recipe",
+      "desc": "Shows what fish is on the line before it's caught.",
+      "source": "Shows what fish is on the line before it's caught.",
+      "notes": "Ingredients: Iron Bar (1) Refined Quartz (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sonar_Bobber.png"
+    },
+    {
+      "id": "craft_cork_bobber",
+      "name": "Cork Bobber",
+      "category": "Crafting Recipe",
+      "desc": "Slightly increases the size of your \"fishing bar\".",
+      "source": "Slightly increases the size of your \"fishing bar\".",
+      "notes": "Ingredients: Wood (10) Hardwood (5) Slime (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cork_Bobber.png"
+    },
+    {
+      "id": "craft_quality_bobber",
+      "name": "Quality Bobber",
+      "category": "Crafting Recipe",
+      "desc": "Boosts the quality of fish that you catch.",
+      "source": "Boosts the quality of fish that you catch.",
+      "notes": "Ingredients: Copper Bar (1) Sap (20) Solar Essence (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Quality_Bobber.png"
+    },
+    {
+      "id": "craft_treasure_hunter",
+      "name": "Treasure Hunter",
+      "category": "Crafting Recipe",
+      "desc": "Fish don't escape while collecting treasures. Also slightly increases the chance to find treasures.",
+      "source": "Fish don't escape while collecting treasures. Also slightly increases the chance to find treasures.",
+      "notes": "Ingredients: Gold Bar (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Treasure_Hunter.png"
+    },
+    {
+      "id": "craft_dressed_spinner",
+      "name": "Dressed Spinner",
+      "category": "Crafting Recipe",
+      "desc": "The metal tab and colorful streamers create an enticing spectacle for fish. Increases the bite-rate when fishing.",
+      "source": "The metal tab and colorful streamers create an enticing spectacle for fish. Increases the bite-rate when fishing.",
+      "notes": "Ingredients: Iron Bar (2) Cloth (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Dressed_Spinner.png"
+    },
+    {
+      "id": "craft_barbed_hook",
+      "name": "Barbed Hook",
+      "category": "Crafting Recipe",
+      "desc": "Makes your catch more secure, causing the \"fishing bar\" to cling to your catch. Works best on slow, weak fish.",
+      "source": "Makes your catch more secure, causing the \"fishing bar\" to cling to your catch. Works best on slow, weak fish.",
+      "notes": "Ingredients: Copper Bar (1) Iron Bar (1) Gold Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Barbed_Hook.png"
+    },
+    {
+      "id": "craft_magnet",
+      "name": "Magnet",
+      "category": "Crafting Recipe",
+      "desc": "Increases the chance of finding treasures when fishing. However, fish aren't crazy about the taste.",
+      "source": "Increases the chance of finding treasures when fishing. However, fish aren't crazy about the taste.",
+      "notes": "Ingredients: Iron Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Magnet.png"
+    },
+    {
+      "id": "craft_bait",
+      "name": "Bait",
+      "category": "Crafting Recipe",
+      "desc": "Causes fish to bite faster. Must first be attached to a fishing rod.",
+      "source": "Causes fish to bite faster. Must first be attached to a fishing rod.",
+      "notes": "Ingredients: Bug Meat (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bait.png"
+    },
+    {
+      "id": "craft_deluxe_bait",
+      "name": "Deluxe Bait",
+      "category": "Crafting Recipe",
+      "desc": "Causes fish to bite even faster and increases size of the \"fishing bar\".",
+      "source": "Causes fish to bite even faster and increases size of the \"fishing bar\".",
+      "notes": "Ingredients: Bait (5) Moss (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Bait.png"
+    },
+    {
+      "id": "craft_wild_bait",
+      "name": "Wild Bait",
+      "category": "Crafting Recipe",
+      "desc": "A unique recipe from Linus that gives you a chance to catch two fish at once.",
+      "source": "A unique recipe from Linus that gives you a chance to catch two fish at once.",
+      "notes": "Ingredients: Fiber (10) Bug Meat (5) Slime (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Bait.png"
+    },
+    {
+      "id": "craft_magic_bait",
+      "name": "Magic Bait",
+      "category": "Crafting Recipe",
+      "desc": "Allows you to catch fish from any season, time, or weather, from whichever type of water you cast into.",
+      "source": "Allows you to catch fish from any season, time, or weather, from whichever type of water you cast into.",
+      "notes": "Ingredients: Radioactive Ore (1) Bug Meat (3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Magic_Bait.png"
+    },
+    {
+      "id": "craft_challenge_bait",
+      "name": "Challenge Bait",
+      "category": "Crafting Recipe",
+      "desc": "A \"perfect\" catch yields triple the fish. However, each time a fish escapes the \"fishing bar\", the catch is reduced.",
+      "source": "A \"perfect\" catch yields triple the fish. However, each time a fish escapes the \"fishing bar\", the catch is reduced.",
+      "notes": "Ingredients: Bone Fragment (5) Moss (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Challenge_Bait.png"
+    },
+    {
+      "id": "craft_crab_pot",
+      "name": "Crab Pot",
+      "category": "Crafting Recipe",
+      "desc": "Place it in the water, load it with bait, and check the next day to see if you've caught anything. Works in streams, lakes, and the ocean.",
+      "source": "Place it in the water, load it with bait, and check the next day to see if you've caught anything. Works in streams, lakes, and the ocean.",
+      "notes": "Ingredients: Wood (40) Iron Bar (3) With Trapper profession: Wood (25) Copper Bar (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crab_Pot.png"
+    },
+    {
+      "id": "craft_sturdy_ring",
+      "name": "Sturdy Ring",
+      "category": "Crafting Recipe",
+      "desc": "Cuts the duration of negative status effects in half.",
+      "source": "Cuts the duration of negative status effects in half.",
+      "notes": "Ingredients: Copper Bar (2) Bug Meat (25) Slime (25)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sturdy_Ring.png"
+    },
+    {
+      "id": "craft_warrior_ring",
+      "name": "Warrior Ring",
+      "category": "Crafting Recipe",
+      "desc": "Occasionally infuses the wearer with \"warrior energy\" after slaying a monster.",
+      "source": "Occasionally infuses the wearer with \"warrior energy\" after slaying a monster.",
+      "notes": "Ingredients: Iron Bar (10) Coal (25) Frozen Tear (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Warrior_Ring.png"
+    },
+    {
+      "id": "craft_ring_of_yoba",
+      "name": "Ring of Yoba",
+      "category": "Crafting Recipe",
+      "desc": "Occasionally shields the wearer from damage.",
+      "source": "Occasionally shields the wearer from damage.",
+      "notes": "Ingredients: Gold Bar (5) Iron Bar (5) Diamond (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ring_of_Yoba.png"
+    },
+    {
+      "id": "craft_thorns_ring",
+      "name": "Thorns Ring",
+      "category": "Crafting Recipe",
+      "desc": "When enemies damage you, they will take damage themselves.",
+      "source": "When enemies damage you, they will take damage themselves.",
+      "notes": "Ingredients: Bone Fragment (50) Stone (50) Gold Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Thorns_Ring.png"
+    },
+    {
+      "id": "craft_glowstone_ring",
+      "name": "Glowstone Ring",
+      "category": "Crafting Recipe",
+      "desc": "Emits a constant light, and also increases your radius for collecting items.",
+      "source": "Emits a constant light, and also increases your radius for collecting items.",
+      "notes": "Ingredients: Solar Essence (5) Iron Bar (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Glowstone_Ring.png"
+    },
+    {
+      "id": "craft_iridium_band",
+      "name": "Iridium Band",
+      "category": "Crafting Recipe",
+      "desc": "Glows, attracts items, and increases attack damage by 10%.",
+      "source": "Glows, attracts items, and increases attack damage by 10%.",
+      "notes": "Ingredients: Iridium Bar (5) Solar Essence (50) Void Essence (50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Iridium_Band.png"
+    },
+    {
+      "id": "craft_wedding_ring",
+      "name": "Wedding Ring",
+      "category": "Crafting Recipe",
+      "desc": "An old Zuzu City tradition... It's used to ask for another farmer's hand in marriage.Note: This recipe is available only in Multiplayer.",
+      "source": "An old Zuzu City tradition... It's used to ask for another farmer's hand in marriage.Note: This recipe is available only in Multiplayer.",
+      "notes": "Ingredients: Iridium Bar (5) Prismatic Shard (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wedding_Ring.png"
+    },
+    {
+      "id": "craft_field_snack",
+      "name": "Field Snack",
+      "category": "Crafting Recipe",
+      "desc": "A quick snack to fuel the hungry forager.",
+      "source": "A quick snack to fuel the hungry forager.",
+      "notes": "Ingredients: Acorn (1) Maple Seed (1) Pine Cone (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Field_Snack.png"
+    },
+    {
+      "id": "craft_bug_steak",
+      "name": "Bug Steak",
+      "category": "Crafting Recipe",
+      "desc": "The last resort of the hungry cave diver.",
+      "source": "The last resort of the hungry cave diver.",
+      "notes": "Ingredients: Bug Meat (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bug_Steak.png"
+    },
+    {
+      "id": "craft_life_elixir",
+      "name": "Life Elixir",
+      "category": "Crafting Recipe",
+      "desc": "Restores health to full.",
+      "source": "Restores health to full.",
+      "notes": "Ingredients: Red Mushroom (1) Purple Mushroom (1) Morel (1) Chanterelle (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Life_Elixir.png"
+    },
+    {
+      "id": "craft_oil_of_garlic",
+      "name": "Oil of Garlic",
+      "category": "Crafting Recipe",
+      "desc": "Drink this and weaker monsters will avoid you.",
+      "source": "Drink this and weaker monsters will avoid you.",
+      "notes": "Ingredients: Garlic (10) Oil (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Oil_of_Garlic.png"
+    },
+    {
+      "id": "craft_monster_musk",
+      "name": "Monster Musk",
+      "category": "Crafting Recipe",
+      "desc": "Spray this on to draw more monsters out of hiding.",
+      "source": "Spray this on to draw more monsters out of hiding.",
+      "notes": "Ingredients: Bat Wing (30) Slime (30)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Monster_Musk.png"
+    },
+    {
+      "id": "craft_fairy_dust",
+      "name": "Fairy Dust",
+      "category": "Crafting Recipe",
+      "desc": "Sprinkle on kegs, furnaces, and other refining equipment to instantly receive their product.",
+      "source": "Sprinkle on kegs, furnaces, and other refining equipment to instantly receive their product.",
+      "notes": "Ingredients: Diamond (1) Fairy Rose (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fairy_Dust.png"
+    },
+    {
+      "id": "craft_warp_totem:_beach",
+      "name": "Warp Totem: Beach",
+      "category": "Crafting Recipe",
+      "desc": "Warp directly to the beach. Consumed on use.",
+      "source": "Warp directly to the beach. Consumed on use.",
+      "notes": "Ingredients: Hardwood (1) Coral (2) Fiber (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Beach.png"
+    },
+    {
+      "id": "craft_warp_totem:_mountains",
+      "name": "Warp Totem: Mountains",
+      "category": "Crafting Recipe",
+      "desc": "Warp directly to the mountains. Consumed on use.",
+      "source": "Warp directly to the mountains. Consumed on use.",
+      "notes": "Ingredients: Hardwood (1) Iron Bar (1) Stone (25)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Mountains.png"
+    },
+    {
+      "id": "craft_warp_totem:_farm",
+      "name": "Warp Totem: Farm",
+      "category": "Crafting Recipe",
+      "desc": "Warp directly to your house. Consumed on use.",
+      "source": "Warp directly to your house. Consumed on use.",
+      "notes": "Ingredients: Hardwood (1) Honey (1) Fiber (20)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Farm.png"
+    },
+    {
+      "id": "craft_warp_totem:_desert",
+      "name": "Warp Totem: Desert",
+      "category": "Crafting Recipe",
+      "desc": "Warp directly to Calico Desert. Consumed on use.",
+      "source": "Warp directly to Calico Desert. Consumed on use.",
+      "notes": "Ingredients: Hardwood (2) Coconut (1) Iridium Ore (4)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Desert.png"
+    },
+    {
+      "id": "craft_warp_totem:_island",
+      "name": "Warp Totem: Island",
+      "category": "Crafting Recipe",
+      "desc": "Warp directly to Ginger Island. Consumed on use.",
+      "source": "Warp directly to Ginger Island. Consumed on use.",
+      "notes": "Ingredients: Hardwood (5) Dragon Tooth (1) Ginger (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Island.png"
+    },
+    {
+      "id": "craft_rain_totem",
+      "name": "Rain Totem",
+      "category": "Crafting Recipe",
+      "desc": "Activate to greatly increase the chance for rain tomorrow. Consumed on use.",
+      "source": "Activate to greatly increase the chance for rain tomorrow. Consumed on use.",
+      "notes": "Ingredients: Hardwood (1) Truffle Oil (1) Pine Tar (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rain_Totem.png"
+    },
+    {
+      "id": "craft_treasure_totem",
+      "name": "Treasure Totem",
+      "category": "Crafting Recipe",
+      "desc": "Use on diggable terrain to summon a ring of treasure spots.",
+      "source": "Use on diggable terrain to summon a ring of treasure spots.",
+      "notes": "Ingredients: Hardwood (5) Mystic Syrup (1) Moss (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Treasure_Totem.png"
+    },
+    {
+      "id": "craft_torch",
+      "name": "Torch",
+      "category": "Crafting Recipe",
+      "desc": "Provides a modest amount of light.",
+      "source": "Provides a modest amount of light.",
+      "notes": "Ingredients: Wood (1) Sap (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Torch.png"
+    },
+    {
+      "id": "craft_campfire",
+      "name": "Campfire",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Stone (10) Wood (10) Fiber (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Campfire.png"
+    },
+    {
+      "id": "craft_wooden_brazier",
+      "name": "Wooden Brazier",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Wood (10) Coal (1) Fiber (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wooden_Brazier.png"
+    },
+    {
+      "id": "craft_stone_brazier",
+      "name": "Stone Brazier",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Stone (10) Coal (1) Fiber (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Brazier.png"
+    },
+    {
+      "id": "craft_gold_brazier",
+      "name": "Gold Brazier",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Gold Bar (1) Coal (1) Fiber (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Gold_Brazier.png"
+    },
+    {
+      "id": "craft_carved_brazier",
+      "name": "Carved Brazier",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Hardwood (10) Coal (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Carved_Brazier.png"
+    },
+    {
+      "id": "craft_stump_brazier",
+      "name": "Stump Brazier",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Hardwood (5) Coal (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stump_Brazier.png"
+    },
+    {
+      "id": "craft_barrel_brazier",
+      "name": "Barrel Brazier",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Wood (50) Solar Essence (1) Coal (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Barrel_Brazier.png"
+    },
+    {
+      "id": "craft_skull_brazier",
+      "name": "Skull Brazier",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Bone Fragment (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Skull_Brazier.png"
+    },
+    {
+      "id": "craft_marble_brazier",
+      "name": "Marble Brazier",
+      "category": "Crafting Recipe",
+      "desc": "Provides a moderate amount of light.",
+      "source": "Provides a moderate amount of light.",
+      "notes": "Ingredients: Marble (1) Aquamarine (1) Stone (100)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Marble_Brazier.png"
+    },
+    {
+      "id": "craft_wood_lamp-post",
+      "name": "Wood Lamp-post",
+      "category": "Crafting Recipe",
+      "desc": "Provides a good amount of light.",
+      "source": "Provides a good amount of light.",
+      "notes": "Ingredients: Wood (50) Battery Pack (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Lamp-post.png"
+    },
+    {
+      "id": "craft_iron_lamp-post",
+      "name": "Iron Lamp-post",
+      "category": "Crafting Recipe",
+      "desc": "Provides a good amount of light.",
+      "source": "Provides a good amount of light.",
+      "notes": "Ingredients: Iron Bar (1) Battery Pack (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Iron_Lamp-post.png"
+    },
+    {
+      "id": "craft_jack-o-lantern",
+      "name": "Jack-O-Lantern",
+      "category": "Crafting Recipe",
+      "desc": "A whimsical fall decoration.",
+      "source": "A whimsical fall decoration.",
+      "notes": "Ingredients: Pumpkin (1) Torch (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Jack-O-Lantern.png"
+    },
+    {
+      "id": "craft_charcoal_kiln",
+      "name": "Charcoal Kiln",
+      "category": "Crafting Recipe",
+      "desc": "Turns 10 pieces of wood into one piece of coal.",
+      "source": "Turns 10 pieces of wood into one piece of coal.",
+      "notes": "Ingredients: Wood (20) Copper Bar (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Charcoal_Kiln.png"
+    },
+    {
+      "id": "craft_crystalarium",
+      "name": "Crystalarium",
+      "category": "Crafting Recipe",
+      "desc": "Insert a gem of your choice and it will grow copies.",
+      "source": "Insert a gem of your choice and it will grow copies.",
+      "notes": "Ingredients: Stone (99) Gold Bar (5) Iridium Bar (2) Battery Pack (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crystalarium.png"
+    },
+    {
+      "id": "craft_furnace",
+      "name": "Furnace",
+      "category": "Crafting Recipe",
+      "desc": "Turns ore and coal into metal bars.",
+      "source": "Turns ore and coal into metal bars.",
+      "notes": "Ingredients: Copper Ore (20) Stone (25)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Furnace.png"
+    },
+    {
+      "id": "craft_heavy_furnace",
+      "name": "Heavy Furnace",
+      "category": "Crafting Recipe",
+      "desc": "It's more efficient than a regular furnace. Requires 25 pieces of ore and 3 coal per use.",
+      "source": "It's more efficient than a regular furnace. Requires 25 pieces of ore and 3 coal per use.",
+      "notes": "Ingredients: Furnace (2) Iron Bar (3) Stone (50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Heavy_Furnace.png"
+    },
+    {
+      "id": "craft_lightning_rod",
+      "name": "Lightning Rod",
+      "category": "Crafting Recipe",
+      "desc": "Collects energy from lightning storms and turns it into battery packs.",
+      "source": "Collects energy from lightning storms and turns it into battery packs.",
+      "notes": "Ingredients: Iron Bar (1) Refined Quartz (1) Bat Wing (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lightning_Rod.png"
+    },
+    {
+      "id": "craft_solar_panel",
+      "name": "Solar Panel",
+      "category": "Crafting Recipe",
+      "desc": "Slowly generates batteries when left in the sun.",
+      "source": "Slowly generates batteries when left in the sun.",
+      "notes": "Ingredients: Refined Quartz (10) Iron Bar (5) Gold Bar (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Solar_Panel.png"
+    },
+    {
+      "id": "craft_recycling_machine",
+      "name": "Recycling Machine",
+      "category": "Crafting Recipe",
+      "desc": "Turns fishing trash into resources.",
+      "source": "Turns fishing trash into resources.",
+      "notes": "Ingredients: Wood (25) Stone (25) Iron Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Recycling_Machine.png"
+    },
+    {
+      "id": "craft_seed_maker",
+      "name": "Seed Maker",
+      "category": "Crafting Recipe",
+      "desc": "Place crops inside to produce a varying amount of seeds. Doesn't work with fruit tree crops.",
+      "source": "Place crops inside to produce a varying amount of seeds. Doesn't work with fruit tree crops.",
+      "notes": "Ingredients: Wood (25) Coal (10) Gold Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Seed_Maker.png"
+    },
+    {
+      "id": "craft_slime_incubator",
+      "name": "Slime Incubator",
+      "category": "Crafting Recipe",
+      "desc": "Hatches slimes eggs into slimes. Allows you to raise slimes outdoors.",
+      "source": "Hatches slimes eggs into slimes. Allows you to raise slimes outdoors.",
+      "notes": "Ingredients: Iridium Bar (2) Slime (100)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Slime_Incubator.png"
+    },
+    {
+      "id": "craft_ostrich_incubator",
+      "name": "Ostrich Incubator",
+      "category": "Crafting Recipe",
+      "desc": "Hatches ostrich eggs into baby ostriches. Place in a barn.",
+      "source": "Hatches ostrich eggs into baby ostriches. Place in a barn.",
+      "notes": "Ingredients: Bone Fragment (50) Hardwood (50) Cinder Shard (20)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ostrich_Incubator.png"
+    },
+    {
+      "id": "craft_slime_egg-press",
+      "name": "Slime Egg-Press",
+      "category": "Crafting Recipe",
+      "desc": "Compresses 100 pieces of slime into a slime egg. It's a miracle of science!",
+      "source": "Compresses 100 pieces of slime into a slime egg. It's a miracle of science!",
+      "notes": "Ingredients: Coal (25) Fire Quartz (1) Battery Pack (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Slime_Egg-Press.png"
+    },
+    {
+      "id": "craft_tapper",
+      "name": "Tapper",
+      "category": "Crafting Recipe",
+      "desc": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product!",
+      "source": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product!",
+      "notes": "Ingredients: Wood (40) Copper Bar (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tapper.png"
+    },
+    {
+      "id": "craft_heavy_tapper",
+      "name": "Heavy Tapper",
+      "category": "Crafting Recipe",
+      "desc": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product! Works twice as fast as a normal tapper.",
+      "source": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product! Works twice as fast as a normal tapper.",
+      "notes": "Ingredients: Hardwood (30) Radioactive Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Heavy_Tapper.png"
+    },
+    {
+      "id": "craft_worm_bin",
+      "name": "Worm Bin",
+      "category": "Crafting Recipe",
+      "desc": "Produces bait on a regular basis. The worms are self-sufficient.",
+      "source": "Produces bait on a regular basis. The worms are self-sufficient.",
+      "notes": "Ingredients: Hardwood (15) Gold Bar (1) Iron Bar (1) Fiber (50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Worm_Bin.png"
+    },
+    {
+      "id": "craft_deluxe_worm_bin",
+      "name": "Deluxe Worm Bin",
+      "category": "Crafting Recipe",
+      "desc": "Produces Deluxe Bait on a regular basis. The worms are self-sufficient.",
+      "source": "Produces Deluxe Bait on a regular basis. The worms are self-sufficient.",
+      "notes": "Ingredients: Worm Bin (1) Moss (30)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Worm_Bin.png"
+    },
+    {
+      "id": "craft_bone_mill",
+      "name": "Bone Mill",
+      "category": "Crafting Recipe",
+      "desc": "Turns bone items into fertilizers.",
+      "source": "Turns bone items into fertilizers.",
+      "notes": "Ingredients: Bone Fragment (10) Clay (3) Stone (20)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bone_Mill.png"
+    },
+    {
+      "id": "craft_geode_crusher",
+      "name": "Geode Crusher",
+      "category": "Crafting Recipe",
+      "desc": "Breaks geodes open automatically.",
+      "source": "Breaks geodes open automatically.",
+      "notes": "Ingredients: Gold Bar (2) Stone (50) Diamond (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Geode_Crusher.png"
+    },
+    {
+      "id": "craft_mushroom_log",
+      "name": "Mushroom Log",
+      "category": "Crafting Recipe",
+      "desc": "Grows mushrooms every so often. The more wild trees are nearby, the better it works.",
+      "source": "Grows mushrooms every so often. The more wild trees are nearby, the better it works.",
+      "notes": "Ingredients: Hardwood (10) Moss (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mushroom_Log.png"
+    },
+    {
+      "id": "craft_bait_maker",
+      "name": "Bait Maker",
+      "category": "Crafting Recipe",
+      "desc": "Place a fish inside to create targeted bait.",
+      "source": "Place a fish inside to create targeted bait.",
+      "notes": "Ingredients: Iron Bar (3) Coral (3) Sea Urchin (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bait_Maker.png"
+    },
+    {
+      "id": "craft_tub_o'_flowers",
+      "name": "Tub o' Flowers",
+      "category": "Crafting Recipe",
+      "desc": "Flowers planted in an oak barrel. Blooms in spring and summer.",
+      "source": "Flowers planted in an oak barrel. Blooms in spring and summer.",
+      "notes": "Ingredients: Wood (15) Tulip Bulb (1) Jazz Seeds (1) Poppy Seeds (1) Spangle Seeds (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tub_o'_Flowers.png"
+    },
+    {
+      "id": "craft_wicked_statue",
+      "name": "Wicked Statue",
+      "category": "Crafting Recipe",
+      "desc": "There's something unsettling about the looks of this statue.",
+      "source": "There's something unsettling about the looks of this statue.",
+      "notes": "Ingredients: Stone (25) Coal (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wicked_Statue.png"
+    },
+    {
+      "id": "craft_flute_block",
+      "name": "Flute Block",
+      "category": "Crafting Recipe",
+      "desc": "Plays a flute sound when you walk past.",
+      "source": "Plays a flute sound when you walk past.",
+      "notes": "Ingredients: Wood (10) Copper Ore (2) Fiber (20)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Flute_Block.png"
+    },
+    {
+      "id": "craft_drum_block",
+      "name": "Drum Block",
+      "category": "Crafting Recipe",
+      "desc": "Plays a drum sound when you walk past.",
+      "source": "Plays a drum sound when you walk past.",
+      "notes": "Ingredients: Stone (10) Copper Ore (2) Fiber (20)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Drum_Block.png"
+    },
+    {
+      "id": "craft_chest",
+      "name": "Chest",
+      "category": "Crafting Recipe",
+      "desc": "A place to store your items.",
+      "source": "A place to store your items.",
+      "notes": "Ingredients: Wood (50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Chest.png"
+    },
+    {
+      "id": "craft_stone_chest",
+      "name": "Stone Chest",
+      "category": "Crafting Recipe",
+      "desc": "A place to store your items.",
+      "source": "A place to store your items.",
+      "notes": "Ingredients: Stone (50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Chest.png"
+    },
+    {
+      "id": "craft_big_chest",
+      "name": "Big Chest",
+      "category": "Crafting Recipe",
+      "desc": "It can store almost twice as much as a regular chest.",
+      "source": "It can store almost twice as much as a regular chest.",
+      "notes": "Ingredients: Wood (120) Copper Bar (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Big_Chest.png"
+    },
+    {
+      "id": "craft_big_stone_chest",
+      "name": "Big Stone Chest",
+      "category": "Crafting Recipe",
+      "desc": "It can store almost twice as much as a regular chest.",
+      "source": "It can store almost twice as much as a regular chest.",
+      "notes": "Ingredients: Stone (250)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Big_Stone_Chest.png"
+    },
+    {
+      "id": "craft_wood_sign",
+      "name": "Wood Sign",
+      "category": "Crafting Recipe",
+      "desc": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "source": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "notes": "Ingredients: Wood (25)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Sign.png"
+    },
+    {
+      "id": "craft_stone_sign",
+      "name": "Stone Sign",
+      "category": "Crafting Recipe",
+      "desc": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "source": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "notes": "Ingredients: Stone (25)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Sign.png"
+    },
+    {
+      "id": "craft_dark_sign",
+      "name": "Dark Sign",
+      "category": "Crafting Recipe",
+      "desc": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "source": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "notes": "Ingredients: Bat Wing (5) Bone Fragment (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Dark_Sign.png"
+    },
+    {
+      "id": "craft_text_sign",
+      "name": "Text Sign",
+      "category": "Crafting Recipe",
+      "desc": "You can write a custom message on this sign.",
+      "source": "You can write a custom message on this sign.",
+      "notes": "Ingredients: Wood (25)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Text_Sign.png"
+    },
+    {
+      "id": "craft_garden_pot",
+      "name": "Garden Pot",
+      "category": "Crafting Recipe",
+      "desc": "Grows crops from any season when indoors. Outdoors, it can only house seasonal crops.",
+      "source": "Grows crops from any season when indoors. Outdoors, it can only house seasonal crops.",
+      "notes": "Ingredients: Clay (1) Stone (10) Refined Quartz (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Garden_Pot.png"
+    },
+    {
+      "id": "craft_scarecrow",
+      "name": "Scarecrow",
+      "category": "Crafting Recipe",
+      "desc": "Prevents crows from attacking your crops. Has a limited radius (about 8 \"tiles\").",
+      "source": "Prevents crows from attacking your crops. Has a limited radius (about 8 \"tiles\").",
+      "notes": "Ingredients: Wood (50) Coal (1) Fiber (20)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Scarecrow.png"
+    },
+    {
+      "id": "craft_deluxe_scarecrow",
+      "name": "Deluxe Scarecrow",
+      "category": "Crafting Recipe",
+      "desc": "Prevents crows from attacking your crops. Has a large radius (about 16 \"tiles\").",
+      "source": "Prevents crows from attacking your crops. Has a large radius (about 16 \"tiles\").",
+      "notes": "Ingredients: Wood (50) Fiber (40) Iridium Ore (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Scarecrow.png"
+    },
+    {
+      "id": "craft_staircase",
+      "name": "Staircase",
+      "category": "Crafting Recipe",
+      "desc": "Use this to move down a level in the mines.",
+      "source": "Use this to move down a level in the mines.",
+      "notes": "Ingredients: Stone (99)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Staircase.png"
+    },
+    {
+      "id": "craft_explosive_ammo",
+      "name": "Explosive Ammo",
+      "category": "Crafting Recipe",
+      "desc": "Fire this with the slingshot.",
+      "source": "Fire this with the slingshot.",
+      "notes": "Ingredients: Iron Bar (1) Coal (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Explosive_Ammo.png"
+    },
+    {
+      "id": "craft_transmute_(fe)",
+      "name": "Transmute (Fe)",
+      "category": "Crafting Recipe",
+      "desc": "A bar of pure iron.",
+      "source": "A bar of pure iron.",
+      "notes": "Ingredients: Copper Bar (3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Transmute_(Fe).png"
+    },
+    {
+      "id": "craft_transmute_(au)",
+      "name": "Transmute (Au)",
+      "category": "Crafting Recipe",
+      "desc": "A bar of pure gold.",
+      "source": "A bar of pure gold.",
+      "notes": "Ingredients: Iron Bar (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Transmute_(Au).png"
+    },
+    {
+      "id": "craft_mini-jukebox",
+      "name": "Mini-Jukebox",
+      "category": "Crafting Recipe",
+      "desc": "Allows you to play your favorite tunes.",
+      "source": "Allows you to play your favorite tunes.",
+      "notes": "Ingredients: Iron Bar (2) Battery Pack (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mini-Jukebox.png"
+    },
+    {
+      "id": "craft_mini-obelisk",
+      "name": "Mini-Obelisk",
+      "category": "Crafting Recipe",
+      "desc": "Place two on the farm to warp between them.",
+      "source": "Place two on the farm to warp between them.",
+      "notes": "Ingredients: Hardwood (30) Solar Essence (20) Gold Bar (3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mini-Obelisk.png"
+    },
+    {
+      "id": "craft_farm_computer",
+      "name": "Farm Computer",
+      "category": "Crafting Recipe",
+      "desc": "Scans the farm and displays useful information.",
+      "source": "Scans the farm and displays useful information.",
+      "notes": "Ingredients: Dwarf Gadget (1) Battery Pack (1) Refined Quartz (10)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Farm_Computer.png"
+    },
+    {
+      "id": "craft_hopper",
+      "name": "Hopper",
+      "category": "Crafting Recipe",
+      "desc": "Items placed inside will automatically be loaded into the machine in front of it.",
+      "source": "Items placed inside will automatically be loaded into the machine in front of it.",
+      "notes": "Ingredients: Hardwood (10) Iridium Bar (1) Radioactive Bar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Hopper.png"
+    },
+    {
+      "id": "craft_cookout_kit",
+      "name": "Cookout Kit",
+      "category": "Crafting Recipe",
+      "desc": "Use this to create a cooking campfire, allowing you to cook on-the-go!",
+      "source": "Use this to create a cooking campfire, allowing you to cook on-the-go!",
+      "notes": "Ingredients: Wood (15) Fiber (10) Coal (3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cookout_Kit.png"
+    },
+    {
+      "id": "craft_tent_kit",
+      "name": "Tent Kit",
+      "category": "Crafting Recipe",
+      "desc": "Use this to deploy a one-time-use tent for sleeping. Can only be used outdoors.",
+      "source": "Use this to deploy a one-time-use tent for sleeping. Can only be used outdoors.",
+      "notes": "Ingredients: Hardwood (10) Fiber (25) Cloth (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tent_Kit.png"
+    },
+    {
+      "id": "craft_statue_of_the_dwarf_king",
+      "name": "Statue Of The Dwarf King",
+      "category": "Crafting Recipe",
+      "desc": "Choose from two mining-related powers each day.",
+      "source": "Choose from two mining-related powers each day.",
+      "notes": "Ingredients: Iridium Bar (20)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Statue_Of_The_Dwarf_King.png"
+    },
+    {
+      "id": "craft_statue_of_blessings",
+      "name": "Statue Of Blessings",
+      "category": "Crafting Recipe",
+      "desc": "Touching the statue gives a unique blessing every day.",
+      "source": "Touching the statue gives a unique blessing every day.",
+      "notes": "Ingredients: Sap (999) Fiber (999) Stone (999) Moss (333)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Statue_Of_Blessings.png"
+    },
+    {
+      "id": "craft_anvil",
+      "name": "Anvil",
+      "category": "Crafting Recipe",
+      "desc": "Allows you to re-forge trinkets, randomizing their stats. Costs 3 iridium bars per use.",
+      "source": "Allows you to re-forge trinkets, randomizing their stats. Costs 3 iridium bars per use.",
+      "notes": "Ingredients: Iron Bar (50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Anvil.png"
+    },
+    {
+      "id": "craft_mini-forge",
+      "name": "Mini-Forge",
+      "category": "Crafting Recipe",
+      "desc": "Now, you can use a dwarvish forge from the convenience of your home.",
+      "source": "Now, you can use a dwarvish forge from the convenience of your home.",
+      "notes": "Ingredients: Dragon Tooth (5) Iron Bar (10) Gold Bar (10) Iridium Bar (5)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mini-Forge.png"
+    }
   ]
 };
