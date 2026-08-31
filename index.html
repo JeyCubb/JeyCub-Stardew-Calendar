@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stardew Farm Scheduler & Calendar</title>
+  <title>Stardew Valley Tracker</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%2290%22>📅</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%2290%22>🌟</text></svg>">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
@@ -14,9 +14,18 @@
 <body>
   <!-- Header -->
   <header>
-    <h1>👩‍🌾 Stardew Farm Calendar</h1>
+    <div style="display: flex; align-items: center; gap: 1.25rem;">
+      <h1>👩‍🌾 Stardew Valley Tracker</h1>
+
+      <!-- Mode Switcher (Calendar vs Perfection Tracker) -->
+      <div class="view-mode-selector" style="display: flex; background: rgba(0, 0, 0, 0.35); border: 1px solid var(--border-glass); border-radius: 10px; padding: 3px; gap: 4px;">
+        <button id="btn-view-calendar" class="view-tab-btn active" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s ease;">📅 Calendar</button>
+        <button id="btn-view-tracker" class="view-tab-btn" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s ease;">⭐ Perfection Tracker</button>
+      </div>
+    </div>
     
-    <div style="display: flex; align-items: center;">
+    <!-- Controls container for Calendar view -->
+    <div id="calendar-header-controls" style="display: flex; align-items: center;">
       <!-- Toggle Labels Button -->
       <button id="btn-toggle-labels" class="season-btn" style="margin-right: 1rem; padding: 0.35rem 0.75rem; font-size: 0.8rem; display: flex; align-items: center; gap: 0.35rem; border-radius: 8px; border: 1px solid var(--border-glass);">
         <span id="label-toggle-icon">👁️</span> <span id="label-toggle-text">Labels: Hover</span>
@@ -32,16 +41,27 @@
 
       <!-- Season Selection -->
       <div class="season-selector">
-      <button class="season-btn active" data-season="spring">Spring</button>
-      <button class="season-btn" data-season="summer">Summer</button>
-      <button class="season-btn" data-season="fall">Fall</button>
-      <button class="season-btn" data-season="winter">Winter</button>
+        <button class="season-btn active" data-season="spring">Spring</button>
+        <button class="season-btn" data-season="summer">Summer</button>
+        <button class="season-btn" data-season="fall">Fall</button>
+        <button class="season-btn" data-season="winter">Winter</button>
       </div>
+    </div>
+
+    <!-- Controls container for Perfection Tracker view -->
+    <div id="tracker-header-controls" style="display: none; align-items: center; gap: 0.75rem;">
+      <div class="tracker-sheet-selector" style="display: flex; gap: 0.4rem;">
+        <button class="tracker-tab-btn active" data-sheet="shipped">📦 Produce & Forage</button>
+        <button class="tracker-tab-btn" data-sheet="museum">🏺 Museum</button>
+        <button class="tracker-tab-btn" data-sheet="scarecrows">🎃 Scarecrows</button>
+        <button class="tracker-tab-btn" data-sheet="walnuts">🌰 Golden Walnuts</button>
+      </div>
+      <button id="btn-reset-tracker" class="season-btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem; border-radius: 8px; border: 1px solid var(--border-glass); opacity: 0.8;">Reset Sheet</button>
     </div>
   </header>
 
   <!-- Main Calendar Layout -->
-  <main class="main-container">
+  <main class="main-container" id="calendar-main-view">
     <!-- Days of Week Header -->
     <div class="weekday-header">
       <div>Mon</div>
@@ -56,6 +76,38 @@
     <!-- Calendar Grid (28 day cards) -->
     <div class="calendar-grid" id="calendar-grid"></div>
   </main>
+
+  <!-- Main Perfection Tracker Layout -->
+  <main class="main-container" id="tracker-main-view" style="display: none; overflow-y: auto;">
+    <!-- Tracker Progress Bar Card -->
+    <div class="tracker-summary-card">
+      <div class="tracker-summary-header">
+        <div>
+          <h2 id="tracker-sheet-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.2rem;">📦 Produce & Forage Shipped</h2>
+          <p id="tracker-sheet-desc" style="font-size: 0.85rem; color: var(--text-muted);">Ship one of every farm produce, forage, animal product, artisan good, and resource.</p>
+        </div>
+        <div style="text-align: right;">
+          <div id="tracker-progress-count" style="font-size: 1.2rem; font-weight: 700; color: var(--accent-gold);">0 / 154 (0%)</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Items Completed</div>
+        </div>
+      </div>
+      <div class="tracker-progress-track">
+        <div class="tracker-progress-fill" id="tracker-progress-bar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Tracker Filter & Search Bar -->
+    <div class="tracker-filter-bar" style="display: flex; gap: 0.75rem; margin-bottom: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+      <div id="tracker-subfilters" style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+        <!-- Dynamic season/category subfilter buttons -->
+      </div>
+      <input type="text" id="tracker-search-input" placeholder="Search item, location, or source..." style="padding: 0.45rem 0.85rem; border-radius: 8px; border: 1px solid var(--border-glass); background: rgba(255,255,255,0.04); color: var(--text-main); font-size: 0.85rem; min-width: 220px;">
+    </div>
+
+    <!-- Tracker Items Grid -->
+    <div id="tracker-items-grid" class="tracker-grid"></div>
+  </main>
+
 
   <!-- Task Scheduler Modal (Unified layout) -->
   <div class="modal-overlay" id="modal-overlay">
@@ -160,6 +212,7 @@
     </div>
   </div>
 
+  <script src="perfection_data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

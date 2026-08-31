@@ -824,3 +824,215 @@ header h1 {
 .task-completed:hover .task-icon-wrapper .checkmark-overlay {
   opacity: 1;
 }
+
+/* ==========================================================================
+   PERFECTION TRACKER STYLES
+   ========================================================================== */
+
+/* View Mode Switcher */
+.view-tab-btn {
+  background: transparent;
+  color: var(--text-muted);
+}
+.view-tab-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+.view-tab-btn.active {
+  background: linear-gradient(135deg, var(--accent-gold), #ea580c);
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.4);
+}
+
+/* Tracker Sheet Tabs */
+.tracker-tab-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.tracker-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+.tracker-tab-btn.active {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background: rgba(249, 115, 22, 0.12);
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+}
+
+/* Tracker Progress Summary Card */
+.tracker-summary-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+.tracker-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.tracker-progress-track {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.tracker-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f97316, #fbbf24);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+
+/* Tracker Subfilters */
+.tracker-subfilter-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+.tracker-subfilter-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+.tracker-subfilter-btn.active {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* Tracker Grid & Cards */
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+  padding-bottom: 2rem;
+}
+
+.tracker-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.tracker-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+.tracker-card.obtained {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+  opacity: 0.75;
+}
+.tracker-card.obtained:hover {
+  opacity: 0.95;
+}
+.tracker-card.obtained .tracker-card-name {
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.tracker-card-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 4px;
+}
+.tracker-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.tracker-card-body {
+  flex-grow: 1;
+  min-width: 0;
+}
+.tracker-card-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+.tracker-card-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tracker-card-source {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin-bottom: 0.2rem;
+}
+.tracker-card-notes {
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  opacity: 0.85;
+  line-height: 1.3;
+}
+
+/* Custom Checkbox on Cards */
+.tracker-card-cb {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  margin-top: 2px;
+}
+.tracker-card.obtained .tracker-card-cb {
+  background: #22c55e;
+  border-color: #22c55e;
+}
+.tracker-card-cb svg {
+  display: none;
+}
+.tracker-card.obtained .tracker-card-cb svg {
+  display: block;
+}
+

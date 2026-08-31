@@ -1426,3 +1426,330 @@ window.toggleTaskCompleted = function(day, taskId, event) {
     }
   }
 };
+
+/* ==========================================================================
+   PERFECTION TRACKER ENGINE
+   ========================================================================== */
+let activeTrackerSheet = localStorage.getItem('stardew_active_tracker_sheet') || 'shipped';
+let currentTrackerFilter = 'all';
+let currentTrackerSearch = '';
+
+// Mode switching (Calendar vs Tracker)
+const btnViewCalendar = document.getElementById('btn-view-calendar');
+const btnViewTracker = document.getElementById('btn-view-tracker');
+const calendarMainView = document.getElementById('calendar-main-view');
+const trackerMainView = document.getElementById('tracker-main-view');
+const calendarHeaderControls = document.getElementById('calendar-header-controls');
+const trackerHeaderControls = document.getElementById('tracker-header-controls');
+
+function setAppViewMode(mode) {
+  localStorage.setItem('stardew_view_mode', mode);
+  if (mode === 'tracker') {
+    btnViewCalendar.classList.remove('active');
+    btnViewTracker.classList.add('active');
+    calendarMainView.style.display = 'none';
+    trackerMainView.style.display = 'flex';
+    calendarHeaderControls.style.display = 'none';
+    trackerHeaderControls.style.display = 'flex';
+    renderTrackerSheet();
+  } else {
+    btnViewTracker.classList.remove('active');
+    btnViewCalendar.classList.add('active');
+    trackerMainView.style.display = 'none';
+    calendarMainView.style.display = 'flex';
+    trackerHeaderControls.style.display = 'none';
+    calendarHeaderControls.style.display = 'flex';
+    renderCalendar();
+  }
+}
+
+if (btnViewCalendar && btnViewTracker) {
+  btnViewCalendar.addEventListener('click', () => setAppViewMode('calendar'));
+  btnViewTracker.addEventListener('click', () => setAppViewMode('tracker'));
+}
+
+// Sheet tab switching
+const trackerTabBtns = document.querySelectorAll('.tracker-tab-btn');
+trackerTabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    trackerTabBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeTrackerSheet = btn.dataset.sheet;
+    localStorage.setItem('stardew_active_tracker_sheet', activeTrackerSheet);
+    currentTrackerFilter = 'all';
+    currentTrackerSearch = '';
+    const searchInput = document.getElementById('tracker-search-input');
+    if (searchInput) searchInput.value = '';
+    renderTrackerSheet();
+  });
+});
+
+// Search input
+const trackerSearchInput = document.getElementById('tracker-search-input');
+if (trackerSearchInput) {
+  trackerSearchInput.addEventListener('input', (e) => {
+    currentTrackerSearch = e.target.value.toLowerCase().trim();
+    renderTrackerGridOnly();
+  });
+}
+
+// Reset sheet button
+const btnResetTracker = document.getElementById('btn-reset-tracker');
+if (btnResetTracker) {
+  btnResetTracker.addEventListener('click', () => {
+    const sheetTitles = {
+      'shipped': 'Produce & Forage Shipped',
+      'museum': 'Museum Donations',
+      'scarecrows': 'Scarecrows & Rarecrows',
+      'walnuts': 'Golden Walnuts'
+    };
+    const title = sheetTitles[activeTrackerSheet] || 'current sheet';
+    if (confirm(`Reset all checked progress on the "${title}" sheet?`)) {
+      const state = getTrackerState(activeTrackerSheet);
+      localStorage.setItem(`stardew_tracker_${activeTrackerSheet}`, JSON.stringify({}));
+      renderTrackerSheet();
+    }
+  });
+}
+
+// State storage helper
+function getTrackerState(sheetKey) {
+  try {
+    return JSON.parse(localStorage.getItem(`stardew_tracker_${sheetKey}`)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function setTrackerItemState(sheetKey, itemId, isObtained) {
+  const state = getTrackerState(sheetKey);
+  state[itemId] = isObtained;
+  localStorage.setItem(`stardew_tracker_${sheetKey}`, JSON.stringify(state));
+}
+
+// Toggle individual item
+window.toggleTrackerItem = function(sheetKey, itemId, event) {
+  if (event) event.stopPropagation();
+  const state = getTrackerState(sheetKey);
+  const newState = !state[itemId];
+  setTrackerItemState(sheetKey, itemId, newState);
+  
+  const card = document.getElementById(`tracker-card-${itemId}`);
+  if (card) {
+    card.classList.toggle('obtained', newState);
+  }
+  updateTrackerProgressBar();
+};
+
+// Render subfilters bar based on active sheet
+function renderTrackerSubfilters() {
+  const container = document.getElementById('tracker-subfilters');
+  if (!container) return;
+  container.innerHTML = '';
+
+  let filters = [{ key: 'all', label: 'All' }];
+
+  if (activeTrackerSheet === 'shipped') {
+    filters.push(
+      { key: 'spring', label: '🌸 Spring' },
+      { key: 'summer', label: '☀️ Summer' },
+      { key: 'fall', label: '🍂 Fall' },
+      { key: 'winter', label: '❄️ Winter' },
+      { key: 'tree', label: '🍎 Trees & Island' },
+      { key: 'animal', label: '🧀 Animal & Artisan' },
+      { key: 'resource', label: '⛏️ Ores & Resources' }
+    );
+  } else if (activeTrackerSheet === 'museum') {
+    filters.push(
+      { key: 'artifact', label: '🏺 Artifacts (42)' },
+      { key: 'mineral', label: '💎 Minerals & Gems (53)' }
+    );
+  } else if (activeTrackerSheet === 'scarecrows') {
+    filters.push(
+      { key: 'rarecrow', label: '🏅 Rarecrows (8)' },
+      { key: 'craftable', label: '🌾 Craftable' }
+    );
+  } else if (activeTrackerSheet === 'walnuts') {
+    filters.push(
+      { key: 'east', label: 'Jungle / East' },
+      { key: 'north', label: 'Volcano / North' },
+      { key: 'west', label: 'Farm / West' },
+      { key: 'south', label: 'Docks / South' }
+    );
+  }
+
+  filters.forEach(f => {
+    const btn = document.createElement('button');
+    btn.className = `tracker-subfilter-btn ${currentTrackerFilter === f.key ? 'active' : ''}`;
+    btn.innerText = f.label;
+    btn.onclick = () => {
+      currentTrackerFilter = f.key;
+      renderTrackerSubfilters();
+      renderTrackerGridOnly();
+    };
+    container.appendChild(btn);
+  });
+}
+
+// Update header summary text & progress bar
+function updateTrackerProgressBar() {
+  const dataList = (typeof PERFECTION_TRACKER_DATA !== 'undefined') ? (PERFECTION_TRACKER_DATA[activeTrackerSheet] || []) : [];
+  const state = getTrackerState(activeTrackerSheet);
+  const total = dataList.length;
+  const completed = dataList.filter(item => !!state[item.id]).length;
+  const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+  const countEl = document.getElementById('tracker-progress-count');
+  const barEl = document.getElementById('tracker-progress-bar');
+  if (countEl) countEl.innerText = `${completed} / ${total} (${percent}%)`;
+  if (barEl) barEl.style.width = `${percent}%`;
+}
+
+// Render the entire tracker sheet view
+function renderTrackerSheet() {
+  const titleEl = document.getElementById('tracker-sheet-title');
+  const descEl = document.getElementById('tracker-sheet-desc');
+
+  const sheetMeta = {
+    'shipped': {
+      title: '📦 Produce & Forage Shipped',
+      desc: 'Ship one of every farm crop, forage, animal product, artisan good, and resource for the Full Shipment milestone.'
+    },
+    'museum': {
+      title: '🏺 Museum Collection Guide',
+      desc: 'Donate all 42 Artifacts and 53 Minerals & Gems to Gunther to complete the Museum.'
+    },
+    'scarecrows': {
+      title: '🎃 Scarecrows & Rarecrows',
+      desc: 'Collect all 8 Rarecrows to unlock the Deluxe Scarecrow crafting recipe (16-tile radius!).'
+    },
+    'walnuts': {
+      title: '🌰 Ginger Island Golden Walnuts',
+      desc: 'Find all 130 Golden Walnuts scattered across Ginger Island with chronological video guide timestamps.'
+    }
+  };
+
+  const meta = sheetMeta[activeTrackerSheet] || sheetMeta['shipped'];
+  if (titleEl) titleEl.innerText = meta.title;
+  if (descEl) descEl.innerText = meta.desc;
+
+  // Active tab button sync
+  trackerTabBtns.forEach(b => {
+    b.classList.toggle('active', b.dataset.sheet === activeTrackerSheet);
+  });
+
+  renderTrackerSubfilters();
+  renderTrackerGridOnly();
+  updateTrackerProgressBar();
+}
+
+// Filter and render items grid
+function renderTrackerGridOnly() {
+  const grid = document.getElementById('tracker-items-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  const dataList = (typeof PERFECTION_TRACKER_DATA !== 'undefined') ? (PERFECTION_TRACKER_DATA[activeTrackerSheet] || []) : [];
+  const state = getTrackerState(activeTrackerSheet);
+
+  const filtered = dataList.filter(item => {
+    // 1. Search Query Filter
+    if (currentTrackerSearch) {
+      const q = currentTrackerSearch;
+      const matchName = item.name && item.name.toLowerCase().includes(q);
+      const matchSource = item.source && item.source.toLowerCase().includes(q);
+      const matchNotes = item.notes && item.notes.toLowerCase().includes(q);
+      const matchCategory = item.category && item.category.toLowerCase().includes(q);
+      const matchDetails = item.details && item.details.toLowerCase().includes(q);
+      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails) {
+        return false;
+      }
+    }
+
+    // 2. Subfilter
+    if (currentTrackerFilter !== 'all') {
+      if (activeTrackerSheet === 'shipped') {
+        const s = (item.season || '').toLowerCase();
+        const c = (item.category || '').toLowerCase();
+        if (currentTrackerFilter === 'spring' && !s.includes('spring')) return false;
+        if (currentTrackerFilter === 'summer' && !s.includes('summer')) return false;
+        if (currentTrackerFilter === 'fall' && !s.includes('fall')) return false;
+        if (currentTrackerFilter === 'winter' && !s.includes('winter')) return false;
+        if (currentTrackerFilter === 'tree' && !c.includes('tree') && !c.includes('island') && !c.includes('special')) return false;
+        if (currentTrackerFilter === 'animal' && !c.includes('animal') && !c.includes('artisan') && !c.includes('fish pond')) return false;
+        if (currentTrackerFilter === 'resource' && !c.includes('resource') && !c.includes('ore') && !c.includes('bar') && !c.includes('tapper') && !c.includes('monster')) return false;
+      } else if (activeTrackerSheet === 'museum') {
+        const t = (item.type || '').toLowerCase();
+        if (currentTrackerFilter === 'artifact' && !t.includes('artifact')) return false;
+        if (currentTrackerFilter === 'mineral' && !t.includes('mineral')) return false;
+      } else if (activeTrackerSheet === 'scarecrows') {
+        const t = (item.type || '').toLowerCase();
+        if (currentTrackerFilter === 'rarecrow' && !t.includes('rarecrow')) return false;
+        if (currentTrackerFilter === 'craftable' && !t.includes('craftable')) return false;
+      } else if (activeTrackerSheet === 'walnuts') {
+        const z = (item.zone || '').toLowerCase();
+        if (currentTrackerFilter === 'east' && !z.includes('east')) return false;
+        if (currentTrackerFilter === 'north' && !z.includes('north') && !z.includes('field') && !z.includes('volcano')) return false;
+        if (currentTrackerFilter === 'west' && !z.includes('west')) return false;
+        if (currentTrackerFilter === 'south' && !z.includes('south')) return false;
+      }
+    }
+
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 3rem; font-size: 0.95rem;">No items matched your filter or search query.</div>';
+    return;
+  }
+
+  filtered.forEach(item => {
+    const isObtained = !!state[item.id];
+    const card = document.createElement('div');
+    card.className = `tracker-card ${isObtained ? 'obtained' : ''}`;
+    card.id = `tracker-card-${item.id}`;
+    card.onclick = (e) => toggleTrackerItem(activeTrackerSheet, item.id, e);
+
+    // Build badge & badge color
+    let badgeText = item.season || item.type || item.zone || '';
+    let badgeColor = 'var(--accent-gold)';
+    if (badgeText.includes('Spring')) badgeColor = '#22c55e';
+    else if (badgeText.includes('Summer')) badgeColor = '#eab308';
+    else if (badgeText.includes('Fall')) badgeColor = '#f97316';
+    else if (badgeText.includes('Winter')) badgeColor = '#38bdf8';
+    else if (badgeText.includes('Mineral')) badgeColor = '#c084fc';
+    else if (badgeText.includes('Rarecrow')) badgeColor = '#fbbf24';
+
+    let detailsText = item.source || item.growth || item.details || item.desc || '';
+    let notesText = item.notes || (item.time ? `⏱️ Timestamp: ${item.time}` : '');
+    let priceText = item.price ? `<span style="color: var(--accent-gold); font-weight: 600; font-size: 0.73rem;"> • ${item.price}</span>` : '';
+    let dayText = item.day ? `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 2px;">📅 ${item.day}</div>` : '';
+
+    card.innerHTML = `
+      <div class="tracker-card-icon">
+        <img src="${item.img}" alt="${item.name}" onerror="this.style.display='none';">
+      </div>
+      <div class="tracker-card-body">
+        <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}${priceText}</div>
+        <div class="tracker-card-name">${item.name}</div>
+        ${dayText}
+        <div class="tracker-card-source">${detailsText}</div>
+        ${notesText ? `<div class="tracker-card-notes">${notesText}</div>` : ''}
+      </div>
+      <div class="tracker-card-cb">
+        <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
+          <path d="M1 4.5L4.5 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+// Initial View mode loader
+const savedViewMode = localStorage.getItem('stardew_view_mode') || 'calendar';
+if (savedViewMode === 'tracker') {
+  setAppViewMode('tracker');
+}
+
