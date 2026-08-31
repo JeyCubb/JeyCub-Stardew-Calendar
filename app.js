@@ -75,7 +75,12 @@ const MACHINE_IMAGES = {
   'crystal_emerald': 'https://stardewvalleywiki.com/mediawiki/images/6/6a/Emerald.png',
   'crystal_aquamarine': 'https://stardewvalleywiki.com/mediawiki/images/a/a2/Aquamarine.png',
   'crystal_topaz': 'https://stardewvalleywiki.com/mediawiki/images/a/a5/Topaz.png',
-  'crystal_amethyst': 'https://stardewvalleywiki.com/mediawiki/images/2/2e/Amethyst.png'
+  'crystal_amethyst': 'https://stardewvalleywiki.com/mediawiki/images/2/2e/Amethyst.png',
+  'tapper_maple': 'https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png',
+  'tapper_oak': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png',
+  'tapper_pine': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Pine_Tar.png',
+  'tapper_mushroom': 'https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png',
+  'tapper_mystic': 'https://stardewvalleywiki.com/mediawiki/images/7/77/Mystic_Syrup.png'
 };
 
 // Initialize current year structure if not present (guarantees all seasons exist)
@@ -174,6 +179,11 @@ const MASTER_MACHINES = [
   { key: 'cask_gold', name: 'Cask aging (Gold)', duration: 28, type: 'Cask' },
   { key: 'cask_iridium', name: 'Cask aging (Iridium)', duration: 56, type: 'Cask' },
   { key: 'solar_panel', name: 'Solar Panel', duration: 10, isRepeating: true, type: 'Utility' },
+  { key: 'tapper_maple', name: 'Tapper: Maple Tree (Syrup)', duration: 9, isRepeating: true, type: 'Tapper' },
+  { key: 'tapper_oak', name: 'Tapper: Oak Tree (Resin)', duration: 7, isRepeating: true, type: 'Tapper' },
+  { key: 'tapper_pine', name: 'Tapper: Pine Tree (Tar)', duration: 5, isRepeating: true, type: 'Tapper' },
+  { key: 'tapper_mushroom', name: 'Tapper: Mushroom Tree', duration: 1, isRepeating: true, type: 'Tapper' },
+  { key: 'tapper_mystic', name: 'Tapper: Mystic Tree (Syrup)', duration: 7, isRepeating: true, type: 'Tapper' },
   { key: 'crystal_diamond', name: 'Crystalarium: Diamond', duration: 5, isRepeating: true, type: 'Crystalarium' },
   { key: 'crystal_ruby', name: 'Crystalarium: Ruby', duration: 2, isRepeating: true, type: 'Crystalarium' },
   { key: 'crystal_jade', name: 'Crystalarium: Jade', duration: 2, isRepeating: true, type: 'Crystalarium' },
@@ -311,6 +321,11 @@ const ITEM_COLORS = {
   'cask_gold': '#fbbf24',    // Gold yellow
   'cask_iridium': '#c084fc', // Purple iridium
   'solar_panel': '#38bdf8',  // Sky blue battery
+  'tapper_maple': '#f97316', // Maple orange
+  'tapper_oak': '#84cc16',   // Oak amber/green
+  'tapper_pine': '#10b981',  // Pine green
+  'tapper_mushroom': '#a855f7', // Purple mushroom
+  'tapper_mystic': '#ec4899', // Mystic pink
   'crystal_diamond': '#e0f2fe',
   'crystal_ruby': '#ef4444',
   'crystal_jade': '#059669',
@@ -406,6 +421,9 @@ function getTaskIconUrl(task) {
   } else {
     if (task.machineKey && task.machineKey.startsWith('crystal_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/d/d4/Crystalarium.png';
+    }
+    if (task.machineKey && task.machineKey.startsWith('tapper_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
+      return 'https://stardewvalleywiki.com/mediawiki/images/d/da/Tapper.png';
     }
     if (task.machineKey === 'solar_panel' && task.id && typeof task.id === 'string' && task.id.includes('ready')) {
        return 'https://stardewvalleywiki.com/mediawiki/images/2/25/Battery_Pack.png';
@@ -774,7 +792,8 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   // 1. Add Load/Place Task to selected day
   const isSolar = machineKey === 'solar_panel';
   const isCrystal = machineKey.startsWith('crystal_');
-  const isPlaceAction = isSolar || isCrystal;
+  const isTapper = machineKey.startsWith('tapper_');
+  const isPlaceAction = isSolar || isCrystal || isTapper;
   
   const loadTask = {
     id: 'load_' + Date.now(),
@@ -1193,6 +1212,7 @@ let activeManagerTab = 'crops'; // 'crops' or 'machines'
 
 const DEFAULT_ACTIVE_MACHINES = [
   'keg_wine', 'keg_beer', 'preserves', 'cask_silver', 'cask_gold', 'cask_iridium', 'solar_panel',
+  'tapper_maple', 'tapper_oak', 'tapper_pine', 'tapper_mushroom', 'tapper_mystic',
   'crystal_diamond', 'crystal_ruby', 'crystal_jade', 'crystal_emerald', 'crystal_aquamarine', 'crystal_topaz', 'crystal_amethyst'
 ];
 
