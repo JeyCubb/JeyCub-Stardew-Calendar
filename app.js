@@ -1524,6 +1524,46 @@ if (trackerSearchInput) {
   });
 }
 
+// Global hot-typing search on Perfection Tracker
+window.addEventListener('keydown', (e) => {
+  // Only capture keystrokes when on Perfection Tracker view and no modal is open
+  const trackerSection = document.getElementById('tracker-main-view');
+  if (!trackerSection || trackerSection.style.display === 'none') return;
+  
+  const modalOverlays = document.querySelectorAll('.modal-overlay');
+  for (let m of modalOverlays) {
+    if (m && m.style.display && m.style.display !== 'none') return;
+  }
+
+  // Ignore special hotkeys or ctrl/cmd/alt combos
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  if (['Tab', 'Enter', 'Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+
+  const searchInput = document.getElementById('tracker-search-input');
+  if (!searchInput) return;
+
+  // Escape clears search
+  if (e.key === 'Escape') {
+    if (searchInput.value) {
+      searchInput.value = '';
+      currentTrackerSearch = '';
+      renderTrackerGridOnly();
+      searchInput.blur();
+    }
+    return;
+  }
+
+  // If focus is already in an input/textarea or select, allow standard behavior
+  if (document.activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+    return;
+  }
+
+  // If printable character typed, focus search bar immediately
+  if (e.key.length === 1 || e.key === 'Backspace') {
+    searchInput.focus();
+  }
+});
+
 // Reset sheet button
 const btnResetTracker = document.getElementById('btn-reset-tracker');
 if (btnResetTracker) {
