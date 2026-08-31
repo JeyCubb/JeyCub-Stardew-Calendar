@@ -1499,8 +1499,9 @@ if (btnResetTracker) {
   btnResetTracker.addEventListener('click', () => {
     const sheetTitles = {
       'shipped': 'Produce & Forage Shipped',
+      'cooking': 'Cooking Recipes',
+      'fish': 'Fish Caught',
       'museum': 'Museum Donations',
-      'scarecrows': 'Scarecrows & Rarecrows',
       'walnuts': 'Golden Walnuts'
     };
     const title = sheetTitles[activeTrackerSheet] || 'current sheet';
@@ -1582,11 +1583,6 @@ function renderTrackerSubfilters() {
       { key: 'artifact', label: '🏺 Artifacts (42)' },
       { key: 'mineral', label: '💎 Minerals & Gems (53)' }
     );
-  } else if (activeTrackerSheet === 'scarecrows') {
-    filters.push(
-      { key: 'rarecrow', label: '🏅 Rarecrows (8)' },
-      { key: 'craftable', label: '🌾 Craftable' }
-    );
   } else if (activeTrackerSheet === 'walnuts') {
     filters.push(
       { key: 'east', label: 'Jungle / East' },
@@ -1644,10 +1640,6 @@ function renderTrackerSheet() {
     'museum': {
       title: '🏺 Museum Collection Guide',
       desc: 'Donate all 42 Artifacts and 53 Minerals & Gems to Gunther to complete the Museum.'
-    },
-    'scarecrows': {
-      title: '🎃 Scarecrows & Rarecrows',
-      desc: 'Collect all 8 Rarecrows to unlock the Deluxe Scarecrow crafting recipe (16-tile radius!).'
     },
     'walnuts': {
       title: '🌰 Ginger Island Golden Walnuts',
