@@ -1718,7 +1718,7 @@ function renderTrackerSheet() {
     },
     'walnuts': {
       title: '🌰 Ginger Island Golden Walnuts',
-      desc: 'Find all 130 Golden Walnuts scattered across Ginger Island with chronological video guide timestamps.'
+      desc: 'Find all 130 Golden Walnuts scattered across Ginger Island (East, North Volcano, West Farm, and South Docks).'
     }
   };
 
@@ -1860,7 +1860,7 @@ function renderTrackerGridOnly() {
     else if (badgeText.includes('Rarecrow')) badgeColor = '#fbbf24';
 
     let detailsText = item.source || item.growth || item.details || item.desc || '';
-    let notesText = item.notes || (item.time ? `⏱️ Timestamp: ${item.time}` : '');
+    let notesText = item.notes || '';
     let dayText = item.day ? `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 2px;">📅 ${item.day}</div>` : '';
 
     card.innerHTML = `
