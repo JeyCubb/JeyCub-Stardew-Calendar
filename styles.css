@@ -173,12 +173,16 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
+  position: relative;
+  z-index: 101; /* Stay above any overflowing popovers from neighbors */
 }
 
 .day-number {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-main);
+  position: relative;
+  z-index: 102;
 }
 
 .day-name {
@@ -186,25 +190,28 @@ header h1 {
 }
 
 .add-task-btn {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
   border: none;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  position: relative;
+  z-index: 105; /* Highest z-index to always be clickable */
 }
 
 .add-task-btn:hover {
   background: var(--accent-gold);
-  color: var(--bg-dark);
-  transform: scale(1.1);
+  color: #ffffff;
+  transform: scale(1.15);
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
 }
 
 /* Task items list inside day cards */
@@ -635,42 +642,47 @@ header h1 {
 /* Expand the entire compact wrapper into a vertical overlay on hover */
 .hide-task-labels .day-card.has-tasks:hover .tasks-container-compact {
   position: absolute;
-  top: 38px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 290px;
-  background: rgba(22, 22, 33, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  top: 36px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-width: 220px;
+  max-width: 260px;
+  background: rgba(18, 18, 26, 0.98);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  padding: 0.65rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+  padding: 0.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(255, 255, 255, 0.1);
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.35rem;
   height: auto;
   max-height: none;
   overflow: visible;
-  z-index: 100;
+  z-index: 95;
 }
 
-/* Align left on Mondays to prevent screen overflow */
-.hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact {
-  left: -1px;
+/* Align left on Mondays and column 2 to prevent screen overflow */
+.hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact,
+.hide-task-labels .day-card.has-tasks:nth-child(7n+2):hover .tasks-container-compact {
+  left: -2px;
+  right: auto;
   transform: none;
 }
 
-/* Align right on Sundays to prevent screen overflow */
+/* Align right on Saturdays and Sundays to prevent screen overflow */
+.hide-task-labels .day-card.has-tasks:nth-child(7n+6):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-container-compact {
   left: auto;
-  right: -1px;
+  right: -2px;
   transform: none;
 }
 
 /* Align upwards for bottom row (Days 22-28) to prevent screen overflow */
 .hide-task-labels .day-card.has-tasks:nth-child(n+22):hover .tasks-container-compact {
   top: auto;
-  bottom: 38px;
-  box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.65);
+  bottom: 4px;
+  box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.75);
 }
 
 /* Convert subcontainers back to regular vertical details list inside hover popout */
