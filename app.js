@@ -1769,7 +1769,6 @@ function renderTrackerGridOnly() {
 
     let detailsText = item.source || item.growth || item.details || item.desc || '';
     let notesText = item.notes || (item.time ? `⏱️ Timestamp: ${item.time}` : '');
-    let priceText = item.price ? `<span style="color: var(--accent-gold); font-weight: 600; font-size: 0.73rem;"> • ${item.price}</span>` : '';
     let dayText = item.day ? `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 2px;">📅 ${item.day}</div>` : '';
 
     card.innerHTML = `
@@ -1777,7 +1776,7 @@ function renderTrackerGridOnly() {
         <img src="${item.img}" alt="${item.name}" onerror="this.style.display='none';">
       </div>
       <div class="tracker-card-body">
-        <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}${priceText}</div>
+        <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
         <div class="tracker-card-name">${item.name}</div>
         ${dayText}
         <div class="tracker-card-source">${detailsText}</div>
