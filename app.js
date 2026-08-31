@@ -1442,7 +1442,7 @@ window.toggleTaskCompleted = function(day, taskId, event) {
    PERFECTION TRACKER ENGINE
    ========================================================================== */
 let activeTrackerSheet = localStorage.getItem('stardew_active_tracker_sheet') || 'shipped';
-let currentTrackerFilter = 'all';
+let currentTrackerFilter = localStorage.getItem(`stardew_tracker_filter_${activeTrackerSheet}`) || 'all';
 let currentTrackerSearch = '';
 
 // Mode switching (Calendar vs Tracker)
@@ -1487,7 +1487,7 @@ trackerTabBtns.forEach(btn => {
     btn.classList.add('active');
     activeTrackerSheet = btn.dataset.sheet;
     localStorage.setItem('stardew_active_tracker_sheet', activeTrackerSheet);
-    currentTrackerFilter = 'all';
+    currentTrackerFilter = localStorage.getItem(`stardew_tracker_filter_${activeTrackerSheet}`) || 'all';
     currentTrackerSearch = '';
     const searchInput = document.getElementById('tracker-search-input');
     if (searchInput) searchInput.value = '';
@@ -1648,6 +1648,7 @@ function renderTrackerSubfilters() {
     btn.innerText = f.label;
     btn.onclick = () => {
       currentTrackerFilter = f.key;
+      localStorage.setItem(`stardew_tracker_filter_${activeTrackerSheet}`, currentTrackerFilter);
       renderTrackerSubfilters();
       renderTrackerGridOnly();
     };
