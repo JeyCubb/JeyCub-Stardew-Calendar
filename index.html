@@ -6,7 +6,7 @@
   <title>Stardew Valley Tracker</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%2290%22>🌟</text></svg>">
+  <link rel="icon" type="image/png" href="favicon.png">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
@@ -15,7 +15,10 @@
   <!-- Header -->
   <header>
     <div style="display: flex; align-items: center; gap: 1.25rem;">
-      <h1>👩‍🌾 Stardew Valley Tracker</h1>
+      <h1 style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src="favicon.png" alt="Stardew Chicken" style="width: 32px; height: 32px; image-rendering: pixelated;">
+        Stardew Valley Tracker
+      </h1>
 
       <!-- Mode Switcher (Calendar vs Perfection Tracker) -->
       <div class="view-mode-selector" style="display: flex; background: rgba(0, 0, 0, 0.35); border: 1px solid var(--border-glass); border-radius: 10px; padding: 3px; gap: 4px;">
