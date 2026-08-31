@@ -5233,39 +5233,39 @@ const PERFECTION_TRACKER_DATA = {
     },
     {
       "id": "craft_wild_seeds_(sp)(spring_seeds)",
-      "name": "Wild Seeds (Sp)(Spring Seeds)",
+      "name": "Spring Seeds (Wild Seeds Sp)",
       "category": "Crafting Recipe",
       "desc": "An assortment of wild spring seeds. (Note: The crafted item is called \"Spring Seeds.\" The recipe produces 10 seeds per craft.)",
       "source": "An assortment of wild spring seeds. (Note: The crafted item is called \"Spring Seeds.\" The recipe produces 10 seeds per craft.)",
       "notes": "Ingredients: Wild Horseradish (1) Daffodil (1) Leek (1) Dandelion (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Seeds_(Sp)(Spring_Seeds).png"
+      "img": "https://stardewvalleywiki.com/mediawiki/images/3/39/Spring_Seeds.png"
     },
     {
       "id": "craft_wild_seeds_(su)(summer_seeds)",
-      "name": "Wild Seeds (Su)(Summer Seeds)",
+      "name": "Summer Seeds (Wild Seeds Su)",
       "category": "Crafting Recipe",
       "desc": "An assortment of wild summer seeds. (Note: The crafted item is called \"Summer Seeds.\" The recipe produces 10 seeds per craft.)",
       "source": "An assortment of wild summer seeds. (Note: The crafted item is called \"Summer Seeds.\" The recipe produces 10 seeds per craft.)",
       "notes": "Ingredients: Spice Berry (1) Grape (1) Sweet Pea (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Seeds_(Su)(Summer_Seeds).png"
+      "img": "https://stardewvalleywiki.com/mediawiki/images/c/c4/Summer_Seeds.png"
     },
     {
       "id": "craft_wild_seeds_(fa)(fall_seeds)",
-      "name": "Wild Seeds (Fa)(Fall Seeds)",
+      "name": "Fall Seeds (Wild Seeds Fa)",
       "category": "Crafting Recipe",
       "desc": "An assortment of wild fall seeds. (Note: The crafted item is called \"Fall Seeds.\" The recipe produces 10 seeds per craft.)",
       "source": "An assortment of wild fall seeds. (Note: The crafted item is called \"Fall Seeds.\" The recipe produces 10 seeds per craft.)",
       "notes": "Ingredients: Common Mushroom (1) Wild Plum (1) Hazelnut (1) Blackberry (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Seeds_(Fa)(Fall_Seeds).png"
+      "img": "https://stardewvalleywiki.com/mediawiki/images/5/55/Fall_Seeds.png"
     },
     {
       "id": "craft_wild_seeds_(wi)(winter_seeds)",
-      "name": "Wild Seeds (Wi)(Winter Seeds)",
+      "name": "Winter Seeds (Wild Seeds Wi)",
       "category": "Crafting Recipe",
       "desc": "An assortment of wild winter seeds. (Note: The crafted item is called \"Winter Seeds.\" The recipe produces 10 seeds per craft.)",
       "source": "An assortment of wild winter seeds. (Note: The crafted item is called \"Winter Seeds.\" The recipe produces 10 seeds per craft.)",
       "notes": "Ingredients: Winter Root (1) Crystal Fruit (1) Snow Yam (1) Crocus (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Seeds_(Wi)(Winter_Seeds).png"
+      "img": "https://stardewvalleywiki.com/mediawiki/images/d/dd/Winter_Seeds.png"
     },
     {
       "id": "craft_ancient_seeds",
