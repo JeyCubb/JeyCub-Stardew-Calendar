@@ -911,6 +911,16 @@ const PERFECTION_TRACKER_DATA = {
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wool.png"
     },
     {
+      "id": "ship_rabbits_foot",
+      "name": "Rabbit's Foot",
+      "season": "All Seasons",
+      "category": "Animal Product",
+      "source": "Coop (Happy Rabbit drop every few days) / Serpent drop (0.8%)",
+      "price": "565g",
+      "notes": "Enchanter's Bundle & Universal Loved Gift (except Penny). Required for Full Shipment.",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rabbit%27s_Foot.png"
+    },
+    {
       "id": "ship_cloth",
       "name": "Cloth",
       "season": "All Seasons",
