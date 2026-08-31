@@ -1559,6 +1559,24 @@ function renderTrackerSubfilters() {
       { key: 'animal', label: '🧀 Animal & Artisan' },
       { key: 'resource', label: '⛏️ Ores & Resources' }
     );
+  } else if (activeTrackerSheet === 'cooking') {
+    filters.push(
+      { key: 'buff', label: '⚡ Energy & Stat Buffs' },
+      { key: 'fish', label: '🐟 Seafood Dishes' },
+      { key: 'dessert', label: '🍰 Sweets & Desserts' },
+      { key: 'soup', label: '🍲 Soups & Stews' }
+    );
+  } else if (activeTrackerSheet === 'fish') {
+    filters.push(
+      { key: 'spring', label: '🌸 Spring' },
+      { key: 'summer', label: '☀️ Summer' },
+      { key: 'fall', label: '🍂 Fall' },
+      { key: 'winter', label: '❄️ Winter' },
+      { key: 'ocean', label: '🌊 Ocean' },
+      { key: 'river', label: '🏞️ River & Lake' },
+      { key: 'legendary', label: '👑 Legendary' },
+      { key: 'crabpot', label: '🦞 Crab Pot & Forage' }
+    );
   } else if (activeTrackerSheet === 'museum') {
     filters.push(
       { key: 'artifact', label: '🏺 Artifacts (42)' },
@@ -1614,6 +1632,14 @@ function renderTrackerSheet() {
     'shipped': {
       title: '📦 Produce & Forage Shipped',
       desc: 'Ship one of every farm crop, forage, animal product, artisan good, and resource for the Full Shipment milestone.'
+    },
+    'cooking': {
+      title: '🍳 Gourmet Chef (Cooking Recipes)',
+      desc: 'Cook every single recipe in the kitchen for the Gourmet Chef achievement and Perfection milestone.'
+    },
+    'fish': {
+      title: '🎣 Master Angler (Fish Caught)',
+      desc: 'Catch one of every species of fish across all seasons, weather, and secret waters in the valley and Ginger Island.'
     },
     'museum': {
       title: '🏺 Museum Collection Guide',
@@ -1678,6 +1704,26 @@ function renderTrackerGridOnly() {
         if (currentTrackerFilter === 'tree' && !c.includes('tree') && !c.includes('island') && !c.includes('special')) return false;
         if (currentTrackerFilter === 'animal' && !c.includes('animal') && !c.includes('artisan') && !c.includes('fish pond')) return false;
         if (currentTrackerFilter === 'resource' && !c.includes('resource') && !c.includes('ore') && !c.includes('bar') && !c.includes('tapper') && !c.includes('monster')) return false;
+      } else if (activeTrackerSheet === 'cooking') {
+        const n = (item.name || '').toLowerCase();
+        const notes = (item.notes || '').toLowerCase();
+        if (currentTrackerFilter === 'buff' && !notes.includes('buffs:')) return false;
+        if (currentTrackerFilter === 'fish' && !notes.includes('fish') && !notes.includes('salmon') && !notes.includes('eel') && !notes.includes('trout') && !notes.includes('calamari') && !notes.includes('squid') && !notes.includes('lobster') && !notes.includes('crab') && !notes.includes('shrimp') && !notes.includes('seafoam') && !notes.includes('carp') && !notes.includes('bass') && !notes.includes('chowder') && !notes.includes('algae')) return false;
+        if (currentTrackerFilter === 'dessert' && !n.includes('cake') && !n.includes('pie') && !n.includes('cookie') && !n.includes('pudding') && !n.includes('ice cream') && !n.includes('tart') && !n.includes('candy') && !n.includes('muffin') && !n.includes('bar') && !n.includes('cobbler')) return false;
+        if (currentTrackerFilter === 'soup' && !n.includes('soup') && !n.includes('stew') && !n.includes('broth') && !n.includes('chowder') && !n.includes('bisque') && !n.includes('hotpot') && !n.includes('curry')) return false;
+      } else if (activeTrackerSheet === 'fish') {
+        const s = (item.season || '').toLowerCase();
+        const src = (item.source || '').toLowerCase();
+        const name = (item.name || '').toLowerCase();
+        const legendaries = ['crimsonfish', 'angler', 'legend', 'glacierfish', 'mutant carp'];
+        if (currentTrackerFilter === 'spring' && !s.includes('spring') && !s.includes('all season')) return false;
+        if (currentTrackerFilter === 'summer' && !s.includes('summer') && !s.includes('all season')) return false;
+        if (currentTrackerFilter === 'fall' && !s.includes('fall') && !s.includes('all season')) return false;
+        if (currentTrackerFilter === 'winter' && !s.includes('winter') && !s.includes('all season')) return false;
+        if (currentTrackerFilter === 'ocean' && !src.includes('ocean') && !src.includes('saltwater') && !src.includes('submarine') && !src.includes('beach')) return false;
+        if (currentTrackerFilter === 'river' && !src.includes('river') && !src.includes('mountain') && !src.includes('lake') && !src.includes('forest') && !src.includes('pond') && !src.includes('freshwater')) return false;
+        if (currentTrackerFilter === 'legendary' && !legendaries.includes(name)) return false;
+        if (currentTrackerFilter === 'crabpot' && !['clam', 'cockle', 'crab', 'crayfish', 'lobster', 'mussel', 'oyster', 'periwinkle', 'shrimp', 'snail', 'seaweed', 'green algae', 'white algae', 'sea jelly', 'river jelly', 'cave jelly'].includes(name)) return false;
       } else if (activeTrackerSheet === 'museum') {
         const t = (item.type || '').toLowerCase();
         if (currentTrackerFilter === 'artifact' && !t.includes('artifact')) return false;
@@ -1711,8 +1757,17 @@ function renderTrackerGridOnly() {
     card.onclick = (e) => toggleTrackerItem(activeTrackerSheet, item.id, e);
 
     // Build badge & badge color
-    let badgeText = item.season || item.type || item.zone || '';
+    let badgeText = item.season || item.type || item.category || item.zone || '';
     let badgeColor = 'var(--accent-gold)';
+    if (badgeText.includes('Spring')) badgeColor = '#22c55e';
+    else if (badgeText.includes('Summer')) badgeColor = '#eab308';
+    else if (badgeText.includes('Fall')) badgeColor = '#f97316';
+    else if (badgeText.includes('Winter')) badgeColor = '#38bdf8';
+    else if (badgeText.includes('Mineral')) badgeColor = '#c084fc';
+    else if (badgeText.includes('Rarecrow')) badgeColor = '#fbbf24';
+    else if (badgeText.includes('Cooking')) badgeColor = '#fb923c';
+    else if (badgeText.includes('Fish')) badgeColor = '#38bdf8';
+
     if (badgeText.includes('Spring')) badgeColor = '#22c55e';
     else if (badgeText.includes('Summer')) badgeColor = '#eab308';
     else if (badgeText.includes('Fall')) badgeColor = '#f97316';

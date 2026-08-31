@@ -3589,5 +3589,1458 @@ const PERFECTION_TRACKER_DATA = {
       "details": "Journal Scrap #10: Dig with a hoe in the curved palm tree on the beach",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
     }
+  ],
+  "cooking": [
+    {
+      "id": "cook_fried_egg",
+      "name": "Fried Egg",
+      "category": "Cooking Recipe",
+      "desc": "Sunny-side up.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: .mw-parser-output .mw-parser-output .mw-parser-output .nametemplate img,.mw-parser-output .nametemplateinline img{max-width:none} Egg (1) | Buffs: 50 22",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Egg.png"
+    },
+    {
+      "id": "cook_omelet",
+      "name": "Omelet",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Omelet.png"
+    },
+    {
+      "id": "cook_salad",
+      "name": "Salad",
+      "category": "Cooking Recipe",
+      "desc": "A healthy garden salad.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Leek (1) Dandelion (1) Vinegar (1) | Buffs: 113 50",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Salad.png"
+    },
+    {
+      "id": "cook_cheese_cauliflower",
+      "name": "Cheese Cauliflower",
+      "category": "Cooking Recipe",
+      "desc": "It smells great!",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Cauliflower (1) Cheese (1) | Buffs: 138 62",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cheese_Cauliflower.png"
+    },
+    {
+      "id": "cook_baked_fish",
+      "name": "Baked Fish",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Baked_Fish.png"
+    },
+    {
+      "id": "cook_parsnip_soup",
+      "name": "Parsnip Soup",
+      "category": "Cooking Recipe",
+      "desc": "It's fresh and hearty.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Parsnip (1) Milk (1) Vinegar (1) | Buffs: 85 38",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Parsnip_Soup.png"
+    },
+    {
+      "id": "cook_vegetable_medley",
+      "name": "Vegetable Medley",
+      "category": "Cooking Recipe",
+      "desc": "This is very nutritious.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Tomato (1) Beet (1) | Buffs: 165 74",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Vegetable_Medley.png"
+    },
+    {
+      "id": "cook_complete_breakfast",
+      "name": "Complete Breakfast",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Complete_Breakfast.png"
+    },
+    {
+      "id": "cook_fried_calamari",
+      "name": "Fried Calamari",
+      "category": "Cooking Recipe",
+      "desc": "It's so chewy.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Squid (1) Wheat Flour (1) Oil (1) | Buffs: 80 36",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Calamari.png"
+    },
+    {
+      "id": "cook_strange_bun",
+      "name": "Strange Bun",
+      "category": "Cooking Recipe",
+      "desc": "What's inside?",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Wheat Flour (1) Periwinkle (1) Void Mayonnaise (1) | Buffs: 100 45",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Strange_Bun.png"
+    },
+    {
+      "id": "cook_lucky_lunch",
+      "name": "Lucky Lunch",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lucky_Lunch.png"
+    },
+    {
+      "id": "cook_fried_mushroom",
+      "name": "Fried Mushroom",
+      "category": "Cooking Recipe",
+      "desc": "Earthy and aromatic.",
+      "source": "How to Learn: Attack (+2)",
+      "notes": "Ingredients: Common Mushroom (1) Morel (1) Oil (1) | Buffs: 135 60",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Mushroom.png"
+    },
+    {
+      "id": "cook_pizza",
+      "name": "Pizza",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pizza.png"
+    },
+    {
+      "id": "cook_bean_hotpot",
+      "name": "Bean Hotpot",
+      "category": "Cooking Recipe",
+      "desc": "It sure is healthy.",
+      "source": "How to Learn: Max Energy (+30) Magnetism (+32)",
+      "notes": "Ingredients: Green Bean (2) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bean_Hotpot.png"
+    },
+    {
+      "id": "cook_glazed_yams",
+      "name": "Glazed Yams",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Glazed_Yams.png"
+    },
+    {
+      "id": "cook_carp_surprise",
+      "name": "Carp Surprise",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Carp_Surprise.png"
+    },
+    {
+      "id": "cook_hashbrowns",
+      "name": "Hashbrowns",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Hashbrowns.png"
+    },
+    {
+      "id": "cook_pancakes",
+      "name": "Pancakes",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pancakes.png"
+    },
+    {
+      "id": "cook_salmon_dinner",
+      "name": "Salmon Dinner",
+      "category": "Cooking Recipe",
+      "desc": "The lemon spritz makes it special.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Salmon (1) Amaranth (1) Kale (1) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon_Dinner.png"
+    },
+    {
+      "id": "cook_fish_taco",
+      "name": "Fish Taco",
+      "category": "Cooking Recipe",
+      "desc": "It smells delicious.",
+      "source": "How to Learn: Fishing (+2)",
+      "notes": "Ingredients: Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1) | Buffs: 165 74",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Taco.png"
+    },
+    {
+      "id": "cook_crispy_bass",
+      "name": "Crispy Bass",
+      "category": "Cooking Recipe",
+      "desc": "Wow, the breading is perfect.",
+      "source": "How to Learn: Magnetism (+64)",
+      "notes": "Ingredients: Largemouth Bass (1) Wheat Flour (1) Oil (1) | Buffs: 90 40",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crispy_Bass.png"
+    },
+    {
+      "id": "cook_pepper_poppers",
+      "name": "Pepper Poppers",
+      "category": "Cooking Recipe",
+      "desc": "Spicy breaded peppers filled with cheese.",
+      "source": "How to Learn: Farming (+2) Speed (+1)",
+      "notes": "Ingredients: Hot Pepper (1) Cheese (1) | Buffs: 130 58",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pepper_Poppers.png"
+    },
+    {
+      "id": "cook_bread",
+      "name": "Bread",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bread.png"
+    },
+    {
+      "id": "cook_tom_kha_soup",
+      "name": "Tom Kha Soup",
+      "category": "Cooking Recipe",
+      "desc": "These flavors are incredible!",
+      "source": "How to Learn: Farming (+2) Max Energy (+30)",
+      "notes": "Ingredients: Coconut (1) Shrimp (1) Common Mushroom (1) | Buffs: 175 78",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tom_Kha_Soup.png"
+    },
+    {
+      "id": "cook_trout_soup",
+      "name": "Trout Soup",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Trout_Soup.png"
+    },
+    {
+      "id": "cook_chocolate_cake",
+      "name": "Chocolate Cake",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Chocolate_Cake.png"
+    },
+    {
+      "id": "cook_pink_cake",
+      "name": "Pink Cake",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pink_Cake.png"
+    },
+    {
+      "id": "cook_rhubarb_pie",
+      "name": "Rhubarb Pie",
+      "category": "Cooking Recipe",
+      "desc": "Mmm, tangy and sweet!",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Rhubarb (1) Wheat Flour (1) Sugar (1) | Buffs: 215 96",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rhubarb_Pie.png"
+    },
+    {
+      "id": "cook_cookie",
+      "name": "Cookie",
+      "category": "Cooking Recipe",
+      "desc": "Very chewy.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1) | Buffs: 90 40",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cookie.png"
+    },
+    {
+      "id": "cook_spaghetti",
+      "name": "Spaghetti",
+      "category": "Cooking Recipe",
+      "desc": "An old favorite.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Wheat Flour (1) Tomato (1) | Buffs: 75 33",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Spaghetti.png"
+    },
+    {
+      "id": "cook_fried_eel",
+      "name": "Fried Eel",
+      "category": "Cooking Recipe",
+      "desc": "Greasy but flavorful.",
+      "source": "How to Learn: Luck (+1)",
+      "notes": "Ingredients: Eel (1) Oil (1) | Buffs: 75 33",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Eel.png"
+    },
+    {
+      "id": "cook_spicy_eel",
+      "name": "Spicy Eel",
+      "category": "Cooking Recipe",
+      "desc": "It's really spicy! Be careful.",
+      "source": "How to Learn: Luck (+1) Speed (+1)",
+      "notes": "Ingredients: Eel (1) Hot Pepper (1) | Buffs: 115 51",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Spicy_Eel.png"
+    },
+    {
+      "id": "cook_sashimi",
+      "name": "Sashimi",
+      "category": "Cooking Recipe",
+      "desc": "Raw fish sliced into thin pieces.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Any Fish (1) | Buffs: 75 33",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sashimi.png"
+    },
+    {
+      "id": "cook_maki_roll",
+      "name": "Maki Roll",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Maki_Roll.png"
+    },
+    {
+      "id": "cook_tortilla",
+      "name": "Tortilla",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tortilla.png"
+    },
+    {
+      "id": "cook_red_plate",
+      "name": "Red Plate",
+      "category": "Cooking Recipe",
+      "desc": "Full of antioxidants.",
+      "source": "How to Learn: Max Energy (+50)",
+      "notes": "Ingredients: Red Cabbage (1) Radish (1) | Buffs: 240 108",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Plate.png"
+    },
+    {
+      "id": "cook_eggplant_parmesan",
+      "name": "Eggplant Parmesan",
+      "category": "Cooking Recipe",
+      "desc": "Tangy, cheesy, and wonderful.",
+      "source": "How to Learn: Mining (+1) Defense (+3)",
+      "notes": "Ingredients: Eggplant (1) Tomato (1) | Buffs: 175 78",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Eggplant_Parmesan.png"
+    },
+    {
+      "id": "cook_rice_pudding",
+      "name": "Rice Pudding",
+      "category": "Cooking Recipe",
+      "desc": "It's creamy, sweet, and fun to eat.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Milk (1) Sugar (1) Rice (1) | Buffs: 115 51",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rice_Pudding.png"
+    },
+    {
+      "id": "cook_ice_cream",
+      "name": "Ice Cream",
+      "category": "Cooking Recipe",
+      "desc": "It's hard to find someone who doesn't like this.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Milk (1) Sugar (1) | Buffs: 100 45",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Cream.png"
+    },
+    {
+      "id": "cook_blueberry_tart",
+      "name": "Blueberry Tart",
+      "category": "Cooking Recipe",
+      "desc": "It's subtle and refreshing.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Blueberry (1) Wheat Flour (1) Sugar (1) Egg (1) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blueberry_Tart.png"
+    },
+    {
+      "id": "cook_autumn's_bounty",
+      "name": "Autumn's Bounty",
+      "category": "Cooking Recipe",
+      "desc": "A taste of the season.",
+      "source": "How to Learn: Foraging (+2) Defense (+2)",
+      "notes": "Ingredients: Yam (1) Pumpkin (1) | Buffs: 220 99",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Autumn's_Bounty.png"
+    },
+    {
+      "id": "cook_pumpkin_soup",
+      "name": "Pumpkin Soup",
+      "category": "Cooking Recipe",
+      "desc": "A seasonal favorite.",
+      "source": "How to Learn: Defense (+2) Luck (+2)",
+      "notes": "Ingredients: Pumpkin (1) Milk (1) | Buffs: 200 90",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Soup.png"
+    },
+    {
+      "id": "cook_super_meal",
+      "name": "Super Meal",
+      "category": "Cooking Recipe",
+      "desc": "It's a really energizing meal.",
+      "source": "How to Learn: Max Energy (+40) Speed (+1)",
+      "notes": "Ingredients: Bok Choy (1) Cranberries (1) Artichoke (1) | Buffs: 160 72",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Meal.png"
+    },
+    {
+      "id": "cook_cranberry_sauce",
+      "name": "Cranberry Sauce",
+      "category": "Cooking Recipe",
+      "desc": "A festive treat.",
+      "source": "How to Learn: Mining (+2)",
+      "notes": "Ingredients: Cranberries (1) Sugar (1) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Sauce.png"
+    },
+    {
+      "id": "cook_stuffing",
+      "name": "Stuffing",
+      "category": "Cooking Recipe",
+      "desc": "Ahh... the smell of warm bread and sage.",
+      "source": "How to Learn: Defense (+2)",
+      "notes": "Ingredients: Bread (1) Cranberries (1) Hazelnut (1) | Buffs: 170 76",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stuffing.png"
+    },
+    {
+      "id": "cook_farmer's_lunch",
+      "name": "Farmer's Lunch",
+      "category": "Cooking Recipe",
+      "desc": "This'll keep you going.",
+      "source": "How to Learn: Farming (+3)",
+      "notes": "Ingredients: Omelet (1) Parsnip (1) | Buffs: 200 90",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Farmer's_Lunch.png"
+    },
+    {
+      "id": "cook_survival_burger",
+      "name": "Survival Burger",
+      "category": "Cooking Recipe",
+      "desc": "A convenient snack for the explorer.",
+      "source": "How to Learn: Foraging (+3)",
+      "notes": "Ingredients: Bread (1) Cave Carrot (1) Eggplant (1) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Survival_Burger.png"
+    },
+    {
+      "id": "cook_dish_o'_the_sea",
+      "name": "Dish O' The Sea",
+      "category": "Cooking Recipe",
+      "desc": "This'll keep you warm in the cold sea air.",
+      "source": "How to Learn: Fishing (+3)",
+      "notes": "Ingredients: Sardine (2) Hashbrowns (1) | Buffs: 150 67",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Dish_O'_The_Sea.png"
+    },
+    {
+      "id": "cook_miner's_treat",
+      "name": "Miner's Treat",
+      "category": "Cooking Recipe",
+      "desc": "This should keep your energy up.",
+      "source": "How to Learn: Mining (+3) Magnetism (+32)",
+      "notes": "Ingredients: Cave Carrot (2) Sugar (1) Milk (1) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Miner's_Treat.png"
+    },
+    {
+      "id": "cook_roots_platter",
+      "name": "Roots Platter",
+      "category": "Cooking Recipe",
+      "desc": "This'll get you digging for more.",
+      "source": "How to Learn: Attack (+3)",
+      "notes": "Ingredients: Cave Carrot (1) Winter Root (1) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Roots_Platter.png"
+    },
+    {
+      "id": "cook_triple_shot_espresso",
+      "name": "Triple Shot Espresso",
+      "category": "Cooking Recipe",
+      "desc": "It's more potent than regular coffee!",
+      "source": "How to Learn: Speed (+1)",
+      "notes": "Ingredients: Coffee (3) | Buffs: 8 3",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Triple_Shot_Espresso.png"
+    },
+    {
+      "id": "cook_seafoam_pudding",
+      "name": "Seafoam Pudding",
+      "category": "Cooking Recipe",
+      "desc": "This briny pudding will really get you into the maritime mindset!",
+      "source": "How to Learn: Fishing (+4)",
+      "notes": "Ingredients: Flounder (1) Midnight Carp (1) Squid Ink (1) | Buffs: 175 78",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Seafoam_Pudding.png"
+    },
+    {
+      "id": "cook_algae_soup",
+      "name": "Algae Soup",
+      "category": "Cooking Recipe",
+      "desc": "It's a little slimy.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Green Algae (4) | Buffs: 75 33",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Algae_Soup.png"
+    },
+    {
+      "id": "cook_pale_broth",
+      "name": "Pale Broth",
+      "category": "Cooking Recipe",
+      "desc": "A delicate broth with a hint of sulfur.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: White Algae (2) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pale_Broth.png"
+    },
+    {
+      "id": "cook_plum_pudding",
+      "name": "Plum Pudding",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Plum_Pudding.png"
+    },
+    {
+      "id": "cook_artichoke_dip",
+      "name": "Artichoke Dip",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Artichoke_Dip.png"
+    },
+    {
+      "id": "cook_stir_fry",
+      "name": "Stir Fry",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stir_Fry.png"
+    },
+    {
+      "id": "cook_roasted_hazelnuts",
+      "name": "Roasted Hazelnuts",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Roasted_Hazelnuts.png"
+    },
+    {
+      "id": "cook_pumpkin_pie",
+      "name": "Pumpkin Pie",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Pie.png"
+    },
+    {
+      "id": "cook_radish_salad",
+      "name": "Radish Salad",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Radish_Salad.png"
+    },
+    {
+      "id": "cook_fruit_salad",
+      "name": "Fruit Salad",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fruit_Salad.png"
+    },
+    {
+      "id": "cook_blackberry_cobbler",
+      "name": "Blackberry Cobbler",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blackberry_Cobbler.png"
+    },
+    {
+      "id": "cook_cranberry_candy",
+      "name": "Cranberry Candy",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Candy.png"
+    },
+    {
+      "id": "cook_bruschetta",
+      "name": "Bruschetta",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bruschetta.png"
+    },
+    {
+      "id": "cook_coleslaw",
+      "name": "Coleslaw",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Coleslaw.png"
+    },
+    {
+      "id": "cook_fiddlehead_risotto",
+      "name": "Fiddlehead Risotto",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fiddlehead_Risotto.png"
+    },
+    {
+      "id": "cook_poppyseed_muffin",
+      "name": "Poppyseed Muffin",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Poppyseed_Muffin.png"
+    },
+    {
+      "id": "cook_chowder",
+      "name": "Chowder",
+      "category": "Cooking Recipe",
+      "desc": "A perfect way to warm yourself after a cold night at sea.",
+      "source": "How to Learn: Fishing (+1)",
+      "notes": "Ingredients: Clam (1) Milk (1) | Buffs: 225 101",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Chowder.png"
+    },
+    {
+      "id": "cook_fish_stew",
+      "name": "Fish Stew",
+      "category": "Cooking Recipe",
+      "desc": "It smells a lot like the sea. Tastes better, though.",
+      "source": "How to Learn: Fishing (+3)",
+      "notes": "Ingredients: Crayfish (1) Mussel (1) Periwinkle (1) Tomato (1) | Buffs: 225 101",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Stew.png"
+    },
+    {
+      "id": "cook_escargot",
+      "name": "Escargot",
+      "category": "Cooking Recipe",
+      "desc": "Butter-soaked snails cooked to perfection.",
+      "source": "How to Learn: Fishing (+2)",
+      "notes": "Ingredients: Snail (1) Garlic (1) | Buffs: 225 101",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Escargot.png"
+    },
+    {
+      "id": "cook_lobster_bisque",
+      "name": "Lobster Bisque",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster_Bisque.png"
+    },
+    {
+      "id": "cook_maple_bar",
+      "name": "Maple Bar",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Maple_Bar.png"
+    },
+    {
+      "id": "cook_crab_cakes",
+      "name": "Crab Cakes",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crab_Cakes.png"
+    },
+    {
+      "id": "cook_shrimp_cocktail",
+      "name": "Shrimp Cocktail",
+      "category": "Cooking Recipe",
+      "desc": "",
+      "source": "How to Learn: Kitchen / Queen of Sauce",
+      "notes": "Ingredients: ",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp_Cocktail.png"
+    },
+    {
+      "id": "cook_ginger_ale",
+      "name": "Ginger Ale",
+      "category": "Cooking Recipe",
+      "desc": "A zesty soda known for its soothing effect on the stomach.",
+      "source": "How to Learn: Luck (+1)",
+      "notes": "Ingredients: Ginger (3) Sugar (1) | Buffs: 63 28",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ginger_Ale.png"
+    },
+    {
+      "id": "cook_banana_pudding",
+      "name": "Banana Pudding",
+      "category": "Cooking Recipe",
+      "desc": "A creamy dessert with a wonderful tropical flavor.",
+      "source": "How to Learn: Mining (+1) Luck (+1) Defense (+1)",
+      "notes": "Ingredients: Banana (1) Milk (1) Sugar (1) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Banana_Pudding.png"
+    },
+    {
+      "id": "cook_mango_sticky_rice",
+      "name": "Mango Sticky Rice",
+      "category": "Cooking Recipe",
+      "desc": "Sweet mango and coconut transforms this rice into something very special.",
+      "source": "How to Learn: Defense (+3)",
+      "notes": "Ingredients: Mango (1) Coconut (1) Rice (1) | Buffs: 113 50",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mango_Sticky_Rice.png"
+    },
+    {
+      "id": "cook_poi",
+      "name": "Poi",
+      "category": "Cooking Recipe",
+      "desc": "A traditional food with a delicate, sweet flavor when eaten fresh.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Taro Root (4) | Buffs: 75 33",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Poi.png"
+    },
+    {
+      "id": "cook_tropical_curry",
+      "name": "Tropical Curry",
+      "category": "Cooking Recipe",
+      "desc": "An exotic, fragrant curry served in a pineapple bowl.",
+      "source": "How to Learn: Foraging (+4)",
+      "notes": "Ingredients: Coconut (1) Pineapple (1) Hot Pepper (1) | Buffs: 150 67",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tropical_Curry.png"
+    },
+    {
+      "id": "cook_squid_ink_ravioli",
+      "name": "Squid Ink Ravioli",
+      "category": "Cooking Recipe",
+      "desc": "Temporarily protects from debuffs.",
+      "source": "How to Learn: Mining (+1) Squid Ink Ravioli Buff",
+      "notes": "Ingredients: Squid Ink (1) Wheat Flour (1) Tomato (1) | Buffs: 125 56",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Squid_Ink_Ravioli.png"
+    },
+    {
+      "id": "cook_moss_soup",
+      "name": "Moss Soup",
+      "category": "Cooking Recipe",
+      "desc": "It's thick and slimy, but edible.",
+      "source": "How to Learn: N/A",
+      "notes": "Ingredients: Moss (20) | Buffs: 70 31",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Moss_Soup.png"
+    }
+  ],
+  "fish": [
+    {
+      "id": "fish_pufferfish",
+      "name": "Pufferfish",
+      "season": "Summer",
+      "category": "Fish",
+      "desc": "Inflates when threatened.",
+      "source": "Location: Ocean \u2022 Ginger Island (12pm \u2013 4pm)",
+      "notes": "Season: Summer | Weather: Sun",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pufferfish.png"
+    },
+    {
+      "id": "fish_anchovy",
+      "name": "Anchovy",
+      "season": "Spring \u2022 Fall",
+      "category": "Fish",
+      "desc": "A small silver fish found in the ocean.",
+      "source": "Location: Ocean (Any)",
+      "notes": "Season: Spring \u2022 Fall | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Anchovy.png"
+    },
+    {
+      "id": "fish_tuna",
+      "name": "Tuna",
+      "season": "Summer \u2022 Winter Ginger Island (except Island North): All",
+      "category": "Fish",
+      "desc": "A large fish that lives in the ocean.",
+      "source": "Location: Ocean \u2022 Ginger Island (6am \u2013 7pm)",
+      "notes": "Season: Summer \u2022 Winter Ginger Island (except Island North): All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tuna.png"
+    },
+    {
+      "id": "fish_sardine",
+      "name": "Sardine",
+      "season": "Spring \u2022 Fall \u2022 Winter",
+      "category": "Fish",
+      "desc": "A common ocean fish.",
+      "source": "Location: Ocean (6am \u2013 7pm)",
+      "notes": "Season: Spring \u2022 Fall \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sardine.png"
+    },
+    {
+      "id": "fish_bream",
+      "name": "Bream",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A fairly common river fish that becomes active at night.",
+      "source": "Location: River (6pm \u2013 2am)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bream.png"
+    },
+    {
+      "id": "fish_largemouth_bass",
+      "name": "Largemouth Bass",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A popular fish that lives in lakes.",
+      "source": "Location: Mountain Lake \u2022 Wilderness Farm (6am \u2013 7pm)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Largemouth_Bass.png"
+    },
+    {
+      "id": "fish_smallmouth_bass",
+      "name": "Smallmouth Bass",
+      "season": "Spring \u2022 Fall",
+      "category": "Fish",
+      "desc": "A freshwater fish that is very sensitive to pollution.",
+      "source": "Location: Town River \u2022 Forest Pond (Any)",
+      "notes": "Season: Spring \u2022 Fall | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Smallmouth_Bass.png"
+    },
+    {
+      "id": "fish_rainbow_trout",
+      "name": "Rainbow Trout",
+      "season": "Summer",
+      "category": "Fish",
+      "desc": "A freshwater trout with colorful markings.",
+      "source": "Location: River \u2022 Mountain Lake (6am \u2013 7pmAnytime during Trout Derby)",
+      "notes": "Season: Summer | Weather: SunAny during Trout Derby",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rainbow_Trout.png"
+    },
+    {
+      "id": "fish_salmon",
+      "name": "Salmon",
+      "season": "Fall",
+      "category": "Fish",
+      "desc": "Swims upstream to lay its eggs.",
+      "source": "Location: River (6am \u2013 7pmAny in Waterfalls)",
+      "notes": "Season: Fall | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon.png"
+    },
+    {
+      "id": "fish_walleye",
+      "name": "Walleye",
+      "season": "Fall \u2022 Winter with Rain Totem",
+      "category": "Fish",
+      "desc": "A freshwater fish caught at night.",
+      "source": "Location: River \u2022 Mountain Lake \u2022 Forest Pond \u2022 Forest Farm Pond (12pm \u2013 2am)",
+      "notes": "Season: Fall \u2022 Winter with Rain Totem | Weather: Rain",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Walleye.png"
+    },
+    {
+      "id": "fish_perch",
+      "name": "Perch",
+      "season": "Winter",
+      "category": "Fish",
+      "desc": "A freshwater fish of the winter.",
+      "source": "Location: River \u2022 Mountain Lake \u2022 Forest Pond (Any)",
+      "notes": "Season: Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Perch.png"
+    },
+    {
+      "id": "fish_carp",
+      "name": "Carp",
+      "season": "Spring \u2022 Summer \u2022 Fall in The Mountain Lake All in Secret Woods, The Sewers, or Mutant Bug Lair",
+      "category": "Fish",
+      "desc": "A common pond fish.",
+      "source": "Location: Mountain Lake \u2022 Secret Woods \u2022 The Sewers \u2022 Mutant Bug Lair (Any)",
+      "notes": "Season: Spring \u2022 Summer \u2022 Fall in The Mountain Lake All in Secret Woods, The Sewers, or Mutant Bug Lair | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Carp.png"
+    },
+    {
+      "id": "fish_catfish",
+      "name": "Catfish",
+      "season": "Spring \u2022 Fall Secret Woods/Witch's Swamp: Spring \u2022 Summer \u2022 Fall Only with Rain Totem: Winter",
+      "category": "Fish",
+      "desc": "An uncommon fish found in streams.",
+      "source": "Location: River \u2022 Secret Woods \u2022 Witch's Swamp (6am - 12am)",
+      "notes": "Season: Spring \u2022 Fall Secret Woods/Witch's Swamp: Spring \u2022 Summer \u2022 Fall Only with Rain Totem: Winter | Weather: Rain",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Catfish.png"
+    },
+    {
+      "id": "fish_pike",
+      "name": "Pike",
+      "season": "Summer \u2022 Winter",
+      "category": "Fish",
+      "desc": "A freshwater fish that's difficult to catch.",
+      "source": "Location: River \u2022 Forest Pond (Any)",
+      "notes": "Season: Summer \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pike.png"
+    },
+    {
+      "id": "fish_sunfish",
+      "name": "Sunfish",
+      "season": "Spring \u2022 Summer",
+      "category": "Fish",
+      "desc": "A common river fish.",
+      "source": "Location: River (6am \u2013 7pm)",
+      "notes": "Season: Spring \u2022 Summer | Weather: Sun \u2022 Wind",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sunfish.png"
+    },
+    {
+      "id": "fish_red_mullet",
+      "name": "Red Mullet",
+      "season": "Summer \u2022 Winter",
+      "category": "Fish",
+      "desc": "Long ago these were kept as pets.",
+      "source": "Location: Ocean (6am \u2013 7pm)",
+      "notes": "Season: Summer \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Mullet.png"
+    },
+    {
+      "id": "fish_herring",
+      "name": "Herring",
+      "season": "Spring \u2022 Winter",
+      "category": "Fish",
+      "desc": "A common ocean fish.",
+      "source": "Location: Ocean (Any)",
+      "notes": "Season: Spring \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Herring.png"
+    },
+    {
+      "id": "fish_eel",
+      "name": "Eel",
+      "season": "Spring \u2022 Fall",
+      "category": "Fish",
+      "desc": "A long, slippery little fish.",
+      "source": "Location: Ocean (4pm \u2013 2am)",
+      "notes": "Season: Spring \u2022 Fall | Weather: Rain",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Eel.png"
+    },
+    {
+      "id": "fish_octopus",
+      "name": "Octopus",
+      "season": "Summer \u2022 Winter (during Night Market (15-17)) All (Ginger Island)",
+      "category": "Fish",
+      "desc": "A mysterious and intelligent creature.",
+      "source": "Location: The Beach \u2022 Ginger Island \u2022 Submarine at Night Market (6am \u2013 1pmAnytime during Night Market Submarine Ride (5pm - 2am))",
+      "notes": "Season: Summer \u2022 Winter (during Night Market (15-17)) All (Ginger Island) | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Octopus.png"
+    },
+    {
+      "id": "fish_red_snapper",
+      "name": "Red Snapper",
+      "season": "Summer \u2022 Fall \u2022 Winter with Rain Totem",
+      "category": "Fish",
+      "desc": "A popular fish with a nice red color.",
+      "source": "Location: Ocean \u2022 Beach Farm (6am \u2013 7pm)",
+      "notes": "Season: Summer \u2022 Fall \u2022 Winter with Rain Totem | Weather: Rain",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Snapper.png"
+    },
+    {
+      "id": "fish_squid",
+      "name": "Squid",
+      "season": "Winter",
+      "category": "Fish",
+      "desc": "A deep sea creature that can grow to enormous size.",
+      "source": "Location: Ocean (6pm \u2013 2amAnytime during SquidFest)",
+      "notes": "Season: Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Squid.png"
+    },
+    {
+      "id": "fish_seaweed",
+      "name": "Seaweed",
+      "season": "All",
+      "category": "Fish",
+      "desc": "It can be used in cooking.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Seaweed.png"
+    },
+    {
+      "id": "fish_green_algae",
+      "name": "Green Algae",
+      "season": "All",
+      "category": "Fish",
+      "desc": "It's really slimy.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Green_Algae.png"
+    },
+    {
+      "id": "fish_sea_cucumber",
+      "name": "Sea Cucumber",
+      "season": "Fall \u2022 Winter",
+      "category": "Fish",
+      "desc": "A slippery, slimy creature found on the ocean floor.",
+      "source": "Location: Ocean \u2022 Submarine at Night Market (6am \u2013 7pmAnytime during Night Market (5pm - 2am))",
+      "notes": "Season: Fall \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sea_Cucumber.png"
+    },
+    {
+      "id": "fish_super_cucumber",
+      "name": "Super Cucumber",
+      "season": "Summer \u2022 Fall \u2022 Winter during Night Market (15-17)",
+      "category": "Fish",
+      "desc": "A rare, purple variety of sea cucumber.",
+      "source": "Location: Ocean \u2022 Ginger Island \u2022 Submarine at Night Market (6pm \u2013 2amAnytime during Night Market (5pm - 2am))",
+      "notes": "Season: Summer \u2022 Fall \u2022 Winter during Night Market (15-17) | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Cucumber.png"
+    },
+    {
+      "id": "fish_ghostfish",
+      "name": "Ghostfish",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A pale, blind fish found in underground lakes.",
+      "source": "Location: Floors 20 and 60 of The Mines (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ghostfish.png"
+    },
+    {
+      "id": "fish_white_algae",
+      "name": "White Algae",
+      "season": "All",
+      "category": "Fish",
+      "desc": "It's super slimy.",
+      "source": "Location: The Mines (floors 20 & 60) \u2022 The Sewers \u2022 Mutant Bug Lair \u2022 Witch's Swamp (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/White_Algae.png"
+    },
+    {
+      "id": "fish_stonefish",
+      "name": "Stonefish",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A bizarre fish that's shaped like a brick.",
+      "source": "Location: Floor 20 of The Mines (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stonefish.png"
+    },
+    {
+      "id": "fish_crimsonfish",
+      "name": "Crimsonfish",
+      "season": "Summer",
+      "category": "Fish",
+      "desc": "Lives deep in the ocean but likes to lay its eggs in the warm summer water.",
+      "source": "Location: Ocean (Any)",
+      "notes": "Season: Summer | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crimsonfish.png"
+    },
+    {
+      "id": "fish_angler",
+      "name": "Angler",
+      "season": "Fall",
+      "category": "Fish",
+      "desc": "Uses a bioluminescent dangler to attract prey.",
+      "source": "Location: Pelican Town (Any)",
+      "notes": "Season: Fall | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Angler.png"
+    },
+    {
+      "id": "fish_ice_pip",
+      "name": "Ice Pip",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A rare fish that thrives in extremely cold conditions.",
+      "source": "Location: The Mines, Floor 60 (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Pip.png"
+    },
+    {
+      "id": "fish_lava_eel",
+      "name": "Lava Eel",
+      "season": "All",
+      "category": "Fish",
+      "desc": "It can somehow survive in pools of red-hot lava.",
+      "source": "Location: Floor 100 of The Mines \u2022 Volcano Caldera (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lava_Eel.png"
+    },
+    {
+      "id": "fish_legend",
+      "name": "Legend",
+      "season": "Spring",
+      "category": "Fish",
+      "desc": "The king of all fish! They said he'd never be caught.",
+      "source": "Location: Mountain Lake (Any)",
+      "notes": "Season: Spring | Weather: Rain",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Legend.png"
+    },
+    {
+      "id": "fish_sandfish",
+      "name": "Sandfish",
+      "season": "All",
+      "category": "Fish",
+      "desc": "It tries to hide using camouflage.",
+      "source": "Location: The Desert (6am \u2013 8pm)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sandfish.png"
+    },
+    {
+      "id": "fish_scorpion_carp",
+      "name": "Scorpion Carp",
+      "season": "All",
+      "category": "Fish",
+      "desc": "It's like a regular carp but with a sharp stinger.",
+      "source": "Location: The Desert (6am \u2013 8pm)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Scorpion_Carp.png"
+    },
+    {
+      "id": "fish_flounder",
+      "name": "Flounder",
+      "season": "Spring \u2022 Summer",
+      "category": "Fish",
+      "desc": "It lives on the bottom, so both eyes are on top of its head.",
+      "source": "Location: Ocean \u2022 Ginger Island (6am \u2013 8pm)",
+      "notes": "Season: Spring \u2022 Summer | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Flounder.png"
+    },
+    {
+      "id": "fish_midnight_carp",
+      "name": "Midnight Carp",
+      "season": "Fall \u2022 Winter",
+      "category": "Fish",
+      "desc": "This shy fish only feels comfortable at night.",
+      "source": "Location: Mountain Lake \u2022 Forest Pond \u2022 Ginger Island North & West (freshwater) (10pm \u2013 2am)",
+      "notes": "Season: Fall \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Midnight_Carp.png"
+    },
+    {
+      "id": "fish_mutant_carp",
+      "name": "Mutant Carp",
+      "season": "All",
+      "category": "Fish",
+      "desc": "The strange waters of the sewer turned this carp into a monstrosity.",
+      "source": "Location: The Sewers (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mutant_Carp.png"
+    },
+    {
+      "id": "fish_sturgeon",
+      "name": "Sturgeon",
+      "season": "Summer \u2022 Winter",
+      "category": "Fish",
+      "desc": "An ancient bottom-feeder with a dwindling population. Females can live up to 150 years.",
+      "source": "Location: Mountain Lake (6am \u2013 7pm)",
+      "notes": "Season: Summer \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sturgeon.png"
+    },
+    {
+      "id": "fish_tiger_trout",
+      "name": "Tiger Trout",
+      "season": "Fall \u2022 Winter",
+      "category": "Fish",
+      "desc": "A rare hybrid trout that cannot bear offspring of its own.",
+      "source": "Location: River (6am \u2013 7pm)",
+      "notes": "Season: Fall \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tiger_Trout.png"
+    },
+    {
+      "id": "fish_bullhead",
+      "name": "Bullhead",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A relative of the catfish that eats a variety of foods off the lake bottom.",
+      "source": "Location: Mountain Lake (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bullhead.png"
+    },
+    {
+      "id": "fish_tilapia",
+      "name": "Tilapia",
+      "season": "Summer \u2022 Fall",
+      "category": "Fish",
+      "desc": "A primarily vegetarian fish that prefers warm water.",
+      "source": "Location: Ocean \u2022 Ginger Island (6am \u2013 2pm)",
+      "notes": "Season: Summer \u2022 Fall | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tilapia.png"
+    },
+    {
+      "id": "fish_chub",
+      "name": "Chub",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A common freshwater fish known for its voracious appetite.",
+      "source": "Location: Mountain Lake \u2022 Forest River (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Chub.png"
+    },
+    {
+      "id": "fish_dorado",
+      "name": "Dorado",
+      "season": "Summer",
+      "category": "Fish",
+      "desc": "A fierce carnivore with brilliant orange scales.",
+      "source": "Location: Forest River (6am \u2013 7pm)",
+      "notes": "Season: Summer | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Dorado.png"
+    },
+    {
+      "id": "fish_albacore",
+      "name": "Albacore",
+      "season": "Fall \u2022 Winter",
+      "category": "Fish",
+      "desc": "Prefers temperature \"edges\" where cool and warm water meet.",
+      "source": "Location: Ocean (6am \u2013 11am6pm \u2013 2am)",
+      "notes": "Season: Fall \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Albacore.png"
+    },
+    {
+      "id": "fish_shad",
+      "name": "Shad",
+      "season": "Spring \u2022 Summer \u2022 Fall",
+      "category": "Fish",
+      "desc": "Lives in a school at sea, but returns to the rivers to spawn.",
+      "source": "Location: River (9am \u2013 2am)",
+      "notes": "Season: Spring \u2022 Summer \u2022 Fall | Weather: Rain",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Shad.png"
+    },
+    {
+      "id": "fish_lingcod",
+      "name": "Lingcod",
+      "season": "Winter",
+      "category": "Fish",
+      "desc": "A fearsome predator that will eat almost anything it can cram into its mouth.",
+      "source": "Location: River \u2022 Mountain Lake (Any)",
+      "notes": "Season: Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lingcod.png"
+    },
+    {
+      "id": "fish_halibut",
+      "name": "Halibut",
+      "season": "Spring \u2022 Summer \u2022 Winter",
+      "category": "Fish",
+      "desc": "A flat fish that lives on the ocean floor.",
+      "source": "Location: Ocean (6am \u2013 11am7pm \u2013 2am)",
+      "notes": "Season: Spring \u2022 Summer \u2022 Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Halibut.png"
+    },
+    {
+      "id": "fish_lobster",
+      "name": "Lobster",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A large ocean-dwelling crustacean with a strong tail.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster.png"
+    },
+    {
+      "id": "fish_crayfish",
+      "name": "Crayfish",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A small freshwater relative of the lobster.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crayfish.png"
+    },
+    {
+      "id": "fish_crab",
+      "name": "Crab",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A marine crustacean with two powerful pincers.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crab.png"
+    },
+    {
+      "id": "fish_cockle",
+      "name": "Cockle",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A common saltwater clam.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cockle.png"
+    },
+    {
+      "id": "fish_mussel",
+      "name": "Mussel",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A common bivalve that often lives in clusters.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mussel.png"
+    },
+    {
+      "id": "fish_shrimp",
+      "name": "Shrimp",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A scavenger that feeds off the ocean floor. Widely prized for its meat.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp.png"
+    },
+    {
+      "id": "fish_snail",
+      "name": "Snail",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A wide-ranging mollusc that lives in a spiral shell.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Snail.png"
+    },
+    {
+      "id": "fish_periwinkle",
+      "name": "Periwinkle",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A tiny freshwater snail that lives in a blue shell.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Periwinkle.png"
+    },
+    {
+      "id": "fish_oyster",
+      "name": "Oyster",
+      "season": "All",
+      "category": "Fish",
+      "desc": "Constantly filters water to find food. In the process, it removes dangerous toxins from the environment.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Oyster.png"
+    },
+    {
+      "id": "fish_woodskip",
+      "name": "Woodskip",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A very sensitive fish that can only live in pools deep in the forest.",
+      "source": "Location: Secret Woods \u2022 Forest Farm (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Woodskip.png"
+    },
+    {
+      "id": "fish_glacierfish",
+      "name": "Glacierfish",
+      "season": "Winter",
+      "category": "Fish",
+      "desc": "Builds a nest on the underside of glaciers.",
+      "source": "Location: Cindersap Forest (Any)",
+      "notes": "Season: Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Glacierfish.png"
+    },
+    {
+      "id": "fish_void_salmon",
+      "name": "Void Salmon",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A salmon, twisted by void energy. The fresh meat is jet black, but rapidly turns pink when exposed to air.",
+      "source": "Location: Witch's Swamp (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Void_Salmon.png"
+    },
+    {
+      "id": "fish_slimejack",
+      "name": "Slimejack",
+      "season": "All",
+      "category": "Fish",
+      "desc": "He's coated in a very thick layer of slime. He keeps slipping out of your hands!",
+      "source": "Location: Mutant Bug Lair (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Slimejack.png"
+    },
+    {
+      "id": "fish_midnight_squid",
+      "name": "Midnight Squid",
+      "season": "Winter",
+      "category": "Fish",
+      "desc": "A strange and mysterious denizen of the ocean's twilight depths.",
+      "source": "Location: Submarine at Night Market (Anytime during Night Market (5pm - 2am))",
+      "notes": "Season: Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Midnight_Squid.png"
+    },
+    {
+      "id": "fish_spook_fish",
+      "name": "Spook Fish",
+      "season": "Winter",
+      "category": "Fish",
+      "desc": "The huge eyes can detect the faint silhouettes of prey.",
+      "source": "Location: Submarine at Night Market (Anytime during Night Market (5pm - 2am))",
+      "notes": "Season: Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Spook_Fish.png"
+    },
+    {
+      "id": "fish_blobfish",
+      "name": "Blobfish",
+      "season": "Winter",
+      "category": "Fish",
+      "desc": "This odd creature floats above the ocean floor, consuming any edible material in its path.",
+      "source": "Location: Submarine at Night Market (Anytime during Night Market (5pm - 2am))",
+      "notes": "Season: Winter | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blobfish.png"
+    },
+    {
+      "id": "fish_stingray",
+      "name": "Stingray",
+      "season": "All",
+      "category": "Fish",
+      "desc": "Despite having a toxic stinger, these fish are shy and prefer to avoid humans.",
+      "source": "Location: Pirate Cove (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stingray.png"
+    },
+    {
+      "id": "fish_lionfish",
+      "name": "Lionfish",
+      "season": "All",
+      "category": "Fish",
+      "desc": "An aggressive, predatory fish with venomous spines.",
+      "source": "Location: Ginger Island (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lionfish.png"
+    },
+    {
+      "id": "fish_blue_discus",
+      "name": "Blue Discus",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A brightly colored tropical fish that is popular in aquariums.",
+      "source": "Location: Ginger Island (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blue_Discus.png"
+    },
+    {
+      "id": "fish_clam",
+      "name": "Clam",
+      "season": "All",
+      "category": "Fish",
+      "desc": "There's a chewy little guy in there...",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Clam.png"
+    },
+    {
+      "id": "fish_sea_jelly",
+      "name": "Sea Jelly",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A rare jelly found in the ocean.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sea_Jelly.png"
+    },
+    {
+      "id": "fish_river_jelly",
+      "name": "River Jelly",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A rare jelly found in freshwater.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/River_Jelly.png"
+    },
+    {
+      "id": "fish_cave_jelly",
+      "name": "Cave Jelly",
+      "season": "All",
+      "category": "Fish",
+      "desc": "A rare jelly found in underground lakes.",
+      "source": "Location: Ocean / River / Pond (Anytime)",
+      "notes": "Season: All | Weather: Any Weather",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cave_Jelly.png"
+    },
+    {
+      "id": "fish_goby",
+      "name": "Goby",
+      "season": "All",
+      "category": "Fish",
+      "desc": "Some types of Gobies can climb up waterfalls.",
+      "source": "Location: Cindersap Forest Waterfalls (Any)",
+      "notes": "Season: All | Weather: Any",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Goby.png"
+    }
   ]
 };
