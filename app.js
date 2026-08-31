@@ -1579,10 +1579,7 @@ window.toggleTrackerItem = function(sheetKey, itemId, event) {
   const newState = !state[itemId];
   setTrackerItemState(sheetKey, itemId, newState);
   
-  const card = document.getElementById(`tracker-card-${itemId}`);
-  if (card) {
-    card.classList.toggle('obtained', newState);
-  }
+  renderTrackerGridOnly();
   updateTrackerProgressBar();
 };
 
@@ -1807,6 +1804,13 @@ function renderTrackerGridOnly() {
     grid.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 3rem; font-size: 0.95rem;">No items matched your filter or search query.</div>';
     return;
   }
+
+  // Sort: Incomplete items first (0), Completed / Obtained items moved to bottom (1)
+  filtered.sort((a, b) => {
+    const aDone = state[a.id] ? 1 : 0;
+    const bDone = state[b.id] ? 1 : 0;
+    return aDone - bDone;
+  });
 
   filtered.forEach(item => {
     const isObtained = !!state[item.id];
