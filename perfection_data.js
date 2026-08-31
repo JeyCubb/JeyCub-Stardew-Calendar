@@ -3506,6 +3506,78 @@ const PERFECTION_TRACKER_DATA = {
       "zone": "Island South",
       "details": "Journal Scrap #10: Dig with a hoe in the curved palm tree on the beach",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
+    },
+    {
+      "id": "wn_123",
+      "num": 123,
+      "name": "Walnut #123",
+      "zone": "Island South",
+      "source": "South Beach Tide Pool Path",
+      "details": "South Beach Bush: Follow the secret pathway through the trees directly to the right of the tidal pool",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
+    },
+    {
+      "id": "wn_124",
+      "num": 124,
+      "name": "Walnut #124",
+      "zone": "Island South",
+      "source": "Starfish Rock Circle",
+      "details": "South Beach Dig: Dig with a hoe in the center of the starfish / pebble circle on the southern shore",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
+    },
+    {
+      "id": "wn_125",
+      "num": 125,
+      "name": "Walnut #125",
+      "zone": "Island South",
+      "source": "Docks Beach Corner",
+      "details": "Dock Shore Dig: Dig with a hoe in the small sand patch in the corner south of the boat dock",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
+    },
+    {
+      "id": "wn_126",
+      "num": 126,
+      "name": "Walnut #126",
+      "zone": "Island North",
+      "source": "Totem Statue Hidden Path",
+      "details": "Island Warp Totem Path: Follow the hidden forest path behind the palm trees above the warp statue to shake a walnut bush",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
+    },
+    {
+      "id": "wn_127",
+      "num": 127,
+      "name": "Walnut #127",
+      "zone": "Island North",
+      "source": "Stone Circle North-East",
+      "details": "North-East Stone Circle: Dig with a hoe in the center of the stone circle on the high cliff north-east of the Field Office",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
+    },
+    {
+      "id": "wn_128",
+      "num": 128,
+      "name": "Walnut #128",
+      "zone": "Island West",
+      "source": "Walnut Tree South of Qi Room",
+      "details": "Qi Walnut Tree: Shake the walnut tree located in the hidden cliff grove south of Mr. Qi's Walnut Room",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
+    },
+    {
+      "id": "wn_129",
+      "num": 129,
+      "name": "Walnut #129",
+      "zone": "Island West",
+      "source": "Curved Palms Dig",
+      "details": "Palm Diamond Dig: Dig with a hoe in the center of the diamond formed by four curved palm trees on the farm beach",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
+    },
+    {
+      "id": "wn_130",
+      "num": 130,
+      "name": "Walnut #130",
+      "zone": "Island West",
+      "source": "Grass Diamond Dig",
+      "details": "Grass Diamond Dig: Dig with a hoe in the center of the dark grass diamond on the western farm shore",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Golden_Walnut.png"
     }
   ],
   "cooking": [
