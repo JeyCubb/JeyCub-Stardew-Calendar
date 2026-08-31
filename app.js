@@ -80,7 +80,12 @@ const MACHINE_IMAGES = {
   'tapper_oak': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png',
   'tapper_pine': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Pine_Tar.png',
   'tapper_mushroom': 'https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png',
-  'tapper_mystic': 'https://stardewvalleywiki.com/mediawiki/images/7/77/Mystic_Syrup.png'
+  'tapper_mystic': 'https://stardewvalleywiki.com/mediawiki/images/7/77/Mystic_Syrup.png',
+  'heavy_tapper_maple': 'https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png',
+  'heavy_tapper_oak': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png',
+  'heavy_tapper_pine': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Pine_Tar.png',
+  'heavy_tapper_mushroom': 'https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png',
+  'heavy_tapper_mystic': 'https://stardewvalleywiki.com/mediawiki/images/7/77/Mystic_Syrup.png'
 };
 
 // Initialize current year structure if not present (guarantees all seasons exist)
@@ -184,6 +189,11 @@ const MASTER_MACHINES = [
   { key: 'tapper_pine', name: 'Tapper: Pine Tree (Tar)', duration: 5, isRepeating: true, type: 'Tapper' },
   { key: 'tapper_mushroom', name: 'Tapper: Mushroom Tree', duration: 1, isRepeating: true, type: 'Tapper' },
   { key: 'tapper_mystic', name: 'Tapper: Mystic Tree (Syrup)', duration: 7, isRepeating: true, type: 'Tapper' },
+  { key: 'heavy_tapper_maple', name: 'Heavy Tapper: Maple (Syrup)', duration: 4, isRepeating: true, type: 'Heavy Tapper' },
+  { key: 'heavy_tapper_oak', name: 'Heavy Tapper: Oak (Resin)', duration: 3, isRepeating: true, type: 'Heavy Tapper' },
+  { key: 'heavy_tapper_pine', name: 'Heavy Tapper: Pine (Tar)', duration: 2, isRepeating: true, type: 'Heavy Tapper' },
+  { key: 'heavy_tapper_mushroom', name: 'Heavy Tapper: Mushroom Tree', duration: 1, isRepeating: true, type: 'Heavy Tapper' },
+  { key: 'heavy_tapper_mystic', name: 'Heavy Tapper: Mystic (Syrup)', duration: 3, isRepeating: true, type: 'Heavy Tapper' },
   { key: 'crystal_diamond', name: 'Crystalarium: Diamond', duration: 5, isRepeating: true, type: 'Crystalarium' },
   { key: 'crystal_ruby', name: 'Crystalarium: Ruby', duration: 2, isRepeating: true, type: 'Crystalarium' },
   { key: 'crystal_jade', name: 'Crystalarium: Jade', duration: 2, isRepeating: true, type: 'Crystalarium' },
@@ -326,6 +336,11 @@ const ITEM_COLORS = {
   'tapper_pine': '#10b981',  // Pine green
   'tapper_mushroom': '#a855f7', // Purple mushroom
   'tapper_mystic': '#ec4899', // Mystic pink
+  'heavy_tapper_maple': '#ea580c', // Darker orange
+  'heavy_tapper_oak': '#65a30d',   // Darker green
+  'heavy_tapper_pine': '#059669',  // Darker teal
+  'heavy_tapper_mushroom': '#9333ea', // Dark purple
+  'heavy_tapper_mystic': '#db2777', // Dark pink
   'crystal_diamond': '#e0f2fe',
   'crystal_ruby': '#ef4444',
   'crystal_jade': '#059669',
@@ -421,6 +436,9 @@ function getTaskIconUrl(task) {
   } else {
     if (task.machineKey && task.machineKey.startsWith('crystal_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/d/d4/Crystalarium.png';
+    }
+    if (task.machineKey && task.machineKey.startsWith('heavy_tapper_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
+      return 'https://stardewvalleywiki.com/mediawiki/images/0/0c/Heavy_Tapper.png';
     }
     if (task.machineKey && task.machineKey.startsWith('tapper_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/d/da/Tapper.png';
@@ -792,7 +810,7 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   // 1. Add Load/Place Task to selected day
   const isSolar = machineKey === 'solar_panel';
   const isCrystal = machineKey.startsWith('crystal_');
-  const isTapper = machineKey.startsWith('tapper_');
+  const isTapper = machineKey.startsWith('tapper_') || machineKey.startsWith('heavy_tapper_');
   const isPlaceAction = isSolar || isCrystal || isTapper;
   
   const loadTask = {
@@ -1213,6 +1231,7 @@ let activeManagerTab = 'crops'; // 'crops' or 'machines'
 const DEFAULT_ACTIVE_MACHINES = [
   'keg_wine', 'keg_beer', 'preserves', 'cask_silver', 'cask_gold', 'cask_iridium', 'solar_panel',
   'tapper_maple', 'tapper_oak', 'tapper_pine', 'tapper_mushroom', 'tapper_mystic',
+  'heavy_tapper_maple', 'heavy_tapper_oak', 'heavy_tapper_pine', 'heavy_tapper_mushroom', 'heavy_tapper_mystic',
   'crystal_diamond', 'crystal_ruby', 'crystal_jade', 'crystal_emerald', 'crystal_aquamarine', 'crystal_topaz', 'crystal_amethyst'
 ];
 
