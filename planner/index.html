@@ -148,41 +148,44 @@
             localStorage.setItem('selectedFarm', 'ranching');
         }
 
-        // Auto restore and continuous auto-save
+        // Auto restore on load and continuous save
         let hasRestored = false;
         const persistInterval = setInterval(() => {
-            if (window.planner && window.planner.app) {
-                // 1. First time planner is ready, restore saved state if available
+            if (window.planner && window.planner.app && window.planner.renderer) {
+                // 1. First time planner is ready and canvas initialized, restore saved state if available
                 if (!hasRestored) {
                     hasRestored = true;
                     try {
                         const savedLayout = localStorage.getItem('stardew_planner_autosave');
-                        if (savedLayout && !window.location.hash) {
-                            window.planner.import(savedLayout);
+                        if (savedLayout && typeof window.planner.import === 'function') {
+                            // Only import if valid serialized string
+                            if (savedLayout.startsWith('{') || savedLayout.startsWith('[')) {
+                                window.planner.import(savedLayout);
+                            }
                         }
                     } catch (e) {
-                        console.error('Autoload error:', e);
+                        console.warn('Autoload note:', e);
                     }
                 }
 
-                // 2. Continuous autosave every 2 seconds when dirty or modified
+                // 2. Continuous autosave every 3 seconds
                 try {
-                    if (window.planner.export) {
+                    if (typeof window.planner.export === 'function') {
                         const currentData = window.planner.export();
-                        if (currentData) {
+                        if (currentData && typeof currentData === 'string') {
                             localStorage.setItem('stardew_planner_autosave', currentData);
                         }
                     }
                 } catch (e) {}
             }
-        }, 2000);
+        }, 3000);
 
         // Before unload, trigger instant save
         window.addEventListener('beforeunload', () => {
             try {
-                if (window.planner && window.planner.export) {
+                if (window.planner && typeof window.planner.export === 'function') {
                     const currentData = window.planner.export();
-                    if (currentData) {
+                    if (currentData && typeof currentData === 'string') {
                         localStorage.setItem('stardew_planner_autosave', currentData);
                     }
                 }
