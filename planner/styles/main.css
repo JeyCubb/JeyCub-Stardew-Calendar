@@ -1,0 +1,381 @@
+@font-face {
+    font-family: 'Roboto Flex';
+    src:    url('assets/ui/fonts/RobotoFlex-Regular.woff') format('woff'),
+            url('assets/ui/fonts/RobotoFlex-Regular.ttf') format('tff');
+}
+
+html {
+    display: flex;
+}
+
+body {
+    background: #1E1B14;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex: auto;
+    font-family: 'Roboto Flex', 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.supporter .vm-footer,
+.supporter .vm-skin,
+.supporter .vm-placement
+{
+    display: none !important;
+}
+
+.planner-container {
+    margin-bottom: 20px;
+    min-width: 1280px; 
+    min-height: 1095px;
+}
+
+.planner-outer-container {
+    position: relative;
+    overflow: hidden;
+
+    z-index: 998;
+}
+
+.prevent-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.feedback-button {
+    position: absolute;
+    height: 30px;
+    right: -50px;
+    font-size: 18px !important;
+    font-family: 'Roboto Flex', 'Roboto', sans-serif;
+    top: 450px;
+    background: #FED17D !important;
+    color: #090606 !important;
+    border: 1px solid #735d34;
+    font-weight: normal !important;
+    text-shadow: none !important;
+    /* padding: 10px 20px; */
+    border-radius: 8px !important;
+    cursor: pointer;
+
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+h1,
+h2,
+h3,
+h3,
+p,
+strong {
+    margin: 0;
+}
+
+h2 {
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+
+a {
+    color: #FED17D;
+}
+
+a:focus,
+a:visited {
+    color: #F8BB49;
+}
+
+.wrapper {
+    max-width: 1280px;
+    display: block;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.grid-container-center {
+    justify-content: center;
+}
+
+.grid-item {
+    /* Add box-shadow for a luxurious effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Add a gradient background for a touch of elegance */
+    /* background: #352F24; */
+    background: linear-gradient(to bottom right, #352F24, #201c14);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #524C40;
+}
+
+.grid-item.controls {
+    flex-basis: 70%;
+}
+
+.grid-item.donate {
+    /* flex-basis: 30%; */
+    background: linear-gradient(to bottom right, #5f4e2c, #343028);
+    display: inline-grid;
+    max-width: 400px;
+}
+
+.donate > h2 {
+    display: flex;
+    align-items: baseline;
+}
+
+.grid-item.donate img,
+.grid-item.shop img {
+    display: block;
+    margin: 0 auto;
+}
+
+.grid-item.contact a {
+    margin-top: 10px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.grid-item.shop img:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.grid-item.donate .text {
+    text-align: center;
+    padding: 20px;
+}
+
+.grid-item.donate .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FED17D;
+    color: #542525;
+    border: 1px solid #735d34;
+    /* text-align: center; */
+    font-weight: 600;
+    /* padding: 20px; */
+    border-radius: 8px;
+    font-size: 20px;
+    width: 350px;
+    height: 50px;
+    margin: 10px;
+}
+
+.donate a {
+    text-decoration: none;
+}
+
+.grid-item.donate .button .button-icon {
+    margin-right: 10px;
+}
+
+.grid-item.donate .button:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #d7a64d, #b08028);
+}
+
+.grid-item.faq,
+.grid-item.contact,
+.grid-item.shop,
+.grid-item.changelog {
+    flex-grow: 1;
+}
+
+.question-title {
+    font-weight: bold
+}
+
+ul.list-wide {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+
+ul.list-wide li {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+ul.list-wide li.no-border {
+    border-top: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li h3 {
+    margin-bottom: 10px;
+}
+
+.grid-item.supporters,
+.grid-item.credits {
+    flex-basis: 50%;
+}
+
+.credits li {
+    list-style: none;
+}
+
+.key {
+    background: #524C40;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 4px 8px;
+    color: #fff;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.starfruit {
+    width: 16px;
+    float: left;
+}
+
+/* MODAL STUFF */
+.modal-backdrop {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 999998;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7 );
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    font-size: 13px;
+    z-index: 999999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    /* Add box-shadow for a luxurious effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Add a gradient background for a touch of elegance */
+    /* background: #352F24; */
+    background: linear-gradient(to bottom right, #352F24, #201c14);
+    border-radius: 8px;
+    border: 1px solid #524C40;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #524C40;
+}
+
+.modal-content {
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal-content b {
+    font-weight: bold;
+}
+
+.modal-content button {
+    background: #FED17D;
+    color: #542525;
+    border: 1px solid #735d34;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-footer button {
+    background: #FED17D;
+    color: #542525;
+    border: 1px solid #735d34;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.big {
+    font-size: 16px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* .key {
+    background: #524C40;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 4px 8px;
+} */
+
+@media (max-width: 920px) {
+    .grid-container {
+        flex-direction: column;
+    }
+}
+
+.v16-notice {
+    position: absolute;
+    top: 60px;
+    background-color: #201c14;
+    padding: 5px;
+    font-size: 12px;
+    left: 5px;
+
+    display: flex;
+    flex-direction: row; 
+
+    .close {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}

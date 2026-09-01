@@ -1484,39 +1484,50 @@ let activeTrackerSheet = localStorage.getItem('stardew_active_tracker_sheet') ||
 let currentTrackerFilter = localStorage.getItem(`stardew_tracker_filter_${activeTrackerSheet}`) || 'all';
 let currentTrackerSearch = '';
 
-// Mode switching (Calendar vs Tracker)
+// Mode switching (Calendar vs Tracker vs Planner)
 const btnViewCalendar = document.getElementById('btn-view-calendar');
 const btnViewTracker = document.getElementById('btn-view-tracker');
+const btnViewPlanner = document.getElementById('btn-view-planner');
 const calendarMainView = document.getElementById('calendar-main-view');
 const trackerMainView = document.getElementById('tracker-main-view');
+const plannerMainView = document.getElementById('planner-main-view');
 const calendarHeaderControls = document.getElementById('calendar-header-controls');
 const trackerHeaderControls = document.getElementById('tracker-header-controls');
 
 function setAppViewMode(mode) {
   localStorage.setItem('stardew_view_mode', mode);
+  
+  // Reset all mode buttons
+  [btnViewCalendar, btnViewTracker, btnViewPlanner].forEach(btn => {
+    if (btn) btn.classList.remove('active');
+  });
+
+  // Hide all main containers and header control rows
+  if (calendarMainView) calendarMainView.style.display = 'none';
+  if (trackerMainView) trackerMainView.style.display = 'none';
+  if (plannerMainView) plannerMainView.style.display = 'none';
+  if (calendarHeaderControls) calendarHeaderControls.style.display = 'none';
+  if (trackerHeaderControls) trackerHeaderControls.style.display = 'none';
+
   if (mode === 'tracker') {
-    btnViewCalendar.classList.remove('active');
-    btnViewTracker.classList.add('active');
-    calendarMainView.style.display = 'none';
-    trackerMainView.style.display = 'flex';
-    calendarHeaderControls.style.display = 'none';
-    trackerHeaderControls.style.display = 'flex';
+    if (btnViewTracker) btnViewTracker.classList.add('active');
+    if (trackerMainView) trackerMainView.style.display = 'flex';
+    if (trackerHeaderControls) trackerHeaderControls.style.display = 'flex';
     renderTrackerSheet();
+  } else if (mode === 'planner') {
+    if (btnViewPlanner) btnViewPlanner.classList.add('active');
+    if (plannerMainView) plannerMainView.style.display = 'block';
   } else {
-    btnViewTracker.classList.remove('active');
-    btnViewCalendar.classList.add('active');
-    trackerMainView.style.display = 'none';
-    calendarMainView.style.display = 'flex';
-    trackerHeaderControls.style.display = 'none';
-    calendarHeaderControls.style.display = 'flex';
+    if (btnViewCalendar) btnViewCalendar.classList.add('active');
+    if (calendarMainView) calendarMainView.style.display = 'flex';
+    if (calendarHeaderControls) calendarHeaderControls.style.display = 'flex';
     renderCalendar();
   }
 }
 
-if (btnViewCalendar && btnViewTracker) {
-  btnViewCalendar.addEventListener('click', () => setAppViewMode('calendar'));
-  btnViewTracker.addEventListener('click', () => setAppViewMode('tracker'));
-}
+if (btnViewCalendar) btnViewCalendar.addEventListener('click', () => setAppViewMode('calendar'));
+if (btnViewTracker) btnViewTracker.addEventListener('click', () => setAppViewMode('tracker'));
+if (btnViewPlanner) btnViewPlanner.addEventListener('click', () => setAppViewMode('planner'));
 
 // Sheet tab switching
 const trackerTabBtns = document.querySelectorAll('.tracker-tab-btn');
@@ -1946,7 +1957,7 @@ function renderTrackerGridOnly() {
 
 // Initial View mode loader
 const savedViewMode = localStorage.getItem('stardew_view_mode') || 'calendar';
-if (savedViewMode === 'tracker') {
-  setAppViewMode('tracker');
+if (savedViewMode === 'tracker' || savedViewMode === 'planner') {
+  setAppViewMode(savedViewMode);
 }
 

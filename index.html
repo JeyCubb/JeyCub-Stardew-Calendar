@@ -21,10 +21,11 @@
         Stardew Valley Tracker
       </h1>
 
-      <!-- Mode Switcher (Calendar vs Perfection Tracker) -->
+      <!-- Mode Switcher (Calendar vs Perfection Tracker vs Farm Planner) -->
       <div class="view-mode-selector" style="display: flex; background: rgba(0, 0, 0, 0.35); border: 1px solid var(--border-glass); border-radius: 10px; padding: 3px; gap: 4px;">
         <button id="btn-view-calendar" class="view-tab-btn active" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s ease;">📅 Calendar</button>
         <button id="btn-view-tracker" class="view-tab-btn" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s ease;">⭐ Perfection Tracker</button>
+        <button id="btn-view-planner" class="view-tab-btn" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s ease;">🚜 Farm Planner</button>
       </div>
     </div>
     
@@ -112,6 +113,11 @@
 
     <!-- Tracker Items Grid -->
     <div id="tracker-items-grid" class="tracker-grid"></div>
+  </main>
+
+  <!-- Main Farm Planner Layout -->
+  <main class="main-container" id="planner-main-view" style="display: none; width: 100%; height: calc(100vh - 65px); padding: 0; overflow: hidden;">
+    <iframe id="planner-frame" src="planner/index.html" style="width: 100%; height: 100%; border: none; background: #1e1b14;" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
   </main>
 
 
