@@ -48,6 +48,7 @@
     </script>
     <style>
         [x-cloak] { display: none; }
+        #mainModal, #performanceModal, .modal-backdrop { display: none !important; }
     </style>
 
     <link rel="stylesheet" href="styles/reset.css">
@@ -58,57 +59,6 @@
     <div class="vm-placement" data-id="606307e2e8fdeb39324f4f72" style="display:none"></div>
     <!-- / StarDewPlanner - Rich Media (606307e2e8fdeb39324f4f72) -->
         
-    <div id="mainModal" class="modal-backdrop hidden">
-        <div class="modal">
-            <div class="modal-header">
-                <h2 data-i18n="modal.welcome.title">Welcome to Stardew Planner V3</h2>
-            </div>
-            <div class="modal-content">
-                <span data-i18n="modal.welcome.intro">After a long wait, a new version of the planner is finally here!<br>
-                Featuring game like rendering, undo & redo and tons of other features.</span><br>
-                <br>
-                <div>
-                    <img src="/planner/assets/ui/showcase_1.gif" width="160px" height="200px"/>
-                </div>
-                <span class="bold underline big">
-                    <span data-i18n="modal.welcome.scroll">Scroll down on the page for more information!</span><br>
-                </span>
-                <br>
-                <span class="bold big">
-                    <span data-i18n="modal.welcome.feedback">For any feedback, bugs or ideas, please use the feedback widget on the right of the page</span><br>
-                </span>
-                <br><br>
-                <span class="big" data-i18n="modal.welcome.discord">To share your plans and see what others have made come visit us at <a href="https://discord.gg/RRPKc4Z" target="_blank">Stardew Valley discord</a> in <a href="https://discord.com/channels/137344473976799233/421386982787252224" target="_blank">#farm-designs</a></span><br>
-                <br><br>
-                <span class="big" data-i18n="modal.welcome.removeAds">If you wish to <b>remove ads</b> and support planner development, please consider becoming a <a href="https://www.patreon.com/stardewvalleyplanner/membership" target="_blank">Patreon supporter</a></span><br><br>
-            </div>
-            <div class="modal-footer">
-                <button onclick="hideModal('mainModal')" data-i18n="modal.welcome.start">Start planning!</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="performanceModal" class="modal-backdrop hidden">
-        <div class="modal">
-            <div class="modal-header">
-                <h2 data-i18n="modal.performance.title">Low <b>PERFORMANCE</b> detected</h2>
-            </div>
-            <div class="modal-content">
-                <span data-i18n="modal.performance.intro">Planner has detected <b>low FPS.</b> This is generally caused by <b><u>hardware acceleration being turned off in browser settings.</u></b><br>
-                If you are instead planning an unexpectedly large farm, you can ignore this message</span><br>
-                <br>
-                <h2><a href="https://www.google.com/search?q=google+chrome+how+to+turn+hardware+acceleration+on" target="_blank" data-i18n="modal.performance.chrome">How to turn on hardware acceleration in Google Chrome</a></h2>
-                <h2><a href="https://www.google.com/search?q=firefox+how+to+turn+hardware+acceleration+on" target="_blank" data-i18n="modal.performance.firefox">How to turn on hardware acceleration in Firefox</a></h2>
-                <h2><a href="https://www.google.com/search?q=edge+how+to+turn+hardware+acceleration+on" target="_blank" data-i18n="modal.performance.edge">How to turn on hardware acceleration in Edge</a></h2>
-                <br>
-                <span data-i18n="modal.performance.restart">Make sure to restart your browser (not just the tab) after turning on hardware acceleration.</span><br>
-                <br>
-                <span data-i18n="modal.performance.oldVersion">If you don't wish to turn on hardware acceleration, you can still use old version of the planner at: <a href="https://v2.stardew.info" target="_blank">v2.stardew.info</a> which works better without having GPU access</span><br>
-            </div>
-            <div class="modal-footer">
-                <button onclick="hideModal('performanceModal')" data-i18n="modal.performance.understand">I understand</button>
-            </div>
-        </div>
     </div>
 
     <div id="multiplayerModal" class="modal-backdrop hidden">
