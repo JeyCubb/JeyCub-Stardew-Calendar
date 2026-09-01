@@ -479,45 +479,6 @@
             localStorage.setItem('selectedFarm', 'ranching');
         }
         localStorage.setItem('modalSeen_mainModal_v1', 'true');
-
-        // Continuous planner state persistence
-        let isRestored = false;
-        setInterval(() => {
-            if (window.planner && window.planner.tiles) {
-                // Restore state once planner initializes
-                if (!isRestored) {
-                    isRestored = true;
-                    try {
-                        const savedHistory = localStorage.getItem('planner_history');
-                        if (savedHistory && typeof window.planner.restoreLocalState === 'function') {
-                            window.planner.restoreLocalState();
-                            if (window.planner.undoStack && window.planner.undoStack.length > 0) {
-                                window.planner.applyBoardState(window.planner.undoStack[window.planner.undoStack.length - 1]);
-                            }
-                        }
-                    } catch (e) {
-                        console.warn('Restore local state note:', e);
-                    }
-                }
-
-                // Continuously save current board state to localStorage
-                try {
-                    if (typeof window.planner.saveLocalState === 'function') {
-                        window.planner.saveLocalState();
-                    }
-                } catch (e) {}
-            }
-        }, 1500);
-
-        window.addEventListener('beforeunload', () => {
-            try {
-                if (window.planner && typeof window.planner.saveLocalState === 'function') {
-                    window.planner.saveLocalState();
-                }
-            } catch (e) {}
-        });
-
-        // Prevent Ctrl + Scroll from zooming the browser UI, and route it to canvas zoom
         window.addEventListener('wheel', (e) => {
             if (e.ctrlKey || e.metaKey) {
                 e.preventDefault();
