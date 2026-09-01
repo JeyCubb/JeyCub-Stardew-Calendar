@@ -148,6 +148,17 @@
                 localStorage.setItem('selectedFarm', 'ranching');
             }
         });
+
+        // Prevent Ctrl + Scroll from zooming the browser UI, and route it to canvas zoom
+        window.addEventListener('wheel', (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+                if (window.planner && window.planner.viewport) {
+                    const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
+                    window.planner.viewport.zoomPercent(zoomFactor - 1, true);
+                }
+            }
+        }, { passive: false });
     </script>
 </body>
 </html>

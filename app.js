@@ -1961,3 +1961,21 @@ if (savedViewMode === 'tracker' || savedViewMode === 'planner') {
   setAppViewMode(savedViewMode);
 }
 
+// Global handler: prevent Ctrl + scroll wheel from zooming the main website interface
+window.addEventListener('wheel', (e) => {
+  if (e.ctrlKey || e.metaKey) {
+    e.preventDefault();
+    const plannerFrame = document.getElementById('planner-frame');
+    if (plannerFrame && plannerFrame.contentWindow) {
+      try {
+        const pw = plannerFrame.contentWindow;
+        if (pw.planner && pw.planner.viewport) {
+          const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
+          pw.planner.viewport.zoomPercent(zoomFactor - 1, true);
+        }
+      } catch (err) {}
+    }
+  }
+}, { passive: false });
+
+
