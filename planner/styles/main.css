@@ -4,21 +4,22 @@
             url('assets/ui/fonts/RobotoFlex-Regular.ttf') format('tff');
 }
 
-html {
-    display: flex;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #1E1B14;
+    color: #FFF;
+    font-family: 'Roboto Flex', 'Roboto', sans-serif;
 }
 
 body {
-    background: #1E1B14;
-    color: #FFF;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
     flex-direction: column;
-    flex: auto;
-    font-family: 'Roboto Flex', 'Roboto', sans-serif;
-    scroll-behavior: smooth;
 }
 
 .supporter .vm-footer,
@@ -29,15 +30,19 @@ body {
 }
 
 .planner-container {
-    margin-bottom: 20px;
-    min-width: 1280px; 
-    min-height: 1095px;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 0;
+    min-height: 0;
 }
 
 .planner-outer-container {
     position: relative;
     overflow: hidden;
-
+    width: 100vw;
+    height: 100vh;
     z-index: 998;
 }
 
