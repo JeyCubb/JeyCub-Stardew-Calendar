@@ -143,10 +143,50 @@
     <script src="lib/planner.js?v=1786627148244" type="text/javascript"></script>
     <script src="lib/index.js?v=1786627148244" type="text/javascript"></script>
     <script>
-        window.addEventListener('load', () => {
-            if (!localStorage.getItem('selectedFarm') && !window.location.hash) {
-                localStorage.setItem('selectedFarm', 'ranching');
+        // Ensure default map is ranching (Meadowlands) if none selected
+        if (!localStorage.getItem('selectedFarm') && !window.location.hash) {
+            localStorage.setItem('selectedFarm', 'ranching');
+        }
+
+        // Auto restore and continuous auto-save
+        let hasRestored = false;
+        const persistInterval = setInterval(() => {
+            if (window.planner && window.planner.app) {
+                // 1. First time planner is ready, restore saved state if available
+                if (!hasRestored) {
+                    hasRestored = true;
+                    try {
+                        const savedLayout = localStorage.getItem('stardew_planner_autosave');
+                        if (savedLayout && !window.location.hash) {
+                            window.planner.import(savedLayout);
+                        }
+                    } catch (e) {
+                        console.error('Autoload error:', e);
+                    }
+                }
+
+                // 2. Continuous autosave every 2 seconds when dirty or modified
+                try {
+                    if (window.planner.export) {
+                        const currentData = window.planner.export();
+                        if (currentData) {
+                            localStorage.setItem('stardew_planner_autosave', currentData);
+                        }
+                    }
+                } catch (e) {}
             }
+        }, 2000);
+
+        // Before unload, trigger instant save
+        window.addEventListener('beforeunload', () => {
+            try {
+                if (window.planner && window.planner.export) {
+                    const currentData = window.planner.export();
+                    if (currentData) {
+                        localStorage.setItem('stardew_planner_autosave', currentData);
+                    }
+                }
+            } catch (e) {}
         });
 
         // Prevent Ctrl + Scroll from zooming the browser UI, and route it to canvas zoom
