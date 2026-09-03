@@ -2078,4 +2078,23 @@ window.addEventListener('wheel', (e) => {
   }
 }, { passive: false });
 
+// Prevent double-tap / double-click zooming across mobile phone and desktop-mode browsing
+let lastTouchEnd = 0;
+document.addEventListener('touchend', (e) => {
+  const now = Date.now();
+  if (now - lastTouchEnd <= 300) {
+    if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+      e.preventDefault();
+    }
+  }
+  lastTouchEnd = now;
+}, { passive: false });
+
+document.addEventListener('dblclick', (e) => {
+  if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+
 

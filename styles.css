@@ -28,6 +28,11 @@ html, body {
   overflow-x: hidden;
   height: 100vh;
   height: 100dvh;
+  touch-action: manipulation;
+}
+
+button, a, input, select, textarea, .day-card, .tracker-card, .task-item, .view-tab-btn, .season-btn, .tracker-tab-btn {
+  touch-action: manipulation;
 }
 
 body {
