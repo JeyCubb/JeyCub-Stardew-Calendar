@@ -1317,25 +1317,36 @@ function initFirebase() {
 
         const remoteData = trackerNode.data;
         const remoteLastUpdated = trackerNode.lastUpdated || 0;
-        const remoteChecked = getLocalTrackerCheckedCount(remoteData);
-
-        // Safe Merge & Pull Strategy:
-        // - If remote timestamp is newer
-        // - OR if local device is brand new / has minimal items (<= 64 initial museum) and remote has more items:
-        // -> Apply remote tracker state locally without deleting any existing data
-        if (remoteLastUpdated > localLastUpdated || (localChecked <= 64 && remoteChecked > localChecked)) {
-          const sheets = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts'];
-          sheets.forEach(s => {
-            if (remoteData[s]) {
-              localStorage.setItem(`stardew_tracker_${s}`, JSON.stringify(remoteData[s]));
+        // Intelligent Union Merge:
+        // Always take the superset of checked items so progress is NEVER lost on any device!
+        const sheets = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts'];
+        let hasNewData = false;
+        
+        sheets.forEach(s => {
+          const localSheet = localTracker[s] || {};
+          const remoteSheet = remoteData[s] || {};
+          
+          // Union merge: keep true if either local or remote has true
+          const mergedSheet = { ...localSheet };
+          Object.keys(remoteSheet).forEach(k => {
+            if (remoteSheet[k]) {
+              if (!mergedSheet[k]) hasNewData = true;
+              mergedSheet[k] = true;
             }
           });
-          localStorage.setItem('stardew_tracker_last_updated', remoteLastUpdated);
-          if (typeof renderTrackerSheet === 'function' && document.getElementById('tracker-main-view')) {
-            renderTrackerSheet();
-          }
-        } else if (localLastUpdated > remoteLastUpdated || localChecked > remoteChecked) {
-          // Local has more tracked progress -> push local to cloud so phone gets it
+
+          localStorage.setItem(`stardew_tracker_${s}`, JSON.stringify(mergedSheet));
+        });
+
+        localStorage.setItem('stardew_tracker_last_updated', Math.max(Date.now(), remoteLastUpdated));
+
+        // Re-render tracker UI immediately
+        if (typeof renderTrackerSheet === 'function' && document.getElementById('tracker-main-view')) {
+          renderTrackerSheet();
+        }
+
+        // If this device has local progress that cloud doesn't have yet, push superset to cloud
+        if (localChecked > remoteChecked) {
           saveTrackerStateToCloud();
         }
       }, err => {
