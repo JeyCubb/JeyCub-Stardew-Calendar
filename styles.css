@@ -303,6 +303,7 @@ header {
   overflow: hidden;
   min-width: 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .day-card.empty-day {
@@ -319,10 +320,12 @@ header {
   opacity: 1;
 }
 
-.day-card:hover {
-  transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .day-card:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .day-header {
@@ -330,6 +333,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
+  pointer-events: auto;
 }
 
 .day-number {
@@ -357,7 +361,7 @@ header {
   justify-content: center;
   transition: all 0.2s ease;
   position: relative;
-  z-index: 105;
+  z-index: 10;
 }
 
 .add-task-btn:hover {
@@ -375,23 +379,13 @@ header {
   flex-grow: 1;
   min-height: 0;
   min-width: 0;
-  overflow-y: auto;
-}
-
-.tasks-container-compact::-webkit-scrollbar {
-  width: 3px;
-}
-.tasks-container-compact::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  overflow: hidden;
 }
 
 .tasks-list {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  overflow: visible;
-  flex-grow: 1;
   min-width: 0;
 }
 
@@ -428,10 +422,6 @@ header {
   font-size: 0.7rem;
   cursor: pointer;
   display: none;
-}
-
-.task-item:hover .task-delete {
-  display: block;
 }
 
 .task-delete:hover {
@@ -478,8 +468,13 @@ header {
   line-height: 0 !important;
 }
 
-.task-item:hover .checkmark-overlay {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .task-item:hover .checkmark-overlay {
+    opacity: 1;
+  }
+  .task-item:hover .task-delete {
+    display: block;
+  }
 }
 
 .task-completed {
@@ -501,15 +496,10 @@ header {
   opacity: 1;
 }
 
-/* --- Global Toggleable Task Labels (Hide / Compact Mode) --- */
-.hide-task-labels .day-card.has-tasks:hover {
-  overflow: visible !important;
-  z-index: 99;
-}
-
+/* --- Global Compact Mode (Hide Task Labels) --- */
 .hide-task-labels .tasks-container-compact {
   justify-content: space-between;
-  overflow: visible !important;
+  overflow: hidden;
 }
 
 .hide-task-labels .tasks-list {
@@ -559,8 +549,16 @@ header {
   height: 100% !important;
 }
 
-/* Expand the entire compact wrapper into an overlay on hover (desktop) */
-@media (min-width: 769px) {
+/* ==========================================================================
+   DESKTOP ONLY HOVER POPOUT OVERLAY
+   Strictly isolated to mouse pointers on desktop screens (min-width: 769px)
+   ========================================================================== */
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .hide-task-labels .day-card.has-tasks:hover {
+    overflow: visible !important;
+    z-index: 99;
+  }
+
   .hide-task-labels .day-card.has-tasks:hover .tasks-container-compact {
     position: absolute;
     top: 32px;
@@ -1060,7 +1058,7 @@ header {
 /* ==========================================================================
    RESPONSIVE / MOBILE OPTIMIZATION (PHONES & SMALL SCREENS)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 768px), (pointer: coarse), (hover: none) {
   html, body {
     width: 100%;
     max-width: 100vw;
@@ -1191,7 +1189,7 @@ header {
     border-radius: 5px;
   }
 
-  /* Main Container on Mobile (Zero horizontal overflow) */
+  /* Main Container on Mobile */
   .main-container {
     padding: 0.25rem 0.3rem !important;
     width: 100% !important;
@@ -1215,7 +1213,7 @@ header {
     box-sizing: border-box;
   }
 
-  /* Calendar Grid */
+  /* Calendar Grid on Mobile: strictly contained with no hover overflow */
   .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -1232,7 +1230,8 @@ header {
     border-radius: 5px;
     min-width: 0 !important;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: hidden !important;
+    position: relative !important;
   }
   .day-card.empty-day {
     min-height: 44px !important;
@@ -1241,6 +1240,12 @@ header {
   .day-card.has-tasks {
     min-height: 48px !important;
     padding: 2px !important;
+  }
+
+  /* Completely disable stuck hover popouts on mobile/touch */
+  .hide-task-labels .day-card.has-tasks:hover {
+    overflow: hidden !important;
+    z-index: 1 !important;
   }
 
   .day-header {
@@ -1259,7 +1264,16 @@ header {
   .tasks-container-compact {
     gap: 1px !important;
     min-width: 0 !important;
+    overflow: hidden !important;
+    height: 100% !important;
+    position: static !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-height: none !important;
   }
+
   .tasks-list {
     gap: 1px !important;
     min-width: 0 !important;
@@ -1305,62 +1319,6 @@ header {
     width: 13px !important;
     height: 13px !important;
     margin-right: 0 !important;
-  }
-
-  /* Mobile floating card popout for task details */
-  .hide-task-labels .day-card.has-tasks:hover .tasks-container-compact {
-    position: fixed !important;
-    top: auto !important;
-    bottom: 10px !important;
-    left: 10px !important;
-    right: 10px !important;
-    width: auto !important;
-    max-width: calc(100vw - 20px) !important;
-    min-width: 0 !important;
-    transform: none !important;
-    z-index: 9999 !important;
-    padding: 0.6rem !important;
-    max-height: 50vh !important;
-    overflow-y: auto !important;
-    background: rgba(18, 18, 26, 0.98) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
-    border-radius: 10px !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9) !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .tasks-list {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.3rem !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .task-item {
-    width: 100% !important;
-    height: auto !important;
-    padding: 0.35rem 0.5rem !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    font-size: 0.85rem !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon {
-    width: 24px !important;
-    height: 24px !important;
-    margin-right: 6px !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container {
-    display: flex !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .task-item .task-icon-wrapper {
-    width: 24px !important;
-    height: 24px !important;
-    margin-right: 6px !important;
-  }
-
-  .hide-task-labels .day-card.has-tasks:hover .task-item .task-delete {
-    display: block !important;
   }
 
   /* Perfection Tracker on Mobile */

@@ -483,6 +483,13 @@ function renderCalendar() {
       </div>
     `;
 
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.checkmark-overlay') || e.target.closest('.task-delete') || e.target.closest('.add-task-btn')) {
+        return;
+      }
+      openModal(day);
+    });
+
     calendarGrid.appendChild(card);
     renderTasksForDay(day);
   }
