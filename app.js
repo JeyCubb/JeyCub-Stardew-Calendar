@@ -563,6 +563,10 @@ function renderTasksForDay(day) {
       if (readyContainer) readyContainer.appendChild(item);
     }
   });
+
+  if (!document.body.classList.contains('hide-task-labels')) {
+    setTimeout(adjustTaskFontSizes, 0);
+  }
 }
 
 // Modal handling
@@ -1038,7 +1042,7 @@ yearDownBtn.addEventListener('click', () => {
 function adjustTaskFontSizes() {
   if (document.body.classList.contains('hide-task-labels')) return;
 
-  const taskItems = document.querySelectorAll('.task-item');
+  const taskItems = document.querySelectorAll('.calendar-grid .task-item');
   taskItems.forEach(item => {
     const textContainer = item.querySelector('.task-text-container');
     if (!textContainer) return;
@@ -1610,6 +1614,9 @@ window.toggleTaskCompleted = function(day, taskId, event) {
     task.completed = !task.completed;
     saveSchedule();
     renderTasksForDay(day);
+    if (!document.body.classList.contains('hide-task-labels')) {
+      setTimeout(adjustTaskFontSizes, 0);
+    }
     
     // If the modal happens to be open already, refresh the modal list state
     const modalTasksSection = document.getElementById('modal-tasks-section');
