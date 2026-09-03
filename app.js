@@ -483,11 +483,18 @@ function renderCalendar() {
       </div>
     `;
 
+    // Tap card to toggle hover details popup on phone without opening modal GUI
     card.addEventListener('click', (e) => {
-      if (e.target.closest('.checkmark-overlay') || e.target.closest('.task-delete') || e.target.closest('.add-task-btn')) {
+      if (e.target.closest('.checkmark-overlay') || e.target.closest('.task-delete') || e.target.closest('.add-task-btn') || e.target.closest('.task-icon-wrapper')) {
         return;
       }
-      openModal(day);
+      
+      const wasActive = card.classList.contains('touch-hover-active');
+      document.querySelectorAll('.day-card.touch-hover-active').forEach(c => c.classList.remove('touch-hover-active'));
+      
+      if (!wasActive && card.classList.contains('has-tasks')) {
+        card.classList.add('touch-hover-active');
+      }
     });
 
     calendarGrid.appendChild(card);
@@ -2095,6 +2102,14 @@ document.addEventListener('dblclick', (e) => {
     e.preventDefault();
   }
 }, { passive: false });
+
+// Dismiss open day hover popups when tapping outside any day card
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.day-card')) {
+    document.querySelectorAll('.day-card.touch-hover-active').forEach(c => c.classList.remove('touch-hover-active'));
+  }
+});
+
 
 
 
