@@ -40,6 +40,26 @@ body {
   overflow-y: hidden;
 }
 
+/* Strict Tab/Mode-Based Visibility Control (Desktop & Mobile) */
+body.view-calendar #tracker-header-controls,
+body.view-calendar #tracker-main-view,
+body.view-calendar #planner-main-view {
+  display: none !important;
+}
+
+body.view-tracker #calendar-header-controls,
+body.view-tracker #calendar-main-view,
+body.view-tracker #planner-main-view {
+  display: none !important;
+}
+
+body.view-planner #calendar-header-controls,
+body.view-planner #tracker-header-controls,
+body.view-planner #calendar-main-view,
+body.view-planner #tracker-main-view {
+  display: none !important;
+}
+
 /* ==========================================================================
    HEADER & NAVIGATION
    ========================================================================== */
@@ -1150,8 +1170,8 @@ header {
     white-space: nowrap !important;
   }
 
-  /* Row 2: Controls + Seasons all on ONE single consolidated line */
-  .calendar-header-controls {
+  /* Row 2: ONLY show Calendar Controls when on Calendar Mode */
+  .view-calendar .calendar-header-controls {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
@@ -1210,8 +1230,8 @@ header {
     white-space: nowrap !important;
   }
 
-  /* Tracker Header Controls on Mobile: 1 single compact row */
-  .tracker-header-controls {
+  /* Row 2: ONLY show Tracker Controls when on Tracker Mode */
+  .view-tracker .tracker-header-controls {
     width: 100% !important;
     display: flex !important;
     overflow-x: auto !important;

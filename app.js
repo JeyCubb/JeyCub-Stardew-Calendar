@@ -1629,6 +1629,10 @@ const trackerHeaderControls = document.getElementById('tracker-header-controls')
 function setAppViewMode(mode) {
   localStorage.setItem('stardew_view_mode', mode);
   
+  // Set body class for bulletproof CSS-based header visibility
+  document.body.classList.remove('view-calendar', 'view-tracker', 'view-planner');
+  document.body.classList.add(`view-${mode}`);
+
   // Reset all mode buttons
   [btnViewCalendar, btnViewTracker, btnViewPlanner].forEach(btn => {
     if (btn) btn.classList.remove('active');
@@ -2044,9 +2048,7 @@ function renderTrackerGridOnly() {
 
 // Initial View mode loader
 const savedViewMode = localStorage.getItem('stardew_view_mode') || 'calendar';
-if (savedViewMode === 'tracker' || savedViewMode === 'planner') {
-  setAppViewMode(savedViewMode);
-}
+setAppViewMode(savedViewMode);
 
 // Global handler: prevent Ctrl + scroll wheel from zooming the main website interface
 window.addEventListener('wheel', (e) => {
