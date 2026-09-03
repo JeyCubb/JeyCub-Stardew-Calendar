@@ -15,33 +15,33 @@
 <body>
   <!-- Header -->
   <header>
-    <div style="display: flex; align-items: center; gap: 1.25rem;">
-      <h1 style="display: flex; align-items: center; gap: 0.5rem;">
-        <img src="favicon.png" alt="Stardew Chicken" style="width: 32px; height: 32px; image-rendering: pixelated;">
-        Stardew Valley Tracker
+    <div class="header-main-row">
+      <h1 class="app-logo">
+        <img src="favicon.png" alt="Stardew Chicken" class="app-logo-icon">
+        <span class="app-logo-text">Stardew Valley Tracker</span>
       </h1>
 
       <!-- Mode Switcher (Calendar vs Perfection Tracker vs Farm Planner) -->
-      <div class="view-mode-selector" style="display: flex; background: rgba(0, 0, 0, 0.35); border: 1px solid var(--border-glass); border-radius: 10px; padding: 3px; gap: 4px;">
-        <button id="btn-view-calendar" class="view-tab-btn active" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s ease;">📅 Calendar</button>
-        <button id="btn-view-tracker" class="view-tab-btn" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s ease;">⭐ Perfection Tracker</button>
-        <button id="btn-view-planner" class="view-tab-btn" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; border-radius: 7px; border: none; cursor: pointer; transition: all 0.2s ease;">🚜 Farm Planner</button>
+      <div class="view-mode-selector">
+        <button id="btn-view-calendar" class="view-tab-btn active">📅 Calendar</button>
+        <button id="btn-view-tracker" class="view-tab-btn">⭐ Tracker</button>
+        <button id="btn-view-planner" class="view-tab-btn">🚜 Planner</button>
       </div>
     </div>
     
     <!-- Controls container for Calendar view -->
-    <div id="calendar-header-controls" style="display: flex; align-items: center;">
+    <div id="calendar-header-controls" class="calendar-header-controls">
       <!-- Toggle Labels Button -->
-      <button id="btn-toggle-labels" class="season-btn" style="margin-right: 1rem; padding: 0.35rem 0.75rem; font-size: 0.8rem; display: flex; align-items: center; gap: 0.35rem; border-radius: 8px; border: 1px solid var(--border-glass);">
+      <button id="btn-toggle-labels" class="season-btn label-toggle-btn">
         <span id="label-toggle-icon">👁️</span> <span id="label-toggle-text">Labels: Hover</span>
       </button>
 
       <!-- Year Selection -->
-      <div class="year-selector" style="display: flex; align-items: center; gap: 0.5rem; margin-right: 1.5rem; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); border-radius: 8px; padding: 0.35rem 0.75rem;">
-        <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Year</span>
-        <button id="year-down" class="season-btn" style="padding: 0.15rem 0.5rem; font-size: 0.75rem; border-radius: 4px;">-</button>
-        <span id="year-display" style="font-weight: 700; font-size: 0.9rem; min-width: 15px; text-align: center;">1</span>
-        <button id="year-up" class="season-btn" style="padding: 0.15rem 0.5rem; font-size: 0.75rem; border-radius: 4px;">+</button>
+      <div class="year-selector">
+        <span class="year-label">Year</span>
+        <button id="year-down" class="season-btn year-btn">-</button>
+        <span id="year-display" class="year-display">1</span>
+        <button id="year-up" class="season-btn year-btn">+</button>
       </div>
 
       <!-- Season Selection -->
@@ -54,14 +54,14 @@
     </div>
 
     <!-- Controls container for Perfection Tracker view -->
-    <div id="tracker-header-controls" style="display: none; align-items: center; gap: 0.75rem;">
-      <div class="tracker-sheet-selector" style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+    <div id="tracker-header-controls" class="tracker-header-controls" style="display: none;">
+      <div class="tracker-sheet-selector">
         <button class="tracker-tab-btn active" data-sheet="shipped">📦 Produce & Forage</button>
-        <button class="tracker-tab-btn" data-sheet="crafting">🔨 Crafting Recipes</button>
-        <button class="tracker-tab-btn" data-sheet="cooking">🍳 Cooking Recipes</button>
-        <button class="tracker-tab-btn" data-sheet="fish">🎣 Fish Caught</button>
+        <button class="tracker-tab-btn" data-sheet="crafting">🔨 Crafting</button>
+        <button class="tracker-tab-btn" data-sheet="cooking">🍳 Cooking</button>
+        <button class="tracker-tab-btn" data-sheet="fish">🎣 Fish</button>
         <button class="tracker-tab-btn" data-sheet="museum">🏺 Museum</button>
-        <button class="tracker-tab-btn" data-sheet="walnuts">🌰 Golden Walnuts</button>
+        <button class="tracker-tab-btn" data-sheet="walnuts">🌰 Walnuts</button>
       </div>
     </div>
   </header>
@@ -84,17 +84,17 @@
   </main>
 
   <!-- Main Perfection Tracker Layout -->
-  <main class="main-container" id="tracker-main-view" style="display: none; overflow-y: auto;">
+  <main class="main-container" id="tracker-main-view" style="display: none;">
     <!-- Tracker Progress Bar Card -->
     <div class="tracker-summary-card">
       <div class="tracker-summary-header">
-        <div>
-          <h2 id="tracker-sheet-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.2rem;">📦 Produce & Forage Shipped</h2>
-          <p id="tracker-sheet-desc" style="font-size: 0.85rem; color: var(--text-muted);">Ship one of every farm produce, forage, animal product, artisan good, and resource.</p>
+        <div class="tracker-title-group">
+          <h2 id="tracker-sheet-title">📦 Produce & Forage Shipped</h2>
+          <p id="tracker-sheet-desc">Ship one of every farm produce, forage, animal product, artisan good, and resource.</p>
         </div>
-        <div style="text-align: right;">
-          <div id="tracker-progress-count" style="font-size: 1.2rem; font-weight: 700; color: var(--accent-gold);">0 / 154 (0%)</div>
-          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Items Completed</div>
+        <div class="tracker-progress-info">
+          <div id="tracker-progress-count">0 / 154 (0%)</div>
+          <div class="tracker-progress-sub">Items Completed</div>
         </div>
       </div>
       <div class="tracker-progress-track">
@@ -103,11 +103,11 @@
     </div>
 
     <!-- Tracker Filter & Search Bar -->
-    <div class="tracker-filter-bar" style="display: flex; gap: 0.75rem; margin-bottom: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-      <div id="tracker-subfilters" style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+    <div class="tracker-filter-bar">
+      <div id="tracker-subfilters" class="tracker-subfilters">
         <!-- Dynamic season/category subfilter buttons -->
       </div>
-      <input type="text" id="tracker-search-input" placeholder="Search item, location, or source..." style="padding: 0.45rem 0.85rem; border-radius: 8px; border: 1px solid var(--border-glass); background: rgba(255,255,255,0.04); color: var(--text-main); font-size: 0.85rem; min-width: 220px;">
+      <input type="text" id="tracker-search-input" class="tracker-search-input" placeholder="Search item, location, or source...">
     </div>
 
     <!-- Tracker Items Grid -->
@@ -115,8 +115,8 @@
   </main>
 
   <!-- Main Farm Planner Layout -->
-  <main id="planner-main-view" style="display: none; width: 100vw; height: calc(100vh - 58px); max-width: none; margin: 0; padding: 0; overflow: hidden; position: relative;">
-    <iframe id="planner-frame" src="https://v3.stardew.info/planner/" style="width: 100%; height: 100%; border: none; background: #1e1b14; display: block;" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
+  <main id="planner-main-view" style="display: none;">
+    <iframe id="planner-frame" src="https://v3.stardew.info/planner/" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
   </main>
 
 

@@ -1,3 +1,6 @@
+/* ==========================================================================
+   STARDEW VALLEY TRACKER - COMPREHENSIVE RESPONSIVE STYLESHEET
+   ========================================================================== */
 :root {
   --bg-dark: #111116;
   --bg-card: rgba(26, 26, 36, 0.7);
@@ -13,26 +16,37 @@
   --glass-blur: blur(12px);
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+  height: 100dvh;
 }
 
 body {
   font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-main);
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: radial-gradient(circle at 50% 50%, #2e1a05 0%, #111116 100%); /* Orange-tinted background */
-  overflow: hidden;
+  background-image: radial-gradient(circle at 50% 50%, #2e1a05 0%, #111116 100%);
+  overflow-y: hidden;
 }
 
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
 header {
-  background: rgba(17, 17, 22, 0.8);
+  background: rgba(17, 17, 22, 0.85);
   backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--border-glass);
   padding: 0.45rem 1.4rem;
   display: flex;
@@ -40,9 +54,17 @@ header {
   align-items: center;
   flex-shrink: 0;
   min-height: 44px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-header h1 {
+.header-main-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.app-logo {
   font-size: 1.08rem;
   font-weight: 700;
   background: linear-gradient(135deg, #f97316, #ea580c);
@@ -51,6 +73,90 @@ header h1 {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  user-select: none;
+}
+
+.app-logo-icon {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+}
+
+/* Mode Switcher */
+.view-mode-selector {
+  display: flex;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 3px;
+  gap: 4px;
+}
+
+.view-tab-btn {
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.26rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.view-tab-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+.view-tab-btn.active {
+  background: linear-gradient(135deg, var(--accent-gold), #ea580c);
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.4);
+}
+
+/* Calendar Header Controls */
+.calendar-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.label-toggle-btn {
+  padding: 0.28rem 0.65rem;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 8px;
+}
+
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 0.28rem 0.65rem;
+}
+
+.year-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.year-btn {
+  padding: 0.12rem 0.45rem !important;
+  font-size: 0.72rem !important;
+  border-radius: 4px !important;
+}
+
+.year-display {
+  font-weight: 700;
+  font-size: 0.85rem;
+  min-width: 14px;
+  text-align: center;
 }
 
 .season-selector {
@@ -62,12 +168,13 @@ header h1 {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-glass);
   color: var(--text-muted);
-  padding: 0.28rem 0.75rem;
+  padding: 0.28rem 0.72rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
   font-size: 0.72rem;
+  font-family: inherit;
 }
 
 .season-btn:hover {
@@ -99,65 +206,114 @@ header h1 {
   background: rgba(59, 130, 246, 0.1);
 }
 
+/* Perfection Tracker Header Controls */
+.tracker-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tracker-sheet-selector {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.tracker-tab-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  padding: 0.28rem 0.68rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.72rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.tracker-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+.tracker-tab-btn.active {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background: rgba(249, 115, 22, 0.12);
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+}
+
+/* ==========================================================================
+   MAIN CONTAINERS & CALENDAR LAYOUT
+   ========================================================================== */
 .main-container {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   min-height: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Weekday header grid */
 .weekday-header {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.4rem;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   color: var(--text-muted);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
   flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Calendar Grid */
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: minmax(70px, auto);
-  gap: 0.5rem;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-auto-rows: minmax(70px, 1fr);
+  gap: 0.4rem;
   flex-grow: 1;
   min-height: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .day-card {
   background: var(--bg-card);
   backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--border-glass);
-  border-radius: 12px;
-  padding: 0.5rem 0.6rem;
+  border-radius: 10px;
+  padding: 0.45rem 0.55rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .day-card.empty-day {
-  min-height: 70px;
+  min-height: 60px;
   opacity: 0.45;
   background: rgba(0, 0, 0, 0.2);
   border-color: rgba(255, 255, 255, 0.02);
 }
 
 .day-card.has-tasks {
-  min-height: 125px;
+  min-height: 100px;
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.15);
   opacity: 1;
@@ -177,7 +333,7 @@ header h1 {
 }
 
 .day-number {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text-main);
 }
@@ -189,11 +345,11 @@ header h1 {
 .add-task-btn {
   background: rgba(255, 255, 255, 0.08);
   border: none;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
   display: flex;
@@ -201,7 +357,7 @@ header h1 {
   justify-content: center;
   transition: all 0.2s ease;
   position: relative;
-  z-index: 105; /* Keep only the + button elevated above hover popouts */
+  z-index: 105;
 }
 
 .add-task-btn:hover {
@@ -212,16 +368,16 @@ header h1 {
 }
 
 /* Task items list inside day cards */
-.tasks-list {
+.tasks-container-compact {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  overflow: visible;
   flex-grow: 1;
-  padding-right: 2px;
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
 }
 
-/* Scrollbar styling for compact container */
 .tasks-container-compact::-webkit-scrollbar {
   width: 3px;
 }
@@ -230,9 +386,18 @@ header h1 {
   border-radius: 4px;
 }
 
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow: visible;
+  flex-grow: 1;
+  min-width: 0;
+}
+
 .task-item {
   font-size: clamp(0.42rem, 0.7vw, 0.76rem);
-  padding: 0.35rem 0.5rem;
+  padding: 0.3rem 0.45rem;
   border-radius: 6px;
   display: flex;
   justify-content: space-between;
@@ -242,41 +407,12 @@ header h1 {
   animation: fadeIn 0.15s ease;
   cursor: pointer;
   flex-shrink: 0;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .task-subtitle {
   font-size: clamp(0.38rem, 0.55vw, 0.68rem) !important;
-}
-
-/* Additional scaling details for narrow desktop screens (slim viewports) */
-@media (max-width: 1100px) {
-  .task-item {
-    padding: 0.2rem 0.35rem;
-    gap: 0.1rem;
-  }
-  .task-item img.crop-icon {
-    width: 12px !important;
-    height: 12px !important;
-    margin-right: 3px !important;
-  }
-
-  /* Columns 1, 2, 3 (Mon, Tue, Wed): align left and expand right */
-  .hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact,
-  .hide-task-labels .day-card.has-tasks:nth-child(7n+2):hover .tasks-container-compact,
-  .hide-task-labels .day-card.has-tasks:nth-child(7n+3):hover .tasks-container-compact {
-    left: -1px !important;
-    right: auto !important;
-    transform: none !important;
-  }
-
-  /* Columns 5, 6, 7 (Fri, Sat, Sun): align right and expand left */
-  .hide-task-labels .day-card.has-tasks:nth-child(7n+5):hover .tasks-container-compact,
-  .hide-task-labels .day-card.has-tasks:nth-child(7n+6):hover .tasks-container-compact,
-  .hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-container-compact {
-    left: auto !important;
-    right: -1px !important;
-    transform: none !important;
-  }
 }
 
 .task-item.manual { background: rgba(148, 163, 184, 0.25); border: 1px solid rgba(148, 163, 184, 0.4); }
@@ -302,298 +438,80 @@ header h1 {
   color: #ef4444;
 }
 
-/* Modal Overlay & Card styling */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  display: none;
+/* Start action icons faded */
+.start-action-task img.crop-icon {
+  opacity: 0.55 !important;
+  filter: brightness(0.65) saturate(0.8) !important;
+}
+
+/* Interactive Task Done checkmark overlay styling */
+.task-icon-wrapper {
+  position: relative;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  z-index: 100;
-}
-
-.modal {
-  background: rgba(20, 20, 28, 0.95);
-  border: 1px solid var(--border-glass);
-  border-radius: 16px;
-  width: 100%;
-  max-width: 580px; /* Slightly wider for side-by-side select elements */
-  padding: 1.5rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  animation: modalSlide 0.2s ease-out;
-}
-
-@keyframes modalSlide {
-  from { transform: translateY(10px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--border-glass);
-  padding-bottom: 0.5rem;
-}
-
-.modal-header h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.modal-close {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  font-size: 1.35rem;
-  cursor: pointer;
-}
-
-.modal-close:hover {
-  color: var(--text-main);
-}
-
-.modal-forms-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.dialog-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.section-title {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.form-group-row {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.form-group-row input,
-.form-group-row select {
-  flex: 1;
-  min-width: 0; /* Prevents overflow in flexbox */
-}
-
-.divider {
-  height: 1px;
-  background: var(--border-glass);
-  margin: 0.25rem 0;
-}
-
-.btn {
-  background: var(--accent-gold);
-  color: #111116;
-  border: none;
-  font-weight: 700;
-  padding: 0.55rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 0.85rem;
-}
-
-.btn:hover {
-  background: var(--accent-gold-hover);
-  transform: translateY(-1px);
-}
-
-.btn-inline {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
-/* Responsive / Mobile Optimization (under 768px) */
-@media (max-width: 768px) {
-  body {
-    padding: 0.5rem;
-  }
-
-  header {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-    padding: 0.5rem 0;
-    margin-bottom: 0.5rem;
-  }
-
-  header h1 {
-    font-size: 1.25rem;
-  }
-
-  .year-selector {
-    margin-right: 0 !important;
-  }
-
-  /* Keep weekdays row compact */
-  .weekdays-grid {
-    font-size: 0.65rem;
-    padding: 0.25rem 0;
-  }
-
-  /* Make grid fit mobile screen height or scrollable */
-  .calendar-grid {
-    grid-auto-rows: minmax(50px, auto);
-    grid-template-rows: none;
-    gap: 3px;
-  }
-
-  .day-card.empty-day {
-    padding: 3px;
-    min-height: 50px;
-  }
-
-  .day-card.has-tasks {
-    padding: 3px;
-    min-height: 75px;
-  }
-
-  .day-header {
-    margin-bottom: 2px;
-  }
-
-  .day-number {
-    font-size: 0.75rem;
-  }
-
-  /* Hide weekday names inside individual cards to save horizontal space */
-  .day-name {
-    display: none !important;
-  }
-
-  .add-task-btn {
-    width: 14px;
-    height: 14px;
-    font-size: 0.7rem;
-    opacity: 1; /* Always visible on mobile tap */
-  }
-
-  /* Render tasks as compact emoji badges */
-  .tasks-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    justify-content: flex-start;
-    overflow-y: visible;
-  }
-
-  /* Default task list layout on mobile (labels always show if active) */
-  .task-item {
-    font-size: 0.8rem;
-    padding: 0.35rem 0.5rem;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.2rem;
-    margin: 0.2rem 0;
-    width: 100%;
-    height: auto;
-  }
-
-  .task-item img.crop-icon {
-    width: 20px !important;
-    height: 20px !important;
-    margin-right: 6px !important;
-    border-radius: 4px;
-  }
-
-  /* When hide-task-labels is active: collapse into compact square icons */
-  .hide-task-labels .tasks-list {
-    display: flex;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: 2px !important;
-    align-content: flex-start !important;
-  }
-
-  .hide-task-labels .task-item {
-    width: 22px !important;
-    height: 22px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  .hide-task-labels .task-item .task-text-container {
-    display: none !important;
-  }
-
-  .hide-task-labels .task-item img.crop-icon {
-    width: 18px !important;
-    height: 18px !important;
-    margin-right: 0 !important;
-  }
-
-  .task-delete {
-    display: none !important;
-  }
-
-  /* Modal Mobile Layout */
-  .modal {
-    width: 95%;
-    padding: 1rem;
-    max-height: 90vh;
-    overflow-y: auto;
-  }
-
-  .form-group-row {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: stretch;
-  }
-
-  .form-group-row select, 
-  .form-group-row input,
-  .form-group-row button {
-    width: 100% !important;
-  }
-
+.checkmark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+  color: #22c55e !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-weight: 900;
+  font-size: 0.9em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 2px black;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  pointer-events: none;
+  line-height: 0 !important;
 }
 
-/* --- Global Toggleable Task Labels --- */
+.task-item:hover .checkmark-overlay {
+  opacity: 1;
+}
+
+.task-completed {
+  opacity: 0.35 !important;
+}
+
+.task-completed .task-icon-wrapper .checkmark-overlay {
+  background: transparent !important;
+  color: transparent !important;
+  text-shadow: none !important;
+}
+.task-completed .task-icon-wrapper .checkmark-overlay::after {
+  content: "×";
+  font-size: 1.3em;
+  color: #ef4444 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 2px black;
+}
+.task-completed:hover .task-icon-wrapper .checkmark-overlay {
+  opacity: 1;
+}
+
+/* --- Global Toggleable Task Labels (Hide / Compact Mode) --- */
 .hide-task-labels .day-card.has-tasks:hover {
   overflow: visible !important;
   z-index: 99;
 }
 
-/* Container for subcategories inside day-card */
-.tasks-container-compact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  flex-grow: 1;
-  min-height: 0;
-  overflow-y: auto;
-}
-
-/* Push ready tasks to top, plant/load tasks to bottom in collapsed mode */
 .hide-task-labels .tasks-container-compact {
   justify-content: space-between;
   overflow: visible !important;
 }
 
-/* Collapse subcategory lists into rows by default */
 .hide-task-labels .tasks-list {
   display: flex;
   flex-direction: row;
@@ -603,7 +521,6 @@ header h1 {
   flex-grow: 0;
 }
 
-/* Center and align output (ready) tasks to left, input (plant/load) to right */
 .hide-task-labels .ready-tasks {
   justify-content: flex-start;
 }
@@ -612,19 +529,19 @@ header h1 {
 }
 
 .hide-task-labels .task-item {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 5px;
   margin: 0;
 }
 
 .hide-task-labels .task-item img.crop-icon {
-  width: 24px !important;
-  height: 24px !important;
+  width: 22px !important;
+  height: 22px !important;
   margin-right: 0 !important;
 }
 
@@ -636,271 +553,160 @@ header h1 {
   display: none !important;
 }
 
-/* Expand the entire compact wrapper into a vertical overlay on hover */
-.hide-task-labels .day-card.has-tasks:hover .tasks-container-compact {
-  position: absolute;
-  top: 36px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  min-width: 220px;
-  max-width: 260px;
-  background: rgba(18, 18, 26, 0.98);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  padding: 0.5rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(255, 255, 255, 0.1);
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.35rem;
-  height: auto;
-  max-height: none;
-  overflow: visible;
-  z-index: 95;
-}
-
-/* Align left on Mondays and column 2 to prevent screen overflow */
-.hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact,
-.hide-task-labels .day-card.has-tasks:nth-child(7n+2):hover .tasks-container-compact {
-  left: -2px;
-  right: auto;
-  transform: none;
-}
-
-/* Align right on Saturdays and Sundays to prevent screen overflow */
-.hide-task-labels .day-card.has-tasks:nth-child(7n+6):hover .tasks-container-compact,
-.hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-container-compact {
-  left: auto;
-  right: -2px;
-  transform: none;
-}
-
-/* Align upwards for bottom row (Days 22-28) to prevent screen overflow */
-.hide-task-labels .day-card.has-tasks:nth-child(n+22):hover .tasks-container-compact {
-  top: auto;
-  bottom: 4px;
-  box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.75);
-}
-
-/* Convert subcontainers back to regular vertical details list inside hover popout */
-.hide-task-labels .day-card.has-tasks:hover .tasks-list {
-  position: static !important;
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-  align-content: flex-start !important;
-  gap: 0.35rem !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  background: none !important;
-  border: none !important;
-}
-
-.hide-task-labels .day-card.has-tasks:hover .task-item {
-  width: 100% !important;
-  height: auto !important;
-  padding: 0.45rem 0.65rem !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  font-size: 0.96rem !important; /* Larger text on hover */
-}
-
-.hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon {
-  width: 32px !important;
-  height: 32px !important;
-  margin-right: 8px !important;
-}
-
-.hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container {
-  display: flex !important;
-}
-
-/* Make subtitles (locations) larger on hover */
-.hide-task-labels .day-card.has-tasks:hover .task-item .task-subtitle {
-  font-size: 0.82rem !important;
-}
-
-.hide-task-labels .day-card.has-tasks:hover .task-item:hover .task-delete {
-  display: block !important;
-}
-
-/* Darken/fade icons for starting actions (planting/loading) */
-.start-action-task img.crop-icon {
-  opacity: 0.55 !important;
-  filter: brightness(0.65) saturate(0.8) !important;
-}
-
-/* Center task icons inside the collapsed wrapper container */
-.hide-task-labels .task-item > div {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 100% !important;
-  height: 100% !important;
-  flex-grow: 0 !important;
-}
-
-/* Restore normal left alignment on hover popout list */
-.hide-task-labels .day-card.has-tasks:hover .task-item > div {
-  justify-content: flex-start !important;
-  width: auto !important;
-  flex-grow: 1 !important;
-}
-
-/* Add a clean divider line between outputs (ready/harvest) and inputs (plant/load) inside hover overlay */
-.hide-task-labels .day-card.has-tasks:hover .ready-tasks:not(:empty) + .plant-tasks:not(:empty) {
-  border-top: 1.5px dashed rgba(255, 255, 255, 0.15) !important;
-  margin-top: 0.5rem !important;
-  padding-top: 0.5rem !important;
-}
-
-/* Interactive Task Done checkmark overlay styling */
-.task-icon-wrapper {
-  position: relative;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin-right: 6px;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-@media (max-width: 1100px) {
-  .task-icon-wrapper {
-    width: 12px;
-    height: 12px;
-    margin-right: 3px;
-  }
-}
-
-.hide-task-labels .day-card.has-tasks:hover .task-item .task-icon-wrapper {
-  width: 32px;
-  height: 32px;
-  margin-right: 8px;
-}
-
-/* Remove margin-right on icon wrappers in collapsed mode to keep them perfectly centered */
 .hide-task-labels .task-item .task-icon-wrapper {
   margin-right: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
-.checkmark-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent !important; /* No solid background box */
-  color: #22c55e !important; /* Stardew Green check mark text */
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  font-weight: 900;
-  font-size: 1em; /* Increased size to make it visible without a background */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 2px black; /* Heavy shadow outline to pop on any icon */
-  border-radius: 4px;
-  opacity: 0;
-  transition: opacity 0.1s ease;
-  pointer-events: none; /* Make clicks pass through to wrapper */
-  line-height: 0 !important; /* Forces line-height to 0 to prevent vertical offset */
-}
+/* Expand the entire compact wrapper into an overlay on hover (desktop) */
+@media (min-width: 769px) {
+  .hide-task-labels .day-card.has-tasks:hover .tasks-container-compact {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-width: 200px;
+    max-width: 250px;
+    background: rgba(18, 18, 26, 0.98);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.35rem;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    z-index: 95;
+  }
 
-/* Show checkmark on hover of the task item */
-.task-item:hover .checkmark-overlay {
-  opacity: 1;
-}
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+2):hover .tasks-container-compact {
+    left: -2px;
+    right: auto;
+    transform: none;
+  }
 
-/* If task is completed, lower opacity (acts like planted/loaded faded styles) */
-.task-completed {
-  opacity: 0.35 !important;
-}
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+6):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-container-compact {
+    left: auto;
+    right: -2px;
+    transform: none;
+  }
 
-/* Allow completed task checkmarks to show the reset symbol (X) on hover */
-.task-completed .task-icon-wrapper .checkmark-overlay {
-  background: transparent !important;
-  color: transparent !important; /* Hide original green check mark color */
-  text-shadow: none !important; /* Clear original green check mark shadow outline */
-}
-.task-completed .task-icon-wrapper .checkmark-overlay::after {
-  content: "×";
-  font-size: 1.3em;
-  color: #ef4444 !important; /* Red color for X text */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 2px black;
-}
-.task-completed:hover .task-icon-wrapper .checkmark-overlay {
-  opacity: 1;
+  .hide-task-labels .day-card.has-tasks:nth-child(n+22):hover .tasks-container-compact {
+    top: auto;
+    bottom: 4px;
+    box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.75);
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .tasks-list {
+    position: static !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+    border: none !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0.4rem 0.6rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 0.92rem !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 6px !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container {
+    display: flex !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-icon-wrapper {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 6px !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item:hover .task-delete {
+    display: block !important;
+  }
 }
 
 /* ==========================================================================
    PERFECTION TRACKER STYLES
    ========================================================================== */
-
-/* View Mode Switcher */
-.view-tab-btn {
-  background: transparent;
-  color: var(--text-muted);
-  padding: 0.26rem 0.65rem !important;
-  font-size: 0.72rem !important;
-}
-.view-tab-btn:hover {
-  color: var(--text-main);
-  background: rgba(255, 255, 255, 0.05);
-}
-.view-tab-btn.active {
-  background: linear-gradient(135deg, var(--accent-gold), #ea580c);
-  color: #ffffff !important;
-  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.4);
+#tracker-main-view {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Tracker Sheet Tabs */
-.tracker-tab-btn {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-glass);
-  color: var(--text-muted);
-  padding: 0.28rem 0.68rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 0.72rem;
-  transition: all 0.2s ease;
-  font-family: inherit;
-}
-.tracker-tab-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-main);
-}
-.tracker-tab-btn.active {
-  border-color: var(--accent-gold);
-  color: var(--accent-gold);
-  background: rgba(249, 115, 22, 0.12);
-  box-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
-}
-
-/* Tracker Progress Summary Card */
 .tracker-summary-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: 12px;
-  padding: 1.1rem 1.4rem;
-  margin-bottom: 1rem;
+  padding: 1rem 1.3rem;
+  margin-bottom: 0.85rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .tracker-summary-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
 }
+
+.tracker-title-group h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.tracker-title-group p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.tracker-progress-info {
+  text-align: right;
+}
+
+#tracker-progress-count {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.tracker-progress-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
 .tracker-progress-track {
-  height: 10px;
+  height: 8px;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 999px;
   overflow: hidden;
 }
+
 .tracker-progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #f97316, #fbbf24);
@@ -908,7 +714,23 @@ header h1 {
   transition: width 0.35s ease;
 }
 
-/* Tracker Subfilters */
+.tracker-filter-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tracker-subfilters {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
 .tracker-subfilter-btn {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-glass);
@@ -931,26 +753,45 @@ header h1 {
   color: #fff;
 }
 
-/* Tracker Grid & Cards */
+.tracker-search-input {
+  padding: 0.42rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-glass);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  min-width: 220px;
+  font-family: inherit;
+  outline: none;
+}
+.tracker-search-input:focus {
+  border-color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.07);
+}
+
 .tracker-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 0.75rem;
+  gap: 0.65rem;
   padding-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tracker-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: 10px;
-  padding: 0.75rem 0.85rem;
+  padding: 0.7rem 0.8rem;
   display: flex;
-  gap: 0.75rem;
+  gap: 0.7rem;
   align-items: flex-start;
   cursor: pointer;
   user-select: none;
   transition: all 0.2s ease;
   position: relative;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .tracker-card:hover {
   border-color: rgba(255, 255, 255, 0.2);
@@ -971,8 +812,8 @@ header h1 {
 }
 
 .tracker-card-icon {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid var(--border-glass);
   border-radius: 8px;
@@ -981,7 +822,7 @@ header h1 {
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
-  padding: 4px;
+  padding: 3px;
 }
 .tracker-card-icon img {
   width: 100%;
@@ -999,12 +840,12 @@ header h1 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.12rem;
 }
 .tracker-card-name {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1013,7 +854,7 @@ header h1 {
   font-size: 0.75rem;
   color: var(--text-muted);
   line-height: 1.35;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 .tracker-card-notes {
   font-size: 0.72rem;
@@ -1022,10 +863,9 @@ header h1 {
   line-height: 1.3;
 }
 
-/* Custom Checkbox on Cards */
 .tracker-card-cb {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 5px;
   border: 2px solid rgba(255, 255, 255, 0.25);
   background: rgba(0, 0, 0, 0.3);
@@ -1047,3 +887,600 @@ header h1 {
   display: block;
 }
 
+/* ==========================================================================
+   FARM PLANNER VIEW
+   ========================================================================== */
+#planner-main-view {
+  width: 100vw;
+  height: calc(100vh - 44px);
+  height: calc(100dvh - 44px);
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#planner-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #1e1b14;
+  display: block;
+}
+
+/* ==========================================================================
+   MODALS & FORMS
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.modal {
+  background: rgba(20, 20, 28, 0.96);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 560px;
+  padding: 1.35rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  animation: modalSlide 0.2s ease-out;
+  box-sizing: border-box;
+  max-height: 90vh;
+  max-height: 90dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@keyframes modalSlide {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.45rem;
+}
+
+.modal-header h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.35rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.modal-close:hover {
+  color: var(--text-main);
+}
+
+.modal-forms-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.dialog-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group-row input,
+.form-group-row select {
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-glass);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.82rem;
+  outline: none;
+}
+.form-group-row input:focus,
+.form-group-row select:focus {
+  border-color: var(--accent-gold);
+}
+
+.form-group-row select option {
+  background: #181820;
+  color: #fff;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-glass);
+  margin: 0.2rem 0;
+}
+
+.btn {
+  background: var(--accent-gold);
+  color: #111116;
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.82rem;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: var(--accent-gold-hover);
+  transform: translateY(-1px);
+}
+
+.btn-inline {
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE / MOBILE OPTIMIZATION (PHONES & SMALL SCREENS)
+   ========================================================================== */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  /* Header Mobile Layout */
+  header {
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: center;
+    padding: 0.35rem 0.45rem;
+    min-height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .header-main-row {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+  }
+
+  .app-logo {
+    font-size: 0.92rem;
+    justify-content: center;
+  }
+  .app-logo-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .view-mode-selector {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: stretch;
+    padding: 2px;
+    gap: 2px;
+  }
+  .view-tab-btn {
+    flex: 1 1 0;
+    padding: 0.28rem 0.15rem !important;
+    font-size: 0.68rem !important;
+    text-align: center;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  /* Calendar Header Controls Mobile Layout */
+  .calendar-header-controls {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .calendar-header-controls > div,
+  .calendar-header-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .label-toggle-btn {
+    padding: 0.22rem 0.45rem !important;
+    font-size: 0.68rem !important;
+    margin-right: 0 !important;
+  }
+
+  .year-selector {
+    margin-right: 0 !important;
+    padding: 0.18rem 0.4rem;
+    gap: 0.2rem;
+  }
+  .year-label {
+    font-size: 0.7rem;
+  }
+  .year-btn {
+    padding: 0.08rem 0.32rem !important;
+    font-size: 0.65rem !important;
+  }
+  .year-display {
+    font-size: 0.75rem;
+    min-width: 12px;
+  }
+
+  .season-selector {
+    display: flex;
+    width: 100%;
+    gap: 2px;
+    box-sizing: border-box;
+  }
+  .season-btn {
+    flex: 1 1 0;
+    padding: 0.24rem 0.1rem !important;
+    font-size: 0.65rem !important;
+    text-align: center;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  /* Tracker Header Controls Mobile Layout */
+  .tracker-header-controls {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .tracker-sheet-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 3px;
+    box-sizing: border-box;
+  }
+  .tracker-tab-btn {
+    padding: 0.22rem 0.15rem !important;
+    font-size: 0.62rem !important;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 5px;
+  }
+
+  /* Main Container on Mobile (Zero horizontal overflow) */
+  .main-container {
+    padding: 0.25rem 0.3rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    flex-grow: 1;
+    min-height: 0;
+  }
+
+  /* Weekday Header */
+  .weekday-header {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 2px;
+    font-size: 0.6rem;
+    margin-bottom: 2px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Calendar Grid */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-auto-rows: minmax(44px, 1fr);
+    gap: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .day-card {
+    padding: 2px !important;
+    min-height: 44px !important;
+    border-radius: 5px;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .day-card.empty-day {
+    min-height: 44px !important;
+    padding: 2px !important;
+  }
+  .day-card.has-tasks {
+    min-height: 48px !important;
+    padding: 2px !important;
+  }
+
+  .day-header {
+    margin-bottom: 1px;
+  }
+  .day-number {
+    font-size: 0.66rem !important;
+  }
+  .add-task-btn {
+    width: 13px !important;
+    height: 13px !important;
+    font-size: 0.58rem !important;
+  }
+
+  /* Tasks inside Day Card */
+  .tasks-container-compact {
+    gap: 1px !important;
+    min-width: 0 !important;
+  }
+  .tasks-list {
+    gap: 1px !important;
+    min-width: 0 !important;
+  }
+  .task-item {
+    font-size: 0.6rem !important;
+    padding: 1px 2px !important;
+    min-width: 0 !important;
+  }
+  .task-item img.crop-icon {
+    width: 13px !important;
+    height: 13px !important;
+    margin-right: 2px !important;
+  }
+  .task-icon-wrapper {
+    width: 13px !important;
+    height: 13px !important;
+    margin-right: 2px !important;
+  }
+
+  /* Hide task labels mode on mobile (Compact Icon Grid) */
+  .hide-task-labels .tasks-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 1px !important;
+    justify-content: flex-start !important;
+  }
+  .hide-task-labels .task-item {
+    width: 15px !important;
+    height: 15px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    border: none !important;
+  }
+  .hide-task-labels .task-item img.crop-icon {
+    width: 13px !important;
+    height: 13px !important;
+    margin-right: 0 !important;
+  }
+  .hide-task-labels .task-item .task-icon-wrapper {
+    width: 13px !important;
+    height: 13px !important;
+    margin-right: 0 !important;
+  }
+
+  /* Mobile floating card popout for task details */
+  .hide-task-labels .day-card.has-tasks:hover .tasks-container-compact {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+    width: auto !important;
+    max-width: calc(100vw - 20px) !important;
+    min-width: 0 !important;
+    transform: none !important;
+    z-index: 9999 !important;
+    padding: 0.6rem !important;
+    max-height: 50vh !important;
+    overflow-y: auto !important;
+    background: rgba(18, 18, 26, 0.98) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9) !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .tasks-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.3rem !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0.35rem 0.5rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 0.85rem !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 6px !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container {
+    display: flex !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-icon-wrapper {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 6px !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-delete {
+    display: block !important;
+  }
+
+  /* Perfection Tracker on Mobile */
+  .tracker-summary-card {
+    padding: 0.65rem 0.75rem !important;
+    margin-bottom: 0.55rem !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .tracker-summary-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.35rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  #tracker-sheet-title {
+    font-size: 0.98rem !important;
+  }
+  #tracker-sheet-desc {
+    font-size: 0.75rem !important;
+  }
+  .tracker-progress-info {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    text-align: left !important;
+  }
+  #tracker-progress-count {
+    font-size: 0.92rem !important;
+  }
+  .tracker-progress-sub {
+    font-size: 0.68rem !important;
+  }
+
+  .tracker-filter-bar {
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    margin-bottom: 0.55rem !important;
+  }
+  .tracker-subfilters {
+    gap: 0.25rem !important;
+    width: 100% !important;
+  }
+  .tracker-subfilter-btn {
+    font-size: 0.68rem !important;
+    padding: 0.2rem 0.45rem !important;
+    border-radius: 4px !important;
+  }
+  .tracker-search-input {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    font-size: 0.8rem !important;
+    padding: 0.38rem 0.65rem !important;
+  }
+
+  .tracker-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.4rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding-bottom: 1.5rem !important;
+  }
+  .tracker-card {
+    padding: 0.55rem 0.65rem !important;
+    gap: 0.55rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .tracker-card-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .tracker-card-name {
+    font-size: 0.85rem !important;
+  }
+  .tracker-card-source {
+    font-size: 0.7rem !important;
+  }
+  .tracker-card-notes {
+    font-size: 0.68rem !important;
+  }
+
+  /* Farm Planner View on Mobile */
+  #planner-main-view {
+    height: calc(100vh - 90px) !important;
+    height: calc(100dvh - 90px) !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+
+  /* Modals on Mobile */
+  .modal-overlay {
+    padding: 0.4rem !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  .modal {
+    width: 100% !important;
+    max-width: 96vw !important;
+    max-height: 88vh !important;
+    max-height: 88dvh !important;
+    padding: 0.85rem !important;
+    border-radius: 12px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .form-group-row {
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    align-items: stretch !important;
+  }
+  .form-group-row select,
+  .form-group-row input,
+  .form-group-row button {
+    width: 100% !important;
+  }
+}
