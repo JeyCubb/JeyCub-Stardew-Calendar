@@ -1160,6 +1160,89 @@ function isRemoteScheduleEmpty(remoteSched) {
   return !hasTasks;
 }
 
+
+// ==========================================================================
+// PERFECTION TRACKER CLOUD SYNC & STORAGE HELPERS
+// ==========================================================================
+const INITIAL_MUSEUM_DONATIONS = {
+  "mus_opal": true, "mus_kyanite": true, "mus_jasper": true, "mus_ornamental_fan": true, 
+  "mus_obsidian": true, "mus_trilobite": true, "mus_nekoite": true, "mus_orpiment": true, 
+  "mus_chipped_amphora": true, "mus_dried_starfish": true, "mus_ancient_drum": true, 
+  "mus_emerald": true, "mus_dinosaur_egg": true, "mus_dwarf_scroll_i": true, 
+  "mus_dwarf_scroll_ii": true, "mus_dwarf_scroll_iii": true, "mus_dwarf_scroll_iv": true, 
+  "mus_ancient_doll": true, "mus_chewing_stick": true, "mus_rare_disc": true, 
+  "mus_rusty_spoon": true, "mus_rusty_spur": true, "mus_rusty_cog": true, 
+  "mus_chicken_statue": true, "mus_ancient_seed": true, "mus_prehistoric_tool": true, 
+  "mus_anchor": true, "mus_bone_flute": true, "mus_dwarvish_helm": true, 
+  "mus_dwarf_gadget": true, "mus_strange_doll_(yellow)": true, "mus_prehistoric_tibia": true, 
+  "mus_prehistoric_rib": true, "mus_skeletal_tail": true, "mus_nautilus_fossil": true, 
+  "mus_amphibian_fossil": true, "mus_quartz": true, "mus_earth_crystal": true, 
+  "mus_frozen_tear": true, "mus_fire_quartz": true, "mus_aquamarine": true, 
+  "mus_ruby": true, "mus_amethyst": true, "mus_topaz": true, "mus_jade": true, 
+  "mus_diamond": true, "mus_prismatic_shard": true, "mus_alamite": true, 
+  "mus_calcite": true, "mus_dolomite": true, "mus_esperite": true, "mus_geminite": true, 
+  "mus_jamborite": true, "mus_jagoite": true, "mus_lunarite": true, "mus_malachite": true, 
+  "mus_petrified_slime": true, "mus_thunder_egg": true, "mus_ocean_stone": true, 
+  "mus_celestine": true, "mus_granite": true, "mus_basalt": true, "mus_limestone": true, 
+  "mus_star_shards": true
+};
+
+function getTrackerState(sheetKey) {
+  try {
+    const raw = localStorage.getItem(`stardew_tracker_${sheetKey}`);
+    if (!raw) {
+      if (sheetKey === 'museum') {
+        localStorage.setItem('stardew_tracker_museum', JSON.stringify(INITIAL_MUSEUM_DONATIONS));
+        return { ...INITIAL_MUSEUM_DONATIONS };
+      }
+      return {};
+    }
+    return JSON.parse(raw) || {};
+  } catch {
+    return sheetKey === 'museum' ? { ...INITIAL_MUSEUM_DONATIONS } : {};
+  }
+}
+
+function getAllLocalTrackerState() {
+  const sheets = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts'];
+  const allTracker = {};
+  sheets.forEach(s => {
+    allTracker[s] = getTrackerState(s);
+  });
+  return allTracker;
+}
+
+function getLocalTrackerCheckedCount(stateObj) {
+  let count = 0;
+  if (!stateObj) return 0;
+  Object.keys(stateObj).forEach(s => {
+    if (stateObj[s] && typeof stateObj[s] === 'object') {
+      count += Object.values(stateObj[s]).filter(Boolean).length;
+    }
+  });
+  return count;
+}
+
+function saveTrackerStateToCloud() {
+  const lastUpdated = Date.now();
+  localStorage.setItem('stardew_tracker_last_updated', lastUpdated);
+  
+  if (firebaseDb && syncKey) {
+    const allTracker = getAllLocalTrackerState();
+    firebaseDb.ref(`stardew_tracker/${syncKey}`).set({
+      data: allTracker,
+      lastUpdated: lastUpdated
+    }).catch(err => console.warn("Firebase tracker save error:", err));
+  }
+}
+
+function setTrackerItemState(sheetKey, itemId, isObtained) {
+  const state = getTrackerState(sheetKey);
+  state[itemId] = isObtained;
+  localStorage.setItem(`stardew_tracker_${sheetKey}`, JSON.stringify(state));
+  saveTrackerStateToCloud();
+}
+
 function initFirebase() {
   try {
     if (typeof firebase !== 'undefined') {
@@ -1178,7 +1261,7 @@ function initFirebase() {
       // Sanitize syncKey (Firebase paths cannot contain '.', '#', '$', '[', or ']')
       syncKey = syncKey.replace(/[\.#\$\[\]]/g, '_');
 
-      // Listen for remote updates
+      // 1. Listen for Calendar schedule remote updates
       firebaseDb.ref(`stardew_calendar/${syncKey}`).on('value', snapshot => {
         const data = snapshot.val();
         if (data && data.schedule) {
@@ -1215,6 +1298,48 @@ function initFirebase() {
         }
       }, err => {
         console.warn("Firebase sync failed or database URL incorrect");
+      });
+
+      // 2. Listen for Perfection Tracker remote updates (Auto-syncs across devices)
+      firebaseDb.ref(`stardew_tracker/${syncKey}`).on('value', snapshot => {
+        const trackerNode = snapshot.val();
+        const localTracker = getAllLocalTrackerState();
+        const localChecked = getLocalTrackerCheckedCount(localTracker);
+        const localLastUpdated = parseInt(localStorage.getItem('stardew_tracker_last_updated')) || 0;
+
+        if (!trackerNode || !trackerNode.data) {
+          // Remote tracker is empty. If this device has progress (e.g. laptop with 117 items), UPLOAD TO CLOUD!
+          if (localChecked > 0) {
+            saveTrackerStateToCloud();
+          }
+          return;
+        }
+
+        const remoteData = trackerNode.data;
+        const remoteLastUpdated = trackerNode.lastUpdated || 0;
+        const remoteChecked = getLocalTrackerCheckedCount(remoteData);
+
+        // Safe Merge & Pull Strategy:
+        // - If remote timestamp is newer
+        // - OR if local device is brand new / has minimal items (<= 64 initial museum) and remote has more items:
+        // -> Apply remote tracker state locally without deleting any existing data
+        if (remoteLastUpdated > localLastUpdated || (localChecked <= 64 && remoteChecked > localChecked)) {
+          const sheets = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts'];
+          sheets.forEach(s => {
+            if (remoteData[s]) {
+              localStorage.setItem(`stardew_tracker_${s}`, JSON.stringify(remoteData[s]));
+            }
+          });
+          localStorage.setItem('stardew_tracker_last_updated', remoteLastUpdated);
+          if (typeof renderTrackerSheet === 'function' && document.getElementById('tracker-main-view')) {
+            renderTrackerSheet();
+          }
+        } else if (localLastUpdated > remoteLastUpdated || localChecked > remoteChecked) {
+          // Local has more tracked progress -> push local to cloud so phone gets it
+          saveTrackerStateToCloud();
+        }
+      }, err => {
+        console.warn("Firebase tracker sync failed:", err);
       });
     }
   } catch (e) {
@@ -1615,59 +1740,14 @@ if (btnResetTracker) {
     };
     const title = sheetTitles[activeTrackerSheet] || 'current sheet';
     if (confirm(`Reset all checked progress on the "${title}" sheet?`)) {
-      const state = getTrackerState(activeTrackerSheet);
       localStorage.setItem(`stardew_tracker_${activeTrackerSheet}`, JSON.stringify({}));
+      saveTrackerStateToCloud();
       renderTrackerSheet();
     }
   });
 }
 
-// Default initial donation state from user's Excel file (64 donated items)
-const INITIAL_MUSEUM_DONATIONS = {
-  "mus_opal": true, "mus_kyanite": true, "mus_jasper": true, "mus_ornamental_fan": true, 
-  "mus_obsidian": true, "mus_trilobite": true, "mus_nekoite": true, "mus_orpiment": true, 
-  "mus_chipped_amphora": true, "mus_dried_starfish": true, "mus_ancient_drum": true, 
-  "mus_emerald": true, "mus_dinosaur_egg": true, "mus_dwarf_scroll_i": true, 
-  "mus_dwarf_scroll_ii": true, "mus_dwarf_scroll_iii": true, "mus_dwarf_scroll_iv": true, 
-  "mus_ancient_doll": true, "mus_chewing_stick": true, "mus_rare_disc": true, 
-  "mus_rusty_spoon": true, "mus_rusty_spur": true, "mus_rusty_cog": true, 
-  "mus_chicken_statue": true, "mus_ancient_seed": true, "mus_prehistoric_tool": true, 
-  "mus_anchor": true, "mus_bone_flute": true, "mus_dwarvish_helm": true, 
-  "mus_dwarf_gadget": true, "mus_strange_doll_(yellow)": true, "mus_prehistoric_tibia": true, 
-  "mus_prehistoric_rib": true, "mus_skeletal_tail": true, "mus_nautilus_fossil": true, 
-  "mus_amphibian_fossil": true, "mus_quartz": true, "mus_earth_crystal": true, 
-  "mus_frozen_tear": true, "mus_fire_quartz": true, "mus_aquamarine": true, 
-  "mus_ruby": true, "mus_amethyst": true, "mus_topaz": true, "mus_jade": true, 
-  "mus_diamond": true, "mus_prismatic_shard": true, "mus_alamite": true, 
-  "mus_calcite": true, "mus_dolomite": true, "mus_esperite": true, "mus_geminite": true, 
-  "mus_jamborite": true, "mus_jagoite": true, "mus_lunarite": true, "mus_malachite": true, 
-  "mus_petrified_slime": true, "mus_thunder_egg": true, "mus_ocean_stone": true, 
-  "mus_celestine": true, "mus_granite": true, "mus_basalt": true, "mus_limestone": true, 
-  "mus_star_shards": true
-};
-
-// State storage helper
-function getTrackerState(sheetKey) {
-  try {
-    const raw = localStorage.getItem(`stardew_tracker_${sheetKey}`);
-    if (!raw) {
-      if (sheetKey === 'museum') {
-        localStorage.setItem('stardew_tracker_museum', JSON.stringify(INITIAL_MUSEUM_DONATIONS));
-        return { ...INITIAL_MUSEUM_DONATIONS };
-      }
-      return {};
-    }
-    return JSON.parse(raw) || {};
-  } catch {
-    return sheetKey === 'museum' ? { ...INITIAL_MUSEUM_DONATIONS } : {};
-  }
-}
-
-function setTrackerItemState(sheetKey, itemId, isObtained) {
-  const state = getTrackerState(sheetKey);
-  state[itemId] = isObtained;
-  localStorage.setItem(`stardew_tracker_${sheetKey}`, JSON.stringify(state));
-}
+// State storage and sync handled above via getTrackerState & setTrackerItemState
 
 // Toggle individual item
 window.toggleTrackerItem = function(sheetKey, itemId, event) {
