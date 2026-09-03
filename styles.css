@@ -580,15 +580,14 @@ header {
 }
 
 /* ==========================================================================
-   UNCOMPRESSED READABLE HOVER POPOUT OVERLAYS (DESKTOP & MOBILE TOUCH)
+   UNCOMPRESSED READABLE HOVER POPOUT OVERLAYS (EXACTLY ONE AT A TIME)
    ========================================================================== */
-.hide-task-labels .day-card.has-tasks:hover,
+/* Active Popout Container */
 .hide-task-labels .day-card.has-tasks.touch-hover-active {
   overflow: visible !important;
   z-index: 99999 !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks.touch-hover-active .tasks-container-compact {
   position: absolute !important;
   top: 26px !important;
@@ -613,14 +612,41 @@ header {
   box-sizing: border-box !important;
 }
 
+/* Mouse Hover for Desktop (Fine Pointer Only) */
+@media (hover: hover) and (pointer: fine) {
+  .hide-task-labels .day-card.has-tasks:hover {
+    overflow: visible !important;
+    z-index: 99999 !important;
+  }
+  .hide-task-labels .day-card.has-tasks:hover .tasks-container-compact {
+    position: absolute !important;
+    top: 26px !important;
+    width: 250px !important;
+    min-width: 230px !important;
+    max-width: 280px !important;
+    background: rgba(16, 16, 24, 0.98) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    padding: 0.6rem 0.65rem !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.95), 0 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 0.35rem !important;
+    height: auto !important;
+    max-height: 65vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
 /* Columns 1, 2, 3, 4 (Mon, Tue, Wed, Thu): Anchor Left (0), Expand RIGHTWARDS */
-.hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(7n+1).touch-hover-active .tasks-container-compact,
-.hide-task-labels .day-card.has-tasks:nth-child(7n+2):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(7n+2).touch-hover-active .tasks-container-compact,
-.hide-task-labels .day-card.has-tasks:nth-child(7n+3):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(7n+3).touch-hover-active .tasks-container-compact,
-.hide-task-labels .day-card.has-tasks:nth-child(7n+4):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(7n+4).touch-hover-active .tasks-container-compact {
   left: 0 !important;
   right: auto !important;
@@ -628,11 +654,8 @@ header {
 }
 
 /* Columns 5, 6, 7 (Fri, Sat, Sun): Anchor Right (0), Expand LEFTWARDS */
-.hide-task-labels .day-card.has-tasks:nth-child(7n+5):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(7n+5).touch-hover-active .tasks-container-compact,
-.hide-task-labels .day-card.has-tasks:nth-child(7n+6):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(7n+6).touch-hover-active .tasks-container-compact,
-.hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(7n).touch-hover-active .tasks-container-compact {
   left: auto !important;
   right: 0 !important;
@@ -640,14 +663,38 @@ header {
 }
 
 /* Bottom Rows (Days 20 to 28): Expand UPWARDS */
-.hide-task-labels .day-card.has-tasks:nth-child(n+20):hover .tasks-container-compact,
 .hide-task-labels .day-card.has-tasks:nth-child(n+20).touch-hover-active .tasks-container-compact {
   top: auto !important;
   bottom: 0 !important;
   box-shadow: 0 -16px 45px rgba(0, 0, 0, 0.95) !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .tasks-list,
+/* Desktop Hover Anchoring */
+@media (hover: hover) and (pointer: fine) {
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+1):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+2):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+3):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+4):hover .tasks-container-compact {
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+5):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n+6):hover .tasks-container-compact,
+  .hide-task-labels .day-card.has-tasks:nth-child(7n):hover .tasks-container-compact {
+    left: auto !important;
+    right: 0 !important;
+    transform: none !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:nth-child(n+20):hover .tasks-container-compact {
+    top: auto !important;
+    bottom: 0 !important;
+    box-shadow: 0 -16px 45px rgba(0, 0, 0, 0.95) !important;
+  }
+}
+
 .hide-task-labels .day-card.has-tasks.touch-hover-active .tasks-list {
   position: static !important;
   width: 100% !important;
@@ -660,7 +707,6 @@ header {
   border: none !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .task-item,
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item {
   width: 100% !important;
   height: auto !important;
@@ -675,7 +721,6 @@ header {
   background: rgba(255, 255, 255, 0.08) !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon,
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item img.crop-icon {
   width: 26px !important;
   height: 26px !important;
@@ -683,7 +728,6 @@ header {
   flex-shrink: 0 !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container,
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-text-container {
   display: flex !important;
   flex-direction: column !important;
@@ -693,7 +737,6 @@ header {
   line-height: 1.2 !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container span,
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-text-container span {
   display: block !important;
   font-size: 0.84rem !important;
@@ -702,14 +745,12 @@ header {
   word-break: break-word !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .task-item .task-subtitle,
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-subtitle {
   font-size: 0.72rem !important;
   opacity: 0.8 !important;
   margin-top: 2px !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .task-item .task-icon-wrapper,
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-icon-wrapper {
   width: 26px !important;
   height: 26px !important;
@@ -717,13 +758,86 @@ header {
   flex-shrink: 0 !important;
 }
 
-.hide-task-labels .day-card.has-tasks:hover .task-item:hover .task-delete,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item:hover .task-delete,
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-delete {
   display: block !important;
   font-size: 1.1rem !important;
   padding: 0 4px !important;
   margin-left: 6px !important;
   flex-shrink: 0 !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hide-task-labels .day-card.has-tasks:hover .tasks-list {
+    position: static !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+    border: none !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 38px !important;
+    padding: 0.4rem 0.6rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-size: 0.88rem !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon {
+    width: 26px !important;
+    height: 26px !important;
+    margin-right: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+    text-align: left !important;
+    line-height: 1.2 !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container span {
+    display: block !important;
+    font-size: 0.84rem !important;
+    font-weight: 600 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-subtitle {
+    font-size: 0.72rem !important;
+    opacity: 0.8 !important;
+    margin-top: 2px !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item .task-icon-wrapper {
+    width: 26px !important;
+    height: 26px !important;
+    margin-right: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hide-task-labels .day-card.has-tasks:hover .task-item:hover .task-delete {
+    display: block !important;
+    font-size: 1.1rem !important;
+    padding: 0 4px !important;
+    margin-left: 6px !important;
+    flex-shrink: 0 !important;
+  }
 }
 
 /* ==========================================================================

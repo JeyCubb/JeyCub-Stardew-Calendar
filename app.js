@@ -2104,11 +2104,14 @@ document.addEventListener('dblclick', (e) => {
 }, { passive: false });
 
 // Dismiss open day hover popups when tapping outside any day card
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.day-card')) {
-    document.querySelectorAll('.day-card.touch-hover-active').forEach(c => c.classList.remove('touch-hover-active'));
-  }
+['click', 'touchstart'].forEach(evt => {
+  document.addEventListener(evt, (e) => {
+    if (!e.target.closest('.day-card')) {
+      document.querySelectorAll('.day-card.touch-hover-active').forEach(c => c.classList.remove('touch-hover-active'));
+    }
+  }, { passive: true });
 });
+
 
 
 
