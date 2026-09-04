@@ -1711,6 +1711,11 @@ const trackerSearchInput = document.getElementById('tracker-search-input');
 if (trackerSearchInput) {
   trackerSearchInput.addEventListener('input', (e) => {
     currentTrackerSearch = e.target.value.toLowerCase().trim();
+    if (currentTrackerSearch && currentTrackerFilter !== 'all') {
+      currentTrackerFilter = 'all';
+      localStorage.setItem(`stardew_tracker_filter_${activeTrackerSheet}`, 'all');
+      renderTrackerSubfilters();
+    }
     renderTrackerGridOnly();
   });
 }
@@ -1749,8 +1754,13 @@ window.addEventListener('keydown', (e) => {
     return;
   }
 
-  // If printable character typed, focus search bar immediately
-  if (e.key.length === 1 || e.key === 'Backspace') {
+  // If printable character typed, focus search bar immediately and switch filter to All
+  if (e.key.length === 1) {
+    if (currentTrackerFilter !== 'all') {
+      currentTrackerFilter = 'all';
+      localStorage.setItem(`stardew_tracker_filter_${activeTrackerSheet}`, 'all');
+      renderTrackerSubfilters();
+    }
     searchInput.focus();
   }
 });
