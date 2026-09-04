@@ -2079,7 +2079,28 @@ function renderTrackerGridOnly() {
       badgeText = item.category === 'Bachelorette' ? '👰 Bachelorette' : (item.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
       dayText = `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 4px;">🎂 Birthday: ${item.birthday} | 🏠 ${item.home}</div>`;
       detailsText = `<div style="margin-bottom: 4px; line-height: 1.3;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved}</div><div style="margin-bottom: 4px; line-height: 1.3;"><strong style="color: #4ade80;">👍 Liked:</strong> ${item.liked}</div>`;
-      notesText = `<div style="line-height: 1.3;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule}</div>`;
+      
+      let mapPinsHtml = '';
+      if (item.mapPins && Array.isArray(item.mapPins) && item.mapPins.length > 0) {
+        item.mapPins.forEach((pin, pIdx) => {
+          mapPinsHtml += `
+            <div class="villager-map-pin-static" style="left: ${pin.x}%; top: ${pin.y}%;">
+              <span class="static-pin-dot"></span>
+              <span class="static-pin-label">${pin.label}</span>
+            </div>
+          `;
+        });
+      }
+
+      notesText = `
+        <div style="line-height: 1.3; margin-bottom: 6px;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule}</div>
+        <div class="villager-static-map-wrapper">
+          <div class="villager-static-map-frame">
+            <img src="stardew_map.png" alt="Map" class="villager-static-map-img" loading="lazy">
+            ${mapPinsHtml}
+          </div>
+        </div>
+      `;
     }
 
     card.innerHTML = `

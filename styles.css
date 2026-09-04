@@ -1641,3 +1641,67 @@ header {
     display: none !important;
   }
 }
+
+
+/* ==========================================================================
+   STATIC VILLAGER MAP THUMBNAILS
+   ========================================================================== */
+.villager-static-map-wrapper {
+  margin-top: 0.55rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-glass);
+  background: #1e1b14;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.villager-static-map-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 400 / 244;
+  background: #1e1b14;
+  overflow: hidden;
+}
+
+.villager-static-map-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+  image-rendering: pixelated;
+}
+
+.villager-map-pin-static {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.static-pin-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fbbf24;
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.95), 0 0 2px #000;
+  display: block;
+}
+
+.static-pin-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1px 5px;
+  border-radius: 4px;
+  white-space: nowrap;
+  margin-top: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.01em;
+}
