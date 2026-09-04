@@ -6,7 +6,7 @@
   <meta name="referrer" content="no-referrer">
   <title>Stardew Valley Tracker</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3.2">
+  <link rel="stylesheet" href="styles.css?v=3.3">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
@@ -114,92 +114,7 @@
     </div>
 
     <!-- Tracker Items Grid -->
-        <!-- Tracker Items Grid -->
     <div id="tracker-items-grid" class="tracker-grid"></div>
-
-    <!-- Villagers Live Map Tracker View -->
-    <div id="villager-map-view" class="villager-map-container" style="display: none;">
-      <!-- Map Controls Bar -->
-      <div class="villager-map-controls-card">
-        <div class="map-controls-top-row">
-          <!-- Time Display & Play/Pause -->
-          <div class="map-time-badge-container">
-            <button id="btn-map-play-time" class="map-play-btn" title="Auto-advance time">▶ Play</button>
-            <div id="map-time-display" class="map-time-display">☀️ 12:00 PM</div>
-          </div>
-
-          <!-- Time Slider -->
-          <div class="map-slider-wrapper">
-            <input type="range" id="map-time-slider" min="6" max="24" step="1" value="12" class="map-time-slider">
-            <div class="map-slider-ticks">
-              <span>6 AM</span>
-              <span>9 AM</span>
-              <span>12 PM</span>
-              <span>4 PM</span>
-              <span>8 PM</span>
-              <span>12 AM</span>
-            </div>
-          </div>
-
-          <!-- Environment Controls -->
-          <div class="map-env-controls">
-            <!-- Weather Toggle -->
-            <div class="map-toggle-group">
-              <button id="btn-weather-sunny" class="map-toggle-btn active" data-weather="sunny">☀️ Sunny</button>
-              <button id="btn-weather-rain" class="map-toggle-btn" data-weather="rain">🌧️ Rain</button>
-            </div>
-
-            <!-- Day of Week Selector -->
-            <select id="map-day-select" class="map-select">
-              <option value="mon">Monday</option>
-              <option value="tue">Tuesday</option>
-              <option value="wed">Wednesday</option>
-              <option value="thu">Thursday</option>
-              <option value="fri">Friday</option>
-              <option value="sat">Saturday</option>
-              <option value="sun">Sunday</option>
-            </select>
-
-            <!-- Focus Villager Select -->
-            <select id="map-villager-focus" class="map-select">
-              <option value="all">👥 All Villagers (34)</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Quick Jump Times -->
-        <div class="map-quick-times">
-          <span class="quick-times-label">Quick Jump:</span>
-          <button class="map-quick-btn" data-hour="6">🌅 6 AM</button>
-          <button class="map-quick-btn" data-hour="9">☀️ 9 AM</button>
-          <button class="map-quick-btn active" data-hour="12">🥪 12 PM</button>
-          <button class="map-quick-btn" data-hour="16">☕ 4 PM</button>
-          <button class="map-quick-btn" data-hour="19">🍻 7 PM</button>
-          <button class="map-quick-btn" data-hour="22">🌙 10 PM</button>
-        </div>
-      </div>
-
-      <!-- Main Map & Info Split Layout -->
-      <div class="villager-map-main-layout">
-        <!-- Interactive Map Canvas Frame -->
-        <div class="villager-map-canvas-frame" id="villager-map-frame">
-          <div class="villager-map-wrapper" id="villager-map-wrapper">
-            <img src="stardew_map.png" alt="Stardew Valley World Map" class="villager-map-bg" id="villager-map-bg">
-            <!-- SVG overlay for movement routes -->
-            <svg class="villager-map-route-svg" id="villager-route-svg"></svg>
-            <!-- Dynamic villager pins container -->
-            <div id="villager-pins-container" class="villager-pins-container"></div>
-          </div>
-        </div>
-
-        <!-- Selected Villager / Location Info Panel -->
-        <div class="villager-map-info-panel" id="villager-map-info-panel">
-          <div id="map-selected-villager-card" class="map-info-card">
-            <!-- Filled dynamically in JS -->
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
 
   <!-- Main Farm Planner Layout -->
@@ -312,8 +227,8 @@
     </div>
   </div>
 
-  <script src="perfection_data.js?v=3.2"></script>
-  <script src="app.js?v=3.2"></script>
+  <script src="perfection_data.js?v=3.3"></script>
+  <script src="app.js?v=3.3"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then((registrations) => {
