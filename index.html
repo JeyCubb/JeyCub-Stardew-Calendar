@@ -9,7 +9,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="styles.css?v=3.7">
+  <link rel="stylesheet" href="styles.css?v=3.8">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
@@ -230,7 +230,26 @@
     </div>
   </div>
 
-    <!-- Villager Map Lightbox Modal -->
+      <!-- Giant Floating Villager Map Hover Preview -->
+  <div id="villager-map-hover-preview" class="villager-map-hover-preview">
+    <div class="hover-preview-header">
+      <div class="hover-preview-title">
+        <img id="hover-preview-avatar" src="" alt="">
+        <div>
+          <div id="hover-preview-name" class="hover-preview-npc-name">Villager Name</div>
+          <div id="hover-preview-sub" class="hover-preview-npc-sub">🎂 Birthday | 🏠 Home</div>
+        </div>
+      </div>
+      <div class="hover-preview-badge">🗺️ Location Map</div>
+    </div>
+    <div class="hover-preview-map-frame">
+      <img src="stardew_map.png" alt="Stardew Valley Map" class="hover-preview-map-img">
+      <div id="hover-preview-pins"></div>
+    </div>
+    <div id="hover-preview-schedule" class="hover-preview-schedule"></div>
+  </div>
+
+  <!-- Villager Map Lightbox Modal -->
   <div class="modal-overlay" id="villager-map-modal" style="display: none; z-index: 120000;" onclick="closeVillagerMapModal(event)">
     <div class="modal" style="max-width: 820px; width: 95%; background: rgba(18, 16, 24, 0.98); border: 1px solid var(--accent-gold); box-shadow: 0 25px 60px rgba(0,0,0,0.95);" onclick="event.stopPropagation()">
       <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
@@ -253,8 +272,8 @@
     </div>
   </div>
 
-<script src="perfection_data.js?v=3.7"></script>
-  <script src="app.js?v=3.7"></script>
+<script src="perfection_data.js?v=3.8"></script>
+  <script src="app.js?v=3.8"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then((registrations) => {

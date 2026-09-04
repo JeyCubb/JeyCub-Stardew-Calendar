@@ -2095,8 +2095,12 @@ function renderTrackerGridOnly() {
 
       notesText = `
         <div style="line-height: 1.3; margin-bottom: 6px;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule}</div>
-        <div class="villager-static-map-wrapper" onmouseenter="adjustMapTransformOrigin(this)" onclick="openVillagerMapModal('${item.id}', event)" title="Click to enlarge location map">
-          <div class="map-zoom-hint">🔍 Zoom</div>
+        <div class="villager-static-map-wrapper"
+             onmouseenter="showVillagerMapHover('${item.id}', this, event)"
+             onmouseleave="hideVillagerMapHover()"
+             onclick="openVillagerMapModal('${item.id}', event)"
+             title="Hover to preview map / Click to enlarge">
+          <div class="map-zoom-hint">🔍 Hover to Zoom</div>
           <div class="villager-static-map-frame">
             <img src="stardew_map.png" alt="Map" class="villager-static-map-img" loading="lazy">
             ${mapPinsHtml}
@@ -2237,17 +2241,77 @@ window.closeVillagerMapModal = function(event) {
 };
 
 
-// Dynamically adjust transform-origin so 2.75x scaled hover maps never clip screen edges
-window.adjustMapTransformOrigin = function(el) {
-  if (!el) return;
+
+
+
+// Giant Floating Villager Map Hover Preview Handler
+window.showVillagerMapHover = function(villagerId, el, event) {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+  const preview = document.getElementById('villager-map-hover-preview');
+  if (!preview) return;
+
+  const dataList = (typeof PERFECTION_TRACKER_DATA !== 'undefined') ? (PERFECTION_TRACKER_DATA['villagers'] || []) : [];
+  const item = dataList.find(v => v.id === villagerId);
+  if (!item) return;
+
+  const avatar = document.getElementById('hover-preview-avatar');
+  const nameEl = document.getElementById('hover-preview-name');
+  const subEl = document.getElementById('hover-preview-sub');
+  const pinsContainer = document.getElementById('hover-preview-pins');
+  const schedEl = document.getElementById('hover-preview-schedule');
+
+  if (avatar) avatar.src = item.img || '';
+  if (nameEl) nameEl.innerText = item.name || '';
+  if (subEl) subEl.innerText = `🎂 ${item.birthday || ''} | 🏠 ${item.home || ''}`;
+  if (schedEl) schedEl.innerHTML = `<strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule || ''}`;
+
+  if (pinsContainer) {
+    let pinsHtml = '';
+    if (item.mapPins && Array.isArray(item.mapPins)) {
+      item.mapPins.forEach((pin, pIdx) => {
+        const posClass = pin.pos ? `pin-pos-${pin.pos}` : (pIdx % 2 === 0 ? 'pin-pos-top' : 'pin-pos-bottom');
+        pinsHtml += `
+          <div class="hover-preview-pin ${posClass}" style="left: ${pin.x}%; top: ${pin.y}%;">
+            <span class="hover-pin-dot"></span>
+            <span class="hover-pin-label">${pin.label}</span>
+          </div>
+        `;
+      });
+    }
+    pinsContainer.innerHTML = pinsHtml;
+  }
+
+  // Measure and position intelligently
+  preview.style.display = 'flex';
+  preview.style.visibility = 'hidden';
+
   const rect = el.getBoundingClientRect();
+  const previewWidth = preview.offsetWidth || 780;
+  const previewHeight = preview.offsetHeight || 520;
   const winWidth = window.innerWidth;
-  
-  if (rect.left < winWidth * 0.22) {
-    el.style.transformOrigin = '15% center';
-  } else if (rect.right > winWidth * 0.78) {
-    el.style.transformOrigin = '85% center';
-  } else {
-    el.style.transformOrigin = 'center center';
+  const winHeight = window.innerHeight;
+
+  // Center over card
+  let left = rect.left + (rect.width / 2) - (previewWidth / 2);
+  let top = rect.top + (rect.height / 2) - (previewHeight / 2);
+
+  // Clamp within viewport margins
+  if (left < 15) left = 15;
+  if (left + previewWidth > winWidth - 15) left = winWidth - previewWidth - 15;
+  if (top < 15) top = 15;
+  if (top + previewHeight > winHeight - 15) top = winHeight - previewHeight - 15;
+
+  preview.style.left = `${left}px`;
+  preview.style.top = `${top}px`;
+  preview.style.visibility = 'visible';
+  preview.classList.add('visible');
+};
+
+window.hideVillagerMapHover = function() {
+  const preview = document.getElementById('villager-map-hover-preview');
+  if (preview) {
+    preview.classList.remove('visible');
+    preview.style.display = 'none';
   }
 };
