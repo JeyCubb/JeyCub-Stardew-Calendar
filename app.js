@@ -2094,7 +2094,8 @@ function renderTrackerGridOnly() {
 
       notesText = `
         <div style="line-height: 1.3; margin-bottom: 6px;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule}</div>
-        <div class="villager-static-map-wrapper">
+        <div class="villager-static-map-wrapper" onclick="openVillagerMapModal('${item.id}', event)" title="Click to enlarge location map">
+          <div class="map-zoom-hint">🔍 Zoom</div>
           <div class="villager-static-map-frame">
             <img src="stardew_map.png" alt="Map" class="villager-static-map-img" loading="lazy">
             ${mapPinsHtml}
@@ -2177,3 +2178,59 @@ document.addEventListener('dblclick', (e) => {
 
 
 
+
+
+// Villager Map Lightbox Modal Handler
+window.openVillagerMapModal = function(villagerId, event) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+  const dataList = (typeof PERFECTION_TRACKER_DATA !== 'undefined') ? (PERFECTION_TRACKER_DATA['villagers'] || []) : [];
+  const item = dataList.find(v => v.id === villagerId);
+  if (!item) return;
+
+  const modal = document.getElementById('villager-map-modal');
+  if (!modal) return;
+
+  const imgEl = document.getElementById('modal-villager-img');
+  const nameEl = document.getElementById('modal-villager-name');
+  const subEl = document.getElementById('modal-villager-sub');
+  const pinsContainer = document.getElementById('modal-villager-pins-container');
+  const schedBox = document.getElementById('modal-villager-schedule-box');
+
+  if (imgEl) imgEl.src = item.img || '';
+  if (nameEl) nameEl.innerText = item.name || '';
+  if (subEl) subEl.innerText = `🎂 ${item.birthday || ''} | 🏠 ${item.home || ''}`;
+  
+  if (pinsContainer) {
+    let pinsHtml = '';
+    if (item.mapPins && Array.isArray(item.mapPins)) {
+      item.mapPins.forEach(pin => {
+        pinsHtml += `
+          <div class="villager-map-pin-static modal-pin" style="left: ${pin.x}%; top: ${pin.y}%;">
+            <span class="static-pin-dot modal-dot"></span>
+            <span class="static-pin-label modal-label">${pin.label}</span>
+          </div>
+        `;
+      });
+    }
+    pinsContainer.innerHTML = pinsHtml;
+  }
+
+  if (schedBox) {
+    schedBox.innerHTML = `
+      <div style="margin-bottom: 4px;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule || ''}</div>
+      <div style="margin-bottom: 4px;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved || ''}</div>
+      <div><strong style="color: #4ade80;">👍 Liked:</strong> ${item.liked || ''}</div>
+    `;
+  }
+
+  modal.style.display = 'flex';
+};
+
+window.closeVillagerMapModal = function(event) {
+  if (event) event.stopPropagation();
+  const modal = document.getElementById('villager-map-modal');
+  if (modal) modal.style.display = 'none';
+};

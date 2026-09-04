@@ -9,7 +9,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="styles.css?v=3.5">
+  <link rel="stylesheet" href="styles.css?v=3.6">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
@@ -230,8 +230,31 @@
     </div>
   </div>
 
-  <script src="perfection_data.js?v=3.5"></script>
-  <script src="app.js?v=3.5"></script>
+    <!-- Villager Map Lightbox Modal -->
+  <div class="modal-overlay" id="villager-map-modal" style="display: none; z-index: 120000;" onclick="closeVillagerMapModal(event)">
+    <div class="modal" style="max-width: 720px; width: 95%; background: rgba(18, 16, 24, 0.98); border: 1px solid var(--accent-gold); box-shadow: 0 25px 60px rgba(0,0,0,0.95);" onclick="event.stopPropagation()">
+      <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img id="modal-villager-img" src="" alt="" style="width: 44px; height: 44px; object-fit: contain; border-radius: 8px; background: rgba(0,0,0,0.4); border: 1px solid var(--border-glass); padding: 2px;">
+          <div>
+            <h3 id="modal-villager-name" style="margin: 0; font-size: 1.15rem; color: #fff;">Villager Location</h3>
+            <div id="modal-villager-sub" style="font-size: 0.78rem; color: var(--accent-gold); margin-top: 2px;"></div>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeVillagerMapModal()" style="font-size: 1.6rem; color: #cbd5e1; cursor: pointer; background: transparent; border: none; padding: 0 0.5rem;">&times;</button>
+      </div>
+      <div style="margin: 0.85rem 0 0.5rem 0;">
+        <div class="villager-static-map-frame" style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); box-shadow: inset 0 0 15px rgba(0,0,0,0.6);">
+          <img src="stardew_map.png" alt="Stardew Valley Map" class="villager-static-map-img">
+          <div id="modal-villager-pins-container"></div>
+        </div>
+      </div>
+      <div id="modal-villager-schedule-box" style="font-size: 0.82rem; color: #e2e8f0; background: rgba(0,0,0,0.4); padding: 0.65rem 0.85rem; border-radius: 8px; border: 1px solid var(--border-glass); line-height: 1.45;"></div>
+    </div>
+  </div>
+
+<script src="perfection_data.js?v=3.6"></script>
+  <script src="app.js?v=3.6"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then((registrations) => {
