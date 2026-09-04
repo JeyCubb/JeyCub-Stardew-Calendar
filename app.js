@@ -5,6 +5,16 @@ let activeDay = 1;
 let firebaseDb = null;
 let syncKey = null;
 
+// Perfection Tracker State
+// Tracker state declared at top of app.js
+
+// Villager Live Map State
+let currentVillagerViewMode = localStorage.getItem('stardew_villager_view_mode') || 'cards'; // 'cards' or 'map'
+let mapCurrentHour = 12;
+let mapCurrentWeather = 'sunny';
+let mapCurrentDay = 'mon';
+let mapFocusedVillagerId = 'all';
+let mapPlayInterval = null;
 // Migrate old data if necessary (and save clean version back)
 let rawSchedule = JSON.parse(localStorage.getItem('stardew_schedule')) || {};
 let schedule = {};
@@ -1637,9 +1647,7 @@ window.toggleTaskCompleted = function(day, taskId, event) {
 /* ==========================================================================
    PERFECTION TRACKER ENGINE
    ========================================================================== */
-let activeTrackerSheet = localStorage.getItem('stardew_active_tracker_sheet') || 'shipped';
-let currentTrackerFilter = localStorage.getItem(`stardew_tracker_filter_${activeTrackerSheet}`) || 'all';
-let currentTrackerSearch = '';
+// Tracker state declared at top of app.js
 
 // Mode switching (Calendar vs Tracker vs Planner)
 const btnViewCalendar = document.getElementById('btn-view-calendar');
@@ -1799,6 +1807,396 @@ window.toggleTrackerItem = function(sheetKey, itemId, event) {
   renderTrackerGridOnly();
   updateTrackerProgressBar();
 };
+
+/* ==========================================================================
+   VILLAGER LIVE MAP TRACKER ENGINE
+   ========================================================================== */
+// Villager map state declared at top of app.js
+
+function setVillagerViewMode(mode) {
+  currentVillagerViewMode = mode;
+  localStorage.setItem('stardew_villager_view_mode', mode);
+  renderTrackerSubfilters();
+  renderTrackerGridOnly();
+}
+
+window.openVillagerOnMap = function(villagerId, event) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+  mapFocusedVillagerId = villagerId;
+  const select = document.getElementById('map-villager-focus');
+  if (select) select.value = villagerId;
+  setVillagerViewMode('map');
+};
+
+function formatHourDisplay(hour) {
+  const h = hour % 24;
+  let ampm = 'AM';
+  let formattedH = h;
+  if (h === 0 || h === 24) {
+    formattedH = 12;
+    ampm = 'AM';
+  } else if (h === 12) {
+    formattedH = 12;
+    ampm = 'PM';
+  } else if (h > 12) {
+    formattedH = h - 12;
+    ampm = 'PM';
+  }
+  
+  let icon = '☀️';
+  if (h < 8) icon = '🌅';
+  else if (h >= 18 && h < 21) icon = '🌆';
+  else if (h >= 21 || h < 6) icon = '🌙';
+
+  let tag = '';
+  if (h === 6) tag = ' (Wake)';
+  else if (h === 12) tag = ' (Noon)';
+  else if (h === 17) tag = ' (Evening)';
+  else if (h === 24 || h === 0) tag = ' (Midnight)';
+
+  return `${icon} ${formattedH}:00 ${ampm}${tag}`;
+}
+
+function getVillagerSchedulePoint(villagerId, hour, weather, dayOfWeek) {
+  const mapData = (typeof PERFECTION_TRACKER_DATA !== 'undefined' && PERFECTION_TRACKER_DATA.mapData) ? PERFECTION_TRACKER_DATA.mapData : null;
+  if (!mapData || !mapData.schedules || !mapData.locations) return null;
+
+  const schedules = mapData.schedules[villagerId];
+  if (!schedules) return null;
+
+  let routine = schedules[weather] || schedules['sunny'] || [];
+  
+  // Special Friday evening Saloon logic for several townspeople
+  if (dayOfWeek === 'fri' && weather === 'sunny' && hour >= 17 && hour <= 22) {
+    if (['npc_robin', 'npc_demetrius', 'npc_pierre', 'npc_sam', 'npc_sebastian', 'npc_elliott'].includes(villagerId)) {
+      return {
+        hour: hour,
+        loc: 'Saloon',
+        action: 'Spending Friday evening socializing at The Stardrop Saloon',
+        coords: mapData.locations['Saloon'] || { x: 55, y: 54, label: 'The Stardrop Saloon' }
+      };
+    }
+  }
+
+  // Tuesday Aerobics at Pierre's Store
+  if (dayOfWeek === 'tue' && hour >= 13 && hour <= 16) {
+    if (['npc_caroline', 'npc_jodi', 'npc_marnie', 'npc_emily', 'npc_robin'].includes(villagerId)) {
+      return {
+        hour: hour,
+        loc: 'Pierres',
+        action: 'Attending Tuesday Aerobics Class at Pierre's General Store',
+        coords: mapData.locations['Pierres'] || { x: 52, y: 42.5, label: 'Pierre's General Store' }
+      };
+    }
+  }
+
+  // School days (Tue/Wed/Fri) for Penny, Jas & Vincent in Museum
+  if (['tue', 'wed', 'fri'].includes(dayOfWeek) && hour >= 9 && hour <= 14) {
+    if (['npc_penny', 'npc_jas', 'npc_vincent'].includes(villagerId)) {
+      return {
+        hour: hour,
+        loc: 'Museum',
+        action: 'In the Museum library classroom learning with Penny',
+        coords: mapData.locations['Museum'] || { x: 77, y: 68, label: 'Museum & Library' }
+      };
+    }
+  }
+
+  if (routine.length === 0) return null;
+
+  // Find active time slot
+  let activeSlot = routine[0];
+  for (let i = 0; i < routine.length; i++) {
+    if (hour >= routine[i].hour) {
+      activeSlot = routine[i];
+    } else {
+      break;
+    }
+  }
+
+  const coords = mapData.locations[activeSlot.loc] || { x: 50, y: 50, label: activeSlot.loc };
+  return {
+    hour: activeSlot.hour,
+    loc: activeSlot.loc,
+    action: activeSlot.action,
+    coords: coords
+  };
+}
+
+function renderVillagerMap() {
+  const pinsContainer = document.getElementById('villager-pins-container');
+  const routeSvg = document.getElementById('villager-route-svg');
+  const timeDisplay = document.getElementById('map-time-display');
+  const timeSlider = document.getElementById('map-time-slider');
+  const infoCard = document.getElementById('map-selected-villager-card');
+
+  if (!pinsContainer || !routeSvg) return;
+
+  pinsContainer.innerHTML = '';
+  routeSvg.innerHTML = '';
+
+  if (timeDisplay) timeDisplay.innerText = formatHourDisplay(mapCurrentHour);
+  if (timeSlider) timeSlider.value = mapCurrentHour;
+
+  // Update quick jump active states
+  document.querySelectorAll('.map-quick-btn').forEach(btn => {
+    btn.classList.toggle('active', parseInt(btn.dataset.hour) === mapCurrentHour);
+  });
+
+  const villagersList = (typeof PERFECTION_TRACKER_DATA !== 'undefined' && PERFECTION_TRACKER_DATA.villagers) ? PERFECTION_TRACKER_DATA.villagers : [];
+  const mapData = PERFECTION_TRACKER_DATA.mapData;
+
+  // Filter based on active category subfilter and search
+  const visibleVillagers = villagersList.filter(v => {
+    if (currentTrackerFilter !== 'all') {
+      const c = (v.category || '').toLowerCase();
+      if (currentTrackerFilter === 'bachelor' && c !== 'bachelor') return false;
+      if (currentTrackerFilter === 'bachelorette' && c !== 'bachelorette') return false;
+      if (currentTrackerFilter === 'town' && c !== 'townsperson') return false;
+    }
+    if (currentTrackerSearch) {
+      const q = currentTrackerSearch;
+      const match = (v.name && v.name.toLowerCase().includes(q)) ||
+                    (v.loved && v.loved.toLowerCase().includes(q)) ||
+                    (v.schedule && v.schedule.toLowerCase().includes(q)) ||
+                    (v.home && v.home.toLowerCase().includes(q));
+      if (!match) return false;
+    }
+    return true;
+  });
+
+  // Calculate positions for all visible villagers
+  const villagerPositions = [];
+  visibleVillagers.forEach(v => {
+    const pt = getVillagerSchedulePoint(v.id, mapCurrentHour, mapCurrentWeather, mapCurrentDay);
+    if (pt && pt.coords) {
+      villagerPositions.push({
+        villager: v,
+        point: pt,
+        x: pt.coords.x,
+        y: pt.coords.y,
+        locKey: pt.loc
+      });
+    }
+  });
+
+  // Group by location to fan out pins nicely at crowded spots (e.g. Saloon)
+  const locGroups = {};
+  villagerPositions.forEach(pos => {
+    const key = `${Math.round(pos.x)}_${Math.round(pos.y)}`;
+    if (!locGroups[key]) locGroups[key] = [];
+    locGroups[key].push(pos);
+  });
+
+  // Render Pins
+  villagerPositions.forEach(pos => {
+    const key = `${Math.round(pos.x)}_${Math.round(pos.y)}`;
+    const group = locGroups[key] || [pos];
+    const groupIdx = group.indexOf(pos);
+    const count = group.length;
+
+    let finalX = pos.x;
+    let finalY = pos.y;
+
+    if (count > 1) {
+      const angle = (groupIdx / count) * (Math.PI * 2);
+      const radius = count > 4 ? 3.8 : 2.6; // percentage offset radius
+      finalX += Math.cos(angle) * (radius * 0.6); // adjust for 400x244 aspect
+      finalY += Math.sin(angle) * radius;
+    }
+
+    const pin = document.createElement('div');
+    const catClass = pos.villager.category.toLowerCase();
+    const isFocused = (mapFocusedVillagerId === pos.villager.id);
+    
+    pin.className = `villager-map-pin ${catClass} ${isFocused ? 'active' : ''}`;
+    pin.style.left = `${finalX}%`;
+    pin.style.top = `${finalY}%`;
+    pin.title = `${pos.villager.name}: ${pos.point.action}`;
+
+    pin.innerHTML = `
+      <div class="villager-pin-avatar">
+        <img src="${pos.villager.img}" alt="${pos.villager.name}" loading="lazy" onerror="this.style.display='none';">
+      </div>
+      <div class="villager-pin-label">${pos.villager.name}</div>
+    `;
+
+    pin.onclick = (e) => {
+      e.stopPropagation();
+      mapFocusedVillagerId = pos.villager.id;
+      const select = document.getElementById('map-villager-focus');
+      if (select) select.value = pos.villager.id;
+      renderVillagerMap();
+    };
+
+    pinsContainer.appendChild(pin);
+  });
+
+  // Render Focus Route & Info Panel
+  let focusedVillager = villagersList.find(v => v.id === mapFocusedVillagerId);
+  if (!focusedVillager && visibleVillagers.length > 0) {
+    focusedVillager = visibleVillagers[0];
+  }
+
+  if (focusedVillager && infoCard) {
+    const currentPt = getVillagerSchedulePoint(focusedVillager.id, mapCurrentHour, mapCurrentWeather, mapCurrentDay);
+    const schedules = mapData.schedules[focusedVillager.id] || {};
+    const routine = schedules[mapCurrentWeather] || schedules['sunny'] || [];
+
+    // Draw SVG Route Trail on the map
+    if (routine.length > 1 && mapData.locations) {
+      let pathD = '';
+      routine.forEach((slot, idx) => {
+        const c = mapData.locations[slot.loc];
+        if (c) {
+          pathD += (idx === 0 ? `M ${c.x}% ${c.y}%` : ` L ${c.x}% ${c.y}%`);
+        }
+      });
+
+      if (pathD) {
+        routeSvg.innerHTML = `
+          <path d="${pathD}" fill="none" stroke="rgba(251, 191, 36, 0.45)" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round"/>
+        `;
+      }
+    }
+
+    const bdayText = focusedVillager.birthday ? `🎂 Birthday: ${focusedVillager.birthday}` : '';
+    const catLabel = focusedVillager.category === 'Bachelorette' ? '👰 Bachelorette' : (focusedVillager.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
+    const catColor = focusedVillager.category === 'Bachelorette' ? '#f472b6' : (focusedVillager.category === 'Bachelor' ? '#38bdf8' : '#c084fc');
+
+    let timelineHtml = '<div class="map-timeline-list">';
+    routine.forEach(slot => {
+      const isCur = (currentPt && currentPt.hour === slot.hour);
+      const locObj = mapData.locations[slot.loc] || { label: slot.loc };
+      const timeStr = formatHourDisplay(slot.hour).replace(/^[^\w\s]*\s*/, '');
+      timelineHtml += `
+        <div class="map-timeline-item ${isCur ? 'current' : ''}">
+          <span class="map-timeline-time">${timeStr}</span>
+          <div>
+            <div style="font-weight: 700; color: var(--text-main); margin-bottom: 2px;">📍 ${locObj.label}</div>
+            <div style="color: var(--text-muted); font-size: 0.72rem;">${slot.action}</div>
+          </div>
+        </div>
+      `;
+    });
+    timelineHtml += '</div>';
+
+    infoCard.innerHTML = `
+      <div class="map-info-card-header">
+        <div class="map-info-avatar">
+          <img src="${focusedVillager.img}" alt="${focusedVillager.name}">
+        </div>
+        <div class="map-info-meta">
+          <div class="map-info-name">${focusedVillager.name}</div>
+          <div class="map-info-badge" style="color: ${catColor};">${catLabel}</div>
+          <div class="map-info-bday">${bdayText}</div>
+          <div style="font-size: 0.73rem; color: var(--text-muted);">🏠 ${focusedVillager.home}</div>
+        </div>
+      </div>
+
+      <div class="map-info-activity-box">
+        <div style="font-weight: 700; color: #fbbf24; margin-bottom: 2px;">📍 Right Now at ${formatHourDisplay(mapCurrentHour)}:</div>
+        <div style="color: #fff; font-size: 0.8rem;">${currentPt ? currentPt.action : 'At home'}</div>
+      </div>
+
+      <div class="map-info-gifts-box">
+        <div style="margin-bottom: 4px;"><strong style="color: #f87171;">❤️ Loved Gifts:</strong> ${focusedVillager.loved}</div>
+        <div><strong style="color: #4ade80;">👍 Liked Gifts:</strong> ${focusedVillager.liked}</div>
+      </div>
+
+      <div>
+        <div class="map-info-section-title">📅 Daily Schedule (${mapCurrentWeather.toUpperCase()} • ${mapCurrentDay.toUpperCase()}):</div>
+        ${timelineHtml}
+      </div>
+    `;
+  }
+}
+
+function initVillagerMapControls() {
+  const slider = document.getElementById('map-time-slider');
+  if (slider) {
+    slider.addEventListener('input', (e) => {
+      mapCurrentHour = parseInt(e.target.value);
+      renderVillagerMap();
+    });
+  }
+
+  const playBtn = document.getElementById('btn-map-play-time');
+  if (playBtn) {
+    playBtn.addEventListener('click', () => {
+      if (mapPlayInterval) {
+        clearInterval(mapPlayInterval);
+        mapPlayInterval = null;
+        playBtn.innerText = '▶ Play';
+        playBtn.classList.remove('playing');
+      } else {
+        playBtn.innerText = '⏸ Pause';
+        playBtn.classList.add('playing');
+        mapPlayInterval = setInterval(() => {
+          mapCurrentHour++;
+          if (mapCurrentHour > 24) mapCurrentHour = 6;
+          renderVillagerMap();
+        }, 1200);
+      }
+    });
+  }
+
+  // Weather toggle buttons
+  const sunnyBtn = document.getElementById('btn-weather-sunny');
+  const rainBtn = document.getElementById('btn-weather-rain');
+  if (sunnyBtn && rainBtn) {
+    sunnyBtn.addEventListener('click', () => {
+      mapCurrentWeather = 'sunny';
+      sunnyBtn.classList.add('active');
+      rainBtn.classList.remove('active');
+      renderVillagerMap();
+    });
+    rainBtn.addEventListener('click', () => {
+      mapCurrentWeather = 'rain';
+      rainBtn.classList.add('active');
+      sunnyBtn.classList.remove('active');
+      renderVillagerMap();
+    });
+  }
+
+  // Day of week selector
+  const daySelect = document.getElementById('map-day-select');
+  if (daySelect) {
+    daySelect.addEventListener('change', (e) => {
+      mapCurrentDay = e.target.value;
+      renderVillagerMap();
+    });
+  }
+
+  // Quick jump time buttons
+  document.querySelectorAll('.map-quick-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      mapCurrentHour = parseInt(btn.dataset.hour);
+      renderVillagerMap();
+    });
+  });
+
+  // Villager focus dropdown
+  const focusSelect = document.getElementById('map-villager-focus');
+  if (focusSelect && typeof PERFECTION_TRACKER_DATA !== 'undefined' && PERFECTION_TRACKER_DATA.villagers) {
+    focusSelect.innerHTML = '<option value="all">👥 All Villagers (34)</option>';
+    const sorted = [...PERFECTION_TRACKER_DATA.villagers].sort((a, b) => a.name.localeCompare(b.name));
+    sorted.forEach(v => {
+      const opt = document.createElement('option');
+      opt.value = v.id;
+      opt.innerText = `${v.name} (${v.category})`;
+      focusSelect.appendChild(opt);
+    });
+    focusSelect.addEventListener('change', (e) => {
+      mapFocusedVillagerId = e.target.value;
+      renderVillagerMap();
+    });
+  }
+}
+
 
 // Render subfilters bar based on active sheet
 function renderTrackerSubfilters() {
@@ -2191,403 +2589,3 @@ document.addEventListener('dblclick', (e) => {
     }
   }, { passive: true });
 });
-
-
-
-
-
-
-
-/* ==========================================================================
-   VILLAGER LIVE MAP TRACKER ENGINE
-   ========================================================================== */
-let currentVillagerViewMode = localStorage.getItem('stardew_villager_view_mode') || 'cards'; // 'cards' or 'map'
-let mapCurrentHour = 12;
-let mapCurrentWeather = 'sunny';
-let mapCurrentDay = 'mon';
-let mapFocusedVillagerId = 'all';
-let mapPlayInterval = null;
-
-function setVillagerViewMode(mode) {
-  currentVillagerViewMode = mode;
-  localStorage.setItem('stardew_villager_view_mode', mode);
-  renderTrackerSubfilters();
-  renderTrackerGridOnly();
-}
-
-window.openVillagerOnMap = function(villagerId, event) {
-  if (event) {
-    event.stopPropagation();
-    event.preventDefault();
-  }
-  mapFocusedVillagerId = villagerId;
-  const select = document.getElementById('map-villager-focus');
-  if (select) select.value = villagerId;
-  setVillagerViewMode('map');
-};
-
-function formatHourDisplay(hour) {
-  const h = hour % 24;
-  let ampm = 'AM';
-  let formattedH = h;
-  if (h === 0 || h === 24) {
-    formattedH = 12;
-    ampm = 'AM';
-  } else if (h === 12) {
-    formattedH = 12;
-    ampm = 'PM';
-  } else if (h > 12) {
-    formattedH = h - 12;
-    ampm = 'PM';
-  }
-  
-  let icon = '☀️';
-  if (h < 8) icon = '🌅';
-  else if (h >= 18 && h < 21) icon = '🌆';
-  else if (h >= 21 || h < 6) icon = '🌙';
-
-  let tag = '';
-  if (h === 6) tag = ' (Wake)';
-  else if (h === 12) tag = ' (Noon)';
-  else if (h === 17) tag = ' (Evening)';
-  else if (h === 24 || h === 0) tag = ' (Midnight)';
-
-  return `${icon} ${formattedH}:00 ${ampm}${tag}`;
-}
-
-function getVillagerSchedulePoint(villagerId, hour, weather, dayOfWeek) {
-  const mapData = (typeof PERFECTION_TRACKER_DATA !== 'undefined' && PERFECTION_TRACKER_DATA.mapData) ? PERFECTION_TRACKER_DATA.mapData : null;
-  if (!mapData || !mapData.schedules || !mapData.locations) return null;
-
-  const schedules = mapData.schedules[villagerId];
-  if (!schedules) return null;
-
-  let routine = schedules[weather] || schedules['sunny'] || [];
-  
-  // Special Friday evening Saloon logic for several townspeople
-  if (dayOfWeek === 'fri' && weather === 'sunny' && hour >= 17 && hour <= 22) {
-    if (['npc_robin', 'npc_demetrius', 'npc_pierre', 'npc_sam', 'npc_sebastian', 'npc_elliott'].includes(villagerId)) {
-      return {
-        hour: hour,
-        loc: 'Saloon',
-        action: 'Spending Friday evening socializing at The Stardrop Saloon',
-        coords: mapData.locations['Saloon'] || { x: 55, y: 54, label: 'The Stardrop Saloon' }
-      };
-    }
-  }
-
-  // Tuesday Aerobics at Pierre's Store
-  if (dayOfWeek === 'tue' && hour >= 13 && hour <= 16) {
-    if (['npc_caroline', 'npc_jodi', 'npc_marnie', 'npc_emily', 'npc_robin'].includes(villagerId)) {
-      return {
-        hour: hour,
-        loc: 'Pierres',
-        action: 'Attending Tuesday Aerobics Class at Pierre's General Store',
-        coords: mapData.locations['Pierres'] || { x: 52, y: 42.5, label: 'Pierre's General Store' }
-      };
-    }
-  }
-
-  // School days (Tue/Wed/Fri) for Penny, Jas & Vincent in Museum
-  if (['tue', 'wed', 'fri'].includes(dayOfWeek) && hour >= 9 && hour <= 14) {
-    if (['npc_penny', 'npc_jas', 'npc_vincent'].includes(villagerId)) {
-      return {
-        hour: hour,
-        loc: 'Museum',
-        action: 'In the Museum library classroom learning with Penny',
-        coords: mapData.locations['Museum'] || { x: 77, y: 68, label: 'Museum & Library' }
-      };
-    }
-  }
-
-  if (routine.length === 0) return null;
-
-  // Find active time slot
-  let activeSlot = routine[0];
-  for (let i = 0; i < routine.length; i++) {
-    if (hour >= routine[i].hour) {
-      activeSlot = routine[i];
-    } else {
-      break;
-    }
-  }
-
-  const coords = mapData.locations[activeSlot.loc] || { x: 50, y: 50, label: activeSlot.loc };
-  return {
-    hour: activeSlot.hour,
-    loc: activeSlot.loc,
-    action: activeSlot.action,
-    coords: coords
-  };
-}
-
-function renderVillagerMap() {
-  const pinsContainer = document.getElementById('villager-pins-container');
-  const routeSvg = document.getElementById('villager-route-svg');
-  const timeDisplay = document.getElementById('map-time-display');
-  const timeSlider = document.getElementById('map-time-slider');
-  const infoCard = document.getElementById('map-selected-villager-card');
-
-  if (!pinsContainer || !routeSvg) return;
-
-  pinsContainer.innerHTML = '';
-  routeSvg.innerHTML = '';
-
-  if (timeDisplay) timeDisplay.innerText = formatHourDisplay(mapCurrentHour);
-  if (timeSlider) timeSlider.value = mapCurrentHour;
-
-  // Update quick jump active states
-  document.querySelectorAll('.map-quick-btn').forEach(btn => {
-    btn.classList.toggle('active', parseInt(btn.dataset.hour) === mapCurrentHour);
-  });
-
-  const villagersList = (typeof PERFECTION_TRACKER_DATA !== 'undefined' && PERFECTION_TRACKER_DATA.villagers) ? PERFECTION_TRACKER_DATA.villagers : [];
-  const mapData = PERFECTION_TRACKER_DATA.mapData;
-
-  // Filter based on active category subfilter and search
-  const visibleVillagers = villagersList.filter(v => {
-    if (currentTrackerFilter !== 'all') {
-      const c = (v.category || '').toLowerCase();
-      if (currentTrackerFilter === 'bachelor' && c !== 'bachelor') return false;
-      if (currentTrackerFilter === 'bachelorette' && c !== 'bachelorette') return false;
-      if (currentTrackerFilter === 'town' && c !== 'townsperson') return false;
-    }
-    if (currentTrackerSearch) {
-      const q = currentTrackerSearch;
-      const match = (v.name && v.name.toLowerCase().includes(q)) ||
-                    (v.loved && v.loved.toLowerCase().includes(q)) ||
-                    (v.schedule && v.schedule.toLowerCase().includes(q)) ||
-                    (v.home && v.home.toLowerCase().includes(q));
-      if (!match) return false;
-    }
-    return true;
-  });
-
-  // Calculate positions for all visible villagers
-  const villagerPositions = [];
-  visibleVillagers.forEach(v => {
-    const pt = getVillagerSchedulePoint(v.id, mapCurrentHour, mapCurrentWeather, mapCurrentDay);
-    if (pt && pt.coords) {
-      villagerPositions.push({
-        villager: v,
-        point: pt,
-        x: pt.coords.x,
-        y: pt.coords.y,
-        locKey: pt.loc
-      });
-    }
-  });
-
-  // Group by location to fan out pins nicely at crowded spots (e.g. Saloon)
-  const locGroups = {};
-  villagerPositions.forEach(pos => {
-    const key = `${Math.round(pos.x)}_${Math.round(pos.y)}`;
-    if (!locGroups[key]) locGroups[key] = [];
-    locGroups[key].push(pos);
-  });
-
-  // Render Pins
-  villagerPositions.forEach(pos => {
-    const key = `${Math.round(pos.x)}_${Math.round(pos.y)}`;
-    const group = locGroups[key] || [pos];
-    const groupIdx = group.indexOf(pos);
-    const count = group.length;
-
-    let finalX = pos.x;
-    let finalY = pos.y;
-
-    if (count > 1) {
-      const angle = (groupIdx / count) * (Math.PI * 2);
-      const radius = count > 4 ? 3.8 : 2.6; // percentage offset radius
-      finalX += Math.cos(angle) * (radius * 0.6); // adjust for 400x244 aspect
-      finalY += Math.sin(angle) * radius;
-    }
-
-    const pin = document.createElement('div');
-    const catClass = pos.villager.category.toLowerCase();
-    const isFocused = (mapFocusedVillagerId === pos.villager.id);
-    
-    pin.className = `villager-map-pin ${catClass} ${isFocused ? 'active' : ''}`;
-    pin.style.left = `${finalX}%`;
-    pin.style.top = `${finalY}%`;
-    pin.title = `${pos.villager.name}: ${pos.point.action}`;
-
-    pin.innerHTML = `
-      <div class="villager-pin-avatar">
-        <img src="${pos.villager.img}" alt="${pos.villager.name}" loading="lazy" onerror="this.style.display='none';">
-      </div>
-      <div class="villager-pin-label">${pos.villager.name}</div>
-    `;
-
-    pin.onclick = (e) => {
-      e.stopPropagation();
-      mapFocusedVillagerId = pos.villager.id;
-      const select = document.getElementById('map-villager-focus');
-      if (select) select.value = pos.villager.id;
-      renderVillagerMap();
-    };
-
-    pinsContainer.appendChild(pin);
-  });
-
-  // Render Focus Route & Info Panel
-  let focusedVillager = villagersList.find(v => v.id === mapFocusedVillagerId);
-  if (!focusedVillager && visibleVillagers.length > 0) {
-    focusedVillager = visibleVillagers[0];
-  }
-
-  if (focusedVillager && infoCard) {
-    const currentPt = getVillagerSchedulePoint(focusedVillager.id, mapCurrentHour, mapCurrentWeather, mapCurrentDay);
-    const schedules = mapData.schedules[focusedVillager.id] || {};
-    const routine = schedules[mapCurrentWeather] || schedules['sunny'] || [];
-
-    // Draw SVG Route Trail on the map
-    if (routine.length > 1 && mapData.locations) {
-      let pathD = '';
-      routine.forEach((slot, idx) => {
-        const c = mapData.locations[slot.loc];
-        if (c) {
-          pathD += (idx === 0 ? `M ${c.x}% ${c.y}%` : ` L ${c.x}% ${c.y}%`);
-        }
-      });
-
-      if (pathD) {
-        routeSvg.innerHTML = `
-          <path d="${pathD}" fill="none" stroke="rgba(251, 191, 36, 0.45)" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round"/>
-        `;
-      }
-    }
-
-    const bdayText = focusedVillager.birthday ? `🎂 Birthday: ${focusedVillager.birthday}` : '';
-    const catLabel = focusedVillager.category === 'Bachelorette' ? '👰 Bachelorette' : (focusedVillager.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
-    const catColor = focusedVillager.category === 'Bachelorette' ? '#f472b6' : (focusedVillager.category === 'Bachelor' ? '#38bdf8' : '#c084fc');
-
-    let timelineHtml = '<div class="map-timeline-list">';
-    routine.forEach(slot => {
-      const isCur = (currentPt && currentPt.hour === slot.hour);
-      const locObj = mapData.locations[slot.loc] || { label: slot.loc };
-      const timeStr = formatHourDisplay(slot.hour).replace(/^[^\w\s]*\s*/, '');
-      timelineHtml += `
-        <div class="map-timeline-item ${isCur ? 'current' : ''}">
-          <span class="map-timeline-time">${timeStr}</span>
-          <div>
-            <div style="font-weight: 700; color: var(--text-main); margin-bottom: 2px;">📍 ${locObj.label}</div>
-            <div style="color: var(--text-muted); font-size: 0.72rem;">${slot.action}</div>
-          </div>
-        </div>
-      `;
-    });
-    timelineHtml += '</div>';
-
-    infoCard.innerHTML = `
-      <div class="map-info-card-header">
-        <div class="map-info-avatar">
-          <img src="${focusedVillager.img}" alt="${focusedVillager.name}">
-        </div>
-        <div class="map-info-meta">
-          <div class="map-info-name">${focusedVillager.name}</div>
-          <div class="map-info-badge" style="color: ${catColor};">${catLabel}</div>
-          <div class="map-info-bday">${bdayText}</div>
-          <div style="font-size: 0.73rem; color: var(--text-muted);">🏠 ${focusedVillager.home}</div>
-        </div>
-      </div>
-
-      <div class="map-info-activity-box">
-        <div style="font-weight: 700; color: #fbbf24; margin-bottom: 2px;">📍 Right Now at ${formatHourDisplay(mapCurrentHour)}:</div>
-        <div style="color: #fff; font-size: 0.8rem;">${currentPt ? currentPt.action : 'At home'}</div>
-      </div>
-
-      <div class="map-info-gifts-box">
-        <div style="margin-bottom: 4px;"><strong style="color: #f87171;">❤️ Loved Gifts:</strong> ${focusedVillager.loved}</div>
-        <div><strong style="color: #4ade80;">👍 Liked Gifts:</strong> ${focusedVillager.liked}</div>
-      </div>
-
-      <div>
-        <div class="map-info-section-title">📅 Daily Schedule (${mapCurrentWeather.toUpperCase()} • ${mapCurrentDay.toUpperCase()}):</div>
-        ${timelineHtml}
-      </div>
-    `;
-  }
-}
-
-function initVillagerMapControls() {
-  const slider = document.getElementById('map-time-slider');
-  if (slider) {
-    slider.addEventListener('input', (e) => {
-      mapCurrentHour = parseInt(e.target.value);
-      renderVillagerMap();
-    });
-  }
-
-  const playBtn = document.getElementById('btn-map-play-time');
-  if (playBtn) {
-    playBtn.addEventListener('click', () => {
-      if (mapPlayInterval) {
-        clearInterval(mapPlayInterval);
-        mapPlayInterval = null;
-        playBtn.innerText = '▶ Play';
-        playBtn.classList.remove('playing');
-      } else {
-        playBtn.innerText = '⏸ Pause';
-        playBtn.classList.add('playing');
-        mapPlayInterval = setInterval(() => {
-          mapCurrentHour++;
-          if (mapCurrentHour > 24) mapCurrentHour = 6;
-          renderVillagerMap();
-        }, 1200);
-      }
-    });
-  }
-
-  // Weather toggle buttons
-  const sunnyBtn = document.getElementById('btn-weather-sunny');
-  const rainBtn = document.getElementById('btn-weather-rain');
-  if (sunnyBtn && rainBtn) {
-    sunnyBtn.addEventListener('click', () => {
-      mapCurrentWeather = 'sunny';
-      sunnyBtn.classList.add('active');
-      rainBtn.classList.remove('active');
-      renderVillagerMap();
-    });
-    rainBtn.addEventListener('click', () => {
-      mapCurrentWeather = 'rain';
-      rainBtn.classList.add('active');
-      sunnyBtn.classList.remove('active');
-      renderVillagerMap();
-    });
-  }
-
-  // Day of week selector
-  const daySelect = document.getElementById('map-day-select');
-  if (daySelect) {
-    daySelect.addEventListener('change', (e) => {
-      mapCurrentDay = e.target.value;
-      renderVillagerMap();
-    });
-  }
-
-  // Quick jump time buttons
-  document.querySelectorAll('.map-quick-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      mapCurrentHour = parseInt(btn.dataset.hour);
-      renderVillagerMap();
-    });
-  });
-
-  // Villager focus dropdown
-  const focusSelect = document.getElementById('map-villager-focus');
-  if (focusSelect && typeof PERFECTION_TRACKER_DATA !== 'undefined' && PERFECTION_TRACKER_DATA.villagers) {
-    focusSelect.innerHTML = '<option value="all">👥 All Villagers (34)</option>';
-    const sorted = [...PERFECTION_TRACKER_DATA.villagers].sort((a, b) => a.name.localeCompare(b.name));
-    sorted.forEach(v => {
-      const opt = document.createElement('option');
-      opt.value = v.id;
-      opt.innerText = `${v.name} (${v.category})`;
-      focusSelect.appendChild(opt);
-    });
-    focusSelect.addEventListener('change', (e) => {
-      mapFocusedVillagerId = e.target.value;
-      renderVillagerMap();
-    });
-  }
-}
