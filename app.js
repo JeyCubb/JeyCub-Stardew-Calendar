@@ -1215,7 +1215,7 @@ function getTrackerState(sheetKey) {
 }
 
 function getAllLocalTrackerState() {
-  const sheets = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts'];
+  const sheets = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts', 'villagers'];
   const allTracker = {};
   sheets.forEach(s => {
     allTracker[s] = getTrackerState(s);
@@ -1330,7 +1330,7 @@ function initFirebase() {
         const remoteLastUpdated = trackerNode.lastUpdated || 0;
         // Intelligent Union Merge:
         // Always take the superset of checked items so progress is NEVER lost on any device!
-        const sheets = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts'];
+        const sheets = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts', 'villagers'];
         let hasNewData = false;
         
         sheets.forEach(s => {
@@ -1775,7 +1775,8 @@ if (btnResetTracker) {
       'cooking': 'Cooking Recipes',
       'fish': 'Fish Caught',
       'museum': 'Museum Donations',
-      'walnuts': 'Golden Walnuts'
+      'walnuts': 'Golden Walnuts',
+      'villagers': 'Villager Friendships'
     };
     const title = sheetTitles[activeTrackerSheet] || 'current sheet';
     if (confirm(`Reset all checked progress on the "${title}" sheet?`)) {
@@ -1856,6 +1857,12 @@ function renderTrackerSubfilters() {
       { key: 'west', label: 'Farm / West' },
       { key: 'south', label: 'Docks / South' }
     );
+  } else if (activeTrackerSheet === 'villagers') {
+    filters.push(
+      { key: 'bachelor', label: '🤵 Bachelors (6)' },
+      { key: 'bachelorette', label: '👰 Bachelorettes (6)' },
+      { key: 'town', label: '🏡 Townspeople (22)' }
+    );
   }
 
   filters.forEach(f => {
@@ -1915,6 +1922,10 @@ function renderTrackerSheet() {
     'walnuts': {
       title: '🌰 Ginger Island Golden Walnuts',
       desc: 'Find all 130 Golden Walnuts scattered across Ginger Island (East, North Volcano, West Farm, and South Docks).'
+    },
+    'villagers': {
+      title: '❤️ Great Friends (Villagers & Liked Gifts)',
+      desc: 'Reach maximum friendship hearts with all 34 villagers (8 hearts for singles, 10 hearts for others) for the Perfection milestone. Track loved gifts, birthdays, locations, and daily schedules!'
     }
   };
 
@@ -1950,7 +1961,11 @@ function renderTrackerGridOnly() {
       const matchNotes = item.notes && item.notes.toLowerCase().includes(q);
       const matchCategory = item.category && item.category.toLowerCase().includes(q);
       const matchDetails = item.details && item.details.toLowerCase().includes(q);
-      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails) {
+      const matchLoved = item.loved && item.loved.toLowerCase().includes(q);
+      const matchLiked = item.liked && item.liked.toLowerCase().includes(q);
+      const matchSchedule = item.schedule && item.schedule.toLowerCase().includes(q);
+      const matchBirthday = item.birthday && item.birthday.toLowerCase().includes(q);
+      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday) {
         return false;
       }
     }
@@ -2011,6 +2026,11 @@ function renderTrackerGridOnly() {
         if (currentTrackerFilter === 'north' && !z.includes('north') && !z.includes('field') && !z.includes('volcano')) return false;
         if (currentTrackerFilter === 'west' && !z.includes('west')) return false;
         if (currentTrackerFilter === 'south' && !z.includes('south')) return false;
+      } else if (activeTrackerSheet === 'villagers') {
+        const c = (item.category || '').toLowerCase();
+        if (currentTrackerFilter === 'bachelor' && c !== 'bachelor') return false;
+        if (currentTrackerFilter === 'bachelorette' && c !== 'bachelorette') return false;
+        if (currentTrackerFilter === 'town' && c !== 'townsperson') return false;
       }
     }
 
@@ -2043,21 +2063,24 @@ function renderTrackerGridOnly() {
     else if (badgeText.includes('Summer')) badgeColor = '#eab308';
     else if (badgeText.includes('Fall')) badgeColor = '#f97316';
     else if (badgeText.includes('Winter')) badgeColor = '#38bdf8';
+    else if (badgeText.includes('Bachelorette')) badgeColor = '#f472b6';
+    else if (badgeText.includes('Bachelor')) badgeColor = '#38bdf8';
+    else if (badgeText.includes('Townsperson')) badgeColor = '#c084fc';
     else if (badgeText.includes('Mineral')) badgeColor = '#c084fc';
     else if (badgeText.includes('Rarecrow')) badgeColor = '#fbbf24';
     else if (badgeText.includes('Cooking')) badgeColor = '#fb923c';
     else if (badgeText.includes('Fish')) badgeColor = '#38bdf8';
 
-    if (badgeText.includes('Spring')) badgeColor = '#22c55e';
-    else if (badgeText.includes('Summer')) badgeColor = '#eab308';
-    else if (badgeText.includes('Fall')) badgeColor = '#f97316';
-    else if (badgeText.includes('Winter')) badgeColor = '#38bdf8';
-    else if (badgeText.includes('Mineral')) badgeColor = '#c084fc';
-    else if (badgeText.includes('Rarecrow')) badgeColor = '#fbbf24';
-
     let detailsText = item.source || item.growth || item.details || item.desc || '';
     let notesText = item.notes || '';
     let dayText = item.day ? `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 2px;">📅 ${item.day}</div>` : '';
+
+    if (activeTrackerSheet === 'villagers') {
+      badgeText = item.category === 'Bachelorette' ? '👰 Bachelorette' : (item.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
+      dayText = `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 4px;">🎂 Birthday: ${item.birthday} | 🏠 ${item.home}</div>`;
+      detailsText = `<div style="margin-bottom: 4px; line-height: 1.3;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved}</div><div style="margin-bottom: 4px; line-height: 1.3;"><strong style="color: #4ade80;">👍 Liked:</strong> ${item.liked}</div>`;
+      notesText = `<div style="line-height: 1.3;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule}</div>`;
+    }
 
     card.innerHTML = `
       <div class="tracker-card-icon">
