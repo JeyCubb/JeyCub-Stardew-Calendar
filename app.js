@@ -2083,8 +2083,9 @@ function renderTrackerGridOnly() {
       let mapPinsHtml = '';
       if (item.mapPins && Array.isArray(item.mapPins) && item.mapPins.length > 0) {
         item.mapPins.forEach((pin, pIdx) => {
+          const posClass = pin.pos ? `pin-pos-${pin.pos}` : (pIdx % 2 === 0 ? 'pin-pos-top' : 'pin-pos-bottom');
           mapPinsHtml += `
-            <div class="villager-map-pin-static" style="left: ${pin.x}%; top: ${pin.y}%;">
+            <div class="villager-map-pin-static ${posClass}" style="left: ${pin.x}%; top: ${pin.y}%;">
               <span class="static-pin-dot"></span>
               <span class="static-pin-label">${pin.label}</span>
             </div>
@@ -2094,7 +2095,7 @@ function renderTrackerGridOnly() {
 
       notesText = `
         <div style="line-height: 1.3; margin-bottom: 6px;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule}</div>
-        <div class="villager-static-map-wrapper" onclick="openVillagerMapModal('${item.id}', event)" title="Click to enlarge location map">
+        <div class="villager-static-map-wrapper" onmouseenter="adjustMapTransformOrigin(this)" onclick="openVillagerMapModal('${item.id}', event)" title="Click to enlarge location map">
           <div class="map-zoom-hint">🔍 Zoom</div>
           <div class="villager-static-map-frame">
             <img src="stardew_map.png" alt="Map" class="villager-static-map-img" loading="lazy">
@@ -2233,4 +2234,20 @@ window.closeVillagerMapModal = function(event) {
   if (event) event.stopPropagation();
   const modal = document.getElementById('villager-map-modal');
   if (modal) modal.style.display = 'none';
+};
+
+
+// Dynamically adjust transform-origin so 2.75x scaled hover maps never clip screen edges
+window.adjustMapTransformOrigin = function(el) {
+  if (!el) return;
+  const rect = el.getBoundingClientRect();
+  const winWidth = window.innerWidth;
+  
+  if (rect.left < winWidth * 0.22) {
+    el.style.transformOrigin = '15% center';
+  } else if (rect.right > winWidth * 0.78) {
+    el.style.transformOrigin = '85% center';
+  } else {
+    el.style.transformOrigin = 'center center';
+  }
 };

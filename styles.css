@@ -1644,7 +1644,7 @@ header {
 
 
 /* ==========================================================================
-   STATIC VILLAGER MAP THUMBNAILS & HOVER ZOOM
+   STATIC VILLAGER MAP THUMBNAILS & EXCEPTIONALLY LARGE HOVER ZOOM
    ========================================================================== */
 .tracker-card:hover {
   border-color: rgba(255, 255, 255, 0.2);
@@ -1654,7 +1654,7 @@ header {
 }
 
 .tracker-card:has(.villager-static-map-wrapper:hover) {
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .villager-static-map-wrapper {
@@ -1663,11 +1663,11 @@ header {
   overflow: hidden;
   border: 1px solid var(--border-glass);
   background: #1e1b14;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
   width: 100%;
   position: relative;
   cursor: pointer;
-  transition: transform 0.22s cubic-bezier(0.34, 1.4, 0.64, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+  transition: transform 0.22s cubic-bezier(0.34, 1.35, 0.64, 1), box-shadow 0.22s ease, border-color 0.22s ease;
   transform-origin: center center;
   z-index: 10;
 }
@@ -1676,12 +1676,12 @@ header {
   position: absolute;
   top: 5px;
   right: 5px;
-  font-size: 0.58rem;
+  font-size: 0.6rem;
   font-weight: 700;
   color: #f8fafc;
-  background: rgba(0, 0, 0, 0.78);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 2px 6px;
+  background: rgba(0, 0, 0, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2px 7px;
   border-radius: 4px;
   pointer-events: none;
   z-index: 20;
@@ -1691,20 +1691,34 @@ header {
   display: flex;
   align-items: center;
   gap: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-@media (hover: hover) and (pointer: fine) {
+/* Exceptionally Large Desktop Hover Zoom (2.75x Magnification) */
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
   .villager-static-map-wrapper:hover {
-    transform: scale(1.68);
-    z-index: 9999;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), 0 0 0 1.5px var(--accent-gold);
+    transform: scale(2.75);
+    z-index: 99999;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.98), 0 0 0 2px var(--accent-gold), 0 0 35px rgba(251, 191, 36, 0.45);
     border-color: var(--accent-gold);
+    border-radius: 10px;
   }
   .villager-static-map-wrapper:hover .map-zoom-hint {
     opacity: 0;
   }
-  .villager-static-map-wrapper:hover .static-pin-label {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Medium Desktop / Laptop Hover Zoom (2.2x Magnification) */
+@media (hover: hover) and (pointer: fine) and (max-width: 1023px) and (min-width: 769px) {
+  .villager-static-map-wrapper:hover {
+    transform: scale(2.2);
+    z-index: 99999;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.98), 0 0 0 2px var(--accent-gold), 0 0 25px rgba(251, 191, 36, 0.35);
+    border-color: var(--accent-gold);
+    border-radius: 10px;
+  }
+  .villager-static-map-wrapper:hover .map-zoom-hint {
+    opacity: 0;
   }
 }
 
@@ -1722,8 +1736,10 @@ header {
   display: block;
   object-fit: fill;
   image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
+/* Pin Marker & Anti-Collision Staggering */
 .villager-map-pin-static {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -1734,42 +1750,79 @@ header {
   pointer-events: none;
 }
 
+.villager-map-pin-static.pin-pos-top {
+  flex-direction: column-reverse;
+}
+
+.villager-map-pin-static.pin-pos-top .static-pin-label {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.villager-map-pin-static.pin-pos-bottom {
+  flex-direction: column;
+}
+
+.villager-map-pin-static.pin-pos-bottom .static-pin-label {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* Glowing Pulsing Radar Pin Dot */
 .static-pin-dot {
-  width: 9px;
-  height: 9px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background: #fbbf24;
-  border: 2px solid #fff;
-  box-shadow: 0 0 8px rgba(251, 191, 36, 0.95), 0 0 2px #000;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #fbbf24 55%, #d97706 100%);
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 1), 0 0 3px #000;
   display: block;
+  animation: pinPulse 2s infinite ease-in-out;
+  flex-shrink: 0;
 }
 
+@keyframes pinPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.9), 0 0 4px #000;
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(251, 191, 36, 0), 0 0 4px #000;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0), 0 0 4px #000;
+  }
+}
+
+/* High Contrast Marker Badge */
 .static-pin-label {
-  font-size: 0.62rem;
-  font-weight: 700;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1px 5px;
-  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: rgba(10, 8, 16, 0.94);
+  border: 1.5px solid rgba(251, 191, 36, 0.9);
+  padding: 2px 6px;
+  border-radius: 5px;
   white-space: nowrap;
-  margin-top: 2px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  letter-spacing: 0.01em;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.95);
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
 }
 
+/* Lightbox Modal High-Res Pins */
 .modal-pin .modal-dot {
-  width: 12px;
-  height: 12px;
-  box-shadow: 0 0 12px rgba(251, 191, 36, 1), 0 0 3px #000;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #fbbf24 55%, #d97706 100%);
+  border: 2.5px solid #ffffff;
+  box-shadow: 0 0 14px rgba(251, 191, 36, 1), 0 0 4px #000;
 }
 
 .modal-pin .modal-label {
-  font-size: 0.72rem;
-  padding: 2px 7px;
-  background: rgba(0, 0, 0, 0.92);
-  border: 1px solid rgba(251, 191, 36, 0.6);
+  font-size: 0.78rem;
+  padding: 3px 9px;
+  background: rgba(10, 8, 16, 0.95);
+  border: 1.5px solid rgba(251, 191, 36, 0.85);
   color: #fff;
-  margin-top: 3px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
 }
