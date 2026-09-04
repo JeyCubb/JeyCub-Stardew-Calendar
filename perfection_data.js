@@ -6828,5 +6828,1430 @@ const PERFECTION_TRACKER_DATA = {
         "notes": "\u2764\ufe0f Loved: Book of Stars, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence\n\ud83d\udd52 Routine: Always inside the Wizard's Tower",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Wizard.png"
     }
-]
+],
+  "mapData": {
+    "locations": {
+        "Pierres": {
+            "x": 52.0,
+            "y": 42.5,
+            "label": "Pierre's General Store"
+        },
+        "PierresSunroom": {
+            "x": 51.5,
+            "y": 40.5,
+            "label": "Pierre's Sunroom"
+        },
+        "Clinic": {
+            "x": 53.5,
+            "y": 42.5,
+            "label": "Harvey's Medical Clinic"
+        },
+        "Saloon": {
+            "x": 55.0,
+            "y": 54.0,
+            "label": "The Stardrop Saloon"
+        },
+        "Willow1": {
+            "x": 43.0,
+            "y": 60.0,
+            "label": "1 Willow Lane (Sam/Jodi/Kent/Vincent)"
+        },
+        "Willow2": {
+            "x": 47.0,
+            "y": 60.0,
+            "label": "2 Willow Lane (Haley/Emily)"
+        },
+        "River1": {
+            "x": 62.0,
+            "y": 46.0,
+            "label": "1 River Road (Alex/George/Evelyn)"
+        },
+        "Manor": {
+            "x": 59.0,
+            "y": 62.0,
+            "label": "Mayor's Manor"
+        },
+        "Blacksmith": {
+            "x": 73.0,
+            "y": 57.0,
+            "label": "Blacksmith Shop"
+        },
+        "Museum": {
+            "x": 77.0,
+            "y": 68.0,
+            "label": "Museum & Library"
+        },
+        "Trailer": {
+            "x": 66.0,
+            "y": 52.0,
+            "label": "Trailer"
+        },
+        "BusStop": {
+            "x": 48.0,
+            "y": 44.0,
+            "label": "Bus Stop"
+        },
+        "TownSquare": {
+            "x": 54.0,
+            "y": 49.0,
+            "label": "Pelican Town Square"
+        },
+        "TownFountain": {
+            "x": 53.0,
+            "y": 46.0,
+            "label": "Town Fountain"
+        },
+        "TownPark": {
+            "x": 55.0,
+            "y": 46.0,
+            "label": "Town Park & Playground"
+        },
+        "Graveyard": {
+            "x": 60.0,
+            "y": 50.0,
+            "label": "Town Graveyard"
+        },
+        "TownBridge": {
+            "x": 57.0,
+            "y": 58.0,
+            "label": "Town River Bridge"
+        },
+        "LibraryBridge": {
+            "x": 74.0,
+            "y": 65.0,
+            "label": "Bridge near Museum"
+        },
+        "CommunityCenter": {
+            "x": 56.0,
+            "y": 31.0,
+            "label": "Community Center"
+        },
+        "Carpenter": {
+            "x": 68.0,
+            "y": 23.0,
+            "label": "Mountain Carpenter's Shop"
+        },
+        "MountainLake": {
+            "x": 80.0,
+            "y": 26.0,
+            "label": "Mountain Lake Pier"
+        },
+        "MountainCliff": {
+            "x": 69.0,
+            "y": 21.0,
+            "label": "Mountain Lake Cliff"
+        },
+        "LinusTent": {
+            "x": 76.0,
+            "y": 18.0,
+            "label": "Linus' Tent & Campfire"
+        },
+        "Mines": {
+            "x": 87.0,
+            "y": 17.0,
+            "label": "The Mines Entrance"
+        },
+        "Quarry": {
+            "x": 93.0,
+            "y": 22.0,
+            "label": "The Quarry"
+        },
+        "Spa": {
+            "x": 55.0,
+            "y": 12.0,
+            "label": "Spa & Railroad"
+        },
+        "MarnieRanch": {
+            "x": 36.0,
+            "y": 68.0,
+            "label": "Marnie's Ranch"
+        },
+        "JumpRopeTree": {
+            "x": 32.0,
+            "y": 72.0,
+            "label": "Cindersap Jump-Rope Tree"
+        },
+        "LeahCottage": {
+            "x": 42.0,
+            "y": 76.0,
+            "label": "Leah's Cottage"
+        },
+        "ForestPond": {
+            "x": 30.0,
+            "y": 81.0,
+            "label": "Cindersap Forest River & Pond"
+        },
+        "WizardTower": {
+            "x": 14.0,
+            "y": 70.0,
+            "label": "Wizard's Tower"
+        },
+        "BeachShore": {
+            "x": 66.0,
+            "y": 82.0,
+            "label": "The Beach"
+        },
+        "FishShop": {
+            "x": 72.0,
+            "y": 88.0,
+            "label": "Willy's Fish Shop & Pier"
+        },
+        "ElliottCabin": {
+            "x": 84.0,
+            "y": 84.0,
+            "label": "Elliott's Beach Cabin"
+        },
+        "Sewers": {
+            "x": 69.0,
+            "y": 75.0,
+            "label": "The Sewers"
+        },
+        "Desert": {
+            "x": 8.0,
+            "y": 16.0,
+            "label": "Oasis Store (Calico Desert)"
+        },
+        "GingerIsland": {
+            "x": 8.0,
+            "y": 88.0,
+            "label": "Ginger Island Treehouse"
+        }
+    },
+    "schedules": {
+        "npc_abigail": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Pierres",
+                    "action": "Waking up in bedroom at Pierre's Store"
+                },
+                {
+                    "hour": 9,
+                    "loc": "Graveyard",
+                    "action": "Visiting Mona's grave in town graveyard"
+                },
+                {
+                    "hour": 13,
+                    "loc": "TownBridge",
+                    "action": "Looking at river from town bridge"
+                },
+                {
+                    "hour": 16,
+                    "loc": "Pierres",
+                    "action": "Practicing video games in bedroom"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Saloon",
+                    "action": "Hanging out with friends at Stardrop Saloon"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Pierres",
+                    "action": "Sleeping in bedroom"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Pierres",
+                    "action": "Waking up inside Pierre's Store"
+                },
+                {
+                    "hour": 11,
+                    "loc": "MountainLake",
+                    "action": "Playing flute in the rain by Mountain Lake"
+                },
+                {
+                    "hour": 18,
+                    "loc": "Saloon",
+                    "action": "Sitting at Stardrop Saloon"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Pierres",
+                    "action": "Heading to bed"
+                }
+            ]
+        },
+        "npc_alex": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "River1",
+                    "action": "Waking up in 1 River Road"
+                },
+                {
+                    "hour": 8,
+                    "loc": "River1",
+                    "action": "Tossing gridball outside with his dog Dusty"
+                },
+                {
+                    "hour": 12,
+                    "loc": "TownPark",
+                    "action": "Chilling by town tree / park (Beach in Summer)"
+                },
+                {
+                    "hour": 16,
+                    "loc": "River1",
+                    "action": "Lifting weights in his bedroom"
+                },
+                {
+                    "hour": 20,
+                    "loc": "Saloon",
+                    "action": "Grabbing evening snack at Stardrop Saloon"
+                },
+                {
+                    "hour": 22,
+                    "loc": "River1",
+                    "action": "Sleeping at 1 River Road"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "River1",
+                    "action": "Inside 1 River Road with grandparents all day"
+                }
+            ]
+        },
+        "npc_elliott": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "ElliottCabin",
+                    "action": "Writing novel at beach cabin desk"
+                },
+                {
+                    "hour": 11,
+                    "loc": "BeachShore",
+                    "action": "Strolling across beach shore & docks"
+                },
+                {
+                    "hour": 15,
+                    "loc": "LibraryBridge",
+                    "action": "Reading book on bridge near Museum"
+                },
+                {
+                    "hour": 18,
+                    "loc": "ElliottCabin",
+                    "action": "Writing at home (Saloon on Fri/Sun)"
+                },
+                {
+                    "hour": 23,
+                    "loc": "ElliottCabin",
+                    "action": "Sleeping at beach cabin"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "ElliottCabin",
+                    "action": "Writing peacefully indoors listening to rain"
+                }
+            ]
+        },
+        "npc_emily": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Willow2",
+                    "action": "Meditating & sewing in 2 Willow Lane"
+                },
+                {
+                    "hour": 12,
+                    "loc": "Willow2",
+                    "action": "Working on fabric crafts (Aerobics Tue at Pierre's)"
+                },
+                {
+                    "hour": 15,
+                    "loc": "TownSquare",
+                    "action": "Walking to work through town square"
+                },
+                {
+                    "hour": 16,
+                    "loc": "Saloon",
+                    "action": "Working bar counter at Stardrop Saloon"
+                },
+                {
+                    "hour": 24,
+                    "loc": "Willow2",
+                    "action": "Returning home to 2 Willow Lane"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Willow2",
+                    "action": "Sewing indoors at 2 Willow Lane"
+                },
+                {
+                    "hour": 16,
+                    "loc": "Saloon",
+                    "action": "Bartending at Stardrop Saloon"
+                },
+                {
+                    "hour": 24,
+                    "loc": "Willow2",
+                    "action": "Walking home to sleep"
+                }
+            ]
+        },
+        "npc_haley": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Willow2",
+                    "action": "Getting dressed in 2 Willow Lane"
+                },
+                {
+                    "hour": 11,
+                    "loc": "TownFountain",
+                    "action": "Sunbathing by Town Fountain (Beach in Summer)"
+                },
+                {
+                    "hour": 16,
+                    "loc": "ForestPond",
+                    "action": "Taking nature photos south of Marnie's Ranch"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Willow2",
+                    "action": "Relaxing at 2 Willow Lane"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Willow2",
+                    "action": "Sleeping in bedroom"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Willow2",
+                    "action": "Staying cozy indoors at 2 Willow Lane all day"
+                }
+            ]
+        },
+        "npc_harvey": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Clinic",
+                    "action": "Upstairs apartment preparing for appointments"
+                },
+                {
+                    "hour": 8,
+                    "loc": "Clinic",
+                    "action": "On duty at Harvey's Medical Clinic"
+                },
+                {
+                    "hour": 15,
+                    "loc": "TownPark",
+                    "action": "Taking a peaceful walk in town park / riverbank"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Saloon",
+                    "action": "Unwinding at Stardrop Saloon"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Clinic",
+                    "action": "Returning to Clinic apartment to sleep"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Clinic",
+                    "action": "Reviewing medical charts in Clinic"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Saloon",
+                    "action": "Evening dinner at Stardrop Saloon"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Clinic",
+                    "action": "Sleeping at Clinic"
+                }
+            ]
+        },
+        "npc_leah": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "LeahCottage",
+                    "action": "Sculpting artwork inside forest cottage"
+                },
+                {
+                    "hour": 11,
+                    "loc": "ForestPond",
+                    "action": "Sketching riverside in Cindersap Forest"
+                },
+                {
+                    "hour": 16,
+                    "loc": "Saloon",
+                    "action": "Catching up with friends at Stardrop Saloon"
+                },
+                {
+                    "hour": 23,
+                    "loc": "LeahCottage",
+                    "action": "Sleeping in forest cottage"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "LeahCottage",
+                    "action": "Sculpting and painting indoors all day"
+                },
+                {
+                    "hour": 16,
+                    "loc": "Saloon",
+                    "action": "Enjoying a drink at Stardrop Saloon"
+                },
+                {
+                    "hour": 23,
+                    "loc": "LeahCottage",
+                    "action": "Sleeping at cottage"
+                }
+            ]
+        },
+        "npc_maru": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Carpenter",
+                    "action": "Tinkering in Carpenter's lab (Clinic Tue/Thu)"
+                },
+                {
+                    "hour": 10,
+                    "loc": "MountainCliff",
+                    "action": "Looking through telescope outside Carpenter's Shop"
+                },
+                {
+                    "hour": 16,
+                    "loc": "Carpenter",
+                    "action": "Working on invention robot in lab"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Carpenter",
+                    "action": "Sleeping in Carpenter's Shop"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Carpenter",
+                    "action": "Soldering circuits inside Carpenter's lab all day"
+                }
+            ]
+        },
+        "npc_penny": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Trailer",
+                    "action": "Waking up in trailer cleaning kitchen"
+                },
+                {
+                    "hour": 9,
+                    "loc": "Museum",
+                    "action": "Teaching Jas & Vincent in Museum (Tue/Wed/Fri)"
+                },
+                {
+                    "hour": 14,
+                    "loc": "TownPark",
+                    "action": "Reading book on Town Park bench"
+                },
+                {
+                    "hour": 18,
+                    "loc": "Trailer",
+                    "action": "Cooking dinner in trailer"
+                },
+                {
+                    "hour": 21,
+                    "loc": "Trailer",
+                    "action": "Sleeping in trailer"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Trailer",
+                    "action": "Reading indoors at trailer"
+                },
+                {
+                    "hour": 18,
+                    "loc": "Saloon",
+                    "action": "Sitting at Stardrop Saloon avoiding rain"
+                },
+                {
+                    "hour": 21,
+                    "loc": "Trailer",
+                    "action": "Sleeping in trailer"
+                }
+            ]
+        },
+        "npc_sam": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Willow1",
+                    "action": "Playing guitar in bedroom at 1 Willow Lane"
+                },
+                {
+                    "hour": 10,
+                    "loc": "Willow1",
+                    "action": "Skateboarding outside 1 Willow Lane"
+                },
+                {
+                    "hour": 13,
+                    "loc": "TownSquare",
+                    "action": "Hanging out near Town River (Saloon on Friday)"
+                },
+                {
+                    "hour": 18,
+                    "loc": "Willow1",
+                    "action": "Practicing music at 1 Willow Lane"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Willow1",
+                    "action": "Sleeping in bedroom"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Willow1",
+                    "action": "Practicing guitar in bedroom at 1 Willow Lane"
+                }
+            ]
+        },
+        "npc_sebastian": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Carpenter",
+                    "action": "Working on freelance coding in basement"
+                },
+                {
+                    "hour": 15,
+                    "loc": "Carpenter",
+                    "action": "Walking around Carpenter's shop kitchen"
+                },
+                {
+                    "hour": 18,
+                    "loc": "MountainLake",
+                    "action": "Smoking by Mountain Lake pier"
+                },
+                {
+                    "hour": 21,
+                    "loc": "Saloon",
+                    "action": "Playing pool with Sam (Friday) or heading home"
+                },
+                {
+                    "hour": 23,
+                    "loc": "Carpenter",
+                    "action": "Staying up late in basement bedroom"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Carpenter",
+                    "action": "Coding in basement bedroom"
+                },
+                {
+                    "hour": 10,
+                    "loc": "FishShop",
+                    "action": "Standing on Beach Pier in the rain"
+                },
+                {
+                    "hour": 15,
+                    "loc": "Saloon",
+                    "action": "Playing pool at Stardrop Saloon"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Carpenter",
+                    "action": "Returning to basement"
+                }
+            ]
+        },
+        "npc_shane": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "MarnieRanch",
+                    "action": "Waking up at Marnie's Ranch"
+                },
+                {
+                    "hour": 7,
+                    "loc": "BusStop",
+                    "action": "Walking past bus stop to JojaMart shift"
+                },
+                {
+                    "hour": 9,
+                    "loc": "TownSquare",
+                    "action": "Stocking shelves at JojaMart (Town center on weekends)"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Saloon",
+                    "action": "Drinking at Stardrop Saloon counter"
+                },
+                {
+                    "hour": 23,
+                    "loc": "MarnieRanch",
+                    "action": "Stumbling home to Marnie's Ranch to sleep"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "MarnieRanch",
+                    "action": "At Marnie's Ranch"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Saloon",
+                    "action": "Sitting at Stardrop Saloon bar counter"
+                },
+                {
+                    "hour": 23,
+                    "loc": "MarnieRanch",
+                    "action": "Heading home to sleep"
+                }
+            ]
+        },
+        "npc_caroline": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "PierresSunroom",
+                    "action": "Drinking green tea in Pierre's Sunroom"
+                },
+                {
+                    "hour": 12,
+                    "loc": "TownFountain",
+                    "action": "Chatting by Town Fountain (Aerobics Tue at Pierre's)"
+                },
+                {
+                    "hour": 16,
+                    "loc": "CommunityCenter",
+                    "action": "Relaxing near Community Center park"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Pierres",
+                    "action": "Cooking dinner in Pierre's residence"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Pierres",
+                    "action": "Sleeping in Pierre's Store"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "PierresSunroom",
+                    "action": "Tending tea plants in sunroom all day"
+                }
+            ]
+        },
+        "npc_clint": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Blacksmith",
+                    "action": "Waking up in Blacksmith backroom"
+                },
+                {
+                    "hour": 9,
+                    "loc": "Blacksmith",
+                    "action": "Smelting ores & breaking geodes at Blacksmith counter"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Saloon",
+                    "action": "Sitting alone at Stardrop Saloon watching Emily"
+                },
+                {
+                    "hour": 24,
+                    "loc": "Blacksmith",
+                    "action": "Walking back to Blacksmith Shop"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Blacksmith",
+                    "action": "Working at forge in Blacksmith Shop"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Saloon",
+                    "action": "At Stardrop Saloon having dinner"
+                },
+                {
+                    "hour": 24,
+                    "loc": "Blacksmith",
+                    "action": "Heading to bed"
+                }
+            ]
+        },
+        "npc_demetrius": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Carpenter",
+                    "action": "Studying local biodiversity in Carpenter's Lab"
+                },
+                {
+                    "hour": 14,
+                    "loc": "MountainCliff",
+                    "action": "Taking field notes by Mountain Lake Cliff"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Carpenter",
+                    "action": "Working in lab (Saloon dancing Fri night with Robin)"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Carpenter",
+                    "action": "Sleeping in Carpenter's residence"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Carpenter",
+                    "action": "Analyzing specimens in Carpenter's lab all day"
+                }
+            ]
+        },
+        "npc_dwarf": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Mines",
+                    "action": "Running shop at eastern Mines Entrance 24/7"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Mines",
+                    "action": "Running shop at eastern Mines Entrance 24/7"
+                }
+            ]
+        },
+        "npc_evelyn": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "River1",
+                    "action": "Baking cookies in 1 River Road kitchen"
+                },
+                {
+                    "hour": 13,
+                    "loc": "TownPark",
+                    "action": "Tending town garden flowers & checking fountain"
+                },
+                {
+                    "hour": 16,
+                    "loc": "River1",
+                    "action": "Knitting in 1 River Road living room with George"
+                },
+                {
+                    "hour": 21,
+                    "loc": "River1",
+                    "action": "Sleeping at 1 River Road"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "River1",
+                    "action": "Knitting and baking inside 1 River Road all day"
+                }
+            ]
+        },
+        "npc_george": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "River1",
+                    "action": "Watching morning television at 1 River Road"
+                },
+                {
+                    "hour": 12,
+                    "loc": "River1",
+                    "action": "Sitting outside near town tree getting fresh air"
+                },
+                {
+                    "hour": 15,
+                    "loc": "River1",
+                    "action": "Watching TV in wheelchair at 1 River Road"
+                },
+                {
+                    "hour": 20,
+                    "loc": "River1",
+                    "action": "Sleeping at 1 River Road"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "River1",
+                    "action": "Watching TV inside 1 River Road all day"
+                }
+            ]
+        },
+        "npc_gus": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Saloon",
+                    "action": "Prepping fresh recipes in Saloon kitchen"
+                },
+                {
+                    "hour": 12,
+                    "loc": "Saloon",
+                    "action": "Serving food & drinks behind Stardrop Saloon bar counter"
+                },
+                {
+                    "hour": 24,
+                    "loc": "Saloon",
+                    "action": "Closing Saloon and heading to bed in back room"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Saloon",
+                    "action": "Serving hearty stew at Stardrop Saloon counter"
+                }
+            ]
+        },
+        "npc_jas": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "MarnieRanch",
+                    "action": "Waking up at Marnie's Ranch"
+                },
+                {
+                    "hour": 9,
+                    "loc": "JumpRopeTree",
+                    "action": "Jumping rope under big forest tree (Museum Tue/Wed/Fri)"
+                },
+                {
+                    "hour": 14,
+                    "loc": "TownPark",
+                    "action": "Playing on Town Park playground with Vincent"
+                },
+                {
+                    "hour": 17,
+                    "loc": "MarnieRanch",
+                    "action": "Playing with dolls at Marnie's Ranch"
+                },
+                {
+                    "hour": 20,
+                    "loc": "MarnieRanch",
+                    "action": "Sleeping at Marnie's Ranch"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "MarnieRanch",
+                    "action": "Playing indoors with dolls at Marnie's Ranch"
+                }
+            ]
+        },
+        "npc_jodi": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Willow1",
+                    "action": "Cooking breakfast & cleaning in 1 Willow Lane"
+                },
+                {
+                    "hour": 13,
+                    "loc": "TownBridge",
+                    "action": "Walking along town river (Aerobics Tue at Pierre's)"
+                },
+                {
+                    "hour": 16,
+                    "loc": "Pierres",
+                    "action": "Shopping for groceries at Pierre's Store"
+                },
+                {
+                    "hour": 18,
+                    "loc": "Willow1",
+                    "action": "Making dinner with family at 1 Willow Lane"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Willow1",
+                    "action": "Sleeping at 1 Willow Lane"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Willow1",
+                    "action": "Doing chores inside 1 Willow Lane all day"
+                }
+            ]
+        },
+        "npc_kent": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Willow1",
+                    "action": "Waking up early at 1 Willow Lane (Year 2+)"
+                },
+                {
+                    "hour": 10,
+                    "loc": "Willow1",
+                    "action": "Standing under tree outside 1 Willow Lane"
+                },
+                {
+                    "hour": 14,
+                    "loc": "TownBridge",
+                    "action": "Reflecting on town river bridge"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Willow1",
+                    "action": "Having dinner with Jodi, Sam & Vincent"
+                },
+                {
+                    "hour": 21,
+                    "loc": "Willow1",
+                    "action": "Resting at 1 Willow Lane"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Willow1",
+                    "action": "Resting indoors at 1 Willow Lane"
+                }
+            ]
+        },
+        "npc_krobus": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Sewers",
+                    "action": "Running shop in The Sewers 24/7 (or living as roommate!)"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Sewers",
+                    "action": "Running shop in The Sewers 24/7"
+                }
+            ]
+        },
+        "npc_leo": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "GingerIsland",
+                    "action": "Foraging on Ginger Island (or Mountain Treehouse)"
+                },
+                {
+                    "hour": 12,
+                    "loc": "MountainLake",
+                    "action": "Talking to birds by Mountain Lake with Linus"
+                },
+                {
+                    "hour": 18,
+                    "loc": "GingerIsland",
+                    "action": "Resting in treehouse"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "GingerIsland",
+                    "action": "Sheltering inside treehouse"
+                }
+            ]
+        },
+        "npc_lewis": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Manor",
+                    "action": "Reviewing town finances at Mayor's Manor desk"
+                },
+                {
+                    "hour": 13,
+                    "loc": "TownSquare",
+                    "action": "Inspecting town square, Pierre's, & Blacksmith"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Saloon",
+                    "action": "Chatting with townsfolk at Stardrop Saloon"
+                },
+                {
+                    "hour": 21,
+                    "loc": "Manor",
+                    "action": "Collecting shipping bin goods & heading home"
+                },
+                {
+                    "hour": 23,
+                    "loc": "Manor",
+                    "action": "Sleeping at Mayor's Manor"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Manor",
+                    "action": "Town paperwork inside Mayor's Manor"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Saloon",
+                    "action": "At Stardrop Saloon drinking with Marnie"
+                },
+                {
+                    "hour": 23,
+                    "loc": "Manor",
+                    "action": "Sleeping at Mayor's Manor"
+                }
+            ]
+        },
+        "npc_linus": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "LinusTent",
+                    "action": "Stoking campfire outside Mountain Tent"
+                },
+                {
+                    "hour": 10,
+                    "loc": "MountainCliff",
+                    "action": "Foraging on Mountain Lake cliff"
+                },
+                {
+                    "hour": 15,
+                    "loc": "MountainLake",
+                    "action": "Watching fish and birds by mountain river"
+                },
+                {
+                    "hour": 19,
+                    "loc": "LinusTent",
+                    "action": "Sitting peacefully by campfire"
+                },
+                {
+                    "hour": 22,
+                    "loc": "LinusTent",
+                    "action": "Sleeping in mountain tent"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "LinusTent",
+                    "action": "Sheltering inside tent listening to mountain rain"
+                }
+            ]
+        },
+        "npc_marnie": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "MarnieRanch",
+                    "action": "Feeding cows and chickens at Marnie's Ranch"
+                },
+                {
+                    "hour": 9,
+                    "loc": "MarnieRanch",
+                    "action": "Behind Ranch Shop Counter (Closed Mon/Tue)"
+                },
+                {
+                    "hour": 16,
+                    "loc": "MarnieRanch",
+                    "action": "Tending animals (Aerobics Tue at Pierre's)"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Saloon",
+                    "action": "Relaxing with Lewis at Stardrop Saloon"
+                },
+                {
+                    "hour": 23,
+                    "loc": "MarnieRanch",
+                    "action": "Sleeping at Marnie's Ranch"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "MarnieRanch",
+                    "action": "Working in barn at Marnie's Ranch"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Saloon",
+                    "action": "At Stardrop Saloon for dinner"
+                },
+                {
+                    "hour": 23,
+                    "loc": "MarnieRanch",
+                    "action": "Sleeping at Ranch"
+                }
+            ]
+        },
+        "npc_pam": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Trailer",
+                    "action": "Waking up in trailer checking schedule"
+                },
+                {
+                    "hour": 9,
+                    "loc": "BusStop",
+                    "action": "Driving Calico Desert bus at Bus Stop (JojaMart early)"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Saloon",
+                    "action": "Drinking at Stardrop Saloon with Gus"
+                },
+                {
+                    "hour": 24,
+                    "loc": "Trailer",
+                    "action": "Walking home to trailer to sleep"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Trailer",
+                    "action": "At trailer"
+                },
+                {
+                    "hour": 9,
+                    "loc": "BusStop",
+                    "action": "Driving bus at Bus Stop"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Saloon",
+                    "action": "At Stardrop Saloon bar"
+                },
+                {
+                    "hour": 24,
+                    "loc": "Trailer",
+                    "action": "Sleeping in trailer"
+                }
+            ]
+        },
+        "npc_pierre": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Pierres",
+                    "action": "Setting up produce displays at Pierre's Store"
+                },
+                {
+                    "hour": 9,
+                    "loc": "Pierres",
+                    "action": "Behind counter at Pierre's General Store"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Pierres",
+                    "action": "Balancing shop ledgers (Saloon on Friday)"
+                },
+                {
+                    "hour": 21,
+                    "loc": "Pierres",
+                    "action": "Spending evening with Caroline in residence"
+                },
+                {
+                    "hour": 23,
+                    "loc": "Pierres",
+                    "action": "Sleeping in Pierre's Store"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Pierres",
+                    "action": "Managing inventory inside General Store all day"
+                }
+            ]
+        },
+        "npc_robin": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Carpenter",
+                    "action": "Having breakfast in Carpenter's Shop residence"
+                },
+                {
+                    "hour": 9,
+                    "loc": "Carpenter",
+                    "action": "At Carpenter's Shop counter (Closed Tuesday)"
+                },
+                {
+                    "hour": 17,
+                    "loc": "MountainCliff",
+                    "action": "Taking walk by mountain lake (Aerobics Tue)"
+                },
+                {
+                    "hour": 19,
+                    "loc": "Saloon",
+                    "action": "Dancing with Demetrius at Saloon (Friday) / Home"
+                },
+                {
+                    "hour": 22,
+                    "loc": "Carpenter",
+                    "action": "Sleeping in Carpenter's Shop"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Carpenter",
+                    "action": "Working at woodbench in Carpenter's Shop all day"
+                }
+            ]
+        },
+        "npc_sandy": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Desert",
+                    "action": "Behind counter at Oasis Shop in Calico Desert 9am-12am"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Desert",
+                    "action": "Behind counter at Oasis Shop in Calico Desert 9am-12am"
+                }
+            ]
+        },
+        "npc_vincent": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "Willow1",
+                    "action": "Playing in bedroom at 1 Willow Lane"
+                },
+                {
+                    "hour": 9,
+                    "loc": "TownPark",
+                    "action": "Playing on swings in Town Park (Museum Tue/Wed/Fri)"
+                },
+                {
+                    "hour": 13,
+                    "loc": "BeachShore",
+                    "action": "Searching for shells on beach shore with Jas"
+                },
+                {
+                    "hour": 17,
+                    "loc": "Willow1",
+                    "action": "Playing with toy soldiers at 1 Willow Lane"
+                },
+                {
+                    "hour": 20,
+                    "loc": "Willow1",
+                    "action": "Sleeping at 1 Willow Lane"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "Willow1",
+                    "action": "Playing indoors at 1 Willow Lane with toy soldiers"
+                }
+            ]
+        },
+        "npc_willy": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "FishShop",
+                    "action": "Casting line on beach pier before opening shop"
+                },
+                {
+                    "hour": 9,
+                    "loc": "FishShop",
+                    "action": "Behind Fish Shop counter selling bait & tackle"
+                },
+                {
+                    "hour": 17,
+                    "loc": "FishShop",
+                    "action": "Evening fishing off beach pier (or Saloon)"
+                },
+                {
+                    "hour": 22,
+                    "loc": "FishShop",
+                    "action": "Sleeping in room above Fish Shop"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "FishShop",
+                    "action": "Fishing in the rain off beach pier"
+                },
+                {
+                    "hour": 9,
+                    "loc": "FishShop",
+                    "action": "At Fish Shop counter"
+                },
+                {
+                    "hour": 17,
+                    "loc": "FishShop",
+                    "action": "Fishing for rare rainy fish on pier"
+                },
+                {
+                    "hour": 22,
+                    "loc": "FishShop",
+                    "action": "Sleeping at Fish Shop"
+                }
+            ]
+        },
+        "npc_wizard": {
+            "sunny": [
+                {
+                    "hour": 6,
+                    "loc": "WizardTower",
+                    "action": "Studying arcane scrying cauldron in Wizard's Tower (6am-11pm)"
+                }
+            ],
+            "rain": [
+                {
+                    "hour": 6,
+                    "loc": "WizardTower",
+                    "action": "Channeling rain elementals in Wizard's Tower"
+                }
+            ]
+        }
+    }
+}
 };
