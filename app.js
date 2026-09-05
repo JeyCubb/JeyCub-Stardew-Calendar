@@ -802,7 +802,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   };
 
   let shouldAddFirst = true;
-  if (location === 'Main Farm' && !canGrowInSeason(cropKey, harvestDate.season)) {
+  if ((location === 'Main Farm' || location === 'Train Station') && !canGrowInSeason(cropKey, harvestDate.season)) {
     shouldAddFirst = false;
   }
   if (shouldAddFirst) {
@@ -832,7 +832,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
         };
 
         let shouldAddRegrow = true;
-        if (location === 'Main Farm' && !canGrowInSeason(cropKey, nextHarvestDate.season)) {
+        if ((location === 'Main Farm' || location === 'Train Station') && !canGrowInSeason(cropKey, nextHarvestDate.season)) {
           if (!crop.isTree) {
             // Normal crops die on the Main Farm when their season ends, stopping future years
             break;

@@ -9,7 +9,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="styles.css?v=3.9">
+  <link rel="stylesheet" href="styles.css?v=4.0">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
@@ -166,6 +166,7 @@
             </select>
             <select id="crop-loc">
               <option value="Main Farm">Main Farm</option>
+              <option value="Train Station">Train Station</option>
               <option value="Greenhouse">Greenhouse</option>
               <option value="Ginger Island">Ginger Island</option>
               <option value="Desert">Desert</option>
@@ -187,6 +188,7 @@
             <select id="machine-loc" style="flex-grow: 1;">
               <option value="Shed">Shed</option>
               <option value="Main Farm">Main Farm</option>
+              <option value="Train Station">Train Station</option>
               <option value="Quarry">Quarry</option>
               <option value="Tunnel">Tunnel</option>
               <option value="Greenhouse">Greenhouse</option>
@@ -273,8 +275,8 @@
     </div>
   </div>
 
-<script src="perfection_data.js?v=3.9"></script>
-  <script src="app.js?v=3.9"></script>
+<script src="perfection_data.js?v=4.0"></script>
+  <script src="app.js?v=4.0"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then((registrations) => {
