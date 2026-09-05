@@ -512,7 +512,7 @@ function renderCalendar() {
       <div class="day-header">
         <span class="day-number">${day}</span>
         <span class="day-name">${weekdayName}</span>
-        <button class="add-task-btn" onclick="openModal(${day})">+</button>
+        <button class="add-task-btn" onclick="openModal(${day}, event)">+</button>
       </div>
       <div class="tasks-container-compact" id="tasks-day-${day}">
         <div class="tasks-list ready-tasks" id="tasks-ready-${day}"></div>
@@ -607,7 +607,11 @@ function renderTasksForDay(day) {
 }
 
 // Modal handling
-window.openModal = function(day) {
+window.openModal = function(day, event) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
   activeDay = day;
   modalTitle.innerText = `Year ${currentYear} - ${currentSeason.toUpperCase()} - Day ${day}`;
   
