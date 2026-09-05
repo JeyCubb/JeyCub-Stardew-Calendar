@@ -1784,6 +1784,18 @@ trackerTabBtns.forEach(btn => {
 // Search input
 const trackerSearchInput = document.getElementById('tracker-search-input');
 if (trackerSearchInput) {
+  // Pressing Backspace inside search bar immediately clears all text for a clean new search
+  trackerSearchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace') {
+      if (trackerSearchInput.value) {
+        e.preventDefault();
+        trackerSearchInput.value = '';
+        currentTrackerSearch = '';
+        renderTrackerGridOnly();
+      }
+    }
+  });
+
   trackerSearchInput.addEventListener('input', (e) => {
     currentTrackerSearch = e.target.value.toLowerCase().trim();
     if (currentTrackerSearch && currentTrackerFilter !== 'all') {
@@ -1813,7 +1825,19 @@ window.addEventListener('keydown', (e) => {
   const searchInput = document.getElementById('tracker-search-input');
   if (!searchInput) return;
 
-  // Escape clears search
+  // Pressing Backspace anywhere on tracker tab removes all text in search bar for a new search
+  if (e.key === 'Backspace') {
+    if (searchInput.value || currentTrackerSearch) {
+      e.preventDefault();
+      searchInput.value = '';
+      currentTrackerSearch = '';
+      renderTrackerGridOnly();
+      searchInput.focus();
+    }
+    return;
+  }
+
+  // Escape clears search and blurs
   if (e.key === 'Escape') {
     if (searchInput.value) {
       searchInput.value = '';
