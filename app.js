@@ -82,29 +82,29 @@ const CROP_IMAGES = {
 };
 
 const MACHINE_IMAGES = {
-  'keg_wine': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png',
-  'keg_beer': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png',
-  'preserves': 'https://stardewvalleywiki.com/mediawiki/images/1/1e/Preserves_Jar.png',
-  'cask_silver': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
-  'cask_gold': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
-  'cask_iridium': 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png',
-  'solar_panel': 'https://stardewvalleywiki.com/mediawiki/images/5/5d/Solar_Panel.png',
-  'crystal_diamond': 'https://stardewvalleywiki.com/mediawiki/images/e/ea/Diamond.png',
-  'crystal_ruby': 'https://stardewvalleywiki.com/mediawiki/images/a/a9/Ruby.png',
-  'crystal_jade': 'https://stardewvalleywiki.com/mediawiki/images/7/7e/Jade.png',
-  'crystal_emerald': 'https://stardewvalleywiki.com/mediawiki/images/6/6a/Emerald.png',
-  'crystal_aquamarine': 'https://stardewvalleywiki.com/mediawiki/images/a/a2/Aquamarine.png',
-  'crystal_topaz': 'https://stardewvalleywiki.com/mediawiki/images/a/a5/Topaz.png',
-  'crystal_amethyst': 'https://stardewvalleywiki.com/mediawiki/images/2/2e/Amethyst.png',
-  'tapper_maple': 'https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png',
-  'tapper_oak': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png',
-  'tapper_pine': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Pine_Tar.png',
-  'tapper_mushroom': 'https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png',
+  'keg_wine': 'https://stardewvalleywiki.com/Special:FilePath/Keg.png',
+  'keg_beer': 'https://stardewvalleywiki.com/Special:FilePath/Keg.png',
+  'preserves': 'https://stardewvalleywiki.com/Special:FilePath/Preserves_Jar.png',
+  'cask_silver': 'https://stardewvalleywiki.com/Special:FilePath/Cask.png',
+  'cask_gold': 'https://stardewvalleywiki.com/Special:FilePath/Cask.png',
+  'cask_iridium': 'https://stardewvalleywiki.com/Special:FilePath/Cask.png',
+  'solar_panel': 'https://stardewvalleywiki.com/Special:FilePath/Solar_Panel.png',
+  'crystal_diamond': 'https://stardewvalleywiki.com/Special:FilePath/Diamond.png',
+  'crystal_ruby': 'https://stardewvalleywiki.com/Special:FilePath/Ruby.png',
+  'crystal_jade': 'https://stardewvalleywiki.com/Special:FilePath/Jade.png',
+  'crystal_emerald': 'https://stardewvalleywiki.com/Special:FilePath/Emerald.png',
+  'crystal_aquamarine': 'https://stardewvalleywiki.com/Special:FilePath/Aquamarine.png',
+  'crystal_topaz': 'https://stardewvalleywiki.com/Special:FilePath/Topaz.png',
+  'crystal_amethyst': 'https://stardewvalleywiki.com/Special:FilePath/Amethyst.png',
+  'tapper_maple': 'https://stardewvalleywiki.com/Special:FilePath/Maple_Syrup.png',
+  'tapper_oak': 'https://stardewvalleywiki.com/Special:FilePath/Oak_Resin.png',
+  'tapper_pine': 'https://stardewvalleywiki.com/Special:FilePath/Pine_Tar.png',
+  'tapper_mushroom': 'https://stardewvalleywiki.com/Special:FilePath/Purple_Mushroom.png',
   'tapper_mystic': 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Syrup.png',
-  'heavy_tapper_maple': 'https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png',
-  'heavy_tapper_oak': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png',
-  'heavy_tapper_pine': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Pine_Tar.png',
-  'heavy_tapper_mushroom': 'https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png',
+  'heavy_tapper_maple': 'https://stardewvalleywiki.com/Special:FilePath/Maple_Syrup.png',
+  'heavy_tapper_oak': 'https://stardewvalleywiki.com/Special:FilePath/Oak_Resin.png',
+  'heavy_tapper_pine': 'https://stardewvalleywiki.com/Special:FilePath/Pine_Tar.png',
+  'heavy_tapper_mushroom': 'https://stardewvalleywiki.com/Special:FilePath/Purple_Mushroom.png',
   'heavy_tapper_mystic': 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Syrup.png'
 };
 
@@ -522,16 +522,16 @@ function getTaskIconUrl(task) {
     }
   } else {
     if (task.machineKey && task.machineKey.startsWith('crystal_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
-      return 'https://stardewvalleywiki.com/mediawiki/images/d/d4/Crystalarium.png';
+      return 'https://stardewvalleywiki.com/Special:FilePath/Crystalarium.png';
     }
     if (task.machineKey && task.machineKey.startsWith('heavy_tapper_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
-      return 'https://stardewvalleywiki.com/mediawiki/images/0/0c/Heavy_Tapper.png';
+      return 'https://stardewvalleywiki.com/Special:FilePath/Heavy_Tapper.png';
     }
     if (task.machineKey && task.machineKey.startsWith('tapper_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
-      return 'https://stardewvalleywiki.com/mediawiki/images/d/da/Tapper.png';
+      return 'https://stardewvalleywiki.com/Special:FilePath/Tapper.png';
     }
     if (task.machineKey === 'solar_panel' && task.id && typeof task.id === 'string' && task.id.includes('ready')) {
-       return 'https://stardewvalleywiki.com/mediawiki/images/2/25/Battery_Pack.png';
+       return 'https://stardewvalleywiki.com/Special:FilePath/Battery_Pack.png';
     }
     if (imageKey === 'mahogany' && task.label && (task.label.includes('Mature') || task.label.includes('Ready') || task.label.includes('Hardwood'))) {
       return CROP_IMAGES['hardwood'] || CROP_IMAGES['mahogany'];
