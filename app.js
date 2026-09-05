@@ -87,12 +87,12 @@ const MACHINE_IMAGES = {
   'tapper_oak': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png',
   'tapper_pine': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Pine_Tar.png',
   'tapper_mushroom': 'https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png',
-  'tapper_mystic': 'https://stardewvalleywiki.com/mediawiki/images/7/77/Mystic_Syrup.png',
+  'tapper_mystic': 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Syrup.png',
   'heavy_tapper_maple': 'https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png',
   'heavy_tapper_oak': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png',
   'heavy_tapper_pine': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Pine_Tar.png',
   'heavy_tapper_mushroom': 'https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png',
-  'heavy_tapper_mystic': 'https://stardewvalleywiki.com/mediawiki/images/7/77/Mystic_Syrup.png'
+  'heavy_tapper_mystic': 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Syrup.png'
 };
 
 // Initialize current year structure if not present (guarantees all seasons exist)
@@ -466,6 +466,18 @@ function getTaskIconUrl(task) {
     }
     if (cleanLabel.includes('cask')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Cask.png';
+    }
+    if (cleanLabel.includes('mystic syrup') || cleanLabel.includes('mystic')) {
+      return 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Syrup.png';
+    }
+    if (cleanLabel.includes('maple syrup')) {
+      return 'https://stardewvalleywiki.com/Special:FilePath/Maple_Syrup.png';
+    }
+    if (cleanLabel.includes('oak resin')) {
+      return 'https://stardewvalleywiki.com/Special:FilePath/Oak_Resin.png';
+    }
+    if (cleanLabel.includes('pine tar')) {
+      return 'https://stardewvalleywiki.com/Special:FilePath/Pine_Tar.png';
     }
   } else {
     if (task.machineKey && task.machineKey.startsWith('crystal_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
