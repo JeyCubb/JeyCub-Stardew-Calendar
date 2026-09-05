@@ -204,7 +204,7 @@ const MASTER_MACHINES = [
   { key: 'cask_silver', name: 'Cask aging (Silver)', duration: 14, type: 'Cask' },
   { key: 'cask_gold', name: 'Cask aging (Gold)', duration: 28, type: 'Cask' },
   { key: 'cask_iridium', name: 'Cask aging (Iridium)', duration: 56, type: 'Cask' },
-  { key: 'solar_panel', name: 'Solar Panel', duration: 10, isRepeating: true, type: 'Utility' },
+  { key: 'solar_panel', name: 'Solar Panel', duration: 7, isRepeating: true, type: 'Utility' },
   { key: 'tapper_maple', name: 'Tapper: Maple Tree (Syrup)', duration: 9, isRepeating: true, type: 'Tapper' },
   { key: 'tapper_oak', name: 'Tapper: Oak Tree (Resin)', duration: 7, isRepeating: true, type: 'Tapper' },
   { key: 'tapper_pine', name: 'Tapper: Pine Tree (Tar)', duration: 5, isRepeating: true, type: 'Tapper' },
@@ -229,7 +229,15 @@ MASTER_MACHINES.forEach(m => {
   MACHINE_PRESETS[m.key] = {
     name: m.name,
     duration: m.duration,
-    isRepeating: m.isRepeating || false
+    isRepeating: m.isRepeating || false,
+    getDuration: (loc) => {
+      if (m.key === 'solar_panel') {
+        // Desert (and Ginger Island) have guaranteed 100% sunshine with zero rain -> exactly 7 days
+        if (loc === 'Desert' || loc === 'Ginger Island') return 7;
+        return 10; // Valley average with rain days
+      }
+      return m.duration;
+    }
   };
 });
 
@@ -882,8 +890,11 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
   currentYearSchedule[currentSeason][activeDay].push(loadTask);
 
+  // Determine location-sensitive machine duration (e.g. Solar Panel: 7d in Desert/Island vs 10d in Valley)
+  const duration = (typeof preset.getDuration === 'function') ? preset.getDuration(location) : preset.duration;
+
   // 2. Add Ready Task to future day
-  const readyDate = getFutureDate(currentYear, currentSeason, activeDay, preset.duration);
+  const readyDate = getFutureDate(currentYear, currentSeason, activeDay, duration);
   const readyAbs = getAbsoluteDay(readyDate.year, readyDate.season, readyDate.day);
   const readyTask = {
     id: 'ready_' + Date.now(),
@@ -901,7 +912,7 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
 
   // 3. If repeating machine (Solar Panel or Crystalariums), schedule repeating yields indefinitely
   if (preset.isRepeating) {
-    let nextReadyDate = getFutureDate(readyDate.year, readyDate.season, readyDate.day, preset.duration);
+    let nextReadyDate = getFutureDate(readyDate.year, readyDate.season, readyDate.day, duration);
     for (let i = 0; i < 60; i++) {
       const nextReadyAbs = getAbsoluteDay(nextReadyDate.year, nextReadyDate.season, nextReadyDate.day);
       const repeatTask = {
@@ -917,7 +928,7 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
       if (!ys[nextReadyDate.season][nextReadyDate.day]) ys[nextReadyDate.season][nextReadyDate.day] = [];
       ys[nextReadyDate.season][nextReadyDate.day].push(repeatTask);
       
-      nextReadyDate = getFutureDate(nextReadyDate.year, nextReadyDate.season, nextReadyDate.day, preset.duration);
+      nextReadyDate = getFutureDate(nextReadyDate.year, nextReadyDate.season, nextReadyDate.day, duration);
     }
   }
 
@@ -1479,9 +1490,14 @@ function populateMachineDropdown() {
   activeMachines.forEach(m => {
     const option = document.createElement('option');
     option.value = m.key;
-    let label = `${m.name} (${m.duration}d`;
-    if (m.isRepeating) label += ` repeating`;
-    label += `)`;
+    let label = m.name;
+    if (m.key === 'solar_panel') {
+      label += ` (7d Desert / 10d Valley repeating)`;
+    } else {
+      label += ` (${m.duration}d`;
+      if (m.isRepeating) label += ` repeating`;
+      label += `)`;
+    }
     option.innerText = label;
     select.appendChild(option);
   });
@@ -2387,6 +2403,18 @@ if (cropSelectEl && cropFertEl) {
       cropFertEl.value = 'tree_fert';
     } else if (cropFertEl.value === 'tree_fert') {
       cropFertEl.value = 'none';
+    }
+  });
+}
+
+
+// Auto-suggest Desert location when Solar Panel is selected
+const machineSelectEl = document.getElementById('machine-select');
+const machineLocEl = document.getElementById('machine-loc');
+if (machineSelectEl && machineLocEl) {
+  machineSelectEl.addEventListener('change', () => {
+    if (machineSelectEl.value === 'solar_panel' && (machineLocEl.value === 'Shed' || machineLocEl.value === 'Tunnel')) {
+      machineLocEl.value = 'Desert';
     }
   });
 }
