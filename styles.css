@@ -1947,3 +1947,9 @@ header {
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
 }
+
+
+/* Items Manager Overlay (Above day task modal) */
+#crop-manager-overlay {
+  z-index: 150000 !important;
+}

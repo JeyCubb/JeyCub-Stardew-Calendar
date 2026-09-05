@@ -9,7 +9,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="styles.css?v=4.5">
+  <link rel="stylesheet" href="styles.css?v=4.6">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
@@ -150,7 +150,7 @@
           <h4 class="section-title">🌱 Plant Crop & Forecast</h4>
           <div class="form-group-row">
             <select id="crop-select" style="flex-grow: 1;"></select>
-            <button type="button" id="btn-manage-crops" class="btn btn-inline" style="background: rgba(255,255,255,0.06); padding: 0.45rem 0.6rem; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 6px; white-space: nowrap;">⚙️ Manage</button>
+            <button type="button" id="btn-manage-crops" onclick="openCropManager('crops', event)" class="btn btn-inline" style="background: rgba(255,255,255,0.06); padding: 0.45rem 0.6rem; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 6px; white-space: nowrap;">⚙️ Manage</button>
           </div>
           <div class="form-group-row" style="margin-top: 0.15rem;">
             <select id="crop-stage">
@@ -182,7 +182,7 @@
           <h4 class="section-title">📥 Load Machine</h4>
           <div class="form-group-row">
             <select id="machine-select" style="flex-grow: 1;"></select>
-            <button type="button" id="btn-manage-machines" class="btn btn-inline" style="background: rgba(255,255,255,0.06); padding: 0.45rem 0.6rem; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 6px; white-space: nowrap;">⚙️ Manage</button>
+            <button type="button" id="btn-manage-machines" onclick="openCropManager('machines', event)" class="btn btn-inline" style="background: rgba(255,255,255,0.06); padding: 0.45rem 0.6rem; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 6px; white-space: nowrap;">⚙️ Manage</button>
           </div>
           <div class="form-group-row" style="margin-top: 0.15rem;">
             <select id="machine-loc" style="flex-grow: 1;">
@@ -213,11 +213,11 @@
     </div>
   </div>
   <!-- Manage Crops Modal Overlay -->
-  <div class="modal-overlay" id="crop-manager-overlay" style="display: none; z-index: 1100;">
+  <div class="modal-overlay" id="crop-manager-overlay" onclick="if(event.target === this) closeCropManager(event)" style="display: none; z-index: 150000;">
     <div class="modal" style="width: 450px; max-width: 95%;">
       <div class="modal-header">
         <h3 id="manager-title">⚙️ Manage Items list</h3>
-        <button class="modal-close" id="crop-manager-close">×</button>
+        <button class="modal-close" id="crop-manager-close" onclick="closeCropManager(event)">×</button>
       </div>
       <div style="padding: 1rem 0;">
         <div class="tab-header" style="display: flex; gap: 0.5rem; margin-bottom: 0.85rem;">
@@ -275,8 +275,8 @@
     </div>
   </div>
 
-<script src="perfection_data.js?v=4.5"></script>
-  <script src="app.js?v=4.5"></script>
+<script src="perfection_data.js?v=4.6"></script>
+  <script src="app.js?v=4.6"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then((registrations) => {
