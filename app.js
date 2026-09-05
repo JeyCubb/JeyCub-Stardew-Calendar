@@ -30,6 +30,10 @@ const CROP_IMAGES = {
   'strawberry': 'https://stardewvalleywiki.com/mediawiki/images/6/6d/Strawberry.png',
   'rhubarb': 'https://stardewvalleywiki.com/mediawiki/images/6/6e/Rhubarb.png',
   'green_bean': 'https://stardewvalleywiki.com/mediawiki/images/5/5c/Green_Bean.png',
+  'blue_jazz': 'https://stardewvalleywiki.com/Special:FilePath/Blue_Jazz.png',
+  'tulip': 'https://stardewvalleywiki.com/Special:FilePath/Tulip.png',
+  'carrot': 'https://stardewvalleywiki.com/Special:FilePath/Carrot.png',
+  'wheat': 'https://stardewvalleywiki.com/Special:FilePath/Wheat.png',
   'melon': 'https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png',
   'blueberry': 'https://stardewvalleywiki.com/mediawiki/images/a/af/Blueberries.png',
   'starfruit': 'https://stardewvalleywiki.com/mediawiki/images/d/db/Starfruit.png',
@@ -39,6 +43,10 @@ const CROP_IMAGES = {
   'radish': 'https://stardewvalleywiki.com/mediawiki/images/d/d5/Radish.png',
   'red_cabbage': 'https://stardewvalleywiki.com/mediawiki/images/2/2d/Red_Cabbage.png',
   'hops': 'https://stardewvalleywiki.com/mediawiki/images/5/59/Hops.png',
+  'poppy': 'https://stardewvalleywiki.com/Special:FilePath/Poppy.png',
+  'summer_spangle': 'https://stardewvalleywiki.com/Special:FilePath/Summer_Spangle.png',
+  'sunflower': 'https://stardewvalleywiki.com/Special:FilePath/Sunflower.png',
+  'summer_squash': 'https://stardewvalleywiki.com/Special:FilePath/Summer_Squash.png',
   'pumpkin': 'https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png',
   'cranberry': 'https://stardewvalleywiki.com/mediawiki/images/6/6e/Cranberries.png',
   'grape': 'https://stardewvalleywiki.com/mediawiki/images/c/c2/Grape.png',
@@ -47,10 +55,15 @@ const CROP_IMAGES = {
   'artichoke': 'https://stardewvalleywiki.com/mediawiki/images/d/dd/Artichoke.png',
   'beet': 'https://stardewvalleywiki.com/mediawiki/images/a/a4/Beet.png',
   'bok_choy': 'https://stardewvalleywiki.com/mediawiki/images/4/40/Bok_Choy.png',
+  'yam': 'https://stardewvalleywiki.com/Special:FilePath/Yam.png',
+  'fairy_rose': 'https://stardewvalleywiki.com/Special:FilePath/Fairy_Rose.png',
+  'broccoli': 'https://stardewvalleywiki.com/Special:FilePath/Broccoli.png',
   'sweetgem': 'https://stardewvalleywiki.com/mediawiki/images/8/88/Sweet_Gem_Berry.png',
+  'powdermelon': 'https://stardewvalleywiki.com/Special:FilePath/Powdermelon.png',
   'ancient': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Ancient_Fruit.png',
   'pineapple': 'https://stardewvalleywiki.com/mediawiki/images/f/fb/Pineapple.png',
   'taro': 'https://stardewvalleywiki.com/mediawiki/images/0/01/Taro_Root.png',
+  'cactus_fruit': 'https://stardewvalleywiki.com/Special:FilePath/Cactus_Fruit.png',
   'coffee': 'https://stardewvalleywiki.com/mediawiki/images/3/33/Coffee_Bean.png',
   'cherry': 'https://stardewvalleywiki.com/mediawiki/images/2/20/Cherry.png',
   'apricot': 'https://stardewvalleywiki.com/mediawiki/images/f/fc/Apricot.png',
@@ -121,16 +134,24 @@ const MASTER_CROPS = [
   { key: 'strawberry', name: 'Strawberry', base: 8, regrow: 4, season: 'spring', type: 'Spring' },
   { key: 'rhubarb', name: 'Rhubarb', base: 13, regrow: 0, season: 'spring', type: 'Spring' },
   { key: 'green_bean', name: 'Green Bean', base: 10, regrow: 3, season: 'spring', type: 'Spring' },
+  { key: 'blue_jazz', name: 'Blue Jazz', base: 7, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'tulip', name: 'Tulip', base: 6, regrow: 0, season: 'spring', type: 'Spring' },
+  { key: 'carrot', name: 'Carrot', base: 3, regrow: 0, season: 'spring', type: 'Spring' },
   // Summer
+  { key: 'wheat', name: 'Wheat', base: 4, regrow: 0, season: 'summer', type: 'Summer / Fall' },
   { key: 'melon', name: 'Melon', base: 12, regrow: 0, season: 'summer', type: 'Summer' },
   { key: 'blueberry', name: 'Blueberry', base: 13, regrow: 4, season: 'summer', type: 'Summer' },
   { key: 'starfruit', name: 'Starfruit', base: 13, regrow: 0, season: 'summer', type: 'Summer' },
-  { key: 'corn', name: 'Corn', base: 14, regrow: 4, season: 'summer', type: 'Summer' },
+  { key: 'corn', name: 'Corn', base: 14, regrow: 4, season: 'summer', type: 'Summer / Fall' },
   { key: 'hot_pepper', name: 'Hot Pepper', base: 5, regrow: 3, season: 'summer', type: 'Summer' },
   { key: 'tomato', name: 'Tomato', base: 11, regrow: 4, season: 'summer', type: 'Summer' },
   { key: 'radish', name: 'Radish', base: 6, regrow: 0, season: 'summer', type: 'Summer' },
   { key: 'red_cabbage', name: 'Red Cabbage', base: 9, regrow: 0, season: 'summer', type: 'Summer' },
   { key: 'hops', name: 'Hops', base: 11, regrow: 1, season: 'summer', type: 'Summer' },
+  { key: 'poppy', name: 'Poppy', base: 7, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'summer_spangle', name: 'Summer Spangle', base: 8, regrow: 0, season: 'summer', type: 'Summer' },
+  { key: 'sunflower', name: 'Sunflower', base: 8, regrow: 0, season: 'summer', type: 'Summer / Fall' },
+  { key: 'summer_squash', name: 'Summer Squash', base: 6, regrow: 3, season: 'summer', type: 'Summer' },
   // Fall
   { key: 'pumpkin', name: 'Pumpkin', base: 13, regrow: 0, season: 'fall', type: 'Fall' },
   { key: 'cranberry', name: 'Cranberries', base: 7, regrow: 5, season: 'fall', type: 'Fall' },
@@ -140,11 +161,17 @@ const MASTER_CROPS = [
   { key: 'artichoke', name: 'Artichoke', base: 8, regrow: 0, season: 'fall', type: 'Fall' },
   { key: 'beet', name: 'Beet', base: 6, regrow: 0, season: 'fall', type: 'Fall' },
   { key: 'bok_choy', name: 'Bok Choy', base: 4, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'yam', name: 'Yam', base: 10, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'fairy_rose', name: 'Fairy Rose', base: 12, regrow: 0, season: 'fall', type: 'Fall' },
+  { key: 'broccoli', name: 'Broccoli', base: 8, regrow: 4, season: 'fall', type: 'Fall' },
   { key: 'sweetgem', name: 'Sweet Gem Berry', base: 24, regrow: 0, season: 'fall', type: 'Fall' },
+  // Winter
+  { key: 'powdermelon', name: 'Powdermelon', base: 7, regrow: 0, season: 'winter', type: 'Winter' },
   // Special / Trees
   { key: 'ancient', name: 'Ancient Fruit', base: 28, regrow: 7, season: 'spring', type: 'Special' },
   { key: 'pineapple', name: 'Pineapple', base: 14, regrow: 7, season: 'summer', type: 'Special' },
   { key: 'taro', name: 'Taro Root', base: 10, regrow: 0, season: 'summer', type: 'Special' },
+  { key: 'cactus_fruit', name: 'Cactus Fruit', base: 12, regrow: 3, season: 'all', type: 'Special' },
   { key: 'coffee', name: 'Coffee Bean', base: 10, regrow: 2, season: 'spring', type: 'Special' },
   { key: 'cherry', name: 'Cherry Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
   { key: 'apricot', name: 'Apricot Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
@@ -318,7 +345,11 @@ const ITEM_COLORS = {
   'strawberry': '#e0284c',   // Red
   'rhubarb': '#be184a',      // Pinkish red
   'green_bean': '#4f802f',   // Dark green
+  'blue_jazz': '#3b82f6',    // Blue
+  'tulip': '#f43f5e',        // Tulip red/pink
+  'carrot': '#ea580c',       // Carrot orange
   // Summer crops
+  'wheat': '#eab308',        // Golden wheat
   'melon': '#f43f5e',        // Coral pink
   'blueberry': '#1d4ed8',    // Royal blue
   'starfruit': '#ffc300',    // Golden yellow
@@ -328,6 +359,10 @@ const ITEM_COLORS = {
   'radish': '#ec4899',       // Pink
   'red_cabbage': '#7c3aed',  // Purple
   'hops': '#84cc16',         // Lime green
+  'poppy': '#ef4444',        // Bright red
+  'summer_spangle': '#a855f7',// Purple
+  'sunflower': '#eab308',    // Sunflower gold
+  'summer_squash': '#84cc16',// Lime green
   // Fall crops
   'pumpkin': '#ea580c',      // Orange
   'cranberry': '#991b1b',    // Wine red
@@ -337,11 +372,17 @@ const ITEM_COLORS = {
   'artichoke': '#65a30d',    // Olive green
   'beet': '#881337',         // Deep crimson
   'bok_choy': '#a3e635',     // Bright green
+  'yam': '#b45309',          // Brownish orange
+  'fairy_rose': '#ec4899',   // Magenta pink
+  'broccoli': '#22c55e',     // Bright green
   'sweetgem': '#6366f1',     // Indigo
+  // Winter crops
+  'powdermelon': '#38bdf8',  // Light icy blue
   // Special
   'ancient': '#00a082',      // Teal cyan
   'pineapple': '#facc15',    // Bright yellow
   'taro': '#854d0e',         // Brownish green
+  'cactus_fruit': '#10b981', // Green cactus
   'coffee': '#78350f',       // Coffee brown
   // Trees
   'cherry': '#be123c',       // Cherry red
@@ -742,9 +783,17 @@ function canGrowInSeason(cropKey, targetSeason) {
   if (cropKey === 'coffee') {
     return ['spring', 'summer'].includes(targetSeason);
   }
-  // Corn grows in Summer and Fall
-  if (cropKey === 'corn') {
+  // Corn, Wheat, Sunflower grow in Summer and Fall
+  if (['corn', 'wheat', 'sunflower'].includes(cropKey)) {
     return ['summer', 'fall'].includes(targetSeason);
+  }
+  // Winter crop (Powdermelon)
+  if (cropKey === 'powdermelon') {
+    return targetSeason === 'winter';
+  }
+  // Indoor / All-Season special crops
+  if (cropKey === 'cactus_fruit') {
+    return true;
   }
   
   // Find from MASTER_CROPS
@@ -1450,7 +1499,7 @@ const managerTitle = document.getElementById('manager-title');
 let activeManagerTab = 'crops'; // 'crops' or 'machines'
 
 const DEFAULT_ACTIVE_CROPS = [
-  'starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 
+  'wheat', 'starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 
   'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango',
   'mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree'
 ];
@@ -1465,8 +1514,8 @@ const DEFAULT_ACTIVE_MACHINES = [
 // Populate crop select field based on active list
 function populateCropDropdown() {
   let activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || DEFAULT_ACTIVE_CROPS;
-  // Ensure new tree options are automatically included
-  ['mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree'].forEach(k => {
+  // Ensure essential tree/crop options are automatically included if not present
+  ['wheat', 'mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree'].forEach(k => {
     if (!activeKeys.includes(k)) activeKeys.push(k);
   });
   localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
