@@ -696,8 +696,9 @@ window.openModal = function(day, event) {
 };
 
 function closeModal() {
-  modalOverlay.style.display = 'none';
+  if (modalOverlay) modalOverlay.style.display = 'none';
 }
+window.closeModal = closeModal;
 
 modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', (e) => {
@@ -1619,6 +1620,7 @@ window.openCropManager = function(tab, event) {
     event.stopPropagation();
     event.preventDefault();
   }
+  closeModal();
   switchManagerTab(tab || 'crops');
   if (cropManagerOverlay) {
     cropManagerOverlay.style.display = 'flex';
@@ -1637,12 +1639,14 @@ window.closeCropManager = function(event) {
 
 // Open Managers
 btnManageCrops.addEventListener('click', () => {
+  closeModal();
   switchManagerTab('crops');
   cropManagerOverlay.style.display = 'flex';
 });
 
 if (btnManageMachines) {
   btnManageMachines.addEventListener('click', () => {
+    closeModal();
     switchManagerTab('machines');
     cropManagerOverlay.style.display = 'flex';
   });
