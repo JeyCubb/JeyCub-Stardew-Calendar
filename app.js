@@ -2542,13 +2542,9 @@ function renderTrackerGridOnly() {
         <div class="tracker-card-header villager-card-header" onclick="openVillagerMapModal('${item.id}', event)" title="Click person to view map & locations">
           <div class="tracker-card-icon villager-portrait-wrap" title="Click to view map & schedule">
             <img src="${item.img}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.style.display='none';">
-            <span class="portrait-map-indicator" title="Location Map">🗺️</span>
           </div>
           <div class="tracker-card-title-wrap">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px;">
-              <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
-              <button class="villager-map-pill-btn" onclick="openVillagerMapModal('${item.id}', event)" title="View Map & Locations">🗺️ Map</button>
-            </div>
+            <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
             <div class="tracker-card-name">${item.name}</div>
           </div>
           <div class="tracker-card-cb" onclick="toggleTrackerItem('villagers', '${item.id}', event)" title="Toggle 10 hearts friendship">
