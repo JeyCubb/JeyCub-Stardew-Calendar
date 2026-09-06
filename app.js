@@ -2192,7 +2192,7 @@ function renderTrackerGridOnly() {
         if (currentTrackerFilter === 'soup' && !n.includes('soup') && !n.includes('stew') && !n.includes('broth') && !n.includes('chowder') && !n.includes('bisque') && !n.includes('hotpot') && !n.includes('curry')) return false;
       } else if (activeTrackerSheet === 'fish') {
         const s = (item.season || '').toLowerCase();
-        const src = (item.source || '').toLowerCase();
+        const src = ((item.location || '') + ' ' + (item.source || '')).toLowerCase();
         const name = (item.name || '').toLowerCase();
         const legendaries = ['crimsonfish', 'angler', 'legend', 'glacierfish', 'mutant carp'];
         if (currentTrackerFilter === 'spring' && !s.includes('spring') && !s.includes('all season')) return false;
@@ -2200,9 +2200,9 @@ function renderTrackerGridOnly() {
         if (currentTrackerFilter === 'fall' && !s.includes('fall') && !s.includes('all season')) return false;
         if (currentTrackerFilter === 'winter' && !s.includes('winter') && !s.includes('all season')) return false;
         if (currentTrackerFilter === 'ocean' && !src.includes('ocean') && !src.includes('saltwater') && !src.includes('submarine') && !src.includes('beach')) return false;
-        if (currentTrackerFilter === 'river' && !src.includes('river') && !src.includes('mountain') && !src.includes('lake') && !src.includes('forest') && !src.includes('pond') && !src.includes('freshwater')) return false;
-        if (currentTrackerFilter === 'legendary' && !legendaries.includes(name)) return false;
-        if (currentTrackerFilter === 'crabpot' && !['clam', 'cockle', 'crab', 'crayfish', 'lobster', 'mussel', 'oyster', 'periwinkle', 'shrimp', 'snail', 'seaweed', 'green algae', 'white algae', 'sea jelly', 'river jelly', 'cave jelly'].includes(name)) return false;
+        if (currentTrackerFilter === 'river' && !src.includes('river') && !src.includes('mountain') && !src.includes('lake') && !src.includes('forest') && !src.includes('pond') && !src.includes('freshwater') && !src.includes('waterfall')) return false;
+        if (currentTrackerFilter === 'legendary' && !legendaries.includes(name) && item.category !== 'Legendary Fish') return false;
+        if (currentTrackerFilter === 'crabpot' && item.category !== 'Crab Pot' && !['clam', 'cockle', 'crab', 'crayfish', 'lobster', 'mussel', 'oyster', 'periwinkle', 'shrimp', 'snail', 'seaweed', 'green algae', 'white algae', 'sea jelly', 'river jelly', 'cave jelly'].includes(name)) return false;
       } else if (activeTrackerSheet === 'museum') {
         const t = (item.type || '').toLowerCase();
         if (currentTrackerFilter === 'artifact' && !t.includes('artifact')) return false;
@@ -2266,7 +2266,44 @@ function renderTrackerGridOnly() {
     let notesText = item.notes || '';
     let dayText = item.day ? `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 2px;">📅 ${item.day}</div>` : '';
 
-    if (activeTrackerSheet === 'villagers') {
+    if (activeTrackerSheet === 'fish') {
+      const isLegendary = item.category === 'Legendary Fish' || ['Angler', 'Crimsonfish', 'Legend', 'Glacierfish', 'Mutant Carp'].includes(item.name);
+      badgeText = isLegendary ? '👑 Legendary Fish' : (item.category === 'Crab Pot' ? '🦀 Crab Pot' : (item.category === 'Night Market' ? '🌙 Night Market' : (item.season || 'Fish')));
+      if (isLegendary) {
+        badgeColor = '#f43f5e';
+      }
+
+      const locText = item.location || item.source || '';
+      const timeText = item.time || '';
+      const weatherText = item.weather || '';
+      const reqText = item.requirements || '';
+      const diffText = item.difficulty || '';
+      const limitText = item.limit || (isLegendary ? 'Legendary Fish: Can only be caught once per save file.' : '');
+
+      let html = '';
+      if (locText) {
+        html += `<div style="margin-bottom: 3px; line-height: 1.35;"><strong style="color: #60a5fa;">📍 Location:</strong> ${locText}</div>`;
+      }
+      if (timeText || weatherText) {
+        html += `<div style="margin-bottom: 3px; line-height: 1.35;">`;
+        if (timeText) html += `<strong style="color: #fbbf24;">🕒 Time:</strong> ${timeText}`;
+        if (timeText && weatherText) html += ` &nbsp;|&nbsp; `;
+        if (weatherText) html += `<strong style="color: #38bdf8;">⛅ Weather:</strong> ${weatherText}`;
+        html += `</div>`;
+      }
+      if (reqText && reqText !== 'None') {
+        html += `<div style="margin-bottom: 3px; line-height: 1.35;"><strong style="color: #a78bfa;">🎯 Requirements:</strong> ${reqText}</div>`;
+      }
+      if (diffText) {
+        html += `<div style="margin-bottom: 3px; line-height: 1.35;"><strong style="color: #34d399;">⚡ Difficulty:</strong> ${diffText}</div>`;
+      }
+      if (limitText && limitText !== 'None') {
+        html += `<div style="margin-bottom: 3px; line-height: 1.35; color: #fca5a5;"><strong style="color: #ef4444;">⚠️ Limit:</strong> ${limitText}</div>`;
+      }
+      
+      detailsText = html;
+      notesText = item.desc ? `<div style="font-style: italic; opacity: 0.85; margin-top: 4px; font-size: 0.78rem;">"${item.desc}"</div>` : '';
+    } else if (activeTrackerSheet === 'villagers') {
       badgeText = item.category === 'Bachelorette' ? '👰 Bachelorette' : (item.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
       dayText = `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 4px;">🎂 Birthday: ${item.birthday} | 🏠 ${item.home}</div>`;
       detailsText = `<div style="margin-bottom: 4px; line-height: 1.3;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved}</div><div style="margin-bottom: 4px; line-height: 1.3;"><strong style="color: #4ade80;">👍 Liked:</strong> ${item.liked}</div>`;
