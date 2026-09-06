@@ -2291,7 +2291,6 @@ function renderTrackerGridOnly() {
       const locText = item.location || item.source || '';
       const timeText = item.time || '';
       const weatherText = item.weather || '';
-      const reqText = item.requirements || '';
       const diffText = item.difficulty || '';
       const limitText = item.limit || (isLegendary ? 'Legendary Fish: Can only be caught once per save file.' : '');
 
@@ -2319,9 +2318,6 @@ function renderTrackerGridOnly() {
       }
       if (weatherText) {
         rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #38bdf8;">⛅</span> Weather</td><td class="t-col-val">${weatherText}</td></tr>`;
-      }
-      if (reqText && reqText !== 'None') {
-        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #c084fc;">🎯</span> Reqs</td><td class="t-col-val">${reqText}</td></tr>`;
       }
       if (diffText) {
         rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #34d399;">⚡</span> Difficulty</td><td class="t-col-val">${diffText}</td></tr>`;
