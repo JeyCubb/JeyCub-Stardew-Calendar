@@ -2206,7 +2206,7 @@ function renderTrackerSheet() {
       desc: 'Find all 130 Golden Walnuts scattered across Ginger Island (East, North Volcano, West Farm, and South Docks).'
     },
     'villagers': {
-      title: '❤️ Great Friends (Villagers & Liked Gifts)',
+      title: '❤️ Great Friends (Villagers & Loved Gifts)',
       desc: 'Reach maximum friendship hearts with all 34 villagers (8 hearts for singles, 10 hearts for others) for the Perfection milestone. Track loved gifts, birthdays, locations, and daily schedules!'
     }
   };
@@ -2448,9 +2448,6 @@ function renderTrackerGridOnly() {
       if (item.loved) {
         infoRows += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #f87171;">❤️</span> Loved</td><td class="t-col-val" style="color: #fca5a5; font-weight: 500;">${item.loved}</td></tr>`;
       }
-      if (item.liked) {
-        infoRows += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #4ade80;">👍</span> Liked</td><td class="t-col-val" style="color: #bbf7d0;">${item.liked}</td></tr>`;
-      }
 
       let schedRows = '';
       if (item.scheduleTable && Array.isArray(item.scheduleTable)) {
@@ -2627,8 +2624,7 @@ window.openVillagerMapModal = function(villagerId, event) {
       });
     }
     schedBox.innerHTML = `
-      <div style="margin-bottom: 5px;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved || ''}</div>
-      <div style="margin-bottom: 7px;"><strong style="color: #4ade80;">👍 Liked:</strong> ${item.liked || ''}</div>
+      <div style="margin-bottom: 7px;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved || ''}</div>
       <table class="tracker-info-table villager-sched-table" style="margin-top: 6px;">
         <thead>
           <tr><th colspan="2" class="sched-table-header">📍 Daily Schedule by Hour</th></tr>
