@@ -2485,11 +2485,9 @@ function renderTrackerGridOnly() {
 
       notesText = `
         <div class="villager-static-map-wrapper"
-             onmouseenter="showVillagerMapHover('${item.id}', this, event)"
-             onmouseleave="hideVillagerMapHover()"
              onclick="openVillagerMapModal('${item.id}', event)"
-             title="Hover to preview map / Click to enlarge">
-          <div class="map-zoom-hint">🔍 Hover to Zoom Map</div>
+             title="Click to view full map & routine">
+          <div class="map-zoom-hint">🔍 Click to Enlarge Map</div>
           <div class="villager-static-map-frame">
             <img src="stardew_map.png" alt="Map" class="villager-static-map-img" loading="lazy">
             ${mapPinsHtml}
