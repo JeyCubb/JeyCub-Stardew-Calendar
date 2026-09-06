@@ -9273,37 +9273,46 @@ const PERFECTION_TRACKER_DATA = {
         "birthday": "Summer 24",
         "home": "Fish Shop (The Beach)",
         "source": "\ud83c\udfe0 Fish Shop (The Beach) | \ud83c\udf82 Summer 24",
-        "loved": "Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon, Tiger Trout",
+        "loved": "Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon",
         "liked": "Baked Fish, Carp Surprise, Chowder, Crispy Bass, Dish O' The Sea, Escargot, Fish Stew, Fish Taco, Fried Calamari, Fried Eel, Gold Bar, Salmon Dinner, Seafoam Pudding, Trout Soup",
-        "schedule": "Fishing on beach pier 6am-9am; Fish Shop counter 9am-5pm; Fishing on pier 5pm-10pm (or Stardrop Saloon).",
+        "schedule": "Beach pier morning; Fish Shop counter 9am-5pm; Pier fishing 5pm-9pm (or Saloon eves); Saturday: Forest river 9am-2pm, Town river bridge to beach 2pm-7pm, Saloon 7pm-11pm.",
         "scheduleTable": [
             {
                 "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Fishing on Beach Pier (The Beach)"
+                "loc": "Beach Pier outside Fish Shop (Fishing)"
             },
             {
                 "time": "9:00 AM \u2013 5:00 PM",
-                "loc": "Willy's Fish Shop Counter (Open daily except Saturday if sunny)"
+                "loc": "Willy's Fish Shop (Behind sales counter)"
             },
             {
-                "time": "5:00 PM \u2013 10:00 PM",
-                "loc": "Fishing on Beach Pier (or The Stardrop Saloon)"
+                "time": "5:00 PM \u2013 7:00 PM",
+                "loc": "Beach Pier outside shop (or Town River bridge on Sat)"
             },
             {
-                "time": "10:00 PM+",
-                "loc": "Willy's Fish Shop (Bedroom)"
+                "time": "7:00 PM \u2013 11:00 PM",
+                "loc": "The Stardrop Saloon (Socializing / having a drink)"
+            },
+            {
+                "time": "11:00 PM+",
+                "loc": "Fish Shop Bedroom (Sleeping)"
             }
         ],
-        "notes": "\u2764\ufe0f Loved: Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon, Tiger Trout\n\ud83d\udd52 Routine: Beach Pier Fishing (6am-9am & 5pm-10pm) -> Fish Shop counter (9am-5pm)",
+        "notes": "\u2764\ufe0f Loved: Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon\n\ud83d\udd52 Routine: Fish Shop (9am-5pm) -> Beach Pier -> Stardrop Saloon; Sat: Town River bridge to beach (2pm-7pm)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Willy.png",
         "mapPins": [
             {
-                "label": "\ud83c\udfa3 Willy's Fish Shop & Pier",
+                "label": "\ud83c\udfe0 Fish Shop & Beach Pier",
                 "x": 58.0,
                 "y": 88.0
             },
             {
-                "label": "\ud83c\udf7b Stardrop Saloon (Rainy eves)",
+                "label": "\ud83c\udfa3 Town River Bridge to Beach (Sat 2pm-7pm)",
+                "x": 56.0,
+                "y": 66.0
+            },
+            {
+                "label": "\ud83c\udf7b The Stardrop Saloon (Sat/Eves 7pm-11pm)",
                 "x": 55.0,
                 "y": 54.0
             }
@@ -9311,15 +9320,15 @@ const PERFECTION_TRACKER_DATA = {
         "altTable": [
             {
                 "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Fishes off Beach dock / pier outside shop all day or inside shop"
+                "loc": "Fishes off Beach pier in rain (6am-9am & 5pm-11pm); Fish Shop open 9am-5pm"
             },
             {
-                "cond": "\ud83c\udfa3 Saturday",
-                "loc": "Fish Shop closed; spends entire day fishing along Beach shore & dock"
+                "cond": "\ud83c\udfa3 Sat Daytime",
+                "loc": "Fish Shop CLOSED; fishes at Forest river (9am-2pm), then Town River Bridge to Beach (2:00 PM \u2013 7:00 PM)"
             },
             {
-                "cond": "\ud83c\udf7b Evenings",
-                "loc": "Visits The Stardrop Saloon (6:00 PM \u2013 11:00 PM) for a pint"
+                "cond": "\ud83c\udf7b Sat Evening",
+                "loc": "Visits The Stardrop Saloon (7:00 PM \u2013 11:00 PM) -> returns home to Fish Shop"
             },
             {
                 "cond": "\ud83c\udf34 Island Resort",
@@ -9330,8 +9339,8 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
             }
         ],
-        "rain": "Fishes off Beach dock / pier outside shop all day or inside shop",
-        "variations": "\ud83c\udfa3 Saturday: Fish Shop closed; spends entire day fishing along Beach shore & dock; \ud83c\udf7b Evenings: Visits The Stardrop Saloon (6:00 PM \u2013 11:00 PM) for a pint; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "rain": "Fishes off Beach pier in rain (6am-9am & 5pm-11pm); Fish Shop open 9am-5pm",
+        "variations": "\ud83c\udfa3 Sat Daytime: Fish Shop CLOSED; fishes at Forest river (9am-2pm), then Town River Bridge to Beach (2:00 PM \u2013 7:00 PM); \ud83c\udf7b Sat Evening: Visits The Stardrop Saloon (7:00 PM \u2013 11:00 PM) -> returns home to Fish Shop; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_wizard",
