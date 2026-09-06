@@ -2287,6 +2287,7 @@ function renderTrackerGridOnly() {
         badgeColor = '#f43f5e';
       }
 
+      const seasonText = item.season || '';
       const locText = item.location || item.source || '';
       const timeText = item.time || '';
       const weatherText = item.weather || '';
@@ -2295,6 +2296,21 @@ function renderTrackerGridOnly() {
       const limitText = item.limit || (isLegendary ? 'Legendary Fish: Can only be caught once per save file.' : '');
 
       let rowsHtml = '';
+      if (seasonText) {
+        let seasonDisplay = seasonText;
+        if (isLegendary && seasonText !== 'All Seasons') {
+          seasonDisplay = `${seasonText} (or any season with Magic Bait)`;
+        }
+        let seasonIcon = '📅';
+        let seasonColor = '#fb923c';
+        if (seasonText.includes('Spring')) { seasonIcon = '🌸'; seasonColor = '#4ade80'; }
+        else if (seasonText.includes('Summer')) { seasonIcon = '☀️'; seasonColor = '#facc15'; }
+        else if (seasonText.includes('Fall')) { seasonIcon = '🍂'; seasonColor = '#fb923c'; }
+        else if (seasonText.includes('Winter')) { seasonIcon = '❄️'; seasonColor = '#38bdf8'; }
+        else if (seasonText.includes('All Season')) { seasonIcon = '🌐'; seasonColor = '#c084fc'; }
+
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: ${seasonColor};">${seasonIcon}</span> Season</td><td class="t-col-val" style="color: ${seasonColor}; font-weight: 600;">${seasonDisplay}</td></tr>`;
+      }
       if (locText) {
         rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #60a5fa;">📍</span> Location</td><td class="t-col-val">${locText}</td></tr>`;
       }
