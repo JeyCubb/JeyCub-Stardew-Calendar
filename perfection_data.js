@@ -3583,735 +3583,897 @@ const PERFECTION_TRACKER_DATA = {
   ],
   "cooking": [
     {
-      "id": "cook_fried_egg",
-      "name": "Fried Egg",
-      "category": "Cooking Recipe",
-      "desc": "Sunny-side up.",
-      "source": "Sunny-side up.",
-      "notes": "Ingredients: Egg (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Egg.png"
-    },
-    {
-      "id": "cook_omelet",
-      "name": "Omelet",
-      "category": "Cooking Recipe",
-      "desc": "It's super fluffy.",
-      "source": "It's super fluffy.",
-      "notes": "Ingredients: Egg (1) Milk (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Omelet.png"
-    },
-    {
-      "id": "cook_salad",
-      "name": "Salad",
-      "category": "Cooking Recipe",
-      "desc": "A healthy garden salad.",
-      "source": "A healthy garden salad.",
-      "notes": "Ingredients: Leek (1) Dandelion (1) Vinegar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Salad.png"
-    },
-    {
-      "id": "cook_cheese_cauliflower",
-      "name": "Cheese Cauliflower",
-      "category": "Cooking Recipe",
-      "desc": "It smells great!",
-      "source": "It smells great!",
-      "notes": "Ingredients: Cauliflower (1) Cheese (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Cheese_Cauliflower.png"
-    },
-    {
-      "id": "cook_baked_fish",
-      "name": "Baked Fish",
-      "category": "Cooking Recipe",
-      "desc": "Baked fish on a bed of herbs.",
-      "source": "Baked fish on a bed of herbs.",
-      "notes": "Ingredients: Sunfish (1) Bream (1) Wheat Flour (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Baked_Fish.png"
-    },
-    {
-      "id": "cook_parsnip_soup",
-      "name": "Parsnip Soup",
-      "category": "Cooking Recipe",
-      "desc": "It's fresh and hearty.",
-      "source": "It's fresh and hearty.",
-      "notes": "Ingredients: Parsnip (1) Milk (1) Vinegar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Parsnip_Soup.png"
-    },
-    {
-      "id": "cook_vegetable_medley",
-      "name": "Vegetable Medley",
-      "category": "Cooking Recipe",
-      "desc": "This is very nutritious.",
-      "source": "This is very nutritious.",
-      "notes": "Ingredients: Tomato (1) Beet (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Vegetable_Medley.png"
-    },
-    {
-      "id": "cook_complete_breakfast",
-      "name": "Complete Breakfast",
-      "category": "Cooking Recipe",
-      "desc": "You'll feel ready to take on the world!",
-      "source": "You'll feel ready to take on the world!",
-      "notes": "Ingredients: Fried Egg (1) Milk (1) Hashbrowns (1) Pancakes (1) | Buffs: Farming (+2) Max Energy (+50)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Complete_Breakfast.png"
-    },
-    {
-      "id": "cook_fried_calamari",
-      "name": "Fried Calamari",
-      "category": "Cooking Recipe",
-      "desc": "It's so chewy.",
-      "source": "It's so chewy.",
-      "notes": "Ingredients: Squid (1) Wheat Flour (1) Oil (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Calamari.png"
-    },
-    {
-      "id": "cook_strange_bun",
-      "name": "Strange Bun",
-      "category": "Cooking Recipe",
-      "desc": "What's inside?",
-      "source": "What's inside?",
-      "notes": "Ingredients: Wheat Flour (1) Periwinkle (1) Void Mayonnaise (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Strange_Bun.png"
-    },
-    {
-      "id": "cook_lucky_lunch",
-      "name": "Lucky Lunch",
-      "category": "Cooking Recipe",
-      "desc": "A special little meal.",
-      "source": "A special little meal.",
-      "notes": "Ingredients: Sea Cucumber (1) Tortilla (1) Blue Jazz (1) | Buffs: Luck (+3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Lucky_Lunch.png"
-    },
-    {
-      "id": "cook_fried_mushroom",
-      "name": "Fried Mushroom",
-      "category": "Cooking Recipe",
-      "desc": "Earthy and aromatic.",
-      "source": "Earthy and aromatic.",
-      "notes": "Ingredients: Common Mushroom (1) Morel (1) Oil (1) | Buffs: Attack (+2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Mushroom.png"
-    },
-    {
-      "id": "cook_pizza",
-      "name": "Pizza",
-      "category": "Cooking Recipe",
-      "desc": "It's popular for all the right reasons.",
-      "source": "It's popular for all the right reasons.",
-      "notes": "Ingredients: Wheat Flour (1) Tomato (1) Cheese (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pizza.png"
-    },
-    {
-      "id": "cook_bean_hotpot",
-      "name": "Bean Hotpot",
-      "category": "Cooking Recipe",
-      "desc": "It sure is healthy.",
-      "source": "It sure is healthy.",
-      "notes": "Ingredients: Green Bean (2) | Buffs: Max Energy (+30) Magnetism (+32)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Bean_Hotpot.png"
-    },
-    {
-      "id": "cook_glazed_yams",
-      "name": "Glazed Yams",
-      "category": "Cooking Recipe",
-      "desc": "Sweet and satisfying... The sugar gives it a hint of caramel.",
-      "source": "Sweet and satisfying... The sugar gives it a hint of caramel.",
-      "notes": "Ingredients: Yam (1) Sugar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Glazed_Yams.png"
-    },
-    {
-      "id": "cook_carp_surprise",
-      "name": "Carp Surprise",
-      "category": "Cooking Recipe",
-      "desc": "It's bland and oily.",
-      "source": "It's bland and oily.",
-      "notes": "Ingredients: Carp (4)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Carp_Surprise.png"
-    },
-    {
-      "id": "cook_hashbrowns",
-      "name": "Hashbrowns",
-      "category": "Cooking Recipe",
-      "desc": "Crispy and golden-brown!",
-      "source": "Crispy and golden-brown!",
-      "notes": "Ingredients: Potato (1) Oil (1) | Buffs: Farming (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Hashbrowns.png"
-    },
-    {
-      "id": "cook_pancakes",
-      "name": "Pancakes",
-      "category": "Cooking Recipe",
-      "desc": "A double stack of fluffy, soft pancakes.",
-      "source": "A double stack of fluffy, soft pancakes.",
-      "notes": "Ingredients: Wheat Flour (1) Egg (1) | Buffs: Foraging (+2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pancakes.png"
-    },
-    {
-      "id": "cook_salmon_dinner",
-      "name": "Salmon Dinner",
-      "category": "Cooking Recipe",
-      "desc": "The lemon spritz makes it special.",
-      "source": "The lemon spritz makes it special.",
-      "notes": "Ingredients: Salmon (1) Amaranth (1) Kale (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon_Dinner.png"
-    },
-    {
-      "id": "cook_fish_taco",
-      "name": "Fish Taco",
-      "category": "Cooking Recipe",
-      "desc": "It smells delicious.",
-      "source": "It smells delicious.",
-      "notes": "Ingredients: Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1) | Buffs: Fishing (+2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Taco.png"
-    },
-    {
-      "id": "cook_crispy_bass",
-      "name": "Crispy Bass",
-      "category": "Cooking Recipe",
-      "desc": "Wow, the breading is perfect.",
-      "source": "Wow, the breading is perfect.",
-      "notes": "Ingredients: Largemouth Bass (1) Wheat Flour (1) Oil (1) | Buffs: Magnetism (+64)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Crispy_Bass.png"
-    },
-    {
-      "id": "cook_pepper_poppers",
-      "name": "Pepper Poppers",
-      "category": "Cooking Recipe",
-      "desc": "Spicy breaded peppers filled with cheese.",
-      "source": "Spicy breaded peppers filled with cheese.",
-      "notes": "Ingredients: Hot Pepper (1) Cheese (1) | Buffs: Farming (+2) Speed (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pepper_Poppers.png"
-    },
-    {
-      "id": "cook_bread",
-      "name": "Bread",
-      "category": "Cooking Recipe",
-      "desc": "A crusty baguette.",
-      "source": "A crusty baguette.",
-      "notes": "Ingredients: Wheat Flour (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Bread.png"
-    },
-    {
-      "id": "cook_tom_kha_soup",
-      "name": "Tom Kha Soup",
-      "category": "Cooking Recipe",
-      "desc": "These flavors are incredible!",
-      "source": "These flavors are incredible!",
-      "notes": "Ingredients: Coconut (1) Shrimp (1) Common Mushroom (1) | Buffs: Farming (+2) Max Energy (+30)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Tom_Kha_Soup.png"
-    },
-    {
-      "id": "cook_trout_soup",
-      "name": "Trout Soup",
-      "category": "Cooking Recipe",
-      "desc": "Pretty salty.",
-      "source": "Pretty salty.",
-      "notes": "Ingredients: Rainbow Trout (1) Green Algae (1) | Buffs: Fishing (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Trout_Soup.png"
-    },
-    {
-      "id": "cook_chocolate_cake",
-      "name": "Chocolate Cake",
-      "category": "Cooking Recipe",
-      "desc": "Rich and moist with a thick fudge icing.",
-      "source": "Rich and moist with a thick fudge icing.",
-      "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Chocolate_Cake.png"
-    },
-    {
-      "id": "cook_pink_cake",
-      "name": "Pink Cake",
-      "category": "Cooking Recipe",
-      "desc": "There's little heart candies on top.",
-      "source": "There's little heart candies on top.",
-      "notes": "Ingredients: Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pink_Cake.png"
-    },
-    {
-      "id": "cook_rhubarb_pie",
-      "name": "Rhubarb Pie",
-      "category": "Cooking Recipe",
-      "desc": "Mmm, tangy and sweet!",
-      "source": "Mmm, tangy and sweet!",
-      "notes": "Ingredients: Rhubarb (1) Wheat Flour (1) Sugar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rhubarb_Pie.png"
-    },
-    {
-      "id": "cook_cookie",
-      "name": "Cookie",
-      "category": "Cooking Recipe",
-      "desc": "Very chewy.",
-      "source": "Very chewy.",
-      "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Cookie.png"
-    },
-    {
-      "id": "cook_spaghetti",
-      "name": "Spaghetti",
-      "category": "Cooking Recipe",
-      "desc": "An old favorite.",
-      "source": "An old favorite.",
-      "notes": "Ingredients: Wheat Flour (1) Tomato (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Spaghetti.png"
-    },
-    {
-      "id": "cook_fried_eel",
-      "name": "Fried Eel",
-      "category": "Cooking Recipe",
-      "desc": "Greasy but flavorful.",
-      "source": "Greasy but flavorful.",
-      "notes": "Ingredients: Eel (1) Oil (1) | Buffs: Luck (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Eel.png"
-    },
-    {
-      "id": "cook_spicy_eel",
-      "name": "Spicy Eel",
-      "category": "Cooking Recipe",
-      "desc": "It's really spicy! Be careful.",
-      "source": "It's really spicy! Be careful.",
-      "notes": "Ingredients: Eel (1) Hot Pepper (1) | Buffs: Luck (+1) Speed (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Spicy_Eel.png"
-    },
-    {
-      "id": "cook_sashimi",
-      "name": "Sashimi",
-      "category": "Cooking Recipe",
-      "desc": "Raw fish sliced into thin pieces.",
-      "source": "Raw fish sliced into thin pieces.",
-      "notes": "Ingredients: Any Fish (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Sashimi.png"
-    },
-    {
-      "id": "cook_maki_roll",
-      "name": "Maki Roll",
-      "category": "Cooking Recipe",
-      "desc": "Fish and rice wrapped in seaweed.",
-      "source": "Fish and rice wrapped in seaweed.",
-      "notes": "Ingredients: Any Fish (1) Seaweed (1) Rice (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Maki_Roll.png"
-    },
-    {
-      "id": "cook_tortilla",
-      "name": "Tortilla",
-      "category": "Cooking Recipe",
-      "desc": "Can be used as a vessel for food or eaten by itself.",
-      "source": "Can be used as a vessel for food or eaten by itself.",
-      "notes": "Ingredients: Corn (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Tortilla.png"
-    },
-    {
-      "id": "cook_red_plate",
-      "name": "Red Plate",
-      "category": "Cooking Recipe",
-      "desc": "Full of antioxidants.",
-      "source": "Full of antioxidants.",
-      "notes": "Ingredients: Red Cabbage (1) Radish (1) | Buffs: Max Energy (+50)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Plate.png"
-    },
-    {
-      "id": "cook_eggplant_parmesan",
-      "name": "Eggplant Parmesan",
-      "category": "Cooking Recipe",
-      "desc": "Tangy, cheesy, and wonderful.",
-      "source": "Tangy, cheesy, and wonderful.",
-      "notes": "Ingredients: Eggplant (1) Tomato (1) | Buffs: Mining (+1) Defense (+3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Eggplant_Parmesan.png"
-    },
-    {
-      "id": "cook_rice_pudding",
-      "name": "Rice Pudding",
-      "category": "Cooking Recipe",
-      "desc": "It's creamy, sweet, and fun to eat.",
-      "source": "It's creamy, sweet, and fun to eat.",
-      "notes": "Ingredients: Milk (1) Sugar (1) Rice (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rice_Pudding.png"
-    },
-    {
-      "id": "cook_ice_cream",
-      "name": "Ice Cream",
-      "category": "Cooking Recipe",
-      "desc": "It's hard to find someone who doesn't like this.",
-      "source": "It's hard to find someone who doesn't like this.",
-      "notes": "Ingredients: Milk (1) Sugar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Cream.png"
-    },
-    {
-      "id": "cook_blueberry_tart",
-      "name": "Blueberry Tart",
-      "category": "Cooking Recipe",
-      "desc": "It's subtle and refreshing.",
-      "source": "It's subtle and refreshing.",
-      "notes": "Ingredients: Blueberry (1) Wheat Flour (1) Sugar (1) Egg (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Blueberry_Tart.png"
-    },
-    {
-      "id": "cook_autumn's_bounty",
-      "name": "Autumn's Bounty",
-      "category": "Cooking Recipe",
-      "desc": "A taste of the season.",
-      "source": "A taste of the season.",
-      "notes": "Ingredients: Yam (1) Pumpkin (1) | Buffs: Foraging (+2) Defense (+2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Autumn's_Bounty.png"
-    },
-    {
-      "id": "cook_pumpkin_soup",
-      "name": "Pumpkin Soup",
-      "category": "Cooking Recipe",
-      "desc": "A seasonal favorite.",
-      "source": "A seasonal favorite.",
-      "notes": "Ingredients: Pumpkin (1) Milk (1) | Buffs: Defense (+2) Luck (+2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Soup.png"
-    },
-    {
-      "id": "cook_super_meal",
-      "name": "Super Meal",
-      "category": "Cooking Recipe",
-      "desc": "It's a really energizing meal.",
-      "source": "It's a really energizing meal.",
-      "notes": "Ingredients: Bok Choy (1) Cranberries (1) Artichoke (1) | Buffs: Max Energy (+40) Speed (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Meal.png"
-    },
-    {
-      "id": "cook_cranberry_sauce",
-      "name": "Cranberry Sauce",
-      "category": "Cooking Recipe",
-      "desc": "A festive treat.",
-      "source": "A festive treat.",
-      "notes": "Ingredients: Cranberries (1) Sugar (1) | Buffs: Mining (+2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Sauce.png"
-    },
-    {
-      "id": "cook_stuffing",
-      "name": "Stuffing",
-      "category": "Cooking Recipe",
-      "desc": "Ahh... the smell of warm bread and sage.",
-      "source": "Ahh... the smell of warm bread and sage.",
-      "notes": "Ingredients: Bread (1) Cranberries (1) Hazelnut (1) | Buffs: Defense (+2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Stuffing.png"
-    },
-    {
-      "id": "cook_farmer's_lunch",
-      "name": "Farmer's Lunch",
-      "category": "Cooking Recipe",
-      "desc": "This'll keep you going.",
-      "source": "This'll keep you going.",
-      "notes": "Ingredients: Omelet (1) Parsnip (1) | Buffs: Farming (+3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Farmer's_Lunch.png"
-    },
-    {
-      "id": "cook_survival_burger",
-      "name": "Survival Burger",
-      "category": "Cooking Recipe",
-      "desc": "A convenient snack for the explorer.",
-      "source": "A convenient snack for the explorer.",
-      "notes": "Ingredients: Bread (1) Cave Carrot (1) Eggplant (1) | Buffs: Foraging (+3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Survival_Burger.png"
-    },
-    {
-      "id": "cook_dish_o'_the_sea",
-      "name": "Dish O' The Sea",
-      "category": "Cooking Recipe",
-      "desc": "This'll keep you warm in the cold sea air.",
-      "source": "This'll keep you warm in the cold sea air.",
-      "notes": "Ingredients: Sardine (2) Hashbrowns (1) | Buffs: Fishing (+3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Dish_O'_The_Sea.png"
-    },
-    {
-      "id": "cook_miner's_treat",
-      "name": "Miner's Treat",
-      "category": "Cooking Recipe",
-      "desc": "This should keep your energy up.",
-      "source": "This should keep your energy up.",
-      "notes": "Ingredients: Cave Carrot (2) Sugar (1) Milk (1) | Buffs: Mining (+3) Magnetism (+32)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Miner's_Treat.png"
-    },
-    {
-      "id": "cook_roots_platter",
-      "name": "Roots Platter",
-      "category": "Cooking Recipe",
-      "desc": "This'll get you digging for more.",
-      "source": "This'll get you digging for more.",
-      "notes": "Ingredients: Cave Carrot (1) Winter Root (1) | Buffs: Attack (+3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Roots_Platter.png"
-    },
-    {
-      "id": "cook_triple_shot_espresso",
-      "name": "Triple Shot Espresso",
-      "category": "Cooking Recipe",
-      "desc": "It's more potent than regular coffee!",
-      "source": "It's more potent than regular coffee!",
-      "notes": "Ingredients: Coffee (3) | Buffs: Speed (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Triple_Shot_Espresso.png"
-    },
-    {
-      "id": "cook_seafoam_pudding",
-      "name": "Seafoam Pudding",
-      "category": "Cooking Recipe",
-      "desc": "This briny pudding will really get you into the maritime mindset!",
-      "source": "This briny pudding will really get you into the maritime mindset!",
-      "notes": "Ingredients: Flounder (1) Midnight Carp (1) Squid Ink (1) | Buffs: Fishing (+4)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Seafoam_Pudding.png"
-    },
-    {
-      "id": "cook_algae_soup",
-      "name": "Algae Soup",
-      "category": "Cooking Recipe",
-      "desc": "It's a little slimy.",
-      "source": "It's a little slimy.",
-      "notes": "Ingredients: Green Algae (4)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Algae_Soup.png"
-    },
-    {
-      "id": "cook_pale_broth",
-      "name": "Pale Broth",
-      "category": "Cooking Recipe",
-      "desc": "A delicate broth with a hint of sulfur.",
-      "source": "A delicate broth with a hint of sulfur.",
-      "notes": "Ingredients: White Algae (2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pale_Broth.png"
-    },
-    {
-      "id": "cook_plum_pudding",
-      "name": "Plum Pudding",
-      "category": "Cooking Recipe",
-      "desc": "A traditional holiday treat.",
-      "source": "A traditional holiday treat.",
-      "notes": "Ingredients: Wild Plum (2) Wheat Flour (1) Sugar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Plum_Pudding.png"
-    },
-    {
-      "id": "cook_artichoke_dip",
-      "name": "Artichoke Dip",
-      "category": "Cooking Recipe",
-      "desc": "It's cool and refreshing.",
-      "source": "It's cool and refreshing.",
-      "notes": "Ingredients: Artichoke (1) Milk (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Artichoke_Dip.png"
-    },
-    {
-      "id": "cook_stir_fry",
-      "name": "Stir Fry",
-      "category": "Cooking Recipe",
-      "desc": "Julienned vegetables on a bed of rice.",
-      "source": "Julienned vegetables on a bed of rice.",
-      "notes": "Ingredients: Cave Carrot (1) Common Mushroom (1) Kale (1) Oil (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Stir_Fry.png"
-    },
-    {
-      "id": "cook_roasted_hazelnuts",
-      "name": "Roasted Hazelnuts",
-      "category": "Cooking Recipe",
-      "desc": "The roasting process creates a rich forest flavor.",
-      "source": "The roasting process creates a rich forest flavor.",
-      "notes": "Ingredients: Hazelnut (3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Roasted_Hazelnuts.png"
-    },
-    {
-      "id": "cook_pumpkin_pie",
-      "name": "Pumpkin Pie",
-      "category": "Cooking Recipe",
-      "desc": "Silky pumpkin cream in a flaky crust.",
-      "source": "Silky pumpkin cream in a flaky crust.",
-      "notes": "Ingredients: Pumpkin (1) Wheat Flour (1) Milk (1) Sugar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Pie.png"
-    },
-    {
-      "id": "cook_radish_salad",
-      "name": "Radish Salad",
-      "category": "Cooking Recipe",
-      "desc": "The radishes are so crisp!",
-      "source": "The radishes are so crisp!",
-      "notes": "Ingredients: Oil (1) Vinegar (1) Radish (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Radish_Salad.png"
-    },
-    {
-      "id": "cook_fruit_salad",
-      "name": "Fruit Salad",
-      "category": "Cooking Recipe",
-      "desc": "A delicious combination of summer fruits.",
-      "source": "A delicious combination of summer fruits.",
-      "notes": "Ingredients: Blueberry (1) Melon (1) Apricot (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Fruit_Salad.png"
-    },
-    {
-      "id": "cook_blackberry_cobbler",
-      "name": "Blackberry Cobbler",
-      "category": "Cooking Recipe",
-      "desc": "There's nothing quite like it.",
-      "source": "There's nothing quite like it.",
-      "notes": "Ingredients: Blackberry (2) Sugar (1) Wheat Flour (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Blackberry_Cobbler.png"
-    },
-    {
-      "id": "cook_cranberry_candy",
-      "name": "Cranberry Candy",
-      "category": "Cooking Recipe",
-      "desc": "It's sweet enough to mask the bitter fruit.",
-      "source": "It's sweet enough to mask the bitter fruit.",
-      "notes": "Ingredients: Cranberries (1) Apple (1) Sugar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Candy.png"
-    },
-    {
-      "id": "cook_bruschetta",
-      "name": "Bruschetta",
-      "category": "Cooking Recipe",
-      "desc": "Roasted tomatoes on a crisp white bread.",
-      "source": "Roasted tomatoes on a crisp white bread.",
-      "notes": "Ingredients: Bread (1) Oil (1) Tomato (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Bruschetta.png"
-    },
-    {
-      "id": "cook_coleslaw",
-      "name": "Coleslaw",
-      "category": "Cooking Recipe",
-      "desc": "It's light, fresh and very healthy.",
-      "source": "It's light, fresh and very healthy.",
-      "notes": "Ingredients: Red Cabbage (1) Vinegar (1) Mayonnaise (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Coleslaw.png"
-    },
-    {
-      "id": "cook_fiddlehead_risotto",
-      "name": "Fiddlehead Risotto",
-      "category": "Cooking Recipe",
-      "desc": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
-      "source": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
-      "notes": "Ingredients: Oil (1) Fiddlehead Fern (1) Garlic (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Fiddlehead_Risotto.png"
-    },
-    {
-      "id": "cook_poppyseed_muffin",
-      "name": "Poppyseed Muffin",
-      "category": "Cooking Recipe",
-      "desc": "It has a soothing effect.",
-      "source": "It has a soothing effect.",
-      "notes": "Ingredients: Poppy (1) Wheat Flour (1) Sugar (1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Poppyseed_Muffin.png"
-    },
-    {
-      "id": "cook_chowder",
-      "name": "Chowder",
-      "category": "Cooking Recipe",
-      "desc": "A perfect way to warm yourself after a cold night at sea.",
-      "source": "A perfect way to warm yourself after a cold night at sea.",
-      "notes": "Ingredients: Clam (1) Milk (1) | Buffs: Fishing (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Chowder.png"
-    },
-    {
-      "id": "cook_fish_stew",
-      "name": "Fish Stew",
-      "category": "Cooking Recipe",
-      "desc": "It smells a lot like the sea. Tastes better, though.",
-      "source": "It smells a lot like the sea. Tastes better, though.",
-      "notes": "Ingredients: Crayfish (1) Mussel (1) Periwinkle (1) Tomato (1) | Buffs: Fishing (+3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Stew.png"
-    },
-    {
-      "id": "cook_escargot",
-      "name": "Escargot",
-      "category": "Cooking Recipe",
-      "desc": "Butter-soaked snails cooked to perfection.",
-      "source": "Butter-soaked snails cooked to perfection.",
-      "notes": "Ingredients: Snail (1) Garlic (1) | Buffs: Fishing (+2)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Escargot.png"
-    },
-    {
-      "id": "cook_lobster_bisque",
-      "name": "Lobster Bisque",
-      "category": "Cooking Recipe",
-      "desc": "This delicate soup is a secret family recipe of Willy's.",
-      "source": "This delicate soup is a secret family recipe of Willy's.",
-      "notes": "Ingredients: Lobster (1) Milk (1) | Buffs: Fishing (+3) Max Energy (+50)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster_Bisque.png"
-    },
-    {
-      "id": "cook_maple_bar",
-      "name": "Maple Bar",
-      "category": "Cooking Recipe",
-      "desc": "It's a sweet doughnut topped with a rich maple glaze.",
-      "source": "It's a sweet doughnut topped with a rich maple glaze.",
-      "notes": "Ingredients: Maple Syrup (1) Sugar (1) Wheat Flour (1) | Buffs: Farming (+1) Fishing (+1) Mining (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Maple_Bar.png"
-    },
-    {
-      "id": "cook_crab_cakes",
-      "name": "Crab Cakes",
-      "category": "Cooking Recipe",
-      "desc": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
-      "source": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
-      "notes": "Ingredients: Crab (1) Wheat Flour (1) Egg (1) Oil (1) | Buffs: Speed (+1) Defense (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Crab_Cakes.png"
-    },
-    {
-      "id": "cook_shrimp_cocktail",
-      "name": "Shrimp Cocktail",
-      "category": "Cooking Recipe",
-      "desc": "A sumptuous appetizer made with freshly-caught shrimp.",
-      "source": "A sumptuous appetizer made with freshly-caught shrimp.",
-      "notes": "Ingredients: Tomato (1) Shrimp (1) Wild Horseradish (1) | Buffs: Fishing (+1) Luck (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp_Cocktail.png"
-    },
-    {
-      "id": "cook_ginger_ale",
-      "name": "Ginger Ale",
-      "category": "Cooking Recipe",
-      "desc": "A zesty soda known for its soothing effect on the stomach.",
-      "source": "A zesty soda known for its soothing effect on the stomach.",
-      "notes": "Ingredients: Ginger (3) Sugar (1) | Buffs: Luck (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Ginger_Ale.png"
-    },
-    {
-      "id": "cook_banana_pudding",
-      "name": "Banana Pudding",
-      "category": "Cooking Recipe",
-      "desc": "A creamy dessert with a wonderful tropical flavor.",
-      "source": "A creamy dessert with a wonderful tropical flavor.",
-      "notes": "Ingredients: Banana (1) Milk (1) Sugar (1) | Buffs: Mining (+1) Luck (+1) Defense (+1)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Banana_Pudding.png"
-    },
-    {
-      "id": "cook_mango_sticky_rice",
-      "name": "Mango Sticky Rice",
-      "category": "Cooking Recipe",
-      "desc": "Sweet mango and coconut transforms this rice into something very special.",
-      "source": "Sweet mango and coconut transforms this rice into something very special.",
-      "notes": "Ingredients: Mango (1) Coconut (1) Rice (1) | Buffs: Defense (+3)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Mango_Sticky_Rice.png"
-    },
-    {
-      "id": "cook_poi",
-      "name": "Poi",
-      "category": "Cooking Recipe",
-      "desc": "A traditional food with a delicate, sweet flavor when eaten fresh.",
-      "source": "A traditional food with a delicate, sweet flavor when eaten fresh.",
-      "notes": "Ingredients: Taro Root (4)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Poi.png"
-    },
-    {
-      "id": "cook_tropical_curry",
-      "name": "Tropical Curry",
-      "category": "Cooking Recipe",
-      "desc": "An exotic, fragrant curry served in a pineapple bowl.",
-      "source": "An exotic, fragrant curry served in a pineapple bowl.",
-      "notes": "Ingredients: Coconut (1) Pineapple (1) Hot Pepper (1) | Buffs: Foraging (+4)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Tropical_Curry.png"
-    },
-    {
-      "id": "cook_squid_ink_ravioli",
-      "name": "Squid Ink Ravioli",
-      "category": "Cooking Recipe",
-      "desc": "Temporarily protects from debuffs.",
-      "source": "Temporarily protects from debuffs.",
-      "notes": "Ingredients: Squid Ink (1) Wheat Flour (1) Tomato (1) | Buffs: Mining (+1) Squid Ink Ravioli Buff",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Squid_Ink_Ravioli.png"
-    },
-    {
-      "id": "cook_moss_soup",
-      "name": "Moss Soup",
-      "category": "Cooking Recipe",
-      "desc": "It's thick and slimy, but edible.",
-      "source": "It's thick and slimy, but edible.",
-      "notes": "Ingredients: Moss (20)",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Moss_Soup.png"
+        "id": "cook_fried_egg",
+        "name": "Fried Egg",
+        "category": "Cooking Recipe",
+        "desc": "Sunny-side up.",
+        "source": "Starter (Kitchen Upgrade)",
+        "ingredients": "Egg (1)",
+        "buffs": "",
+        "notes": "Ingredients: Egg (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Egg.png"
+    },
+    {
+        "id": "cook_omelet",
+        "name": "Omelet",
+        "category": "Cooking Recipe",
+        "desc": "It's super fluffy.",
+        "source": "Queen of Sauce (Spring 28, Y1) or Saloon (100g)",
+        "ingredients": "Egg (1), Milk (1)",
+        "buffs": "",
+        "notes": "Ingredients: Egg (1) Milk (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Omelet.png"
+    },
+    {
+        "id": "cook_salad",
+        "name": "Salad",
+        "category": "Cooking Recipe",
+        "desc": "A healthy garden salad.",
+        "source": "The Stardrop Saloon (Gus - 220g)",
+        "ingredients": "Leek (1), Dandelion (1), Vinegar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Leek (1) Dandelion (1) Vinegar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Salad.png"
+    },
+    {
+        "id": "cook_cheese_cauliflower",
+        "name": "Cheese Cauliflower",
+        "category": "Cooking Recipe",
+        "desc": "It smells great!",
+        "source": "Pam (Mail - 3❤️)",
+        "ingredients": "Cauliflower (1), Cheese (1)",
+        "buffs": "",
+        "notes": "Ingredients: Cauliflower (1) Cheese (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Cheese_Cauliflower.png"
+    },
+    {
+        "id": "cook_baked_fish",
+        "name": "Baked Fish",
+        "category": "Cooking Recipe",
+        "desc": "Baked fish on a bed of herbs.",
+        "source": "Queen of Sauce (Summer 7, Y1) or Saloon (100g)",
+        "ingredients": "Sunfish (1), Bream (1), Wheat Flour (1)",
+        "buffs": "",
+        "notes": "Ingredients: Sunfish (1) Bream (1) Wheat Flour (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Baked_Fish.png"
+    },
+    {
+        "id": "cook_parsnip_soup",
+        "name": "Parsnip Soup",
+        "category": "Cooking Recipe",
+        "desc": "It's fresh and hearty.",
+        "source": "Caroline (Mail - 3❤️)",
+        "ingredients": "Parsnip (1), Milk (1), Vinegar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Parsnip (1) Milk (1) Vinegar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Parsnip_Soup.png"
+    },
+    {
+        "id": "cook_vegetable_medley",
+        "name": "Vegetable Medley",
+        "category": "Cooking Recipe",
+        "desc": "This is very nutritious.",
+        "source": "Queen of Sauce (Spring 14, Y1)",
+        "ingredients": "Tomato (1), Beet (1)",
+        "buffs": "",
+        "notes": "Ingredients: Tomato (1) Beet (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Vegetable_Medley.png"
+    },
+    {
+        "id": "cook_complete_breakfast",
+        "name": "Complete Breakfast",
+        "category": "Cooking Recipe",
+        "desc": "You'll feel ready to take on the world!",
+        "source": "Queen of Sauce (Spring 21, Y2)",
+        "ingredients": "Fried Egg (1), Milk (1), Hashbrowns (1), Pancakes (1)",
+        "buffs": "Farming (+2), Max Energy (+50)",
+        "notes": "Ingredients: Fried Egg (1) Milk (1) Hashbrowns (1) Pancakes (1) | Buffs: Farming (+2) Max Energy (+50)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Complete_Breakfast.png"
+    },
+    {
+        "id": "cook_fried_calamari",
+        "name": "Fried Calamari",
+        "category": "Cooking Recipe",
+        "desc": "It's so chewy.",
+        "source": "Jodi (Mail - 3❤️)",
+        "ingredients": "Squid (1), Wheat Flour (1), Oil (1)",
+        "buffs": "",
+        "notes": "Ingredients: Squid (1) Wheat Flour (1) Oil (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Calamari.png"
+    },
+    {
+        "id": "cook_strange_bun",
+        "name": "Strange Bun",
+        "category": "Cooking Recipe",
+        "desc": "What's inside?",
+        "source": "Shane (Mail - 7❤️)",
+        "ingredients": "Wheat Flour (1), Void Mayonnaise (1), Periwinkle (1)",
+        "buffs": "",
+        "notes": "Ingredients: Wheat Flour (1) Periwinkle (1) Void Mayonnaise (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Strange_Bun.png"
+    },
+    {
+        "id": "cook_lucky_lunch",
+        "name": "Lucky Lunch",
+        "category": "Cooking Recipe",
+        "desc": "A special little meal.",
+        "source": "Queen of Sauce (Spring 28, Y2)",
+        "ingredients": "Sea Cucumber (1), Tortilla (1), Blue Jazz (1)",
+        "buffs": "Luck (+3)",
+        "notes": "Ingredients: Sea Cucumber (1) Tortilla (1) Blue Jazz (1) | Buffs: Luck (+3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Lucky_Lunch.png"
+    },
+    {
+        "id": "cook_fried_mushroom",
+        "name": "Fried Mushroom",
+        "category": "Cooking Recipe",
+        "desc": "Earthy and aromatic.",
+        "source": "Demetrius (Mail - 3❤️)",
+        "ingredients": "Common Mushroom (1), Morel (1), Oil (1)",
+        "buffs": "Attack (+2)",
+        "notes": "Ingredients: Common Mushroom (1) Morel (1) Oil (1) | Buffs: Attack (+2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Mushroom.png"
+    },
+    {
+        "id": "cook_pizza",
+        "name": "Pizza",
+        "category": "Cooking Recipe",
+        "desc": "It's popular for all the right reasons.",
+        "source": "Queen of Sauce (Spring 7, Y2) or Saloon (150g)",
+        "ingredients": "Wheat Flour (1), Tomato (1), Cheese (1)",
+        "buffs": "",
+        "notes": "Ingredients: Wheat Flour (1) Tomato (1) Cheese (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Pizza.png"
+    },
+    {
+        "id": "cook_bean_hotpot",
+        "name": "Bean Hotpot",
+        "category": "Cooking Recipe",
+        "desc": "It sure smells healthy.",
+        "source": "Clint (Mail - 7❤️)",
+        "ingredients": "Green Bean (2)",
+        "buffs": "Max Energy (+30), Magnetism (+32)",
+        "notes": "Ingredients: Green Bean (2) | Buffs: Max Energy (+30) Magnetism (+32)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Bean_Hotpot.png"
+    },
+    {
+        "id": "cook_glazed_yams",
+        "name": "Glazed Yams",
+        "category": "Cooking Recipe",
+        "desc": "Sweet and satisfying. The glaze gives it a nice shine.",
+        "source": "Queen of Sauce (Fall 21, Y1)",
+        "ingredients": "Yam (1), Sugar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Yam (1) Sugar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Glazed_Yams.png"
+    },
+    {
+        "id": "cook_carp_surprise",
+        "name": "Carp Surprise",
+        "category": "Cooking Recipe",
+        "desc": "It's bland and oily.",
+        "source": "Queen of Sauce (Summer 7, Y2)",
+        "ingredients": "Carp (4)",
+        "buffs": "",
+        "notes": "Ingredients: Carp (4)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Carp_Surprise.png"
+    },
+    {
+        "id": "cook_hashbrowns",
+        "name": "Hashbrowns",
+        "category": "Cooking Recipe",
+        "desc": "Crispy and golden-brown!",
+        "source": "Queen of Sauce (Spring 14, Y2) or Saloon (50g)",
+        "ingredients": "Potato (1), Oil (1)",
+        "buffs": "Farming (+1)",
+        "notes": "Ingredients: Potato (1) Oil (1) | Buffs: Farming (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Hashbrowns.png"
+    },
+    {
+        "id": "cook_pancakes",
+        "name": "Pancakes",
+        "category": "Cooking Recipe",
+        "desc": "A double stack of fluffy soft pancakes.",
+        "source": "Queen of Sauce (Summer 14, Y1) or Saloon (100g)",
+        "ingredients": "Wheat Flour (1), Egg (1)",
+        "buffs": "Foraging (+2)",
+        "notes": "Ingredients: Wheat Flour (1) Egg (1) | Buffs: Foraging (+2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Pancakes.png"
+    },
+    {
+        "id": "cook_salmon_dinner",
+        "name": "Salmon Dinner",
+        "category": "Cooking Recipe",
+        "desc": "The lemon spritz really brings out the flavor.",
+        "source": "Gus (Mail - 3❤️)",
+        "ingredients": "Salmon (1), Amaranth (1), Kale (1)",
+        "buffs": "",
+        "notes": "Ingredients: Salmon (1) Amaranth (1) Kale (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon_Dinner.png"
+    },
+    {
+        "id": "cook_fish_taco",
+        "name": "Fish Taco",
+        "category": "Cooking Recipe",
+        "desc": "It smells delicious.",
+        "source": "Linus (Mail - 7❤️)",
+        "ingredients": "Tuna (1), Tortilla (1), Red Cabbage (1), Mayonnaise (1)",
+        "buffs": "Fishing (+2)",
+        "notes": "Ingredients: Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1) | Buffs: Fishing (+2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Taco.png"
+    },
+    {
+        "id": "cook_crispy_bass",
+        "name": "Crispy Bass",
+        "category": "Cooking Recipe",
+        "desc": "Wow, the breading is perfect.",
+        "source": "Kent (Mail - 3❤️)",
+        "ingredients": "Largemouth Bass (1), Wheat Flour (1), Oil (1)",
+        "buffs": "Magnetism (+64)",
+        "notes": "Ingredients: Largemouth Bass (1) Wheat Flour (1) Oil (1) | Buffs: Magnetism (+64)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Crispy_Bass.png"
+    },
+    {
+        "id": "cook_pepper_poppers",
+        "name": "Pepper Poppers",
+        "category": "Cooking Recipe",
+        "desc": "Spicy breaded peppers filled with cheese.",
+        "source": "Shane (Mail - 3❤️)",
+        "ingredients": "Hot Pepper (1), Cheese (1)",
+        "buffs": "Farming (+2), Speed (+1)",
+        "notes": "Ingredients: Hot Pepper (1) Cheese (1) | Buffs: Farming (+2) Speed (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Pepper_Poppers.png"
+    },
+    {
+        "id": "cook_bread",
+        "name": "Bread",
+        "category": "Cooking Recipe",
+        "desc": "A crusty baguette.",
+        "source": "Queen of Sauce (Summer 28, Y1) or Saloon (100g)",
+        "ingredients": "Wheat Flour (1)",
+        "buffs": "",
+        "notes": "Ingredients: Wheat Flour (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Bread.png"
+    },
+    {
+        "id": "cook_tom_kha_soup",
+        "name": "Tom Kha Soup",
+        "category": "Cooking Recipe",
+        "desc": "These flavors are incredible!",
+        "source": "Sandy (Mail - 7❤️)",
+        "ingredients": "Coconut (1), Shrimp (1), Common Mushroom (1)",
+        "buffs": "Farming (+2), Max Energy (+30)",
+        "notes": "Ingredients: Coconut (1) Shrimp (1) Common Mushroom (1) | Buffs: Farming (+2) Max Energy (+30)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Tom_Kha_Soup.png"
+    },
+    {
+        "id": "cook_trout_soup",
+        "name": "Trout Soup",
+        "category": "Cooking Recipe",
+        "desc": "Pretty salty.",
+        "source": "Queen of Sauce (Fall 14, Y1)",
+        "ingredients": "Rainbow Trout (1), Green Algae (1)",
+        "buffs": "Fishing (+1)",
+        "notes": "Ingredients: Rainbow Trout (1) Green Algae (1) | Buffs: Fishing (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Trout_Soup.png"
+    },
+    {
+        "id": "cook_chocolate_cake",
+        "name": "Chocolate Cake",
+        "category": "Cooking Recipe",
+        "desc": "Rich and moist with a thick fudge icing.",
+        "source": "Queen of Sauce (Winter 14, Y1)",
+        "ingredients": "Wheat Flour (1), Sugar (1), Egg (1)",
+        "buffs": "",
+        "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Chocolate_Cake.png"
+    },
+    {
+        "id": "cook_pink_cake",
+        "name": "Pink Cake",
+        "category": "Cooking Recipe",
+        "desc": "There's little heart candies on top.",
+        "source": "Queen of Sauce (Summer 21, Y2)",
+        "ingredients": "Melon (1), Wheat Flour (1), Sugar (1), Egg (1)",
+        "buffs": "",
+        "notes": "Ingredients: Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Pink_Cake.png"
+    },
+    {
+        "id": "cook_rhubarb_pie",
+        "name": "Rhubarb Pie",
+        "category": "Cooking Recipe",
+        "desc": "Mmm, tangy and sweet!",
+        "source": "Marnie (Mail - 7❤️)",
+        "ingredients": "Rhubarb (1), Wheat Flour (1), Sugar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Rhubarb (1) Wheat Flour (1) Sugar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Rhubarb_Pie.png"
+    },
+    {
+        "id": "cook_cookie",
+        "name": "Cookie",
+        "category": "Cooking Recipe",
+        "desc": "Very chewy.",
+        "source": "Evelyn (4-Heart Cutscene)",
+        "ingredients": "Wheat Flour (1), Sugar (1), Egg (1)",
+        "buffs": "",
+        "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Cookie.png"
+    },
+    {
+        "id": "cook_spaghetti",
+        "name": "Spaghetti",
+        "category": "Cooking Recipe",
+        "desc": "An old favorite.",
+        "source": "The Stardrop Saloon (Gus - 650g)",
+        "ingredients": "Wheat Flour (1), Tomato (1)",
+        "buffs": "",
+        "notes": "Ingredients: Wheat Flour (1) Tomato (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Spaghetti.png"
+    },
+    {
+        "id": "cook_fried_eel",
+        "name": "Fried Eel",
+        "category": "Cooking Recipe",
+        "desc": "Greasy but flavorful.",
+        "source": "George (Mail - 3❤️)",
+        "ingredients": "Eel (1), Oil (1)",
+        "buffs": "Luck (+1)",
+        "notes": "Ingredients: Eel (1) Oil (1) | Buffs: Luck (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Eel.png"
+    },
+    {
+        "id": "cook_spicy_eel",
+        "name": "Spicy Eel",
+        "category": "Cooking Recipe",
+        "desc": "It's really spicy! Be careful.",
+        "source": "George (Mail - 7❤️)",
+        "ingredients": "Eel (1), Hot Pepper (1)",
+        "buffs": "Luck (+1), Speed (+1)",
+        "notes": "Ingredients: Eel (1) Hot Pepper (1) | Buffs: Luck (+1) Speed (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Spicy_Eel.png"
+    },
+    {
+        "id": "cook_sashimi",
+        "name": "Sashimi",
+        "category": "Cooking Recipe",
+        "desc": "Raw fish sliced into thin pieces.",
+        "source": "Linus (Mail - 3❤️)",
+        "ingredients": "Any Fish (1)",
+        "buffs": "",
+        "notes": "Ingredients: Any Fish (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Sashimi.png"
+    },
+    {
+        "id": "cook_maki_roll",
+        "name": "Maki Roll",
+        "category": "Cooking Recipe",
+        "desc": "Fish and rice wrapped in seaweed.",
+        "source": "Queen of Sauce (Summer 21, Y1) or Saloon (300g)",
+        "ingredients": "Any Fish (1), Seaweed (1), Rice (1)",
+        "buffs": "",
+        "notes": "Ingredients: Any Fish (1) Seaweed (1) Rice (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Maki_Roll.png"
+    },
+    {
+        "id": "cook_tortilla",
+        "name": "Tortilla",
+        "category": "Cooking Recipe",
+        "desc": "Can be used as a vessel for food or eaten by itself.",
+        "source": "Queen of Sauce (Fall 7, Y1) or Saloon (100g)",
+        "ingredients": "Corn (1)",
+        "buffs": "",
+        "notes": "Ingredients: Corn (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Tortilla.png"
+    },
+    {
+        "id": "cook_red_plate",
+        "name": "Red Plate",
+        "category": "Cooking Recipe",
+        "desc": "Full of antioxidants.",
+        "source": "Emily (Mail - 7❤️)",
+        "ingredients": "Red Cabbage (1), Radish (1)",
+        "buffs": "Max Energy (+50)",
+        "notes": "Ingredients: Red Cabbage (1) Radish (1) | Buffs: Max Energy (+50)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Plate.png"
+    },
+    {
+        "id": "cook_eggplant_parmesan",
+        "name": "Eggplant Parmesan",
+        "category": "Cooking Recipe",
+        "desc": "Tangy, cheesy, and wonderful.",
+        "source": "Lewis (Mail - 7❤️)",
+        "ingredients": "Eggplant (1), Tomato (1)",
+        "buffs": "Mining (+1), Defense (+3)",
+        "notes": "Ingredients: Eggplant (1) Tomato (1) | Buffs: Mining (+1) Defense (+3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Eggplant_Parmesan.png"
+    },
+    {
+        "id": "cook_rice_pudding",
+        "name": "Rice Pudding",
+        "category": "Cooking Recipe",
+        "desc": "It's creamy, sweet, and fun to eat.",
+        "source": "Evelyn (Mail - 7❤️)",
+        "ingredients": "Milk (1), Sugar (1), Rice (1)",
+        "buffs": "",
+        "notes": "Ingredients: Milk (1) Sugar (1) Rice (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Rice_Pudding.png"
+    },
+    {
+        "id": "cook_ice_cream",
+        "name": "Ice Cream",
+        "category": "Cooking Recipe",
+        "desc": "It's hard to find someone who doesn't like this.",
+        "source": "Jodi (Mail - 7❤️)",
+        "ingredients": "Milk (1), Sugar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Milk (1) Sugar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Cream.png"
+    },
+    {
+        "id": "cook_blueberry_tart",
+        "name": "Blueberry Tart",
+        "category": "Cooking Recipe",
+        "desc": "It's subtle and refreshing.",
+        "source": "Pierre (Mail - 3❤️)",
+        "ingredients": "Blueberry (1), Wheat Flour (1), Sugar (1), Egg (1)",
+        "buffs": "",
+        "notes": "Ingredients: Blueberry (1) Wheat Flour (1) Sugar (1) Egg (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Blueberry_Tart.png"
+    },
+    {
+        "id": "cook_autumns_bounty",
+        "name": "Autumn's Bounty",
+        "category": "Cooking Recipe",
+        "desc": "A taste of the season.",
+        "source": "Demetrius (Mail - 7❤️)",
+        "ingredients": "Yam (1), Pumpkin (1)",
+        "buffs": "Foraging (+2), Defense (+2)",
+        "notes": "Ingredients: Yam (1) Pumpkin (1) | Buffs: Foraging (+2) Defense (+2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Autumn%27s_Bounty.png"
+    },
+    {
+        "id": "cook_pumpkin_soup",
+        "name": "Pumpkin Soup",
+        "category": "Cooking Recipe",
+        "desc": "A seasonal favorite.",
+        "source": "Robin (Mail - 7❤️)",
+        "ingredients": "Pumpkin (1), Milk (1)",
+        "buffs": "Defense (+2), Luck (+2)",
+        "notes": "Ingredients: Pumpkin (1) Milk (1) | Buffs: Defense (+2) Luck (+2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Soup.png"
+    },
+    {
+        "id": "cook_super_meal",
+        "name": "Super Meal",
+        "category": "Cooking Recipe",
+        "desc": "It's a really energizing meal.",
+        "source": "Kent (Mail - 7❤️)",
+        "ingredients": "Bok Choy (1), Cranberries (1), Artichoke (1)",
+        "buffs": "Max Energy (+40), Speed (+1)",
+        "notes": "Ingredients: Bok Choy (1) Cranberries (1) Artichoke (1) | Buffs: Max Energy (+40) Speed (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Meal.png"
+    },
+    {
+        "id": "cook_cranberry_sauce",
+        "name": "Cranberry Sauce",
+        "category": "Cooking Recipe",
+        "desc": "A festive treat.",
+        "source": "Gus (Mail - 7❤️)",
+        "ingredients": "Cranberries (1), Sugar (1)",
+        "buffs": "Mining (+2)",
+        "notes": "Ingredients: Cranberries (1) Sugar (1) | Buffs: Mining (+2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Sauce.png"
+    },
+    {
+        "id": "cook_stuffing",
+        "name": "Stuffing",
+        "category": "Cooking Recipe",
+        "desc": "Ahh... the smell of warm bread and sage.",
+        "source": "Pam (Mail - 7❤️)",
+        "ingredients": "Bread (1), Cranberries (1), Hazelnut (1)",
+        "buffs": "Defense (+2)",
+        "notes": "Ingredients: Bread (1) Cranberries (1) Hazelnut (1) | Buffs: Defense (+2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Stuffing.png"
+    },
+    {
+        "id": "cook_farmers_lunch",
+        "name": "Farmer's Lunch",
+        "category": "Cooking Recipe",
+        "desc": "This'll keep you going.",
+        "source": "Farming Level 3",
+        "ingredients": "Omelet (1), Parsnip (1)",
+        "buffs": "Farming (+3)",
+        "notes": "Ingredients: Omelet (1) Parsnip (1) | Buffs: Farming (+3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Farmer%27s_Lunch.png"
+    },
+    {
+        "id": "cook_survival_burger",
+        "name": "Survival Burger",
+        "category": "Cooking Recipe",
+        "desc": "A convenient snack for the explorer.",
+        "source": "Foraging Level 2",
+        "ingredients": "Bread (1), Cave Carrot (1), Eggplant (1)",
+        "buffs": "Foraging (+3)",
+        "notes": "Ingredients: Bread (1) Cave Carrot (1) Eggplant (1) | Buffs: Foraging (+3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Survival_Burger.png"
+    },
+    {
+        "id": "cook_dish_o_the_sea",
+        "name": "Dish O' The Sea",
+        "category": "Cooking Recipe",
+        "desc": "This'll keep you warm in the cold sea air.",
+        "source": "Fishing Level 3",
+        "ingredients": "Sardine (2), Hashbrowns (1)",
+        "buffs": "Fishing (+3)",
+        "notes": "Ingredients: Sardine (2) Hashbrowns (1) | Buffs: Fishing (+3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Dish_O%27_The_Sea.png"
+    },
+    {
+        "id": "cook_miners_treat",
+        "name": "Miner's Treat",
+        "category": "Cooking Recipe",
+        "desc": "This should keep your energy up.",
+        "source": "Mining Level 3",
+        "ingredients": "Cave Carrot (2), Sugar (1), Milk (1)",
+        "buffs": "Mining (+3), Magnetism (+32)",
+        "notes": "Ingredients: Cave Carrot (2) Sugar (1) Milk (1) | Buffs: Mining (+3) Magnetism (+32)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Miner%27s_Treat.png"
+    },
+    {
+        "id": "cook_roots_platter",
+        "name": "Roots Platter",
+        "category": "Cooking Recipe",
+        "desc": "This'll get you digging for more.",
+        "source": "Combat Level 3",
+        "ingredients": "Cave Carrot (1), Winter Root (1)",
+        "buffs": "Attack (+3)",
+        "notes": "Ingredients: Cave Carrot (1) Winter Root (1) | Buffs: Attack (+3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Roots_Platter.png"
+    },
+    {
+        "id": "cook_triple_shot_espresso",
+        "name": "Triple Shot Espresso",
+        "category": "Cooking Recipe",
+        "desc": "It's more potent than regular coffee!",
+        "source": "The Stardrop Saloon (Gus - 5,000g)",
+        "ingredients": "Coffee (3)",
+        "buffs": "Speed (+1)",
+        "notes": "Ingredients: Coffee (3) | Buffs: Speed (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Triple_Shot_Espresso.png"
+    },
+    {
+        "id": "cook_seafoam_pudding",
+        "name": "Seafoam Pudding",
+        "category": "Cooking Recipe",
+        "desc": "This briny pudding will really get you into the maritime mindset!",
+        "source": "Fishing Level 9",
+        "ingredients": "Flounder (1), Midnight Carp (1), Squid Ink (1)",
+        "buffs": "Fishing (+4)",
+        "notes": "Ingredients: Flounder (1) Midnight Carp (1) Squid Ink (1) | Buffs: Fishing (+4)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Seafoam_Pudding.png"
+    },
+    {
+        "id": "cook_algae_soup",
+        "name": "Algae Soup",
+        "category": "Cooking Recipe",
+        "desc": "It's a little slimy.",
+        "source": "Clint (Mail - 3❤️)",
+        "ingredients": "Green Algae (4)",
+        "buffs": "",
+        "notes": "Ingredients: Green Algae (4)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Algae_Soup.png"
+    },
+    {
+        "id": "cook_pale_broth",
+        "name": "Pale Broth",
+        "category": "Cooking Recipe",
+        "desc": "A delicate broth with a hint of sulfur.",
+        "source": "Marnie (Mail - 3❤️)",
+        "ingredients": "White Algae (2)",
+        "buffs": "",
+        "notes": "Ingredients: White Algae (2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Pale_Broth.png"
+    },
+    {
+        "id": "cook_plum_pudding",
+        "name": "Plum Pudding",
+        "category": "Cooking Recipe",
+        "desc": "A traditional holiday treat.",
+        "source": "Queen of Sauce (Winter 7, Y1)",
+        "ingredients": "Wild Plum (2), Wheat Flour (1), Sugar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Wild Plum (2) Wheat Flour (1) Sugar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Plum_Pudding.png"
+    },
+    {
+        "id": "cook_artichoke_dip",
+        "name": "Artichoke Dip",
+        "category": "Cooking Recipe",
+        "desc": "It's cool and refreshing.",
+        "source": "Queen of Sauce (Fall 28, Y1)",
+        "ingredients": "Artichoke (1), Milk (1)",
+        "buffs": "",
+        "notes": "Ingredients: Artichoke (1) Milk (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Artichoke_Dip.png"
+    },
+    {
+        "id": "cook_stir_fry",
+        "name": "Stir Fry",
+        "category": "Cooking Recipe",
+        "desc": "Julienned vegetables on a bed of rice.",
+        "source": "Queen of Sauce (Spring 7, Y1)",
+        "ingredients": "Cave Carrot (1), Common Mushroom (1), Kale (1), Oil (1)",
+        "buffs": "",
+        "notes": "Ingredients: Cave Carrot (1) Common Mushroom (1) Kale (1) Oil (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Stir_Fry.png"
+    },
+    {
+        "id": "cook_roasted_hazelnuts",
+        "name": "Roasted Hazelnuts",
+        "category": "Cooking Recipe",
+        "desc": "The roasting process creates a rich forest flavor.",
+        "source": "Queen of Sauce (Summer 28, Y2)",
+        "ingredients": "Hazelnut (3)",
+        "buffs": "",
+        "notes": "Ingredients: Hazelnut (3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Roasted_Hazelnuts.png"
+    },
+    {
+        "id": "cook_pumpkin_pie",
+        "name": "Pumpkin Pie",
+        "category": "Cooking Recipe",
+        "desc": "Silky pumpkin cream in a flaky crust.",
+        "source": "Queen of Sauce (Winter 21, Y1)",
+        "ingredients": "Pumpkin (1), Wheat Flour (1), Milk (1), Sugar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Pumpkin (1) Wheat Flour (1) Milk (1) Sugar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Pie.png"
+    },
+    {
+        "id": "cook_radish_salad",
+        "name": "Radish Salad",
+        "category": "Cooking Recipe",
+        "desc": "The radishes are so crisp!",
+        "source": "Queen of Sauce (Spring 21, Y1)",
+        "ingredients": "Oil (1), Vinegar (1), Radish (1)",
+        "buffs": "",
+        "notes": "Ingredients: Oil (1) Vinegar (1) Radish (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Radish_Salad.png"
+    },
+    {
+        "id": "cook_fruit_salad",
+        "name": "Fruit Salad",
+        "category": "Cooking Recipe",
+        "desc": "A delicious combination of summer fruits.",
+        "source": "Queen of Sauce (Fall 7, Y2)",
+        "ingredients": "Blueberry (1), Melon (1), Apricot (1)",
+        "buffs": "",
+        "notes": "Ingredients: Blueberry (1) Melon (1) Apricot (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Fruit_Salad.png"
+    },
+    {
+        "id": "cook_blackberry_cobbler",
+        "name": "Blackberry Cobbler",
+        "category": "Cooking Recipe",
+        "desc": "There's nothing quite like it.",
+        "source": "Queen of Sauce (Fall 14, Y2)",
+        "ingredients": "Blackberry (2), Sugar (1), Wheat Flour (1)",
+        "buffs": "",
+        "notes": "Ingredients: Blackberry (2) Sugar (1) Wheat Flour (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Blackberry_Cobbler.png"
+    },
+    {
+        "id": "cook_cranberry_candy",
+        "name": "Cranberry Candy",
+        "category": "Cooking Recipe",
+        "desc": "It's sweet enough to mask the bitter fruit.",
+        "source": "Queen of Sauce (Winter 28, Y1)",
+        "ingredients": "Cranberries (1), Apple (1), Sugar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Cranberries (1) Apple (1) Sugar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Candy.png"
+    },
+    {
+        "id": "cook_bruschetta",
+        "name": "Bruschetta",
+        "category": "Cooking Recipe",
+        "desc": "Roasted tomatoes on a crisp white bread.",
+        "source": "Queen of Sauce (Winter 21, Y2)",
+        "ingredients": "Bread (1), Oil (1), Tomato (1)",
+        "buffs": "",
+        "notes": "Ingredients: Bread (1) Oil (1) Tomato (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Bruschetta.png"
+    },
+    {
+        "id": "cook_coleslaw",
+        "name": "Coleslaw",
+        "category": "Cooking Recipe",
+        "desc": "It's light, fresh and very healthy.",
+        "source": "Queen of Sauce (Spring 14, Y1)",
+        "ingredients": "Red Cabbage (1), Vinegar (1), Mayonnaise (1)",
+        "buffs": "",
+        "notes": "Ingredients: Red Cabbage (1) Vinegar (1) Mayonnaise (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Coleslaw.png"
+    },
+    {
+        "id": "cook_fiddlehead_risotto",
+        "name": "Fiddlehead Risotto",
+        "category": "Cooking Recipe",
+        "desc": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
+        "source": "Queen of Sauce (Fall 28, Y2)",
+        "ingredients": "Oil (1), Fiddlehead Fern (1), Garlic (1)",
+        "buffs": "",
+        "notes": "Ingredients: Oil (1) Fiddlehead Fern (1) Garlic (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Fiddlehead_Risotto.png"
+    },
+    {
+        "id": "cook_poppyseed_muffin",
+        "name": "Poppyseed Muffin",
+        "category": "Cooking Recipe",
+        "desc": "It has a soothing effect.",
+        "source": "Queen of Sauce (Winter 7, Y2)",
+        "ingredients": "Poppy (1), Wheat Flour (1), Sugar (1)",
+        "buffs": "",
+        "notes": "Ingredients: Poppy (1) Wheat Flour (1) Sugar (1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Poppyseed_Muffin.png"
+    },
+    {
+        "id": "cook_chowder",
+        "name": "Chowder",
+        "category": "Cooking Recipe",
+        "desc": "A perfect way to warm yourself after a cold night at sea.",
+        "source": "Willy (Mail - 3❤️)",
+        "ingredients": "Clam (1), Milk (1)",
+        "buffs": "Fishing (+1)",
+        "notes": "Ingredients: Clam (1) Milk (1) | Buffs: Fishing (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Chowder.png"
+    },
+    {
+        "id": "cook_fish_stew",
+        "name": "Fish Stew",
+        "category": "Cooking Recipe",
+        "desc": "It smells a lot like the sea. Tastes better, though.",
+        "source": "Willy (Mail - 7❤️)",
+        "ingredients": "Crayfish (1), Mussel (1), Periwinkle (1), Tomato (1)",
+        "buffs": "Fishing (+3)",
+        "notes": "Ingredients: Crayfish (1) Mussel (1) Periwinkle (1) Tomato (1) | Buffs: Fishing (+3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Stew.png"
+    },
+    {
+        "id": "cook_escargot",
+        "name": "Escargot",
+        "category": "Cooking Recipe",
+        "desc": "Butter-soaked snails cooked to perfection.",
+        "source": "Willy (Mail - 5❤️)",
+        "ingredients": "Snail (1), Garlic (1)",
+        "buffs": "Fishing (+2)",
+        "notes": "Ingredients: Snail (1) Garlic (1) | Buffs: Fishing (+2)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Escargot.png"
+    },
+    {
+        "id": "cook_lobster_bisque",
+        "name": "Lobster Bisque",
+        "category": "Cooking Recipe",
+        "desc": "This delicate soup is a secret family recipe of Willy's.",
+        "source": "Queen of Sauce (Winter 14, Y2) or Willy (Mail - 9❤️)",
+        "ingredients": "Lobster (1), Milk (1)",
+        "buffs": "Fishing (+3), Max Energy (+50)",
+        "notes": "Ingredients: Lobster (1) Milk (1) | Buffs: Fishing (+3) Max Energy (+50)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster_Bisque.png"
+    },
+    {
+        "id": "cook_maple_bar",
+        "name": "Maple Bar",
+        "category": "Cooking Recipe",
+        "desc": "It's a sweet doughnut topped with a rich maple glaze.",
+        "source": "Queen of Sauce (Summer 14, Y2)",
+        "ingredients": "Maple Syrup (1), Sugar (1), Wheat Flour (1)",
+        "buffs": "Farming (+1), Fishing (+1), Mining (+1)",
+        "notes": "Ingredients: Maple Syrup (1) Sugar (1) Wheat Flour (1) | Buffs: Farming (+1) Fishing (+1) Mining (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Maple_Bar.png"
+    },
+    {
+        "id": "cook_crab_cakes",
+        "name": "Crab Cakes",
+        "category": "Cooking Recipe",
+        "desc": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
+        "source": "Queen of Sauce (Fall 21, Y2) or Saloon (Gus event)",
+        "ingredients": "Crab (1), Wheat Flour (1), Egg (1), Oil (1)",
+        "buffs": "Speed (+1), Defense (+1)",
+        "notes": "Ingredients: Crab (1) Wheat Flour (1) Egg (1) Oil (1) | Buffs: Speed (+1) Defense (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Crab_Cakes.png"
+    },
+    {
+        "id": "cook_shrimp_cocktail",
+        "name": "Shrimp Cocktail",
+        "category": "Cooking Recipe",
+        "desc": "A sumptuous appetizer made with freshly-caught shrimp.",
+        "source": "Queen of Sauce (Winter 28, Y2)",
+        "ingredients": "Tomato (1), Shrimp (1), Wild Horseradish (1)",
+        "buffs": "Fishing (+1), Luck (+1)",
+        "notes": "Ingredients: Tomato (1) Shrimp (1) Wild Horseradish (1) | Buffs: Fishing (+1) Luck (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp_Cocktail.png"
+    },
+    {
+        "id": "cook_ginger_ale",
+        "name": "Ginger Ale",
+        "category": "Cooking Recipe",
+        "desc": "A zesty soda known for its soothing effect on the stomach.",
+        "source": "Volcano Dwarf Shop (1,000g)",
+        "ingredients": "Ginger (3), Sugar (1)",
+        "buffs": "Luck (+1)",
+        "notes": "Ingredients: Ginger (3) Sugar (1) | Buffs: Luck (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Ginger_Ale.png"
+    },
+    {
+        "id": "cook_banana_pudding",
+        "name": "Banana Pudding",
+        "category": "Cooking Recipe",
+        "desc": "A creamy dessert with a wonderful tropical flavor.",
+        "source": "Island Trader (30 Bone Fragments)",
+        "ingredients": "Banana (1), Milk (1), Sugar (1)",
+        "buffs": "Mining (+1), Luck (+1), Defense (+1)",
+        "notes": "Ingredients: Banana (1) Milk (1) Sugar (1) | Buffs: Mining (+1) Luck (+1) Defense (+1)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Banana_Pudding.png"
+    },
+    {
+        "id": "cook_mango_sticky_rice",
+        "name": "Mango Sticky Rice",
+        "category": "Cooking Recipe",
+        "desc": "Sweet mango and coconut transforms this rice into something very special.",
+        "source": "Leo (Mail - 7❤️)",
+        "ingredients": "Mango (1), Coconut (1), Rice (1)",
+        "buffs": "Defense (+3)",
+        "notes": "Ingredients: Mango (1) Coconut (1) Rice (1) | Buffs: Defense (+3)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Mango_Sticky_Rice.png"
+    },
+    {
+        "id": "cook_poi",
+        "name": "Poi",
+        "category": "Cooking Recipe",
+        "desc": "A traditional food with a delicate, sweet flavor when eaten fresh.",
+        "source": "Leo (Mail - 3❤️)",
+        "ingredients": "Taro Root (4)",
+        "buffs": "",
+        "notes": "Ingredients: Taro Root (4)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Poi.png"
+    },
+    {
+        "id": "cook_tropical_curry",
+        "name": "Tropical Curry",
+        "category": "Cooking Recipe",
+        "desc": "An exotic, fragrant curry served in a pineapple bowl.",
+        "source": "Ginger Island Resort (Gus - 2,000g)",
+        "ingredients": "Coconut (1), Pineapple (1), Hot Pepper (1)",
+        "buffs": "Foraging (+4)",
+        "notes": "Ingredients: Coconut (1) Pineapple (1) Hot Pepper (1) | Buffs: Foraging (+4)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Tropical_Curry.png"
+    },
+    {
+        "id": "cook_squid_ink_ravioli",
+        "name": "Squid Ink Ravioli",
+        "category": "Cooking Recipe",
+        "desc": "Temporarily protects from debuffs.",
+        "source": "Combat Mastery (1.6)",
+        "ingredients": "Squid Ink (1), Wheat Flour (1), Tomato (1)",
+        "buffs": "Mining (+1), Squid Ink Ravioli Buff (Buff Immunity)",
+        "notes": "Ingredients: Squid Ink (1) Wheat Flour (1) Tomato (1) | Buffs: Mining (+1) Squid Ink Ravioli Buff",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Squid_Ink_Ravioli.png"
+    },
+    {
+        "id": "cook_moss_soup",
+        "name": "Moss Soup",
+        "category": "Cooking Recipe",
+        "desc": "It's thick and slimy, but edible.",
+        "source": "Foraging Level 3 (1.6)",
+        "ingredients": "Moss (20)",
+        "buffs": "",
+        "notes": "Ingredients: Moss (20)",
+        "img": "https://stardewvalleywiki.com/Special:FilePath/Moss_Soup.png"
     }
-  ],
+],
   "fish": [
     {
       "id": "fish_pufferfish",

@@ -2169,7 +2169,10 @@ function renderTrackerGridOnly() {
       const matchLiked = item.liked && item.liked.toLowerCase().includes(q);
       const matchSchedule = item.schedule && item.schedule.toLowerCase().includes(q);
       const matchBirthday = item.birthday && item.birthday.toLowerCase().includes(q);
-      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday) {
+      const matchIngredients = item.ingredients && item.ingredients.toLowerCase().includes(q);
+      const matchBuffs = item.buffs && item.buffs.toLowerCase().includes(q);
+      const matchDesc = item.desc && item.desc.toLowerCase().includes(q);
+      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc) {
         return false;
       }
     }
@@ -2196,11 +2199,12 @@ function renderTrackerGridOnly() {
         if (currentTrackerFilter === 'lighting' && !n.includes('torch') && !n.includes('brazier') && !n.includes('lamp') && !n.includes('candle') && !n.includes('light')) return false;
         if (currentTrackerFilter === 'rings' && !n.includes('ring') && !n.includes('band') && !n.includes('totem') && !n.includes('elixir') && !n.includes('warp')) return false;
       } else if (activeTrackerSheet === 'cooking') {
-
         const n = (item.name || '').toLowerCase();
         const notes = (item.notes || '').toLowerCase();
-        if (currentTrackerFilter === 'buff' && !notes.includes('buffs:')) return false;
-        if (currentTrackerFilter === 'fish' && !notes.includes('fish') && !notes.includes('salmon') && !notes.includes('eel') && !notes.includes('trout') && !notes.includes('calamari') && !notes.includes('squid') && !notes.includes('lobster') && !notes.includes('crab') && !notes.includes('shrimp') && !notes.includes('seafoam') && !notes.includes('carp') && !notes.includes('bass') && !notes.includes('chowder') && !notes.includes('algae')) return false;
+        const ingredients = (item.ingredients || '').toLowerCase();
+        const buffs = (item.buffs || '').toLowerCase();
+        if (currentTrackerFilter === 'buff' && !buffs && !notes.includes('buffs:')) return false;
+        if (currentTrackerFilter === 'fish' && !notes.includes('fish') && !ingredients.includes('fish') && !notes.includes('salmon') && !notes.includes('eel') && !notes.includes('trout') && !notes.includes('calamari') && !notes.includes('squid') && !notes.includes('lobster') && !notes.includes('crab') && !notes.includes('shrimp') && !notes.includes('seafoam') && !notes.includes('carp') && !notes.includes('bass') && !notes.includes('chowder') && !notes.includes('algae') && !ingredients.includes('carp') && !ingredients.includes('bass') && !ingredients.includes('squid') && !ingredients.includes('lobster') && !ingredients.includes('crab') && !ingredients.includes('shrimp') && !ingredients.includes('snail') && !ingredients.includes('clam') && !ingredients.includes('flounder') && !ingredients.includes('periwinkle') && !ingredients.includes('crayfish') && !ingredients.includes('mussel')) return false;
         if (currentTrackerFilter === 'dessert' && !n.includes('cake') && !n.includes('pie') && !n.includes('cookie') && !n.includes('pudding') && !n.includes('ice cream') && !n.includes('tart') && !n.includes('candy') && !n.includes('muffin') && !n.includes('bar') && !n.includes('cobbler')) return false;
         if (currentTrackerFilter === 'soup' && !n.includes('soup') && !n.includes('stew') && !n.includes('broth') && !n.includes('chowder') && !n.includes('bisque') && !n.includes('hotpot') && !n.includes('curry')) return false;
       } else if (activeTrackerSheet === 'fish') {
@@ -2324,6 +2328,35 @@ function renderTrackerGridOnly() {
       }
       if (limitText && limitText !== 'None') {
         rowsHtml += `<tr class="t-row-limit"><td class="t-col-key"><span class="t-key-icon" style="color: #f87171;">⚠️</span> Limit</td><td class="t-col-val">${limitText}</td></tr>`;
+      }
+
+      detailsText = `<table class="tracker-info-table"><tbody>${rowsHtml}</tbody></table>`;
+      notesText = item.desc ? `<div class="tracker-card-quote">“${item.desc}”</div>` : '';
+    } else if (activeTrackerSheet === 'cooking') {
+      const hasBuffs = !!item.buffs;
+      badgeText = hasBuffs ? '⚡ Buff Dish' : '🍳 Recipe';
+      badgeColor = hasBuffs ? '#fbbf24' : '#fb923c';
+
+      const recipeSrc = item.source || 'Starter Recipe';
+      const ingredientsText = item.ingredients || item.notes || '';
+      const buffsText = item.buffs || '';
+
+      let rowsHtml = '';
+      if (recipeSrc) {
+        let srcColor = '#fef08a';
+        if (recipeSrc.includes('Queen of Sauce')) srcColor = '#fb923c';
+        else if (recipeSrc.includes('Mail')) srcColor = '#f472b6';
+        else if (recipeSrc.includes('Saloon')) srcColor = '#fbbf24';
+        else if (recipeSrc.includes('Level') || recipeSrc.includes('Mastery')) srcColor = '#4ade80';
+        else if (recipeSrc.includes('Starter')) srcColor = '#94a3b8';
+
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #fbbf24;">📜</span> Recipe</td><td class="t-col-val" style="color: ${srcColor}; font-weight: 600;">${recipeSrc}</td></tr>`;
+      }
+      if (ingredientsText) {
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #4ade80;">🥗</span> Ingredients</td><td class="t-col-val">${ingredientsText}</td></tr>`;
+      }
+      if (buffsText) {
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #38bdf8;">⚡</span> Buffs</td><td class="t-col-val" style="color: #7dd3fc; font-weight: 600;">${buffsText}</td></tr>`;
       }
 
       detailsText = `<table class="tracker-info-table"><tbody>${rowsHtml}</tbody></table>`;
