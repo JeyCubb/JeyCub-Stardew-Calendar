@@ -2465,8 +2465,20 @@ function renderTrackerGridOnly() {
       if (item.altTable && Array.isArray(item.altTable) && item.altTable.length > 0) {
         item.altTable.forEach(row => {
           const isRain = row.cond && row.cond.includes('Rain');
-          const keyColor = isRain ? '#60a5fa' : '#fbbf24';
-          const valColor = isRain ? '#bfdbfe' : '#fef08a';
+          const isIsland = row.cond && row.cond.includes('Island');
+          const isMovie = row.cond && (row.cond.includes('Movie') || row.cond.includes('Theater'));
+          let keyColor = '#fbbf24';
+          let valColor = '#fef08a';
+          if (isRain) {
+            keyColor = '#60a5fa';
+            valColor = '#bfdbfe';
+          } else if (isIsland) {
+            keyColor = '#34d399';
+            valColor = '#a7f3d0';
+          } else if (isMovie) {
+            keyColor = '#f472b6';
+            valColor = '#fbcfe8';
+          }
           altRows += `<tr><td class="t-col-key alt-cond-col" style="color: ${keyColor}; font-weight: 600;">${row.cond}</td><td class="t-col-val alt-loc-col" style="color: ${valColor};">${row.loc}</td></tr>`;
         });
       } else {
@@ -2658,8 +2670,20 @@ window.openVillagerMapModal = function(villagerId, event) {
     if (item.altTable && Array.isArray(item.altTable) && item.altTable.length > 0) {
       item.altTable.forEach(row => {
         const isRain = row.cond && row.cond.includes('Rain');
-        const keyColor = isRain ? '#60a5fa' : '#fbbf24';
-        const valColor = isRain ? '#bfdbfe' : '#fef08a';
+        const isIsland = row.cond && row.cond.includes('Island');
+        const isMovie = row.cond && (row.cond.includes('Movie') || row.cond.includes('Theater'));
+        let keyColor = '#fbbf24';
+        let valColor = '#fef08a';
+        if (isRain) {
+          keyColor = '#60a5fa';
+          valColor = '#bfdbfe';
+        } else if (isIsland) {
+          keyColor = '#34d399';
+          valColor = '#a7f3d0';
+        } else if (isMovie) {
+          keyColor = '#f472b6';
+          valColor = '#fbcfe8';
+        }
         altRows += `<tr><td class="t-col-key alt-cond-col" style="color: ${keyColor}; font-weight: 600; padding: 3.5px 7px;">${row.cond}</td><td class="t-col-val alt-loc-col" style="color: ${valColor}; padding: 3.5px 7px;">${row.loc}</td></tr>`;
       });
     } else {
