@@ -2172,7 +2172,8 @@ function renderTrackerGridOnly() {
       const matchIngredients = item.ingredients && item.ingredients.toLowerCase().includes(q);
       const matchBuffs = item.buffs && item.buffs.toLowerCase().includes(q);
       const matchDesc = item.desc && item.desc.toLowerCase().includes(q);
-      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc) {
+      const matchSchedTable = item.scheduleTable && item.scheduleTable.some(s => (s.time && s.time.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
+      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchSchedTable) {
         return false;
       }
     }
@@ -2364,7 +2365,35 @@ function renderTrackerGridOnly() {
     } else if (activeTrackerSheet === 'villagers') {
       badgeText = item.category === 'Bachelorette' ? '👰 Bachelorette' : (item.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
       dayText = `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 4px;">🎂 Birthday: ${item.birthday} | 🏠 ${item.home}</div>`;
-      detailsText = `<div style="margin-bottom: 4px; line-height: 1.3;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved}</div><div style="margin-bottom: 4px; line-height: 1.3;"><strong style="color: #4ade80;">👍 Liked:</strong> ${item.liked}</div>`;
+      
+      let infoRows = '';
+      if (item.loved) {
+        infoRows += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #f87171;">❤️</span> Loved</td><td class="t-col-val" style="color: #fca5a5; font-weight: 500;">${item.loved}</td></tr>`;
+      }
+      if (item.liked) {
+        infoRows += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #4ade80;">👍</span> Liked</td><td class="t-col-val" style="color: #bbf7d0;">${item.liked}</td></tr>`;
+      }
+
+      let schedRows = '';
+      if (item.scheduleTable && Array.isArray(item.scheduleTable)) {
+        item.scheduleTable.forEach(slot => {
+          schedRows += `<tr><td class="t-col-key sched-time-col"><span class="t-key-icon">🕒</span> ${slot.time}</td><td class="t-col-val sched-loc-col">${slot.loc}</td></tr>`;
+        });
+      } else if (item.schedule) {
+        schedRows += `<tr><td class="t-col-key sched-time-col"><span class="t-key-icon">🕒</span> Daily</td><td class="t-col-val sched-loc-col">${item.schedule}</td></tr>`;
+      }
+
+      detailsText = `
+        <table class="tracker-info-table villager-gift-table"><tbody>${infoRows}</tbody></table>
+        <table class="tracker-info-table villager-sched-table">
+          <thead>
+            <tr>
+              <th colspan="2" class="sched-table-header">📍 Daily Schedule by Hour</th>
+            </tr>
+          </thead>
+          <tbody>${schedRows}</tbody>
+        </table>
+      `;
       
       let mapPinsHtml = '';
       if (item.mapPins && Array.isArray(item.mapPins) && item.mapPins.length > 0) {
@@ -2380,13 +2409,12 @@ function renderTrackerGridOnly() {
       }
 
       notesText = `
-        <div style="line-height: 1.3; margin-bottom: 6px;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule}</div>
         <div class="villager-static-map-wrapper"
              onmouseenter="showVillagerMapHover('${item.id}', this, event)"
              onmouseleave="hideVillagerMapHover()"
              onclick="openVillagerMapModal('${item.id}', event)"
              title="Hover to preview map / Click to enlarge">
-          <div class="map-zoom-hint">🔍 Hover to Zoom</div>
+          <div class="map-zoom-hint">🔍 Hover to Zoom Map</div>
           <div class="villager-static-map-frame">
             <img src="stardew_map.png" alt="Map" class="villager-static-map-img" loading="lazy">
             ${mapPinsHtml}
@@ -2514,10 +2542,21 @@ window.openVillagerMapModal = function(villagerId, event) {
   }
 
   if (schedBox) {
+    let schedRows = '';
+    if (item.scheduleTable && Array.isArray(item.scheduleTable)) {
+      item.scheduleTable.forEach(slot => {
+        schedRows += `<tr><td class="t-col-key sched-time-col" style="padding: 3.5px 7px;"><span class="t-key-icon">🕒</span> ${slot.time}</td><td class="t-col-val sched-loc-col" style="padding: 3.5px 7px;">${slot.loc}</td></tr>`;
+      });
+    }
     schedBox.innerHTML = `
-      <div style="margin-bottom: 4px;"><strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule || ''}</div>
-      <div style="margin-bottom: 4px;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved || ''}</div>
-      <div><strong style="color: #4ade80;">👍 Liked:</strong> ${item.liked || ''}</div>
+      <div style="margin-bottom: 5px;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved || ''}</div>
+      <div style="margin-bottom: 7px;"><strong style="color: #4ade80;">👍 Liked:</strong> ${item.liked || ''}</div>
+      <table class="tracker-info-table villager-sched-table" style="margin-top: 6px;">
+        <thead>
+          <tr><th colspan="2" class="sched-table-header">📍 Daily Schedule by Hour</th></tr>
+        </thead>
+        <tbody>${schedRows || `<tr><td class="t-col-val">${item.schedule || ''}</td></tr>`}</tbody>
+      </table>
     `;
   }
 
@@ -2554,7 +2593,25 @@ window.showVillagerMapHover = function(villagerId, el, event) {
   if (avatar) avatar.src = item.img || '';
   if (nameEl) nameEl.innerText = item.name || '';
   if (subEl) subEl.innerText = `🎂 ${item.birthday || ''} | 🏠 ${item.home || ''}`;
-  if (schedEl) schedEl.innerHTML = `<strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule || ''}`;
+  
+  if (schedEl) {
+    let schedRows = '';
+    if (item.scheduleTable && Array.isArray(item.scheduleTable)) {
+      item.scheduleTable.forEach(slot => {
+        schedRows += `<tr><td class="t-col-key sched-time-col" style="padding: 2px 5px; font-size: 0.68rem;"><span class="t-key-icon">🕒</span> ${slot.time}</td><td class="t-col-val sched-loc-col" style="padding: 2px 6px; font-size: 0.7rem;">${slot.loc}</td></tr>`;
+      });
+      schedEl.innerHTML = `
+        <table class="tracker-info-table villager-sched-table" style="margin: 0; font-size: 0.69rem;">
+          <thead>
+            <tr><th colspan="2" class="sched-table-header" style="font-size: 0.7rem; padding: 2.5px 5px;">📍 Daily Routine by Hour</th></tr>
+          </thead>
+          <tbody>${schedRows}</tbody>
+        </table>
+      `;
+    } else {
+      schedEl.innerHTML = `<strong style="color: #60a5fa;">🕒 Schedule:</strong> ${item.schedule || ''}`;
+    }
+  }
 
   if (pinsContainer) {
     let pinsHtml = '';
