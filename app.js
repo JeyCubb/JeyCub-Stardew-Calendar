@@ -2031,6 +2031,7 @@ function renderTrackerSubfilters() {
       { key: 'summer', label: '☀️ Summer' },
       { key: 'fall', label: '🍂 Fall' },
       { key: 'winter', label: '❄️ Winter' },
+      { key: 'allseasons', label: '🌐 All Seasons' },
       { key: 'ocean', label: '🌊 Ocean' },
       { key: 'river', label: '🏞️ River & Lake' },
       { key: 'legendary', label: '👑 Legendary' },
@@ -2195,10 +2196,11 @@ function renderTrackerGridOnly() {
         const src = ((item.location || '') + ' ' + (item.source || '')).toLowerCase();
         const name = (item.name || '').toLowerCase();
         const legendaries = ['crimsonfish', 'angler', 'legend', 'glacierfish', 'mutant carp'];
-        if (currentTrackerFilter === 'spring' && !s.includes('spring') && !s.includes('all season')) return false;
-        if (currentTrackerFilter === 'summer' && !s.includes('summer') && !s.includes('all season')) return false;
-        if (currentTrackerFilter === 'fall' && !s.includes('fall') && !s.includes('all season')) return false;
-        if (currentTrackerFilter === 'winter' && !s.includes('winter') && !s.includes('all season')) return false;
+        if (currentTrackerFilter === 'spring' && !s.includes('spring')) return false;
+        if (currentTrackerFilter === 'summer' && !s.includes('summer')) return false;
+        if (currentTrackerFilter === 'fall' && !s.includes('fall')) return false;
+        if (currentTrackerFilter === 'winter' && !s.includes('winter')) return false;
+        if (currentTrackerFilter === 'allseasons' && !s.includes('all season')) return false;
         if (currentTrackerFilter === 'ocean' && !src.includes('ocean') && !src.includes('saltwater') && !src.includes('submarine') && !src.includes('beach')) return false;
         if (currentTrackerFilter === 'river' && !src.includes('river') && !src.includes('mountain') && !src.includes('lake') && !src.includes('forest') && !src.includes('pond') && !src.includes('freshwater') && !src.includes('waterfall')) return false;
         if (currentTrackerFilter === 'legendary' && !legendaries.includes(name) && item.category !== 'Legendary Fish') return false;
