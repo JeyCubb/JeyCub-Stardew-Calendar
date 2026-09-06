@@ -2282,29 +2282,28 @@ function renderTrackerGridOnly() {
       const diffText = item.difficulty || '';
       const limitText = item.limit || (isLegendary ? 'Legendary Fish: Can only be caught once per save file.' : '');
 
-      let html = '';
+      let rowsHtml = '';
       if (locText) {
-        html += `<div style="margin-bottom: 3px; line-height: 1.35;"><strong style="color: #60a5fa;">📍 Location:</strong> ${locText}</div>`;
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #60a5fa;">📍</span> Location</td><td class="t-col-val">${locText}</td></tr>`;
       }
-      if (timeText || weatherText) {
-        html += `<div style="margin-bottom: 3px; line-height: 1.35;">`;
-        if (timeText) html += `<strong style="color: #fbbf24;">🕒 Time:</strong> ${timeText}`;
-        if (timeText && weatherText) html += ` &nbsp;|&nbsp; `;
-        if (weatherText) html += `<strong style="color: #38bdf8;">⛅ Weather:</strong> ${weatherText}`;
-        html += `</div>`;
+      if (timeText) {
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #fbbf24;">🕒</span> Time</td><td class="t-col-val">${timeText}</td></tr>`;
+      }
+      if (weatherText) {
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #38bdf8;">⛅</span> Weather</td><td class="t-col-val">${weatherText}</td></tr>`;
       }
       if (reqText && reqText !== 'None') {
-        html += `<div style="margin-bottom: 3px; line-height: 1.35;"><strong style="color: #a78bfa;">🎯 Requirements:</strong> ${reqText}</div>`;
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #c084fc;">🎯</span> Reqs</td><td class="t-col-val">${reqText}</td></tr>`;
       }
       if (diffText) {
-        html += `<div style="margin-bottom: 3px; line-height: 1.35;"><strong style="color: #34d399;">⚡ Difficulty:</strong> ${diffText}</div>`;
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #34d399;">⚡</span> Difficulty</td><td class="t-col-val">${diffText}</td></tr>`;
       }
       if (limitText && limitText !== 'None') {
-        html += `<div style="margin-bottom: 3px; line-height: 1.35; color: #fca5a5;"><strong style="color: #ef4444;">⚠️ Limit:</strong> ${limitText}</div>`;
+        rowsHtml += `<tr class="t-row-limit"><td class="t-col-key"><span class="t-key-icon" style="color: #f87171;">⚠️</span> Limit</td><td class="t-col-val">${limitText}</td></tr>`;
       }
-      
-      detailsText = html;
-      notesText = item.desc ? `<div style="font-style: italic; opacity: 0.85; margin-top: 4px; font-size: 0.78rem;">"${item.desc}"</div>` : '';
+
+      detailsText = `<table class="tracker-info-table"><tbody>${rowsHtml}</tbody></table>`;
+      notesText = item.desc ? `<div class="tracker-card-quote">“${item.desc}”</div>` : '';
     } else if (activeTrackerSheet === 'villagers') {
       badgeText = item.category === 'Bachelorette' ? '👰 Bachelorette' : (item.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
       dayText = `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 4px;">🎂 Birthday: ${item.birthday} | 🏠 ${item.home}</div>`;

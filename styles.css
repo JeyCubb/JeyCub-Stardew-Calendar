@@ -1043,12 +1043,10 @@ header {
   margin-bottom: 0.12rem;
 }
 .tracker-card-name {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.25;
 }
 .tracker-card-source {
   font-size: 0.75rem;
@@ -1061,6 +1059,74 @@ header {
   color: #cbd5e1;
   opacity: 0.85;
   line-height: 1.3;
+}
+
+/* Tabular structured info inside tracker cards */
+.tracker-info-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 0.35rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.74rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.tracker-info-table tr td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.tracker-info-table tr:last-child td {
+  border-bottom: none;
+}
+.tracker-info-table tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.025);
+}
+.tracker-info-table .t-col-key {
+  padding: 3.5px 7px;
+  color: #cbd5e1;
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: top;
+  width: 82px;
+  min-width: 82px;
+  background: rgba(255, 255, 255, 0.04);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.71rem;
+  user-select: none;
+}
+.tracker-info-table .t-key-icon {
+  display: inline-block;
+  margin-right: 3px;
+}
+.tracker-info-table .t-col-val {
+  padding: 3.5px 8px;
+  color: #f1f5f9;
+  line-height: 1.35;
+  vertical-align: top;
+  word-break: break-word;
+}
+.tracker-info-table .t-row-limit td {
+  background: rgba(239, 68, 68, 0.12) !important;
+}
+.tracker-info-table .t-row-limit .t-col-key {
+  color: #fca5a5 !important;
+  background: rgba(239, 68, 68, 0.18) !important;
+}
+.tracker-info-table .t-row-limit .t-col-val {
+  color: #fecaca !important;
+  font-weight: 600;
+}
+
+.tracker-card-quote {
+  font-style: italic;
+  color: #94a3b8;
+  font-size: 0.72rem;
+  margin-top: 0.35rem;
+  line-height: 1.3;
+  padding: 2px 0 2px 7px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .tracker-card-cb {
@@ -1598,6 +1664,22 @@ header {
     font-size: 0.7rem !important;
   }
   .tracker-card-notes {
+    font-size: 0.68rem !important;
+  }
+  .tracker-info-table {
+    font-size: 0.69rem !important;
+  }
+  .tracker-info-table .t-col-key {
+    font-size: 0.67rem !important;
+    width: 72px !important;
+    min-width: 72px !important;
+    padding: 2.5px 5px !important;
+  }
+  .tracker-info-table .t-col-val {
+    padding: 2.5px 6px !important;
+    font-size: 0.69rem !important;
+  }
+  .tracker-card-quote {
     font-size: 0.68rem !important;
   }
 
