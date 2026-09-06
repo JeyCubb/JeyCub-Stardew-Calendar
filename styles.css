@@ -1855,6 +1855,21 @@ header {
   box-shadow: 0 2px 8px rgba(251, 191, 36, 0.45);
 }
 
+.sched-alt-header {
+  background: linear-gradient(90deg, rgba(30, 58, 138, 0.55), rgba(30, 64, 175, 0.35)) !important;
+  color: #93c5fd !important;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.45) !important;
+  letter-spacing: 0.02em;
+}
+.villager-alt-table .t-col-key {
+  width: 22%;
+  font-weight: 700;
+}
+.villager-alt-table .t-col-val {
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
 .villager-static-map-wrapper {
   margin-top: 0.55rem;
   border-radius: 8px;

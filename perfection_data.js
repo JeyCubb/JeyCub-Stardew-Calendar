@@ -6987,25 +6987,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelorette",
         "birthday": "Fall 13",
         "home": "Pierre's General Store",
-        "source": "🏠 Pierre's General Store | 🎂 Fall 13",
+        "source": "\ud83c\udfe0 Pierre's General Store | \ud83c\udf82 Fall 13",
         "loved": "Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Monster Compendium, Pufferfish, Pumpkin, Spicy Eel",
         "liked": "Quartz, Universal Likes (except Vegetables)",
         "schedule": "Morning at Pierre's; Graveyard (sunny) 9am-1pm; Mountain lake / bridge 1pm-5pm; Saloon or Pierre's store evenings.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Pierre's Store (Bedroom)"
             },
             {
-                "time": "9:00 AM – 1:00 PM",
+                "time": "9:00 AM \u2013 1:00 PM",
                 "loc": "Graveyard & River Bridge (Sunny) / Pierre's Store (Rain)"
             },
             {
-                "time": "1:00 PM – 5:00 PM",
+                "time": "1:00 PM \u2013 5:00 PM",
                 "loc": "Mountain Lake & Bridge (near Mines)"
             },
             {
-                "time": "5:00 PM – 9:00 PM",
+                "time": "5:00 PM \u2013 9:00 PM",
                 "loc": "The Stardrop Saloon (or Pierre's Store)"
             },
             {
@@ -7013,25 +7013,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Returns home to Pierre's Store"
             }
         ],
-        "notes": "❤️ Loved: Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Pufferfish, Pumpkin, Spicy Eel\n🕒 Routine: Graveyard / Mountain Lake / Pierre's Store / Saloon",
+        "notes": "\u2764\ufe0f Loved: Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Pufferfish, Pumpkin, Spicy Eel\n\ud83d\udd52 Routine: Graveyard / Mountain Lake / Pierre's Store / Saloon",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Abigail.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Pierre's Store",
+                "label": "\ud83c\udfe0 Home: Pierre's Store",
                 "x": 52.0,
                 "y": 42.5
             },
             {
-                "label": "🌲 Graveyard & River Bridge",
+                "label": "\ud83c\udf32 Graveyard & River Bridge",
                 "x": 58.5,
                 "y": 54.0
             },
             {
-                "label": "🍻 The Stardrop Saloon",
+                "label": "\ud83c\udf7b The Stardrop Saloon",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Pierre's living room / kitchen in morning; visits The Stardrop Saloon from 5:00 PM \u2013 9:00 PM.",
+        "variations": "Tue/Thu: Graveyard & Town bridge; Wed/Fri: Plays flute at Mountain Lake (near Mines); Sun: Outside Wizard's Tower."
     },
     {
         "id": "npc_emily",
@@ -7039,25 +7041,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelorette",
         "birthday": "Spring 27",
         "home": "2 Willow Lane",
-        "source": "🏠 2 Willow Lane | 🎂 Spring 27",
+        "source": "\ud83c\udfe0 2 Willow Lane | \ud83c\udf82 Spring 27",
         "loved": "Amethyst, Aquamarine, Cloth, Emerald, Jade, Parrot Egg, Ruby, Survival Burger, Topaz, Wool",
         "liked": "Daffodil, Quartz, Universal Likes (except Fish Taco/Sashimi/Maki Roll/Fried Eel)",
         "schedule": "Home living room / sewing morning until 3:30pm; Works at Stardrop Saloon 4pm to 12:30am nightly.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 12:00 PM",
+                "time": "6:00 AM \u2013 12:00 PM",
                 "loc": "2 Willow Lane (Living Room / Sewing)"
             },
             {
-                "time": "12:00 PM – 3:30 PM",
+                "time": "12:00 PM \u2013 3:30 PM",
                 "loc": "2 Willow Lane (Living Room)"
             },
             {
-                "time": "3:30 PM – 4:00 PM",
+                "time": "3:30 PM \u2013 4:00 PM",
                 "loc": "Walks to The Stardrop Saloon"
             },
             {
-                "time": "4:00 PM – 12:30 AM",
+                "time": "4:00 PM \u2013 12:30 AM",
                 "loc": "The Stardrop Saloon (Behind counter)"
             },
             {
@@ -7065,20 +7067,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Returns home to 2 Willow Lane"
             }
         ],
-        "notes": "❤️ Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Cloth, Wool, Survival Burger, Parrot Egg\n🕒 Routine: Home Living Room -> Saloon Barmaid (4pm-12am)",
+        "notes": "\u2764\ufe0f Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Cloth, Wool, Survival Burger, Parrot Egg\n\ud83d\udd52 Routine: Home Living Room -> Saloon Barmaid (4pm-12am)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Emily.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 2 Willow Lane",
+                "label": "\ud83c\udfe0 Home: 2 Willow Lane",
                 "x": 47.0,
                 "y": 60.0
             },
             {
-                "label": "🍻 Stardrop Saloon (4pm-12am)",
+                "label": "\ud83c\udf7b Stardrop Saloon (4pm-12am)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Same routine (sews in 2 Willow Lane, works at Stardrop Saloon 4:00 PM \u2013 12:30 AM).",
+        "variations": "Tuesday: Aerobics class at Pierre's Store (4pm-6pm) before Saloon; Winter 11: Annual clinic checkup (10:30am-4pm)."
     },
     {
         "id": "npc_haley",
@@ -7086,25 +7090,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelorette",
         "birthday": "Spring 14",
         "home": "2 Willow Lane",
-        "source": "🏠 2 Willow Lane | 🎂 Spring 14",
+        "source": "\ud83c\udfe0 2 Willow Lane | \ud83c\udf82 Spring 14",
         "loved": "Coconut, Fruit Salad, Pink Cake, Sunflower",
         "liked": "Daffodil, Universal Likes (Hates Prismatic Shard! Dislikes Vegetables & Cactus Fruit)",
         "schedule": "Home morning; Town fountain 11am-4:30pm; River south of Marnie's (sunny); Beach in Summer 10:30am-4pm.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 11:00 AM",
+                "time": "6:00 AM \u2013 11:00 AM",
                 "loc": "2 Willow Lane (Bedroom / Kitchen)"
             },
             {
-                "time": "11:00 AM – 4:30 PM",
+                "time": "11:00 AM \u2013 4:30 PM",
                 "loc": "Town Fountain (Sunny) / Beach (Summer 10:30am-4pm)"
             },
             {
-                "time": "4:30 PM – 8:00 PM",
+                "time": "4:30 PM \u2013 8:00 PM",
                 "loc": "2 Willow Lane (Living Room / Kitchen)"
             },
             {
-                "time": "8:00 PM – 10:00 PM",
+                "time": "8:00 PM \u2013 10:00 PM",
                 "loc": "2 Willow Lane (Bedroom)"
             },
             {
@@ -7112,20 +7116,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Goes to sleep"
             }
         ],
-        "notes": "❤️ Loved: Coconut, Fruit Salad, Pink Cake, Sunflower (Hates Prismatic Shard & Dislikes Cactus Fruit/Vegetables)\n🕒 Routine: Town Fountain / River south of Marnie's / Beach in Summer",
+        "notes": "\u2764\ufe0f Loved: Coconut, Fruit Salad, Pink Cake, Sunflower (Hates Prismatic Shard & Dislikes Cactus Fruit/Vegetables)\n\ud83d\udd52 Routine: Town Fountain / River south of Marnie's / Beach in Summer",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Haley.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 2 Willow Lane",
+                "label": "\ud83c\udfe0 Home: 2 Willow Lane",
                 "x": 47.0,
                 "y": 60.0
             },
             {
-                "label": "⛲ Town Fountain",
+                "label": "\u26f2 Town Fountain",
                 "x": 53.0,
                 "y": 46.0
             }
-        ]
+        ],
+        "rain": "Stays home at 2 Willow Lane all day (living room / bedroom).",
+        "variations": "Sunny (Spring/Fall): Photography near Marnie's river (11am-4:30pm); Summer: Beach dock / Playground fountain."
     },
     {
         "id": "npc_leah",
@@ -7133,21 +7139,21 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelorette",
         "birthday": "Winter 23",
         "home": "Leah's Cottage (Cindersap Forest)",
-        "source": "🏠 Leah's Cottage | 🎂 Winter 23",
+        "source": "\ud83c\udfe0 Leah's Cottage | \ud83c\udf82 Winter 23",
         "loved": "Goat Cheese, Poppyseed Muffin, Salad, Stir Fry, Truffle, Vegetable Medley, Wine",
         "liked": "Chanterelle, Common Mushroom, Daffodil, Dandelion, Driftwood, Hazelnut, Holly, Morel, Spring Onion, Wild Horseradish, Winter Root",
         "schedule": "Cottage sculpting morning until 11am; Cindersap Forest pond/river 12pm-4pm; Beach (Summer); Saloon 4pm-11pm nightly.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 11:00 AM",
+                "time": "6:00 AM \u2013 11:00 AM",
                 "loc": "Leah's Cottage (Sculpting inside)"
             },
             {
-                "time": "11:00 AM – 4:00 PM",
+                "time": "11:00 AM \u2013 4:00 PM",
                 "loc": "Cindersap Forest (Pond / River) / Beach (Summer)"
             },
             {
-                "time": "4:00 PM – 11:00 PM",
+                "time": "4:00 PM \u2013 11:00 PM",
                 "loc": "The Stardrop Saloon (or Leah's Cottage)"
             },
             {
@@ -7155,25 +7161,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Returns home to Leah's Cottage"
             }
         ],
-        "notes": "❤️ Loved: Goat Cheese, Salad, Stir Fry, Truffle, Vegetable Medley, Wine, Poppyseed Muffin\n🕒 Routine: Cottage -> Forest Pond/Riverbank -> Saloon",
+        "notes": "\u2764\ufe0f Loved: Goat Cheese, Salad, Stir Fry, Truffle, Vegetable Medley, Wine, Poppyseed Muffin\n\ud83d\udd52 Routine: Cottage -> Forest Pond/Riverbank -> Saloon",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Leah.png",
         "mapPins": [
             {
-                "label": "🏠 Leah's Cottage",
+                "label": "\ud83c\udfe0 Leah's Cottage",
                 "x": 37.0,
                 "y": 68.0
             },
             {
-                "label": "🌲 Cindersap Forest River",
+                "label": "\ud83c\udf32 Cindersap Forest River",
                 "x": 34.0,
                 "y": 74.0
             },
             {
-                "label": "🍻 Stardrop Saloon",
+                "label": "\ud83c\udf7b Stardrop Saloon",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Inside Cindersap Cottage sculpting or visits The Stardrop Saloon (4:00 PM \u2013 11:30 PM).",
+        "variations": "Monday: Groceries at Pierre's Store (11am-5pm); Summer: Sunbathes on Beach dock (12pm-7pm); Fri/Sat: Saloon (4pm-11:30pm)."
     },
     {
         "id": "npc_maru",
@@ -7181,25 +7189,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelorette",
         "birthday": "Summer 10",
         "home": "24 Mountain Road (Carpenter's Shop)",
-        "source": "🏠 24 Mountain Road | 🎂 Summer 10",
+        "source": "\ud83c\udfe0 24 Mountain Road | \ud83c\udf82 Summer 10",
         "loved": "Battery Pack, Cauliflower, Cheese Cauliflower, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Radioactive Bar, Rhubarb Pie, Strawberry",
         "liked": "Copper Bar, Iron Bar, Oak Resin, Pine Tar, Quartz, Radioactive Ore",
         "schedule": "Harvey's Clinic (Tue/Thu 9am-4pm); Carpenter's shop lab / telescope outside house other days 10am-4pm; Town bench.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Carpenter's Shop (Bedroom / Kitchen)"
             },
             {
-                "time": "9:00 AM – 4:00 PM",
+                "time": "9:00 AM \u2013 4:00 PM",
                 "loc": "Harvey's Clinic (Tue/Thu) / Carpenter's Lab (Other days)"
             },
             {
-                "time": "4:00 PM – 7:00 PM",
+                "time": "4:00 PM \u2013 7:00 PM",
                 "loc": "Town Bench / Community Center Park"
             },
             {
-                "time": "7:00 PM – 10:00 PM",
+                "time": "7:00 PM \u2013 10:00 PM",
                 "loc": "Carpenter's Shop (Telescope / Living Room)"
             },
             {
@@ -7207,25 +7215,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Goes to sleep in bedroom"
             }
         ],
-        "notes": "❤️ Loved: Battery Pack, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Rhubarb Pie, Strawberry\n🕒 Routine: Carpenter's Lab -> Harvey's Clinic (Tue/Thu) -> Town Bench",
+        "notes": "\u2764\ufe0f Loved: Battery Pack, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Rhubarb Pie, Strawberry\n\ud83d\udd52 Routine: Carpenter's Lab -> Harvey's Clinic (Tue/Thu) -> Town Bench",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Maru.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Carpenter's Shop",
+                "label": "\ud83c\udfe0 Home: Carpenter's Shop",
                 "x": 62.0,
                 "y": 24.0
             },
             {
-                "label": "🏥 Harvey's Clinic (Tue/Thu)",
+                "label": "\ud83c\udfe5 Harvey's Clinic (Tue/Thu)",
                 "x": 50.5,
                 "y": 43.0
             },
             {
-                "label": "🌳 Town Bench / Park",
+                "label": "\ud83c\udf33 Town Bench / Park",
                 "x": 57.0,
                 "y": 45.0
             }
-        ]
+        ],
+        "rain": "Stays inside Mountain Lab / bedroom tinkering with gadgets all day.",
+        "variations": "Tuesday & Thursday: Works as nurse at Harvey's Clinic (9am-4:50pm); Sunny: Looks through telescope or Community Center bench."
     },
     {
         "id": "npc_penny",
@@ -7233,25 +7243,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelorette",
         "birthday": "Fall 2",
         "home": "Trailer (East of Town Center)",
-        "source": "🏠 Trailer | 🎂 Fall 2",
+        "source": "\ud83c\udfe0 Trailer | \ud83c\udf82 Fall 2",
         "loved": "Diamond, Emerald, Melon, Poppy, Poppyseed Muffin, Red Plate, Roots Platter, Sandfish, Tom Kha Soup",
         "liked": "Dandelion, Leek, Universal Likes (Hates Rabbit's Foot! Dislikes Beer/Wine/Mead/Pale Ale)",
         "schedule": "Museum Library teaching Jas & Vincent (Tue/Wed/Fri 9am-2pm); Town park / graveyard bench other days; Saloon 6pm-9pm (Rain).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Trailer (East of Town Center)"
             },
             {
-                "time": "9:00 AM – 2:00 PM",
+                "time": "9:00 AM \u2013 2:00 PM",
                 "loc": "Museum / Library (Teaching Tue/Wed/Fri) / Town Park (Other days)"
             },
             {
-                "time": "2:00 PM – 6:00 PM",
+                "time": "2:00 PM \u2013 6:00 PM",
                 "loc": "Town Square / Graveyard Bench / Pierre's Store"
             },
             {
-                "time": "6:00 PM – 9:00 PM",
+                "time": "6:00 PM \u2013 9:00 PM",
                 "loc": "Trailer (or Saloon 6pm-9pm if raining)"
             },
             {
@@ -7259,25 +7269,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Trailer (Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Diamond, Emerald, Melon, Poppy, Poppyseed Muffin, Red Plate, Roots Platter, Sandfish, Tom Kha Soup\n🕒 Routine: Museum/Library Classroom (Tue/Wed/Fri) -> Town Park / Graveyard Bench",
+        "notes": "\u2764\ufe0f Loved: Diamond, Emerald, Melon, Poppy, Poppyseed Muffin, Red Plate, Roots Platter, Sandfish, Tom Kha Soup\n\ud83d\udd52 Routine: Museum/Library Classroom (Tue/Wed/Fri) -> Town Park / Graveyard Bench",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Penny.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Trailer",
+                "label": "\ud83c\udfe0 Home: Trailer",
                 "x": 59.0,
                 "y": 50.0
             },
             {
-                "label": "📚 Museum / Library (Tue/Wed/Fri)",
+                "label": "\ud83d\udcda Museum / Library (Tue/Wed/Fri)",
                 "x": 66.5,
                 "y": 66.0
             },
             {
-                "label": "🌳 Town Park & Graveyard",
+                "label": "\ud83c\udf33 Town Park & Graveyard",
                 "x": 58.0,
                 "y": 48.0
             }
-        ]
+        ],
+        "rain": "Inside Trailer doing chores or visits Museum/Library with umbrella.",
+        "variations": "Tue/Wed/Fri: Tutors Jas & Vincent at Museum (9am-2pm) then Playground; Saturday: Takes kids to Town bridge (10am-5pm)."
     },
     {
         "id": "npc_alex",
@@ -7285,25 +7297,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelor",
         "birthday": "Summer 13",
         "home": "1 River Road",
-        "source": "🏠 1 River Road | 🎂 Summer 13",
+        "source": "\ud83c\udfe0 1 River Road | \ud83c\udf82 Summer 13",
         "loved": "Complete Breakfast, Jack Be Nimble, Jack Be Thick, Salmon Dinner",
         "liked": "All Eggs (except Void Egg), Universal Likes (except Quartz/Field Snack)",
         "schedule": "Outside house / dog pen 8am-12pm; Town park / tree 12pm-4pm; Beach (Summer); Lifting weights in bedroom 4pm-8pm.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 8:00 AM",
+                "time": "6:00 AM \u2013 8:00 AM",
                 "loc": "1 River Road (Bedroom)"
             },
             {
-                "time": "8:00 AM – 12:00 PM",
+                "time": "8:00 AM \u2013 12:00 PM",
                 "loc": "Outside house / Dog pen with Dusty (Beach in Summer)"
             },
             {
-                "time": "12:00 PM – 4:00 PM",
+                "time": "12:00 PM \u2013 4:00 PM",
                 "loc": "Town Park / Large tree near Saloon"
             },
             {
-                "time": "4:00 PM – 8:00 PM",
+                "time": "4:00 PM \u2013 8:00 PM",
                 "loc": "Lifting weights in bedroom (1 River Road)"
             },
             {
@@ -7311,25 +7323,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 River Road (Bedroom / Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Complete Breakfast, Salmon Dinner, Jack Be Nimble Jack Be Thick\n🕒 Routine: Dog Pen outside 1 River Rd -> Town Park -> Bedroom Weights",
+        "notes": "\u2764\ufe0f Loved: Complete Breakfast, Salmon Dinner, Jack Be Nimble Jack Be Thick\n\ud83d\udd52 Routine: Dog Pen outside 1 River Rd -> Town Park -> Bedroom Weights",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Alex.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 1 River Road",
+                "label": "\ud83c\udfe0 Home: 1 River Road",
                 "x": 56.0,
                 "y": 43.0
             },
             {
-                "label": "🌳 Town Park / Big Tree",
+                "label": "\ud83c\udf33 Town Park / Big Tree",
                 "x": 54.0,
                 "y": 48.0
             },
             {
-                "label": "🏖️ The Beach (Summer)",
+                "label": "\ud83c\udfd6\ufe0f The Beach (Summer)",
                 "x": 54.0,
                 "y": 80.0
             }
-        ]
+        ],
+        "rain": "Stays inside 1 River Road all day (bookshelf in bedroom / lifting weights).",
+        "variations": "Summer (Sunny): Works Ice Cream Stand (12pm-4pm) or Beach sunbathing; Winter: Works out at Spa/Bathhouse (2pm-6pm)."
     },
     {
         "id": "npc_elliott",
@@ -7337,25 +7351,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelor",
         "birthday": "Fall 5",
         "home": "Elliott's Cabin (The Beach)",
-        "source": "🏠 Elliott's Cabin | 🎂 Fall 5",
+        "source": "\ud83c\udfe0 Elliott's Cabin | \ud83c\udf82 Fall 5",
         "loved": "Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup",
         "liked": "Octopus, Squid, Universal Likes (except Amaranth/Pizza/Taco)",
         "schedule": "Beach Cabin morning; Beach shore 11:30am; Bridge by museum / library 3pm-6pm; Stardrop Saloon Friday/Sunday 5pm-11pm.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 11:30 AM",
+                "time": "6:00 AM \u2013 11:30 AM",
                 "loc": "Elliott's Cabin (Writing at piano/desk)"
             },
             {
-                "time": "11:30 AM – 3:00 PM",
+                "time": "11:30 AM \u2013 3:00 PM",
                 "loc": "The Beach (Ocean shore / Pier)"
             },
             {
-                "time": "3:00 PM – 6:00 PM",
+                "time": "3:00 PM \u2013 6:00 PM",
                 "loc": "Bridge south of Museum / Library"
             },
             {
-                "time": "6:00 PM – 11:00 PM",
+                "time": "6:00 PM \u2013 11:00 PM",
                 "loc": "The Stardrop Saloon (Friday/Sunday) / Beach Cabin"
             },
             {
@@ -7363,25 +7377,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Beach Cabin (Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup\n🕒 Routine: Beach Cabin -> Beach Shore -> Museum Bridge -> Saloon (Fri/Sun)",
+        "notes": "\u2764\ufe0f Loved: Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup\n\ud83d\udd52 Routine: Beach Cabin -> Beach Shore -> Museum Bridge -> Saloon (Fri/Sun)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Elliott.png",
         "mapPins": [
             {
-                "label": "🏠 Elliott's Cabin (Beach)",
+                "label": "\ud83c\udfe0 Elliott's Cabin (Beach)",
                 "x": 62.0,
                 "y": 85.0
             },
             {
-                "label": "🌉 River Bridge (near Museum)",
+                "label": "\ud83c\udf09 River Bridge (near Museum)",
                 "x": 64.0,
                 "y": 62.0
             },
             {
-                "label": "🍻 Stardrop Saloon (Fri/Sun)",
+                "label": "\ud83c\udf7b Stardrop Saloon (Fri/Sun)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Inside Beach Cabin writing, or walks to Museum / Library (3:00 PM \u2013 6:00 PM).",
+        "variations": "Friday: Walks to The Stardrop Saloon (8pm-11:40pm); Sunday: Beach campfire & Forest river bridge."
     },
     {
         "id": "npc_harvey",
@@ -7389,25 +7405,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelor",
         "birthday": "Winter 14",
         "home": "Harvey's Medical Clinic",
-        "source": "🏠 Harvey's Medical Clinic | 🎂 Winter 14",
+        "source": "\ud83c\udfe0 Harvey's Medical Clinic | \ud83c\udf82 Winter 14",
         "loved": "Coffee, Pickles, Super Meal, Truffle Oil, Wine",
         "liked": "Blackberry, Chanterelle, Common Mushroom, Daffodil, Dandelion, Duck Egg, Duck Feather, Ginger, Hazelnut, Holly, Leek, Morel, Purple Mushroom, Quartz, Snow Yam, Spring Onion, Wild Horseradish, Winter Root",
         "schedule": "Medical Clinic 9am-3pm daily; Town park fountain / riverbank 3pm-6pm; Stardrop Saloon 6pm-10pm; Clinic apartment at night.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Clinic Apartment (Upstairs)"
             },
             {
-                "time": "9:00 AM – 3:00 PM",
+                "time": "9:00 AM \u2013 3:00 PM",
                 "loc": "Harvey's Clinic (Counter / Exam room)"
             },
             {
-                "time": "3:00 PM – 6:00 PM",
+                "time": "3:00 PM \u2013 6:00 PM",
                 "loc": "Town Park Fountain / Riverbank / Aerobics (Tue 1pm)"
             },
             {
-                "time": "6:00 PM – 10:00 PM",
+                "time": "6:00 PM \u2013 10:00 PM",
                 "loc": "The Stardrop Saloon (or Clinic apartment)"
             },
             {
@@ -7415,25 +7431,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Clinic Apartment (Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Coffee, Pickles, Super Meal, Truffle Oil, Wine\n🕒 Routine: Medical Clinic (9am-3pm) -> Park Fountain -> Saloon",
+        "notes": "\u2764\ufe0f Loved: Coffee, Pickles, Super Meal, Truffle Oil, Wine\n\ud83d\udd52 Routine: Medical Clinic (9am-3pm) -> Park Fountain -> Saloon",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Harvey.png",
         "mapPins": [
             {
-                "label": "🏠 Harvey's Clinic & Home",
+                "label": "\ud83c\udfe0 Harvey's Clinic & Home",
                 "x": 50.5,
                 "y": 43.0
             },
             {
-                "label": "⛲ Town Fountain & Gardens",
+                "label": "\u26f2 Town Fountain & Gardens",
                 "x": 53.0,
                 "y": 46.0
             },
             {
-                "label": "🍻 Stardrop Saloon",
+                "label": "\ud83c\udf7b Stardrop Saloon",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Works at Medical Clinic all day or visits The Stardrop Saloon (5:30 PM \u2013 10:00 PM).",
+        "variations": "Tuesday & Thursday: Full-day medical appointments at Clinic (8am-6pm); Fri/Sat: Museum reading or Town Park."
     },
     {
         "id": "npc_sam",
@@ -7441,25 +7459,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelor",
         "birthday": "Summer 17",
         "home": "1 Willow Lane",
-        "source": "🏠 1 Willow Lane | 🎂 Summer 17",
+        "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Summer 17",
         "loved": "Cactus Fruit, Maple Bar, Pizza, Tigerseye",
         "liked": "Eggs (except Void Egg), Joja Cola, Universal Likes (except Mayonnaise/Pickles)",
         "schedule": "Home morning; JojaMart/Museum work (Mon/Wed); Town skatepark / river 1:30pm-6pm; Saloon Friday 4pm-10pm (playing pool/band).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 10:00 AM",
+                "time": "6:00 AM \u2013 10:00 AM",
                 "loc": "1 Willow Lane (Bedroom playing guitar)"
             },
             {
-                "time": "10:00 AM – 1:30 PM",
+                "time": "10:00 AM \u2013 1:30 PM",
                 "loc": "JojaMart / Museum (Mon/Wed work) / Outside house"
             },
             {
-                "time": "1:30 PM – 6:00 PM",
+                "time": "1:30 PM \u2013 6:00 PM",
                 "loc": "Town Skatepark / Riverbank / Town Square"
             },
             {
-                "time": "6:00 PM – 10:00 PM",
+                "time": "6:00 PM \u2013 10:00 PM",
                 "loc": "The Stardrop Saloon (Friday pool/band) / 1 Willow Lane"
             },
             {
@@ -7467,30 +7485,32 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 Willow Lane (Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Cactus Fruit, Maple Bar, Pizza, Tigerseye\n🕒 Routine: 1 Willow Lane -> JojaMart/Museum (Mon/Wed) -> Town Skatepark -> Saloon (Fri)",
+        "notes": "\u2764\ufe0f Loved: Cactus Fruit, Maple Bar, Pizza, Tigerseye\n\ud83d\udd52 Routine: 1 Willow Lane -> JojaMart/Museum (Mon/Wed) -> Town Skatepark -> Saloon (Fri)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Sam.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 1 Willow Lane",
+                "label": "\ud83c\udfe0 Home: 1 Willow Lane",
                 "x": 48.0,
                 "y": 56.0
             },
             {
-                "label": "🛒 JojaMart / Museum (Mon/Wed)",
+                "label": "\ud83d\uded2 JojaMart / Museum (Mon/Wed)",
                 "x": 68.0,
                 "y": 45.0
             },
             {
-                "label": "🛹 Town Skatepark & River",
+                "label": "\ud83d\udef9 Town Skatepark & River",
                 "x": 51.0,
                 "y": 58.0
             },
             {
-                "label": "🍻 Stardrop Saloon (Fri)",
+                "label": "\ud83c\udf7b Stardrop Saloon (Fri)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Inside 1 Willow Lane (plays guitar) or Stardrop Saloon with Sebastian (3:00 PM \u2013 9:00 PM).",
+        "variations": "Weekdays: Works at JojaMart / Museum (12:50pm-4pm); Friday: Band practice & Saloon pool/arcade (3pm-9pm)."
     },
     {
         "id": "npc_sebastian",
@@ -7498,47 +7518,49 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelor",
         "birthday": "Winter 10",
         "home": "24 Mountain Road (Carpenter's Basement)",
-        "source": "🏠 24 Mountain Road | 🎂 Winter 10",
+        "source": "\ud83c\udfe0 24 Mountain Road | \ud83c\udf82 Winter 10",
         "loved": "Frog Egg, Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg",
         "liked": "Flounder, Quartz, Universal Likes (except Flowers/Omelet/Farmer's Lunch)",
         "schedule": "Basement bedroom morning until 3pm; Mountain lake / pier 3:30pm-9pm; Town river (Rain); Saloon Friday 3pm-11pm playing pool with Sam.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 3:00 PM",
+                "time": "6:00 AM \u2013 3:00 PM",
                 "loc": "Carpenter's Basement (Bedroom at computer)"
             },
             {
-                "time": "3:00 PM – 9:00 PM",
+                "time": "3:00 PM \u2013 9:00 PM",
                 "loc": "Mountain Lake Pier (Sunny) / Town River (Rain) / Saloon (Fri with Sam)"
             },
             {
-                "time": "9:00 PM – 11:00 PM",
+                "time": "9:00 PM \u2013 11:00 PM",
                 "loc": "Mountain Road (Near house & lake)"
             },
             {
-                "time": "11:00 PM – 2:00 AM",
+                "time": "11:00 PM \u2013 2:00 AM",
                 "loc": "Carpenter's Basement (Working / Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg, Frog Egg\n🕒 Routine: Carpenter's Basement (until 3pm) -> Mountain Lake Pier -> Saloon (Fri)",
+        "notes": "\u2764\ufe0f Loved: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg, Frog Egg\n\ud83d\udd52 Routine: Carpenter's Basement (until 3pm) -> Mountain Lake Pier -> Saloon (Fri)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Sebastian.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Carpenter's Basement",
+                "label": "\ud83c\udfe0 Home: Carpenter's Basement",
                 "x": 62.0,
                 "y": 24.0
             },
             {
-                "label": "🎣 Mountain Lake Pier",
+                "label": "\ud83c\udfa3 Mountain Lake Pier",
                 "x": 67.0,
                 "y": 28.0
             },
             {
-                "label": "🍻 Stardrop Saloon (Fri Pool)",
+                "label": "\ud83c\udf7b Stardrop Saloon (Fri Pool)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Walks to Beach pier/dock or Mountain Lake & Railroad tracks (all day).",
+        "variations": "Friday: Stardrop Saloon pool & arcade with Sam (3pm-9:30pm); Saturday: Sam's house band practice (11:30am-6pm)."
     },
     {
         "id": "npc_shane",
@@ -7546,21 +7568,21 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Bachelor",
         "birthday": "Spring 20",
         "home": "Marnie's Ranch",
-        "source": "🏠 Marnie's Ranch | 🎂 Spring 20",
+        "source": "\ud83c\udfe0 Marnie's Ranch | \ud83c\udf82 Spring 20",
         "loved": "Beer, Hot Pepper, Pepper Poppers, Pizza",
         "liked": "All Eggs (except Void Egg), All Fruit (except Hot Pepper), Universal Likes (except Pickles/Quartz)",
         "schedule": "JojaMart 9am-5pm (Workdays); Stardrop Saloon 5pm-11pm every single night; Marnie's Ranch weekends.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 7:10 AM",
+                "time": "6:00 AM \u2013 7:10 AM",
                 "loc": "Marnie's Ranch (Kitchen)"
             },
             {
-                "time": "7:10 AM – 5:00 PM",
+                "time": "7:10 AM \u2013 5:00 PM",
                 "loc": "JojaMart (Stocking shelves Mon-Fri) / Marnie's Ranch (Weekends)"
             },
             {
-                "time": "5:00 PM – 11:00 PM",
+                "time": "5:00 PM \u2013 11:00 PM",
                 "loc": "The Stardrop Saloon (Every single night)"
             },
             {
@@ -7568,25 +7590,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Returns home to Marnie's Ranch to sleep"
             }
         ],
-        "notes": "❤️ Loved: Beer, Hot Pepper, Pepper Poppers, Pizza\n🕒 Routine: JojaMart (9am-5pm weekdays) -> Stardrop Saloon (5pm-11pm nightly)",
+        "notes": "\u2764\ufe0f Loved: Beer, Hot Pepper, Pepper Poppers, Pizza\n\ud83d\udd52 Routine: JojaMart (9am-5pm weekdays) -> Stardrop Saloon (5pm-11pm nightly)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Shane.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Marnie's Ranch",
+                "label": "\ud83c\udfe0 Home: Marnie's Ranch",
                 "x": 39.0,
                 "y": 62.0
             },
             {
-                "label": "🛒 JojaMart (9am-5pm)",
+                "label": "\ud83d\uded2 JojaMart (9am-5pm)",
                 "x": 68.0,
                 "y": 45.0
             },
             {
-                "label": "🍻 Stardrop Saloon (5pm-11pm)",
+                "label": "\ud83c\udf7b Stardrop Saloon (5pm-11pm)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Works at JojaMart (9am-5pm) or Marnie's Ranch, then Stardrop Saloon (5:00 PM \u2013 11:00 PM).",
+        "variations": "If Joja Closed: Tends chickens at Marnie's Ranch all day; Weekends: Marnie's Ranch before evening Saloon visit."
     },
     {
         "id": "npc_caroline",
@@ -7594,25 +7618,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Winter 7",
         "home": "Pierre's General Store",
-        "source": "🏠 Pierre's General Store | 🎂 Winter 7",
+        "source": "\ud83c\udfe0 Pierre's General Store | \ud83c\udf82 Winter 7",
         "loved": "Fish Taco, Green Tea, Summer Spangle, Tropical Curry",
         "liked": "Daffodil, Tea Leaves, Universal Likes (except Amaranth/Duck Mayonnaise/Mayonnaise)",
         "schedule": "Pierre's store sunroom / kitchen morning; Town square fountain 1pm-4pm; Community Center park 4pm-7pm; Aerobics Tuesday.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Pierre's Store (Kitchen)"
             },
             {
-                "time": "9:00 AM – 1:00 PM",
+                "time": "9:00 AM \u2013 1:00 PM",
                 "loc": "Pierre's Sunroom (Tea bush) / Aerobics (Tue 1pm-6pm)"
             },
             {
-                "time": "1:00 PM – 4:00 PM",
+                "time": "1:00 PM \u2013 4:00 PM",
                 "loc": "Town Square Fountain / Community Center Park"
             },
             {
-                "time": "4:00 PM – 9:00 PM",
+                "time": "4:00 PM \u2013 9:00 PM",
                 "loc": "Pierre's Store (Living Room)"
             },
             {
@@ -7620,20 +7644,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Pierre's Store (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Fish Taco, Green Tea, Summer Spangle, Tropical Curry\n🕒 Routine: Pierre's Sunroom -> Town Fountain / Community Center Park",
+        "notes": "\u2764\ufe0f Loved: Fish Taco, Green Tea, Summer Spangle, Tropical Curry\n\ud83d\udd52 Routine: Pierre's Sunroom -> Town Fountain / Community Center Park",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Caroline.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Pierre's Store",
+                "label": "\ud83c\udfe0 Home: Pierre's Store",
                 "x": 52.0,
                 "y": 42.5
             },
             {
-                "label": "⛲ Town Fountain & Gardens",
+                "label": "\u26f2 Town Fountain & Gardens",
                 "x": 53.0,
                 "y": 46.0
             }
-        ]
+        ],
+        "rain": "Pierre's Store kitchen / living room doing chores all day.",
+        "variations": "Tuesday: Aerobics class in Pierre's store (1pm-4pm); Sunny: Sunroom in back of Pierre's or Community Center tree."
     },
     {
         "id": "npc_clint",
@@ -7641,25 +7667,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Winter 26",
         "home": "Blacksmith Shop",
-        "source": "🏠 Blacksmith Shop | 🎂 Winter 26",
+        "source": "\ud83c\udfe0 Blacksmith Shop | \ud83c\udf82 Winter 26",
         "loved": "Amethyst, Aquamarine, Artichoke Dip, Emerald, Fiddlehead Risotto, Gold Bar, Iridium Bar, Jade, Omnigeode, Ruby, Topaz",
         "liked": "Copper Bar, Iron Bar, Universal Likes (except Flowers)",
         "schedule": "Blacksmith counter 9am-4pm daily; Stardrop Saloon 7pm-12am nightly; Harvey's Clinic (Friday 16th).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Blacksmith Shop (Bedroom)"
             },
             {
-                "time": "9:00 AM – 4:00 PM",
+                "time": "9:00 AM \u2013 4:00 PM",
                 "loc": "Blacksmith Shop Counter (Open for service)"
             },
             {
-                "time": "4:00 PM – 7:00 PM",
+                "time": "4:00 PM \u2013 7:00 PM",
                 "loc": "Blacksmith Shop (Furnaces / Anvil)"
             },
             {
-                "time": "7:00 PM – 12:00 AM",
+                "time": "7:00 PM \u2013 12:00 AM",
                 "loc": "The Stardrop Saloon (Bottom-right table)"
             },
             {
@@ -7667,20 +7693,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Returns to Blacksmith Shop"
             }
         ],
-        "notes": "❤️ Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Gold/Iridium Bar, Omni Geode, Artichoke Dip, Fiddlehead Risotto\n🕒 Routine: Blacksmith Shop (9am-4pm) -> Saloon (7pm-12am nightly)",
+        "notes": "\u2764\ufe0f Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Gold/Iridium Bar, Omni Geode, Artichoke Dip, Fiddlehead Risotto\n\ud83d\udd52 Routine: Blacksmith Shop (9am-4pm) -> Saloon (7pm-12am nightly)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Clint.png",
         "mapPins": [
             {
-                "label": "🏠 Blacksmith Shop (9am-4pm)",
+                "label": "\ud83c\udfe0 Blacksmith Shop (9am-4pm)",
                 "x": 67.0,
                 "y": 55.0
             },
             {
-                "label": "🍻 Stardrop Saloon (7pm-12am)",
+                "label": "\ud83c\udf7b Stardrop Saloon (7pm-12am)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Works Blacksmith shop (9:00 AM \u2013 4:00 PM) then Stardrop Saloon (5:00 PM \u2013 12:00 AM).",
+        "variations": "Friday (CC Done): Blacksmith closed, sits in Community Center Boiler Room; Winter 16: Clinic checkup (8:30am-4pm)."
     },
     {
         "id": "npc_demetrius",
@@ -7688,25 +7716,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Summer 19",
         "home": "24 Mountain Road (Carpenter's Shop)",
-        "source": "🏠 24 Mountain Road | 🎂 Summer 19",
+        "source": "\ud83c\udfe0 24 Mountain Road | \ud83c\udf82 Summer 19",
         "loved": "Bean Hotpot, Ice Cream, Rice Pudding, Strawberry",
         "liked": "All Eggs (except Void Egg), All Fruit (except Strawberry), Purple Mushroom, Universal Likes",
         "schedule": "Carpenter's shop lab morning until 2pm; Mountain lake / cliff 2pm-7pm; Saloon Friday 6pm-10pm dancing with Robin.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Carpenter's Shop (Living room / Kitchen)"
             },
             {
-                "time": "9:00 AM – 2:00 PM",
+                "time": "9:00 AM \u2013 2:00 PM",
                 "loc": "Carpenter's Lab (Microscope / Research)"
             },
             {
-                "time": "2:00 PM – 7:00 PM",
+                "time": "2:00 PM \u2013 7:00 PM",
                 "loc": "Mountain Lake & Cliff (Taking notes)"
             },
             {
-                "time": "7:00 PM – 10:00 PM",
+                "time": "7:00 PM \u2013 10:00 PM",
                 "loc": "Carpenter's Shop (or Saloon Fri 6pm-10pm dancing with Robin)"
             },
             {
@@ -7714,25 +7742,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Carpenter's Shop (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Bean Hotpot, Ice Cream, Rice Pudding, Strawberry\n🕒 Routine: Carpenter's Lab -> Mountain Lake Cliff -> Saloon (Fri dancing)",
+        "notes": "\u2764\ufe0f Loved: Bean Hotpot, Ice Cream, Rice Pudding, Strawberry\n\ud83d\udd52 Routine: Carpenter's Lab -> Mountain Lake Cliff -> Saloon (Fri dancing)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Demetrius.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Carpenter's Shop",
+                "label": "\ud83c\udfe0 Home: Carpenter's Shop",
                 "x": 62.0,
                 "y": 24.0
             },
             {
-                "label": "🔬 Mountain Lake & Cliff",
+                "label": "\ud83d\udd2c Mountain Lake & Cliff",
                 "x": 68.0,
                 "y": 26.0
             },
             {
-                "label": "🍻 Stardrop Saloon (Fri Dance)",
+                "label": "\ud83c\udf7b Stardrop Saloon (Fri Dance)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Mountain Lab studying specimens all day.",
+        "variations": "Friday: Dances with Robin at The Stardrop Saloon (6pm-9pm); Summer: Observes fountain near Railroad or Mountain Lake."
     },
     {
         "id": "npc_dwarf",
@@ -7740,29 +7770,31 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Summer 22",
         "home": "The Mines Entrance",
-        "source": "🏠 The Mines Entrance | 🎂 Summer 22",
+        "source": "\ud83c\udfe0 The Mines Entrance | \ud83c\udf82 Summer 22",
         "loved": "Amethyst, Aquamarine, Emerald, Jade, Lava Eel, Lemon Stone, Omni Geode, Ruby, Topaz",
         "liked": "Cave Carrot, Quartz, Universal Likes",
         "schedule": "Always at the entrance of the Mines (eastern cave past the breakable rock, 24/7).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 12:00 AM",
+                "time": "6:00 AM \u2013 12:00 AM",
                 "loc": "The Mines Entrance (Eastern cave, open 24/7)"
             },
             {
-                "time": "12:00 AM – 6:00 AM",
+                "time": "12:00 AM \u2013 6:00 AM",
                 "loc": "The Mines Entrance (Always available)"
             }
         ],
-        "notes": "❤️ Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Omni Geode, Lemon Stone, Lava Eel\n🕒 Routine: Eastern cave in the Mines entrance (24/7)",
+        "notes": "\u2764\ufe0f Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Omni Geode, Lemon Stone, Lava Eel\n\ud83d\udd52 Routine: Eastern cave in the Mines entrance (24/7)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Dwarf.png",
         "mapPins": [
             {
-                "label": "⛏️ Mines Entrance Cave",
+                "label": "\u26cf\ufe0f Mines Entrance Cave",
                 "x": 67.5,
                 "y": 18.0
             }
-        ]
+        ],
+        "rain": "Eastern Mines Entrance (24/7, never leaves).",
+        "variations": "Always inside the Eastern Mines entrance behind the breakable stone wall."
     },
     {
         "id": "npc_evelyn",
@@ -7770,21 +7802,21 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Winter 2",
         "home": "1 River Road",
-        "source": "🏠 1 River Road | 🎂 Winter 2",
+        "source": "\ud83c\udfe0 1 River Road | \ud83c\udf82 Winter 2",
         "loved": "Beet, Chocolate Cake, Diamond, Fairy Rose, Raisins, Stuffing, Tulip",
         "liked": "All Milk, Daffodil, Universal Likes (except All Fish/Garlic/Fried Eel/Spicy Eel)",
         "schedule": "Home kitchen/living room 8am-1pm; Town square gardens / flowerbeds 1pm-4:30pm (sunny days).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 1:00 PM",
+                "time": "6:00 AM \u2013 1:00 PM",
                 "loc": "1 River Road (Kitchen / Living Room)"
             },
             {
-                "time": "1:00 PM – 4:30 PM",
+                "time": "1:00 PM \u2013 4:30 PM",
                 "loc": "Town Square Gardens / Flowerbeds (Sunny days)"
             },
             {
-                "time": "4:30 PM – 9:00 PM",
+                "time": "4:30 PM \u2013 9:00 PM",
                 "loc": "1 River Road (Dining room / TV with George)"
             },
             {
@@ -7792,20 +7824,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 River Road (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Beet, Chocolate Cake, Diamond, Fairy Rose, Raisins, Stuffing, Tulip\n🕒 Routine: 1 River Road -> Town Flowerbeds & Gardens (1pm-4:30pm)",
+        "notes": "\u2764\ufe0f Loved: Beet, Chocolate Cake, Diamond, Fairy Rose, Raisins, Stuffing, Tulip\n\ud83d\udd52 Routine: 1 River Road -> Town Flowerbeds & Gardens (1pm-4:30pm)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Evelyn.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 1 River Road",
+                "label": "\ud83c\udfe0 Home: 1 River Road",
                 "x": 56.0,
                 "y": 43.0
             },
             {
-                "label": "🌷 Town Flowerbeds & Gardens",
+                "label": "\ud83c\udf37 Town Flowerbeds & Gardens",
                 "x": 54.0,
                 "y": 47.0
             }
-        ]
+        ],
+        "rain": "Inside 1 River Road (kitchen / living room baking cookies) all day.",
+        "variations": "Sunny: Tends town flower gardens near Saloon & Community Center (12pm-4:30pm); Tue/Thu: Visits Clinic or stays home."
     },
     {
         "id": "npc_george",
@@ -7813,21 +7847,21 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Fall 24",
         "home": "1 River Road",
-        "source": "🏠 1 River Road | 🎂 Fall 24",
+        "source": "\ud83c\udfe0 1 River Road | \ud83c\udf82 Fall 24",
         "loved": "Fried Mushroom, Leek",
         "liked": "Daffodil, Universal Likes (except Flowers)",
         "schedule": "Watching TV in living room 8am-12pm; Outside near town tree 12pm-3pm (sunny days); Clinic 23rd of each season.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 12:00 PM",
+                "time": "6:00 AM \u2013 12:00 PM",
                 "loc": "1 River Road (Watching TV in Living Room)"
             },
             {
-                "time": "12:00 PM – 3:00 PM",
+                "time": "12:00 PM \u2013 3:00 PM",
                 "loc": "Outside 1 River Road under tree (Sunny days / Clinic 23rd)"
             },
             {
-                "time": "3:00 PM – 8:00 PM",
+                "time": "3:00 PM \u2013 8:00 PM",
                 "loc": "1 River Road (Watching TV in Living Room)"
             },
             {
@@ -7835,20 +7869,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 River Road (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Fried Mushroom, Leek\n🕒 Routine: 1 River Road (Watching TV) -> Outside near town tree (12pm-3pm)",
+        "notes": "\u2764\ufe0f Loved: Fried Mushroom, Leek\n\ud83d\udd52 Routine: 1 River Road (Watching TV) -> Outside near town tree (12pm-3pm)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/George.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 1 River Road",
+                "label": "\ud83c\udfe0 Home: 1 River Road",
                 "x": 56.0,
                 "y": 43.0
             },
             {
-                "label": "🌳 Tree outside 1 River Rd",
+                "label": "\ud83c\udf33 Tree outside 1 River Rd",
                 "x": 55.5,
                 "y": 45.5
             }
-        ]
+        ],
+        "rain": "Inside 1 River Road watching TV in living room all day.",
+        "variations": "Sunny: Outside 1 River Road (12pm-3pm) or near Community Center; Sunday: Yoba shrine at Pierre's Store (8am-2pm)."
     },
     {
         "id": "npc_gus",
@@ -7856,17 +7892,17 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Summer 8",
         "home": "The Stardrop Saloon",
-        "source": "🏠 The Stardrop Saloon | 🎂 Summer 8",
+        "source": "\ud83c\udfe0 The Stardrop Saloon | \ud83c\udf82 Summer 8",
         "loved": "Diamond, Escargot, Fish Taco, Orange, Tropical Curry",
         "liked": "Daffodil, Universal Likes (except Coleslaw)",
         "schedule": "Inside Saloon kitchen morning; Behind Saloon bar counter 12pm to 12am daily; Island Resort (certain days).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 12:00 PM",
+                "time": "6:00 AM \u2013 12:00 PM",
                 "loc": "The Stardrop Saloon (Kitchen & Pantry)"
             },
             {
-                "time": "12:00 PM – 12:00 AM",
+                "time": "12:00 PM \u2013 12:00 AM",
                 "loc": "The Stardrop Saloon (Behind the bar counter)"
             },
             {
@@ -7874,15 +7910,17 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "The Stardrop Saloon (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Diamond, Escargot, Fish Taco, Orange, Tropical Curry\n🕒 Routine: The Stardrop Saloon bar counter (12pm-12am daily)",
+        "notes": "\u2764\ufe0f Loved: Diamond, Escargot, Fish Taco, Orange, Tropical Curry\n\ud83d\udd52 Routine: The Stardrop Saloon bar counter (12pm-12am daily)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Gus.png",
         "mapPins": [
             {
-                "label": "🍻 Stardrop Saloon (12pm-12am)",
+                "label": "\ud83c\udf7b Stardrop Saloon (12pm-12am)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "The Stardrop Saloon (12:00 PM \u2013 12:00 AM).",
+        "variations": "Morning: Buys groceries at Pierre's Store (8:30am-10:30am); Sunny Days: May occasionally visit Ginger Island Resort bar."
     },
     {
         "id": "npc_jas",
@@ -7890,25 +7928,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Summer 4",
         "home": "Marnie's Ranch",
-        "source": "🏠 Marnie's Ranch | 🎂 Summer 4",
+        "source": "\ud83c\udfe0 Marnie's Ranch | \ud83c\udf82 Summer 4",
         "loved": "Fairy Box, Fairy Rose, Pink Cake, Plum Pudding",
         "liked": "Coconut, Daffodil, Universal Likes (except Artisan Goods/Vegetables)",
         "schedule": "Forest jump-rope tree 9am-12pm; Museum library classroom with Penny (Tue/Wed/Fri 9am-2pm); Town playground.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Marnie's Ranch (Bedroom)"
             },
             {
-                "time": "9:00 AM – 2:00 PM",
+                "time": "9:00 AM \u2013 2:00 PM",
                 "loc": "Museum Library (Class with Penny Tue/Wed/Fri) / Forest Tree (Mon/Thu/Sun)"
             },
             {
-                "time": "2:00 PM – 6:00 PM",
+                "time": "2:00 PM \u2013 6:00 PM",
                 "loc": "Forest Jump-rope Tree / Town Playground"
             },
             {
-                "time": "6:00 PM – 9:00 PM",
+                "time": "6:00 PM \u2013 9:00 PM",
                 "loc": "Marnie's Ranch (Living Room)"
             },
             {
@@ -7916,25 +7954,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Marnie's Ranch (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Fairy Rose, Pink Cake, Plum Pudding, Fairy Box\n🕒 Routine: Forest jump-rope tree -> Library class with Penny (Tue/Wed/Fri) -> Town Playground",
+        "notes": "\u2764\ufe0f Loved: Fairy Rose, Pink Cake, Plum Pudding, Fairy Box\n\ud83d\udd52 Routine: Forest jump-rope tree -> Library class with Penny (Tue/Wed/Fri) -> Town Playground",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Jas.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Marnie's Ranch",
+                "label": "\ud83c\udfe0 Home: Marnie's Ranch",
                 "x": 39.0,
                 "y": 62.0
             },
             {
-                "label": "📚 Museum / Library (Tue/Wed/Fri)",
+                "label": "\ud83d\udcda Museum / Library (Tue/Wed/Fri)",
                 "x": 66.5,
                 "y": 66.0
             },
             {
-                "label": "🌳 Forest Tree / Jump-rope",
+                "label": "\ud83c\udf33 Forest Tree / Jump-rope",
                 "x": 36.0,
                 "y": 67.0
             }
-        ]
+        ],
+        "rain": "Marnie's Ranch bedroom / living room with Marnie all day.",
+        "variations": "Tue/Wed/Fri: School at Museum with Penny (9am-2pm) then Playground; Sat/Sun: Jump rope by Cindersap Forest pond (11am-4pm)."
     },
     {
         "id": "npc_jodi",
@@ -7942,25 +7982,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Fall 11",
         "home": "1 Willow Lane",
-        "source": "🏠 1 Willow Lane | 🎂 Fall 11",
+        "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Fall 11",
         "loved": "Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley",
         "liked": "All Eggs (except Void Egg), All Fruit (except Spice Berry), All Milk, Universal Likes (except Garlic/Daffodil)",
         "schedule": "Home kitchen morning; Town square / river 1:30pm-4pm; Pierre's Aerobics (Tuesday 1pm-6pm); Pierre's store (Sunday).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "1 Willow Lane (Kitchen)"
             },
             {
-                "time": "9:00 AM – 1:30 PM",
+                "time": "9:00 AM \u2013 1:30 PM",
                 "loc": "Pierre's Store (Sunday) / Aerobics (Tue 1pm-6pm) / 1 Willow Lane"
             },
             {
-                "time": "1:30 PM – 4:00 PM",
+                "time": "1:30 PM \u2013 4:00 PM",
                 "loc": "Town Square / Riverbank / Town Gardens"
             },
             {
-                "time": "4:00 PM – 8:00 PM",
+                "time": "4:00 PM \u2013 8:00 PM",
                 "loc": "1 Willow Lane (Kitchen cooking dinner)"
             },
             {
@@ -7968,25 +8008,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 Willow Lane (Living Room / Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley\n🕒 Routine: 1 Willow Lane -> Pierre's Aerobics (Tue) -> Town Square / River",
+        "notes": "\u2764\ufe0f Loved: Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley\n\ud83d\udd52 Routine: 1 Willow Lane -> Pierre's Aerobics (Tue) -> Town Square / River",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Jodi.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 1 Willow Lane",
+                "label": "\ud83c\udfe0 Home: 1 Willow Lane",
                 "x": 48.0,
                 "y": 56.0
             },
             {
-                "label": "🛒 Pierre's Store & Aerobics",
+                "label": "\ud83d\uded2 Pierre's Store & Aerobics",
                 "x": 52.0,
                 "y": 42.5
             },
             {
-                "label": "⛲ Town Square Gardens",
+                "label": "\u26f2 Town Square Gardens",
                 "x": 53.0,
                 "y": 46.0
             }
-        ]
+        ],
+        "rain": "1 Willow Lane kitchen / living room doing laundry & chores.",
+        "variations": "Tuesday: Aerobics class in Pierre's store (1pm-6pm); Wed/Fri: Chats at Pierre's store or JojaMart (11:30am-4pm)."
     },
     {
         "id": "npc_kent",
@@ -7994,25 +8036,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Spring 4",
         "home": "1 Willow Lane",
-        "source": "🏠 1 Willow Lane | 🎂 Spring 4",
+        "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Spring 4",
         "loved": "Fiddlehead Risotto, Roasted Hazelnuts",
         "liked": "All Eggs (except Void Egg), All Fruit, Daffodil, Universal Likes (except Algae Soup/Sashimi/Tortilla)",
         "schedule": "Home morning; Under tree near 1 Willow Lane 10:30am-2pm; Town river bridge 2pm-5pm; Home living room evenings.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 10:30 AM",
+                "time": "6:00 AM \u2013 10:30 AM",
                 "loc": "1 Willow Lane (Kitchen / Living Room)"
             },
             {
-                "time": "10:30 AM – 2:00 PM",
+                "time": "10:30 AM \u2013 2:00 PM",
                 "loc": "Under large tree outside 1 Willow Lane"
             },
             {
-                "time": "2:00 PM – 5:00 PM",
+                "time": "2:00 PM \u2013 5:00 PM",
                 "loc": "Town River Bridge / Town Square"
             },
             {
-                "time": "5:00 PM – 9:00 PM",
+                "time": "5:00 PM \u2013 9:00 PM",
                 "loc": "1 Willow Lane (Living Room)"
             },
             {
@@ -8020,25 +8062,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 Willow Lane (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Fiddlehead Risotto, Roasted Hazelnuts\n🕒 Routine: 1 Willow Lane -> Tree outside house -> Town River Bridge",
+        "notes": "\u2764\ufe0f Loved: Fiddlehead Risotto, Roasted Hazelnuts\n\ud83d\udd52 Routine: 1 Willow Lane -> Tree outside house -> Town River Bridge",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Kent.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 1 Willow Lane",
+                "label": "\ud83c\udfe0 Home: 1 Willow Lane",
                 "x": 48.0,
                 "y": 56.0
             },
             {
-                "label": "🌳 Tree outside 1 Willow Lane",
+                "label": "\ud83c\udf33 Tree outside 1 Willow Lane",
                 "x": 49.0,
                 "y": 58.0
             },
             {
-                "label": "🌉 Town River Bridge",
+                "label": "\ud83c\udf09 Town River Bridge",
                 "x": 58.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "1 Willow Lane living room listening to radio all day.",
+        "variations": "Sunny: Stands under willow tree near house (10:30am-2pm) or Town river bridge; (Note: Arrives Spring 1, Year 2)."
     },
     {
         "id": "npc_krobus",
@@ -8046,29 +8090,31 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Winter 1",
         "home": "The Sewers",
-        "source": "🏠 The Sewers | 🎂 Winter 1",
+        "source": "\ud83c\udfe0 The Sewers | \ud83c\udf82 Winter 1",
         "loved": "Diamond, Iridium Bar, Monster Compendium, Pumpkin, Void Egg, Void Mayonnaise, Wild Horseradish",
         "liked": "Gold Bar, Quartz, Seafoam Pudding",
         "schedule": "Always located inside The Sewers at his shop (open 24/7).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 12:00 AM",
+                "time": "6:00 AM \u2013 12:00 AM",
                 "loc": "The Sewers Shop (Inside Sewers, open 24/7)"
             },
             {
-                "time": "12:00 AM – 6:00 AM",
+                "time": "12:00 AM \u2013 6:00 AM",
                 "loc": "The Sewers Shop (Always present)"
             }
         ],
-        "notes": "❤️ Loved: Diamond, Iridium Bar, Monster Compendium, Pumpkin, Void Egg, Void Mayonnaise, Wild Horseradish\n🕒 Routine: Inside The Sewers at shop counter (24/7)",
+        "notes": "\u2764\ufe0f Loved: Diamond, Iridium Bar, Monster Compendium, Pumpkin, Void Egg, Void Mayonnaise, Wild Horseradish\n\ud83d\udd52 Routine: Inside The Sewers at shop counter (24/7)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Krobus.png",
         "mapPins": [
             {
-                "label": "🗝️ The Sewers (Cointreau Shop)",
+                "label": "\ud83d\udddd\ufe0f The Sewers (Cointreau Shop)",
                 "x": 55.0,
                 "y": 66.0
             }
-        ]
+        ],
+        "rain": "The Sewers (24/7, sells specialty goods).",
+        "variations": "Always located in the Sewers; on Fridays sells Iridium Sprinklers."
     },
     {
         "id": "npc_leo",
@@ -8076,21 +8122,21 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Summer 26",
         "home": "Ginger Island Hut / Mountain Treehouse",
-        "source": "🏠 Ginger Island / Mountain Treehouse | 🎂 Summer 26",
+        "source": "\ud83c\udfe0 Ginger Island / Mountain Treehouse | \ud83c\udf82 Summer 26",
         "loved": "Duck Feather, Mango, Ostrich Egg, Poi",
         "liked": "Dragon Tooth, Nautilus Shell, Quartz, Sea Urchin",
         "schedule": "Ginger Island Hut & Docks (Early); Mountain Treehouse near Linus / Mountain lake (after 6-heart event).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Ginger Island Hut (Early) / Mountain Treehouse (Mainland)"
             },
             {
-                "time": "9:00 AM – 3:00 PM",
+                "time": "9:00 AM \u2013 3:00 PM",
                 "loc": "Island Docks & Jungle (Early) / Mountain Lake & Linus' Tent (Mainland)"
             },
             {
-                "time": "3:00 PM – 7:00 PM",
+                "time": "3:00 PM \u2013 7:00 PM",
                 "loc": "Island Beach / Treehouse exterior / Library with Penny"
             },
             {
@@ -8098,20 +8144,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Island Hut / Mountain Treehouse (Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Duck Feather, Mango, Ostrich Egg, Poi\n🕒 Routine: Ginger Island Hut -> Mountain Treehouse & Mountain Lake (after 6-Heart event)",
+        "notes": "\u2764\ufe0f Loved: Duck Feather, Mango, Ostrich Egg, Poi\n\ud83d\udd52 Routine: Ginger Island Hut -> Mountain Treehouse & Mountain Lake (after 6-Heart event)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Leo.png",
         "mapPins": [
             {
-                "label": "🌴 Ginger Island Hut",
+                "label": "\ud83c\udf34 Ginger Island Hut",
                 "x": 68.0,
                 "y": 80.0
             },
             {
-                "label": "🏡 Mountain Treehouse (Post 6-Heart)",
+                "label": "\ud83c\udfe1 Mountain Treehouse (Post 6-Heart)",
                 "x": 65.0,
                 "y": 20.0
             }
-        ]
+        ],
+        "rain": "Island Hut canopy / Mountain treehouse (if moved to Valley).",
+        "variations": "Before 6-Hearts: Ginger Island Jungle & Docks; After 6-Hearts: Treehouse in Mountains next to Linus's tent."
     },
     {
         "id": "npc_lewis",
@@ -8119,25 +8167,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Spring 7",
         "home": "Mayor's Manor",
-        "source": "🏠 Mayor's Manor | 🎂 Spring 7",
+        "source": "\ud83c\udfe0 Mayor's Manor | \ud83c\udf82 Spring 7",
         "loved": "Autumn's Bounty, Glazed Yams, Green Tea, Hot Pepper, Vegetable Medley",
         "liked": "Blueberry, Cactus Fruit, Coconut, Universal Likes",
         "schedule": "Mayor's Manor morning; Town square / Pierre's store / Blacksmith 1pm-4pm; Stardrop Saloon 5pm-9pm.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Mayor's Manor (Office / Kitchen)"
             },
             {
-                "time": "9:00 AM – 1:00 PM",
+                "time": "9:00 AM \u2013 1:00 PM",
                 "loc": "Mayor's Manor / Town Square gardens"
             },
             {
-                "time": "1:00 PM – 4:00 PM",
+                "time": "1:00 PM \u2013 4:00 PM",
                 "loc": "Pierre's Store / Blacksmith / Town Square"
             },
             {
-                "time": "4:00 PM – 9:00 PM",
+                "time": "4:00 PM \u2013 9:00 PM",
                 "loc": "The Stardrop Saloon / Marnie's Ranch (certain evenings)"
             },
             {
@@ -8145,25 +8193,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Mayor's Manor (Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Autumn's Bounty, Glazed Yams, Green Tea, Hot Pepper, Vegetable Medley\n🕒 Routine: Mayor's Manor -> Town Square / Pierre's Store -> Saloon (5pm-9pm)",
+        "notes": "\u2764\ufe0f Loved: Autumn's Bounty, Glazed Yams, Green Tea, Hot Pepper, Vegetable Medley\n\ud83d\udd52 Routine: Mayor's Manor -> Town Square / Pierre's Store -> Saloon (5pm-9pm)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Lewis.png",
         "mapPins": [
             {
-                "label": "🏠 Mayor's Manor",
+                "label": "\ud83c\udfe0 Mayor's Manor",
                 "x": 58.0,
                 "y": 58.0
             },
             {
-                "label": "⛲ Town Square & Gardens",
+                "label": "\u26f2 Town Square & Gardens",
                 "x": 53.0,
                 "y": 46.0
             },
             {
-                "label": "🍻 Stardrop Saloon (5pm-9pm)",
+                "label": "\ud83c\udf7b Stardrop Saloon (5pm-9pm)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM \u2013 10:00 PM).",
+        "variations": "Friday: Inspects CC & Pierre's Store (12pm-4pm) then Saloon; Visits Marnie at her ranch or Saloon regularly."
     },
     {
         "id": "npc_linus",
@@ -8171,25 +8221,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Winter 3",
         "home": "Tent (The Mountains)",
-        "source": "🏠 Tent (The Mountains) | 🎂 Winter 3",
+        "source": "\ud83c\udfe0 Tent (The Mountains) | \ud83c\udf82 Winter 3",
         "loved": "Blueberry Tart, Cactus Fruit, Coconut, Dish O' The Sea, Yam",
         "liked": "All Eggs (except Void Egg), All Milk, All Fruit (except Cactus), All Forage (Chanterelle, Common Mushroom, Daffodil, Dandelion, Ginger, Hazelnut, Holly, Leek, Morel, Purple Mushroom, Snow Yam, Spring Onion, Wild Horseradish, Winter Root)",
         "schedule": "Tent / campfire morning; Mountain lake cliff 10am-2pm; Mountain river 3pm-7pm; Spa exterior (Winter).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 10:00 AM",
+                "time": "6:00 AM \u2013 10:00 AM",
                 "loc": "Tent & Campfire (The Mountains)"
             },
             {
-                "time": "10:00 AM – 2:00 PM",
+                "time": "10:00 AM \u2013 2:00 PM",
                 "loc": "Mountain Lake Cliff (near Mines entrance)"
             },
             {
-                "time": "2:00 PM – 7:00 PM",
+                "time": "2:00 PM \u2013 7:00 PM",
                 "loc": "Mountain River & Lake shore (Spa exterior in Winter)"
             },
             {
-                "time": "7:00 PM – 10:00 PM",
+                "time": "7:00 PM \u2013 10:00 PM",
                 "loc": "Tent Campfire (The Mountains)"
             },
             {
@@ -8197,25 +8247,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Linus' Tent (Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Blueberry Tart, Cactus Fruit, Coconut, Dish O' The Sea, Yam\n🕒 Routine: Tent & Campfire -> Mountain Lake Cliff -> Mountain Lake Shore",
+        "notes": "\u2764\ufe0f Loved: Blueberry Tart, Cactus Fruit, Coconut, Dish O' The Sea, Yam\n\ud83d\udd52 Routine: Tent & Campfire -> Mountain Lake Cliff -> Mountain Lake Shore",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Linus.png",
         "mapPins": [
             {
-                "label": "⛺ Linus' Tent & Campfire",
+                "label": "\u26fa Linus' Tent & Campfire",
                 "x": 65.0,
                 "y": 20.0
             },
             {
-                "label": "🏞️ Mountain Lake Cliff",
+                "label": "\ud83c\udfde\ufe0f Mountain Lake Cliff",
                 "x": 68.0,
                 "y": 24.0
             },
             {
-                "label": "♨️ Spa / Bathhouse (Winter)",
+                "label": "\u2668\ufe0f Spa / Bathhouse (Winter)",
                 "x": 54.0,
                 "y": 14.0
             }
-        ]
+        ],
+        "rain": "Mountain tent or stands under large pine tree near Lake.",
+        "variations": "Summer: Lake & Railroad fireside (11am-7pm); Winter: Warms up inside Spa/Bathhouse lobby (2pm-7pm)."
     },
     {
         "id": "npc_marnie",
@@ -8223,25 +8275,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Fall 18",
         "home": "Marnie's Ranch",
-        "source": "🏠 Marnie's Ranch | 🎂 Fall 18",
+        "source": "\ud83c\udfe0 Marnie's Ranch | \ud83c\udf82 Fall 18",
         "loved": "Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie",
         "liked": "All Eggs (except Void Egg), All Milk, Quartz, Universal Likes",
         "schedule": "Ranch shop counter 9am-4pm (closed Mon/Tue); Stardrop Saloon 7pm-11pm nightly; Aerobics Tuesday.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Marnie's Ranch (Kitchen)"
             },
             {
-                "time": "9:00 AM – 4:00 PM",
+                "time": "9:00 AM \u2013 4:00 PM",
                 "loc": "Marnie's Ranch Counter (Open Wed-Sun, Closed Mon/Tue) / Aerobics (Tue)"
             },
             {
-                "time": "4:00 PM – 7:00 PM",
+                "time": "4:00 PM \u2013 7:00 PM",
                 "loc": "Marnie's Ranch (Barn / Living Room)"
             },
             {
-                "time": "7:00 PM – 11:00 PM",
+                "time": "7:00 PM \u2013 11:00 PM",
                 "loc": "The Stardrop Saloon (Every night)"
             },
             {
@@ -8249,25 +8301,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Marnie's Ranch (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie\n🕒 Routine: Marnie's Ranch (shop Wed-Sun) -> Pierre's Aerobics (Tue) -> Saloon (7pm-11pm nightly)",
+        "notes": "\u2764\ufe0f Loved: Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie\n\ud83d\udd52 Routine: Marnie's Ranch (shop Wed-Sun) -> Pierre's Aerobics (Tue) -> Saloon (7pm-11pm nightly)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Marnie.png",
         "mapPins": [
             {
-                "label": "🏠 Marnie's Ranch (Shop Wed-Sun)",
+                "label": "\ud83c\udfe0 Marnie's Ranch (Shop Wed-Sun)",
                 "x": 39.0,
                 "y": 62.0
             },
             {
-                "label": "🛒 Pierre's Store (Aerobics Tue)",
+                "label": "\ud83d\uded2 Pierre's Store (Aerobics Tue)",
                 "x": 52.0,
                 "y": 42.5
             },
             {
-                "label": "🍻 Stardrop Saloon (7pm-11pm)",
+                "label": "\ud83c\udf7b Stardrop Saloon (7pm-11pm)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Marnie's Ranch living room / tending farm animals.",
+        "variations": "Mon/Tue: Shop closed (Tue: Aerobics at Pierre's 1pm-6pm); Evenings: The Stardrop Saloon with Lewis (7pm-11pm)."
     },
     {
         "id": "npc_pam",
@@ -8275,25 +8329,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Spring 18",
         "home": "Trailer (near Bus Stop)",
-        "source": "🏠 Trailer | 🎂 Spring 18",
+        "source": "\ud83c\udfe0 Trailer | \ud83c\udf82 Spring 18",
         "loved": "Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada",
         "liked": "All Fruit (except Cactus), Daffodil, Universal Likes (except Octopus/Squid)",
         "schedule": "Trailer morning; Bus Stop 10am-5pm (once bus repaired); Stardrop Saloon 5pm-12am nightly; JojaMart (before bus).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 8:30 AM",
+                "time": "6:00 AM \u2013 8:30 AM",
                 "loc": "Trailer (near Bus Stop)"
             },
             {
-                "time": "8:30 AM – 10:00 AM",
+                "time": "8:30 AM \u2013 10:00 AM",
                 "loc": "Walks to Bus Stop (or JojaMart before bus repaired)"
             },
             {
-                "time": "10:00 AM – 5:00 PM",
+                "time": "10:00 AM \u2013 5:00 PM",
                 "loc": "Bus Stop (Driving Bus to Calico Desert)"
             },
             {
-                "time": "5:00 PM – 12:00 AM",
+                "time": "5:00 PM \u2013 12:00 AM",
                 "loc": "The Stardrop Saloon (Sitting at the bar counter)"
             },
             {
@@ -8301,25 +8355,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Trailer (Sleeping)"
             }
         ],
-        "notes": "❤️ Loved: Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada\n🕒 Routine: Trailer -> Bus Stop (10am-5pm) -> Stardrop Saloon (5pm-12am nightly)",
+        "notes": "\u2764\ufe0f Loved: Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada\n\ud83d\udd52 Routine: Trailer -> Bus Stop (10am-5pm) -> Stardrop Saloon (5pm-12am nightly)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Pam.png",
         "mapPins": [
             {
-                "label": "🏠 Home: Trailer",
+                "label": "\ud83c\udfe0 Home: Trailer",
                 "x": 59.0,
                 "y": 50.0
             },
             {
-                "label": "🚌 Bus Stop (10am-5pm)",
+                "label": "\ud83d\ude8c Bus Stop (10am-5pm)",
                 "x": 45.0,
                 "y": 42.0
             },
             {
-                "label": "🍻 Stardrop Saloon (5pm-12am)",
+                "label": "\ud83c\udf7b Stardrop Saloon (5pm-12am)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Trailer in morning, then The Stardrop Saloon (12:00 PM \u2013 12:00 AM if Bus broken).",
+        "variations": "After Bus Repaired: Calico Desert Bus (10:10am-5pm) then Saloon (5pm-12am); Spring 25: Clinic checkup (11:30am-4pm)."
     },
     {
         "id": "npc_pierre",
@@ -8327,25 +8383,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Spring 26",
         "home": "Pierre's General Store",
-        "source": "🏠 Pierre's General Store | 🎂 Spring 26",
+        "source": "\ud83c\udfe0 Pierre's General Store | \ud83c\udf82 Spring 26",
         "loved": "Fried Calamari",
         "liked": "All Eggs (except Void Egg), All Milk, Daffodil, Dandelion, Universal Likes (except Fish/Corn/Garlic/Parsnip/Soup)",
         "schedule": "Store counter 9am-5pm daily (closed Wed until Community Center completed); Stardrop Saloon Friday 5pm-10pm.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Pierre's General Store (Kitchen / Bedroom)"
             },
             {
-                "time": "9:00 AM – 5:00 PM",
+                "time": "9:00 AM \u2013 5:00 PM",
                 "loc": "Pierre's General Store Counter (Open daily, Wed closed until CC)"
             },
             {
-                "time": "5:00 PM – 7:00 PM",
+                "time": "5:00 PM \u2013 7:00 PM",
                 "loc": "Pierre's General Store (Living Room / Shelves)"
             },
             {
-                "time": "7:00 PM – 10:00 PM",
+                "time": "7:00 PM \u2013 10:00 PM",
                 "loc": "The Stardrop Saloon (Friday) / Pierre's Store"
             },
             {
@@ -8353,20 +8409,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Pierre's General Store (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Fried Calamari\n🕒 Routine: Pierre's General Store counter (9am-5pm) -> Saloon (Friday 5pm-10pm)",
+        "notes": "\u2764\ufe0f Loved: Fried Calamari\n\ud83d\udd52 Routine: Pierre's General Store counter (9am-5pm) -> Saloon (Friday 5pm-10pm)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Pierre.png",
         "mapPins": [
             {
-                "label": "🏠 Pierre's Store (9am-5pm)",
+                "label": "\ud83c\udfe0 Pierre's Store (9am-5pm)",
                 "x": 52.0,
                 "y": 42.5
             },
             {
-                "label": "🍻 Stardrop Saloon (Fri)",
+                "label": "\ud83c\udf7b Stardrop Saloon (Fri)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Pierre's General Store behind counter (9:00 AM \u2013 5:00 PM).",
+        "variations": "Wednesday: Store closed until CC completed (visits Saloon or stays home); Evenings: The Stardrop Saloon after 7pm."
     },
     {
         "id": "npc_robin",
@@ -8374,25 +8432,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Fall 21",
         "home": "24 Mountain Road (Carpenter's Shop)",
-        "source": "🏠 24 Mountain Road | 🎂 Fall 21",
+        "source": "\ud83c\udfe0 24 Mountain Road | \ud83c\udf82 Fall 21",
         "loved": "Goat Cheese, Peach, Spaghetti",
         "liked": "All Milk, Hardwood, Quartz, Universal Likes",
         "schedule": "Carpenter's shop counter 9am-5pm (closed Tuesday); Stardrop Saloon Friday 6pm-10pm dancing with Demetrius; Aerobics Tue.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Carpenter's Shop (Kitchen / Bedroom)"
             },
             {
-                "time": "9:00 AM – 5:00 PM",
+                "time": "9:00 AM \u2013 5:00 PM",
                 "loc": "Carpenter's Shop Counter (Open daily except Tuesday) / Aerobics (Tue)"
             },
             {
-                "time": "5:00 PM – 7:00 PM",
+                "time": "5:00 PM \u2013 7:00 PM",
                 "loc": "Mountain Road outside Carpenter's Shop"
             },
             {
-                "time": "7:00 PM – 10:00 PM",
+                "time": "7:00 PM \u2013 10:00 PM",
                 "loc": "The Stardrop Saloon (Friday dancing with Demetrius) / Carpenter's Shop"
             },
             {
@@ -8400,25 +8458,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Carpenter's Shop (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Goat Cheese, Peach, Spaghetti\n🕒 Routine: Carpenter's Shop (9am-5pm) -> Pierre's Aerobics (Tue) -> Saloon (Fri dancing with Demetrius)",
+        "notes": "\u2764\ufe0f Loved: Goat Cheese, Peach, Spaghetti\n\ud83d\udd52 Routine: Carpenter's Shop (9am-5pm) -> Pierre's Aerobics (Tue) -> Saloon (Fri dancing with Demetrius)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Robin.png",
         "mapPins": [
             {
-                "label": "🏠 Carpenter's Shop (9am-5pm)",
+                "label": "\ud83c\udfe0 Carpenter's Shop (9am-5pm)",
                 "x": 62.0,
                 "y": 24.0
             },
             {
-                "label": "🛒 Pierre's Store (Aerobics Tue)",
+                "label": "\ud83d\uded2 Pierre's Store (Aerobics Tue)",
                 "x": 52.0,
                 "y": 42.5
             },
             {
-                "label": "🍻 Stardrop Saloon (Fri Dance)",
+                "label": "\ud83c\udf7b Stardrop Saloon (Fri Dance)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Carpenter's Shop behind counter (9:00 AM \u2013 5:00 PM).",
+        "variations": "Tuesday: Shop closed, aerobics at Pierre's (1pm-6pm); Friday: Dances with Demetrius at Saloon (6pm-9pm)."
     },
     {
         "id": "npc_sandy",
@@ -8426,17 +8486,17 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Fall 15",
         "home": "Oasis Store (Calico Desert)",
-        "source": "🏠 Oasis Store (Calico Desert) | 🎂 Fall 15",
+        "source": "\ud83c\udfe0 Oasis Store (Calico Desert) | \ud83c\udf82 Fall 15",
         "loved": "Crocus, Daffodil, Mango Sticky Rice, Sweet Pea",
         "liked": "All Fruit (except Coconut), Goat Milk, Large Goat Milk, Quartz, Wool",
         "schedule": "Always located behind the counter at the Oasis shop in the Calico Desert (9am-11:50pm).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Oasis Store (Calico Desert)"
             },
             {
-                "time": "9:00 AM – 11:50 PM",
+                "time": "9:00 AM \u2013 11:50 PM",
                 "loc": "Oasis Store Counter (Calico Desert, open 7 days a week)"
             },
             {
@@ -8444,15 +8504,17 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Oasis Store (Calico Desert)"
             }
         ],
-        "notes": "❤️ Loved: Crocus, Daffodil, Mango Sticky Rice, Sweet Pea\n🕒 Routine: Inside Oasis Store at shop counter in Calico Desert (9am-11:50pm daily)",
+        "notes": "\u2764\ufe0f Loved: Crocus, Daffodil, Mango Sticky Rice, Sweet Pea\n\ud83d\udd52 Routine: Inside Oasis Store at shop counter in Calico Desert (9am-11:50pm daily)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Sandy.png",
         "mapPins": [
             {
-                "label": "🌵 Oasis Store (Calico Desert)",
+                "label": "\ud83c\udf35 Oasis Store (Calico Desert)",
                 "x": 15.0,
                 "y": 15.0
             }
-        ]
+        ],
+        "rain": "Oasis Store in Calico Desert (9:00 AM \u2013 11:50 PM, 7 days/week).",
+        "variations": "Always inside the Oasis shop; Emily visits her on Fall 15 (Sandy's birthday)."
     },
     {
         "id": "npc_vincent",
@@ -8460,25 +8522,25 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Spring 10",
         "home": "1 Willow Lane",
-        "source": "🏠 1 Willow Lane | 🎂 Spring 10",
+        "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Spring 10",
         "loved": "Cranberry Candy, Ginger Ale, Grape, Pink Cake, Snail",
         "liked": "Coconut, Daffodil, Universal Likes (except Artisan Goods/Vegetables)",
         "schedule": "Museum library classroom with Penny (Tue/Wed/Fri 9am-2pm); Beach / town playground other days; Home evenings.",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "1 Willow Lane (Bedroom)"
             },
             {
-                "time": "9:00 AM – 2:00 PM",
+                "time": "9:00 AM \u2013 2:00 PM",
                 "loc": "Museum Library (Class with Penny Tue/Wed/Fri) / Town Playground & Beach (Other days)"
             },
             {
-                "time": "2:00 PM – 6:00 PM",
+                "time": "2:00 PM \u2013 6:00 PM",
                 "loc": "Town Playground / Riverbank / Beach shore"
             },
             {
-                "time": "6:00 PM – 8:00 PM",
+                "time": "6:00 PM \u2013 8:00 PM",
                 "loc": "1 Willow Lane (Living Room)"
             },
             {
@@ -8486,25 +8548,27 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 Willow Lane (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Cranberry Candy, Ginger Ale, Grape, Pink Cake, Snail\n🕒 Routine: Museum/Library Classroom (Tue/Wed/Fri) -> Town Playground -> The Beach",
+        "notes": "\u2764\ufe0f Loved: Cranberry Candy, Ginger Ale, Grape, Pink Cake, Snail\n\ud83d\udd52 Routine: Museum/Library Classroom (Tue/Wed/Fri) -> Town Playground -> The Beach",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Vincent.png",
         "mapPins": [
             {
-                "label": "🏠 Home: 1 Willow Lane",
+                "label": "\ud83c\udfe0 Home: 1 Willow Lane",
                 "x": 48.0,
                 "y": 56.0
             },
             {
-                "label": "📚 Museum / Library (Tue/Wed/Fri)",
+                "label": "\ud83d\udcda Museum / Library (Tue/Wed/Fri)",
                 "x": 66.5,
                 "y": 66.0
             },
             {
-                "label": "🏖️ The Beach / Playground",
+                "label": "\ud83c\udfd6\ufe0f The Beach / Playground",
                 "x": 54.0,
                 "y": 80.0
             }
-        ]
+        ],
+        "rain": "1 Willow Lane living room playing with toys all day.",
+        "variations": "Tue/Wed/Fri: School at Museum with Penny (9am-2pm) then Playground; Summer (Sunny): Plays in Beach sandbox (10am-5pm)."
     },
     {
         "id": "npc_willy",
@@ -8512,21 +8576,21 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Summer 24",
         "home": "Fish Shop (The Beach)",
-        "source": "🏠 Fish Shop (The Beach) | 🎂 Summer 24",
+        "source": "\ud83c\udfe0 Fish Shop (The Beach) | \ud83c\udf82 Summer 24",
         "loved": "Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon, Tiger Trout",
         "liked": "Baked Fish, Carp Surprise, Chowder, Crispy Bass, Dish O' The Sea, Escargot, Fish Stew, Fish Taco, Fried Calamari, Fried Eel, Gold Bar, Salmon Dinner, Seafoam Pudding, Trout Soup",
         "schedule": "Fishing on beach pier 6am-9am; Fish Shop counter 9am-5pm; Fishing on pier 5pm-10pm (or Stardrop Saloon).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 9:00 AM",
+                "time": "6:00 AM \u2013 9:00 AM",
                 "loc": "Fishing on Beach Pier (The Beach)"
             },
             {
-                "time": "9:00 AM – 5:00 PM",
+                "time": "9:00 AM \u2013 5:00 PM",
                 "loc": "Willy's Fish Shop Counter (Open daily except Saturday if sunny)"
             },
             {
-                "time": "5:00 PM – 10:00 PM",
+                "time": "5:00 PM \u2013 10:00 PM",
                 "loc": "Fishing on Beach Pier (or The Stardrop Saloon)"
             },
             {
@@ -8534,20 +8598,22 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Willy's Fish Shop (Bedroom)"
             }
         ],
-        "notes": "❤️ Loved: Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon, Tiger Trout\n🕒 Routine: Beach Pier Fishing (6am-9am & 5pm-10pm) -> Fish Shop counter (9am-5pm)",
+        "notes": "\u2764\ufe0f Loved: Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon, Tiger Trout\n\ud83d\udd52 Routine: Beach Pier Fishing (6am-9am & 5pm-10pm) -> Fish Shop counter (9am-5pm)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Willy.png",
         "mapPins": [
             {
-                "label": "🎣 Willy's Fish Shop & Pier",
+                "label": "\ud83c\udfa3 Willy's Fish Shop & Pier",
                 "x": 58.0,
                 "y": 88.0
             },
             {
-                "label": "🍻 Stardrop Saloon (Rainy eves)",
+                "label": "\ud83c\udf7b Stardrop Saloon (Rainy eves)",
                 "x": 55.0,
                 "y": 54.0
             }
-        ]
+        ],
+        "rain": "Fishes off Beach dock / pier outside shop all day or inside shop.",
+        "variations": "Saturday: Fish Shop closed, fishes along Beach shore & dock; Evenings: The Stardrop Saloon (6pm-11pm)."
     },
     {
         "id": "npc_wizard",
@@ -8555,29 +8621,31 @@ const PERFECTION_TRACKER_DATA = {
         "category": "Townsperson",
         "birthday": "Winter 17",
         "home": "Wizard's Tower (Cindersap Forest)",
-        "source": "🏠 Wizard's Tower | 🎂 Winter 17",
+        "source": "\ud83c\udfe0 Wizard's Tower | \ud83c\udf82 Winter 17",
         "loved": "Book of Mysteries, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence",
         "liked": "All Geode Minerals, Quartz, Universal Likes",
         "schedule": "Always inside the Wizard's Tower in western Cindersap Forest (open 6am-11pm).",
         "scheduleTable": [
             {
-                "time": "6:00 AM – 11:00 PM",
+                "time": "6:00 AM \u2013 11:00 PM",
                 "loc": "Wizard's Tower (Western Cindersap Forest, open 6am-11pm daily)"
             },
             {
-                "time": "11:00 PM – 6:00 AM",
+                "time": "11:00 PM \u2013 6:00 AM",
                 "loc": "Wizard's Tower (Cauldron / Study)"
             }
         ],
-        "notes": "❤️ Loved: Book of Mysteries, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence\n🕒 Routine: Inside Wizard's Tower in western Cindersap Forest (6am-11pm daily)",
+        "notes": "\u2764\ufe0f Loved: Book of Mysteries, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence\n\ud83d\udd52 Routine: Inside Wizard's Tower in western Cindersap Forest (6am-11pm daily)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Wizard.png",
         "mapPins": [
             {
-                "label": "🧙 Wizard's Tower (6am-11pm)",
+                "label": "\ud83e\uddd9 Wizard's Tower (6am-11pm)",
                 "x": 24.0,
                 "y": 68.0
             }
-        ]
+        ],
+        "rain": "Wizard's Tower in Cindersap Forest West (6:00 AM \u2013 11:00 PM).",
+        "variations": "Always inside the Wizard's Tower behind the cauldron/spell circle (except festival days)."
     }
 ]
 };

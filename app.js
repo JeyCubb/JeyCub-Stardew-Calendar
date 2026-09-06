@@ -2251,7 +2251,9 @@ function renderTrackerGridOnly() {
       const matchBuffs = item.buffs && item.buffs.toLowerCase().includes(q);
       const matchDesc = item.desc && item.desc.toLowerCase().includes(q);
       const matchSchedTable = item.scheduleTable && item.scheduleTable.some(s => (s.time && s.time.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
-      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchSchedTable) {
+      const matchRain = item.rain && item.rain.toLowerCase().includes(q);
+      const matchVariations = item.variations && item.variations.toLowerCase().includes(q);
+      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchSchedTable && !matchRain && !matchVariations) {
         return false;
       }
     }
@@ -2458,6 +2460,14 @@ function renderTrackerGridOnly() {
         schedRows += `<tr><td class="t-col-key sched-time-col"><span class="t-key-icon">🕒</span> Daily</td><td class="t-col-val sched-loc-col">${item.schedule}</td></tr>`;
       }
 
+      let altRows = '';
+      if (item.rain) {
+        altRows += `<tr><td class="t-col-key" style="color: #60a5fa;"><span class="t-key-icon">🌧️</span> Rain</td><td class="t-col-val" style="color: #bfdbfe;">${item.rain}</td></tr>`;
+      }
+      if (item.variations) {
+        altRows += `<tr><td class="t-col-key" style="color: #fbbf24;"><span class="t-key-icon">🔄</span> Note</td><td class="t-col-val" style="color: #fef08a;">${item.variations}</td></tr>`;
+      }
+
       detailsText = `
         <table class="tracker-info-table villager-gift-table"><tbody>${infoRows}</tbody></table>
         <table class="tracker-info-table villager-sched-table">
@@ -2468,6 +2478,16 @@ function renderTrackerGridOnly() {
           </thead>
           <tbody>${schedRows}</tbody>
         </table>
+        ${altRows ? `
+          <table class="tracker-info-table villager-alt-table" style="margin-top: 5px;">
+            <thead>
+              <tr>
+                <th colspan="2" class="sched-table-header sched-alt-header">🌦️ Alternate / Rainy Locations</th>
+              </tr>
+            </thead>
+            <tbody>${altRows}</tbody>
+          </table>
+        ` : ''}
       `;
       notesText = '';
     }
@@ -2624,6 +2644,14 @@ window.openVillagerMapModal = function(villagerId, event) {
         schedRows += `<tr><td class="t-col-key sched-time-col" style="padding: 3.5px 7px;"><span class="t-key-icon">🕒</span> ${slot.time}</td><td class="t-col-val sched-loc-col" style="padding: 3.5px 7px;">${slot.loc}</td></tr>`;
       });
     }
+    let altRows = '';
+    if (item.rain) {
+      altRows += `<tr><td class="t-col-key" style="color: #60a5fa; padding: 3.5px 7px;"><span class="t-key-icon">🌧️</span> Rain</td><td class="t-col-val" style="color: #bfdbfe; padding: 3.5px 7px;">${item.rain}</td></tr>`;
+    }
+    if (item.variations) {
+      altRows += `<tr><td class="t-col-key" style="color: #fbbf24; padding: 3.5px 7px;"><span class="t-key-icon">🔄</span> Note</td><td class="t-col-val" style="color: #fef08a; padding: 3.5px 7px;">${item.variations}</td></tr>`;
+    }
+
     schedBox.innerHTML = `
       <div style="margin-bottom: 7px;"><strong style="color: #f87171;">❤️ Loved:</strong> ${item.loved || ''}</div>
       <table class="tracker-info-table villager-sched-table" style="margin-top: 6px;">
@@ -2632,6 +2660,14 @@ window.openVillagerMapModal = function(villagerId, event) {
         </thead>
         <tbody>${schedRows || `<tr><td class="t-col-val">${item.schedule || ''}</td></tr>`}</tbody>
       </table>
+      ${altRows ? `
+        <table class="tracker-info-table villager-alt-table" style="margin-top: 6px;">
+          <thead>
+            <tr><th colspan="2" class="sched-table-header sched-alt-header">🌦️ Alternative / Rainy Locations</th></tr>
+          </thead>
+          <tbody>${altRows}</tbody>
+        </table>
+      ` : ''}
     `;
   }
 
