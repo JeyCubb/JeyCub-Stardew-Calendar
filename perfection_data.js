@@ -7117,6 +7117,10 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Aerobics class in Pierre's General Store (4:00 PM \u2013 6:00 PM) before Saloon"
             },
             {
+                "cond": "\ud83c\udfdb\ufe0f Friday (CC)",
+                "loc": "Community Center Crafts Room / sewing area (10:00 AM \u2013 3:30 PM) -> Saloon"
+            },
+            {
                 "cond": "\ud83e\ude7a Winter 11",
                 "loc": "Annual clinic checkup at Harvey's Medical Clinic (10:30 AM \u2013 4:00 PM)"
             },
@@ -7130,7 +7134,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Same routine (sewing at 2 Willow Lane -> Stardrop Saloon 4:00 PM \u2013 12:30 AM)",
-        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's General Store (4:00 PM \u2013 6:00 PM) before Saloon; \ud83e\ude7a Winter 11: Annual clinic checkup at Harvey's Medical Clinic (10:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's General Store (4:00 PM \u2013 6:00 PM) before Saloon; \ud83c\udfdb\ufe0f Friday (CC): Community Center Crafts Room / sewing area (10:00 AM \u2013 3:30 PM) -> Saloon; \ud83e\ude7a Winter 11: Annual clinic checkup at Harvey's Medical Clinic (10:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_haley",
@@ -7344,8 +7348,12 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Works as nurse at Harvey's Medical Clinic (9:00 AM \u2013 4:50 PM)"
             },
             {
+                "cond": "\ud83c\udfdb\ufe0f Monday (CC)",
+                "loc": "Community Center Crafts Room & bench outside (1:30 PM \u2013 4:30 PM)"
+            },
+            {
                 "cond": "\ud83d\udd2d Sunny Days",
-                "loc": "Looks through Telescope outside Lab or sits on Town / Community Center bench"
+                "loc": "Looks through Telescope outside Lab or sits on Town Park bench"
             },
             {
                 "cond": "\ud83c\udf34 Island Resort",
@@ -7357,7 +7365,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Inside Mountain Lab / bedroom tinkering with gadgets all day",
-        "variations": "\ud83e\ude7a Tue / Thu: Works as nurse at Harvey's Medical Clinic (9:00 AM \u2013 4:50 PM); \ud83d\udd2d Sunny Days: Looks through Telescope outside Lab or sits on Town / Community Center bench; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83e\ude7a Tue / Thu: Works as nurse at Harvey's Medical Clinic (9:00 AM \u2013 4:50 PM); \ud83c\udfdb\ufe0f Monday (CC): Community Center Crafts Room & bench outside (1:30 PM \u2013 4:30 PM); \ud83d\udd2d Sunny Days: Looks through Telescope outside Lab or sits on Town Park bench; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_penny",
@@ -7417,7 +7425,7 @@ const PERFECTION_TRACKER_DATA = {
             },
             {
                 "cond": "\ud83d\udcda Tue / Wed / Fri",
-                "loc": "Tutors Jas & Vincent at Museum (9:00 AM \u2013 2:00 PM) then walks to Town Playground"
+                "loc": "Tutors Jas & Vincent at Museum (9:00 AM \u2013 2:00 PM) then walks past CC to Playground"
             },
             {
                 "cond": "\ud83d\udd04 Saturday",
@@ -7433,7 +7441,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Inside Trailer doing chores or visits Museum/Library with umbrella",
-        "variations": "\ud83d\udcda Tue / Wed / Fri: Tutors Jas & Vincent at Museum (9:00 AM \u2013 2:00 PM) then walks to Town Playground; \ud83d\udd04 Saturday: Takes Jas & Vincent to Town Playground & river bridge (10:00 AM \u2013 5:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83d\udcda Tue / Wed / Fri: Tutors Jas & Vincent at Museum (9:00 AM \u2013 2:00 PM) then walks past CC to Playground; \ud83d\udd04 Saturday: Takes Jas & Vincent to Town Playground & river bridge (10:00 AM \u2013 5:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_alex",
@@ -7672,7 +7680,7 @@ const PERFECTION_TRACKER_DATA = {
         "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Summer 17",
         "loved": "Cactus Fruit, Maple Bar, Pizza, Tigerseye",
         "liked": "Eggs (except Void Egg), Joja Cola, Universal Likes (except Mayonnaise/Pickles)",
-        "schedule": "Home morning; Museum work (Mon/Wed); Town skatepark / river 1:30pm-6pm; Saloon Friday 4pm-10pm (pool/band).",
+        "schedule": "Home morning; JojaMart/Museum work (Mon/Wed); Town skatepark / river 1:30pm-6pm; Saloon Friday 4pm-10pm (playing pool/band).",
         "scheduleTable": [
             {
                 "time": "6:00 AM \u2013 10:00 AM",
@@ -7680,7 +7688,7 @@ const PERFECTION_TRACKER_DATA = {
             },
             {
                 "time": "10:00 AM \u2013 1:30 PM",
-                "loc": "Museum / Library (Mon/Wed work) / Outside house"
+                "loc": "JojaMart / Museum (Mon/Wed work) / Outside house"
             },
             {
                 "time": "1:30 PM \u2013 6:00 PM",
@@ -7695,7 +7703,7 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 Willow Lane (Sleeping)"
             }
         ],
-        "notes": "\u2764\ufe0f Loved: Cactus Fruit, Maple Bar, Pizza, Tigerseye\n\ud83d\udd52 Routine: 1 Willow Lane -> Museum (Mon/Wed) -> Town Skatepark -> Saloon (Fri)",
+        "notes": "\u2764\ufe0f Loved: Cactus Fruit, Maple Bar, Pizza, Tigerseye\n\ud83d\udd52 Routine: 1 Willow Lane -> JojaMart/Museum (Mon/Wed) -> Town Skatepark -> Saloon (Fri)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Sam.png",
         "mapPins": [
             {
@@ -7704,7 +7712,7 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 56.0
             },
             {
-                "label": "\ud83d\udcda Museum / Library (Mon/Wed)",
+                "label": "\ud83d\uded2 JojaMart / Museum (Mon/Wed)",
                 "x": 68.0,
                 "y": 45.0
             },
@@ -7726,7 +7734,7 @@ const PERFECTION_TRACKER_DATA = {
             },
             {
                 "cond": "\ud83d\udcda Mon / Wed",
-                "loc": "Works part-time at Museum / Library (12:50 PM \u2013 4:00 PM)"
+                "loc": "Works part-time at Museum / Library (12:50 PM \u2013 4:00 PM) -> Skatepark"
             },
             {
                 "cond": "\ud83c\udfb8 Friday",
@@ -7742,7 +7750,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Inside 1 Willow Lane (plays guitar) -> Stardrop Saloon with Sebastian (3:00 PM \u2013 9:00 PM)",
-        "variations": "\ud83d\udcda Mon / Wed: Works part-time at Museum / Library (12:50 PM \u2013 4:00 PM); \ud83c\udfb8 Friday: Band practice at 1 Willow Lane -> Stardrop Saloon pool & arcade (3:00 PM \u2013 9:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83d\udcda Mon / Wed: Works part-time at Museum / Library (12:50 PM \u2013 4:00 PM) -> Skatepark; \ud83c\udfb8 Friday: Band practice at 1 Willow Lane -> Stardrop Saloon pool & arcade (3:00 PM \u2013 9:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_sebastian",
@@ -7825,35 +7833,40 @@ const PERFECTION_TRACKER_DATA = {
         "source": "\ud83c\udfe0 Marnie's Ranch | \ud83c\udf82 Spring 20",
         "loved": "Beer, Hot Pepper, Pepper Poppers, Pizza",
         "liked": "All Eggs (except Void Egg), All Fruit (except Hot Pepper), Universal Likes (except Pickles/Quartz)",
-        "schedule": "Marnie's Ranch tending chickens (8am-5pm); The Stardrop Saloon 5pm-11pm every single night.",
+        "schedule": "JojaMart 9am-5pm (Workdays); Stardrop Saloon 5pm-11pm every single night; Marnie's Ranch weekends.",
         "scheduleTable": [
             {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Marnie's Ranch (Bedroom / Kitchen)"
+                "time": "6:00 AM \u2013 7:10 AM",
+                "loc": "Marnie's Ranch (Kitchen)"
             },
             {
-                "time": "9:00 AM \u2013 5:00 PM",
-                "loc": "Marnie's Ranch (Tending chickens & coop)"
+                "time": "7:10 AM \u2013 5:00 PM",
+                "loc": "JojaMart (Stocking shelves Mon-Fri) / Marnie's Ranch (Weekends)"
             },
             {
                 "time": "5:00 PM \u2013 11:00 PM",
-                "loc": "The Stardrop Saloon (Socializing)"
+                "loc": "The Stardrop Saloon (Every single night)"
             },
             {
                 "time": "11:00 PM+",
-                "loc": "Returns home to Marnie's Ranch"
+                "loc": "Returns home to Marnie's Ranch to sleep"
             }
         ],
-        "notes": "\u2764\ufe0f Loved: Beer, Hot Pepper, Pepper Poppers, Pizza\n\ud83d\udd52 Routine: Marnie's Ranch (8am-5pm) -> The Stardrop Saloon (5pm-11pm nightly)",
+        "notes": "\u2764\ufe0f Loved: Beer, Hot Pepper, Pepper Poppers, Pizza\n\ud83d\udd52 Routine: JojaMart (9am-5pm weekdays) -> Stardrop Saloon (5pm-11pm nightly)",
         "img": "https://stardewvalleywiki.com/Special:FilePath/Shane.png",
         "mapPins": [
             {
                 "label": "\ud83c\udfe0 Home: Marnie's Ranch",
-                "x": 42.0,
-                "y": 68.0
+                "x": 39.0,
+                "y": 62.0
             },
             {
-                "label": "\ud83c\udf7b The Stardrop Saloon (5pm-11pm)",
+                "label": "\ud83d\uded2 JojaMart (9am-5pm)",
+                "x": 68.0,
+                "y": 45.0
+            },
+            {
+                "label": "\ud83c\udf7b Stardrop Saloon (5pm-11pm)",
                 "x": 55.0,
                 "y": 54.0
             }
@@ -7861,11 +7874,11 @@ const PERFECTION_TRACKER_DATA = {
         "altTable": [
             {
                 "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Tends chickens at Marnie's Ranch -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)"
+                "loc": "Tends chickens at Marnie's Ranch all day -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)"
             },
             {
-                "cond": "\ud83d\udc14 Daily Routine",
-                "loc": "Tends chickens & chores at Marnie's Ranch (8:00 AM \u2013 5:00 PM) -> Saloon"
+                "cond": "\ud83d\udc14 Daily (CC Done)",
+                "loc": "Tends chickens & chores at Marnie's Ranch full-time (8:00 AM \u2013 5:00 PM) -> Saloon"
             },
             {
                 "cond": "\ud83c\udf7b Every Evening",
@@ -7880,8 +7893,8 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
             }
         ],
-        "rain": "Tends chickens at Marnie's Ranch -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)",
-        "variations": "\ud83d\udc14 Daily Routine: Tends chickens & chores at Marnie's Ranch (8:00 AM \u2013 5:00 PM) -> Saloon; \ud83c\udf7b Every Evening: Socializes in The Stardrop Saloon (5:00 PM \u2013 11:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "rain": "Tends chickens at Marnie's Ranch all day -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)",
+        "variations": "\ud83d\udc14 Daily (CC Done): Tends chickens & chores at Marnie's Ranch full-time (8:00 AM \u2013 5:00 PM) -> Saloon; \ud83c\udf7b Every Evening: Socializes in The Stardrop Saloon (5:00 PM \u2013 11:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_caroline",
@@ -7939,6 +7952,10 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Aerobics class in Pierre's store room (1:00 PM \u2013 4:00 PM)"
             },
             {
+                "cond": "\ud83c\udfdb\ufe0f Friday (CC)",
+                "loc": "Community Center Crafts Room & Kitchen (1:30 PM \u2013 5:00 PM) -> Pierre's Store"
+            },
+            {
                 "cond": "\ud83c\udf3f Sunny Days",
                 "loc": "Private Sunroom in back of Pierre's Store or under Community Center tree"
             },
@@ -7952,7 +7969,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Pierre's Store kitchen / living room doing chores all day",
-        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's store room (1:00 PM \u2013 4:00 PM); \ud83c\udf3f Sunny Days: Private Sunroom in back of Pierre's Store or under Community Center tree; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's store room (1:00 PM \u2013 4:00 PM); \ud83c\udfdb\ufe0f Friday (CC): Community Center Crafts Room & Kitchen (1:30 PM \u2013 5:00 PM) -> Pierre's Store; \ud83c\udf3f Sunny Days: Private Sunroom in back of Pierre's Store or under Community Center tree; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_clint",
@@ -8006,8 +8023,8 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Works Blacksmith shop (9:00 AM \u2013 4:00 PM) -> Stardrop Saloon (5:00 PM \u2013 12:00 AM)"
             },
             {
-                "cond": "\ud83d\udd27 Friday (CC Done)",
-                "loc": "Blacksmith closed; spends day inside Community Center Boiler Room"
+                "cond": "\ud83c\udfdb\ufe0f Friday (CC)",
+                "loc": "Blacksmith CLOSED; stays inside Community Center Boiler Room (9:00 AM \u2013 5:00 PM) -> Saloon"
             },
             {
                 "cond": "\ud83e\ude7a Winter 16",
@@ -8023,7 +8040,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Works Blacksmith shop (9:00 AM \u2013 4:00 PM) -> Stardrop Saloon (5:00 PM \u2013 12:00 AM)",
-        "variations": "\ud83d\udd27 Friday (CC Done): Blacksmith closed; spends day inside Community Center Boiler Room; \ud83e\ude7a Winter 16: Annual clinic checkup at Harvey's Medical Clinic (8:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83c\udfdb\ufe0f Friday (CC): Blacksmith CLOSED; stays inside Community Center Boiler Room (9:00 AM \u2013 5:00 PM) -> Saloon; \ud83e\ude7a Winter 16: Annual clinic checkup at Harvey's Medical Clinic (8:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_demetrius",
@@ -8191,6 +8208,10 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Inside 1 River Road (kitchen / living room baking cookies) all day"
             },
             {
+                "cond": "\ud83c\udfdb\ufe0f Thursday (CC)",
+                "loc": "Community Center Crafts Room & flower gardens (1:00 PM \u2013 4:30 PM)"
+            },
+            {
                 "cond": "\ud83c\udf38 Sunny Days",
                 "loc": "Tends town flower gardens near Saloon & Community Center (12:00 PM \u2013 4:30 PM)"
             },
@@ -8208,7 +8229,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Inside 1 River Road (kitchen / living room baking cookies) all day",
-        "variations": "\ud83c\udf38 Sunny Days: Tends town flower gardens near Saloon & Community Center (12:00 PM \u2013 4:30 PM); \ud83e\ude7a Tue / Thu: Visits Harvey's Medical Clinic or stays home at 1 River Road; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83c\udfdb\ufe0f Thursday (CC): Community Center Crafts Room & flower gardens (1:00 PM \u2013 4:30 PM); \ud83c\udf38 Sunny Days: Tends town flower gardens near Saloon & Community Center (12:00 PM \u2013 4:30 PM); \ud83e\ude7a Tue / Thu: Visits Harvey's Medical Clinic or stays home at 1 River Road; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_george",
@@ -8258,8 +8279,8 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Inside 1 River Road watching TV in living room all day"
             },
             {
-                "cond": "\u2600\ufe0f Sunny Days",
-                "loc": "Sits in wheelchair outside 1 River Road (12:00 PM \u2013 3:00 PM) or by Community Center"
+                "cond": "\ud83c\udfdb\ufe0f Sunny Days (CC)",
+                "loc": "Sits in wheelchair outside Community Center entrance (12:00 PM \u2013 3:00 PM)"
             },
             {
                 "cond": "\u26ea Sunday",
@@ -8275,7 +8296,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Inside 1 River Road watching TV in living room all day",
-        "variations": "\u2600\ufe0f Sunny Days: Sits in wheelchair outside 1 River Road (12:00 PM \u2013 3:00 PM) or by Community Center; \u26ea Sunday: Yoba shrine in back room of Pierre's General Store (8:00 AM \u2013 2:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83c\udfdb\ufe0f Sunny Days (CC): Sits in wheelchair outside Community Center entrance (12:00 PM \u2013 3:00 PM); \u26ea Sunday: Yoba shrine in back room of Pierre's General Store (8:00 AM \u2013 2:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_gus",
@@ -8316,6 +8337,10 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Inside The Stardrop Saloon (12:00 PM \u2013 12:00 AM)"
             },
             {
+                "cond": "\ud83c\udfdb\ufe0f Tuesday (CC)",
+                "loc": "Visits Community Center Pantry / Kitchen (10:00 AM \u2013 12:00 PM) -> The Stardrop Saloon"
+            },
+            {
                 "cond": "\ud83d\uded2 Weekday Morning",
                 "loc": "Buys groceries at Pierre's General Store (8:30 AM \u2013 10:30 AM)"
             },
@@ -8329,7 +8354,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Inside The Stardrop Saloon (12:00 PM \u2013 12:00 AM)",
-        "variations": "\ud83d\uded2 Weekday Morning: Buys groceries at Pierre's General Store (8:30 AM \u2013 10:30 AM); \ud83c\udf34 Island Resort: Tends beach bar at Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on resort days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83c\udfdb\ufe0f Tuesday (CC): Visits Community Center Pantry / Kitchen (10:00 AM \u2013 12:00 PM) -> The Stardrop Saloon; \ud83d\uded2 Weekday Morning: Buys groceries at Pierre's General Store (8:30 AM \u2013 10:30 AM); \ud83c\udf34 Island Resort: Tends beach bar at Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on resort days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_jas",
@@ -8416,7 +8441,7 @@ const PERFECTION_TRACKER_DATA = {
         "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Fall 11",
         "loved": "Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley",
         "liked": "All Eggs (except Void Egg), All Fruit (except Spice Berry), All Milk, Universal Likes (except Garlic/Daffodil)",
-        "schedule": "1 Willow Lane home morning; Town square / Pierre's store shopping 11:30am-4pm; Aerobics Tuesday.",
+        "schedule": "Home kitchen morning; Town square / river 1:30pm-4pm; Pierre's Aerobics (Tuesday 1pm-6pm); Pierre's store (Sunday).",
         "scheduleTable": [
             {
                 "time": "6:00 AM \u2013 9:00 AM",
@@ -8464,6 +8489,10 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "1 Willow Lane kitchen / living room doing laundry & chores"
             },
             {
+                "cond": "\ud83c\udfdb\ufe0f Saturday (CC)",
+                "loc": "Community Center Main Room (2:30 PM \u2013 5:00 PM) -> returns home to 1 Willow Lane"
+            },
+            {
                 "cond": "\ud83e\uddd8 Tuesday",
                 "loc": "Aerobics class in Pierre's store (1:00 PM \u2013 6:00 PM)"
             },
@@ -8481,7 +8510,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "1 Willow Lane kitchen / living room doing laundry & chores",
-        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's store (1:00 PM \u2013 6:00 PM); \ud83d\uded2 Wed / Fri: Chats with Caroline at Pierre's Store or visits Town Square (11:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83c\udfdb\ufe0f Saturday (CC): Community Center Main Room (2:30 PM \u2013 5:00 PM) -> returns home to 1 Willow Lane; \ud83e\uddd8 Tuesday: Aerobics class in Pierre's store (1:00 PM \u2013 6:00 PM); \ud83d\uded2 Wed / Fri: Chats with Caroline at Pierre's Store or visits Town Square (11:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_kent",
@@ -8599,11 +8628,11 @@ const PERFECTION_TRACKER_DATA = {
             },
             {
                 "cond": "\ud83c\udfac Movie Theater",
-                "loc": "Movie Theater (wears disguise to movies with player)"
+                "loc": "Movie Theater (wears disguise inside theater lobby & auditorium)"
             }
         ],
         "rain": "The Sewers (24/7, sells specialty goods)",
-        "variations": "\ud83d\udc8e Friday: Sells Iridium Sprinklers; stands silently in The Sewers at all times; \ud83c\udfac Movie Theater: Movie Theater (wears disguise to movies with player)"
+        "variations": "\ud83d\udc8e Friday: Sells Iridium Sprinklers; stands silently in The Sewers at all times; \ud83c\udfac Movie Theater: Movie Theater (wears disguise inside theater lobby & auditorium)"
     },
     {
         "id": "npc_leo",
@@ -8725,8 +8754,8 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM \u2013 10:00 PM)"
             },
             {
-                "cond": "\ud83d\udccb Friday",
-                "loc": "Inspects Community Center, Town Square & Pierre's Store (12pm-4pm) -> Saloon"
+                "cond": "\ud83c\udfdb\ufe0f Friday (CC)",
+                "loc": "Community Center Vault & Office (12:00 PM \u2013 4:00 PM) -> The Stardrop Saloon"
             },
             {
                 "cond": "\u2764\ufe0f Marnie Visits",
@@ -8742,7 +8771,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM \u2013 10:00 PM)",
-        "variations": "\ud83d\udccb Friday: Inspects Community Center, Town Square & Pierre's Store (12pm-4pm) -> Saloon; \u2764\ufe0f Marnie Visits: Frequently found chatting with Marnie at her ranch or The Stardrop Saloon; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83c\udfdb\ufe0f Friday (CC): Community Center Vault & Office (12:00 PM \u2013 4:00 PM) -> The Stardrop Saloon; \u2764\ufe0f Marnie Visits: Frequently found chatting with Marnie at her ranch or The Stardrop Saloon; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_linus",
@@ -8901,7 +8930,7 @@ const PERFECTION_TRACKER_DATA = {
         "source": "\ud83c\udfe0 Trailer | \ud83c\udf82 Spring 18",
         "loved": "Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada",
         "liked": "All Fruit (except Cactus), Daffodil, Universal Likes (except Octopus/Squid)",
-        "schedule": "Trailer morning; Calico Desert Bus Stop 10:10am-5pm; The Stardrop Saloon 5pm-12am nightly.",
+        "schedule": "Trailer morning; Bus Stop 10am-5pm (once bus repaired); Stardrop Saloon 5pm-12am nightly; JojaMart (before bus).",
         "scheduleTable": [
             {
                 "time": "6:00 AM \u2013 8:30 AM",
@@ -8909,7 +8938,7 @@ const PERFECTION_TRACKER_DATA = {
             },
             {
                 "time": "8:30 AM \u2013 10:00 AM",
-                "loc": "Walks to Bus Stop "
+                "loc": "Walks to Bus Stop (or JojaMart before bus repaired)"
             },
             {
                 "time": "10:00 AM \u2013 5:00 PM",
@@ -8949,7 +8978,7 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Trailer in morning -> The Stardrop Saloon (12:00 PM \u2013 12:00 AM if Bus broken)"
             },
             {
-                "cond": "\ud83d\ude8c After Bus Repaired",
+                "cond": "\ud83d\ude8c Bus Repaired",
                 "loc": "Drives Calico Desert Bus (10:10 AM \u2013 5:00 PM) -> Saloon (5:00 PM \u2013 12:00 AM)"
             },
             {
@@ -8966,7 +8995,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Trailer in morning -> The Stardrop Saloon (12:00 PM \u2013 12:00 AM if Bus broken)",
-        "variations": "\ud83d\ude8c After Bus Repaired: Drives Calico Desert Bus (10:10 AM \u2013 5:00 PM) -> Saloon (5:00 PM \u2013 12:00 AM); \ud83e\ude7a Spring 25: Annual clinic checkup at Harvey's Medical Clinic (11:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83d\ude8c Bus Repaired: Drives Calico Desert Bus (10:10 AM \u2013 5:00 PM) -> Saloon (5:00 PM \u2013 12:00 AM); \ud83e\ude7a Spring 25: Annual clinic checkup at Harvey's Medical Clinic (11:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_pierre",
@@ -9020,8 +9049,8 @@ const PERFECTION_TRACKER_DATA = {
                 "loc": "Pierre's General Store behind counter (9:00 AM \u2013 5:00 PM)"
             },
             {
-                "cond": "\ud83d\udd12 Wednesday",
-                "loc": "Store closed until Community Center restored (visits Saloon or stays home)"
+                "cond": "\ud83c\udfdb\ufe0f CC Restored",
+                "loc": "Pierre's Store open 7 days/week (including Wed); gathers with town in CC/shrine on Sun"
             },
             {
                 "cond": "\ud83c\udf7b Evenings",
@@ -9037,7 +9066,7 @@ const PERFECTION_TRACKER_DATA = {
             }
         ],
         "rain": "Pierre's General Store behind counter (9:00 AM \u2013 5:00 PM)",
-        "variations": "\ud83d\udd12 Wednesday: Store closed until Community Center restored (visits Saloon or stays home); \ud83c\udf7b Evenings: Visits The Stardrop Saloon after 7:00 PM to socialize; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
+        "variations": "\ud83c\udfdb\ufe0f CC Restored: Pierre's Store open 7 days/week (including Wed); gathers with town in CC/shrine on Sun; \ud83c\udf7b Evenings: Visits The Stardrop Saloon after 7:00 PM to socialize; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days); \ud83c\udfac Movie Theater: Movie Theater Lobby & Auditorium (9:00 AM \u2013 9:00 PM)"
     },
     {
         "id": "npc_robin",

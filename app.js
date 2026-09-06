@@ -2467,6 +2467,7 @@ function renderTrackerGridOnly() {
           const isRain = row.cond && row.cond.includes('Rain');
           const isIsland = row.cond && row.cond.includes('Island');
           const isMovie = row.cond && (row.cond.includes('Movie') || row.cond.includes('Theater'));
+          const isCC = row.cond && (row.cond.includes('CC') || row.cond.includes('Community') || row.cond.includes('🏛️'));
           let keyColor = '#fbbf24';
           let valColor = '#fef08a';
           if (isRain) {
@@ -2478,6 +2479,9 @@ function renderTrackerGridOnly() {
           } else if (isMovie) {
             keyColor = '#f472b6';
             valColor = '#fbcfe8';
+          } else if (isCC) {
+            keyColor = '#38bdf8';
+            valColor = '#bae6fd';
           }
           altRows += `<tr><td class="t-col-key alt-cond-col" style="color: ${keyColor}; font-weight: 600;">${row.cond}</td><td class="t-col-val alt-loc-col" style="color: ${valColor};">${row.loc}</td></tr>`;
         });
@@ -2671,6 +2675,7 @@ window.openVillagerMapModal = function(villagerId, event) {
         const isRain = row.cond && row.cond.includes('Rain');
         const isIsland = row.cond && row.cond.includes('Island');
         const isMovie = row.cond && (row.cond.includes('Movie') || row.cond.includes('Theater'));
+        const isCC = row.cond && (row.cond.includes('CC') || row.cond.includes('Community') || row.cond.includes('🏛️'));
         let keyColor = '#fbbf24';
         let valColor = '#fef08a';
         if (isRain) {
@@ -2682,6 +2687,9 @@ window.openVillagerMapModal = function(villagerId, event) {
         } else if (isMovie) {
           keyColor = '#f472b6';
           valColor = '#fbcfe8';
+        } else if (isCC) {
+          keyColor = '#38bdf8';
+          valColor = '#bae6fd';
         }
         altRows += `<tr><td class="t-col-key alt-cond-col" style="color: ${keyColor}; font-weight: 600; padding: 3.5px 7px;">${row.cond}</td><td class="t-col-val alt-loc-col" style="color: ${valColor}; padding: 3.5px 7px;">${row.loc}</td></tr>`;
       });
