@@ -7032,8 +7032,26 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Pierre's living room / kitchen in morning; visits The Stardrop Saloon from 5:00 PM \u2013 9:00 PM.",
-        "variations": "Tue/Thu: Graveyard & Town bridge; Wed/Fri: Plays flute at Mountain Lake (near Mines); Sun: Outside Wizard's Tower."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Pierre's living room / kitchen in morning -> The Stardrop Saloon (5:00 PM \u2013 9:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udd04 Tue / Thu",
+                "loc": "Graveyard & Town River Bridge (1:00 PM \u2013 5:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udd04 Wed / Fri",
+                "loc": "Plays flute at Mountain Lake & Bridge near Mines (1:00 PM \u2013 5:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udd04 Sunday",
+                "loc": "Stands outside Wizard's Tower in Cindersap Forest (1:30 PM \u2013 7:00 PM)"
+            }
+        ],
+        "rain": "Pierre's living room / kitchen in morning -> The Stardrop Saloon (5:00 PM \u2013 9:00 PM)",
+        "variations": "\ud83d\udd04 Tue / Thu: Graveyard & Town River Bridge (1:00 PM \u2013 5:00 PM); \ud83d\udd04 Wed / Fri: Plays flute at Mountain Lake & Bridge near Mines (1:00 PM \u2013 5:00 PM); \ud83d\udd04 Sunday: Stands outside Wizard's Tower in Cindersap Forest (1:30 PM \u2013 7:00 PM)"
     },
     {
         "id": "npc_emily",
@@ -7081,8 +7099,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Same routine (sews in 2 Willow Lane, works at Stardrop Saloon 4:00 PM \u2013 12:30 AM).",
-        "variations": "Tuesday: Aerobics class at Pierre's Store (4pm-6pm) before Saloon; Winter 11: Annual clinic checkup (10:30am-4pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Same routine (sewing at 2 Willow Lane -> Stardrop Saloon 4:00 PM \u2013 12:30 AM)"
+            },
+            {
+                "cond": "\ud83d\udd04 Tuesday",
+                "loc": "Aerobics class in Pierre's General Store (4:00 PM \u2013 6:00 PM) before Saloon"
+            },
+            {
+                "cond": "\ud83e\ude7a Winter 11",
+                "loc": "Annual clinic checkup at Harvey's Medical Clinic (10:30 AM \u2013 4:00 PM)"
+            }
+        ],
+        "rain": "Same routine (sewing at 2 Willow Lane -> Stardrop Saloon 4:00 PM \u2013 12:30 AM)",
+        "variations": "\ud83d\udd04 Tuesday: Aerobics class in Pierre's General Store (4:00 PM \u2013 6:00 PM) before Saloon; \ud83e\ude7a Winter 11: Annual clinic checkup at Harvey's Medical Clinic (10:30 AM \u2013 4:00 PM)"
     },
     {
         "id": "npc_haley",
@@ -7130,8 +7162,26 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 46.0
             }
         ],
-        "rain": "Stays home at 2 Willow Lane all day (living room / bedroom).",
-        "variations": "Sunny (Spring/Fall): Photography near Marnie's river (11am-4:30pm); Summer: Beach dock / Playground fountain."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Stays home at 2 Willow Lane all day (living room / bedroom)"
+            },
+            {
+                "cond": "\ud83d\udcf8 Spring / Fall",
+                "loc": "Takes photos near Marnie's Ranch river & Cindersap Forest (11:00 AM \u2013 4:30 PM)"
+            },
+            {
+                "cond": "\u2600\ufe0f Summer",
+                "loc": "Sunbathes by Beach pier (10:30 AM \u2013 4:00 PM) or Town Playground fountain"
+            },
+            {
+                "cond": "\ud83e\ude7a Winter 9",
+                "loc": "Annual clinic checkup at Harvey's Medical Clinic (11:00 AM \u2013 4:00 PM)"
+            }
+        ],
+        "rain": "Stays home at 2 Willow Lane all day (living room / bedroom)",
+        "variations": "\ud83d\udcf8 Spring / Fall: Takes photos near Marnie's Ranch river & Cindersap Forest (11:00 AM \u2013 4:30 PM); \u2600\ufe0f Summer: Sunbathes by Beach pier (10:30 AM \u2013 4:00 PM) or Town Playground fountain; \ud83e\ude7a Winter 9: Annual clinic checkup at Harvey's Medical Clinic (11:00 AM \u2013 4:00 PM)"
     },
     {
         "id": "npc_leah",
@@ -7180,8 +7230,26 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Inside Cindersap Cottage sculpting or visits The Stardrop Saloon (4:00 PM \u2013 11:30 PM).",
-        "variations": "Monday: Groceries at Pierre's Store (11am-5pm); Summer: Sunbathes on Beach dock (12pm-7pm); Fri/Sat: Saloon (4pm-11:30pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside Cindersap Cottage sculpting -> The Stardrop Saloon (4:00 PM \u2013 11:30 PM)"
+            },
+            {
+                "cond": "\ud83d\uded2 Monday",
+                "loc": "Buys groceries at Pierre's General Store (11:00 AM \u2013 5:00 PM)"
+            },
+            {
+                "cond": "\u2600\ufe0f Summer (Sunny)",
+                "loc": "Sunbathes on The Beach dock / pier (12:00 PM \u2013 7:00 PM)"
+            },
+            {
+                "cond": "\ud83c\udf7b Fri / Sat",
+                "loc": "Spends evenings socializing at The Stardrop Saloon (4:00 PM \u2013 11:30 PM)"
+            }
+        ],
+        "rain": "Inside Cindersap Cottage sculpting -> The Stardrop Saloon (4:00 PM \u2013 11:30 PM)",
+        "variations": "\ud83d\uded2 Monday: Buys groceries at Pierre's General Store (11:00 AM \u2013 5:00 PM); \u2600\ufe0f Summer (Sunny): Sunbathes on The Beach dock / pier (12:00 PM \u2013 7:00 PM); \ud83c\udf7b Fri / Sat: Spends evenings socializing at The Stardrop Saloon (4:00 PM \u2013 11:30 PM)"
     },
     {
         "id": "npc_maru",
@@ -7234,8 +7302,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 45.0
             }
         ],
-        "rain": "Stays inside Mountain Lab / bedroom tinkering with gadgets all day.",
-        "variations": "Tuesday & Thursday: Works as nurse at Harvey's Clinic (9am-4:50pm); Sunny: Looks through telescope or Community Center bench."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside Mountain Lab / bedroom tinkering with gadgets all day"
+            },
+            {
+                "cond": "\ud83e\ude7a Tue / Thu",
+                "loc": "Works as nurse at Harvey's Medical Clinic (9:00 AM \u2013 4:50 PM)"
+            },
+            {
+                "cond": "\ud83d\udd2d Sunny Days",
+                "loc": "Looks through Telescope outside Lab or sits on Town / Community Center bench"
+            }
+        ],
+        "rain": "Inside Mountain Lab / bedroom tinkering with gadgets all day",
+        "variations": "\ud83e\ude7a Tue / Thu: Works as nurse at Harvey's Medical Clinic (9:00 AM \u2013 4:50 PM); \ud83d\udd2d Sunny Days: Looks through Telescope outside Lab or sits on Town / Community Center bench"
     },
     {
         "id": "npc_penny",
@@ -7288,8 +7370,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 48.0
             }
         ],
-        "rain": "Inside Trailer doing chores or visits Museum/Library with umbrella.",
-        "variations": "Tue/Wed/Fri: Tutors Jas & Vincent at Museum (9am-2pm) then Playground; Saturday: Takes kids to Town bridge (10am-5pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside Trailer doing chores or visits Museum/Library with umbrella"
+            },
+            {
+                "cond": "\ud83d\udcda Tue / Wed / Fri",
+                "loc": "Tutors Jas & Vincent at Museum (9:00 AM \u2013 2:00 PM) then walks to Town Playground"
+            },
+            {
+                "cond": "\ud83d\udd04 Saturday",
+                "loc": "Takes Jas & Vincent to Town Playground & river bridge (10:00 AM \u2013 5:00 PM)"
+            }
+        ],
+        "rain": "Inside Trailer doing chores or visits Museum/Library with umbrella",
+        "variations": "\ud83d\udcda Tue / Wed / Fri: Tutors Jas & Vincent at Museum (9:00 AM \u2013 2:00 PM) then walks to Town Playground; \ud83d\udd04 Saturday: Takes Jas & Vincent to Town Playground & river bridge (10:00 AM \u2013 5:00 PM)"
     },
     {
         "id": "npc_alex",
@@ -7342,8 +7438,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 80.0
             }
         ],
-        "rain": "Stays inside 1 River Road all day (bookshelf in bedroom / lifting weights).",
-        "variations": "Summer (Sunny): Works Ice Cream Stand (12pm-4pm) or Beach sunbathing; Winter: Works out at Spa/Bathhouse (2pm-6pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside 1 River Road (bookshelf in bedroom / lifting weights all day)"
+            },
+            {
+                "cond": "\u2600\ufe0f Summer (Sunny)",
+                "loc": "Works Ice Cream Stand by Museum (12:00 PM \u2013 4:00 PM) or Beach sunbathing"
+            },
+            {
+                "cond": "\u2744\ufe0f Winter",
+                "loc": "Works out inside the Spa/Bathhouse in the Mountains (2:00 PM \u2013 6:00 PM)"
+            }
+        ],
+        "rain": "Inside 1 River Road (bookshelf in bedroom / lifting weights all day)",
+        "variations": "\u2600\ufe0f Summer (Sunny): Works Ice Cream Stand by Museum (12:00 PM \u2013 4:00 PM) or Beach sunbathing; \u2744\ufe0f Winter: Works out inside the Spa/Bathhouse in the Mountains (2:00 PM \u2013 6:00 PM)"
     },
     {
         "id": "npc_elliott",
@@ -7396,8 +7506,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Inside Beach Cabin writing, or walks to Museum / Library (3:00 PM \u2013 6:00 PM).",
-        "variations": "Friday: Walks to The Stardrop Saloon (8pm-11:40pm); Sunday: Beach campfire & Forest river bridge."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside Beach Cabin writing, or walks to Museum / Library (3:00 PM \u2013 6:00 PM)"
+            },
+            {
+                "cond": "\ud83c\udf7b Friday",
+                "loc": "Walks to The Stardrop Saloon (8:00 PM \u2013 11:40 PM)"
+            },
+            {
+                "cond": "\ud83d\udd04 Sunday",
+                "loc": "Stands by Beach campfire & Cindersap Forest river bridge (1:00 PM \u2013 6:00 PM)"
+            }
+        ],
+        "rain": "Inside Beach Cabin writing, or walks to Museum / Library (3:00 PM \u2013 6:00 PM)",
+        "variations": "\ud83c\udf7b Friday: Walks to The Stardrop Saloon (8:00 PM \u2013 11:40 PM); \ud83d\udd04 Sunday: Stands by Beach campfire & Cindersap Forest river bridge (1:00 PM \u2013 6:00 PM)"
     },
     {
         "id": "npc_harvey",
@@ -7450,8 +7574,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Works at Medical Clinic all day or visits The Stardrop Saloon (5:30 PM \u2013 10:00 PM).",
-        "variations": "Tuesday & Thursday: Full-day medical appointments at Clinic (8am-6pm); Fri/Sat: Museum reading or Town Park."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Medical Clinic all day -> The Stardrop Saloon (5:30 PM \u2013 10:00 PM)"
+            },
+            {
+                "cond": "\ud83e\ude7a Tue / Thu",
+                "loc": "Conducts patient checkups at Medical Clinic (8:00 AM \u2013 6:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udd04 Fri / Sat",
+                "loc": "Reads at Museum / Library or sits on Town Park bridge (12:00 PM \u2013 5:30 PM)"
+            }
+        ],
+        "rain": "Medical Clinic all day -> The Stardrop Saloon (5:30 PM \u2013 10:00 PM)",
+        "variations": "\ud83e\ude7a Tue / Thu: Conducts patient checkups at Medical Clinic (8:00 AM \u2013 6:00 PM); \ud83d\udd04 Fri / Sat: Reads at Museum / Library or sits on Town Park bridge (12:00 PM \u2013 5:30 PM)"
     },
     {
         "id": "npc_sam",
@@ -7509,8 +7647,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Inside 1 Willow Lane (plays guitar) or Stardrop Saloon with Sebastian (3:00 PM \u2013 9:00 PM).",
-        "variations": "Weekdays: Works at JojaMart / Museum (12:50pm-4pm); Friday: Band practice & Saloon pool/arcade (3pm-9pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside 1 Willow Lane (plays guitar) -> Stardrop Saloon with Sebastian (3:00 PM \u2013 9:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udcbc Weekdays",
+                "loc": "Works part-time at JojaMart / Museum (12:50 PM \u2013 4:00 PM)"
+            },
+            {
+                "cond": "\ud83c\udfb8 Friday",
+                "loc": "Band practice at 1 Willow Lane -> Stardrop Saloon pool & arcade (3:00 PM \u2013 9:00 PM)"
+            }
+        ],
+        "rain": "Inside 1 Willow Lane (plays guitar) -> Stardrop Saloon with Sebastian (3:00 PM \u2013 9:00 PM)",
+        "variations": "\ud83d\udcbc Weekdays: Works part-time at JojaMart / Museum (12:50 PM \u2013 4:00 PM); \ud83c\udfb8 Friday: Band practice at 1 Willow Lane -> Stardrop Saloon pool & arcade (3:00 PM \u2013 9:00 PM)"
     },
     {
         "id": "npc_sebastian",
@@ -7559,8 +7711,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Walks to Beach pier/dock or Mountain Lake & Railroad tracks (all day).",
-        "variations": "Friday: Stardrop Saloon pool & arcade with Sam (3pm-9:30pm); Saturday: Sam's house band practice (11:30am-6pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Walks to The Beach pier/dock or Mountain Lake & Railroad tracks (all day)"
+            },
+            {
+                "cond": "\ud83c\udfb1 Friday",
+                "loc": "Plays pool & arcade games with Sam at The Stardrop Saloon (3:00 PM \u2013 9:30 PM)"
+            },
+            {
+                "cond": "\ud83c\udfb8 Saturday",
+                "loc": "Visits Sam's house (1 Willow Lane) for band practice (11:30 AM \u2013 6:00 PM)"
+            }
+        ],
+        "rain": "Walks to The Beach pier/dock or Mountain Lake & Railroad tracks (all day)",
+        "variations": "\ud83c\udfb1 Friday: Plays pool & arcade games with Sam at The Stardrop Saloon (3:00 PM \u2013 9:30 PM); \ud83c\udfb8 Saturday: Visits Sam's house (1 Willow Lane) for band practice (11:30 AM \u2013 6:00 PM)"
     },
     {
         "id": "npc_shane",
@@ -7609,8 +7775,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Works at JojaMart (9am-5pm) or Marnie's Ranch, then Stardrop Saloon (5:00 PM \u2013 11:00 PM).",
-        "variations": "If Joja Closed: Tends chickens at Marnie's Ranch all day; Weekends: Marnie's Ranch before evening Saloon visit."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Works at JojaMart (9am-5pm) or Marnie's Ranch -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udc14 If Joja Closed",
+                "loc": "Tends chickens at Marnie's Ranch all day -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udd04 Weekends",
+                "loc": "Stays around Marnie's Ranch before heading to Saloon at 5:00 PM"
+            }
+        ],
+        "rain": "Works at JojaMart (9am-5pm) or Marnie's Ranch -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)",
+        "variations": "\ud83d\udc14 If Joja Closed: Tends chickens at Marnie's Ranch all day -> Stardrop Saloon (5:00 PM \u2013 11:00 PM); \ud83d\udd04 Weekends: Stays around Marnie's Ranch before heading to Saloon at 5:00 PM"
     },
     {
         "id": "npc_caroline",
@@ -7658,8 +7838,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 46.0
             }
         ],
-        "rain": "Pierre's Store kitchen / living room doing chores all day.",
-        "variations": "Tuesday: Aerobics class in Pierre's store (1pm-4pm); Sunny: Sunroom in back of Pierre's or Community Center tree."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Pierre's Store kitchen / living room doing chores all day"
+            },
+            {
+                "cond": "\ud83e\uddd8 Tuesday",
+                "loc": "Aerobics class in Pierre's store room (1:00 PM \u2013 4:00 PM)"
+            },
+            {
+                "cond": "\ud83c\udf3f Sunny Days",
+                "loc": "Private Sunroom in back of Pierre's Store or under Community Center tree"
+            }
+        ],
+        "rain": "Pierre's Store kitchen / living room doing chores all day",
+        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's store room (1:00 PM \u2013 4:00 PM); \ud83c\udf3f Sunny Days: Private Sunroom in back of Pierre's Store or under Community Center tree"
     },
     {
         "id": "npc_clint",
@@ -7707,8 +7901,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Works Blacksmith shop (9:00 AM \u2013 4:00 PM) then Stardrop Saloon (5:00 PM \u2013 12:00 AM).",
-        "variations": "Friday (CC Done): Blacksmith closed, sits in Community Center Boiler Room; Winter 16: Clinic checkup (8:30am-4pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Works Blacksmith shop (9:00 AM \u2013 4:00 PM) -> Stardrop Saloon (5:00 PM \u2013 12:00 AM)"
+            },
+            {
+                "cond": "\ud83d\udd27 Friday (CC Done)",
+                "loc": "Blacksmith closed; spends day inside Community Center Boiler Room"
+            },
+            {
+                "cond": "\ud83e\ude7a Winter 16",
+                "loc": "Annual clinic checkup at Harvey's Medical Clinic (8:30 AM \u2013 4:00 PM)"
+            }
+        ],
+        "rain": "Works Blacksmith shop (9:00 AM \u2013 4:00 PM) -> Stardrop Saloon (5:00 PM \u2013 12:00 AM)",
+        "variations": "\ud83d\udd27 Friday (CC Done): Blacksmith closed; spends day inside Community Center Boiler Room; \ud83e\ude7a Winter 16: Annual clinic checkup at Harvey's Medical Clinic (8:30 AM \u2013 4:00 PM)"
     },
     {
         "id": "npc_demetrius",
@@ -7761,8 +7969,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Mountain Lab studying specimens all day.",
-        "variations": "Friday: Dances with Robin at The Stardrop Saloon (6pm-9pm); Summer: Observes fountain near Railroad or Mountain Lake."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Mountain Lab studying specimens all day"
+            },
+            {
+                "cond": "\ud83d\udc83 Friday",
+                "loc": "Dances with Robin at The Stardrop Saloon (6:00 PM \u2013 9:00 PM)"
+            },
+            {
+                "cond": "\u2600\ufe0f Summer",
+                "loc": "Observes fountain near Railroad/Spa or Mountain Lake (11:00 AM \u2013 7:00 PM)"
+            }
+        ],
+        "rain": "Mountain Lab studying specimens all day",
+        "variations": "\ud83d\udc83 Friday: Dances with Robin at The Stardrop Saloon (6:00 PM \u2013 9:00 PM); \u2600\ufe0f Summer: Observes fountain near Railroad/Spa or Mountain Lake (11:00 AM \u2013 7:00 PM)"
     },
     {
         "id": "npc_dwarf",
@@ -7793,8 +8015,18 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 18.0
             }
         ],
-        "rain": "Eastern Mines Entrance (24/7, never leaves).",
-        "variations": "Always inside the Eastern Mines entrance behind the breakable stone wall."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside Eastern Mines Entrance (24/7, never leaves)"
+            },
+            {
+                "cond": "\u26cf\ufe0f All Times",
+                "loc": "Always inside the Eastern Mines entrance behind the destructible stone wall"
+            }
+        ],
+        "rain": "Inside Eastern Mines Entrance (24/7, never leaves)",
+        "variations": "\u26cf\ufe0f All Times: Always inside the Eastern Mines entrance behind the destructible stone wall"
     },
     {
         "id": "npc_evelyn",
@@ -7838,8 +8070,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 47.0
             }
         ],
-        "rain": "Inside 1 River Road (kitchen / living room baking cookies) all day.",
-        "variations": "Sunny: Tends town flower gardens near Saloon & Community Center (12pm-4:30pm); Tue/Thu: Visits Clinic or stays home."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside 1 River Road (kitchen / living room baking cookies) all day"
+            },
+            {
+                "cond": "\ud83c\udf38 Sunny Days",
+                "loc": "Tends town flower gardens near Saloon & Community Center (12:00 PM \u2013 4:30 PM)"
+            },
+            {
+                "cond": "\ud83e\ude7a Tue / Thu",
+                "loc": "Visits Harvey's Medical Clinic or stays home at 1 River Road"
+            }
+        ],
+        "rain": "Inside 1 River Road (kitchen / living room baking cookies) all day",
+        "variations": "\ud83c\udf38 Sunny Days: Tends town flower gardens near Saloon & Community Center (12:00 PM \u2013 4:30 PM); \ud83e\ude7a Tue / Thu: Visits Harvey's Medical Clinic or stays home at 1 River Road"
     },
     {
         "id": "npc_george",
@@ -7883,8 +8129,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 45.5
             }
         ],
-        "rain": "Inside 1 River Road watching TV in living room all day.",
-        "variations": "Sunny: Outside 1 River Road (12pm-3pm) or near Community Center; Sunday: Yoba shrine at Pierre's Store (8am-2pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside 1 River Road watching TV in living room all day"
+            },
+            {
+                "cond": "\u2600\ufe0f Sunny Days",
+                "loc": "Sits in wheelchair outside 1 River Road (12:00 PM \u2013 3:00 PM) or by Community Center"
+            },
+            {
+                "cond": "\u26ea Sunday",
+                "loc": "Yoba shrine in back room of Pierre's General Store (8:00 AM \u2013 2:00 PM)"
+            }
+        ],
+        "rain": "Inside 1 River Road watching TV in living room all day",
+        "variations": "\u2600\ufe0f Sunny Days: Sits in wheelchair outside 1 River Road (12:00 PM \u2013 3:00 PM) or by Community Center; \u26ea Sunday: Yoba shrine in back room of Pierre's General Store (8:00 AM \u2013 2:00 PM)"
     },
     {
         "id": "npc_gus",
@@ -7919,8 +8179,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "The Stardrop Saloon (12:00 PM \u2013 12:00 AM).",
-        "variations": "Morning: Buys groceries at Pierre's Store (8:30am-10:30am); Sunny Days: May occasionally visit Ginger Island Resort bar."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Inside The Stardrop Saloon (12:00 PM \u2013 12:00 AM)"
+            },
+            {
+                "cond": "\ud83d\uded2 Weekday Morning",
+                "loc": "Buys groceries at Pierre's General Store (8:30 AM \u2013 10:30 AM)"
+            },
+            {
+                "cond": "\ud83c\udf34 Ginger Island",
+                "loc": "May randomly visit Ginger Island Resort on sunny days (tends beach bar)"
+            }
+        ],
+        "rain": "Inside The Stardrop Saloon (12:00 PM \u2013 12:00 AM)",
+        "variations": "\ud83d\uded2 Weekday Morning: Buys groceries at Pierre's General Store (8:30 AM \u2013 10:30 AM); \ud83c\udf34 Ginger Island: May randomly visit Ginger Island Resort on sunny days (tends beach bar)"
     },
     {
         "id": "npc_jas",
@@ -7973,8 +8247,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 67.0
             }
         ],
-        "rain": "Marnie's Ranch bedroom / living room with Marnie all day.",
-        "variations": "Tue/Wed/Fri: School at Museum with Penny (9am-2pm) then Playground; Sat/Sun: Jump rope by Cindersap Forest pond (11am-4pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Marnie's Ranch bedroom / living room with Marnie all day"
+            },
+            {
+                "cond": "\ud83d\udcda Tue / Wed / Fri",
+                "loc": "School lessons at Museum with Penny (9:00 AM \u2013 2:00 PM) then Playground"
+            },
+            {
+                "cond": "\ud83e\udea2 Sat / Sun",
+                "loc": "Jump roping under large oak tree near Cindersap Forest pond (11:00 AM \u2013 4:00 PM)"
+            }
+        ],
+        "rain": "Marnie's Ranch bedroom / living room with Marnie all day",
+        "variations": "\ud83d\udcda Tue / Wed / Fri: School lessons at Museum with Penny (9:00 AM \u2013 2:00 PM) then Playground; \ud83e\udea2 Sat / Sun: Jump roping under large oak tree near Cindersap Forest pond (11:00 AM \u2013 4:00 PM)"
     },
     {
         "id": "npc_jodi",
@@ -8027,8 +8315,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 46.0
             }
         ],
-        "rain": "1 Willow Lane kitchen / living room doing laundry & chores.",
-        "variations": "Tuesday: Aerobics class in Pierre's store (1pm-6pm); Wed/Fri: Chats at Pierre's store or JojaMart (11:30am-4pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "1 Willow Lane kitchen / living room doing laundry & chores"
+            },
+            {
+                "cond": "\ud83e\uddd8 Tuesday",
+                "loc": "Aerobics class in Pierre's store (1:00 PM \u2013 6:00 PM)"
+            },
+            {
+                "cond": "\ud83d\uded2 Wed / Fri",
+                "loc": "Chats with Caroline at Pierre's Store or visits JojaMart (11:30 AM \u2013 4:00 PM)"
+            }
+        ],
+        "rain": "1 Willow Lane kitchen / living room doing laundry & chores",
+        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's store (1:00 PM \u2013 6:00 PM); \ud83d\uded2 Wed / Fri: Chats with Caroline at Pierre's Store or visits JojaMart (11:30 AM \u2013 4:00 PM)"
     },
     {
         "id": "npc_kent",
@@ -8081,8 +8383,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "1 Willow Lane living room listening to radio all day.",
-        "variations": "Sunny: Stands under willow tree near house (10:30am-2pm) or Town river bridge; (Note: Arrives Spring 1, Year 2)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "1 Willow Lane living room listening to radio all day"
+            },
+            {
+                "cond": "\ud83c\udf33 Sunny Days",
+                "loc": "Stands under willow tree near house (10:30 AM \u2013 2:00 PM) or Town river bridge"
+            },
+            {
+                "cond": "\ud83d\uddd3\ufe0f Arrives Year 2",
+                "loc": "Returns home from service on Spring 1, Year 2"
+            }
+        ],
+        "rain": "1 Willow Lane living room listening to radio all day",
+        "variations": "\ud83c\udf33 Sunny Days: Stands under willow tree near house (10:30 AM \u2013 2:00 PM) or Town river bridge; \ud83d\uddd3\ufe0f Arrives Year 2: Returns home from service on Spring 1, Year 2"
     },
     {
         "id": "npc_krobus",
@@ -8113,8 +8429,18 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 66.0
             }
         ],
-        "rain": "The Sewers (24/7, sells specialty goods).",
-        "variations": "Always located in the Sewers; on Fridays sells Iridium Sprinklers."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "The Sewers (24/7, sells specialty goods)"
+            },
+            {
+                "cond": "\ud83d\udc8e Friday",
+                "loc": "Sells Iridium Sprinklers; stands silently in The Sewers at all times"
+            }
+        ],
+        "rain": "The Sewers (24/7, sells specialty goods)",
+        "variations": "\ud83d\udc8e Friday: Sells Iridium Sprinklers; stands silently in The Sewers at all times"
     },
     {
         "id": "npc_leo",
@@ -8158,8 +8484,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 20.0
             }
         ],
-        "rain": "Island Hut canopy / Mountain treehouse (if moved to Valley).",
-        "variations": "Before 6-Hearts: Ginger Island Jungle & Docks; After 6-Hearts: Treehouse in Mountains next to Linus's tent."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Island Hut canopy / Mountain treehouse (if moved to Valley)"
+            },
+            {
+                "cond": "\ud83e\udd9c Before 6 Hearts",
+                "loc": "Ginger Island Jungle Hut, Island Docks, and Beach (all day)"
+            },
+            {
+                "cond": "\ud83c\udfe1 After 6 Hearts",
+                "loc": "Treehouse in the Mountains next to Linus's tent (attends Museum school on Sun)"
+            }
+        ],
+        "rain": "Island Hut canopy / Mountain treehouse (if moved to Valley)",
+        "variations": "\ud83e\udd9c Before 6 Hearts: Ginger Island Jungle Hut, Island Docks, and Beach (all day); \ud83c\udfe1 After 6 Hearts: Treehouse in the Mountains next to Linus's tent (attends Museum school on Sun)"
     },
     {
         "id": "npc_lewis",
@@ -8212,8 +8552,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM \u2013 10:00 PM).",
-        "variations": "Friday: Inspects CC & Pierre's Store (12pm-4pm) then Saloon; Visits Marnie at her ranch or Saloon regularly."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM \u2013 10:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udccb Friday",
+                "loc": "Inspects Community Center, Town Square & Pierre's Store (12pm-4pm) -> Saloon"
+            },
+            {
+                "cond": "\u2764\ufe0f Marnie Visits",
+                "loc": "Frequently found chatting with Marnie at her ranch or The Stardrop Saloon"
+            }
+        ],
+        "rain": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM \u2013 10:00 PM)",
+        "variations": "\ud83d\udccb Friday: Inspects Community Center, Town Square & Pierre's Store (12pm-4pm) -> Saloon; \u2764\ufe0f Marnie Visits: Frequently found chatting with Marnie at her ranch or The Stardrop Saloon"
     },
     {
         "id": "npc_linus",
@@ -8266,8 +8620,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 14.0
             }
         ],
-        "rain": "Mountain tent or stands under large pine tree near Lake.",
-        "variations": "Summer: Lake & Railroad fireside (11am-7pm); Winter: Warms up inside Spa/Bathhouse lobby (2pm-7pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Mountain tent or stands under large pine tree near Lake"
+            },
+            {
+                "cond": "\u2600\ufe0f Summer",
+                "loc": "Sits by Mountain Lake & Railroad fireside (11:00 AM \u2013 7:00 PM)"
+            },
+            {
+                "cond": "\u2744\ufe0f Winter",
+                "loc": "Warms up inside Spa/Bathhouse entrance lobby (2:00 PM \u2013 7:00 PM)"
+            }
+        ],
+        "rain": "Mountain tent or stands under large pine tree near Lake",
+        "variations": "\u2600\ufe0f Summer: Sits by Mountain Lake & Railroad fireside (11:00 AM \u2013 7:00 PM); \u2744\ufe0f Winter: Warms up inside Spa/Bathhouse entrance lobby (2:00 PM \u2013 7:00 PM)"
     },
     {
         "id": "npc_marnie",
@@ -8320,8 +8688,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Marnie's Ranch living room / tending farm animals.",
-        "variations": "Mon/Tue: Shop closed (Tue: Aerobics at Pierre's 1pm-6pm); Evenings: The Stardrop Saloon with Lewis (7pm-11pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Marnie's Ranch living room / tending farm animals"
+            },
+            {
+                "cond": "\ud83d\udd12 Mon / Tue",
+                "loc": "Ranch shop closed (Tue: Aerobics at Pierre's 1:00 PM \u2013 6:00 PM)"
+            },
+            {
+                "cond": "\ud83c\udf7b Evenings",
+                "loc": "Visits The Stardrop Saloon with Mayor Lewis (7:00 PM \u2013 11:00 PM)"
+            }
+        ],
+        "rain": "Marnie's Ranch living room / tending farm animals",
+        "variations": "\ud83d\udd12 Mon / Tue: Ranch shop closed (Tue: Aerobics at Pierre's 1:00 PM \u2013 6:00 PM); \ud83c\udf7b Evenings: Visits The Stardrop Saloon with Mayor Lewis (7:00 PM \u2013 11:00 PM)"
     },
     {
         "id": "npc_pam",
@@ -8374,8 +8756,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Trailer in morning, then The Stardrop Saloon (12:00 PM \u2013 12:00 AM if Bus broken).",
-        "variations": "After Bus Repaired: Calico Desert Bus (10:10am-5pm) then Saloon (5pm-12am); Spring 25: Clinic checkup (11:30am-4pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Trailer in morning -> The Stardrop Saloon (12:00 PM \u2013 12:00 AM if Bus broken)"
+            },
+            {
+                "cond": "\ud83d\ude8c After Bus Repaired",
+                "loc": "Drives Calico Desert Bus (10:10 AM \u2013 5:00 PM) -> Saloon (5:00 PM \u2013 12:00 AM)"
+            },
+            {
+                "cond": "\ud83e\ude7a Spring 25",
+                "loc": "Annual clinic checkup at Harvey's Medical Clinic (11:30 AM \u2013 4:00 PM)"
+            }
+        ],
+        "rain": "Trailer in morning -> The Stardrop Saloon (12:00 PM \u2013 12:00 AM if Bus broken)",
+        "variations": "\ud83d\ude8c After Bus Repaired: Drives Calico Desert Bus (10:10 AM \u2013 5:00 PM) -> Saloon (5:00 PM \u2013 12:00 AM); \ud83e\ude7a Spring 25: Annual clinic checkup at Harvey's Medical Clinic (11:30 AM \u2013 4:00 PM)"
     },
     {
         "id": "npc_pierre",
@@ -8423,8 +8819,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Pierre's General Store behind counter (9:00 AM \u2013 5:00 PM).",
-        "variations": "Wednesday: Store closed until CC completed (visits Saloon or stays home); Evenings: The Stardrop Saloon after 7pm."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Pierre's General Store behind counter (9:00 AM \u2013 5:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udd12 Wednesday",
+                "loc": "Store closed until Community Center restored (visits Saloon or stays home)"
+            },
+            {
+                "cond": "\ud83c\udf7b Evenings",
+                "loc": "Visits The Stardrop Saloon after 7:00 PM to socialize"
+            }
+        ],
+        "rain": "Pierre's General Store behind counter (9:00 AM \u2013 5:00 PM)",
+        "variations": "\ud83d\udd12 Wednesday: Store closed until Community Center restored (visits Saloon or stays home); \ud83c\udf7b Evenings: Visits The Stardrop Saloon after 7:00 PM to socialize"
     },
     {
         "id": "npc_robin",
@@ -8477,8 +8887,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Carpenter's Shop behind counter (9:00 AM \u2013 5:00 PM).",
-        "variations": "Tuesday: Shop closed, aerobics at Pierre's (1pm-6pm); Friday: Dances with Demetrius at Saloon (6pm-9pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Carpenter's Shop behind counter (9:00 AM \u2013 5:00 PM)"
+            },
+            {
+                "cond": "\ud83e\uddd8 Tuesday",
+                "loc": "Carpenter Shop closed; attends aerobics at Pierre's Store (1:00 PM \u2013 6:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udc83 Friday",
+                "loc": "Dances with Demetrius at The Stardrop Saloon (6:00 PM \u2013 9:00 PM)"
+            }
+        ],
+        "rain": "Carpenter's Shop behind counter (9:00 AM \u2013 5:00 PM)",
+        "variations": "\ud83e\uddd8 Tuesday: Carpenter Shop closed; attends aerobics at Pierre's Store (1:00 PM \u2013 6:00 PM); \ud83d\udc83 Friday: Dances with Demetrius at The Stardrop Saloon (6:00 PM \u2013 9:00 PM)"
     },
     {
         "id": "npc_sandy",
@@ -8513,8 +8937,18 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 15.0
             }
         ],
-        "rain": "Oasis Store in Calico Desert (9:00 AM \u2013 11:50 PM, 7 days/week).",
-        "variations": "Always inside the Oasis shop; Emily visits her on Fall 15 (Sandy's birthday)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Oasis Store in Calico Desert (9:00 AM \u2013 11:50 PM, 7 days/week)"
+            },
+            {
+                "cond": "\ud83c\udf35 All Times",
+                "loc": "Always inside the Oasis shop; Emily visits her on Fall 15 (Sandy's birthday)"
+            }
+        ],
+        "rain": "Oasis Store in Calico Desert (9:00 AM \u2013 11:50 PM, 7 days/week)",
+        "variations": "\ud83c\udf35 All Times: Always inside the Oasis shop; Emily visits her on Fall 15 (Sandy's birthday)"
     },
     {
         "id": "npc_vincent",
@@ -8567,8 +9001,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 80.0
             }
         ],
-        "rain": "1 Willow Lane living room playing with toys all day.",
-        "variations": "Tue/Wed/Fri: School at Museum with Penny (9am-2pm) then Playground; Summer (Sunny): Plays in Beach sandbox (10am-5pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "1 Willow Lane living room playing with toys all day"
+            },
+            {
+                "cond": "\ud83d\udcda Tue / Wed / Fri",
+                "loc": "Museum school lessons with Penny (9:00 AM \u2013 2:00 PM) then Town Playground"
+            },
+            {
+                "cond": "\ud83c\udfd6\ufe0f Summer (Sunny)",
+                "loc": "Plays in Beach sandbox near pier (10:00 AM \u2013 5:00 PM)"
+            }
+        ],
+        "rain": "1 Willow Lane living room playing with toys all day",
+        "variations": "\ud83d\udcda Tue / Wed / Fri: Museum school lessons with Penny (9:00 AM \u2013 2:00 PM) then Town Playground; \ud83c\udfd6\ufe0f Summer (Sunny): Plays in Beach sandbox near pier (10:00 AM \u2013 5:00 PM)"
     },
     {
         "id": "npc_willy",
@@ -8612,8 +9060,22 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 54.0
             }
         ],
-        "rain": "Fishes off Beach dock / pier outside shop all day or inside shop.",
-        "variations": "Saturday: Fish Shop closed, fishes along Beach shore & dock; Evenings: The Stardrop Saloon (6pm-11pm)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Fishes off Beach dock / pier outside shop all day or inside shop"
+            },
+            {
+                "cond": "\ud83c\udfa3 Saturday",
+                "loc": "Fish Shop closed; spends entire day fishing along Beach shore & dock"
+            },
+            {
+                "cond": "\ud83c\udf7b Evenings",
+                "loc": "Visits The Stardrop Saloon (6:00 PM \u2013 11:00 PM) for a pint"
+            }
+        ],
+        "rain": "Fishes off Beach dock / pier outside shop all day or inside shop",
+        "variations": "\ud83c\udfa3 Saturday: Fish Shop closed; spends entire day fishing along Beach shore & dock; \ud83c\udf7b Evenings: Visits The Stardrop Saloon (6:00 PM \u2013 11:00 PM) for a pint"
     },
     {
         "id": "npc_wizard",
@@ -8644,8 +9106,18 @@ const PERFECTION_TRACKER_DATA = {
                 "y": 68.0
             }
         ],
-        "rain": "Wizard's Tower in Cindersap Forest West (6:00 AM \u2013 11:00 PM).",
-        "variations": "Always inside the Wizard's Tower behind the cauldron/spell circle (except festival days)."
+        "altTable": [
+            {
+                "cond": "\ud83c\udf27\ufe0f Rainy Days",
+                "loc": "Wizard's Tower in Cindersap Forest West (6:00 AM \u2013 11:00 PM)"
+            },
+            {
+                "cond": "\ud83d\udd2e All Times",
+                "loc": "Always inside Wizard's Tower behind cauldron / magic circle (except festival days)"
+            }
+        ],
+        "rain": "Wizard's Tower in Cindersap Forest West (6:00 AM \u2013 11:00 PM)",
+        "variations": "\ud83d\udd2e All Times: Always inside Wizard's Tower behind cauldron / magic circle (except festival days)"
     }
 ]
 };

@@ -2251,9 +2251,10 @@ function renderTrackerGridOnly() {
       const matchBuffs = item.buffs && item.buffs.toLowerCase().includes(q);
       const matchDesc = item.desc && item.desc.toLowerCase().includes(q);
       const matchSchedTable = item.scheduleTable && item.scheduleTable.some(s => (s.time && s.time.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
+      const matchAltTable = item.altTable && item.altTable.some(s => (s.cond && s.cond.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
       const matchRain = item.rain && item.rain.toLowerCase().includes(q);
       const matchVariations = item.variations && item.variations.toLowerCase().includes(q);
-      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchSchedTable && !matchRain && !matchVariations) {
+      if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchSchedTable && !matchAltTable && !matchRain && !matchVariations) {
         return false;
       }
     }
@@ -2461,11 +2462,20 @@ function renderTrackerGridOnly() {
       }
 
       let altRows = '';
-      if (item.rain) {
-        altRows += `<tr><td class="t-col-key" style="color: #60a5fa;"><span class="t-key-icon">🌧️</span> Rain</td><td class="t-col-val" style="color: #bfdbfe;">${item.rain}</td></tr>`;
-      }
-      if (item.variations) {
-        altRows += `<tr><td class="t-col-key" style="color: #fbbf24;"><span class="t-key-icon">🔄</span> Note</td><td class="t-col-val" style="color: #fef08a;">${item.variations}</td></tr>`;
+      if (item.altTable && Array.isArray(item.altTable) && item.altTable.length > 0) {
+        item.altTable.forEach(row => {
+          const isRain = row.cond && row.cond.includes('Rain');
+          const keyColor = isRain ? '#60a5fa' : '#fbbf24';
+          const valColor = isRain ? '#bfdbfe' : '#fef08a';
+          altRows += `<tr><td class="t-col-key alt-cond-col" style="color: ${keyColor}; font-weight: 600;">${row.cond}</td><td class="t-col-val alt-loc-col" style="color: ${valColor};">${row.loc}</td></tr>`;
+        });
+      } else {
+        if (item.rain) {
+          altRows += `<tr><td class="t-col-key alt-cond-col" style="color: #60a5fa; font-weight: 600;">🌧️ Rain</td><td class="t-col-val alt-loc-col" style="color: #bfdbfe;">${item.rain}</td></tr>`;
+        }
+        if (item.variations) {
+          altRows += `<tr><td class="t-col-key alt-cond-col" style="color: #fbbf24; font-weight: 600;">🔄 Notes</td><td class="t-col-val alt-loc-col" style="color: #fef08a;">${item.variations}</td></tr>`;
+        }
       }
 
       detailsText = `
@@ -2645,11 +2655,20 @@ window.openVillagerMapModal = function(villagerId, event) {
       });
     }
     let altRows = '';
-    if (item.rain) {
-      altRows += `<tr><td class="t-col-key" style="color: #60a5fa; padding: 3.5px 7px;"><span class="t-key-icon">🌧️</span> Rain</td><td class="t-col-val" style="color: #bfdbfe; padding: 3.5px 7px;">${item.rain}</td></tr>`;
-    }
-    if (item.variations) {
-      altRows += `<tr><td class="t-col-key" style="color: #fbbf24; padding: 3.5px 7px;"><span class="t-key-icon">🔄</span> Note</td><td class="t-col-val" style="color: #fef08a; padding: 3.5px 7px;">${item.variations}</td></tr>`;
+    if (item.altTable && Array.isArray(item.altTable) && item.altTable.length > 0) {
+      item.altTable.forEach(row => {
+        const isRain = row.cond && row.cond.includes('Rain');
+        const keyColor = isRain ? '#60a5fa' : '#fbbf24';
+        const valColor = isRain ? '#bfdbfe' : '#fef08a';
+        altRows += `<tr><td class="t-col-key alt-cond-col" style="color: ${keyColor}; font-weight: 600; padding: 3.5px 7px;">${row.cond}</td><td class="t-col-val alt-loc-col" style="color: ${valColor}; padding: 3.5px 7px;">${row.loc}</td></tr>`;
+      });
+    } else {
+      if (item.rain) {
+        altRows += `<tr><td class="t-col-key alt-cond-col" style="color: #60a5fa; font-weight: 600; padding: 3.5px 7px;">🌧️ Rain</td><td class="t-col-val alt-loc-col" style="color: #bfdbfe; padding: 3.5px 7px;">${item.rain}</td></tr>`;
+      }
+      if (item.variations) {
+        altRows += `<tr><td class="t-col-key alt-cond-col" style="color: #fbbf24; font-weight: 600; padding: 3.5px 7px;">🔄 Notes</td><td class="t-col-val alt-loc-col" style="color: #fef08a; padding: 3.5px 7px;">${item.variations}</td></tr>`;
+      }
     }
 
     schedBox.innerHTML = `

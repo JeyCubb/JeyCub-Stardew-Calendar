@@ -1861,11 +1861,14 @@ header {
   border-bottom: 1px solid rgba(59, 130, 246, 0.45) !important;
   letter-spacing: 0.02em;
 }
-.villager-alt-table .t-col-key {
-  width: 22%;
+.villager-alt-table .t-col-key.alt-cond-col {
+  width: 28%;
   font-weight: 700;
+  white-space: nowrap;
+  font-size: 0.68rem;
+  letter-spacing: 0.01em;
 }
-.villager-alt-table .t-col-val {
+.villager-alt-table .t-col-val.alt-loc-col {
   font-size: 0.72rem;
   line-height: 1.35;
 }
