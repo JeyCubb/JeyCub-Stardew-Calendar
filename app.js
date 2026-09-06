@@ -106,7 +106,8 @@ const MACHINE_IMAGES = {
   'heavy_tapper_oak': 'https://stardewvalleywiki.com/Special:FilePath/Oak_Resin.png',
   'heavy_tapper_pine': 'https://stardewvalleywiki.com/Special:FilePath/Pine_Tar.png',
   'heavy_tapper_mushroom': 'https://stardewvalleywiki.com/Special:FilePath/Purple_Mushroom.png',
-  'heavy_tapper_mystic': 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Syrup.png'
+  'heavy_tapper_mystic': 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Syrup.png',
+  'traveling_cart': 'https://stardewvalleywiki.com/Special:FilePath/Traveling_Cart.png'
 };
 
 // Initialize current year structure if not present (guarantees all seasons exist)
@@ -234,6 +235,7 @@ const MASTER_MACHINES = [
   { key: 'cask_iridium', name: 'Cask aging (Iridium)', duration: 56, type: 'Cask' },
   { key: 'solar_panel', name: 'Solar Panel', duration: 7, isRepeating: true, type: 'Utility' },
   { key: 'mushroom_log', name: 'Mushroom Log', duration: 4, isRepeating: true, type: 'Foraging / Artisan' },
+  { key: 'traveling_cart', name: 'Traveling Merchant / Salesman (Fri & Sun)', duration: 2, isRepeating: true, type: 'Vendor / Event' },
   { key: 'tapper_maple', name: 'Tapper: Maple Tree (Syrup)', duration: 9, isRepeating: true, type: 'Tapper' },
   { key: 'tapper_oak', name: 'Tapper: Oak Tree (Resin)', duration: 7, isRepeating: true, type: 'Tapper' },
   { key: 'tapper_pine', name: 'Tapper: Pine Tree (Tar)', duration: 5, isRepeating: true, type: 'Tapper' },
@@ -425,7 +427,8 @@ const ITEM_COLORS = {
   'crystal_emerald': '#10b981',
   'crystal_aquamarine': '#38bdf8',
   'crystal_topaz': '#f59e0b',
-  'crystal_amethyst': '#a855f7'
+  'crystal_amethyst': '#a855f7',
+  'traveling_cart': '#f43f5e'
 };
 
 function applyTaskItemColor(item, task) {
@@ -450,6 +453,7 @@ function applyTaskItemColor(item, task) {
     if (!imageKey) {
       if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) imageKey = 'solar_panel';
       else if (cleanLabel.includes('mushroom log')) imageKey = 'mushroom_log';
+      else if (cleanLabel.includes('traveling') || cleanLabel.includes('merchant') || cleanLabel.includes('salesman') || cleanLabel.includes('cart')) imageKey = 'traveling_cart';
       else if (cleanLabel.includes('wine')) imageKey = 'keg_wine';
       else if (cleanLabel.includes('beer')) imageKey = 'keg_beer';
       else if (cleanLabel.includes('preserves') || cleanLabel.includes('jelly')) imageKey = 'preserves';
@@ -505,6 +509,9 @@ function getTaskIconUrl(task) {
     }
     if (cleanLabel.includes('mushroom log')) {
       return 'https://stardewvalleywiki.com/Special:FilePath/Mushroom_Log.png';
+    }
+    if (cleanLabel.includes('traveling') || cleanLabel.includes('merchant') || cleanLabel.includes('salesman') || cleanLabel.includes('cart')) {
+      return 'https://stardewvalleywiki.com/Special:FilePath/Traveling_Cart.png';
     }
     if (cleanLabel.includes('keg')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png';
@@ -945,6 +952,70 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   const groupId = 'machine_group_' + Date.now();
   const loadAbs = getAbsoluteDay(currentYear, currentSeason, activeDay);
 
+  // Special Handling: Traveling Merchant (Traveling Salesman)
+  if (machineKey === 'traveling_cart') {
+    const isCartDay = [5, 7, 12, 14, 19, 21, 26, 28].includes(activeDay);
+    const startTask = {
+      id: 'load_' + Date.now(),
+      type: 'solar',
+      machineKey: machineKey,
+      label: isCartDay 
+        ? `🛒 Traveling Merchant Active (${location})`
+        : `📥 Traveling Merchant Schedule (${location})`,
+      groupId: groupId,
+      absDay: loadAbs
+    };
+    const currentYearSchedule = getYearSchedule(currentYear);
+    if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
+    currentYearSchedule[currentSeason][activeDay].push(startTask);
+
+    // Schedule on all upcoming Friday & Sunday days (and Night Market in Winter) across current season and next 4 years
+    const seasonsOrder = ['spring', 'summer', 'fall', 'winter'];
+    let y = currentYear;
+    let sIdx = seasonsOrder.indexOf(currentSeason);
+
+    for (let yrOffset = 0; yrOffset < 4; yrOffset++) {
+      const yearToSchedule = y + yrOffset;
+      const startSeasonIndex = (yrOffset === 0) ? sIdx : 0;
+
+      for (let s = startSeasonIndex; s < 4; s++) {
+        const seasonName = seasonsOrder[s];
+        // Standard cart days: Fri (5, 12, 19, 26) & Sun (7, 14, 21, 28)
+        let cartDays = [5, 7, 12, 14, 19, 21, 26, 28];
+        if (seasonName === 'winter') {
+          // Night Market Days: Winter 15, 16, 17
+          cartDays = [5, 7, 12, 14, 15, 16, 17, 19, 21, 26, 28];
+        }
+
+        cartDays.forEach(d => {
+          const targetAbs = getAbsoluteDay(yearToSchedule, seasonName, d);
+          if (targetAbs > loadAbs) {
+            const isNightMarket = (seasonName === 'winter' && [15, 16, 17].includes(d));
+            const visitTask = {
+              id: 'cart_' + Date.now() + '_' + yearToSchedule + '_' + seasonName + '_' + d,
+              type: 'cask',
+              machineKey: machineKey,
+              label: isNightMarket
+                ? `🛒 Traveling Merchant (Night Market - Beach)`
+                : `🛒 Traveling Merchant (${location})`,
+              sourceDay: `y${currentYear}_${currentSeason}_${activeDay}`,
+              groupId: groupId,
+              absDay: targetAbs
+            };
+            const ys = getYearSchedule(yearToSchedule);
+            if (!ys[seasonName][d]) ys[seasonName][d] = [];
+            ys[seasonName][d].push(visitTask);
+          }
+        });
+      }
+    }
+
+    saveSchedule();
+    renderCalendar();
+    closeModal();
+    return;
+  }
+
   // 1. Add Load/Place Task to selected day
   const isSolar = machineKey === 'solar_panel';
   const isMushroomLog = machineKey === 'mushroom_log';
@@ -1023,10 +1094,12 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
   closeModal();
 });
 
-// Auto-select Desert location when choosing Solar Panel
+// Auto-select location when choosing special machines
 document.getElementById('machine-select').addEventListener('change', function() {
   if (this.value === 'solar_panel') {
     document.getElementById('machine-loc').value = 'Desert';
+  } else if (this.value === 'traveling_cart') {
+    document.getElementById('machine-loc').value = 'Cindersap Forest';
   }
 });
 
@@ -1513,7 +1586,7 @@ const DEFAULT_ACTIVE_CROPS = [
 ];
 
 const DEFAULT_ACTIVE_MACHINES = [
-  'keg_wine', 'keg_beer', 'preserves', 'cask_silver', 'cask_gold', 'cask_iridium', 'solar_panel', 'mushroom_log',
+  'keg_wine', 'keg_beer', 'preserves', 'cask_silver', 'cask_gold', 'cask_iridium', 'solar_panel', 'mushroom_log', 'traveling_cart',
   'tapper_maple', 'tapper_oak', 'tapper_pine', 'tapper_mushroom', 'tapper_mystic',
   'heavy_tapper_maple', 'heavy_tapper_oak', 'heavy_tapper_pine', 'heavy_tapper_mushroom', 'heavy_tapper_mystic',
   'crystal_diamond', 'crystal_ruby', 'crystal_jade', 'crystal_emerald', 'crystal_aquamarine', 'crystal_topaz', 'crystal_amethyst'
@@ -1558,8 +1631,11 @@ function populateMachineDropdown() {
   let activeKeys = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
   if (!activeKeys.includes('mushroom_log')) {
     activeKeys.push('mushroom_log');
-    localStorage.setItem('stardew_active_machines', JSON.stringify(activeKeys));
   }
+  if (!activeKeys.includes('traveling_cart')) {
+    activeKeys.push('traveling_cart');
+  }
+  localStorage.setItem('stardew_active_machines', JSON.stringify(activeKeys));
   const select = document.getElementById('machine-select');
   if (!select) return;
   select.innerHTML = '';
@@ -1571,6 +1647,8 @@ function populateMachineDropdown() {
     let label = m.name;
     if (m.key === 'solar_panel') {
       label += ` (7d Desert / 10d Valley repeating)`;
+    } else if (m.key === 'traveling_cart') {
+      label += ` (Every Fri & Sun recurring)`;
     } else {
       label += ` (${m.duration}d`;
       if (m.isRepeating) label += ` repeating`;
