@@ -2469,54 +2469,57 @@ function renderTrackerGridOnly() {
           <tbody>${schedRows}</tbody>
         </table>
       `;
-      
-      let mapPinsHtml = '';
-      if (item.mapPins && Array.isArray(item.mapPins) && item.mapPins.length > 0) {
-        item.mapPins.forEach((pin, pIdx) => {
-          const posClass = pin.pos ? `pin-pos-${pin.pos}` : (pIdx % 2 === 0 ? 'pin-pos-top' : 'pin-pos-bottom');
-          mapPinsHtml += `
-            <div class="villager-map-pin-static ${posClass}" style="left: ${pin.x}%; top: ${pin.y}%;">
-              <span class="static-pin-dot"></span>
-              <span class="static-pin-label">${pin.label}</span>
-            </div>
-          `;
-        });
-      }
+      notesText = '';
+    }
 
-      notesText = `
-        <div class="villager-static-map-wrapper"
-             onclick="openVillagerMapModal('${item.id}', event)"
-             title="Click to view full map & routine">
-          <div class="map-zoom-hint">🔍 Click to Enlarge Map</div>
-          <div class="villager-static-map-frame">
-            <img src="stardew_map.png" alt="Map" class="villager-static-map-img" loading="lazy">
-            ${mapPinsHtml}
+    if (activeTrackerSheet === 'villagers') {
+      card.innerHTML = `
+        <div class="tracker-card-header villager-card-header" onclick="openVillagerMapModal('${item.id}', event)" title="Click person to view map & locations">
+          <div class="tracker-card-icon villager-portrait-wrap" title="Click to view map & schedule">
+            <img src="${item.img}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.style.display='none';">
+            <span class="portrait-map-indicator" title="Location Map">🗺️</span>
           </div>
+          <div class="tracker-card-title-wrap">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px;">
+              <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
+              <button class="villager-map-pill-btn" onclick="openVillagerMapModal('${item.id}', event)" title="View Map & Locations">🗺️ Map</button>
+            </div>
+            <div class="tracker-card-name">${item.name}</div>
+            ${dayText}
+          </div>
+          <div class="tracker-card-cb" onclick="toggleTrackerItem('villagers', '${item.id}', event)" title="Toggle 10 hearts friendship">
+            <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
+              <path d="M1 4.5L4.5 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="tracker-card-content">
+          <div class="tracker-card-source">${detailsText}</div>
+        </div>
+      `;
+    } else {
+      card.innerHTML = `
+        <div class="tracker-card-header">
+          <div class="tracker-card-icon">
+            <img src="${item.img}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.style.display='none';">
+          </div>
+          <div class="tracker-card-title-wrap">
+            <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
+            <div class="tracker-card-name">${item.name}</div>
+            ${dayText}
+          </div>
+          <div class="tracker-card-cb">
+            <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
+              <path d="M1 4.5L4.5 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="tracker-card-content">
+          <div class="tracker-card-source">${detailsText}</div>
+          ${notesText ? `<div class="tracker-card-notes">${notesText}</div>` : ''}
         </div>
       `;
     }
-
-    card.innerHTML = `
-      <div class="tracker-card-header">
-        <div class="tracker-card-icon">
-          <img src="${item.img}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.style.display='none';">
-        </div>
-        <div class="tracker-card-title-wrap">
-          <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
-          <div class="tracker-card-name">${item.name}</div>
-          ${dayText}
-        </div>
-        <div class="tracker-card-cb">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
-            <path d="M1 4.5L4.5 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </div>
-      <div class="tracker-card-content">
-        <div class="tracker-card-source">${detailsText}</div>
-        ${notesText ? `<div class="tracker-card-notes">${notesText}</div>` : ''}
-      </div>
-    `;
 
     grid.appendChild(card);
   });
