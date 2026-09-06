@@ -89,6 +89,7 @@ const MACHINE_IMAGES = {
   'cask_gold': 'https://stardewvalleywiki.com/Special:FilePath/Cask.png',
   'cask_iridium': 'https://stardewvalleywiki.com/Special:FilePath/Cask.png',
   'solar_panel': 'https://stardewvalleywiki.com/Special:FilePath/Solar_Panel.png',
+  'mushroom_log': 'https://stardewvalleywiki.com/Special:FilePath/Mushroom_Log.png',
   'crystal_diamond': 'https://stardewvalleywiki.com/Special:FilePath/Diamond.png',
   'crystal_ruby': 'https://stardewvalleywiki.com/Special:FilePath/Ruby.png',
   'crystal_jade': 'https://stardewvalleywiki.com/Special:FilePath/Jade.png',
@@ -232,6 +233,7 @@ const MASTER_MACHINES = [
   { key: 'cask_gold', name: 'Cask aging (Gold)', duration: 28, type: 'Cask' },
   { key: 'cask_iridium', name: 'Cask aging (Iridium)', duration: 56, type: 'Cask' },
   { key: 'solar_panel', name: 'Solar Panel', duration: 7, isRepeating: true, type: 'Utility' },
+  { key: 'mushroom_log', name: 'Mushroom Log', duration: 4, isRepeating: true, type: 'Foraging / Artisan' },
   { key: 'tapper_maple', name: 'Tapper: Maple Tree (Syrup)', duration: 9, isRepeating: true, type: 'Tapper' },
   { key: 'tapper_oak', name: 'Tapper: Oak Tree (Resin)', duration: 7, isRepeating: true, type: 'Tapper' },
   { key: 'tapper_pine', name: 'Tapper: Pine Tree (Tar)', duration: 5, isRepeating: true, type: 'Tapper' },
@@ -406,6 +408,7 @@ const ITEM_COLORS = {
   'cask_gold': '#fbbf24',    // Gold yellow
   'cask_iridium': '#c084fc', // Purple iridium
   'solar_panel': '#38bdf8',  // Sky blue battery
+  'mushroom_log': '#a855f7', // Purple mushroom log
   'tapper_maple': '#f97316', // Maple orange
   'tapper_oak': '#84cc16',   // Oak amber/green
   'tapper_pine': '#10b981',  // Pine green
@@ -446,6 +449,7 @@ function applyTaskItemColor(item, task) {
     }
     if (!imageKey) {
       if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) imageKey = 'solar_panel';
+      else if (cleanLabel.includes('mushroom log')) imageKey = 'mushroom_log';
       else if (cleanLabel.includes('wine')) imageKey = 'keg_wine';
       else if (cleanLabel.includes('beer')) imageKey = 'keg_beer';
       else if (cleanLabel.includes('preserves') || cleanLabel.includes('jelly')) imageKey = 'preserves';
@@ -498,6 +502,9 @@ function getTaskIconUrl(task) {
     }
     if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/2/25/Battery_Pack.png';
+    }
+    if (cleanLabel.includes('mushroom log')) {
+      return 'https://stardewvalleywiki.com/Special:FilePath/Mushroom_Log.png';
     }
     if (cleanLabel.includes('keg')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/7/7c/Keg.png';
@@ -940,9 +947,10 @@ document.getElementById('form-machine').addEventListener('submit', (e) => {
 
   // 1. Add Load/Place Task to selected day
   const isSolar = machineKey === 'solar_panel';
+  const isMushroomLog = machineKey === 'mushroom_log';
   const isCrystal = machineKey.startsWith('crystal_');
   const isTapper = machineKey.startsWith('tapper_') || machineKey.startsWith('heavy_tapper_');
-  const isPlaceAction = isSolar || isCrystal || isTapper;
+  const isPlaceAction = isSolar || isMushroomLog || isCrystal || isTapper;
   
   const loadTask = {
     id: 'load_' + Date.now(),
@@ -1505,7 +1513,7 @@ const DEFAULT_ACTIVE_CROPS = [
 ];
 
 const DEFAULT_ACTIVE_MACHINES = [
-  'keg_wine', 'keg_beer', 'preserves', 'cask_silver', 'cask_gold', 'cask_iridium', 'solar_panel',
+  'keg_wine', 'keg_beer', 'preserves', 'cask_silver', 'cask_gold', 'cask_iridium', 'solar_panel', 'mushroom_log',
   'tapper_maple', 'tapper_oak', 'tapper_pine', 'tapper_mushroom', 'tapper_mystic',
   'heavy_tapper_maple', 'heavy_tapper_oak', 'heavy_tapper_pine', 'heavy_tapper_mushroom', 'heavy_tapper_mystic',
   'crystal_diamond', 'crystal_ruby', 'crystal_jade', 'crystal_emerald', 'crystal_aquamarine', 'crystal_topaz', 'crystal_amethyst'
@@ -1547,7 +1555,11 @@ function populateCropDropdown() {
 
 // Populate machine select field based on active list
 function populateMachineDropdown() {
-  const activeKeys = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
+  let activeKeys = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
+  if (!activeKeys.includes('mushroom_log')) {
+    activeKeys.push('mushroom_log');
+    localStorage.setItem('stardew_active_machines', JSON.stringify(activeKeys));
+  }
   const select = document.getElementById('machine-select');
   if (!select) return;
   select.innerHTML = '';
@@ -2180,7 +2192,7 @@ function renderTrackerGridOnly() {
         if (currentTrackerFilter === 'bombs' && !n.includes('bomb') && !n.includes('explosive') && !n.includes('bait') && !n.includes('arrow')) return false;
         if (currentTrackerFilter === 'fences' && !n.includes('fence') && !n.includes('gate') && !n.includes('floor') && !n.includes('path') && !n.includes('cobblestone') && !n.includes('stepping')) return false;
         if (currentTrackerFilter === 'farming' && !n.includes('sprinkler') && !n.includes('fertilizer') && !n.includes('scarecrow') && !n.includes('soil') && !n.includes('speed-gro') && !n.includes('totem') && !n.includes('hydrator')) return false;
-        if (currentTrackerFilter === 'artisan' && !n.includes('press') && !n.includes('maker') && !n.includes('keg') && !n.includes('jar') && !n.includes('furnace') && !n.includes('cask') && !n.includes('smoker') && !n.includes('dehydrator') && !n.includes('loom') && !n.includes('kiln') && !n.includes('tapper') && !n.includes('mill') && !n.includes('incubator') && !n.includes('rod') && !n.includes('crystalarium')) return false;
+        if (currentTrackerFilter === 'artisan' && !n.includes('press') && !n.includes('maker') && !n.includes('keg') && !n.includes('jar') && !n.includes('furnace') && !n.includes('cask') && !n.includes('smoker') && !n.includes('dehydrator') && !n.includes('log') && !n.includes('loom') && !n.includes('kiln') && !n.includes('tapper') && !n.includes('mill') && !n.includes('incubator') && !n.includes('rod') && !n.includes('crystalarium')) return false;
         if (currentTrackerFilter === 'lighting' && !n.includes('torch') && !n.includes('brazier') && !n.includes('lamp') && !n.includes('candle') && !n.includes('light')) return false;
         if (currentTrackerFilter === 'rings' && !n.includes('ring') && !n.includes('band') && !n.includes('totem') && !n.includes('elixir') && !n.includes('warp')) return false;
       } else if (activeTrackerSheet === 'cooking') {
