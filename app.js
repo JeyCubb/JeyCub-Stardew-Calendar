@@ -2445,7 +2445,7 @@ function renderTrackerGridOnly() {
       notesText = item.desc ? `<div class="tracker-card-quote">“${item.desc}”</div>` : '';
     } else if (activeTrackerSheet === 'villagers') {
       badgeText = item.category === 'Bachelorette' ? '👰 Bachelorette' : (item.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
-      dayText = `<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600; margin-bottom: 4px;">🎂 Birthday: ${item.birthday} | 🏠 ${item.home}</div>`;
+      dayText = '';
       
       let infoRows = '';
       if (item.loved) {
@@ -2527,7 +2527,6 @@ function renderTrackerGridOnly() {
               <button class="villager-map-pill-btn" onclick="openVillagerMapModal('${item.id}', event)" title="View Map & Locations">🗺️ Map</button>
             </div>
             <div class="tracker-card-name">${item.name}</div>
-            ${dayText}
           </div>
           <div class="tracker-card-cb" onclick="toggleTrackerItem('villagers', '${item.id}', event)" title="Toggle 10 hearts friendship">
             <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
