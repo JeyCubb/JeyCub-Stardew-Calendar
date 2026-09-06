@@ -2339,20 +2339,24 @@ function renderTrackerGridOnly() {
     }
 
     card.innerHTML = `
-      <div class="tracker-card-icon">
-        <img src="${item.img}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.style.display='none';">
+      <div class="tracker-card-header">
+        <div class="tracker-card-icon">
+          <img src="${item.img}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.style.display='none';">
+        </div>
+        <div class="tracker-card-title-wrap">
+          <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
+          <div class="tracker-card-name">${item.name}</div>
+          ${dayText}
+        </div>
+        <div class="tracker-card-cb">
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
+            <path d="M1 4.5L4.5 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
       </div>
-      <div class="tracker-card-body">
-        <div class="tracker-card-badge" style="color: ${badgeColor};">${badgeText}</div>
-        <div class="tracker-card-name">${item.name}</div>
-        ${dayText}
+      <div class="tracker-card-content">
         <div class="tracker-card-source">${detailsText}</div>
         ${notesText ? `<div class="tracker-card-notes">${notesText}</div>` : ''}
-      </div>
-      <div class="tracker-card-cb">
-        <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
-          <path d="M1 4.5L4.5 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
       </div>
     `;
 
