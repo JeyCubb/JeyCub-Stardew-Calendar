@@ -9,7 +9,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="styles.css?v=7.3">
+  <link rel="stylesheet" href="styles.css?v=7.4">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
@@ -154,8 +154,8 @@
           </div>
           <div class="form-group-row" style="margin-top: 0.15rem;">
             <select id="crop-stage">
-              <option value="seed">Fresh Seed</option>
-              <option value="regrow">Existing Plant (Regrow)</option>
+              <option value="seed">Fresh Seed / Planting</option>
+              <option value="regrow">Existing / Harvested Today (Regrow Cycle)</option>
             </select>
             <select id="crop-fert">
               <option value="none">No Fertilizer</option>
@@ -258,8 +258,8 @@
     </div>
   </div>
 
-<script src="perfection_data.js?v=7.3"></script>
-  <script src="app.js?v=7.3"></script>
+<script src="perfection_data.js?v=7.4"></script>
+  <script src="app.js?v=7.4"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then((registrations) => {

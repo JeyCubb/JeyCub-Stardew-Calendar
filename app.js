@@ -175,19 +175,19 @@ const MASTER_CROPS = [
   { key: 'taro', name: 'Taro Root', base: 10, regrow: 0, season: 'summer', type: 'Special' },
   { key: 'cactus_fruit', name: 'Cactus Fruit', base: 12, regrow: 3, season: 'all', type: 'Special' },
   { key: 'coffee', name: 'Coffee Bean', base: 10, regrow: 2, season: 'spring', type: 'Special' },
-  { key: 'cherry', name: 'Cherry Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
-  { key: 'apricot', name: 'Apricot Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'spring', type: 'Tree' },
-  { key: 'orange', name: 'Orange Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
-  { key: 'peach', name: 'Peach Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
-  { key: 'apple', name: 'Apple Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', type: 'Tree' },
-  { key: 'pomegranate', name: 'Pomegranate Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'fall', type: 'Tree' },
-  { key: 'banana', name: 'Banana Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
-  { key: 'mango', name: 'Mango Tree', base: 28, regrow: 3, isTree: true, activeSeason: 'summer', type: 'Tree' },
-  { key: 'mahogany', name: 'Mahogany Tree', base: 26, regrow: 0, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
-  { key: 'oak_tree', name: 'Oak Tree', base: 24, regrow: 0, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
-  { key: 'maple_tree', name: 'Maple Tree', base: 24, regrow: 0, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
-  { key: 'pine_tree', name: 'Pine Tree', base: 24, regrow: 0, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
-  { key: 'mystic_tree', name: 'Mystic Tree', base: 24, regrow: 0, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' }
+  { key: 'cherry', name: 'Cherry Tree', base: 28, regrow: 1, isTree: true, activeSeason: 'spring', type: 'Tree' },
+  { key: 'apricot', name: 'Apricot Tree', base: 28, regrow: 1, isTree: true, activeSeason: 'spring', type: 'Tree' },
+  { key: 'orange', name: 'Orange Tree', base: 28, regrow: 1, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'peach', name: 'Peach Tree', base: 28, regrow: 1, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'apple', name: 'Apple Tree', base: 28, regrow: 1, isTree: true, activeSeason: 'fall', type: 'Tree' },
+  { key: 'pomegranate', name: 'Pomegranate Tree', base: 28, regrow: 1, isTree: true, activeSeason: 'fall', type: 'Tree' },
+  { key: 'banana', name: 'Banana Tree', base: 28, regrow: 1, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'mango', name: 'Mango Tree', base: 28, regrow: 1, isTree: true, activeSeason: 'summer', type: 'Tree' },
+  { key: 'mahogany', name: 'Mahogany Tree', base: 26, regrow: 1, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
+  { key: 'oak_tree', name: 'Oak Tree', base: 24, regrow: 7, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
+  { key: 'maple_tree', name: 'Maple Tree', base: 24, regrow: 9, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
+  { key: 'pine_tree', name: 'Pine Tree', base: 24, regrow: 5, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
+  { key: 'mystic_tree', name: 'Mystic Tree', base: 24, regrow: 7, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' }
 ];
 
 // Helper to calculate speed growth days dynamically
@@ -544,10 +544,19 @@ function getTaskIconUrl(task) {
     if (task.machineKey && task.machineKey.startsWith('tapper_') && task.id && typeof task.id === 'string' && task.id.includes('load')) {
       return 'https://stardewvalleywiki.com/Special:FilePath/Tapper.png';
     }
-    if (task.machineKey === 'solar_panel' && task.id && typeof task.id === 'string' && task.id.includes('ready')) {
-       return 'https://stardewvalleywiki.com/Special:FilePath/Battery_Pack.png';
+    if (imageKey === 'mystic_tree' && task.id && (task.id.startsWith('harvest') || task.stage === 'regrow' || (task.label && task.label.includes('Syrup')))) {
+      return MACHINE_IMAGES['tapper_mystic'] || 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Syrup.png';
     }
-    if (imageKey === 'mahogany' && task.label && (task.label.includes('Mature') || task.label.includes('Ready') || task.label.includes('Hardwood'))) {
+    if (imageKey === 'oak_tree' && task.id && (task.id.startsWith('harvest') || task.stage === 'regrow' || (task.label && task.label.includes('Resin')))) {
+      return MACHINE_IMAGES['tapper_oak'] || 'https://stardewvalleywiki.com/Special:FilePath/Oak_Resin.png';
+    }
+    if (imageKey === 'maple_tree' && task.id && (task.id.startsWith('harvest') || task.stage === 'regrow' || (task.label && task.label.includes('Syrup')))) {
+      return MACHINE_IMAGES['tapper_maple'] || 'https://stardewvalleywiki.com/Special:FilePath/Maple_Syrup.png';
+    }
+    if (imageKey === 'pine_tree' && task.id && (task.id.startsWith('harvest') || task.stage === 'regrow' || (task.label && task.label.includes('Tar')))) {
+      return MACHINE_IMAGES['tapper_pine'] || 'https://stardewvalleywiki.com/Special:FilePath/Pine_Tar.png';
+    }
+    if (imageKey === 'mahogany' && task.label && (task.label.includes('Mature') || task.label.includes('Ready') || task.label.includes('Hardwood') || task.label.includes('Harvested'))) {
       return CROP_IMAGES['hardwood'] || CROP_IMAGES['mahogany'];
     }
     if (CROP_IMAGES[imageKey]) return CROP_IMAGES[imageKey];
@@ -845,6 +854,34 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   const groupId = 'crop_group_' + Date.now();
   const plantAbs = getAbsoluteDay(currentYear, currentSeason, activeDay);
 
+  // Helper for starting action label
+  let plantLabel = '';
+  if (cropStage === 'regrow') {
+    if (cropKey === 'mystic_tree') {
+      plantLabel = `🌳 Mystic Syrup Harvested (${location})`;
+    } else if (cropKey === 'oak_tree') {
+      plantLabel = `🌳 Oak Resin Harvested (${location})`;
+    } else if (cropKey === 'maple_tree') {
+      plantLabel = `🌳 Maple Syrup Harvested (${location})`;
+    } else if (cropKey === 'pine_tree') {
+      plantLabel = `🌳 Pine Tar Harvested (${location})`;
+    } else if (cropKey === 'mahogany') {
+      plantLabel = `🌳 Mahogany Sap Harvested (${location})`;
+    } else if (crop.isTree) {
+      plantLabel = `🌳 ${crop.name} Fruit Harvested (${location})`;
+    } else {
+      plantLabel = `🌾 ${crop.name} Harvested (Regrow - ${location})`;
+    }
+  } else {
+    if (crop.key === 'mahogany') {
+      plantLabel = `🪵 Mahogany Seed Planted (${location})`;
+    } else if (crop.isTree) {
+      plantLabel = `🌳 ${crop.name} Planted (${location})`;
+    } else {
+      plantLabel = `🌱 ${crop.name} Planted (${location})`;
+    }
+  }
+
   // 1. Save the planting/regrow-start task
   const plantTask = {
     id: 'plant_' + Date.now(),
@@ -853,9 +890,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     fertilizer: fertilizer,
     location: location,
     stage: cropStage,
-    label: cropStage === 'regrow' 
-      ? (crop.isTree ? `🌳 Mature Tree: ${crop.name} (${location})` : `🌱 Regrow Start: ${crop.name} (${location})`) 
-      : (crop.key === 'mahogany' ? `🪵 Mahogany Seed Planted (${location})` : (crop.isTree ? `🌳 ${crop.name} Planted (${location})` : `🌱 ${crop.name} Planted (${location})`)),
+    label: plantLabel,
     groupId: groupId,
     absDay: plantAbs
   };
@@ -863,6 +898,17 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   const currentYearSchedule = getYearSchedule(currentYear);
   if (!currentYearSchedule[currentSeason][activeDay]) currentYearSchedule[currentSeason][activeDay] = [];
   currentYearSchedule[currentSeason][activeDay].push(plantTask);
+
+  // Helper for ready / harvest label
+  function getReadyLabel(cKey, cObj, loc, isRegrow) {
+    if (cKey === 'mystic_tree') return `🌳 Mystic Syrup Ready (${loc})`;
+    if (cKey === 'oak_tree') return `🌳 Oak Resin Ready (${loc})`;
+    if (cKey === 'maple_tree') return `🌳 Maple Syrup Ready (${loc})`;
+    if (cKey === 'pine_tree') return `🌳 Pine Tar Ready (${loc})`;
+    if (cKey === 'mahogany') return `🪵 Mahogany Tree Ready (${loc})`;
+    if (cObj.isTree) return `🌳 ${cObj.name} Fruit Ready (${loc})`;
+    return isRegrow ? `🌾 ${cObj.name} Ready (Regrow - ${loc})` : `🌾 ${cObj.name} Ready (${loc})`;
+  }
 
   // 2. Save future harvest & regrow tasks
   const growthDays = cropStage === 'regrow' ? 0 : crop.getDays(fertilizer, false);
@@ -882,9 +928,13 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     id: 'harvest_' + Date.now(),
     type: 'harvest',
     cropKey: cropKey,
-    label: crop.key === 'mahogany'
-      ? `🪵 Mahogany Tree Mature (Hardwood) (${location})`
-      : (crop.isTree ? `🌳 ${crop.name} Ready (${location})` : `🌾 ${crop.name} Ready (${location})`),
+    label: cropStage === 'regrow' 
+      ? getReadyLabel(cropKey, crop, location, true)
+      : (crop.key === 'mahogany' 
+          ? `🪵 Mahogany Tree Mature (Hardwood) (${location})`
+          : (crop.isWildTree 
+              ? `🌳 ${crop.name} Mature (Ready for Tapper) (${location})`
+              : (crop.isTree ? `🌳 ${crop.name} Fruit Ready (${location})` : `🌾 ${crop.name} Ready (${location})`))),
     groupId: groupId,
     absDay: harvestAbs
   };
@@ -912,9 +962,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
           id: 'harvest_regrow_' + Date.now() + '_' + i,
           type: 'harvest',
           cropKey: cropKey,
-          label: crop.isTree 
-            ? `🌳 ${crop.name} Ready (${location})`
-            : `🌾 ${crop.name} Ready (Regrow - ${location})`,
+          label: getReadyLabel(cropKey, crop, location, true),
           groupId: groupId,
           absDay: nextHarvestAbs
         };
