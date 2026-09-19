@@ -1229,41 +1229,6 @@ seasonBtns.forEach(btn => {
   }
 });
 
-// Keyboard Navigation (Arrow keys toggle between seasons and transition years)
-window.addEventListener('keydown', (e) => {
-  // Prevent switching if user is actively typing in inputs
-  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
-    return;
-  }
-
-  const seasons = ['spring', 'summer', 'fall', 'winter'];
-  let currentIdx = seasons.indexOf(currentSeason);
-
-  if (e.key === 'ArrowRight') {
-    if (currentIdx === 3) { // Winter -> Spring (Next Year)
-      currentYear++;
-      yearDisplay.innerText = currentYear;
-      localStorage.setItem('stardew_current_year', currentYear);
-      saveSchedule();
-      switchSeason('spring');
-    } else {
-      switchSeason(seasons[currentIdx + 1]);
-    }
-  } else if (e.key === 'ArrowLeft') {
-    if (currentIdx === 0) { // Spring -> Winter (Previous Year)
-      if (currentYear > 1) {
-        currentYear--;
-        yearDisplay.innerText = currentYear;
-        localStorage.setItem('stardew_current_year', currentYear);
-        saveSchedule();
-        switchSeason('winter');
-      }
-    } else {
-      switchSeason(seasons[currentIdx - 1]);
-    }
-  }
-});
-
 // Year selection events
 yearUpBtn.addEventListener('click', () => {
   currentYear++;
@@ -2076,10 +2041,9 @@ window.addEventListener('keydown', (e) => {
 
   // Handle Left and Right Arrow navigation between tabs
   if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-    const trackerSection = document.getElementById('tracker-main-view');
-    const calendarSection = document.getElementById('calendar-main-view');
+    const currentMode = localStorage.getItem('stardew_view_mode') || 'calendar';
 
-    if (trackerSection && trackerSection.style.display !== 'none') {
+    if (currentMode === 'tracker') {
       e.preventDefault();
       const curIdx = TRACKER_SHEET_ORDER.indexOf(activeTrackerSheet);
       if (curIdx !== -1) {
@@ -2089,23 +2053,35 @@ window.addEventListener('keydown', (e) => {
         switchTrackerSheet(TRACKER_SHEET_ORDER[nextIdx]);
       }
       return;
-    } else if (calendarSection && calendarSection.style.display !== 'none') {
+    } else if (currentMode === 'calendar') {
       if (document.activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
       e.preventDefault();
-      const SEASONS = ['spring', 'summer', 'fall', 'winter'];
-      const curIdx = SEASONS.indexOf(currentSeason);
-      if (curIdx !== -1) {
-        const nextIdx = e.key === 'ArrowLeft'
-          ? (curIdx - 1 + SEASONS.length) % SEASONS.length
-          : (curIdx + 1) % SEASONS.length;
-        const targetSeason = SEASONS[nextIdx];
-        currentSeason = targetSeason;
-        localStorage.setItem('stardew_current_season', currentSeason);
-        const seasonBtns = document.querySelectorAll('.season-selector .season-btn');
-        seasonBtns.forEach(btn => {
-          btn.classList.toggle('active', btn.dataset.season === targetSeason);
-        });
-        renderCalendar();
+      const seasons = ['spring', 'summer', 'fall', 'winter'];
+      let currentIdx = seasons.indexOf(currentSeason);
+      if (currentIdx === -1) currentIdx = 0;
+
+      if (e.key === 'ArrowRight') {
+        if (currentIdx === 3) { // Winter -> Spring (Next Year)
+          currentYear++;
+          yearDisplay.innerText = currentYear;
+          localStorage.setItem('stardew_current_year', currentYear);
+          saveSchedule();
+          switchSeason('spring');
+        } else {
+          switchSeason(seasons[currentIdx + 1]);
+        }
+      } else if (e.key === 'ArrowLeft') {
+        if (currentIdx === 0) { // Spring -> Winter (Previous Year)
+          if (currentYear > 1) {
+            currentYear--;
+            yearDisplay.innerText = currentYear;
+            localStorage.setItem('stardew_current_year', currentYear);
+            saveSchedule();
+            switchSeason('winter');
+          }
+        } else {
+          switchSeason(seasons[currentIdx - 1]);
+        }
       }
       return;
     }
