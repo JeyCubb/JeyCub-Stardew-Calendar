@@ -1695,51 +1695,66 @@ header {
   }
 
   .tracker-grid {
-    grid-template-columns: 1fr !important;
-    gap: 0.5rem !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.35rem !important;
     width: 100% !important;
     box-sizing: border-box !important;
     padding-bottom: 1.5rem !important;
   }
   .tracker-card {
-    padding: 0.55rem 0.65rem !important;
-    gap: 0.35rem !important;
+    padding: 0.4rem 0.45rem !important;
+    gap: 0.25rem !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    min-width: 0 !important;
   }
   .tracker-card:hover,
   .tracker-card.obtained:hover {
     transform: none !important;
     box-shadow: none !important;
   }
+  .tracker-card-header {
+    gap: 0.25rem !important;
+  }
   .tracker-card-icon {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    min-height: 32px !important;
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    min-height: 26px !important;
   }
   .tracker-card-name {
-    font-size: 0.86rem !important;
+    font-size: 0.78rem !important;
+    word-break: break-word !important;
+    line-height: 1.15 !important;
+  }
+  .tracker-card-badge {
+    font-size: 0.58rem !important;
+    padding: 1px 3px !important;
   }
   .tracker-card-source {
-    font-size: 0.72rem !important;
+    font-size: 0.68rem !important;
   }
   .tracker-card-notes {
-    font-size: 0.7rem !important;
+    font-size: 0.65rem !important;
   }
   .tracker-info-table {
-    font-size: 0.7rem !important;
+    font-size: 0.66rem !important;
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.15rem !important;
   }
   .tracker-info-table .t-col-key {
-    font-size: 0.68rem !important;
-    padding: 2.5px 5px !important;
+    font-size: 0.62rem !important;
+    padding: 2px 3.5px !important;
   }
   .tracker-info-table .t-col-val {
-    padding: 2.5px 6px !important;
-    font-size: 0.7rem !important;
+    padding: 2px 4px !important;
+    font-size: 0.64rem !important;
+    word-break: break-word !important;
   }
   .tracker-card-quote {
-    font-size: 0.68rem !important;
+    font-size: 0.62rem !important;
+    padding: 2px 3.5px !important;
+    margin-top: 2px !important;
   }
 
   /* Farm Planner View on Mobile */
