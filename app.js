@@ -1997,17 +1997,32 @@ if (btnViewPlanner) btnViewPlanner.addEventListener('click', () => setAppViewMod
 
 // Sheet tab switching
 const trackerTabBtns = document.querySelectorAll('.tracker-tab-btn');
+const TRACKER_SHEET_ORDER = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts', 'villagers'];
+
+function switchTrackerSheet(sheetKey) {
+  trackerTabBtns.forEach(b => b.classList.remove('active'));
+  const targetBtn = document.querySelector(`.tracker-tab-btn[data-sheet="${sheetKey}"]`);
+  if (targetBtn) {
+    targetBtn.classList.add('active');
+    if (typeof targetBtn.scrollIntoView === 'function') {
+      targetBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  }
+  activeTrackerSheet = sheetKey;
+  localStorage.setItem('stardew_active_tracker_sheet', activeTrackerSheet);
+  currentTrackerFilter = localStorage.getItem(`stardew_tracker_filter_${activeTrackerSheet}`) || 'all';
+  currentTrackerSearch = '';
+  const searchInput = document.getElementById('tracker-search-input');
+  if (searchInput) {
+    searchInput.value = '';
+    searchInput.blur();
+  }
+  renderTrackerSheet();
+}
+
 trackerTabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    trackerTabBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeTrackerSheet = btn.dataset.sheet;
-    localStorage.setItem('stardew_active_tracker_sheet', activeTrackerSheet);
-    currentTrackerFilter = localStorage.getItem(`stardew_tracker_filter_${activeTrackerSheet}`) || 'all';
-    currentTrackerSearch = '';
-    const searchInput = document.getElementById('tracker-search-input');
-    if (searchInput) searchInput.value = '';
-    renderTrackerSheet();
+    switchTrackerSheet(btn.dataset.sheet);
   });
 });
 
@@ -2037,20 +2052,58 @@ if (trackerSearchInput) {
   });
 }
 
-// Global hot-typing search on Perfection Tracker
+// Global hot-typing search and tab toggling
 window.addEventListener('keydown', (e) => {
-  // Only capture keystrokes when on Perfection Tracker view and no modal is open
-  const trackerSection = document.getElementById('tracker-main-view');
-  if (!trackerSection || trackerSection.style.display === 'none') return;
-  
+  // Ignore special hotkeys with ctrl/cmd/alt combos
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+
   const modalOverlays = document.querySelectorAll('.modal-overlay');
   for (let m of modalOverlays) {
     if (m && m.style.display && m.style.display !== 'none') return;
   }
 
-  // Ignore special hotkeys or ctrl/cmd/alt combos
-  if (e.ctrlKey || e.metaKey || e.altKey) return;
-  if (['Tab', 'Enter', 'Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+  // Handle Left and Right Arrow navigation between tabs
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+    const trackerSection = document.getElementById('tracker-main-view');
+    const calendarSection = document.getElementById('calendar-main-view');
+
+    if (trackerSection && trackerSection.style.display !== 'none') {
+      e.preventDefault();
+      const curIdx = TRACKER_SHEET_ORDER.indexOf(activeTrackerSheet);
+      if (curIdx !== -1) {
+        const nextIdx = e.key === 'ArrowLeft'
+          ? (curIdx - 1 + TRACKER_SHEET_ORDER.length) % TRACKER_SHEET_ORDER.length
+          : (curIdx + 1) % TRACKER_SHEET_ORDER.length;
+        switchTrackerSheet(TRACKER_SHEET_ORDER[nextIdx]);
+      }
+      return;
+    } else if (calendarSection && calendarSection.style.display !== 'none') {
+      if (document.activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+      e.preventDefault();
+      const SEASONS = ['spring', 'summer', 'fall', 'winter'];
+      const curIdx = SEASONS.indexOf(currentSeason);
+      if (curIdx !== -1) {
+        const nextIdx = e.key === 'ArrowLeft'
+          ? (curIdx - 1 + SEASONS.length) % SEASONS.length
+          : (curIdx + 1) % SEASONS.length;
+        const targetSeason = SEASONS[nextIdx];
+        currentSeason = targetSeason;
+        localStorage.setItem('stardew_current_season', currentSeason);
+        const seasonBtns = document.querySelectorAll('.season-selector .season-btn');
+        seasonBtns.forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.season === targetSeason);
+        });
+        renderCalendar();
+      }
+      return;
+    }
+  }
+
+  // Only capture keystrokes when on Perfection Tracker view and no modal is open
+  const trackerSection = document.getElementById('tracker-main-view');
+  if (!trackerSection || trackerSection.style.display === 'none') return;
+
+  if (['Tab', 'Enter', 'Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
 
   const searchInput = document.getElementById('tracker-search-input');
   if (!searchInput) return;
