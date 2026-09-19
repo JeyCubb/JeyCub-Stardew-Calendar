@@ -5778,7 +5778,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cherry Bomb",
       "category": "Crafting Recipe",
       "desc": "Generates a small explosion. Stand back!",
-      "source": "Generates a small explosion. Stand back!",
+      "source": "Mining Level 1",
       "notes": "Ingredients: Copper Ore (4) Coal (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cherry_Bomb.png"
     },
@@ -5787,7 +5787,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Bomb",
       "category": "Crafting Recipe",
       "desc": "Generates an explosion. Watch out!",
-      "source": "Generates an explosion. Watch out!",
+      "source": "Mining Level 6",
       "notes": "Ingredients: Iron Ore (4) Coal (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bomb.png"
     },
@@ -5796,7 +5796,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Mega Bomb",
       "category": "Crafting Recipe",
       "desc": "Generates a powerful explosion. Use with extreme caution.",
-      "source": "Generates a powerful explosion. Use with extreme caution.",
+      "source": "Mining Level 8",
       "notes": "Ingredients: Gold Ore (4) Solar Essence (1) Void Essence (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mega_Bomb.png"
     },
@@ -5805,7 +5805,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Gate",
       "category": "Crafting Recipe",
       "desc": "Allows you to pass through a fence.",
-      "source": "Allows you to pass through a fence.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Wood (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Gate.png"
     },
@@ -5814,7 +5814,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wood Fence",
       "category": "Crafting Recipe",
       "desc": "Keeps grass and animals contained!",
-      "source": "Keeps grass and animals contained!",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Wood (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Fence.png"
     },
@@ -5823,7 +5823,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stone Fence",
       "category": "Crafting Recipe",
       "desc": "Lasts longer than a wood fence.",
-      "source": "Lasts longer than a wood fence.",
+      "source": "Farming Level 2",
       "notes": "Ingredients: Stone (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Fence.png"
     },
@@ -5832,7 +5832,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Iron Fence",
       "category": "Crafting Recipe",
       "desc": "Lasts longer than a stone fence.",
-      "source": "Lasts longer than a stone fence.",
+      "source": "Farming Level 4",
       "notes": "Ingredients: Iron Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Iron_Fence.png"
     },
@@ -5841,7 +5841,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Hardwood Fence",
       "category": "Crafting Recipe",
       "desc": "The most durable type of fence.",
-      "source": "The most durable type of fence.",
+      "source": "Foraging Level 6",
       "notes": "Ingredients: Hardwood (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Hardwood_Fence.png"
     },
@@ -5850,7 +5850,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Sprinkler",
       "category": "Crafting Recipe",
       "desc": "Waters the 4 adjacent tiles every morning.",
-      "source": "Waters the 4 adjacent tiles every morning.",
+      "source": "Farming Level 2",
       "notes": "Ingredients: Copper Bar (1) Iron Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sprinkler.png"
     },
@@ -5859,7 +5859,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Quality Sprinkler",
       "category": "Crafting Recipe",
       "desc": "Waters the 8 adjacent tiles every morning.",
-      "source": "Waters the 8 adjacent tiles every morning.",
+      "source": "Farming Level 6",
       "notes": "Ingredients: Iron Bar (1) Gold Bar (1) Refined Quartz (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Quality_Sprinkler.png"
     },
@@ -5868,7 +5868,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Iridium Sprinkler",
       "category": "Crafting Recipe",
       "desc": "Waters the 24 adjacent tiles every morning.",
-      "source": "Waters the 24 adjacent tiles every morning.",
+      "source": "Farming Level 9",
       "notes": "Ingredients: Gold Bar (1) Iridium Bar (1) Battery Pack (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Iridium_Sprinkler.png"
     },
@@ -5877,7 +5877,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Mayonnaise Machine",
       "category": "Crafting Recipe",
       "desc": "Turns eggs into mayonnaise.",
-      "source": "Turns eggs into mayonnaise.",
+      "source": "Farming Level 2",
       "notes": "Ingredients: Wood (15) Stone (15) Earth Crystal (1) Copper Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mayonnaise_Machine.png"
     },
@@ -5886,7 +5886,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Bee House",
       "category": "Crafting Recipe",
       "desc": "Place outside and wait for delicious honey! (Except in Winter).",
-      "source": "Place outside and wait for delicious honey! (Except in Winter).",
+      "source": "Farming Level 3",
       "notes": "Ingredients: Wood (40) Coal (8) Iron Bar (1) Maple Syrup (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bee_House.png"
     },
@@ -5895,7 +5895,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Preserves Jar",
       "category": "Crafting Recipe",
       "desc": "Turns vegetables into pickles and fruit into jam.",
-      "source": "Turns vegetables into pickles and fruit into jam.",
+      "source": "Farming Level 4",
       "notes": "Ingredients: Wood (50) Stone (40) Coal (8)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Preserves_Jar.png"
     },
@@ -5904,7 +5904,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cheese Press",
       "category": "Crafting Recipe",
       "desc": "Turns milk into cheese.",
-      "source": "Turns milk into cheese.",
+      "source": "Farming Level 6",
       "notes": "Ingredients: Wood (45) Stone (45) Hardwood (10) Copper Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cheese_Press.png"
     },
@@ -5913,7 +5913,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Loom",
       "category": "Crafting Recipe",
       "desc": "Turns raw wool into fine cloth.",
-      "source": "Turns raw wool into fine cloth.",
+      "source": "Farming Level 7",
       "notes": "Ingredients: Wood (60) Fiber (30) Pine Tar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Loom.png"
     },
@@ -5922,7 +5922,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Keg",
       "category": "Crafting Recipe",
       "desc": "Place a fruit or vegetable in here. Eventually it will turn into a beverage.",
-      "source": "Place a fruit or vegetable in here. Eventually it will turn into a beverage.",
+      "source": "Farming Level 8",
       "notes": "Ingredients: Wood (30) Copper Bar (1) Iron Bar (1) Oak Resin (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Keg.png"
     },
@@ -5931,7 +5931,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Oil Maker",
       "category": "Crafting Recipe",
       "desc": "Makes gourmet truffle oil.",
-      "source": "Makes gourmet truffle oil.",
+      "source": "Farming Level 8",
       "notes": "Ingredients: Slime (50) Hardwood (20) Gold Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Oil_Maker.png"
     },
@@ -5940,7 +5940,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cask",
       "category": "Crafting Recipe",
       "desc": "Use in the cellar to age products like wine and cheese.",
-      "source": "Use in the cellar to age products like wine and cheese.",
+      "source": "Farmhouse Cellar Upgrade (Robin)",
       "notes": "Ingredients: Wood (20) Hardwood (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cask.png"
     },
@@ -5949,7 +5949,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fish Smoker",
       "category": "Crafting Recipe",
       "desc": "Place fish inside with a piece of coal to create smoked fish, which is worth double. The quality of the fish is preserved.",
-      "source": "Place fish inside with a piece of coal to create smoked fish, which is worth double. The quality of the fish is preserved.",
+      "source": "Willy's Fish Shop (10,000g)",
       "notes": "Ingredients: Hardwood (10) Sea Jelly (1) River Jelly (1) Cave Jelly (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Smoker.png"
     },
@@ -5958,7 +5958,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Dehydrator",
       "category": "Crafting Recipe",
       "desc": "Place 5 pieces of fruit or edible mushrooms inside to dry them.",
-      "source": "Place 5 pieces of fruit or edible mushrooms inside to dry them.",
+      "source": "Pierre's General Store (10,000g)",
       "notes": "Ingredients: Wood (30) Clay (2) Fire Quartz (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Dehydrator.png"
     },
@@ -5967,7 +5967,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Basic Fertilizer",
       "category": "Crafting Recipe",
       "desc": "Improves soil quality a little, increasing your chance to grow quality crops. Mix into tilled soil.",
-      "source": "Improves soil quality a little, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "source": "Farming Level 1",
       "notes": "Ingredients: Sap (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Basic_Fertilizer.png"
     },
@@ -5976,7 +5976,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Quality Fertilizer",
       "category": "Crafting Recipe",
       "desc": "Improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
-      "source": "Improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "source": "Farming Level 9",
       "notes": "Ingredients: Sap (4) Any Fish (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Quality_Fertilizer.png"
     },
@@ -5985,7 +5985,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Deluxe Fertilizer",
       "category": "Crafting Recipe",
       "desc": "Greatly improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
-      "source": "Greatly improves soil quality, increasing your chance to grow quality crops. Mix into tilled soil.",
+      "source": "Qi's Walnut Room (20 Qi Gems)",
       "notes": "Ingredients: Iridium Bar (1) Sap (40)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Fertilizer.png"
     },
@@ -5994,7 +5994,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Speed-Gro",
       "category": "Crafting Recipe",
       "desc": "Stimulates leaf production. Guaranteed to increase growth rate by at least 10%. Mix into tilled soil.",
-      "source": "Stimulates leaf production. Guaranteed to increase growth rate by at least 10%. Mix into tilled soil.",
+      "source": "Farming Level 3",
       "notes": "Ingredients: Pine Tar (1) Moss (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Speed-Gro.png"
     },
@@ -6003,7 +6003,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Deluxe Speed-Gro",
       "category": "Crafting Recipe",
       "desc": "Stimulates leaf production. Guaranteed to increase growth rate by at least 25%. Mix into tilled soil.",
-      "source": "Stimulates leaf production. Guaranteed to increase growth rate by at least 25%. Mix into tilled soil.",
+      "source": "Farming Level 8",
       "notes": "Ingredients: Oak Resin (1) Bone Fragment (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Speed-Gro.png"
     },
@@ -6012,7 +6012,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Hyper Speed-Gro",
       "category": "Crafting Recipe",
       "desc": "Greatly stimulates leaf production. Guaranteed to increase growth rate by at least 33%. Mix into tilled soil.",
-      "source": "Greatly stimulates leaf production. Guaranteed to increase growth rate by at least 33%. Mix into tilled soil.",
+      "source": "Qi's Walnut Room (30 Qi Gems)",
       "notes": "Ingredients: Radioactive Ore (1) Bone Fragment (3) Solar Essence (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Hyper_Speed-Gro.png"
     },
@@ -6021,7 +6021,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Basic Retaining Soil",
       "category": "Crafting Recipe",
       "desc": "This soil has a chance of staying watered overnight. Mix into tilled soil.",
-      "source": "This soil has a chance of staying watered overnight. Mix into tilled soil.",
+      "source": "Farming Level 1",
       "notes": "Ingredients: Stone (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Basic_Retaining_Soil.png"
     },
@@ -6030,7 +6030,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Quality Retaining Soil",
       "category": "Crafting Recipe",
       "desc": "This soil has a good chance of staying watered overnight. Mix into tilled soil.",
-      "source": "This soil has a good chance of staying watered overnight. Mix into tilled soil.",
+      "source": "Farming Level 7",
       "notes": "Ingredients: Stone (3) Clay (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Quality_Retaining_Soil.png"
     },
@@ -6039,7 +6039,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Deluxe Retaining Soil",
       "category": "Crafting Recipe",
       "desc": "This soil has a 100% chance of staying watered overnight. Mix into tilled soil.",
-      "source": "This soil has a 100% chance of staying watered overnight. Mix into tilled soil.",
+      "source": "Island Trader (50 Cinder Shards)",
       "notes": "Ingredients: Stone (5) Fiber (3) Clay (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Retaining_Soil.png"
     },
@@ -6048,7 +6048,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Tree Fertilizer",
       "category": "Crafting Recipe",
       "desc": "Sprinkle on a wild tree to ensure rapid growth, even in winter. Doesn't work on fruit trees.",
-      "source": "Sprinkle on a wild tree to ensure rapid growth, even in winter. Doesn't work on fruit trees.",
+      "source": "Foraging Level 7",
       "notes": "Ingredients: Fiber (5) Stone (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tree_Fertilizer.png"
     },
@@ -6057,7 +6057,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Spring Seeds (Wild Seeds Sp)",
       "category": "Crafting Recipe",
       "desc": "An assortment of wild spring seeds. (Note: The crafted item is called \"Spring Seeds.\" The recipe produces 10 seeds per craft.)",
-      "source": "An assortment of wild spring seeds. (Note: The crafted item is called \"Spring Seeds.\" The recipe produces 10 seeds per craft.)",
+      "source": "Foraging Level 1 (or Crafts Room Spring Bundle)",
       "notes": "Ingredients: Wild Horseradish (1) Daffodil (1) Leek (1) Dandelion (1)",
       "img": "https://stardewvalleywiki.com/mediawiki/images/3/39/Spring_Seeds.png"
     },
@@ -6066,7 +6066,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Summer Seeds (Wild Seeds Su)",
       "category": "Crafting Recipe",
       "desc": "An assortment of wild summer seeds. (Note: The crafted item is called \"Summer Seeds.\" The recipe produces 10 seeds per craft.)",
-      "source": "An assortment of wild summer seeds. (Note: The crafted item is called \"Summer Seeds.\" The recipe produces 10 seeds per craft.)",
+      "source": "Foraging Level 4 (or Crafts Room Summer Bundle)",
       "notes": "Ingredients: Spice Berry (1) Grape (1) Sweet Pea (1)",
       "img": "https://stardewvalleywiki.com/mediawiki/images/c/c4/Summer_Seeds.png"
     },
@@ -6075,7 +6075,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fall Seeds (Wild Seeds Fa)",
       "category": "Crafting Recipe",
       "desc": "An assortment of wild fall seeds. (Note: The crafted item is called \"Fall Seeds.\" The recipe produces 10 seeds per craft.)",
-      "source": "An assortment of wild fall seeds. (Note: The crafted item is called \"Fall Seeds.\" The recipe produces 10 seeds per craft.)",
+      "source": "Foraging Level 6 (or Crafts Room Fall Bundle)",
       "notes": "Ingredients: Common Mushroom (1) Wild Plum (1) Hazelnut (1) Blackberry (1)",
       "img": "https://stardewvalleywiki.com/mediawiki/images/5/55/Fall_Seeds.png"
     },
@@ -6084,7 +6084,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Winter Seeds (Wild Seeds Wi)",
       "category": "Crafting Recipe",
       "desc": "An assortment of wild winter seeds. (Note: The crafted item is called \"Winter Seeds.\" The recipe produces 10 seeds per craft.)",
-      "source": "An assortment of wild winter seeds. (Note: The crafted item is called \"Winter Seeds.\" The recipe produces 10 seeds per craft.)",
+      "source": "Foraging Level 7 (or Crafts Room Winter Bundle)",
       "notes": "Ingredients: Winter Root (1) Crystal Fruit (1) Snow Yam (1) Crocus (1)",
       "img": "https://stardewvalleywiki.com/mediawiki/images/d/dd/Winter_Seeds.png"
     },
@@ -6093,7 +6093,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Ancient Seeds",
       "category": "Crafting Recipe",
       "desc": "Could these still grow?",
-      "source": "Could these still grow?",
+      "source": "Museum Donation (Donate Ancient Seed artifact)",
       "notes": "Ingredients: Ancient Seed (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Ancient_Seeds.png"
     },
@@ -6102,7 +6102,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Grass Starter",
       "category": "Crafting Recipe",
       "desc": "Place this on your farm to start a new patch of grass.",
-      "source": "Place this on your farm to start a new patch of grass.",
+      "source": "Pierre's General Store (1,000g)",
       "notes": "Ingredients: Fiber (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Grass_Starter.png"
     },
@@ -6111,7 +6111,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Blue Grass Starter",
       "category": "Crafting Recipe",
       "desc": "Place this on your farm to plant a clump of blue grass.",
-      "source": "Place this on your farm to plant a clump of blue grass.",
+      "source": "Qi's Walnut Room (40 Qi Gems)",
       "notes": "Ingredients: Fiber (25) Moss (10) Mystic Syrup (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Blue_Grass_Starter.png"
     },
@@ -6120,7 +6120,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Tea Sapling",
       "category": "Crafting Recipe",
       "desc": "Takes 20 days to mature. Produces tea leaves during the final week of each season, except winter. No watering necessary!",
-      "source": "Takes 20 days to mature. Produces tea leaves during the final week of each season, except winter. No watering necessary!",
+      "source": "Caroline (2-Heart Sunroom cutscene mail)",
       "notes": "Ingredients: Wild Seeds (Any) (2) Fiber (5) Wood (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tea_Sapling.png"
     },
@@ -6129,7 +6129,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fiber Seeds",
       "category": "Crafting Recipe",
       "desc": "Plant these in any season. Does not require watering. Harvest with the scythe. Takes 7 days to grow.",
-      "source": "Plant these in any season. Does not require watering. Harvest with the scythe. Takes 7 days to grow.",
+      "source": "Linus Special Order ('Community Cleanup')",
       "notes": "Ingredients: Mixed Seeds (1) Sap (5) Clay (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fiber_Seeds.png"
     },
@@ -6138,7 +6138,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Mystic Tree Seed",
       "category": "Crafting Recipe",
       "desc": "This can be planted to grow a special tree.",
-      "source": "This can be planted to grow a special tree.",
+      "source": "Foraging Mastery (Mastery Cave)",
       "notes": "Ingredients: Acorn (5) Maple Seed (5) Pine Cone (5) Mahogany Seed (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mystic_Tree_Seed.png"
     },
@@ -6147,7 +6147,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wood Floor",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to decorate your floors.",
-      "source": "Place on the ground to create paths or to decorate your floors.",
+      "source": "Carpenter's Shop (Robin - 100g)",
       "notes": "Ingredients: Wood (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Floor.png"
     },
@@ -6156,7 +6156,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Rustic Plank Floor",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to decorate your floors.",
-      "source": "Place on the ground to create paths or to decorate your floors.",
+      "source": "Carpenter's Shop (Robin - 200g)",
       "notes": "Ingredients: Wood (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Rustic_Plank_Floor.png"
     },
@@ -6165,7 +6165,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Straw Floor",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Carpenter's Shop (Robin - 200g)",
       "notes": "Ingredients: Wood (1) Fiber (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Straw_Floor.png"
     },
@@ -6174,7 +6174,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Weathered Floor",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Dwarf in the Mines (500g)",
       "notes": "Ingredients: Wood (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Weathered_Floor.png"
     },
@@ -6183,7 +6183,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Crystal Floor",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Carpenter's Shop (Robin - 500g)",
       "notes": "Ingredients: Refined Quartz (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Crystal_Floor.png"
     },
@@ -6192,7 +6192,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stone Floor",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Carpenter's Shop (Robin - 100g)",
       "notes": "Ingredients: Stone (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Floor.png"
     },
@@ -6201,7 +6201,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stone Walkway Floor",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to decorate your floors.",
-      "source": "Place on the ground to create paths or to decorate your floors.",
+      "source": "Carpenter's Shop (Robin - 200g)",
       "notes": "Ingredients: Stone (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Walkway_Floor.png"
     },
@@ -6210,7 +6210,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Brick Floor",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to decorate your floors.",
-      "source": "Place on the ground to create paths or to decorate your floors.",
+      "source": "Carpenter's Shop (Robin - 500g)",
       "notes": "Ingredients: Clay (2) Stone (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Brick_Floor.png"
     },
@@ -6219,7 +6219,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wood Path",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Wood (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Path.png"
     },
@@ -6228,7 +6228,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Gravel Path",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Stone (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Gravel_Path.png"
     },
@@ -6237,7 +6237,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cobblestone Path",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Stone (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cobblestone_Path.png"
     },
@@ -6246,7 +6246,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stepping Stone Path",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Carpenter's Shop (Robin - 100g)",
       "notes": "Ingredients: Stone (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stepping_Stone_Path.png"
     },
@@ -6255,7 +6255,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Crystal Path",
       "category": "Crafting Recipe",
       "desc": "Place on the ground to create paths or to spruce up your floors.",
-      "source": "Place on the ground to create paths or to spruce up your floors.",
+      "source": "Carpenter's Shop (Robin - 200g)",
       "notes": "Ingredients: Refined Quartz (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Crystal_Path.png"
     },
@@ -6264,7 +6264,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Spinner",
       "category": "Crafting Recipe",
       "desc": "The shape makes it spin around in the water. Slightly increases the bite-rate when fishing.",
-      "source": "The shape makes it spin around in the water. Slightly increases the bite-rate when fishing.",
+      "source": "Fishing Level 6 (or Willy for 500g)",
       "notes": "Ingredients: Iron Bar (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Spinner.png"
     },
@@ -6273,7 +6273,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Trap Bobber",
       "category": "Crafting Recipe",
       "desc": "Causes fish to escape slower when you aren't reeling them in.",
-      "source": "Causes fish to escape slower when you aren't reeling them in.",
+      "source": "Fishing Level 6",
       "notes": "Ingredients: Copper Bar (1) Sap (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Trap_Bobber.png"
     },
@@ -6282,7 +6282,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Sonar Bobber",
       "category": "Crafting Recipe",
       "desc": "Shows what fish is on the line before it's caught.",
-      "source": "Shows what fish is on the line before it's caught.",
+      "source": "Fishing Level 6",
       "notes": "Ingredients: Iron Bar (1) Refined Quartz (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sonar_Bobber.png"
     },
@@ -6291,7 +6291,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cork Bobber",
       "category": "Crafting Recipe",
       "desc": "Slightly increases the size of your \"fishing bar\".",
-      "source": "Slightly increases the size of your \"fishing bar\".",
+      "source": "Fishing Level 7",
       "notes": "Ingredients: Wood (10) Hardwood (5) Slime (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cork_Bobber.png"
     },
@@ -6300,7 +6300,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Quality Bobber",
       "category": "Crafting Recipe",
       "desc": "Boosts the quality of fish that you catch.",
-      "source": "Boosts the quality of fish that you catch.",
+      "source": "Willy Special Order ('Juicy Bugs Wanted')",
       "notes": "Ingredients: Copper Bar (1) Sap (20) Solar Essence (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Quality_Bobber.png"
     },
@@ -6309,7 +6309,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Treasure Hunter",
       "category": "Crafting Recipe",
       "desc": "Fish don't escape while collecting treasures. Also slightly increases the chance to find treasures.",
-      "source": "Fish don't escape while collecting treasures. Also slightly increases the chance to find treasures.",
+      "source": "Fishing Level 7",
       "notes": "Ingredients: Gold Bar (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Treasure_Hunter.png"
     },
@@ -6318,7 +6318,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Dressed Spinner",
       "category": "Crafting Recipe",
       "desc": "The metal tab and colorful streamers create an enticing spectacle for fish. Increases the bite-rate when fishing.",
-      "source": "The metal tab and colorful streamers create an enticing spectacle for fish. Increases the bite-rate when fishing.",
+      "source": "Fishing Level 8",
       "notes": "Ingredients: Iron Bar (2) Cloth (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Dressed_Spinner.png"
     },
@@ -6327,7 +6327,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Barbed Hook",
       "category": "Crafting Recipe",
       "desc": "Makes your catch more secure, causing the \"fishing bar\" to cling to your catch. Works best on slow, weak fish.",
-      "source": "Makes your catch more secure, causing the \"fishing bar\" to cling to your catch. Works best on slow, weak fish.",
+      "source": "Fishing Level 8",
       "notes": "Ingredients: Copper Bar (1) Iron Bar (1) Gold Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Barbed_Hook.png"
     },
@@ -6336,7 +6336,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Magnet",
       "category": "Crafting Recipe",
       "desc": "Increases the chance of finding treasures when fishing. However, fish aren't crazy about the taste.",
-      "source": "Increases the chance of finding treasures when fishing. However, fish aren't crazy about the taste.",
+      "source": "Fishing Level 9 (or Willy for 1,000g)",
       "notes": "Ingredients: Iron Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Magnet.png"
     },
@@ -6345,7 +6345,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Bait",
       "category": "Crafting Recipe",
       "desc": "Causes fish to bite faster. Must first be attached to a fishing rod.",
-      "source": "Causes fish to bite faster. Must first be attached to a fishing rod.",
+      "source": "Fishing Level 2",
       "notes": "Ingredients: Bug Meat (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bait.png"
     },
@@ -6354,7 +6354,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Deluxe Bait",
       "category": "Crafting Recipe",
       "desc": "Causes fish to bite even faster and increases size of the \"fishing bar\".",
-      "source": "Causes fish to bite even faster and increases size of the \"fishing bar\".",
+      "source": "Fishing Level 4",
       "notes": "Ingredients: Bait (5) Moss (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Bait.png"
     },
@@ -6363,7 +6363,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wild Bait",
       "category": "Crafting Recipe",
       "desc": "A unique recipe from Linus that gives you a chance to catch two fish at once.",
-      "source": "A unique recipe from Linus that gives you a chance to catch two fish at once.",
+      "source": "Linus (4-Heart cutscene)",
       "notes": "Ingredients: Fiber (10) Bug Meat (5) Slime (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wild_Bait.png"
     },
@@ -6372,7 +6372,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Magic Bait",
       "category": "Crafting Recipe",
       "desc": "Allows you to catch fish from any season, time, or weather, from whichever type of water you cast into.",
-      "source": "Allows you to catch fish from any season, time, or weather, from whichever type of water you cast into.",
+      "source": "Qi's Walnut Room (5 Qi Gems)",
       "notes": "Ingredients: Radioactive Ore (1) Bug Meat (3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Magic_Bait.png"
     },
@@ -6381,7 +6381,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Challenge Bait",
       "category": "Crafting Recipe",
       "desc": "A \"perfect\" catch yields triple the fish. However, each time a fish escapes the \"fishing bar\", the catch is reduced.",
-      "source": "A \"perfect\" catch yields triple the fish. However, each time a fish escapes the \"fishing bar\", the catch is reduced.",
+      "source": "Fishing Mastery (Mastery Cave)",
       "notes": "Ingredients: Bone Fragment (5) Moss (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Challenge_Bait.png"
     },
@@ -6390,7 +6390,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Crab Pot",
       "category": "Crafting Recipe",
       "desc": "Place it in the water, load it with bait, and check the next day to see if you've caught anything. Works in streams, lakes, and the ocean.",
-      "source": "Place it in the water, load it with bait, and check the next day to see if you've caught anything. Works in streams, lakes, and the ocean.",
+      "source": "Fishing Level 3",
       "notes": "Ingredients: Wood (40) Iron Bar (3) With Trapper profession: Wood (25) Copper Bar (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Crab_Pot.png"
     },
@@ -6399,7 +6399,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Sturdy Ring",
       "category": "Crafting Recipe",
       "desc": "Cuts the duration of negative status effects in half.",
-      "source": "Cuts the duration of negative status effects in half.",
+      "source": "Combat Level 1",
       "notes": "Ingredients: Copper Bar (2) Bug Meat (25) Slime (25)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sturdy_Ring.png"
     },
@@ -6408,7 +6408,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Warrior Ring",
       "category": "Crafting Recipe",
       "desc": "Occasionally infuses the wearer with \"warrior energy\" after slaying a monster.",
-      "source": "Occasionally infuses the wearer with \"warrior energy\" after slaying a monster.",
+      "source": "Combat Level 4",
       "notes": "Ingredients: Iron Bar (10) Coal (25) Frozen Tear (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Warrior_Ring.png"
     },
@@ -6417,7 +6417,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Ring of Yoba",
       "category": "Crafting Recipe",
       "desc": "Occasionally shields the wearer from damage.",
-      "source": "Occasionally shields the wearer from damage.",
+      "source": "Combat Level 7",
       "notes": "Ingredients: Gold Bar (5) Iron Bar (5) Diamond (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Ring_of_Yoba.png"
     },
@@ -6426,7 +6426,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Thorns Ring",
       "category": "Crafting Recipe",
       "desc": "When enemies damage you, they will take damage themselves.",
-      "source": "When enemies damage you, they will take damage themselves.",
+      "source": "Combat Level 7",
       "notes": "Ingredients: Bone Fragment (50) Stone (50) Gold Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Thorns_Ring.png"
     },
@@ -6435,7 +6435,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Glowstone Ring",
       "category": "Crafting Recipe",
       "desc": "Emits a constant light, and also increases your radius for collecting items.",
-      "source": "Emits a constant light, and also increases your radius for collecting items.",
+      "source": "Mining Level 4",
       "notes": "Ingredients: Solar Essence (5) Iron Bar (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Glowstone_Ring.png"
     },
@@ -6444,7 +6444,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Iridium Band",
       "category": "Crafting Recipe",
       "desc": "Glows, attracts items, and increases attack damage by 10%.",
-      "source": "Glows, attracts items, and increases attack damage by 10%.",
+      "source": "Combat Level 9",
       "notes": "Ingredients: Iridium Bar (5) Solar Essence (50) Void Essence (50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Iridium_Band.png"
     },
@@ -6453,7 +6453,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wedding Ring",
       "category": "Crafting Recipe",
       "desc": "An old Zuzu City tradition... It's used to ask for another farmer's hand in marriage.Note: This recipe is available only in Multiplayer.",
-      "source": "An old Zuzu City tradition... It's used to ask for another farmer's hand in marriage.Note: This recipe is available only in Multiplayer.",
+      "source": "Traveling Cart (500g - Multiplayer only)",
       "notes": "Ingredients: Iridium Bar (5) Prismatic Shard (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wedding_Ring.png"
     },
@@ -6462,7 +6462,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Field Snack",
       "category": "Crafting Recipe",
       "desc": "A quick snack to fuel the hungry forager.",
-      "source": "A quick snack to fuel the hungry forager.",
+      "source": "Foraging Level 1",
       "notes": "Ingredients: Acorn (1) Maple Seed (1) Pine Cone (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Field_Snack.png"
     },
@@ -6471,7 +6471,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Bug Steak",
       "category": "Crafting Recipe",
       "desc": "The last resort of the hungry cave diver.",
-      "source": "The last resort of the hungry cave diver.",
+      "source": "Combat Level 1",
       "notes": "Ingredients: Bug Meat (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bug_Steak.png"
     },
@@ -6480,7 +6480,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Life Elixir",
       "category": "Crafting Recipe",
       "desc": "Restores health to full.",
-      "source": "Restores health to full.",
+      "source": "Combat Level 2",
       "notes": "Ingredients: Red Mushroom (1) Purple Mushroom (1) Morel (1) Chanterelle (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Life_Elixir.png"
     },
@@ -6489,7 +6489,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Oil of Garlic",
       "category": "Crafting Recipe",
       "desc": "Drink this and weaker monsters will avoid you.",
-      "source": "Drink this and weaker monsters will avoid you.",
+      "source": "Combat Level 6",
       "notes": "Ingredients: Garlic (10) Oil (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Oil_of_Garlic.png"
     },
@@ -6498,7 +6498,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Monster Musk",
       "category": "Crafting Recipe",
       "desc": "Spray this on to draw more monsters out of hiding.",
-      "source": "Spray this on to draw more monsters out of hiding.",
+      "source": "Wizard Special Order ('Prismatic Jelly')",
       "notes": "Ingredients: Bat Wing (30) Slime (30)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Monster_Musk.png"
     },
@@ -6507,7 +6507,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Fairy Dust",
       "category": "Crafting Recipe",
       "desc": "Sprinkle on kegs, furnaces, and other refining equipment to instantly receive their product.",
-      "source": "Sprinkle on kegs, furnaces, and other refining equipment to instantly receive their product.",
+      "source": "Birdie ('The Pirate's Wife' quest on Ginger Island)",
       "notes": "Ingredients: Diamond (1) Fairy Rose (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Fairy_Dust.png"
     },
@@ -6516,7 +6516,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Warp Totem: Beach",
       "category": "Crafting Recipe",
       "desc": "Warp directly to the beach. Consumed on use.",
-      "source": "Warp directly to the beach. Consumed on use.",
+      "source": "Foraging Level 6",
       "notes": "Ingredients: Hardwood (1) Coral (2) Fiber (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Beach.png"
     },
@@ -6525,7 +6525,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Warp Totem: Mountains",
       "category": "Crafting Recipe",
       "desc": "Warp directly to the mountains. Consumed on use.",
-      "source": "Warp directly to the mountains. Consumed on use.",
+      "source": "Foraging Level 7",
       "notes": "Ingredients: Hardwood (1) Iron Bar (1) Stone (25)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Mountains.png"
     },
@@ -6534,7 +6534,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Warp Totem: Farm",
       "category": "Crafting Recipe",
       "desc": "Warp directly to your house. Consumed on use.",
-      "source": "Warp directly to your house. Consumed on use.",
+      "source": "Foraging Level 8",
       "notes": "Ingredients: Hardwood (1) Honey (1) Fiber (20)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Farm.png"
     },
@@ -6543,7 +6543,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Warp Totem: Desert",
       "category": "Crafting Recipe",
       "desc": "Warp directly to Calico Desert. Consumed on use.",
-      "source": "Warp directly to Calico Desert. Consumed on use.",
+      "source": "Desert Trader (10 Iridium Bars)",
       "notes": "Ingredients: Hardwood (2) Coconut (1) Iridium Ore (4)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Desert.png"
     },
@@ -6552,7 +6552,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Warp Totem: Island",
       "category": "Crafting Recipe",
       "desc": "Warp directly to Ginger Island. Consumed on use.",
-      "source": "Warp directly to Ginger Island. Consumed on use.",
+      "source": "Volcano Dwarf (9,000g)",
       "notes": "Ingredients: Hardwood (5) Dragon Tooth (1) Ginger (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Warp_Totem:_Island.png"
     },
@@ -6561,7 +6561,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Rain Totem",
       "category": "Crafting Recipe",
       "desc": "Activate to greatly increase the chance for rain tomorrow. Consumed on use.",
-      "source": "Activate to greatly increase the chance for rain tomorrow. Consumed on use.",
+      "source": "Foraging Level 9",
       "notes": "Ingredients: Hardwood (1) Truffle Oil (1) Pine Tar (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Rain_Totem.png"
     },
@@ -6570,7 +6570,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Treasure Totem",
       "category": "Crafting Recipe",
       "desc": "Use on diggable terrain to summon a ring of treasure spots.",
-      "source": "Use on diggable terrain to summon a ring of treasure spots.",
+      "source": "Foraging Mastery (Mastery Cave)",
       "notes": "Ingredients: Hardwood (5) Mystic Syrup (1) Moss (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Treasure_Totem.png"
     },
@@ -6579,7 +6579,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Torch",
       "category": "Crafting Recipe",
       "desc": "Provides a modest amount of light.",
-      "source": "Provides a modest amount of light.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Wood (1) Sap (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Torch.png"
     },
@@ -6588,7 +6588,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Campfire",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Stone (10) Wood (10) Fiber (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Campfire.png"
     },
@@ -6597,7 +6597,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wooden Brazier",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Carpenter's Shop (Robin - 250g)",
       "notes": "Ingredients: Wood (10) Coal (1) Fiber (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wooden_Brazier.png"
     },
@@ -6606,7 +6606,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stone Brazier",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Carpenter's Shop (Robin - 400g after Wooden)",
       "notes": "Ingredients: Stone (10) Coal (1) Fiber (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Brazier.png"
     },
@@ -6615,7 +6615,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Gold Brazier",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Carpenter's Shop (Robin - 1,000g after Stump)",
       "notes": "Ingredients: Gold Bar (1) Coal (1) Fiber (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Gold_Brazier.png"
     },
@@ -6624,7 +6624,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Carved Brazier",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Carpenter's Shop (Robin - 2,000g after Gold)",
       "notes": "Ingredients: Hardwood (10) Coal (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Carved_Brazier.png"
     },
@@ -6633,7 +6633,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stump Brazier",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Carpenter's Shop (Robin - 800g after Barrel)",
       "notes": "Ingredients: Hardwood (5) Coal (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stump_Brazier.png"
     },
@@ -6642,7 +6642,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Barrel Brazier",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Carpenter's Shop (Robin - 800g after Stone)",
       "notes": "Ingredients: Wood (50) Solar Essence (1) Coal (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Barrel_Brazier.png"
     },
@@ -6651,7 +6651,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Skull Brazier",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Carpenter's Shop (Robin - 3,000g after Carved)",
       "notes": "Ingredients: Bone Fragment (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Skull_Brazier.png"
     },
@@ -6660,7 +6660,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Marble Brazier",
       "category": "Crafting Recipe",
       "desc": "Provides a moderate amount of light.",
-      "source": "Provides a moderate amount of light.",
+      "source": "Carpenter's Shop (Robin - 5,000g after Skull)",
       "notes": "Ingredients: Marble (1) Aquamarine (1) Stone (100)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Marble_Brazier.png"
     },
@@ -6669,7 +6669,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wood Lamp-post",
       "category": "Crafting Recipe",
       "desc": "Provides a good amount of light.",
-      "source": "Provides a good amount of light.",
+      "source": "Carpenter's Shop (Robin - 500g)",
       "notes": "Ingredients: Wood (50) Battery Pack (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Lamp-post.png"
     },
@@ -6678,7 +6678,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Iron Lamp-post",
       "category": "Crafting Recipe",
       "desc": "Provides a good amount of light.",
-      "source": "Provides a good amount of light.",
+      "source": "Carpenter's Shop (Robin - 1,000g)",
       "notes": "Ingredients: Iron Bar (1) Battery Pack (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Iron_Lamp-post.png"
     },
@@ -6687,7 +6687,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Jack-O-Lantern",
       "category": "Crafting Recipe",
       "desc": "A whimsical fall decoration.",
-      "source": "A whimsical fall decoration.",
+      "source": "Spirit's Eve Festival (Fall 27 - Pierre - 750g)",
       "notes": "Ingredients: Pumpkin (1) Torch (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Jack-O-Lantern.png"
     },
@@ -6696,7 +6696,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Charcoal Kiln",
       "category": "Crafting Recipe",
       "desc": "Turns 10 pieces of wood into one piece of coal.",
-      "source": "Turns 10 pieces of wood into one piece of coal.",
+      "source": "Foraging Level 4",
       "notes": "Ingredients: Wood (20) Copper Bar (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Charcoal_Kiln.png"
     },
@@ -6705,7 +6705,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Crystalarium",
       "category": "Crafting Recipe",
       "desc": "Insert a gem of your choice and it will grow copies.",
-      "source": "Insert a gem of your choice and it will grow copies.",
+      "source": "Mining Level 9",
       "notes": "Ingredients: Stone (99) Gold Bar (5) Iridium Bar (2) Battery Pack (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Crystalarium.png"
     },
@@ -6714,7 +6714,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Furnace",
       "category": "Crafting Recipe",
       "desc": "Turns ore and coal into metal bars.",
-      "source": "Turns ore and coal into metal bars.",
+      "source": "Clint (Triggered after collecting Copper Ore)",
       "notes": "Ingredients: Copper Ore (20) Stone (25)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Furnace.png"
     },
@@ -6723,7 +6723,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Heavy Furnace",
       "category": "Crafting Recipe",
       "desc": "It's more efficient than a regular furnace. Requires 25 pieces of ore and 3 coal per use.",
-      "source": "It's more efficient than a regular furnace. Requires 25 pieces of ore and 3 coal per use.",
+      "source": "Mining Mastery (Mastery Cave)",
       "notes": "Ingredients: Furnace (2) Iron Bar (3) Stone (50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Heavy_Furnace.png"
     },
@@ -6732,7 +6732,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Lightning Rod",
       "category": "Crafting Recipe",
       "desc": "Collects energy from lightning storms and turns it into battery packs.",
-      "source": "Collects energy from lightning storms and turns it into battery packs.",
+      "source": "Foraging Level 6",
       "notes": "Ingredients: Iron Bar (1) Refined Quartz (1) Bat Wing (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Lightning_Rod.png"
     },
@@ -6741,7 +6741,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Solar Panel",
       "category": "Crafting Recipe",
       "desc": "Slowly generates batteries when left in the sun.",
-      "source": "Slowly generates batteries when left in the sun.",
+      "source": "Caroline Special Order ('Island Ingredients')",
       "notes": "Ingredients: Refined Quartz (10) Iron Bar (5) Gold Bar (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Solar_Panel.png"
     },
@@ -6750,7 +6750,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Recycling Machine",
       "category": "Crafting Recipe",
       "desc": "Turns fishing trash into resources.",
-      "source": "Turns fishing trash into resources.",
+      "source": "Fishing Level 4",
       "notes": "Ingredients: Wood (25) Stone (25) Iron Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Recycling_Machine.png"
     },
@@ -6759,7 +6759,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Seed Maker",
       "category": "Crafting Recipe",
       "desc": "Place crops inside to produce a varying amount of seeds. Doesn't work with fruit tree crops.",
-      "source": "Place crops inside to produce a varying amount of seeds. Doesn't work with fruit tree crops.",
+      "source": "Farming Level 9",
       "notes": "Ingredients: Wood (25) Coal (10) Gold Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Seed_Maker.png"
     },
@@ -6768,7 +6768,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Slime Incubator",
       "category": "Crafting Recipe",
       "desc": "Hatches slimes eggs into slimes. Allows you to raise slimes outdoors.",
-      "source": "Hatches slimes eggs into slimes. Allows you to raise slimes outdoors.",
+      "source": "Combat Level 8",
       "notes": "Ingredients: Iridium Bar (2) Slime (100)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Slime_Incubator.png"
     },
@@ -6777,7 +6777,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Ostrich Incubator",
       "category": "Crafting Recipe",
       "desc": "Hatches ostrich eggs into baby ostriches. Place in a barn.",
-      "source": "Hatches ostrich eggs into baby ostriches. Place in a barn.",
+      "source": "Professor Snail (Complete all Field Office surveys)",
       "notes": "Ingredients: Bone Fragment (50) Hardwood (50) Cinder Shard (20)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Ostrich_Incubator.png"
     },
@@ -6786,7 +6786,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Slime Egg-Press",
       "category": "Crafting Recipe",
       "desc": "Compresses 100 pieces of slime into a slime egg. It's a miracle of science!",
-      "source": "Compresses 100 pieces of slime into a slime egg. It's a miracle of science!",
+      "source": "Combat Level 6",
       "notes": "Ingredients: Coal (25) Fire Quartz (1) Battery Pack (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Slime_Egg-Press.png"
     },
@@ -6795,7 +6795,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Tapper",
       "category": "Crafting Recipe",
       "desc": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product!",
-      "source": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product!",
+      "source": "Foraging Level 3",
       "notes": "Ingredients: Wood (40) Copper Bar (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tapper.png"
     },
@@ -6804,7 +6804,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Heavy Tapper",
       "category": "Crafting Recipe",
       "desc": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product! Works twice as fast as a normal tapper.",
-      "source": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product! Works twice as fast as a normal tapper.",
+      "source": "Qi's Walnut Room (20 Qi Gems)",
       "notes": "Ingredients: Hardwood (30) Radioactive Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Heavy_Tapper.png"
     },
@@ -6813,7 +6813,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Worm Bin",
       "category": "Crafting Recipe",
       "desc": "Produces bait on a regular basis. The worms are self-sufficient.",
-      "source": "Produces bait on a regular basis. The worms are self-sufficient.",
+      "source": "Fishing Level 8",
       "notes": "Ingredients: Hardwood (15) Gold Bar (1) Iron Bar (1) Fiber (50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Worm_Bin.png"
     },
@@ -6822,7 +6822,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Deluxe Worm Bin",
       "category": "Crafting Recipe",
       "desc": "Produces Deluxe Bait on a regular basis. The worms are self-sufficient.",
-      "source": "Produces Deluxe Bait on a regular basis. The worms are self-sufficient.",
+      "source": "Fishing Mastery (Mastery Cave)",
       "notes": "Ingredients: Worm Bin (1) Moss (30)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Worm_Bin.png"
     },
@@ -6831,7 +6831,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Bone Mill",
       "category": "Crafting Recipe",
       "desc": "Turns bone items into fertilizers.",
-      "source": "Turns bone items into fertilizers.",
+      "source": "Gunther Special Order ('Fragments of the Past')",
       "notes": "Ingredients: Bone Fragment (10) Clay (3) Stone (20)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bone_Mill.png"
     },
@@ -6840,7 +6840,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Geode Crusher",
       "category": "Crafting Recipe",
       "desc": "Breaks geodes open automatically.",
-      "source": "Breaks geodes open automatically.",
+      "source": "Clint Special Order ('Cave Patrol')",
       "notes": "Ingredients: Gold Bar (2) Stone (50) Diamond (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Geode_Crusher.png"
     },
@@ -6849,7 +6849,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Mushroom Log",
       "category": "Crafting Recipe",
       "desc": "Grows mushrooms every so often. The more wild trees are nearby, the better it works.",
-      "source": "Grows mushrooms every so often. The more wild trees are nearby, the better it works.",
+      "source": "Foraging Level 4",
       "notes": "Ingredients: Hardwood (10) Moss (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mushroom_Log.png"
     },
@@ -6858,7 +6858,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Bait Maker",
       "category": "Crafting Recipe",
       "desc": "Place a fish inside to create targeted bait.",
-      "source": "Place a fish inside to create targeted bait.",
+      "source": "Fishing Level 6",
       "notes": "Ingredients: Iron Bar (3) Coral (3) Sea Urchin (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bait_Maker.png"
     },
@@ -6867,7 +6867,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Tub o' Flowers",
       "category": "Crafting Recipe",
       "desc": "Flowers planted in an oak barrel. Blooms in spring and summer.",
-      "source": "Flowers planted in an oak barrel. Blooms in spring and summer.",
+      "source": "Flower Dance Festival (Spring 24 - Pierre - 2,000g)",
       "notes": "Ingredients: Wood (15) Tulip Bulb (1) Jazz Seeds (1) Poppy Seeds (1) Spangle Seeds (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tub_o'_Flowers.png"
     },
@@ -6876,7 +6876,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wicked Statue",
       "category": "Crafting Recipe",
       "desc": "There's something unsettling about the looks of this statue.",
-      "source": "There's something unsettling about the looks of this statue.",
+      "source": "Krobus in the Sewers (1,000g)",
       "notes": "Ingredients: Stone (25) Coal (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wicked_Statue.png"
     },
@@ -6885,7 +6885,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Flute Block",
       "category": "Crafting Recipe",
       "desc": "Plays a flute sound when you walk past.",
-      "source": "Plays a flute sound when you walk past.",
+      "source": "Robin (6-Heart cutscene)",
       "notes": "Ingredients: Wood (10) Copper Ore (2) Fiber (20)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Flute_Block.png"
     },
@@ -6894,7 +6894,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Drum Block",
       "category": "Crafting Recipe",
       "desc": "Plays a drum sound when you walk past.",
-      "source": "Plays a drum sound when you walk past.",
+      "source": "Robin (6-Heart cutscene)",
       "notes": "Ingredients: Stone (10) Copper Ore (2) Fiber (20)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Drum_Block.png"
     },
@@ -6903,7 +6903,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Chest",
       "category": "Crafting Recipe",
       "desc": "A place to store your items.",
-      "source": "A place to store your items.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Wood (50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Chest.png"
     },
@@ -6912,7 +6912,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stone Chest",
       "category": "Crafting Recipe",
       "desc": "A place to store your items.",
-      "source": "A place to store your items.",
+      "source": "Carpenter's Shop (Robin - 50g)",
       "notes": "Ingredients: Stone (50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Chest.png"
     },
@@ -6921,7 +6921,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Big Chest",
       "category": "Crafting Recipe",
       "desc": "It can store almost twice as much as a regular chest.",
-      "source": "It can store almost twice as much as a regular chest.",
+      "source": "Carpenter's Shop (Robin - 5,000g)",
       "notes": "Ingredients: Wood (120) Copper Bar (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Big_Chest.png"
     },
@@ -6930,7 +6930,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Big Stone Chest",
       "category": "Crafting Recipe",
       "desc": "It can store almost twice as much as a regular chest.",
-      "source": "It can store almost twice as much as a regular chest.",
+      "source": "Volcano Dungeon Shop (Dwarf - 5,000g)",
       "notes": "Ingredients: Stone (250)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Big_Stone_Chest.png"
     },
@@ -6939,7 +6939,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Wood Sign",
       "category": "Crafting Recipe",
       "desc": "Use an item on this to change what's displayed. The item won't be consumed.",
-      "source": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Wood (25)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Wood_Sign.png"
     },
@@ -6948,7 +6948,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Stone Sign",
       "category": "Crafting Recipe",
       "desc": "Use an item on this to change what's displayed. The item won't be consumed.",
-      "source": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "source": "Starter Recipe",
       "notes": "Ingredients: Stone (25)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stone_Sign.png"
     },
@@ -6957,7 +6957,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Dark Sign",
       "category": "Crafting Recipe",
       "desc": "Use an item on this to change what's displayed. The item won't be consumed.",
-      "source": "Use an item on this to change what's displayed. The item won't be consumed.",
+      "source": "Krobus Special Order ('A Curious Substance')",
       "notes": "Ingredients: Bat Wing (5) Bone Fragment (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Dark_Sign.png"
     },
@@ -6966,7 +6966,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Text Sign",
       "category": "Crafting Recipe",
       "desc": "You can write a custom message on this sign.",
-      "source": "You can write a custom message on this sign.",
+      "source": "Carpenter's Shop (Robin - 1,000g)",
       "notes": "Ingredients: Wood (25)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Text_Sign.png"
     },
@@ -6975,7 +6975,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Garden Pot",
       "category": "Crafting Recipe",
       "desc": "Grows crops from any season when indoors. Outdoors, it can only house seasonal crops.",
-      "source": "Grows crops from any season when indoors. Outdoors, it can only house seasonal crops.",
+      "source": "Evelyn (Cutscene after unlocking Greenhouse)",
       "notes": "Ingredients: Clay (1) Stone (10) Refined Quartz (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Garden_Pot.png"
     },
@@ -6984,7 +6984,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Scarecrow",
       "category": "Crafting Recipe",
       "desc": "Prevents crows from attacking your crops. Has a limited radius (about 8 \"tiles\").",
-      "source": "Prevents crows from attacking your crops. Has a limited radius (about 8 \"tiles\").",
+      "source": "Farming Level 1",
       "notes": "Ingredients: Wood (50) Coal (1) Fiber (20)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Scarecrow.png"
     },
@@ -6993,7 +6993,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Deluxe Scarecrow",
       "category": "Crafting Recipe",
       "desc": "Prevents crows from attacking your crops. Has a large radius (about 16 \"tiles\").",
-      "source": "Prevents crows from attacking your crops. Has a large radius (about 16 \"tiles\").",
+      "source": "Collect all 8 Rarecrows (Zic-zac letter in mail)",
       "notes": "Ingredients: Wood (50) Fiber (40) Iridium Ore (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Deluxe_Scarecrow.png"
     },
@@ -7002,7 +7002,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Staircase",
       "category": "Crafting Recipe",
       "desc": "Use this to move down a level in the mines.",
-      "source": "Use this to move down a level in the mines.",
+      "source": "Mining Level 2",
       "notes": "Ingredients: Stone (99)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Staircase.png"
     },
@@ -7011,7 +7011,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Explosive Ammo",
       "category": "Crafting Recipe",
       "desc": "Fire this with the slingshot.",
-      "source": "Fire this with the slingshot.",
+      "source": "Combat Level 8",
       "notes": "Ingredients: Iron Bar (1) Coal (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Explosive_Ammo.png"
     },
@@ -7020,7 +7020,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Transmute (Fe)",
       "category": "Crafting Recipe",
       "desc": "A bar of pure iron.",
-      "source": "A bar of pure iron.",
+      "source": "Mining Level 4",
       "notes": "Ingredients: Copper Bar (3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Transmute_(Fe).png"
     },
@@ -7029,7 +7029,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Transmute (Au)",
       "category": "Crafting Recipe",
       "desc": "A bar of pure gold.",
-      "source": "A bar of pure gold.",
+      "source": "Mining Level 7",
       "notes": "Ingredients: Iron Bar (2)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Transmute_(Au).png"
     },
@@ -7038,7 +7038,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Mini-Jukebox",
       "category": "Crafting Recipe",
       "desc": "Allows you to play your favorite tunes.",
-      "source": "Allows you to play your favorite tunes.",
+      "source": "Gus (5-Heart Saloon cutscene)",
       "notes": "Ingredients: Iron Bar (2) Battery Pack (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mini-Jukebox.png"
     },
@@ -7047,7 +7047,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Mini-Obelisk",
       "category": "Crafting Recipe",
       "desc": "Place two on the farm to warp between them.",
-      "source": "Place two on the farm to warp between them.",
+      "source": "Wizard Special Order ('A Curious Substance')",
       "notes": "Ingredients: Hardwood (30) Solar Essence (20) Gold Bar (3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mini-Obelisk.png"
     },
@@ -7056,7 +7056,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Farm Computer",
       "category": "Crafting Recipe",
       "desc": "Scans the farm and displays useful information.",
-      "source": "Scans the farm and displays useful information.",
+      "source": "Demetrius Special Order ('Aquatic Overpopulation' / 'Biome Balance')",
       "notes": "Ingredients: Dwarf Gadget (1) Battery Pack (1) Refined Quartz (10)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Farm_Computer.png"
     },
@@ -7065,7 +7065,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Hopper",
       "category": "Crafting Recipe",
       "desc": "Items placed inside will automatically be loaded into the machine in front of it.",
-      "source": "Items placed inside will automatically be loaded into the machine in front of it.",
+      "source": "Qi's Walnut Room (10 Qi Gems)",
       "notes": "Ingredients: Hardwood (10) Iridium Bar (1) Radioactive Bar (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Hopper.png"
     },
@@ -7074,7 +7074,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Cookout Kit",
       "category": "Crafting Recipe",
       "desc": "Use this to create a cooking campfire, allowing you to cook on-the-go!",
-      "source": "Use this to create a cooking campfire, allowing you to cook on-the-go!",
+      "source": "Foraging Level 9",
       "notes": "Ingredients: Wood (15) Fiber (10) Coal (3)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Cookout_Kit.png"
     },
@@ -7083,7 +7083,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Tent Kit",
       "category": "Crafting Recipe",
       "desc": "Use this to deploy a one-time-use tent for sleeping. Can only be used outdoors.",
-      "source": "Use this to deploy a one-time-use tent for sleeping. Can only be used outdoors.",
+      "source": "Claimed from Bookseller or Green Rain Prize",
       "notes": "Ingredients: Hardwood (10) Fiber (25) Cloth (1)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tent_Kit.png"
     },
@@ -7092,7 +7092,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Statue Of The Dwarf King",
       "category": "Crafting Recipe",
       "desc": "Choose from two mining-related powers each day.",
-      "source": "Choose from two mining-related powers each day.",
+      "source": "Mining Mastery (Mastery Cave)",
       "notes": "Ingredients: Iridium Bar (20)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Statue_Of_The_Dwarf_King.png"
     },
@@ -7101,7 +7101,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Statue Of Blessings",
       "category": "Crafting Recipe",
       "desc": "Touching the statue gives a unique blessing every day.",
-      "source": "Touching the statue gives a unique blessing every day.",
+      "source": "Farming Mastery (Mastery Cave)",
       "notes": "Ingredients: Sap (999) Fiber (999) Stone (999) Moss (333)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Statue_Of_Blessings.png"
     },
@@ -7110,7 +7110,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Anvil",
       "category": "Crafting Recipe",
       "desc": "Allows you to re-forge trinkets, randomizing their stats. Costs 3 iridium bars per use.",
-      "source": "Allows you to re-forge trinkets, randomizing their stats. Costs 3 iridium bars per use.",
+      "source": "Combat Mastery (Mastery Cave)",
       "notes": "Ingredients: Iron Bar (50)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Anvil.png"
     },
@@ -7119,7 +7119,7 @@ const PERFECTION_TRACKER_DATA = {
       "name": "Mini-Forge",
       "category": "Crafting Recipe",
       "desc": "Now, you can use a dwarvish forge from the convenience of your home.",
-      "source": "Now, you can use a dwarvish forge from the convenience of your home.",
+      "source": "Combat Mastery (Mastery Cave)",
       "notes": "Ingredients: Dragon Tooth (5) Iron Bar (10) Gold Bar (10) Iridium Bar (5)",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mini-Forge.png"
     }

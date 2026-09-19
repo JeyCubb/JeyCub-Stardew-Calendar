@@ -2587,6 +2587,34 @@ function renderTrackerGridOnly() {
 
       detailsText = `<table class="tracker-info-table"><tbody>${rowsHtml}</tbody></table>`;
       notesText = item.desc ? `<div class="tracker-card-quote">“${item.desc}”</div>` : '';
+    } else if (activeTrackerSheet === 'crafting') {
+      badgeText = '🔨 Crafting';
+      badgeColor = '#fb923c';
+
+      const recipeSrc = item.source || 'Starter Recipe';
+      let ingredientsText = item.notes || '';
+      if (ingredientsText.startsWith('Ingredients:')) {
+        ingredientsText = ingredientsText.replace(/^Ingredients:\s*/i, '');
+      }
+
+      let rowsHtml = '';
+      if (recipeSrc) {
+        let srcColor = '#fef08a';
+        if (recipeSrc.includes('Festival') || recipeSrc.includes('Dance') || recipeSrc.includes("Eve")) srcColor = '#f472b6';
+        else if (recipeSrc.includes('Special Order') || recipeSrc.includes('Order')) srcColor = '#38bdf8';
+        else if (recipeSrc.includes('Level') || recipeSrc.includes('Mastery')) srcColor = '#4ade80';
+        else if (recipeSrc.includes('Shop') || recipeSrc.includes('Robin') || recipeSrc.includes('Pierre') || recipeSrc.includes('Krobus') || recipeSrc.includes('Willy')) srcColor = '#fbbf24';
+        else if (recipeSrc.includes('Starter')) srcColor = '#94a3b8';
+        else if (recipeSrc.includes('Qi')) srcColor = '#c084fc';
+
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #fbbf24;">📜</span> Recipe</td><td class="t-col-val" style="color: ${srcColor}; font-weight: 600;">${recipeSrc}</td></tr>`;
+      }
+      if (ingredientsText) {
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #4ade80;">🧱</span> Materials</td><td class="t-col-val">${ingredientsText}</td></tr>`;
+      }
+
+      detailsText = `<table class="tracker-info-table"><tbody>${rowsHtml}</tbody></table>`;
+      notesText = item.desc ? `<div class="tracker-card-quote">“${item.desc}”</div>` : '';
     } else if (activeTrackerSheet === 'villagers') {
       badgeText = item.category === 'Bachelorette' ? '👰 Bachelorette' : (item.category === 'Bachelor' ? '🤵 Bachelor' : '🏡 Townsperson');
       dayText = '';
