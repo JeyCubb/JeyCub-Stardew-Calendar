@@ -2282,6 +2282,34 @@ function renderTrackerSheet() {
   updateTrackerProgressBar();
 }
 
+const TRACKER_ITEM_ICONS = {
+  'Targeted Bait': 'https://stardewvalleywiki.com/Special:FilePath/Targeted_Bait.png',
+  'Deluxe Bait': 'https://stardewvalleywiki.com/Special:FilePath/Deluxe_Bait.png',
+  'Wild Bait': 'https://stardewvalleywiki.com/Special:FilePath/Wild_Bait.png',
+  'Magic Bait': 'https://stardewvalleywiki.com/Special:FilePath/Magic_Bait.png',
+  'Standard Bait': 'https://stardewvalleywiki.com/Special:FilePath/Bait.png',
+  'Magnet': 'https://stardewvalleywiki.com/Special:FilePath/Magnet.png',
+  'Trap Bobber': 'https://stardewvalleywiki.com/Special:FilePath/Trap_Bobber.png',
+  'Cork Bobber': 'https://stardewvalleywiki.com/Special:FilePath/Cork_Bobber.png',
+  'Lead Bobber': 'https://stardewvalleywiki.com/Special:FilePath/Lead_Bobber.png',
+  'Barbed Hook': 'https://stardewvalleywiki.com/Special:FilePath/Barbed_Hook.png',
+  'Curiosity Lure': 'https://stardewvalleywiki.com/Special:FilePath/Curiosity_Lure.png',
+  'Dressed Spinner': 'https://stardewvalleywiki.com/Special:FilePath/Dressed_Spinner.png',
+  'Quality Bobber': 'https://stardewvalleywiki.com/Special:FilePath/Quality_Bobber.png'
+};
+
+function formatItemTextWithIcons(text) {
+  if (!text || text.includes('N/A')) return text;
+  let imgs = [];
+  Object.keys(TRACKER_ITEM_ICONS).forEach(key => {
+    if (text.includes(key)) {
+      imgs.push(`<img src="${TRACKER_ITEM_ICONS[key]}" alt="${key}" title="${key}" loading="lazy" decoding="async" style="width: 17px; height: 17px; object-fit: contain; vertical-align: -3px; flex-shrink: 0; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));">`);
+    }
+  });
+  if (imgs.length === 0) return text;
+  return `<span style="display: inline-flex; align-items: center; gap: 4px; flex-wrap: wrap;">${imgs.join('')} <span>${text}</span></span>`;
+}
+
 // Filter and render items grid
 function renderTrackerGridOnly() {
   const grid = document.getElementById('tracker-items-grid');
@@ -2480,10 +2508,12 @@ function renderTrackerGridOnly() {
       }
       if (item.bobber || item.tackle) {
         const bobberVal = item.bobber || item.tackle;
-        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #f43f5e;">🪝</span> Bobber</td><td class="t-col-val" style="color: #fca5a5; font-weight: 500;">${bobberVal}</td></tr>`;
+        const bobberContent = formatItemTextWithIcons(bobberVal);
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #f43f5e;">🪝</span> Bobber</td><td class="t-col-val" style="color: #fca5a5; font-weight: 500;">${bobberContent}</td></tr>`;
       }
       if (item.bait) {
-        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #c084fc;">🪱</span> Bait</td><td class="t-col-val" style="color: #e9d5ff; font-weight: 500;">${item.bait}</td></tr>`;
+        const baitContent = formatItemTextWithIcons(item.bait);
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #c084fc;">🪱</span> Bait</td><td class="t-col-val" style="color: #e9d5ff; font-weight: 500;">${baitContent}</td></tr>`;
       }
       if (limitText && limitText !== 'None') {
         rowsHtml += `<tr class="t-row-limit"><td class="t-col-key"><span class="t-key-icon" style="color: #f87171;">⚠️</span> Limit</td><td class="t-col-val">${limitText}</td></tr>`;
