@@ -2054,13 +2054,25 @@ if (trackerSearchInput) {
 
 // Global hot-typing search and tab toggling
 window.addEventListener('keydown', (e) => {
-  // Ignore special hotkeys with ctrl/cmd/alt combos
-  if (e.ctrlKey || e.metaKey || e.altKey) return;
-
   const modalOverlays = document.querySelectorAll('.modal-overlay');
   for (let m of modalOverlays) {
     if (m && m.style.display && m.style.display !== 'none') return;
   }
+
+  // Handle Ctrl + Arrow to toggle between Calendar and Tracker (excluding Planner)
+  if ((e.ctrlKey || e.metaKey) && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) {
+    e.preventDefault();
+    const currentMode = localStorage.getItem('stardew_view_mode') || 'calendar';
+    if (currentMode === 'tracker') {
+      setAppViewMode('calendar');
+    } else {
+      setAppViewMode('tracker');
+    }
+    return;
+  }
+
+  // Ignore special hotkeys with ctrl/cmd/alt combos
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
 
   // Handle Left and Right Arrow navigation between tabs
   if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
