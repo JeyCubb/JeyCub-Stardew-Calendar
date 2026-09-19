@@ -7352,7 +7352,7 @@ const PERFECTION_TRACKER_DATA = {
       "source": "🏠 Leah's Cottage | 🎂 Winter 23",
       "loved": "Goat Cheese, Poppyseed Muffin, Salad, Stir Fry, Truffle, Vegetable Medley, Wine",
       "liked": "Chanterelle, Common Mushroom, Daffodil, Dandelion, Driftwood, Hazelnut, Holly, Morel, Spring Onion, Wild Horseradish, Winter Root",
-      "schedule": "Cottage sculpting morning until 11am; Cindersap Forest pond/river 12pm-4pm; Beach (Summer); Saloon 4pm-11pm nightly.",
+      "schedule": "Home sculpting morning; Cindersap Forest pond/river 12pm–4pm; Fri/Sat Saloon 4pm–11:30pm; bed at 11:00pm.",
       "scheduleTable": [
         {
           "time": "6:00 AM – 11:00 AM",
@@ -7364,11 +7364,11 @@ const PERFECTION_TRACKER_DATA = {
         },
         {
           "time": "4:00 PM – 11:00 PM",
-          "loc": "The Stardrop Saloon (or Leah's Cottage)"
+          "loc": "Leah's Cottage (Reading/Sculpting) [Fri/Sat: Stardrop Saloon 4pm–11:30pm]"
         },
         {
           "time": "11:00 PM+",
-          "loc": "Returns home to Leah's Cottage"
+          "loc": "Leah's Cottage (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Goat Cheese, Salad, Stir Fry, Truffle, Vegetable Medley, Wine, Poppyseed Muffin\n🕒 Routine: Cottage -> Forest Pond/Riverbank -> Saloon",
@@ -7400,12 +7400,12 @@ const PERFECTION_TRACKER_DATA = {
           "loc": "Buys groceries at Pierre's General Store (11:00 AM – 5:00 PM)"
         },
         {
-          "cond": "☀️ Summer (Sunny)",
-          "loc": "Sunbathes on The Beach dock / pier (12:00 PM – 7:00 PM)"
-        },
-        {
           "cond": "🍻 Fri / Sat",
           "loc": "Spends evenings socializing at The Stardrop Saloon (4:00 PM – 11:30 PM)"
+        },
+        {
+          "cond": "☀️ Summer (Sunny)",
+          "loc": "Sunbathes on The Beach dock / pier (12:00 PM – 7:00 PM)"
         },
         {
           "cond": "🌴 Island Resort",
@@ -7644,7 +7644,7 @@ const PERFECTION_TRACKER_DATA = {
       "source": "🏠 Elliott's Cabin | 🎂 Fall 5",
       "loved": "Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup",
       "liked": "Octopus, Squid, Universal Likes (except Amaranth/Pizza/Taco)",
-      "schedule": "Beach Cabin morning; Beach shore 11:30am; Bridge by museum / library 3pm-6pm; Stardrop Saloon Friday/Sunday 5pm-11pm.",
+      "schedule": "Beach Cabin morning; Beach shore 11:30am; bridge 3pm; Fri Saloon 8pm–11:40pm; bed at 11:00pm.",
       "scheduleTable": [
         {
           "time": "6:00 AM – 11:30 AM",
@@ -7660,11 +7660,11 @@ const PERFECTION_TRACKER_DATA = {
         },
         {
           "time": "6:00 PM – 11:00 PM",
-          "loc": "The Stardrop Saloon (Friday/Sunday) / Beach Cabin"
+          "loc": "Elliott's Cabin (Reading) [Fri: The Stardrop Saloon 8pm–11:40pm]"
         },
         {
           "time": "11:00 PM+",
-          "loc": "Beach Cabin (Sleeping)"
+          "loc": "Elliott's Cabin (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup\n🕒 Routine: Beach Cabin -> Beach Shore -> Museum Bridge -> Saloon (Fri/Sun)",
@@ -8898,7 +8898,7 @@ const PERFECTION_TRACKER_DATA = {
       "source": "🏠 Marnie's Ranch | 🎂 Fall 18",
       "loved": "Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie",
       "liked": "All Eggs (except Void Egg), All Milk, Quartz, Universal Likes",
-      "schedule": "Ranch shop counter 9am-4pm (closed Mon/Tue); Stardrop Saloon 7pm-11pm nightly; Aerobics Tuesday.",
+      "schedule": "Wed–Sun: Ranch shop counter 9am–4pm, in bed by 10:40pm. Closed Mon (Saloon 4pm) & Tue (Aerobics).",
       "scheduleTable": [
         {
           "time": "6:00 AM – 9:00 AM",
@@ -8906,36 +8906,36 @@ const PERFECTION_TRACKER_DATA = {
         },
         {
           "time": "9:00 AM – 4:00 PM",
-          "loc": "Marnie's Ranch Counter (Open Wed-Sun, Closed Mon/Tue) / Aerobics (Tue)"
+          "loc": "Marnie's Ranch Counter (Open Wed–Sun; closed Mon/Tue)"
         },
         {
-          "time": "4:00 PM – 7:00 PM",
-          "loc": "Marnie's Ranch (Barn / Living Room)"
+          "time": "4:00 PM – 9:00 PM",
+          "loc": "Marnie's Ranch (Living Room / Kitchen)"
         },
         {
-          "time": "7:00 PM – 11:00 PM",
-          "loc": "The Stardrop Saloon (Every night)"
-        },
-        {
-          "time": "11:00 PM+",
+          "time": "9:00 PM – 10:40 PM",
           "loc": "Marnie's Ranch (Bedroom)"
+        },
+        {
+          "time": "10:40 PM+",
+          "loc": "Marnie's Ranch (In Bed / Sleeping)"
         }
       ],
-      "notes": "❤️ Loved: Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie\n🕒 Routine: Marnie's Ranch (shop Wed-Sun) -> Pierre's Aerobics (Tue) -> Saloon (7pm-11pm nightly)",
+      "notes": "❤️ Loved: Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie\n🕒 Routine: Shop open Wed-Sun 9am-4pm; in bed by 10:40pm; Closed Mon (Saloon 4pm) & Tue (Aerobics).",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Marnie.png",
       "mapPins": [
         {
-          "label": "🏠 Marnie's Ranch (Shop Wed-Sun)",
+          "label": "🏠 Marnie's Ranch (Shop Wed-Sun 9am-4pm)",
           "x": 39.0,
           "y": 62.0
         },
         {
-          "label": "🛒 Pierre's Store (Aerobics Tue)",
+          "label": "🛒 Pierre's Store (Aerobics Tue 1pm-6pm)",
           "x": 52.0,
           "y": 42.5
         },
         {
-          "label": "🍻 Stardrop Saloon (7pm-11pm)",
+          "label": "🍺 Stardrop Saloon (Mon night 4pm-11pm)",
           "x": 55.0,
           "y": 54.0
         }
@@ -8943,23 +8943,27 @@ const PERFECTION_TRACKER_DATA = {
       "altTable": [
         {
           "cond": "🌧️ Rainy Days",
-          "loc": "Marnie's Ranch living room / tending farm animals"
+          "loc": "Marnie's Ranch (Inside all day tending animals; in bed by 10:40 PM)"
         },
         {
-          "cond": "🔒 Mon / Tue",
-          "loc": "Ranch shop closed (Tue: Aerobics at Pierre's 1:00 PM – 6:00 PM)"
+          "cond": "🛒 Monday",
+          "loc": "Shop CLOSED; walks to Pierre's Store -> The Stardrop Saloon (4:00 PM – 11:00 PM)"
         },
         {
-          "cond": "🍻 Evenings",
-          "loc": "Visits The Stardrop Saloon with Mayor Lewis (7:00 PM – 11:00 PM)"
+          "cond": "🧘 Tuesday",
+          "loc": "Shop CLOSED; Aerobics class at Pierre's Store (1:00 PM – 6:00 PM, home by 7:00 PM, bed at 10:40 PM)"
+        },
+        {
+          "cond": "🩺 Fall 18",
+          "loc": "Annual medical checkup at Harvey's Medical Clinic (9:00 AM – 4:00 PM)"
         },
         {
           "cond": "🌴 Island Resort",
           "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
         }
       ],
-      "rain": "Marnie's Ranch living room / tending farm animals",
-      "variations": "🔒 Mon / Tue: Ranch shop closed (Tue: Aerobics at Pierre's 1:00 PM – 6:00 PM); 🍻 Evenings: Visits The Stardrop Saloon with Mayor Lewis (7:00 PM – 11:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+      "rain": "Marnie's Ranch (Inside all day tending animals; in bed by 10:40 PM)",
+      "variations": "🔒 Mon: Shop CLOSED, visits Saloon 4pm-11pm; 🧘 Tue: Shop CLOSED, Aerobics at Pierre's 1pm-6pm, bed by 10:40pm; 🩺 Fall 18: Clinic checkup 9am-4pm; 🌴 Island: Beach Resort 11:40am-6pm"
     },
     {
       "id": "npc_pam",
@@ -9042,7 +9046,7 @@ const PERFECTION_TRACKER_DATA = {
       "source": "🏠 Pierre's General Store | 🎂 Spring 26",
       "loved": "Fried Calamari",
       "liked": "All Eggs (except Void Egg), All Milk, Daffodil, Dandelion, Universal Likes (except Fish/Corn/Garlic/Parsnip/Soup)",
-      "schedule": "Store counter 9am-5pm daily (closed Wed until Community Center completed); Stardrop Saloon Friday 5pm-10pm.",
+      "schedule": "Store counter 9am–5pm (closed Wed until CC done); living room evenings; Fri Saloon 7pm–10pm; bed at 10:00pm.",
       "scheduleTable": [
         {
           "time": "6:00 AM – 9:00 AM",
@@ -9058,11 +9062,11 @@ const PERFECTION_TRACKER_DATA = {
         },
         {
           "time": "7:00 PM – 10:00 PM",
-          "loc": "The Stardrop Saloon (Friday) / Pierre's Store"
+          "loc": "Pierre's General Store (Living Room) [Fri: The Stardrop Saloon 7pm–10pm]"
         },
         {
           "time": "10:00 PM+",
-          "loc": "Pierre's General Store (Bedroom)"
+          "loc": "Pierre's General Store (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Fried Calamari\n🕒 Routine: Pierre's General Store counter (9am-5pm) -> Saloon (Friday 5pm-10pm)",
@@ -9109,7 +9113,7 @@ const PERFECTION_TRACKER_DATA = {
       "source": "🏠 24 Mountain Road | 🎂 Fall 21",
       "loved": "Goat Cheese, Peach, Spaghetti",
       "liked": "All Milk, Hardwood, Quartz, Universal Likes",
-      "schedule": "Carpenter's shop counter 9am-5pm (closed Tuesday); Stardrop Saloon Friday 6pm-10pm dancing with Demetrius; Aerobics Tue.",
+      "schedule": "Carpenter's shop counter 9am–5pm (closed Tue); Fri Saloon 6pm–10pm dancing with Demetrius; bed at 10:00pm.",
       "scheduleTable": [
         {
           "time": "6:00 AM – 9:00 AM",
@@ -9117,7 +9121,7 @@ const PERFECTION_TRACKER_DATA = {
         },
         {
           "time": "9:00 AM – 5:00 PM",
-          "loc": "Carpenter's Shop Counter (Open daily except Tuesday) / Aerobics (Tue)"
+          "loc": "Carpenter's Shop Counter (Open daily except Tuesday)"
         },
         {
           "time": "5:00 PM – 7:00 PM",
@@ -9125,11 +9129,11 @@ const PERFECTION_TRACKER_DATA = {
         },
         {
           "time": "7:00 PM – 10:00 PM",
-          "loc": "The Stardrop Saloon (Friday dancing with Demetrius) / Carpenter's Shop"
+          "loc": "Carpenter's Shop (Living Room) [Fri: Saloon dancing with Demetrius 6pm–10pm]"
         },
         {
           "time": "10:00 PM+",
-          "loc": "Carpenter's Shop (Bedroom)"
+          "loc": "Carpenter's Shop (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Goat Cheese, Peach, Spaghetti\n🕒 Routine: Carpenter's Shop (9am-5pm) -> Pierre's Aerobics (Tue) -> Saloon (Fri dancing with Demetrius)",
@@ -9299,7 +9303,7 @@ const PERFECTION_TRACKER_DATA = {
       "source": "🏠 Fish Shop (The Beach) | 🎂 Summer 24",
       "loved": "Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon",
       "liked": "Baked Fish, Carp Surprise, Chowder, Crispy Bass, Dish O' The Sea, Escargot, Fish Stew, Fish Taco, Fried Calamari, Fried Eel, Gold Bar, Salmon Dinner, Seafoam Pudding, Trout Soup",
-      "schedule": "Beach pier morning; Fish Shop counter 9am-5pm; Pier fishing 5pm-9pm (or Saloon eves); Saturday: Forest river 9am-2pm, Town river bridge to beach 2pm-7pm, Saloon 7pm-11pm.",
+      "schedule": "Fish Shop counter 9am–5pm; Pier fishing 6am–9am & 5pm–11pm; Sat Saloon 7pm–11pm; bed at 11:00pm.",
       "scheduleTable": [
         {
           "time": "6:00 AM – 9:00 AM",
@@ -9310,16 +9314,12 @@ const PERFECTION_TRACKER_DATA = {
           "loc": "Willy's Fish Shop (Behind sales counter)"
         },
         {
-          "time": "5:00 PM – 7:00 PM",
-          "loc": "Beach Pier outside shop (or Town River bridge on Sat)"
-        },
-        {
-          "time": "7:00 PM – 11:00 PM",
-          "loc": "The Stardrop Saloon (Socializing / having a drink)"
+          "time": "5:00 PM – 11:00 PM",
+          "loc": "Beach Pier outside shop (Fishing) [Sat: The Stardrop Saloon 7pm–11pm]"
         },
         {
           "time": "11:00 PM+",
-          "loc": "Fish Shop Bedroom (Sleeping)"
+          "loc": "Fish Shop Bedroom (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon\n🕒 Routine: Fish Shop (9am-5pm) -> Beach Pier -> Stardrop Saloon; Sat: Town River bridge to beach (2pm-7pm)",
