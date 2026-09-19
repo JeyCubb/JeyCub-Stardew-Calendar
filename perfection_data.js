@@ -7134,7 +7134,7 @@ const PERFECTION_TRACKER_DATA = {
       "source": "🏠 Pierre's General Store | 🎂 Fall 13",
       "loved": "Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Monster Compendium, Pufferfish, Pumpkin, Spicy Eel",
       "liked": "Quartz, Universal Likes (except Vegetables)",
-      "schedule": "Morning at Pierre's; Graveyard (sunny) 9am-1pm; Mountain lake / bridge 1pm-5pm; Saloon or Pierre's store evenings.",
+      "schedule": "Pierre's store morning; Graveyard/Mountain/Saloon; Fall Tue/Thu/Sat at Bus Stop 2:20pm–5pm; Wed Library; Sun Wizard Tower.",
       "scheduleTable": [
         {
           "time": "6:00 AM – 9:00 AM",
@@ -7174,20 +7174,33 @@ const PERFECTION_TRACKER_DATA = {
           "label": "🍻 The Stardrop Saloon",
           "x": 55.0,
           "y": 54.0
+        },
+        {
+          "label": "🚌 Bus Stop (Fall Tue/Thu/Sat)",
+          "x": 25.0,
+          "y": 56.0
         }
       ],
       "altTable": [
+        {
+          "cond": "🍂 Fall (Tue / Thu / Sat)",
+          "loc": "Pierre's kitchen/store morning -> Walks to Bus Stop (1:00 PM) -> Stands at Bus Stop (2:20 PM – 5:00 PM) -> Home to room/bed (6:30 PM+)"
+        },
         {
           "cond": "🌧️ Rainy Days",
           "loc": "Pierre's living room / kitchen in morning -> The Stardrop Saloon (5:00 PM – 9:00 PM)"
         },
         {
-          "cond": "🔄 Tue / Thu",
+          "cond": "🔄 Spring/Summer/Winter Tue/Thu",
           "loc": "Graveyard & Town River Bridge (1:00 PM – 5:00 PM)"
         },
         {
-          "cond": "🔄 Wed / Fri",
+          "cond": "🔄 Spring/Summer/Winter Wed/Fri",
           "loc": "Plays flute at Mountain Lake & Bridge near Mines (1:00 PM – 5:00 PM)"
+        },
+        {
+          "cond": "📚 Wednesday (Fall)",
+          "loc": "Pierre's -> Museum Library (12:00 PM – 6:00 PM) -> Mona's Grave in Graveyard (7:00 PM – 10:00 PM)"
         },
         {
           "cond": "🔄 Sunday",
@@ -7199,7 +7212,7 @@ const PERFECTION_TRACKER_DATA = {
         }
       ],
       "rain": "Pierre's living room / kitchen in morning -> The Stardrop Saloon (5:00 PM – 9:00 PM)",
-      "variations": "🔄 Tue / Thu: Graveyard & Town River Bridge (1:00 PM – 5:00 PM); 🔄 Wed / Fri: Plays flute at Mountain Lake & Bridge near Mines (1:00 PM – 5:00 PM); 🔄 Sunday: Stands outside Wizard's Tower in Cindersap Forest (1:30 PM – 7:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+      "variations": "🍂 Fall Tue/Thu/Sat: Bus Stop (2:20 PM – 5:00 PM); 📚 Wed: Library (12pm–6pm) & Mona's Grave (7pm–10pm); 🔄 Sunday: Wizard's Tower (1:30 PM – 7:00 PM); 🌧️ Rainy: Saloon arcade (5pm–9pm); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM)"
     },
     {
       "id": "npc_emily",
