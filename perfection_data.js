@@ -4491,7 +4491,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer | Weather: Sunny / Clear | Time: 12:00 PM – 4:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pufferfish.png",
       "bobber": "Trap Bobber (or Cork Bobber for Floater behavior)",
-      "bait": "Targeted Bait (Pufferfish) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_anchovy",
@@ -4509,7 +4509,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Fall | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Anchovy.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_tuna",
@@ -4527,7 +4527,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer • Winter (All Seasons on Ginger Island) | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tuna.png",
       "bobber": "Cork Bobber or Trap Bobber",
-      "bait": "Targeted Bait (Tuna) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_sardine",
@@ -4545,7 +4545,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Fall • Winter | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sardine.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_bream",
@@ -4563,7 +4563,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bream.png",
       "bobber": "Cork Bobber or Barbed Hook",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_largemouth_bass",
@@ -4581,7 +4581,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Largemouth_Bass.png",
       "bobber": "Cork Bobber or Trap Bobber",
-      "bait": "Targeted Bait (Largemouth Bass) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_smallmouth_bass",
@@ -4599,7 +4599,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Fall | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Smallmouth_Bass.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_rainbow_trout",
@@ -4617,7 +4617,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer | Weather: Sunny / Clear (Any in Trout Derby) | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Rainbow_Trout.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Targeted Bait (Rainbow Trout) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_salmon",
@@ -4635,7 +4635,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Fall | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon.png",
       "bobber": "Cork Bobber or Trap Bobber",
-      "bait": "Targeted Bait (Salmon) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_walleye",
@@ -4653,7 +4653,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Fall (Winter with Rain Totem) | Weather: Rain | Time: 12:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Walleye.png",
       "bobber": "Cork Bobber or Barbed Hook",
-      "bait": "Targeted Bait (Walleye) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_perch",
@@ -4671,7 +4671,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Winter | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Perch.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_carp",
@@ -4707,7 +4707,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Fall (Summer in Secret Woods) | Weather: Rain | Time: 6:00 AM – 12:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Catfish.png",
       "bobber": "Trap Bobber (Crucial for aggressive darting)",
-      "bait": "Targeted Bait (Catfish) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_pike",
@@ -4725,7 +4725,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer • Winter | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Pike.png",
       "bobber": "Trap Bobber or Cork Bobber",
-      "bait": "Targeted Bait (Pike) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_sunfish",
@@ -4743,7 +4743,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Summer | Weather: Sunny / Clear | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sunfish.png",
       "bobber": "Cork Bobber or Barbed Hook",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_red_mullet",
@@ -4761,7 +4761,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer • Winter | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Mullet.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Targeted Bait (Red Mullet) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_herring",
@@ -4779,7 +4779,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Winter | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Herring.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_eel",
@@ -4797,7 +4797,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Fall | Weather: Rain | Time: 4:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Eel.png",
       "bobber": "Cork Bobber or Trap Bobber",
-      "bait": "Targeted Bait (Eel) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_octopus",
@@ -4815,7 +4815,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer (All Seasons on Ginger Island) | Weather: Any | Time: 6:00 AM – 1:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Octopus.png",
       "bobber": "Trap Bobber (Essential) + Lead Bobber",
-      "bait": "Targeted Bait (Octopus) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_red_snapper",
@@ -4833,7 +4833,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer • Fall (Winter with Rain Totem) | Weather: Rain | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Snapper.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Targeted Bait (Red Snapper) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_squid",
@@ -4851,7 +4851,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Winter (All on Ginger Island West) | Weather: Any | Time: 6:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Squid.png",
       "bobber": "Trap Bobber or Lead Bobber (Sinker behavior)",
-      "bait": "Targeted Bait (Squid) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_seaweed",
@@ -4869,7 +4869,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Seaweed.png",
       "bobber": "N/A (Forage / Static Catch)",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_green_algae",
@@ -4887,7 +4887,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Green_Algae.png",
       "bobber": "N/A (Forage / Static Catch)",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_sea_cucumber",
@@ -4905,7 +4905,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Fall • Winter (All on Ginger Island) | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sea_Cucumber.png",
       "bobber": "Cork Bobber or Lead Bobber",
-      "bait": "Targeted Bait (Sea Cucumber) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_super_cucumber",
@@ -4923,7 +4923,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer • Fall (All on Ginger Island) | Weather: Any | Time: 6:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Cucumber.png",
       "bobber": "Trap Bobber or Lead Bobber",
-      "bait": "Targeted Bait (Super Cucumber) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_ghostfish",
@@ -4941,7 +4941,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Ghostfish.png",
       "bobber": "Cork Bobber or Barbed Hook",
-      "bait": "Targeted Bait (Ghostfish) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_white_algae",
@@ -4959,7 +4959,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/White_Algae.png",
       "bobber": "N/A (Forage / Static Catch)",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_stonefish",
@@ -4977,7 +4977,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stonefish.png",
       "bobber": "Curiosity Lure (Boosts bite rate) or Lead Bobber",
-      "bait": "Targeted Bait (Stonefish) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_crimsonfish",
@@ -4995,7 +4995,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer | Weather: Any | Time: 6:00 AM – 8:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Crimsonfish.png",
       "bobber": "Trap Bobber (or Trap + Cork on Advanced Rod)",
-      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait"
+      "bait": "Deluxe Bait / Magic Bait / Wild Bait"
     },
     {
       "id": "fish_angler",
@@ -5013,7 +5013,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Fall | Weather: Any | Time: 6:00 AM – 8:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Angler.png",
       "bobber": "Trap Bobber or Cork Bobber",
-      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait"
+      "bait": "Deluxe Bait / Magic Bait / Wild Bait"
     },
     {
       "id": "fish_ice_pip",
@@ -5031,7 +5031,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Pip.png",
       "bobber": "Trap Bobber or Curiosity Lure (High trash rate in Mines 60)",
-      "bait": "Targeted Bait (Ice Pip) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_lava_eel",
@@ -5049,7 +5049,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Lava Pools",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Lava_Eel.png",
       "bobber": "Trap Bobber or Curiosity Lure (Boosts lava bite rate 5% -> 15%)",
-      "bait": "Targeted Bait (Lava Eel) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_legend",
@@ -5067,7 +5067,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring | Weather: Rain | Time: 6:00 AM – 8:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Legend.png",
       "bobber": "Trap Bobber (Must-have, reduces escape speed by 33%)",
-      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait (Legend)"
+      "bait": "Deluxe Bait / Magic Bait / Wild Bait"
     },
     {
       "id": "fish_sandfish",
@@ -5085,7 +5085,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 8:00 PM | Calico Desert",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sandfish.png",
       "bobber": "Cork Bobber or Trap Bobber",
-      "bait": "Targeted Bait (Sandfish) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_scorpion_carp",
@@ -5103,7 +5103,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 8:00 PM | Fishing Level 4+",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Scorpion_Carp.png",
       "bobber": "Trap Bobber (Crucial for erratic darting)",
-      "bait": "Targeted Bait (Scorpion Carp) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_flounder",
@@ -5121,7 +5121,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Summer (All Seasons on Ginger Island) | Weather: Any | Time: 6:00 AM – 8:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Flounder.png",
       "bobber": "Cork Bobber or Lead Bobber",
-      "bait": "Targeted Bait (Flounder) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_midnight_carp",
@@ -5139,7 +5139,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Fall • Winter (All on Ginger Island) | Weather: Any | Time: 10:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Midnight_Carp.png",
       "bobber": "Cork Bobber or Trap Bobber",
-      "bait": "Targeted Bait (Midnight Carp) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_mutant_carp",
@@ -5157,7 +5157,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Sewers Access",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Mutant_Carp.png",
       "bobber": "Trap Bobber or Cork Bobber",
-      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait"
+      "bait": "Deluxe Bait / Magic Bait / Wild Bait"
     },
     {
       "id": "fish_sturgeon",
@@ -5175,7 +5175,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer • Winter | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Sturgeon.png",
       "bobber": "Trap Bobber or Cork Bobber",
-      "bait": "Targeted Bait (Sturgeon) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_tiger_trout",
@@ -5193,7 +5193,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Fall • Winter | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tiger_Trout.png",
       "bobber": "Trap Bobber (Tough darting behavior)",
-      "bait": "Targeted Bait (Tiger Trout) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_bullhead",
@@ -5211,7 +5211,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Bullhead.png",
       "bobber": "Cork Bobber or Barbed Hook",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_tilapia",
@@ -5229,7 +5229,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer • Fall (All on Ginger Island) | Weather: Any | Time: 6:00 AM – 2:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Tilapia.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Targeted Bait (Tilapia) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_chub",
@@ -5247,7 +5247,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Chub.png",
       "bobber": "Cork Bobber or Barbed Hook",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_dorado",
@@ -5265,7 +5265,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Summer | Weather: Any | Time: 6:00 AM – 7:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Dorado.png",
       "bobber": "Trap Bobber or Cork Bobber",
-      "bait": "Targeted Bait (Dorado) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_albacore",
@@ -5283,7 +5283,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Fall • Winter | Weather: Any | Time: 6am–11am & 6pm–2am",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Albacore.png",
       "bobber": "Cork Bobber or Trap Bobber",
-      "bait": "Targeted Bait (Albacore) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_shad",
@@ -5301,7 +5301,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Summer • Fall | Weather: Rain | Time: 9:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Shad.png",
       "bobber": "Cork Bobber or Barbed Hook",
-      "bait": "Standard Bait / Deluxe Bait"
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_lingcod",
@@ -5319,7 +5319,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Winter (All on Ginger Island West) | Weather: Any | Time: 6:00 AM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Lingcod.png",
       "bobber": "Trap Bobber (Essential for ultra-aggressive movement)",
-      "bait": "Targeted Bait (Lingcod) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_halibut",
@@ -5337,7 +5337,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Spring • Summer • Winter | Weather: Any | Time: 6am–11am & 7pm–2am",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Halibut.png",
       "bobber": "Cork Bobber or Lead Bobber",
-      "bait": "Targeted Bait (Halibut) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_lobster",
@@ -5517,7 +5517,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Secret Woods",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Woodskip.png",
       "bobber": "Curiosity Lure or Cork Bobber",
-      "bait": "Targeted Bait (Woodskip) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_glacierfish",
@@ -5535,7 +5535,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Winter | Weather: Any | Time: 6:00 AM – 8:00 PM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Glacierfish.png",
       "bobber": "Trap Bobber (Essential for wild bottom bounces)",
-      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait (Glacierfish)"
+      "bait": "Deluxe Bait / Magic Bait / Wild Bait"
     },
     {
       "id": "fish_void_salmon",
@@ -5553,7 +5553,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Witch's Swamp",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Void_Salmon.png",
       "bobber": "Trap Bobber or Cork Bobber",
-      "bait": "Targeted Bait (Void Salmon) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_slimejack",
@@ -5571,7 +5571,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Mutant Bug Lair",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Slimejack.png",
       "bobber": "Curiosity Lure or Cork Bobber",
-      "bait": "Targeted Bait (Slimejack) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_midnight_squid",
@@ -5589,7 +5589,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Winter (Night Market 15-17) | Weather: Any | Time: 5:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Midnight_Squid.png",
       "bobber": "Curiosity Lure or Lead Bobber (Night Market Submarine)",
-      "bait": "Targeted Bait (Midnight Squid) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_spook_fish",
@@ -5607,7 +5607,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Winter (Night Market 15-17) | Weather: Any | Time: 5:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Spook_Fish.png",
       "bobber": "Curiosity Lure or Trap Bobber (Night Market Submarine)",
-      "bait": "Targeted Bait (Spook Fish) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_blobfish",
@@ -5625,7 +5625,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: Winter (Night Market 15-17) | Weather: Any | Time: 5:00 PM – 2:00 AM",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Blobfish.png",
       "bobber": "Trap Bobber or Curiosity Lure (Night Market Submarine)",
-      "bait": "Targeted Bait (Blobfish) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_stingray",
@@ -5643,7 +5643,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Pirate Cove",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Stingray.png",
       "bobber": "Trap Bobber or Curiosity Lure (Pirate Cove)",
-      "bait": "Targeted Bait (Stingray) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_lionfish",
@@ -5661,7 +5661,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Ginger Island Ocean",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Lionfish.png",
       "bobber": "Cork Bobber or Dressed Spinner",
-      "bait": "Targeted Bait (Lionfish) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_blue_discus",
@@ -5679,7 +5679,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Ginger Island Freshwater",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Blue_Discus.png",
       "bobber": "Cork Bobber or Trap Bobber",
-      "bait": "Targeted Bait (Blue Discus) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     },
     {
       "id": "fish_clam",
@@ -5769,7 +5769,7 @@ const PERFECTION_TRACKER_DATA = {
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Waterfalls",
       "img": "https://stardewvalleywiki.com/Special:FilePath/Goby.png",
       "bobber": "Curiosity Lure or Cork Bobber (Waterfalls in Cindersap)",
-      "bait": "Targeted Bait (Goby) / Deluxe Bait"
+      "bait": "Deluxe Bait / Wild Bait"
     }
   ],
   "crafting": [
