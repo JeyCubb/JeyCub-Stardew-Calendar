@@ -3583,897 +3583,897 @@ const PERFECTION_TRACKER_DATA = {
   ],
   "cooking": [
     {
-        "id": "cook_fried_egg",
-        "name": "Fried Egg",
-        "category": "Cooking Recipe",
-        "desc": "Sunny-side up.",
-        "source": "Starter (Kitchen Upgrade)",
-        "ingredients": "Egg (1)",
-        "buffs": "",
-        "notes": "Ingredients: Egg (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Egg.png"
-    },
-    {
-        "id": "cook_omelet",
-        "name": "Omelet",
-        "category": "Cooking Recipe",
-        "desc": "It's super fluffy.",
-        "source": "Queen of Sauce (Spring 28, Y1) or Saloon (100g)",
-        "ingredients": "Egg (1), Milk (1)",
-        "buffs": "",
-        "notes": "Ingredients: Egg (1) Milk (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Omelet.png"
-    },
-    {
-        "id": "cook_salad",
-        "name": "Salad",
-        "category": "Cooking Recipe",
-        "desc": "A healthy garden salad.",
-        "source": "The Stardrop Saloon (Gus - 220g)",
-        "ingredients": "Leek (1), Dandelion (1), Vinegar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Leek (1) Dandelion (1) Vinegar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Salad.png"
-    },
-    {
-        "id": "cook_cheese_cauliflower",
-        "name": "Cheese Cauliflower",
-        "category": "Cooking Recipe",
-        "desc": "It smells great!",
-        "source": "Pam (Mail - 3❤️)",
-        "ingredients": "Cauliflower (1), Cheese (1)",
-        "buffs": "",
-        "notes": "Ingredients: Cauliflower (1) Cheese (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Cheese_Cauliflower.png"
-    },
-    {
-        "id": "cook_baked_fish",
-        "name": "Baked Fish",
-        "category": "Cooking Recipe",
-        "desc": "Baked fish on a bed of herbs.",
-        "source": "Queen of Sauce (Summer 7, Y1) or Saloon (100g)",
-        "ingredients": "Sunfish (1), Bream (1), Wheat Flour (1)",
-        "buffs": "",
-        "notes": "Ingredients: Sunfish (1) Bream (1) Wheat Flour (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Baked_Fish.png"
-    },
-    {
-        "id": "cook_parsnip_soup",
-        "name": "Parsnip Soup",
-        "category": "Cooking Recipe",
-        "desc": "It's fresh and hearty.",
-        "source": "Caroline (Mail - 3❤️)",
-        "ingredients": "Parsnip (1), Milk (1), Vinegar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Parsnip (1) Milk (1) Vinegar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Parsnip_Soup.png"
-    },
-    {
-        "id": "cook_vegetable_medley",
-        "name": "Vegetable Medley",
-        "category": "Cooking Recipe",
-        "desc": "This is very nutritious.",
-        "source": "Queen of Sauce (Spring 14, Y1)",
-        "ingredients": "Tomato (1), Beet (1)",
-        "buffs": "",
-        "notes": "Ingredients: Tomato (1) Beet (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Vegetable_Medley.png"
-    },
-    {
-        "id": "cook_complete_breakfast",
-        "name": "Complete Breakfast",
-        "category": "Cooking Recipe",
-        "desc": "You'll feel ready to take on the world!",
-        "source": "Queen of Sauce (Spring 21, Y2)",
-        "ingredients": "Fried Egg (1), Milk (1), Hashbrowns (1), Pancakes (1)",
-        "buffs": "Farming (+2), Max Energy (+50)",
-        "notes": "Ingredients: Fried Egg (1) Milk (1) Hashbrowns (1) Pancakes (1) | Buffs: Farming (+2) Max Energy (+50)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Complete_Breakfast.png"
-    },
-    {
-        "id": "cook_fried_calamari",
-        "name": "Fried Calamari",
-        "category": "Cooking Recipe",
-        "desc": "It's so chewy.",
-        "source": "Jodi (Mail - 3❤️)",
-        "ingredients": "Squid (1), Wheat Flour (1), Oil (1)",
-        "buffs": "",
-        "notes": "Ingredients: Squid (1) Wheat Flour (1) Oil (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Calamari.png"
-    },
-    {
-        "id": "cook_strange_bun",
-        "name": "Strange Bun",
-        "category": "Cooking Recipe",
-        "desc": "What's inside?",
-        "source": "Shane (Mail - 7❤️)",
-        "ingredients": "Wheat Flour (1), Void Mayonnaise (1), Periwinkle (1)",
-        "buffs": "",
-        "notes": "Ingredients: Wheat Flour (1) Periwinkle (1) Void Mayonnaise (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Strange_Bun.png"
-    },
-    {
-        "id": "cook_lucky_lunch",
-        "name": "Lucky Lunch",
-        "category": "Cooking Recipe",
-        "desc": "A special little meal.",
-        "source": "Queen of Sauce (Spring 28, Y2)",
-        "ingredients": "Sea Cucumber (1), Tortilla (1), Blue Jazz (1)",
-        "buffs": "Luck (+3)",
-        "notes": "Ingredients: Sea Cucumber (1) Tortilla (1) Blue Jazz (1) | Buffs: Luck (+3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Lucky_Lunch.png"
-    },
-    {
-        "id": "cook_fried_mushroom",
-        "name": "Fried Mushroom",
-        "category": "Cooking Recipe",
-        "desc": "Earthy and aromatic.",
-        "source": "Demetrius (Mail - 3❤️)",
-        "ingredients": "Common Mushroom (1), Morel (1), Oil (1)",
-        "buffs": "Attack (+2)",
-        "notes": "Ingredients: Common Mushroom (1) Morel (1) Oil (1) | Buffs: Attack (+2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Mushroom.png"
-    },
-    {
-        "id": "cook_pizza",
-        "name": "Pizza",
-        "category": "Cooking Recipe",
-        "desc": "It's popular for all the right reasons.",
-        "source": "Queen of Sauce (Spring 7, Y2) or Saloon (150g)",
-        "ingredients": "Wheat Flour (1), Tomato (1), Cheese (1)",
-        "buffs": "",
-        "notes": "Ingredients: Wheat Flour (1) Tomato (1) Cheese (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pizza.png"
-    },
-    {
-        "id": "cook_bean_hotpot",
-        "name": "Bean Hotpot",
-        "category": "Cooking Recipe",
-        "desc": "It sure smells healthy.",
-        "source": "Clint (Mail - 7❤️)",
-        "ingredients": "Green Bean (2)",
-        "buffs": "Max Energy (+30), Magnetism (+32)",
-        "notes": "Ingredients: Green Bean (2) | Buffs: Max Energy (+30) Magnetism (+32)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Bean_Hotpot.png"
-    },
-    {
-        "id": "cook_glazed_yams",
-        "name": "Glazed Yams",
-        "category": "Cooking Recipe",
-        "desc": "Sweet and satisfying. The glaze gives it a nice shine.",
-        "source": "Queen of Sauce (Fall 21, Y1)",
-        "ingredients": "Yam (1), Sugar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Yam (1) Sugar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Glazed_Yams.png"
-    },
-    {
-        "id": "cook_carp_surprise",
-        "name": "Carp Surprise",
-        "category": "Cooking Recipe",
-        "desc": "It's bland and oily.",
-        "source": "Queen of Sauce (Summer 7, Y2)",
-        "ingredients": "Carp (4)",
-        "buffs": "",
-        "notes": "Ingredients: Carp (4)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Carp_Surprise.png"
-    },
-    {
-        "id": "cook_hashbrowns",
-        "name": "Hashbrowns",
-        "category": "Cooking Recipe",
-        "desc": "Crispy and golden-brown!",
-        "source": "Queen of Sauce (Spring 14, Y2) or Saloon (50g)",
-        "ingredients": "Potato (1), Oil (1)",
-        "buffs": "Farming (+1)",
-        "notes": "Ingredients: Potato (1) Oil (1) | Buffs: Farming (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Hashbrowns.png"
-    },
-    {
-        "id": "cook_pancakes",
-        "name": "Pancakes",
-        "category": "Cooking Recipe",
-        "desc": "A double stack of fluffy soft pancakes.",
-        "source": "Queen of Sauce (Summer 14, Y1) or Saloon (100g)",
-        "ingredients": "Wheat Flour (1), Egg (1)",
-        "buffs": "Foraging (+2)",
-        "notes": "Ingredients: Wheat Flour (1) Egg (1) | Buffs: Foraging (+2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pancakes.png"
-    },
-    {
-        "id": "cook_salmon_dinner",
-        "name": "Salmon Dinner",
-        "category": "Cooking Recipe",
-        "desc": "The lemon spritz really brings out the flavor.",
-        "source": "Gus (Mail - 3❤️)",
-        "ingredients": "Salmon (1), Amaranth (1), Kale (1)",
-        "buffs": "",
-        "notes": "Ingredients: Salmon (1) Amaranth (1) Kale (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon_Dinner.png"
-    },
-    {
-        "id": "cook_fish_taco",
-        "name": "Fish Taco",
-        "category": "Cooking Recipe",
-        "desc": "It smells delicious.",
-        "source": "Linus (Mail - 7❤️)",
-        "ingredients": "Tuna (1), Tortilla (1), Red Cabbage (1), Mayonnaise (1)",
-        "buffs": "Fishing (+2)",
-        "notes": "Ingredients: Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1) | Buffs: Fishing (+2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Taco.png"
-    },
-    {
-        "id": "cook_crispy_bass",
-        "name": "Crispy Bass",
-        "category": "Cooking Recipe",
-        "desc": "Wow, the breading is perfect.",
-        "source": "Kent (Mail - 3❤️)",
-        "ingredients": "Largemouth Bass (1), Wheat Flour (1), Oil (1)",
-        "buffs": "Magnetism (+64)",
-        "notes": "Ingredients: Largemouth Bass (1) Wheat Flour (1) Oil (1) | Buffs: Magnetism (+64)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Crispy_Bass.png"
-    },
-    {
-        "id": "cook_pepper_poppers",
-        "name": "Pepper Poppers",
-        "category": "Cooking Recipe",
-        "desc": "Spicy breaded peppers filled with cheese.",
-        "source": "Shane (Mail - 3❤️)",
-        "ingredients": "Hot Pepper (1), Cheese (1)",
-        "buffs": "Farming (+2), Speed (+1)",
-        "notes": "Ingredients: Hot Pepper (1) Cheese (1) | Buffs: Farming (+2) Speed (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pepper_Poppers.png"
-    },
-    {
-        "id": "cook_bread",
-        "name": "Bread",
-        "category": "Cooking Recipe",
-        "desc": "A crusty baguette.",
-        "source": "Queen of Sauce (Summer 28, Y1) or Saloon (100g)",
-        "ingredients": "Wheat Flour (1)",
-        "buffs": "",
-        "notes": "Ingredients: Wheat Flour (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Bread.png"
-    },
-    {
-        "id": "cook_tom_kha_soup",
-        "name": "Tom Kha Soup",
-        "category": "Cooking Recipe",
-        "desc": "These flavors are incredible!",
-        "source": "Sandy (Mail - 7❤️)",
-        "ingredients": "Coconut (1), Shrimp (1), Common Mushroom (1)",
-        "buffs": "Farming (+2), Max Energy (+30)",
-        "notes": "Ingredients: Coconut (1) Shrimp (1) Common Mushroom (1) | Buffs: Farming (+2) Max Energy (+30)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Tom_Kha_Soup.png"
-    },
-    {
-        "id": "cook_trout_soup",
-        "name": "Trout Soup",
-        "category": "Cooking Recipe",
-        "desc": "Pretty salty.",
-        "source": "Queen of Sauce (Fall 14, Y1)",
-        "ingredients": "Rainbow Trout (1), Green Algae (1)",
-        "buffs": "Fishing (+1)",
-        "notes": "Ingredients: Rainbow Trout (1) Green Algae (1) | Buffs: Fishing (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Trout_Soup.png"
-    },
-    {
-        "id": "cook_chocolate_cake",
-        "name": "Chocolate Cake",
-        "category": "Cooking Recipe",
-        "desc": "Rich and moist with a thick fudge icing.",
-        "source": "Queen of Sauce (Winter 14, Y1)",
-        "ingredients": "Wheat Flour (1), Sugar (1), Egg (1)",
-        "buffs": "",
-        "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Chocolate_Cake.png"
-    },
-    {
-        "id": "cook_pink_cake",
-        "name": "Pink Cake",
-        "category": "Cooking Recipe",
-        "desc": "There's little heart candies on top.",
-        "source": "Queen of Sauce (Summer 21, Y2)",
-        "ingredients": "Melon (1), Wheat Flour (1), Sugar (1), Egg (1)",
-        "buffs": "",
-        "notes": "Ingredients: Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pink_Cake.png"
-    },
-    {
-        "id": "cook_rhubarb_pie",
-        "name": "Rhubarb Pie",
-        "category": "Cooking Recipe",
-        "desc": "Mmm, tangy and sweet!",
-        "source": "Marnie (Mail - 7❤️)",
-        "ingredients": "Rhubarb (1), Wheat Flour (1), Sugar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Rhubarb (1) Wheat Flour (1) Sugar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Rhubarb_Pie.png"
-    },
-    {
-        "id": "cook_cookie",
-        "name": "Cookie",
-        "category": "Cooking Recipe",
-        "desc": "Very chewy.",
-        "source": "Evelyn (4-Heart Cutscene)",
-        "ingredients": "Wheat Flour (1), Sugar (1), Egg (1)",
-        "buffs": "",
-        "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Cookie.png"
-    },
-    {
-        "id": "cook_spaghetti",
-        "name": "Spaghetti",
-        "category": "Cooking Recipe",
-        "desc": "An old favorite.",
-        "source": "The Stardrop Saloon (Gus - 650g)",
-        "ingredients": "Wheat Flour (1), Tomato (1)",
-        "buffs": "",
-        "notes": "Ingredients: Wheat Flour (1) Tomato (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Spaghetti.png"
-    },
-    {
-        "id": "cook_fried_eel",
-        "name": "Fried Eel",
-        "category": "Cooking Recipe",
-        "desc": "Greasy but flavorful.",
-        "source": "George (Mail - 3❤️)",
-        "ingredients": "Eel (1), Oil (1)",
-        "buffs": "Luck (+1)",
-        "notes": "Ingredients: Eel (1) Oil (1) | Buffs: Luck (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Eel.png"
-    },
-    {
-        "id": "cook_spicy_eel",
-        "name": "Spicy Eel",
-        "category": "Cooking Recipe",
-        "desc": "It's really spicy! Be careful.",
-        "source": "George (Mail - 7❤️)",
-        "ingredients": "Eel (1), Hot Pepper (1)",
-        "buffs": "Luck (+1), Speed (+1)",
-        "notes": "Ingredients: Eel (1) Hot Pepper (1) | Buffs: Luck (+1) Speed (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Spicy_Eel.png"
-    },
-    {
-        "id": "cook_sashimi",
-        "name": "Sashimi",
-        "category": "Cooking Recipe",
-        "desc": "Raw fish sliced into thin pieces.",
-        "source": "Linus (Mail - 3❤️)",
-        "ingredients": "Any Fish (1)",
-        "buffs": "",
-        "notes": "Ingredients: Any Fish (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Sashimi.png"
-    },
-    {
-        "id": "cook_maki_roll",
-        "name": "Maki Roll",
-        "category": "Cooking Recipe",
-        "desc": "Fish and rice wrapped in seaweed.",
-        "source": "Queen of Sauce (Summer 21, Y1) or Saloon (300g)",
-        "ingredients": "Any Fish (1), Seaweed (1), Rice (1)",
-        "buffs": "",
-        "notes": "Ingredients: Any Fish (1) Seaweed (1) Rice (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Maki_Roll.png"
-    },
-    {
-        "id": "cook_tortilla",
-        "name": "Tortilla",
-        "category": "Cooking Recipe",
-        "desc": "Can be used as a vessel for food or eaten by itself.",
-        "source": "Queen of Sauce (Fall 7, Y1) or Saloon (100g)",
-        "ingredients": "Corn (1)",
-        "buffs": "",
-        "notes": "Ingredients: Corn (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Tortilla.png"
-    },
-    {
-        "id": "cook_red_plate",
-        "name": "Red Plate",
-        "category": "Cooking Recipe",
-        "desc": "Full of antioxidants.",
-        "source": "Emily (Mail - 7❤️)",
-        "ingredients": "Red Cabbage (1), Radish (1)",
-        "buffs": "Max Energy (+50)",
-        "notes": "Ingredients: Red Cabbage (1) Radish (1) | Buffs: Max Energy (+50)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Plate.png"
-    },
-    {
-        "id": "cook_eggplant_parmesan",
-        "name": "Eggplant Parmesan",
-        "category": "Cooking Recipe",
-        "desc": "Tangy, cheesy, and wonderful.",
-        "source": "Lewis (Mail - 7❤️)",
-        "ingredients": "Eggplant (1), Tomato (1)",
-        "buffs": "Mining (+1), Defense (+3)",
-        "notes": "Ingredients: Eggplant (1) Tomato (1) | Buffs: Mining (+1) Defense (+3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Eggplant_Parmesan.png"
-    },
-    {
-        "id": "cook_rice_pudding",
-        "name": "Rice Pudding",
-        "category": "Cooking Recipe",
-        "desc": "It's creamy, sweet, and fun to eat.",
-        "source": "Evelyn (Mail - 7❤️)",
-        "ingredients": "Milk (1), Sugar (1), Rice (1)",
-        "buffs": "",
-        "notes": "Ingredients: Milk (1) Sugar (1) Rice (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Rice_Pudding.png"
-    },
-    {
-        "id": "cook_ice_cream",
-        "name": "Ice Cream",
-        "category": "Cooking Recipe",
-        "desc": "It's hard to find someone who doesn't like this.",
-        "source": "Jodi (Mail - 7❤️)",
-        "ingredients": "Milk (1), Sugar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Milk (1) Sugar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Cream.png"
-    },
-    {
-        "id": "cook_blueberry_tart",
-        "name": "Blueberry Tart",
-        "category": "Cooking Recipe",
-        "desc": "It's subtle and refreshing.",
-        "source": "Pierre (Mail - 3❤️)",
-        "ingredients": "Blueberry (1), Wheat Flour (1), Sugar (1), Egg (1)",
-        "buffs": "",
-        "notes": "Ingredients: Blueberry (1) Wheat Flour (1) Sugar (1) Egg (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Blueberry_Tart.png"
-    },
-    {
-        "id": "cook_autumns_bounty",
-        "name": "Autumn's Bounty",
-        "category": "Cooking Recipe",
-        "desc": "A taste of the season.",
-        "source": "Demetrius (Mail - 7❤️)",
-        "ingredients": "Yam (1), Pumpkin (1)",
-        "buffs": "Foraging (+2), Defense (+2)",
-        "notes": "Ingredients: Yam (1) Pumpkin (1) | Buffs: Foraging (+2) Defense (+2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Autumn%27s_Bounty.png"
-    },
-    {
-        "id": "cook_pumpkin_soup",
-        "name": "Pumpkin Soup",
-        "category": "Cooking Recipe",
-        "desc": "A seasonal favorite.",
-        "source": "Robin (Mail - 7❤️)",
-        "ingredients": "Pumpkin (1), Milk (1)",
-        "buffs": "Defense (+2), Luck (+2)",
-        "notes": "Ingredients: Pumpkin (1) Milk (1) | Buffs: Defense (+2) Luck (+2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Soup.png"
-    },
-    {
-        "id": "cook_super_meal",
-        "name": "Super Meal",
-        "category": "Cooking Recipe",
-        "desc": "It's a really energizing meal.",
-        "source": "Kent (Mail - 7❤️)",
-        "ingredients": "Bok Choy (1), Cranberries (1), Artichoke (1)",
-        "buffs": "Max Energy (+40), Speed (+1)",
-        "notes": "Ingredients: Bok Choy (1) Cranberries (1) Artichoke (1) | Buffs: Max Energy (+40) Speed (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Meal.png"
-    },
-    {
-        "id": "cook_cranberry_sauce",
-        "name": "Cranberry Sauce",
-        "category": "Cooking Recipe",
-        "desc": "A festive treat.",
-        "source": "Gus (Mail - 7❤️)",
-        "ingredients": "Cranberries (1), Sugar (1)",
-        "buffs": "Mining (+2)",
-        "notes": "Ingredients: Cranberries (1) Sugar (1) | Buffs: Mining (+2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Sauce.png"
-    },
-    {
-        "id": "cook_stuffing",
-        "name": "Stuffing",
-        "category": "Cooking Recipe",
-        "desc": "Ahh... the smell of warm bread and sage.",
-        "source": "Pam (Mail - 7❤️)",
-        "ingredients": "Bread (1), Cranberries (1), Hazelnut (1)",
-        "buffs": "Defense (+2)",
-        "notes": "Ingredients: Bread (1) Cranberries (1) Hazelnut (1) | Buffs: Defense (+2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Stuffing.png"
-    },
-    {
-        "id": "cook_farmers_lunch",
-        "name": "Farmer's Lunch",
-        "category": "Cooking Recipe",
-        "desc": "This'll keep you going.",
-        "source": "Farming Level 3",
-        "ingredients": "Omelet (1), Parsnip (1)",
-        "buffs": "Farming (+3)",
-        "notes": "Ingredients: Omelet (1) Parsnip (1) | Buffs: Farming (+3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Farmer%27s_Lunch.png"
-    },
-    {
-        "id": "cook_survival_burger",
-        "name": "Survival Burger",
-        "category": "Cooking Recipe",
-        "desc": "A convenient snack for the explorer.",
-        "source": "Foraging Level 2",
-        "ingredients": "Bread (1), Cave Carrot (1), Eggplant (1)",
-        "buffs": "Foraging (+3)",
-        "notes": "Ingredients: Bread (1) Cave Carrot (1) Eggplant (1) | Buffs: Foraging (+3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Survival_Burger.png"
-    },
-    {
-        "id": "cook_dish_o_the_sea",
-        "name": "Dish O' The Sea",
-        "category": "Cooking Recipe",
-        "desc": "This'll keep you warm in the cold sea air.",
-        "source": "Fishing Level 3",
-        "ingredients": "Sardine (2), Hashbrowns (1)",
-        "buffs": "Fishing (+3)",
-        "notes": "Ingredients: Sardine (2) Hashbrowns (1) | Buffs: Fishing (+3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Dish_O%27_The_Sea.png"
-    },
-    {
-        "id": "cook_miners_treat",
-        "name": "Miner's Treat",
-        "category": "Cooking Recipe",
-        "desc": "This should keep your energy up.",
-        "source": "Mining Level 3",
-        "ingredients": "Cave Carrot (2), Sugar (1), Milk (1)",
-        "buffs": "Mining (+3), Magnetism (+32)",
-        "notes": "Ingredients: Cave Carrot (2) Sugar (1) Milk (1) | Buffs: Mining (+3) Magnetism (+32)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Miner%27s_Treat.png"
-    },
-    {
-        "id": "cook_roots_platter",
-        "name": "Roots Platter",
-        "category": "Cooking Recipe",
-        "desc": "This'll get you digging for more.",
-        "source": "Combat Level 3",
-        "ingredients": "Cave Carrot (1), Winter Root (1)",
-        "buffs": "Attack (+3)",
-        "notes": "Ingredients: Cave Carrot (1) Winter Root (1) | Buffs: Attack (+3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Roots_Platter.png"
-    },
-    {
-        "id": "cook_triple_shot_espresso",
-        "name": "Triple Shot Espresso",
-        "category": "Cooking Recipe",
-        "desc": "It's more potent than regular coffee!",
-        "source": "The Stardrop Saloon (Gus - 5,000g)",
-        "ingredients": "Coffee (3)",
-        "buffs": "Speed (+1)",
-        "notes": "Ingredients: Coffee (3) | Buffs: Speed (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Triple_Shot_Espresso.png"
-    },
-    {
-        "id": "cook_seafoam_pudding",
-        "name": "Seafoam Pudding",
-        "category": "Cooking Recipe",
-        "desc": "This briny pudding will really get you into the maritime mindset!",
-        "source": "Fishing Level 9",
-        "ingredients": "Flounder (1), Midnight Carp (1), Squid Ink (1)",
-        "buffs": "Fishing (+4)",
-        "notes": "Ingredients: Flounder (1) Midnight Carp (1) Squid Ink (1) | Buffs: Fishing (+4)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Seafoam_Pudding.png"
-    },
-    {
-        "id": "cook_algae_soup",
-        "name": "Algae Soup",
-        "category": "Cooking Recipe",
-        "desc": "It's a little slimy.",
-        "source": "Clint (Mail - 3❤️)",
-        "ingredients": "Green Algae (4)",
-        "buffs": "",
-        "notes": "Ingredients: Green Algae (4)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Algae_Soup.png"
-    },
-    {
-        "id": "cook_pale_broth",
-        "name": "Pale Broth",
-        "category": "Cooking Recipe",
-        "desc": "A delicate broth with a hint of sulfur.",
-        "source": "Marnie (Mail - 3❤️)",
-        "ingredients": "White Algae (2)",
-        "buffs": "",
-        "notes": "Ingredients: White Algae (2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pale_Broth.png"
-    },
-    {
-        "id": "cook_plum_pudding",
-        "name": "Plum Pudding",
-        "category": "Cooking Recipe",
-        "desc": "A traditional holiday treat.",
-        "source": "Queen of Sauce (Winter 7, Y1)",
-        "ingredients": "Wild Plum (2), Wheat Flour (1), Sugar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Wild Plum (2) Wheat Flour (1) Sugar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Plum_Pudding.png"
-    },
-    {
-        "id": "cook_artichoke_dip",
-        "name": "Artichoke Dip",
-        "category": "Cooking Recipe",
-        "desc": "It's cool and refreshing.",
-        "source": "Queen of Sauce (Fall 28, Y1)",
-        "ingredients": "Artichoke (1), Milk (1)",
-        "buffs": "",
-        "notes": "Ingredients: Artichoke (1) Milk (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Artichoke_Dip.png"
-    },
-    {
-        "id": "cook_stir_fry",
-        "name": "Stir Fry",
-        "category": "Cooking Recipe",
-        "desc": "Julienned vegetables on a bed of rice.",
-        "source": "Queen of Sauce (Spring 7, Y1)",
-        "ingredients": "Cave Carrot (1), Common Mushroom (1), Kale (1), Oil (1)",
-        "buffs": "",
-        "notes": "Ingredients: Cave Carrot (1) Common Mushroom (1) Kale (1) Oil (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Stir_Fry.png"
-    },
-    {
-        "id": "cook_roasted_hazelnuts",
-        "name": "Roasted Hazelnuts",
-        "category": "Cooking Recipe",
-        "desc": "The roasting process creates a rich forest flavor.",
-        "source": "Queen of Sauce (Summer 28, Y2)",
-        "ingredients": "Hazelnut (3)",
-        "buffs": "",
-        "notes": "Ingredients: Hazelnut (3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Roasted_Hazelnuts.png"
-    },
-    {
-        "id": "cook_pumpkin_pie",
-        "name": "Pumpkin Pie",
-        "category": "Cooking Recipe",
-        "desc": "Silky pumpkin cream in a flaky crust.",
-        "source": "Queen of Sauce (Winter 21, Y1)",
-        "ingredients": "Pumpkin (1), Wheat Flour (1), Milk (1), Sugar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Pumpkin (1) Wheat Flour (1) Milk (1) Sugar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Pie.png"
-    },
-    {
-        "id": "cook_radish_salad",
-        "name": "Radish Salad",
-        "category": "Cooking Recipe",
-        "desc": "The radishes are so crisp!",
-        "source": "Queen of Sauce (Spring 21, Y1)",
-        "ingredients": "Oil (1), Vinegar (1), Radish (1)",
-        "buffs": "",
-        "notes": "Ingredients: Oil (1) Vinegar (1) Radish (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Radish_Salad.png"
-    },
-    {
-        "id": "cook_fruit_salad",
-        "name": "Fruit Salad",
-        "category": "Cooking Recipe",
-        "desc": "A delicious combination of summer fruits.",
-        "source": "Queen of Sauce (Fall 7, Y2)",
-        "ingredients": "Blueberry (1), Melon (1), Apricot (1)",
-        "buffs": "",
-        "notes": "Ingredients: Blueberry (1) Melon (1) Apricot (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Fruit_Salad.png"
-    },
-    {
-        "id": "cook_blackberry_cobbler",
-        "name": "Blackberry Cobbler",
-        "category": "Cooking Recipe",
-        "desc": "There's nothing quite like it.",
-        "source": "Queen of Sauce (Fall 14, Y2)",
-        "ingredients": "Blackberry (2), Sugar (1), Wheat Flour (1)",
-        "buffs": "",
-        "notes": "Ingredients: Blackberry (2) Sugar (1) Wheat Flour (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Blackberry_Cobbler.png"
-    },
-    {
-        "id": "cook_cranberry_candy",
-        "name": "Cranberry Candy",
-        "category": "Cooking Recipe",
-        "desc": "It's sweet enough to mask the bitter fruit.",
-        "source": "Queen of Sauce (Winter 28, Y1)",
-        "ingredients": "Cranberries (1), Apple (1), Sugar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Cranberries (1) Apple (1) Sugar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Candy.png"
-    },
-    {
-        "id": "cook_bruschetta",
-        "name": "Bruschetta",
-        "category": "Cooking Recipe",
-        "desc": "Roasted tomatoes on a crisp white bread.",
-        "source": "Queen of Sauce (Winter 21, Y2)",
-        "ingredients": "Bread (1), Oil (1), Tomato (1)",
-        "buffs": "",
-        "notes": "Ingredients: Bread (1) Oil (1) Tomato (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Bruschetta.png"
-    },
-    {
-        "id": "cook_coleslaw",
-        "name": "Coleslaw",
-        "category": "Cooking Recipe",
-        "desc": "It's light, fresh and very healthy.",
-        "source": "Queen of Sauce (Spring 14, Y1)",
-        "ingredients": "Red Cabbage (1), Vinegar (1), Mayonnaise (1)",
-        "buffs": "",
-        "notes": "Ingredients: Red Cabbage (1) Vinegar (1) Mayonnaise (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Coleslaw.png"
-    },
-    {
-        "id": "cook_fiddlehead_risotto",
-        "name": "Fiddlehead Risotto",
-        "category": "Cooking Recipe",
-        "desc": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
-        "source": "Queen of Sauce (Fall 28, Y2)",
-        "ingredients": "Oil (1), Fiddlehead Fern (1), Garlic (1)",
-        "buffs": "",
-        "notes": "Ingredients: Oil (1) Fiddlehead Fern (1) Garlic (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Fiddlehead_Risotto.png"
-    },
-    {
-        "id": "cook_poppyseed_muffin",
-        "name": "Poppyseed Muffin",
-        "category": "Cooking Recipe",
-        "desc": "It has a soothing effect.",
-        "source": "Queen of Sauce (Winter 7, Y2)",
-        "ingredients": "Poppy (1), Wheat Flour (1), Sugar (1)",
-        "buffs": "",
-        "notes": "Ingredients: Poppy (1) Wheat Flour (1) Sugar (1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Poppyseed_Muffin.png"
-    },
-    {
-        "id": "cook_chowder",
-        "name": "Chowder",
-        "category": "Cooking Recipe",
-        "desc": "A perfect way to warm yourself after a cold night at sea.",
-        "source": "Willy (Mail - 3❤️)",
-        "ingredients": "Clam (1), Milk (1)",
-        "buffs": "Fishing (+1)",
-        "notes": "Ingredients: Clam (1) Milk (1) | Buffs: Fishing (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Chowder.png"
-    },
-    {
-        "id": "cook_fish_stew",
-        "name": "Fish Stew",
-        "category": "Cooking Recipe",
-        "desc": "It smells a lot like the sea. Tastes better, though.",
-        "source": "Willy (Mail - 7❤️)",
-        "ingredients": "Crayfish (1), Mussel (1), Periwinkle (1), Tomato (1)",
-        "buffs": "Fishing (+3)",
-        "notes": "Ingredients: Crayfish (1) Mussel (1) Periwinkle (1) Tomato (1) | Buffs: Fishing (+3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Stew.png"
-    },
-    {
-        "id": "cook_escargot",
-        "name": "Escargot",
-        "category": "Cooking Recipe",
-        "desc": "Butter-soaked snails cooked to perfection.",
-        "source": "Willy (Mail - 5❤️)",
-        "ingredients": "Snail (1), Garlic (1)",
-        "buffs": "Fishing (+2)",
-        "notes": "Ingredients: Snail (1) Garlic (1) | Buffs: Fishing (+2)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Escargot.png"
-    },
-    {
-        "id": "cook_lobster_bisque",
-        "name": "Lobster Bisque",
-        "category": "Cooking Recipe",
-        "desc": "This delicate soup is a secret family recipe of Willy's.",
-        "source": "Queen of Sauce (Winter 14, Y2) or Willy (Mail - 9❤️)",
-        "ingredients": "Lobster (1), Milk (1)",
-        "buffs": "Fishing (+3), Max Energy (+50)",
-        "notes": "Ingredients: Lobster (1) Milk (1) | Buffs: Fishing (+3) Max Energy (+50)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster_Bisque.png"
-    },
-    {
-        "id": "cook_maple_bar",
-        "name": "Maple Bar",
-        "category": "Cooking Recipe",
-        "desc": "It's a sweet doughnut topped with a rich maple glaze.",
-        "source": "Queen of Sauce (Summer 14, Y2)",
-        "ingredients": "Maple Syrup (1), Sugar (1), Wheat Flour (1)",
-        "buffs": "Farming (+1), Fishing (+1), Mining (+1)",
-        "notes": "Ingredients: Maple Syrup (1) Sugar (1) Wheat Flour (1) | Buffs: Farming (+1) Fishing (+1) Mining (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Maple_Bar.png"
-    },
-    {
-        "id": "cook_crab_cakes",
-        "name": "Crab Cakes",
-        "category": "Cooking Recipe",
-        "desc": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
-        "source": "Queen of Sauce (Fall 21, Y2) or Saloon (Gus event)",
-        "ingredients": "Crab (1), Wheat Flour (1), Egg (1), Oil (1)",
-        "buffs": "Speed (+1), Defense (+1)",
-        "notes": "Ingredients: Crab (1) Wheat Flour (1) Egg (1) Oil (1) | Buffs: Speed (+1) Defense (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Crab_Cakes.png"
-    },
-    {
-        "id": "cook_shrimp_cocktail",
-        "name": "Shrimp Cocktail",
-        "category": "Cooking Recipe",
-        "desc": "A sumptuous appetizer made with freshly-caught shrimp.",
-        "source": "Queen of Sauce (Winter 28, Y2)",
-        "ingredients": "Tomato (1), Shrimp (1), Wild Horseradish (1)",
-        "buffs": "Fishing (+1), Luck (+1)",
-        "notes": "Ingredients: Tomato (1) Shrimp (1) Wild Horseradish (1) | Buffs: Fishing (+1) Luck (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp_Cocktail.png"
-    },
-    {
-        "id": "cook_ginger_ale",
-        "name": "Ginger Ale",
-        "category": "Cooking Recipe",
-        "desc": "A zesty soda known for its soothing effect on the stomach.",
-        "source": "Volcano Dwarf Shop (1,000g)",
-        "ingredients": "Ginger (3), Sugar (1)",
-        "buffs": "Luck (+1)",
-        "notes": "Ingredients: Ginger (3) Sugar (1) | Buffs: Luck (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Ginger_Ale.png"
-    },
-    {
-        "id": "cook_banana_pudding",
-        "name": "Banana Pudding",
-        "category": "Cooking Recipe",
-        "desc": "A creamy dessert with a wonderful tropical flavor.",
-        "source": "Island Trader (30 Bone Fragments)",
-        "ingredients": "Banana (1), Milk (1), Sugar (1)",
-        "buffs": "Mining (+1), Luck (+1), Defense (+1)",
-        "notes": "Ingredients: Banana (1) Milk (1) Sugar (1) | Buffs: Mining (+1) Luck (+1) Defense (+1)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Banana_Pudding.png"
-    },
-    {
-        "id": "cook_mango_sticky_rice",
-        "name": "Mango Sticky Rice",
-        "category": "Cooking Recipe",
-        "desc": "Sweet mango and coconut transforms this rice into something very special.",
-        "source": "Leo (Mail - 7❤️)",
-        "ingredients": "Mango (1), Coconut (1), Rice (1)",
-        "buffs": "Defense (+3)",
-        "notes": "Ingredients: Mango (1) Coconut (1) Rice (1) | Buffs: Defense (+3)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Mango_Sticky_Rice.png"
-    },
-    {
-        "id": "cook_poi",
-        "name": "Poi",
-        "category": "Cooking Recipe",
-        "desc": "A traditional food with a delicate, sweet flavor when eaten fresh.",
-        "source": "Leo (Mail - 3❤️)",
-        "ingredients": "Taro Root (4)",
-        "buffs": "",
-        "notes": "Ingredients: Taro Root (4)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Poi.png"
-    },
-    {
-        "id": "cook_tropical_curry",
-        "name": "Tropical Curry",
-        "category": "Cooking Recipe",
-        "desc": "An exotic, fragrant curry served in a pineapple bowl.",
-        "source": "Ginger Island Resort (Gus - 2,000g)",
-        "ingredients": "Coconut (1), Pineapple (1), Hot Pepper (1)",
-        "buffs": "Foraging (+4)",
-        "notes": "Ingredients: Coconut (1) Pineapple (1) Hot Pepper (1) | Buffs: Foraging (+4)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Tropical_Curry.png"
-    },
-    {
-        "id": "cook_squid_ink_ravioli",
-        "name": "Squid Ink Ravioli",
-        "category": "Cooking Recipe",
-        "desc": "Temporarily protects from debuffs.",
-        "source": "Combat Mastery (1.6)",
-        "ingredients": "Squid Ink (1), Wheat Flour (1), Tomato (1)",
-        "buffs": "Mining (+1), Squid Ink Ravioli Buff (Buff Immunity)",
-        "notes": "Ingredients: Squid Ink (1) Wheat Flour (1) Tomato (1) | Buffs: Mining (+1) Squid Ink Ravioli Buff",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Squid_Ink_Ravioli.png"
-    },
-    {
-        "id": "cook_moss_soup",
-        "name": "Moss Soup",
-        "category": "Cooking Recipe",
-        "desc": "It's thick and slimy, but edible.",
-        "source": "Foraging Level 3 (1.6)",
-        "ingredients": "Moss (20)",
-        "buffs": "",
-        "notes": "Ingredients: Moss (20)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Moss_Soup.png"
+      "id": "cook_fried_egg",
+      "name": "Fried Egg",
+      "category": "Cooking Recipe",
+      "desc": "Sunny-side up.",
+      "source": "Starter (Kitchen Upgrade)",
+      "ingredients": "Egg (1)",
+      "buffs": "",
+      "notes": "Ingredients: Egg (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Egg.png"
+    },
+    {
+      "id": "cook_omelet",
+      "name": "Omelet",
+      "category": "Cooking Recipe",
+      "desc": "It's super fluffy.",
+      "source": "Queen of Sauce (Spring 28, Y1) or Saloon (100g)",
+      "ingredients": "Egg (1), Milk (1)",
+      "buffs": "",
+      "notes": "Ingredients: Egg (1) Milk (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Omelet.png"
+    },
+    {
+      "id": "cook_salad",
+      "name": "Salad",
+      "category": "Cooking Recipe",
+      "desc": "A healthy garden salad.",
+      "source": "The Stardrop Saloon (Gus - 220g)",
+      "ingredients": "Leek (1), Dandelion (1), Vinegar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Leek (1) Dandelion (1) Vinegar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Salad.png"
+    },
+    {
+      "id": "cook_cheese_cauliflower",
+      "name": "Cheese Cauliflower",
+      "category": "Cooking Recipe",
+      "desc": "It smells great!",
+      "source": "Pam (Mail - 3❤️)",
+      "ingredients": "Cauliflower (1), Cheese (1)",
+      "buffs": "",
+      "notes": "Ingredients: Cauliflower (1) Cheese (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cheese_Cauliflower.png"
+    },
+    {
+      "id": "cook_baked_fish",
+      "name": "Baked Fish",
+      "category": "Cooking Recipe",
+      "desc": "Baked fish on a bed of herbs.",
+      "source": "Queen of Sauce (Summer 7, Y1) or Saloon (100g)",
+      "ingredients": "Sunfish (1), Bream (1), Wheat Flour (1)",
+      "buffs": "",
+      "notes": "Ingredients: Sunfish (1) Bream (1) Wheat Flour (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Baked_Fish.png"
+    },
+    {
+      "id": "cook_parsnip_soup",
+      "name": "Parsnip Soup",
+      "category": "Cooking Recipe",
+      "desc": "It's fresh and hearty.",
+      "source": "Caroline (Mail - 3❤️)",
+      "ingredients": "Parsnip (1), Milk (1), Vinegar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Parsnip (1) Milk (1) Vinegar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Parsnip_Soup.png"
+    },
+    {
+      "id": "cook_vegetable_medley",
+      "name": "Vegetable Medley",
+      "category": "Cooking Recipe",
+      "desc": "This is very nutritious.",
+      "source": "Queen of Sauce (Spring 14, Y1)",
+      "ingredients": "Tomato (1), Beet (1)",
+      "buffs": "",
+      "notes": "Ingredients: Tomato (1) Beet (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Vegetable_Medley.png"
+    },
+    {
+      "id": "cook_complete_breakfast",
+      "name": "Complete Breakfast",
+      "category": "Cooking Recipe",
+      "desc": "You'll feel ready to take on the world!",
+      "source": "Queen of Sauce (Spring 21, Y2)",
+      "ingredients": "Fried Egg (1), Milk (1), Hashbrowns (1), Pancakes (1)",
+      "buffs": "Farming (+2), Max Energy (+50)",
+      "notes": "Ingredients: Fried Egg (1) Milk (1) Hashbrowns (1) Pancakes (1) | Buffs: Farming (+2) Max Energy (+50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Complete_Breakfast.png"
+    },
+    {
+      "id": "cook_fried_calamari",
+      "name": "Fried Calamari",
+      "category": "Cooking Recipe",
+      "desc": "It's so chewy.",
+      "source": "Jodi (Mail - 3❤️)",
+      "ingredients": "Squid (1), Wheat Flour (1), Oil (1)",
+      "buffs": "",
+      "notes": "Ingredients: Squid (1) Wheat Flour (1) Oil (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Calamari.png"
+    },
+    {
+      "id": "cook_strange_bun",
+      "name": "Strange Bun",
+      "category": "Cooking Recipe",
+      "desc": "What's inside?",
+      "source": "Shane (Mail - 7❤️)",
+      "ingredients": "Wheat Flour (1), Void Mayonnaise (1), Periwinkle (1)",
+      "buffs": "",
+      "notes": "Ingredients: Wheat Flour (1) Periwinkle (1) Void Mayonnaise (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Strange_Bun.png"
+    },
+    {
+      "id": "cook_lucky_lunch",
+      "name": "Lucky Lunch",
+      "category": "Cooking Recipe",
+      "desc": "A special little meal.",
+      "source": "Queen of Sauce (Spring 28, Y2)",
+      "ingredients": "Sea Cucumber (1), Tortilla (1), Blue Jazz (1)",
+      "buffs": "Luck (+3)",
+      "notes": "Ingredients: Sea Cucumber (1) Tortilla (1) Blue Jazz (1) | Buffs: Luck (+3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lucky_Lunch.png"
+    },
+    {
+      "id": "cook_fried_mushroom",
+      "name": "Fried Mushroom",
+      "category": "Cooking Recipe",
+      "desc": "Earthy and aromatic.",
+      "source": "Demetrius (Mail - 3❤️)",
+      "ingredients": "Common Mushroom (1), Morel (1), Oil (1)",
+      "buffs": "Attack (+2)",
+      "notes": "Ingredients: Common Mushroom (1) Morel (1) Oil (1) | Buffs: Attack (+2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Mushroom.png"
+    },
+    {
+      "id": "cook_pizza",
+      "name": "Pizza",
+      "category": "Cooking Recipe",
+      "desc": "It's popular for all the right reasons.",
+      "source": "Queen of Sauce (Spring 7, Y2) or Saloon (150g)",
+      "ingredients": "Wheat Flour (1), Tomato (1), Cheese (1)",
+      "buffs": "",
+      "notes": "Ingredients: Wheat Flour (1) Tomato (1) Cheese (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pizza.png"
+    },
+    {
+      "id": "cook_bean_hotpot",
+      "name": "Bean Hotpot",
+      "category": "Cooking Recipe",
+      "desc": "It sure smells healthy.",
+      "source": "Clint (Mail - 7❤️)",
+      "ingredients": "Green Bean (2)",
+      "buffs": "Max Energy (+30), Magnetism (+32)",
+      "notes": "Ingredients: Green Bean (2) | Buffs: Max Energy (+30) Magnetism (+32)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bean_Hotpot.png"
+    },
+    {
+      "id": "cook_glazed_yams",
+      "name": "Glazed Yams",
+      "category": "Cooking Recipe",
+      "desc": "Sweet and satisfying. The glaze gives it a nice shine.",
+      "source": "Queen of Sauce (Fall 21, Y1)",
+      "ingredients": "Yam (1), Sugar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Yam (1) Sugar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Glazed_Yams.png"
+    },
+    {
+      "id": "cook_carp_surprise",
+      "name": "Carp Surprise",
+      "category": "Cooking Recipe",
+      "desc": "It's bland and oily.",
+      "source": "Queen of Sauce (Summer 7, Y2)",
+      "ingredients": "Carp (4)",
+      "buffs": "",
+      "notes": "Ingredients: Carp (4)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Carp_Surprise.png"
+    },
+    {
+      "id": "cook_hashbrowns",
+      "name": "Hashbrowns",
+      "category": "Cooking Recipe",
+      "desc": "Crispy and golden-brown!",
+      "source": "Queen of Sauce (Spring 14, Y2) or Saloon (50g)",
+      "ingredients": "Potato (1), Oil (1)",
+      "buffs": "Farming (+1)",
+      "notes": "Ingredients: Potato (1) Oil (1) | Buffs: Farming (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Hashbrowns.png"
+    },
+    {
+      "id": "cook_pancakes",
+      "name": "Pancakes",
+      "category": "Cooking Recipe",
+      "desc": "A double stack of fluffy soft pancakes.",
+      "source": "Queen of Sauce (Summer 14, Y1) or Saloon (100g)",
+      "ingredients": "Wheat Flour (1), Egg (1)",
+      "buffs": "Foraging (+2)",
+      "notes": "Ingredients: Wheat Flour (1) Egg (1) | Buffs: Foraging (+2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pancakes.png"
+    },
+    {
+      "id": "cook_salmon_dinner",
+      "name": "Salmon Dinner",
+      "category": "Cooking Recipe",
+      "desc": "The lemon spritz really brings out the flavor.",
+      "source": "Gus (Mail - 3❤️)",
+      "ingredients": "Salmon (1), Amaranth (1), Kale (1)",
+      "buffs": "",
+      "notes": "Ingredients: Salmon (1) Amaranth (1) Kale (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon_Dinner.png"
+    },
+    {
+      "id": "cook_fish_taco",
+      "name": "Fish Taco",
+      "category": "Cooking Recipe",
+      "desc": "It smells delicious.",
+      "source": "Linus (Mail - 7❤️)",
+      "ingredients": "Tuna (1), Tortilla (1), Red Cabbage (1), Mayonnaise (1)",
+      "buffs": "Fishing (+2)",
+      "notes": "Ingredients: Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1) | Buffs: Fishing (+2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Taco.png"
+    },
+    {
+      "id": "cook_crispy_bass",
+      "name": "Crispy Bass",
+      "category": "Cooking Recipe",
+      "desc": "Wow, the breading is perfect.",
+      "source": "Kent (Mail - 3❤️)",
+      "ingredients": "Largemouth Bass (1), Wheat Flour (1), Oil (1)",
+      "buffs": "Magnetism (+64)",
+      "notes": "Ingredients: Largemouth Bass (1) Wheat Flour (1) Oil (1) | Buffs: Magnetism (+64)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crispy_Bass.png"
+    },
+    {
+      "id": "cook_pepper_poppers",
+      "name": "Pepper Poppers",
+      "category": "Cooking Recipe",
+      "desc": "Spicy breaded peppers filled with cheese.",
+      "source": "Shane (Mail - 3❤️)",
+      "ingredients": "Hot Pepper (1), Cheese (1)",
+      "buffs": "Farming (+2), Speed (+1)",
+      "notes": "Ingredients: Hot Pepper (1) Cheese (1) | Buffs: Farming (+2) Speed (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pepper_Poppers.png"
+    },
+    {
+      "id": "cook_bread",
+      "name": "Bread",
+      "category": "Cooking Recipe",
+      "desc": "A crusty baguette.",
+      "source": "Queen of Sauce (Summer 28, Y1) or Saloon (100g)",
+      "ingredients": "Wheat Flour (1)",
+      "buffs": "",
+      "notes": "Ingredients: Wheat Flour (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bread.png"
+    },
+    {
+      "id": "cook_tom_kha_soup",
+      "name": "Tom Kha Soup",
+      "category": "Cooking Recipe",
+      "desc": "These flavors are incredible!",
+      "source": "Sandy (Mail - 7❤️)",
+      "ingredients": "Coconut (1), Shrimp (1), Common Mushroom (1)",
+      "buffs": "Farming (+2), Max Energy (+30)",
+      "notes": "Ingredients: Coconut (1) Shrimp (1) Common Mushroom (1) | Buffs: Farming (+2) Max Energy (+30)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tom_Kha_Soup.png"
+    },
+    {
+      "id": "cook_trout_soup",
+      "name": "Trout Soup",
+      "category": "Cooking Recipe",
+      "desc": "Pretty salty.",
+      "source": "Queen of Sauce (Fall 14, Y1)",
+      "ingredients": "Rainbow Trout (1), Green Algae (1)",
+      "buffs": "Fishing (+1)",
+      "notes": "Ingredients: Rainbow Trout (1) Green Algae (1) | Buffs: Fishing (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Trout_Soup.png"
+    },
+    {
+      "id": "cook_chocolate_cake",
+      "name": "Chocolate Cake",
+      "category": "Cooking Recipe",
+      "desc": "Rich and moist with a thick fudge icing.",
+      "source": "Queen of Sauce (Winter 14, Y1)",
+      "ingredients": "Wheat Flour (1), Sugar (1), Egg (1)",
+      "buffs": "",
+      "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Chocolate_Cake.png"
+    },
+    {
+      "id": "cook_pink_cake",
+      "name": "Pink Cake",
+      "category": "Cooking Recipe",
+      "desc": "There's little heart candies on top.",
+      "source": "Queen of Sauce (Summer 21, Y2)",
+      "ingredients": "Melon (1), Wheat Flour (1), Sugar (1), Egg (1)",
+      "buffs": "",
+      "notes": "Ingredients: Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pink_Cake.png"
+    },
+    {
+      "id": "cook_rhubarb_pie",
+      "name": "Rhubarb Pie",
+      "category": "Cooking Recipe",
+      "desc": "Mmm, tangy and sweet!",
+      "source": "Marnie (Mail - 7❤️)",
+      "ingredients": "Rhubarb (1), Wheat Flour (1), Sugar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Rhubarb (1) Wheat Flour (1) Sugar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rhubarb_Pie.png"
+    },
+    {
+      "id": "cook_cookie",
+      "name": "Cookie",
+      "category": "Cooking Recipe",
+      "desc": "Very chewy.",
+      "source": "Evelyn (4-Heart Cutscene)",
+      "ingredients": "Wheat Flour (1), Sugar (1), Egg (1)",
+      "buffs": "",
+      "notes": "Ingredients: Wheat Flour (1) Sugar (1) Egg (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cookie.png"
+    },
+    {
+      "id": "cook_spaghetti",
+      "name": "Spaghetti",
+      "category": "Cooking Recipe",
+      "desc": "An old favorite.",
+      "source": "The Stardrop Saloon (Gus - 650g)",
+      "ingredients": "Wheat Flour (1), Tomato (1)",
+      "buffs": "",
+      "notes": "Ingredients: Wheat Flour (1) Tomato (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Spaghetti.png"
+    },
+    {
+      "id": "cook_fried_eel",
+      "name": "Fried Eel",
+      "category": "Cooking Recipe",
+      "desc": "Greasy but flavorful.",
+      "source": "George (Mail - 3❤️)",
+      "ingredients": "Eel (1), Oil (1)",
+      "buffs": "Luck (+1)",
+      "notes": "Ingredients: Eel (1) Oil (1) | Buffs: Luck (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fried_Eel.png"
+    },
+    {
+      "id": "cook_spicy_eel",
+      "name": "Spicy Eel",
+      "category": "Cooking Recipe",
+      "desc": "It's really spicy! Be careful.",
+      "source": "George (Mail - 7❤️)",
+      "ingredients": "Eel (1), Hot Pepper (1)",
+      "buffs": "Luck (+1), Speed (+1)",
+      "notes": "Ingredients: Eel (1) Hot Pepper (1) | Buffs: Luck (+1) Speed (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Spicy_Eel.png"
+    },
+    {
+      "id": "cook_sashimi",
+      "name": "Sashimi",
+      "category": "Cooking Recipe",
+      "desc": "Raw fish sliced into thin pieces.",
+      "source": "Linus (Mail - 3❤️)",
+      "ingredients": "Any Fish (1)",
+      "buffs": "",
+      "notes": "Ingredients: Any Fish (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sashimi.png"
+    },
+    {
+      "id": "cook_maki_roll",
+      "name": "Maki Roll",
+      "category": "Cooking Recipe",
+      "desc": "Fish and rice wrapped in seaweed.",
+      "source": "Queen of Sauce (Summer 21, Y1) or Saloon (300g)",
+      "ingredients": "Any Fish (1), Seaweed (1), Rice (1)",
+      "buffs": "",
+      "notes": "Ingredients: Any Fish (1) Seaweed (1) Rice (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Maki_Roll.png"
+    },
+    {
+      "id": "cook_tortilla",
+      "name": "Tortilla",
+      "category": "Cooking Recipe",
+      "desc": "Can be used as a vessel for food or eaten by itself.",
+      "source": "Queen of Sauce (Fall 7, Y1) or Saloon (100g)",
+      "ingredients": "Corn (1)",
+      "buffs": "",
+      "notes": "Ingredients: Corn (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tortilla.png"
+    },
+    {
+      "id": "cook_red_plate",
+      "name": "Red Plate",
+      "category": "Cooking Recipe",
+      "desc": "Full of antioxidants.",
+      "source": "Emily (Mail - 7❤️)",
+      "ingredients": "Red Cabbage (1), Radish (1)",
+      "buffs": "Max Energy (+50)",
+      "notes": "Ingredients: Red Cabbage (1) Radish (1) | Buffs: Max Energy (+50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Plate.png"
+    },
+    {
+      "id": "cook_eggplant_parmesan",
+      "name": "Eggplant Parmesan",
+      "category": "Cooking Recipe",
+      "desc": "Tangy, cheesy, and wonderful.",
+      "source": "Lewis (Mail - 7❤️)",
+      "ingredients": "Eggplant (1), Tomato (1)",
+      "buffs": "Mining (+1), Defense (+3)",
+      "notes": "Ingredients: Eggplant (1) Tomato (1) | Buffs: Mining (+1) Defense (+3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Eggplant_Parmesan.png"
+    },
+    {
+      "id": "cook_rice_pudding",
+      "name": "Rice Pudding",
+      "category": "Cooking Recipe",
+      "desc": "It's creamy, sweet, and fun to eat.",
+      "source": "Evelyn (Mail - 7❤️)",
+      "ingredients": "Milk (1), Sugar (1), Rice (1)",
+      "buffs": "",
+      "notes": "Ingredients: Milk (1) Sugar (1) Rice (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rice_Pudding.png"
+    },
+    {
+      "id": "cook_ice_cream",
+      "name": "Ice Cream",
+      "category": "Cooking Recipe",
+      "desc": "It's hard to find someone who doesn't like this.",
+      "source": "Jodi (Mail - 7❤️)",
+      "ingredients": "Milk (1), Sugar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Milk (1) Sugar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Cream.png"
+    },
+    {
+      "id": "cook_blueberry_tart",
+      "name": "Blueberry Tart",
+      "category": "Cooking Recipe",
+      "desc": "It's subtle and refreshing.",
+      "source": "Pierre (Mail - 3❤️)",
+      "ingredients": "Blueberry (1), Wheat Flour (1), Sugar (1), Egg (1)",
+      "buffs": "",
+      "notes": "Ingredients: Blueberry (1) Wheat Flour (1) Sugar (1) Egg (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blueberry_Tart.png"
+    },
+    {
+      "id": "cook_autumns_bounty",
+      "name": "Autumn's Bounty",
+      "category": "Cooking Recipe",
+      "desc": "A taste of the season.",
+      "source": "Demetrius (Mail - 7❤️)",
+      "ingredients": "Yam (1), Pumpkin (1)",
+      "buffs": "Foraging (+2), Defense (+2)",
+      "notes": "Ingredients: Yam (1) Pumpkin (1) | Buffs: Foraging (+2) Defense (+2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Autumn%27s_Bounty.png"
+    },
+    {
+      "id": "cook_pumpkin_soup",
+      "name": "Pumpkin Soup",
+      "category": "Cooking Recipe",
+      "desc": "A seasonal favorite.",
+      "source": "Robin (Mail - 7❤️)",
+      "ingredients": "Pumpkin (1), Milk (1)",
+      "buffs": "Defense (+2), Luck (+2)",
+      "notes": "Ingredients: Pumpkin (1) Milk (1) | Buffs: Defense (+2) Luck (+2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Soup.png"
+    },
+    {
+      "id": "cook_super_meal",
+      "name": "Super Meal",
+      "category": "Cooking Recipe",
+      "desc": "It's a really energizing meal.",
+      "source": "Kent (Mail - 7❤️)",
+      "ingredients": "Bok Choy (1), Cranberries (1), Artichoke (1)",
+      "buffs": "Max Energy (+40), Speed (+1)",
+      "notes": "Ingredients: Bok Choy (1) Cranberries (1) Artichoke (1) | Buffs: Max Energy (+40) Speed (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Meal.png"
+    },
+    {
+      "id": "cook_cranberry_sauce",
+      "name": "Cranberry Sauce",
+      "category": "Cooking Recipe",
+      "desc": "A festive treat.",
+      "source": "Gus (Mail - 7❤️)",
+      "ingredients": "Cranberries (1), Sugar (1)",
+      "buffs": "Mining (+2)",
+      "notes": "Ingredients: Cranberries (1) Sugar (1) | Buffs: Mining (+2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Sauce.png"
+    },
+    {
+      "id": "cook_stuffing",
+      "name": "Stuffing",
+      "category": "Cooking Recipe",
+      "desc": "Ahh... the smell of warm bread and sage.",
+      "source": "Pam (Mail - 7❤️)",
+      "ingredients": "Bread (1), Cranberries (1), Hazelnut (1)",
+      "buffs": "Defense (+2)",
+      "notes": "Ingredients: Bread (1) Cranberries (1) Hazelnut (1) | Buffs: Defense (+2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stuffing.png"
+    },
+    {
+      "id": "cook_farmers_lunch",
+      "name": "Farmer's Lunch",
+      "category": "Cooking Recipe",
+      "desc": "This'll keep you going.",
+      "source": "Farming Level 3",
+      "ingredients": "Omelet (1), Parsnip (1)",
+      "buffs": "Farming (+3)",
+      "notes": "Ingredients: Omelet (1) Parsnip (1) | Buffs: Farming (+3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Farmer%27s_Lunch.png"
+    },
+    {
+      "id": "cook_survival_burger",
+      "name": "Survival Burger",
+      "category": "Cooking Recipe",
+      "desc": "A convenient snack for the explorer.",
+      "source": "Foraging Level 2",
+      "ingredients": "Bread (1), Cave Carrot (1), Eggplant (1)",
+      "buffs": "Foraging (+3)",
+      "notes": "Ingredients: Bread (1) Cave Carrot (1) Eggplant (1) | Buffs: Foraging (+3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Survival_Burger.png"
+    },
+    {
+      "id": "cook_dish_o_the_sea",
+      "name": "Dish O' The Sea",
+      "category": "Cooking Recipe",
+      "desc": "This'll keep you warm in the cold sea air.",
+      "source": "Fishing Level 3",
+      "ingredients": "Sardine (2), Hashbrowns (1)",
+      "buffs": "Fishing (+3)",
+      "notes": "Ingredients: Sardine (2) Hashbrowns (1) | Buffs: Fishing (+3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Dish_O%27_The_Sea.png"
+    },
+    {
+      "id": "cook_miners_treat",
+      "name": "Miner's Treat",
+      "category": "Cooking Recipe",
+      "desc": "This should keep your energy up.",
+      "source": "Mining Level 3",
+      "ingredients": "Cave Carrot (2), Sugar (1), Milk (1)",
+      "buffs": "Mining (+3), Magnetism (+32)",
+      "notes": "Ingredients: Cave Carrot (2) Sugar (1) Milk (1) | Buffs: Mining (+3) Magnetism (+32)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Miner%27s_Treat.png"
+    },
+    {
+      "id": "cook_roots_platter",
+      "name": "Roots Platter",
+      "category": "Cooking Recipe",
+      "desc": "This'll get you digging for more.",
+      "source": "Combat Level 3",
+      "ingredients": "Cave Carrot (1), Winter Root (1)",
+      "buffs": "Attack (+3)",
+      "notes": "Ingredients: Cave Carrot (1) Winter Root (1) | Buffs: Attack (+3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Roots_Platter.png"
+    },
+    {
+      "id": "cook_triple_shot_espresso",
+      "name": "Triple Shot Espresso",
+      "category": "Cooking Recipe",
+      "desc": "It's more potent than regular coffee!",
+      "source": "The Stardrop Saloon (Gus - 5,000g)",
+      "ingredients": "Coffee (3)",
+      "buffs": "Speed (+1)",
+      "notes": "Ingredients: Coffee (3) | Buffs: Speed (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Triple_Shot_Espresso.png"
+    },
+    {
+      "id": "cook_seafoam_pudding",
+      "name": "Seafoam Pudding",
+      "category": "Cooking Recipe",
+      "desc": "This briny pudding will really get you into the maritime mindset!",
+      "source": "Fishing Level 9",
+      "ingredients": "Flounder (1), Midnight Carp (1), Squid Ink (1)",
+      "buffs": "Fishing (+4)",
+      "notes": "Ingredients: Flounder (1) Midnight Carp (1) Squid Ink (1) | Buffs: Fishing (+4)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Seafoam_Pudding.png"
+    },
+    {
+      "id": "cook_algae_soup",
+      "name": "Algae Soup",
+      "category": "Cooking Recipe",
+      "desc": "It's a little slimy.",
+      "source": "Clint (Mail - 3❤️)",
+      "ingredients": "Green Algae (4)",
+      "buffs": "",
+      "notes": "Ingredients: Green Algae (4)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Algae_Soup.png"
+    },
+    {
+      "id": "cook_pale_broth",
+      "name": "Pale Broth",
+      "category": "Cooking Recipe",
+      "desc": "A delicate broth with a hint of sulfur.",
+      "source": "Marnie (Mail - 3❤️)",
+      "ingredients": "White Algae (2)",
+      "buffs": "",
+      "notes": "Ingredients: White Algae (2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pale_Broth.png"
+    },
+    {
+      "id": "cook_plum_pudding",
+      "name": "Plum Pudding",
+      "category": "Cooking Recipe",
+      "desc": "A traditional holiday treat.",
+      "source": "Queen of Sauce (Winter 7, Y1)",
+      "ingredients": "Wild Plum (2), Wheat Flour (1), Sugar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Wild Plum (2) Wheat Flour (1) Sugar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Plum_Pudding.png"
+    },
+    {
+      "id": "cook_artichoke_dip",
+      "name": "Artichoke Dip",
+      "category": "Cooking Recipe",
+      "desc": "It's cool and refreshing.",
+      "source": "Queen of Sauce (Fall 28, Y1)",
+      "ingredients": "Artichoke (1), Milk (1)",
+      "buffs": "",
+      "notes": "Ingredients: Artichoke (1) Milk (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Artichoke_Dip.png"
+    },
+    {
+      "id": "cook_stir_fry",
+      "name": "Stir Fry",
+      "category": "Cooking Recipe",
+      "desc": "Julienned vegetables on a bed of rice.",
+      "source": "Queen of Sauce (Spring 7, Y1)",
+      "ingredients": "Cave Carrot (1), Common Mushroom (1), Kale (1), Oil (1)",
+      "buffs": "",
+      "notes": "Ingredients: Cave Carrot (1) Common Mushroom (1) Kale (1) Oil (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stir_Fry.png"
+    },
+    {
+      "id": "cook_roasted_hazelnuts",
+      "name": "Roasted Hazelnuts",
+      "category": "Cooking Recipe",
+      "desc": "The roasting process creates a rich forest flavor.",
+      "source": "Queen of Sauce (Summer 28, Y2)",
+      "ingredients": "Hazelnut (3)",
+      "buffs": "",
+      "notes": "Ingredients: Hazelnut (3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Roasted_Hazelnuts.png"
+    },
+    {
+      "id": "cook_pumpkin_pie",
+      "name": "Pumpkin Pie",
+      "category": "Cooking Recipe",
+      "desc": "Silky pumpkin cream in a flaky crust.",
+      "source": "Queen of Sauce (Winter 21, Y1)",
+      "ingredients": "Pumpkin (1), Wheat Flour (1), Milk (1), Sugar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Pumpkin (1) Wheat Flour (1) Milk (1) Sugar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pumpkin_Pie.png"
+    },
+    {
+      "id": "cook_radish_salad",
+      "name": "Radish Salad",
+      "category": "Cooking Recipe",
+      "desc": "The radishes are so crisp!",
+      "source": "Queen of Sauce (Spring 21, Y1)",
+      "ingredients": "Oil (1), Vinegar (1), Radish (1)",
+      "buffs": "",
+      "notes": "Ingredients: Oil (1) Vinegar (1) Radish (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Radish_Salad.png"
+    },
+    {
+      "id": "cook_fruit_salad",
+      "name": "Fruit Salad",
+      "category": "Cooking Recipe",
+      "desc": "A delicious combination of summer fruits.",
+      "source": "Queen of Sauce (Fall 7, Y2)",
+      "ingredients": "Blueberry (1), Melon (1), Apricot (1)",
+      "buffs": "",
+      "notes": "Ingredients: Blueberry (1) Melon (1) Apricot (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fruit_Salad.png"
+    },
+    {
+      "id": "cook_blackberry_cobbler",
+      "name": "Blackberry Cobbler",
+      "category": "Cooking Recipe",
+      "desc": "There's nothing quite like it.",
+      "source": "Queen of Sauce (Fall 14, Y2)",
+      "ingredients": "Blackberry (2), Sugar (1), Wheat Flour (1)",
+      "buffs": "",
+      "notes": "Ingredients: Blackberry (2) Sugar (1) Wheat Flour (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blackberry_Cobbler.png"
+    },
+    {
+      "id": "cook_cranberry_candy",
+      "name": "Cranberry Candy",
+      "category": "Cooking Recipe",
+      "desc": "It's sweet enough to mask the bitter fruit.",
+      "source": "Queen of Sauce (Winter 28, Y1)",
+      "ingredients": "Cranberries (1), Apple (1), Sugar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Cranberries (1) Apple (1) Sugar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cranberry_Candy.png"
+    },
+    {
+      "id": "cook_bruschetta",
+      "name": "Bruschetta",
+      "category": "Cooking Recipe",
+      "desc": "Roasted tomatoes on a crisp white bread.",
+      "source": "Queen of Sauce (Winter 21, Y2)",
+      "ingredients": "Bread (1), Oil (1), Tomato (1)",
+      "buffs": "",
+      "notes": "Ingredients: Bread (1) Oil (1) Tomato (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bruschetta.png"
+    },
+    {
+      "id": "cook_coleslaw",
+      "name": "Coleslaw",
+      "category": "Cooking Recipe",
+      "desc": "It's light, fresh and very healthy.",
+      "source": "Queen of Sauce (Spring 14, Y1)",
+      "ingredients": "Red Cabbage (1), Vinegar (1), Mayonnaise (1)",
+      "buffs": "",
+      "notes": "Ingredients: Red Cabbage (1) Vinegar (1) Mayonnaise (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Coleslaw.png"
+    },
+    {
+      "id": "cook_fiddlehead_risotto",
+      "name": "Fiddlehead Risotto",
+      "category": "Cooking Recipe",
+      "desc": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
+      "source": "Queen of Sauce (Fall 28, Y2)",
+      "ingredients": "Oil (1), Fiddlehead Fern (1), Garlic (1)",
+      "buffs": "",
+      "notes": "Ingredients: Oil (1) Fiddlehead Fern (1) Garlic (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fiddlehead_Risotto.png"
+    },
+    {
+      "id": "cook_poppyseed_muffin",
+      "name": "Poppyseed Muffin",
+      "category": "Cooking Recipe",
+      "desc": "It has a soothing effect.",
+      "source": "Queen of Sauce (Winter 7, Y2)",
+      "ingredients": "Poppy (1), Wheat Flour (1), Sugar (1)",
+      "buffs": "",
+      "notes": "Ingredients: Poppy (1) Wheat Flour (1) Sugar (1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Poppyseed_Muffin.png"
+    },
+    {
+      "id": "cook_chowder",
+      "name": "Chowder",
+      "category": "Cooking Recipe",
+      "desc": "A perfect way to warm yourself after a cold night at sea.",
+      "source": "Willy (Mail - 3❤️)",
+      "ingredients": "Clam (1), Milk (1)",
+      "buffs": "Fishing (+1)",
+      "notes": "Ingredients: Clam (1) Milk (1) | Buffs: Fishing (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Chowder.png"
+    },
+    {
+      "id": "cook_fish_stew",
+      "name": "Fish Stew",
+      "category": "Cooking Recipe",
+      "desc": "It smells a lot like the sea. Tastes better, though.",
+      "source": "Willy (Mail - 7❤️)",
+      "ingredients": "Crayfish (1), Mussel (1), Periwinkle (1), Tomato (1)",
+      "buffs": "Fishing (+3)",
+      "notes": "Ingredients: Crayfish (1) Mussel (1) Periwinkle (1) Tomato (1) | Buffs: Fishing (+3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Fish_Stew.png"
+    },
+    {
+      "id": "cook_escargot",
+      "name": "Escargot",
+      "category": "Cooking Recipe",
+      "desc": "Butter-soaked snails cooked to perfection.",
+      "source": "Willy (Mail - 5❤️)",
+      "ingredients": "Snail (1), Garlic (1)",
+      "buffs": "Fishing (+2)",
+      "notes": "Ingredients: Snail (1) Garlic (1) | Buffs: Fishing (+2)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Escargot.png"
+    },
+    {
+      "id": "cook_lobster_bisque",
+      "name": "Lobster Bisque",
+      "category": "Cooking Recipe",
+      "desc": "This delicate soup is a secret family recipe of Willy's.",
+      "source": "Queen of Sauce (Winter 14, Y2) or Willy (Mail - 9❤️)",
+      "ingredients": "Lobster (1), Milk (1)",
+      "buffs": "Fishing (+3), Max Energy (+50)",
+      "notes": "Ingredients: Lobster (1) Milk (1) | Buffs: Fishing (+3) Max Energy (+50)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster_Bisque.png"
+    },
+    {
+      "id": "cook_maple_bar",
+      "name": "Maple Bar",
+      "category": "Cooking Recipe",
+      "desc": "It's a sweet doughnut topped with a rich maple glaze.",
+      "source": "Queen of Sauce (Summer 14, Y2)",
+      "ingredients": "Maple Syrup (1), Sugar (1), Wheat Flour (1)",
+      "buffs": "Farming (+1), Fishing (+1), Mining (+1)",
+      "notes": "Ingredients: Maple Syrup (1) Sugar (1) Wheat Flour (1) | Buffs: Farming (+1) Fishing (+1) Mining (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Maple_Bar.png"
+    },
+    {
+      "id": "cook_crab_cakes",
+      "name": "Crab Cakes",
+      "category": "Cooking Recipe",
+      "desc": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
+      "source": "Queen of Sauce (Fall 21, Y2) or Saloon (Gus event)",
+      "ingredients": "Crab (1), Wheat Flour (1), Egg (1), Oil (1)",
+      "buffs": "Speed (+1), Defense (+1)",
+      "notes": "Ingredients: Crab (1) Wheat Flour (1) Egg (1) Oil (1) | Buffs: Speed (+1) Defense (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crab_Cakes.png"
+    },
+    {
+      "id": "cook_shrimp_cocktail",
+      "name": "Shrimp Cocktail",
+      "category": "Cooking Recipe",
+      "desc": "A sumptuous appetizer made with freshly-caught shrimp.",
+      "source": "Queen of Sauce (Winter 28, Y2)",
+      "ingredients": "Tomato (1), Shrimp (1), Wild Horseradish (1)",
+      "buffs": "Fishing (+1), Luck (+1)",
+      "notes": "Ingredients: Tomato (1) Shrimp (1) Wild Horseradish (1) | Buffs: Fishing (+1) Luck (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp_Cocktail.png"
+    },
+    {
+      "id": "cook_ginger_ale",
+      "name": "Ginger Ale",
+      "category": "Cooking Recipe",
+      "desc": "A zesty soda known for its soothing effect on the stomach.",
+      "source": "Volcano Dwarf Shop (1,000g)",
+      "ingredients": "Ginger (3), Sugar (1)",
+      "buffs": "Luck (+1)",
+      "notes": "Ingredients: Ginger (3) Sugar (1) | Buffs: Luck (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ginger_Ale.png"
+    },
+    {
+      "id": "cook_banana_pudding",
+      "name": "Banana Pudding",
+      "category": "Cooking Recipe",
+      "desc": "A creamy dessert with a wonderful tropical flavor.",
+      "source": "Island Trader (30 Bone Fragments)",
+      "ingredients": "Banana (1), Milk (1), Sugar (1)",
+      "buffs": "Mining (+1), Luck (+1), Defense (+1)",
+      "notes": "Ingredients: Banana (1) Milk (1) Sugar (1) | Buffs: Mining (+1) Luck (+1) Defense (+1)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Banana_Pudding.png"
+    },
+    {
+      "id": "cook_mango_sticky_rice",
+      "name": "Mango Sticky Rice",
+      "category": "Cooking Recipe",
+      "desc": "Sweet mango and coconut transforms this rice into something very special.",
+      "source": "Leo (Mail - 7❤️)",
+      "ingredients": "Mango (1), Coconut (1), Rice (1)",
+      "buffs": "Defense (+3)",
+      "notes": "Ingredients: Mango (1) Coconut (1) Rice (1) | Buffs: Defense (+3)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mango_Sticky_Rice.png"
+    },
+    {
+      "id": "cook_poi",
+      "name": "Poi",
+      "category": "Cooking Recipe",
+      "desc": "A traditional food with a delicate, sweet flavor when eaten fresh.",
+      "source": "Leo (Mail - 3❤️)",
+      "ingredients": "Taro Root (4)",
+      "buffs": "",
+      "notes": "Ingredients: Taro Root (4)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Poi.png"
+    },
+    {
+      "id": "cook_tropical_curry",
+      "name": "Tropical Curry",
+      "category": "Cooking Recipe",
+      "desc": "An exotic, fragrant curry served in a pineapple bowl.",
+      "source": "Ginger Island Resort (Gus - 2,000g)",
+      "ingredients": "Coconut (1), Pineapple (1), Hot Pepper (1)",
+      "buffs": "Foraging (+4)",
+      "notes": "Ingredients: Coconut (1) Pineapple (1) Hot Pepper (1) | Buffs: Foraging (+4)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tropical_Curry.png"
+    },
+    {
+      "id": "cook_squid_ink_ravioli",
+      "name": "Squid Ink Ravioli",
+      "category": "Cooking Recipe",
+      "desc": "Temporarily protects from debuffs.",
+      "source": "Combat Mastery (1.6)",
+      "ingredients": "Squid Ink (1), Wheat Flour (1), Tomato (1)",
+      "buffs": "Mining (+1), Squid Ink Ravioli Buff (Buff Immunity)",
+      "notes": "Ingredients: Squid Ink (1) Wheat Flour (1) Tomato (1) | Buffs: Mining (+1) Squid Ink Ravioli Buff",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Squid_Ink_Ravioli.png"
+    },
+    {
+      "id": "cook_moss_soup",
+      "name": "Moss Soup",
+      "category": "Cooking Recipe",
+      "desc": "It's thick and slimy, but edible.",
+      "source": "Foraging Level 3 (1.6)",
+      "ingredients": "Moss (20)",
+      "buffs": "",
+      "notes": "Ingredients: Moss (20)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Moss_Soup.png"
     }
-],
+  ],
   "fish": [
     {
       "id": "fish_pufferfish",
@@ -4489,7 +4489,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Floater (Difficulty: 80)",
       "limit": "None",
       "notes": "Season: Summer | Weather: Sunny / Clear | Time: 12:00 PM – 4:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pufferfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pufferfish.png",
+      "bobber": "Trap Bobber (or Cork Bobber for Floater behavior)",
+      "bait": "Targeted Bait (Pufferfish) / Deluxe Bait"
     },
     {
       "id": "fish_anchovy",
@@ -4505,7 +4507,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 30)",
       "limit": "None",
       "notes": "Season: Spring • Fall | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Anchovy.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Anchovy.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_tuna",
@@ -4521,7 +4525,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 70)",
       "limit": "None",
       "notes": "Season: Summer • Winter (All Seasons on Ginger Island) | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Tuna.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tuna.png",
+      "bobber": "Cork Bobber or Trap Bobber",
+      "bait": "Targeted Bait (Tuna) / Deluxe Bait"
     },
     {
       "id": "fish_sardine",
@@ -4537,7 +4543,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 30)",
       "limit": "None",
       "notes": "Season: Spring • Fall • Winter | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Sardine.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sardine.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_bream",
@@ -4553,7 +4561,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 35)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Bream.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bream.png",
+      "bobber": "Cork Bobber or Barbed Hook",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_largemouth_bass",
@@ -4569,7 +4579,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 50)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Largemouth_Bass.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Largemouth_Bass.png",
+      "bobber": "Cork Bobber or Trap Bobber",
+      "bait": "Targeted Bait (Largemouth Bass) / Deluxe Bait"
     },
     {
       "id": "fish_smallmouth_bass",
@@ -4585,7 +4597,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 28)",
       "limit": "None",
       "notes": "Season: Spring • Fall | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Smallmouth_Bass.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Smallmouth_Bass.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_rainbow_trout",
@@ -4601,7 +4615,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 45)",
       "limit": "None",
       "notes": "Season: Summer | Weather: Sunny / Clear (Any in Trout Derby) | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Rainbow_Trout.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Rainbow_Trout.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Targeted Bait (Rainbow Trout) / Deluxe Bait"
     },
     {
       "id": "fish_salmon",
@@ -4617,7 +4633,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 50)",
       "limit": "None",
       "notes": "Season: Fall | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Salmon.png",
+      "bobber": "Cork Bobber or Trap Bobber",
+      "bait": "Targeted Bait (Salmon) / Deluxe Bait"
     },
     {
       "id": "fish_walleye",
@@ -4633,7 +4651,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 45)",
       "limit": "None",
       "notes": "Season: Fall (Winter with Rain Totem) | Weather: Rain | Time: 12:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Walleye.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Walleye.png",
+      "bobber": "Cork Bobber or Barbed Hook",
+      "bait": "Targeted Bait (Walleye) / Deluxe Bait"
     },
     {
       "id": "fish_perch",
@@ -4649,7 +4669,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 35)",
       "limit": "None",
       "notes": "Season: Winter | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Perch.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Perch.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_carp",
@@ -4665,7 +4687,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 15 - Very Easy)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Carp.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Carp.png",
+      "bobber": "Barbed Hook or Dressed Spinner (Zero effort catch)",
+      "bait": "Wild Bait / Standard Bait"
     },
     {
       "id": "fish_catfish",
@@ -4681,7 +4705,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 75)",
       "limit": "None",
       "notes": "Season: Spring • Fall (Summer in Secret Woods) | Weather: Rain | Time: 6:00 AM – 12:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Catfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Catfish.png",
+      "bobber": "Trap Bobber (Crucial for aggressive darting)",
+      "bait": "Targeted Bait (Catfish) / Deluxe Bait"
     },
     {
       "id": "fish_pike",
@@ -4697,7 +4723,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 60)",
       "limit": "None",
       "notes": "Season: Summer • Winter | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Pike.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pike.png",
+      "bobber": "Trap Bobber or Cork Bobber",
+      "bait": "Targeted Bait (Pike) / Deluxe Bait"
     },
     {
       "id": "fish_sunfish",
@@ -4713,7 +4741,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 30)",
       "limit": "None",
       "notes": "Season: Spring • Summer | Weather: Sunny / Clear | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Sunfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sunfish.png",
+      "bobber": "Cork Bobber or Barbed Hook",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_red_mullet",
@@ -4729,7 +4759,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 55)",
       "limit": "None",
       "notes": "Season: Summer • Winter | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Mullet.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Mullet.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Targeted Bait (Red Mullet) / Deluxe Bait"
     },
     {
       "id": "fish_herring",
@@ -4745,7 +4777,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 25)",
       "limit": "None",
       "notes": "Season: Spring • Winter | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Herring.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Herring.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_eel",
@@ -4761,7 +4795,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 70)",
       "limit": "None",
       "notes": "Season: Spring • Fall | Weather: Rain | Time: 4:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Eel.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Eel.png",
+      "bobber": "Cork Bobber or Trap Bobber",
+      "bait": "Targeted Bait (Eel) / Deluxe Bait"
     },
     {
       "id": "fish_octopus",
@@ -4777,7 +4813,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 95)",
       "limit": "None",
       "notes": "Season: Summer (All Seasons on Ginger Island) | Weather: Any | Time: 6:00 AM – 1:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Octopus.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Octopus.png",
+      "bobber": "Trap Bobber (Essential) + Lead Bobber",
+      "bait": "Targeted Bait (Octopus) / Deluxe Bait"
     },
     {
       "id": "fish_red_snapper",
@@ -4793,7 +4831,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 40)",
       "limit": "None",
       "notes": "Season: Summer • Fall (Winter with Rain Totem) | Weather: Rain | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Snapper.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Red_Snapper.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Targeted Bait (Red Snapper) / Deluxe Bait"
     },
     {
       "id": "fish_squid",
@@ -4809,7 +4849,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 75)",
       "limit": "None",
       "notes": "Season: Winter (All on Ginger Island West) | Weather: Any | Time: 6:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Squid.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Squid.png",
+      "bobber": "Trap Bobber or Lead Bobber (Sinker behavior)",
+      "bait": "Targeted Bait (Squid) / Deluxe Bait"
     },
     {
       "id": "fish_seaweed",
@@ -4825,7 +4867,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Static Item (No minigame)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Seaweed.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Seaweed.png",
+      "bobber": "N/A (Forage / Static Catch)",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_green_algae",
@@ -4841,7 +4885,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Static Item (No minigame)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Green_Algae.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Green_Algae.png",
+      "bobber": "N/A (Forage / Static Catch)",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_sea_cucumber",
@@ -4857,7 +4903,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 40)",
       "limit": "None",
       "notes": "Season: Fall • Winter (All on Ginger Island) | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Sea_Cucumber.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sea_Cucumber.png",
+      "bobber": "Cork Bobber or Lead Bobber",
+      "bait": "Targeted Bait (Sea Cucumber) / Deluxe Bait"
     },
     {
       "id": "fish_super_cucumber",
@@ -4873,7 +4921,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 80)",
       "limit": "None",
       "notes": "Season: Summer • Fall (All on Ginger Island) | Weather: Any | Time: 6:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Cucumber.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Super_Cucumber.png",
+      "bobber": "Trap Bobber or Lead Bobber",
+      "bait": "Targeted Bait (Super Cucumber) / Deluxe Bait"
     },
     {
       "id": "fish_ghostfish",
@@ -4889,7 +4939,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 45)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Ghostfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ghostfish.png",
+      "bobber": "Cork Bobber or Barbed Hook",
+      "bait": "Targeted Bait (Ghostfish) / Deluxe Bait"
     },
     {
       "id": "fish_white_algae",
@@ -4905,7 +4957,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Static Item (No minigame)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/White_Algae.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/White_Algae.png",
+      "bobber": "N/A (Forage / Static Catch)",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_stonefish",
@@ -4921,7 +4975,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 65)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Stonefish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stonefish.png",
+      "bobber": "Curiosity Lure (Boosts bite rate) or Lead Bobber",
+      "bait": "Targeted Bait (Stonefish) / Deluxe Bait"
     },
     {
       "id": "fish_crimsonfish",
@@ -4937,7 +4993,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 95)",
       "limit": "Legendary Fish: Can only be caught once per save file.",
       "notes": "Season: Summer | Weather: Any | Time: 6:00 AM – 8:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Crimsonfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crimsonfish.png",
+      "bobber": "Trap Bobber (or Trap + Cork on Advanced Rod)",
+      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait"
     },
     {
       "id": "fish_angler",
@@ -4953,7 +5011,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 85)",
       "limit": "Legendary Fish: Can only be caught once per save file.",
       "notes": "Season: Fall | Weather: Any | Time: 6:00 AM – 8:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Angler.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Angler.png",
+      "bobber": "Trap Bobber or Cork Bobber",
+      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait"
     },
     {
       "id": "fish_ice_pip",
@@ -4969,7 +5029,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 85)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Pip.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Ice_Pip.png",
+      "bobber": "Trap Bobber or Curiosity Lure (High trash rate in Mines 60)",
+      "bait": "Targeted Bait (Ice Pip) / Deluxe Bait"
     },
     {
       "id": "fish_lava_eel",
@@ -4985,7 +5047,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 90)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime | Lava Pools",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Lava_Eel.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lava_Eel.png",
+      "bobber": "Trap Bobber or Curiosity Lure (Boosts lava bite rate 5% -> 15%)",
+      "bait": "Targeted Bait (Lava Eel) / Deluxe Bait"
     },
     {
       "id": "fish_legend",
@@ -5001,7 +5065,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 110 - Hardest fish in the game)",
       "limit": "Legendary Fish: Can only be caught once per save file.",
       "notes": "Season: Spring | Weather: Rain | Time: 6:00 AM – 8:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Legend.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Legend.png",
+      "bobber": "Trap Bobber (Must-have, reduces escape speed by 33%)",
+      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait (Legend)"
     },
     {
       "id": "fish_sandfish",
@@ -5017,7 +5083,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 65)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 8:00 PM | Calico Desert",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Sandfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sandfish.png",
+      "bobber": "Cork Bobber or Trap Bobber",
+      "bait": "Targeted Bait (Sandfish) / Deluxe Bait"
     },
     {
       "id": "fish_scorpion_carp",
@@ -5033,7 +5101,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 90)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 8:00 PM | Fishing Level 4+",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Scorpion_Carp.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Scorpion_Carp.png",
+      "bobber": "Trap Bobber (Crucial for erratic darting)",
+      "bait": "Targeted Bait (Scorpion Carp) / Deluxe Bait"
     },
     {
       "id": "fish_flounder",
@@ -5049,7 +5119,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 50)",
       "limit": "None",
       "notes": "Season: Spring • Summer (All Seasons on Ginger Island) | Weather: Any | Time: 6:00 AM – 8:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Flounder.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Flounder.png",
+      "bobber": "Cork Bobber or Lead Bobber",
+      "bait": "Targeted Bait (Flounder) / Deluxe Bait"
     },
     {
       "id": "fish_midnight_carp",
@@ -5065,7 +5137,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 55)",
       "limit": "None",
       "notes": "Season: Fall • Winter (All on Ginger Island) | Weather: Any | Time: 10:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Midnight_Carp.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Midnight_Carp.png",
+      "bobber": "Cork Bobber or Trap Bobber",
+      "bait": "Targeted Bait (Midnight Carp) / Deluxe Bait"
     },
     {
       "id": "fish_mutant_carp",
@@ -5081,7 +5155,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 80)",
       "limit": "Legendary Fish: Can only be caught once per save file.",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime | Sewers Access",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Mutant_Carp.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mutant_Carp.png",
+      "bobber": "Trap Bobber or Cork Bobber",
+      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait"
     },
     {
       "id": "fish_sturgeon",
@@ -5097,7 +5173,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 78)",
       "limit": "None (Produces Caviar in Preserves Jar when placed in Fish Pond!)",
       "notes": "Season: Summer • Winter | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Sturgeon.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sturgeon.png",
+      "bobber": "Trap Bobber or Cork Bobber",
+      "bait": "Targeted Bait (Sturgeon) / Deluxe Bait"
     },
     {
       "id": "fish_tiger_trout",
@@ -5113,7 +5191,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 70)",
       "limit": "None (Sterile hybrid, cannot reproduce in Fish Ponds)",
       "notes": "Season: Fall • Winter | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Tiger_Trout.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tiger_Trout.png",
+      "bobber": "Trap Bobber (Tough darting behavior)",
+      "bait": "Targeted Bait (Tiger Trout) / Deluxe Bait"
     },
     {
       "id": "fish_bullhead",
@@ -5129,7 +5209,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 46)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Bullhead.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Bullhead.png",
+      "bobber": "Cork Bobber or Barbed Hook",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_tilapia",
@@ -5145,7 +5227,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 50)",
       "limit": "None",
       "notes": "Season: Summer • Fall (All on Ginger Island) | Weather: Any | Time: 6:00 AM – 2:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Tilapia.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Tilapia.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Targeted Bait (Tilapia) / Deluxe Bait"
     },
     {
       "id": "fish_chub",
@@ -5161,7 +5245,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 35)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Chub.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Chub.png",
+      "bobber": "Cork Bobber or Barbed Hook",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_dorado",
@@ -5177,7 +5263,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 78)",
       "limit": "None",
       "notes": "Season: Summer | Weather: Any | Time: 6:00 AM – 7:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Dorado.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Dorado.png",
+      "bobber": "Trap Bobber or Cork Bobber",
+      "bait": "Targeted Bait (Dorado) / Deluxe Bait"
     },
     {
       "id": "fish_albacore",
@@ -5193,7 +5281,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 60)",
       "limit": "None",
       "notes": "Season: Fall • Winter | Weather: Any | Time: 6am–11am & 6pm–2am",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Albacore.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Albacore.png",
+      "bobber": "Cork Bobber or Trap Bobber",
+      "bait": "Targeted Bait (Albacore) / Deluxe Bait"
     },
     {
       "id": "fish_shad",
@@ -5209,7 +5299,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 45)",
       "limit": "None",
       "notes": "Season: Spring • Summer • Fall | Weather: Rain | Time: 9:00 AM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Shad.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Shad.png",
+      "bobber": "Cork Bobber or Barbed Hook",
+      "bait": "Standard Bait / Deluxe Bait"
     },
     {
       "id": "fish_lingcod",
@@ -5225,7 +5317,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 85 - Aggressive)",
       "limit": "None",
       "notes": "Season: Winter (All on Ginger Island West) | Weather: Any | Time: Anytime",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Lingcod.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lingcod.png",
+      "bobber": "Trap Bobber (Essential for ultra-aggressive movement)",
+      "bait": "Targeted Bait (Lingcod) / Deluxe Bait"
     },
     {
       "id": "fish_halibut",
@@ -5241,7 +5335,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 50)",
       "limit": "None",
       "notes": "Season: Spring • Summer • Winter | Weather: Any | Time: 6am–11am & 7pm–2am",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Halibut.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Halibut.png",
+      "bobber": "Cork Bobber or Lead Bobber",
+      "bait": "Targeted Bait (Halibut) / Deluxe Bait"
     },
     {
       "id": "fish_lobster",
@@ -5257,7 +5353,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Ocean Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lobster.png",
+      "bobber": "N/A (Crab Pot in Ocean)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_crayfish",
@@ -5273,7 +5371,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Freshwater Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Crayfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crayfish.png",
+      "bobber": "N/A (Crab Pot in Freshwater)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_crab",
@@ -5289,7 +5389,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch / Monster Drop",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Ocean Crab Pot / Mines Drop",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Crab.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Crab.png",
+      "bobber": "N/A (Crab Pot in Ocean / Rock Crab)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_cockle",
@@ -5305,7 +5407,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch / Beach Forage",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Beach Forage / Ocean Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Cockle.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cockle.png",
+      "bobber": "N/A (Crab Pot in Ocean / Beach Forage)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_mussel",
@@ -5321,7 +5425,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch / Beach Forage",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Beach Forage / Ocean Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Mussel.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Mussel.png",
+      "bobber": "N/A (Crab Pot in Ocean / Beach Forage)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_shrimp",
@@ -5337,7 +5443,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Ocean Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Shrimp.png",
+      "bobber": "N/A (Crab Pot in Ocean)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_snail",
@@ -5353,7 +5461,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Freshwater Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Snail.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Snail.png",
+      "bobber": "N/A (Crab Pot in Freshwater)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_periwinkle",
@@ -5369,7 +5479,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Freshwater Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Periwinkle.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Periwinkle.png",
+      "bobber": "N/A (Crab Pot in Freshwater)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_oyster",
@@ -5385,7 +5497,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Crab Pot Catch / Beach Forage",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Beach Forage / Ocean Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Oyster.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Oyster.png",
+      "bobber": "N/A (Crab Pot in Ocean / Beach Forage)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_woodskip",
@@ -5401,7 +5515,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 50)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime | Secret Woods",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Woodskip.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Woodskip.png",
+      "bobber": "Curiosity Lure or Cork Bobber",
+      "bait": "Targeted Bait (Woodskip) / Deluxe Bait"
     },
     {
       "id": "fish_glacierfish",
@@ -5417,7 +5533,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 100)",
       "limit": "Legendary Fish: Can only be caught once per save file.",
       "notes": "Season: Winter | Weather: Any | Time: 6:00 AM – 8:00 PM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Glacierfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Glacierfish.png",
+      "bobber": "Trap Bobber (Essential for wild bottom bounces)",
+      "bait": "Curiosity Lure / Deluxe Bait / Targeted Bait (Glacierfish)"
     },
     {
       "id": "fish_void_salmon",
@@ -5433,7 +5551,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Mixed (Difficulty: 80)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime | Witch's Swamp",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Void_Salmon.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Void_Salmon.png",
+      "bobber": "Trap Bobber or Cork Bobber",
+      "bait": "Targeted Bait (Void Salmon) / Deluxe Bait"
     },
     {
       "id": "fish_slimejack",
@@ -5449,7 +5569,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 55)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: Anytime | Mutant Bug Lair",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Slimejack.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Slimejack.png",
+      "bobber": "Curiosity Lure or Cork Bobber",
+      "bait": "Targeted Bait (Slimejack) / Deluxe Bait"
     },
     {
       "id": "fish_midnight_squid",
@@ -5465,7 +5587,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 55)",
       "limit": "None",
       "notes": "Season: Winter (Night Market 15-17) | Weather: Any | Time: 5:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Midnight_Squid.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Midnight_Squid.png",
+      "bobber": "Curiosity Lure or Lead Bobber (Night Market Submarine)",
+      "bait": "Targeted Bait (Midnight Squid) / Deluxe Bait"
     },
     {
       "id": "fish_spook_fish",
@@ -5481,7 +5605,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 60)",
       "limit": "None",
       "notes": "Season: Winter (Night Market 15-17) | Weather: Any | Time: 5:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Spook_Fish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Spook_Fish.png",
+      "bobber": "Curiosity Lure or Trap Bobber (Night Market Submarine)",
+      "bait": "Targeted Bait (Spook Fish) / Deluxe Bait"
     },
     {
       "id": "fish_blobfish",
@@ -5497,7 +5623,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Floater (Difficulty: 75)",
       "limit": "None (Can produce Pearls in a Fish Pond!)",
       "notes": "Season: Winter (Night Market 15-17) | Weather: Any | Time: 5:00 PM – 2:00 AM",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Blobfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blobfish.png",
+      "bobber": "Trap Bobber or Curiosity Lure (Night Market Submarine)",
+      "bait": "Targeted Bait (Blobfish) / Deluxe Bait"
     },
     {
       "id": "fish_stingray",
@@ -5513,7 +5641,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Sinker (Difficulty: 80)",
       "limit": "None (Produces Dragon Teeth & Cinder Shards in Fish Pond!)",
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Pirate Cove",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Stingray.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Stingray.png",
+      "bobber": "Trap Bobber or Curiosity Lure (Pirate Cove)",
+      "bait": "Targeted Bait (Stingray) / Deluxe Bait"
     },
     {
       "id": "fish_lionfish",
@@ -5529,7 +5659,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Smooth (Difficulty: 50)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Ginger Island Ocean",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Lionfish.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lionfish.png",
+      "bobber": "Cork Bobber or Dressed Spinner",
+      "bait": "Targeted Bait (Lionfish) / Deluxe Bait"
     },
     {
       "id": "fish_blue_discus",
@@ -5545,7 +5677,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 60)",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Ginger Island Freshwater",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Blue_Discus.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Blue_Discus.png",
+      "bobber": "Cork Bobber or Trap Bobber",
+      "bait": "Targeted Bait (Blue Discus) / Deluxe Bait"
     },
     {
       "id": "fish_clam",
@@ -5561,7 +5695,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Forage / Crab Pot Catch",
       "limit": "None",
       "notes": "Season: All Seasons | Weather: Any | Beach Forage / Ocean Crab Pot",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Clam.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Clam.png",
+      "bobber": "N/A (Crab Pot / Beach Forage)",
+      "bait": "Standard Bait / Wild Bait / Magnet"
     },
     {
       "id": "fish_sea_jelly",
@@ -5577,7 +5713,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Static Item (No minigame)",
       "limit": "None (Grants +1 Fishing Buff and energy when consumed)",
       "notes": "Season: All Seasons | Weather: Any | Rare 1.6 Ocean Catch",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Sea_Jelly.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sea_Jelly.png",
+      "bobber": "N/A (Ocean Cast - Luck / High Cast)",
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_river_jelly",
@@ -5593,7 +5731,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Static Item (No minigame)",
       "limit": "None (Grants +30 Max Energy Buff when consumed)",
       "notes": "Season: All Seasons | Weather: Any | Rare 1.6 River Catch",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/River_Jelly.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/River_Jelly.png",
+      "bobber": "N/A (River Cast - Luck / High Cast)",
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_cave_jelly",
@@ -5609,7 +5749,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Static Item (No minigame)",
       "limit": "None (Grants +1 Luck Buff when consumed)",
       "notes": "Season: All Seasons | Weather: Any | Rare 1.6 Cave Catch",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Cave_Jelly.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Cave_Jelly.png",
+      "bobber": "Curiosity Lure (Boosts 5% Mines 100 catch rate)",
+      "bait": "Deluxe Bait / Standard Bait"
     },
     {
       "id": "fish_goby",
@@ -5625,7 +5767,9 @@ const PERFECTION_TRACKER_DATA = {
       "difficulty": "Dart (Difficulty: 55)",
       "limit": "None (New 1.6 Fish!)",
       "notes": "Season: All Seasons | Weather: Any | Time: 6:00 AM – 2:00 AM | Waterfalls",
-      "img": "https://stardewvalleywiki.com/Special:FilePath/Goby.png"
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Goby.png",
+      "bobber": "Curiosity Lure or Cork Bobber (Waterfalls in Cindersap)",
+      "bait": "Targeted Bait (Goby) / Deluxe Bait"
     }
   ],
   "crafting": [
@@ -6982,2283 +7126,2283 @@ const PERFECTION_TRACKER_DATA = {
   ],
   "villagers": [
     {
-        "id": "npc_abigail",
-        "name": "Abigail",
-        "category": "Bachelorette",
-        "birthday": "Fall 13",
-        "home": "Pierre's General Store",
-        "source": "\ud83c\udfe0 Pierre's General Store | \ud83c\udf82 Fall 13",
-        "loved": "Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Monster Compendium, Pufferfish, Pumpkin, Spicy Eel",
-        "liked": "Quartz, Universal Likes (except Vegetables)",
-        "schedule": "Morning at Pierre's; Graveyard (sunny) 9am-1pm; Mountain lake / bridge 1pm-5pm; Saloon or Pierre's store evenings.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Pierre's Store (Bedroom)"
-            },
-            {
-                "time": "9:00 AM \u2013 1:00 PM",
-                "loc": "Graveyard & River Bridge (Sunny) / Pierre's Store (Rain)"
-            },
-            {
-                "time": "1:00 PM \u2013 5:00 PM",
-                "loc": "Mountain Lake & Bridge (near Mines)"
-            },
-            {
-                "time": "5:00 PM \u2013 9:00 PM",
-                "loc": "The Stardrop Saloon (or Pierre's Store)"
-            },
-            {
-                "time": "9:00 PM+",
-                "loc": "Returns home to Pierre's Store"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Pufferfish, Pumpkin, Spicy Eel\n\ud83d\udd52 Routine: Graveyard / Mountain Lake / Pierre's Store / Saloon",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Abigail.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Pierre's Store",
-                "x": 52.0,
-                "y": 42.5
-            },
-            {
-                "label": "\ud83c\udf32 Graveyard & River Bridge",
-                "x": 58.5,
-                "y": 54.0
-            },
-            {
-                "label": "\ud83c\udf7b The Stardrop Saloon",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Pierre's living room / kitchen in morning -> The Stardrop Saloon (5:00 PM \u2013 9:00 PM)"
-            },
-            {
-                "cond": "\ud83d\udd04 Tue / Thu",
-                "loc": "Graveyard & Town River Bridge (1:00 PM \u2013 5:00 PM)"
-            },
-            {
-                "cond": "\ud83d\udd04 Wed / Fri",
-                "loc": "Plays flute at Mountain Lake & Bridge near Mines (1:00 PM \u2013 5:00 PM)"
-            },
-            {
-                "cond": "\ud83d\udd04 Sunday",
-                "loc": "Stands outside Wizard's Tower in Cindersap Forest (1:30 PM \u2013 7:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Pierre's living room / kitchen in morning -> The Stardrop Saloon (5:00 PM \u2013 9:00 PM)",
-        "variations": "\ud83d\udd04 Tue / Thu: Graveyard & Town River Bridge (1:00 PM \u2013 5:00 PM); \ud83d\udd04 Wed / Fri: Plays flute at Mountain Lake & Bridge near Mines (1:00 PM \u2013 5:00 PM); \ud83d\udd04 Sunday: Stands outside Wizard's Tower in Cindersap Forest (1:30 PM \u2013 7:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_abigail",
+      "name": "Abigail",
+      "category": "Bachelorette",
+      "birthday": "Fall 13",
+      "home": "Pierre's General Store",
+      "source": "🏠 Pierre's General Store | 🎂 Fall 13",
+      "loved": "Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Monster Compendium, Pufferfish, Pumpkin, Spicy Eel",
+      "liked": "Quartz, Universal Likes (except Vegetables)",
+      "schedule": "Morning at Pierre's; Graveyard (sunny) 9am-1pm; Mountain lake / bridge 1pm-5pm; Saloon or Pierre's store evenings.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Pierre's Store (Bedroom)"
+        },
+        {
+          "time": "9:00 AM – 1:00 PM",
+          "loc": "Graveyard & River Bridge (Sunny) / Pierre's Store (Rain)"
+        },
+        {
+          "time": "1:00 PM – 5:00 PM",
+          "loc": "Mountain Lake & Bridge (near Mines)"
+        },
+        {
+          "time": "5:00 PM – 9:00 PM",
+          "loc": "The Stardrop Saloon (or Pierre's Store)"
+        },
+        {
+          "time": "9:00 PM+",
+          "loc": "Returns home to Pierre's Store"
+        }
+      ],
+      "notes": "❤️ Loved: Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Pufferfish, Pumpkin, Spicy Eel\n🕒 Routine: Graveyard / Mountain Lake / Pierre's Store / Saloon",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Abigail.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Pierre's Store",
+          "x": 52.0,
+          "y": 42.5
+        },
+        {
+          "label": "🌲 Graveyard & River Bridge",
+          "x": 58.5,
+          "y": 54.0
+        },
+        {
+          "label": "🍻 The Stardrop Saloon",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Pierre's living room / kitchen in morning -> The Stardrop Saloon (5:00 PM – 9:00 PM)"
+        },
+        {
+          "cond": "🔄 Tue / Thu",
+          "loc": "Graveyard & Town River Bridge (1:00 PM – 5:00 PM)"
+        },
+        {
+          "cond": "🔄 Wed / Fri",
+          "loc": "Plays flute at Mountain Lake & Bridge near Mines (1:00 PM – 5:00 PM)"
+        },
+        {
+          "cond": "🔄 Sunday",
+          "loc": "Stands outside Wizard's Tower in Cindersap Forest (1:30 PM – 7:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Pierre's living room / kitchen in morning -> The Stardrop Saloon (5:00 PM – 9:00 PM)",
+      "variations": "🔄 Tue / Thu: Graveyard & Town River Bridge (1:00 PM – 5:00 PM); 🔄 Wed / Fri: Plays flute at Mountain Lake & Bridge near Mines (1:00 PM – 5:00 PM); 🔄 Sunday: Stands outside Wizard's Tower in Cindersap Forest (1:30 PM – 7:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_emily",
-        "name": "Emily",
-        "category": "Bachelorette",
-        "birthday": "Spring 27",
-        "home": "2 Willow Lane",
-        "source": "\ud83c\udfe0 2 Willow Lane | \ud83c\udf82 Spring 27",
-        "loved": "Amethyst, Aquamarine, Cloth, Emerald, Jade, Parrot Egg, Ruby, Survival Burger, Topaz, Wool",
-        "liked": "Daffodil, Quartz, Universal Likes (except Fish Taco/Sashimi/Maki Roll/Fried Eel)",
-        "schedule": "Home living room / sewing morning until 3:30pm; Works at Stardrop Saloon 4pm to 12:30am nightly.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 12:00 PM",
-                "loc": "2 Willow Lane (Living Room / Sewing)"
-            },
-            {
-                "time": "12:00 PM \u2013 3:30 PM",
-                "loc": "2 Willow Lane (Living Room)"
-            },
-            {
-                "time": "3:30 PM \u2013 4:00 PM",
-                "loc": "Walks to The Stardrop Saloon"
-            },
-            {
-                "time": "4:00 PM \u2013 12:30 AM",
-                "loc": "The Stardrop Saloon (Behind counter)"
-            },
-            {
-                "time": "12:30 AM+",
-                "loc": "Returns home to 2 Willow Lane"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Cloth, Wool, Survival Burger, Parrot Egg\n\ud83d\udd52 Routine: Home Living Room -> Saloon Barmaid (4pm-12am)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Emily.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 2 Willow Lane",
-                "x": 47.0,
-                "y": 60.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (4pm-12am)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Same routine (sewing at 2 Willow Lane -> Stardrop Saloon 4:00 PM \u2013 12:30 AM)"
-            },
-            {
-                "cond": "\ud83e\uddd8 Tuesday",
-                "loc": "Aerobics class in Pierre's General Store (4:00 PM \u2013 6:00 PM) before Saloon"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Friday (CC)",
-                "loc": "Community Center Crafts Room / sewing area (10:00 AM \u2013 3:30 PM) -> Saloon"
-            },
-            {
-                "cond": "\ud83e\ude7a Winter 11",
-                "loc": "Annual clinic checkup at Harvey's Medical Clinic (10:30 AM \u2013 4:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Same routine (sewing at 2 Willow Lane -> Stardrop Saloon 4:00 PM \u2013 12:30 AM)",
-        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's General Store (4:00 PM \u2013 6:00 PM) before Saloon; \ud83c\udfdb\ufe0f Friday (CC): Community Center Crafts Room / sewing area (10:00 AM \u2013 3:30 PM) -> Saloon; \ud83e\ude7a Winter 11: Annual clinic checkup at Harvey's Medical Clinic (10:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_emily",
+      "name": "Emily",
+      "category": "Bachelorette",
+      "birthday": "Spring 27",
+      "home": "2 Willow Lane",
+      "source": "🏠 2 Willow Lane | 🎂 Spring 27",
+      "loved": "Amethyst, Aquamarine, Cloth, Emerald, Jade, Parrot Egg, Ruby, Survival Burger, Topaz, Wool",
+      "liked": "Daffodil, Quartz, Universal Likes (except Fish Taco/Sashimi/Maki Roll/Fried Eel)",
+      "schedule": "Home living room / sewing morning until 3:30pm; Works at Stardrop Saloon 4pm to 12:30am nightly.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 12:00 PM",
+          "loc": "2 Willow Lane (Living Room / Sewing)"
+        },
+        {
+          "time": "12:00 PM – 3:30 PM",
+          "loc": "2 Willow Lane (Living Room)"
+        },
+        {
+          "time": "3:30 PM – 4:00 PM",
+          "loc": "Walks to The Stardrop Saloon"
+        },
+        {
+          "time": "4:00 PM – 12:30 AM",
+          "loc": "The Stardrop Saloon (Behind counter)"
+        },
+        {
+          "time": "12:30 AM+",
+          "loc": "Returns home to 2 Willow Lane"
+        }
+      ],
+      "notes": "❤️ Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Cloth, Wool, Survival Burger, Parrot Egg\n🕒 Routine: Home Living Room -> Saloon Barmaid (4pm-12am)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Emily.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 2 Willow Lane",
+          "x": 47.0,
+          "y": 60.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (4pm-12am)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Same routine (sewing at 2 Willow Lane -> Stardrop Saloon 4:00 PM – 12:30 AM)"
+        },
+        {
+          "cond": "🧘 Tuesday",
+          "loc": "Aerobics class in Pierre's General Store (4:00 PM – 6:00 PM) before Saloon"
+        },
+        {
+          "cond": "🏛️ Friday (CC)",
+          "loc": "Community Center Crafts Room / sewing area (10:00 AM – 3:30 PM) -> Saloon"
+        },
+        {
+          "cond": "🩺 Winter 11",
+          "loc": "Annual clinic checkup at Harvey's Medical Clinic (10:30 AM – 4:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Same routine (sewing at 2 Willow Lane -> Stardrop Saloon 4:00 PM – 12:30 AM)",
+      "variations": "🧘 Tuesday: Aerobics class in Pierre's General Store (4:00 PM – 6:00 PM) before Saloon; 🏛️ Friday (CC): Community Center Crafts Room / sewing area (10:00 AM – 3:30 PM) -> Saloon; 🩺 Winter 11: Annual clinic checkup at Harvey's Medical Clinic (10:30 AM – 4:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_haley",
-        "name": "Haley",
-        "category": "Bachelorette",
-        "birthday": "Spring 14",
-        "home": "2 Willow Lane",
-        "source": "\ud83c\udfe0 2 Willow Lane | \ud83c\udf82 Spring 14",
-        "loved": "Coconut, Fruit Salad, Pink Cake, Sunflower",
-        "liked": "Daffodil, Universal Likes (Hates Prismatic Shard! Dislikes Vegetables & Cactus Fruit)",
-        "schedule": "Home morning; Town fountain 11am-4:30pm; River south of Marnie's (sunny); Beach in Summer 10:30am-4pm.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 11:00 AM",
-                "loc": "2 Willow Lane (Bedroom / Kitchen)"
-            },
-            {
-                "time": "11:00 AM \u2013 4:30 PM",
-                "loc": "Town Fountain (Sunny) / Beach (Summer 10:30am-4pm)"
-            },
-            {
-                "time": "4:30 PM \u2013 8:00 PM",
-                "loc": "2 Willow Lane (Living Room / Kitchen)"
-            },
-            {
-                "time": "8:00 PM \u2013 10:00 PM",
-                "loc": "2 Willow Lane (Bedroom)"
-            },
-            {
-                "time": "10:00 PM+",
-                "loc": "Goes to sleep"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Coconut, Fruit Salad, Pink Cake, Sunflower (Hates Prismatic Shard & Dislikes Cactus Fruit/Vegetables)\n\ud83d\udd52 Routine: Town Fountain / River south of Marnie's / Beach in Summer",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Haley.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 2 Willow Lane",
-                "x": 47.0,
-                "y": 60.0
-            },
-            {
-                "label": "\u26f2 Town Fountain",
-                "x": 53.0,
-                "y": 46.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Stays home at 2 Willow Lane all day (living room / bedroom)"
-            },
-            {
-                "cond": "\ud83d\udcf8 Spring / Fall",
-                "loc": "Takes photos near Marnie's Ranch river & Cindersap Forest (11:00 AM \u2013 4:30 PM)"
-            },
-            {
-                "cond": "\u2600\ufe0f Summer",
-                "loc": "Sunbathes by Beach pier (10:30 AM \u2013 4:00 PM) or Town Playground fountain"
-            },
-            {
-                "cond": "\ud83e\ude7a Winter 9",
-                "loc": "Annual clinic checkup at Harvey's Medical Clinic (11:00 AM \u2013 4:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Stays home at 2 Willow Lane all day (living room / bedroom)",
-        "variations": "\ud83d\udcf8 Spring / Fall: Takes photos near Marnie's Ranch river & Cindersap Forest (11:00 AM \u2013 4:30 PM); \u2600\ufe0f Summer: Sunbathes by Beach pier (10:30 AM \u2013 4:00 PM) or Town Playground fountain; \ud83e\ude7a Winter 9: Annual clinic checkup at Harvey's Medical Clinic (11:00 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_haley",
+      "name": "Haley",
+      "category": "Bachelorette",
+      "birthday": "Spring 14",
+      "home": "2 Willow Lane",
+      "source": "🏠 2 Willow Lane | 🎂 Spring 14",
+      "loved": "Coconut, Fruit Salad, Pink Cake, Sunflower",
+      "liked": "Daffodil, Universal Likes (Hates Prismatic Shard! Dislikes Vegetables & Cactus Fruit)",
+      "schedule": "Home morning; Town fountain 11am-4:30pm; River south of Marnie's (sunny); Beach in Summer 10:30am-4pm.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 11:00 AM",
+          "loc": "2 Willow Lane (Bedroom / Kitchen)"
+        },
+        {
+          "time": "11:00 AM – 4:30 PM",
+          "loc": "Town Fountain (Sunny) / Beach (Summer 10:30am-4pm)"
+        },
+        {
+          "time": "4:30 PM – 8:00 PM",
+          "loc": "2 Willow Lane (Living Room / Kitchen)"
+        },
+        {
+          "time": "8:00 PM – 10:00 PM",
+          "loc": "2 Willow Lane (Bedroom)"
+        },
+        {
+          "time": "10:00 PM+",
+          "loc": "Goes to sleep"
+        }
+      ],
+      "notes": "❤️ Loved: Coconut, Fruit Salad, Pink Cake, Sunflower (Hates Prismatic Shard & Dislikes Cactus Fruit/Vegetables)\n🕒 Routine: Town Fountain / River south of Marnie's / Beach in Summer",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Haley.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 2 Willow Lane",
+          "x": 47.0,
+          "y": 60.0
+        },
+        {
+          "label": "⛲ Town Fountain",
+          "x": 53.0,
+          "y": 46.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Stays home at 2 Willow Lane all day (living room / bedroom)"
+        },
+        {
+          "cond": "📸 Spring / Fall",
+          "loc": "Takes photos near Marnie's Ranch river & Cindersap Forest (11:00 AM – 4:30 PM)"
+        },
+        {
+          "cond": "☀️ Summer",
+          "loc": "Sunbathes by Beach pier (10:30 AM – 4:00 PM) or Town Playground fountain"
+        },
+        {
+          "cond": "🩺 Winter 9",
+          "loc": "Annual clinic checkup at Harvey's Medical Clinic (11:00 AM – 4:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Stays home at 2 Willow Lane all day (living room / bedroom)",
+      "variations": "📸 Spring / Fall: Takes photos near Marnie's Ranch river & Cindersap Forest (11:00 AM – 4:30 PM); ☀️ Summer: Sunbathes by Beach pier (10:30 AM – 4:00 PM) or Town Playground fountain; 🩺 Winter 9: Annual clinic checkup at Harvey's Medical Clinic (11:00 AM – 4:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_leah",
-        "name": "Leah",
-        "category": "Bachelorette",
-        "birthday": "Winter 23",
-        "home": "Leah's Cottage (Cindersap Forest)",
-        "source": "\ud83c\udfe0 Leah's Cottage | \ud83c\udf82 Winter 23",
-        "loved": "Goat Cheese, Poppyseed Muffin, Salad, Stir Fry, Truffle, Vegetable Medley, Wine",
-        "liked": "Chanterelle, Common Mushroom, Daffodil, Dandelion, Driftwood, Hazelnut, Holly, Morel, Spring Onion, Wild Horseradish, Winter Root",
-        "schedule": "Cottage sculpting morning until 11am; Cindersap Forest pond/river 12pm-4pm; Beach (Summer); Saloon 4pm-11pm nightly.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 11:00 AM",
-                "loc": "Leah's Cottage (Sculpting inside)"
-            },
-            {
-                "time": "11:00 AM \u2013 4:00 PM",
-                "loc": "Cindersap Forest (Pond / River) / Beach (Summer)"
-            },
-            {
-                "time": "4:00 PM \u2013 11:00 PM",
-                "loc": "The Stardrop Saloon (or Leah's Cottage)"
-            },
-            {
-                "time": "11:00 PM+",
-                "loc": "Returns home to Leah's Cottage"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Goat Cheese, Salad, Stir Fry, Truffle, Vegetable Medley, Wine, Poppyseed Muffin\n\ud83d\udd52 Routine: Cottage -> Forest Pond/Riverbank -> Saloon",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Leah.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Leah's Cottage",
-                "x": 37.0,
-                "y": 68.0
-            },
-            {
-                "label": "\ud83c\udf32 Cindersap Forest River",
-                "x": 34.0,
-                "y": 74.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside Cindersap Cottage sculpting -> The Stardrop Saloon (4:00 PM \u2013 11:30 PM)"
-            },
-            {
-                "cond": "\ud83d\uded2 Monday",
-                "loc": "Buys groceries at Pierre's General Store (11:00 AM \u2013 5:00 PM)"
-            },
-            {
-                "cond": "\u2600\ufe0f Summer (Sunny)",
-                "loc": "Sunbathes on The Beach dock / pier (12:00 PM \u2013 7:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf7b Fri / Sat",
-                "loc": "Spends evenings socializing at The Stardrop Saloon (4:00 PM \u2013 11:30 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Inside Cindersap Cottage sculpting -> The Stardrop Saloon (4:00 PM \u2013 11:30 PM)",
-        "variations": "\ud83d\uded2 Monday: Buys groceries at Pierre's General Store (11:00 AM \u2013 5:00 PM); \u2600\ufe0f Summer (Sunny): Sunbathes on The Beach dock / pier (12:00 PM \u2013 7:00 PM); \ud83c\udf7b Fri / Sat: Spends evenings socializing at The Stardrop Saloon (4:00 PM \u2013 11:30 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_leah",
+      "name": "Leah",
+      "category": "Bachelorette",
+      "birthday": "Winter 23",
+      "home": "Leah's Cottage (Cindersap Forest)",
+      "source": "🏠 Leah's Cottage | 🎂 Winter 23",
+      "loved": "Goat Cheese, Poppyseed Muffin, Salad, Stir Fry, Truffle, Vegetable Medley, Wine",
+      "liked": "Chanterelle, Common Mushroom, Daffodil, Dandelion, Driftwood, Hazelnut, Holly, Morel, Spring Onion, Wild Horseradish, Winter Root",
+      "schedule": "Cottage sculpting morning until 11am; Cindersap Forest pond/river 12pm-4pm; Beach (Summer); Saloon 4pm-11pm nightly.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 11:00 AM",
+          "loc": "Leah's Cottage (Sculpting inside)"
+        },
+        {
+          "time": "11:00 AM – 4:00 PM",
+          "loc": "Cindersap Forest (Pond / River) / Beach (Summer)"
+        },
+        {
+          "time": "4:00 PM – 11:00 PM",
+          "loc": "The Stardrop Saloon (or Leah's Cottage)"
+        },
+        {
+          "time": "11:00 PM+",
+          "loc": "Returns home to Leah's Cottage"
+        }
+      ],
+      "notes": "❤️ Loved: Goat Cheese, Salad, Stir Fry, Truffle, Vegetable Medley, Wine, Poppyseed Muffin\n🕒 Routine: Cottage -> Forest Pond/Riverbank -> Saloon",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Leah.png",
+      "mapPins": [
+        {
+          "label": "🏠 Leah's Cottage",
+          "x": 37.0,
+          "y": 68.0
+        },
+        {
+          "label": "🌲 Cindersap Forest River",
+          "x": 34.0,
+          "y": 74.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside Cindersap Cottage sculpting -> The Stardrop Saloon (4:00 PM – 11:30 PM)"
+        },
+        {
+          "cond": "🛒 Monday",
+          "loc": "Buys groceries at Pierre's General Store (11:00 AM – 5:00 PM)"
+        },
+        {
+          "cond": "☀️ Summer (Sunny)",
+          "loc": "Sunbathes on The Beach dock / pier (12:00 PM – 7:00 PM)"
+        },
+        {
+          "cond": "🍻 Fri / Sat",
+          "loc": "Spends evenings socializing at The Stardrop Saloon (4:00 PM – 11:30 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Inside Cindersap Cottage sculpting -> The Stardrop Saloon (4:00 PM – 11:30 PM)",
+      "variations": "🛒 Monday: Buys groceries at Pierre's General Store (11:00 AM – 5:00 PM); ☀️ Summer (Sunny): Sunbathes on The Beach dock / pier (12:00 PM – 7:00 PM); 🍻 Fri / Sat: Spends evenings socializing at The Stardrop Saloon (4:00 PM – 11:30 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_maru",
-        "name": "Maru",
-        "category": "Bachelorette",
-        "birthday": "Summer 10",
-        "home": "24 Mountain Road (Carpenter's Shop)",
-        "source": "\ud83c\udfe0 24 Mountain Road | \ud83c\udf82 Summer 10",
-        "loved": "Battery Pack, Cauliflower, Cheese Cauliflower, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Radioactive Bar, Rhubarb Pie, Strawberry",
-        "liked": "Copper Bar, Iron Bar, Oak Resin, Pine Tar, Quartz, Radioactive Ore",
-        "schedule": "Harvey's Clinic (Tue/Thu 9am-4pm); Carpenter's shop lab / telescope outside house other days 10am-4pm; Town bench.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Carpenter's Shop (Bedroom / Kitchen)"
-            },
-            {
-                "time": "9:00 AM \u2013 4:00 PM",
-                "loc": "Harvey's Clinic (Tue/Thu) / Carpenter's Lab (Other days)"
-            },
-            {
-                "time": "4:00 PM \u2013 7:00 PM",
-                "loc": "Town Bench / Community Center Park"
-            },
-            {
-                "time": "7:00 PM \u2013 10:00 PM",
-                "loc": "Carpenter's Shop (Telescope / Living Room)"
-            },
-            {
-                "time": "10:00 PM+",
-                "loc": "Goes to sleep in bedroom"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Battery Pack, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Rhubarb Pie, Strawberry\n\ud83d\udd52 Routine: Carpenter's Lab -> Harvey's Clinic (Tue/Thu) -> Town Bench",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Maru.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Carpenter's Shop",
-                "x": 62.0,
-                "y": 24.0
-            },
-            {
-                "label": "\ud83c\udfe5 Harvey's Clinic (Tue/Thu)",
-                "x": 50.5,
-                "y": 43.0
-            },
-            {
-                "label": "\ud83c\udf33 Town Bench / Park",
-                "x": 57.0,
-                "y": 45.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside Mountain Lab / bedroom tinkering with gadgets all day"
-            },
-            {
-                "cond": "\ud83e\ude7a Tue / Thu",
-                "loc": "Works as nurse at Harvey's Medical Clinic (9:00 AM \u2013 4:50 PM)"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Monday (CC)",
-                "loc": "Community Center Crafts Room & bench outside (1:30 PM \u2013 4:30 PM)"
-            },
-            {
-                "cond": "\ud83d\udd2d Sunny Days",
-                "loc": "Looks through Telescope outside Lab or sits on Town Park bench"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Inside Mountain Lab / bedroom tinkering with gadgets all day",
-        "variations": "\ud83e\ude7a Tue / Thu: Works as nurse at Harvey's Medical Clinic (9:00 AM \u2013 4:50 PM); \ud83c\udfdb\ufe0f Monday (CC): Community Center Crafts Room & bench outside (1:30 PM \u2013 4:30 PM); \ud83d\udd2d Sunny Days: Looks through Telescope outside Lab or sits on Town Park bench; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_maru",
+      "name": "Maru",
+      "category": "Bachelorette",
+      "birthday": "Summer 10",
+      "home": "24 Mountain Road (Carpenter's Shop)",
+      "source": "🏠 24 Mountain Road | 🎂 Summer 10",
+      "loved": "Battery Pack, Cauliflower, Cheese Cauliflower, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Radioactive Bar, Rhubarb Pie, Strawberry",
+      "liked": "Copper Bar, Iron Bar, Oak Resin, Pine Tar, Quartz, Radioactive Ore",
+      "schedule": "Harvey's Clinic (Tue/Thu 9am-4pm); Carpenter's shop lab / telescope outside house other days 10am-4pm; Town bench.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Carpenter's Shop (Bedroom / Kitchen)"
+        },
+        {
+          "time": "9:00 AM – 4:00 PM",
+          "loc": "Harvey's Clinic (Tue/Thu) / Carpenter's Lab (Other days)"
+        },
+        {
+          "time": "4:00 PM – 7:00 PM",
+          "loc": "Town Bench / Community Center Park"
+        },
+        {
+          "time": "7:00 PM – 10:00 PM",
+          "loc": "Carpenter's Shop (Telescope / Living Room)"
+        },
+        {
+          "time": "10:00 PM+",
+          "loc": "Goes to sleep in bedroom"
+        }
+      ],
+      "notes": "❤️ Loved: Battery Pack, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Rhubarb Pie, Strawberry\n🕒 Routine: Carpenter's Lab -> Harvey's Clinic (Tue/Thu) -> Town Bench",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Maru.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Carpenter's Shop",
+          "x": 62.0,
+          "y": 24.0
+        },
+        {
+          "label": "🏥 Harvey's Clinic (Tue/Thu)",
+          "x": 50.5,
+          "y": 43.0
+        },
+        {
+          "label": "🌳 Town Bench / Park",
+          "x": 57.0,
+          "y": 45.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside Mountain Lab / bedroom tinkering with gadgets all day"
+        },
+        {
+          "cond": "🩺 Tue / Thu",
+          "loc": "Works as nurse at Harvey's Medical Clinic (9:00 AM – 4:50 PM)"
+        },
+        {
+          "cond": "🏛️ Monday (CC)",
+          "loc": "Community Center Crafts Room & bench outside (1:30 PM – 4:30 PM)"
+        },
+        {
+          "cond": "🔭 Sunny Days",
+          "loc": "Looks through Telescope outside Lab or sits on Town Park bench"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Inside Mountain Lab / bedroom tinkering with gadgets all day",
+      "variations": "🩺 Tue / Thu: Works as nurse at Harvey's Medical Clinic (9:00 AM – 4:50 PM); 🏛️ Monday (CC): Community Center Crafts Room & bench outside (1:30 PM – 4:30 PM); 🔭 Sunny Days: Looks through Telescope outside Lab or sits on Town Park bench; 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_penny",
-        "name": "Penny",
-        "category": "Bachelorette",
-        "birthday": "Fall 2",
-        "home": "Trailer (East of Town Center)",
-        "source": "\ud83c\udfe0 Trailer | \ud83c\udf82 Fall 2",
-        "loved": "Diamond, Emerald, Melon, Poppy, Poppyseed Muffin, Red Plate, Roots Platter, Sandfish, Tom Kha Soup",
-        "liked": "Dandelion, Leek, Universal Likes (Hates Rabbit's Foot! Dislikes Beer/Wine/Mead/Pale Ale)",
-        "schedule": "Museum Library teaching Jas & Vincent (Tue/Wed/Fri 9am-2pm); Town park / graveyard bench other days; Saloon 6pm-9pm (Rain).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Trailer (East of Town Center)"
-            },
-            {
-                "time": "9:00 AM \u2013 2:00 PM",
-                "loc": "Museum / Library (Teaching Tue/Wed/Fri) / Town Park (Other days)"
-            },
-            {
-                "time": "2:00 PM \u2013 6:00 PM",
-                "loc": "Town Square / Graveyard Bench / Pierre's Store"
-            },
-            {
-                "time": "6:00 PM \u2013 9:00 PM",
-                "loc": "Trailer (or Saloon 6pm-9pm if raining)"
-            },
-            {
-                "time": "9:00 PM+",
-                "loc": "Trailer (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Diamond, Emerald, Melon, Poppy, Poppyseed Muffin, Red Plate, Roots Platter, Sandfish, Tom Kha Soup\n\ud83d\udd52 Routine: Museum/Library Classroom (Tue/Wed/Fri) -> Town Park / Graveyard Bench",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Penny.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Trailer",
-                "x": 59.0,
-                "y": 50.0
-            },
-            {
-                "label": "\ud83d\udcda Museum / Library (Tue/Wed/Fri)",
-                "x": 66.5,
-                "y": 66.0
-            },
-            {
-                "label": "\ud83c\udf33 Town Park & Graveyard",
-                "x": 58.0,
-                "y": 48.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside Trailer doing chores or visits Museum/Library with umbrella"
-            },
-            {
-                "cond": "\ud83d\udcda Tue / Wed / Fri",
-                "loc": "Tutors Jas & Vincent at Museum (9:00 AM \u2013 2:00 PM) then walks past CC to Playground"
-            },
-            {
-                "cond": "\ud83d\udd04 Saturday",
-                "loc": "Takes Jas & Vincent to Town Playground & river bridge (10:00 AM \u2013 5:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Inside Trailer doing chores or visits Museum/Library with umbrella",
-        "variations": "\ud83d\udcda Tue / Wed / Fri: Tutors Jas & Vincent at Museum (9:00 AM \u2013 2:00 PM) then walks past CC to Playground; \ud83d\udd04 Saturday: Takes Jas & Vincent to Town Playground & river bridge (10:00 AM \u2013 5:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_penny",
+      "name": "Penny",
+      "category": "Bachelorette",
+      "birthday": "Fall 2",
+      "home": "Trailer (East of Town Center)",
+      "source": "🏠 Trailer | 🎂 Fall 2",
+      "loved": "Diamond, Emerald, Melon, Poppy, Poppyseed Muffin, Red Plate, Roots Platter, Sandfish, Tom Kha Soup",
+      "liked": "Dandelion, Leek, Universal Likes (Hates Rabbit's Foot! Dislikes Beer/Wine/Mead/Pale Ale)",
+      "schedule": "Museum Library teaching Jas & Vincent (Tue/Wed/Fri 9am-2pm); Town park / graveyard bench other days; Saloon 6pm-9pm (Rain).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Trailer (East of Town Center)"
+        },
+        {
+          "time": "9:00 AM – 2:00 PM",
+          "loc": "Museum / Library (Teaching Tue/Wed/Fri) / Town Park (Other days)"
+        },
+        {
+          "time": "2:00 PM – 6:00 PM",
+          "loc": "Town Square / Graveyard Bench / Pierre's Store"
+        },
+        {
+          "time": "6:00 PM – 9:00 PM",
+          "loc": "Trailer (or Saloon 6pm-9pm if raining)"
+        },
+        {
+          "time": "9:00 PM+",
+          "loc": "Trailer (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Diamond, Emerald, Melon, Poppy, Poppyseed Muffin, Red Plate, Roots Platter, Sandfish, Tom Kha Soup\n🕒 Routine: Museum/Library Classroom (Tue/Wed/Fri) -> Town Park / Graveyard Bench",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Penny.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Trailer",
+          "x": 59.0,
+          "y": 50.0
+        },
+        {
+          "label": "📚 Museum / Library (Tue/Wed/Fri)",
+          "x": 66.5,
+          "y": 66.0
+        },
+        {
+          "label": "🌳 Town Park & Graveyard",
+          "x": 58.0,
+          "y": 48.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside Trailer doing chores or visits Museum/Library with umbrella"
+        },
+        {
+          "cond": "📚 Tue / Wed / Fri",
+          "loc": "Tutors Jas & Vincent at Museum (9:00 AM – 2:00 PM) then walks past CC to Playground"
+        },
+        {
+          "cond": "🔄 Saturday",
+          "loc": "Takes Jas & Vincent to Town Playground & river bridge (10:00 AM – 5:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Inside Trailer doing chores or visits Museum/Library with umbrella",
+      "variations": "📚 Tue / Wed / Fri: Tutors Jas & Vincent at Museum (9:00 AM – 2:00 PM) then walks past CC to Playground; 🔄 Saturday: Takes Jas & Vincent to Town Playground & river bridge (10:00 AM – 5:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_alex",
-        "name": "Alex",
-        "category": "Bachelor",
-        "birthday": "Summer 13",
-        "home": "1 River Road",
-        "source": "\ud83c\udfe0 1 River Road | \ud83c\udf82 Summer 13",
-        "loved": "Complete Breakfast, Jack Be Nimble, Jack Be Thick, Salmon Dinner",
-        "liked": "All Eggs (except Void Egg), Universal Likes (except Quartz/Field Snack)",
-        "schedule": "Outside house / dog pen 8am-12pm; Town park / tree 12pm-4pm; Beach (Summer); Lifting weights in bedroom 4pm-8pm.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 8:00 AM",
-                "loc": "1 River Road (Bedroom)"
-            },
-            {
-                "time": "8:00 AM \u2013 12:00 PM",
-                "loc": "Outside house / Dog pen with Dusty (Beach in Summer)"
-            },
-            {
-                "time": "12:00 PM \u2013 4:00 PM",
-                "loc": "Town Park / Large tree near Saloon"
-            },
-            {
-                "time": "4:00 PM \u2013 8:00 PM",
-                "loc": "Lifting weights in bedroom (1 River Road)"
-            },
-            {
-                "time": "8:00 PM+",
-                "loc": "1 River Road (Bedroom / Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Complete Breakfast, Salmon Dinner, Jack Be Nimble Jack Be Thick\n\ud83d\udd52 Routine: Dog Pen outside 1 River Rd -> Town Park -> Bedroom Weights",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Alex.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 1 River Road",
-                "x": 56.0,
-                "y": 43.0
-            },
-            {
-                "label": "\ud83c\udf33 Town Park / Big Tree",
-                "x": 54.0,
-                "y": 48.0
-            },
-            {
-                "label": "\ud83c\udfd6\ufe0f The Beach (Summer)",
-                "x": 54.0,
-                "y": 80.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside 1 River Road (bookshelf in bedroom / lifting weights all day)"
-            },
-            {
-                "cond": "\u2600\ufe0f Summer (Sunny)",
-                "loc": "Works Ice Cream Stand by Museum (12:00 PM \u2013 4:00 PM) or Beach sunbathing"
-            },
-            {
-                "cond": "\u2744\ufe0f Winter",
-                "loc": "Works out inside the Spa/Bathhouse in the Mountains (2:00 PM \u2013 6:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Inside 1 River Road (bookshelf in bedroom / lifting weights all day)",
-        "variations": "\u2600\ufe0f Summer (Sunny): Works Ice Cream Stand by Museum (12:00 PM \u2013 4:00 PM) or Beach sunbathing; \u2744\ufe0f Winter: Works out inside the Spa/Bathhouse in the Mountains (2:00 PM \u2013 6:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_alex",
+      "name": "Alex",
+      "category": "Bachelor",
+      "birthday": "Summer 13",
+      "home": "1 River Road",
+      "source": "🏠 1 River Road | 🎂 Summer 13",
+      "loved": "Complete Breakfast, Jack Be Nimble, Jack Be Thick, Salmon Dinner",
+      "liked": "All Eggs (except Void Egg), Universal Likes (except Quartz/Field Snack)",
+      "schedule": "Outside house / dog pen 8am-12pm; Town park / tree 12pm-4pm; Beach (Summer); Lifting weights in bedroom 4pm-8pm.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 8:00 AM",
+          "loc": "1 River Road (Bedroom)"
+        },
+        {
+          "time": "8:00 AM – 12:00 PM",
+          "loc": "Outside house / Dog pen with Dusty (Beach in Summer)"
+        },
+        {
+          "time": "12:00 PM – 4:00 PM",
+          "loc": "Town Park / Large tree near Saloon"
+        },
+        {
+          "time": "4:00 PM – 8:00 PM",
+          "loc": "Lifting weights in bedroom (1 River Road)"
+        },
+        {
+          "time": "8:00 PM+",
+          "loc": "1 River Road (Bedroom / Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Complete Breakfast, Salmon Dinner, Jack Be Nimble Jack Be Thick\n🕒 Routine: Dog Pen outside 1 River Rd -> Town Park -> Bedroom Weights",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Alex.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 1 River Road",
+          "x": 56.0,
+          "y": 43.0
+        },
+        {
+          "label": "🌳 Town Park / Big Tree",
+          "x": 54.0,
+          "y": 48.0
+        },
+        {
+          "label": "🏖️ The Beach (Summer)",
+          "x": 54.0,
+          "y": 80.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside 1 River Road (bookshelf in bedroom / lifting weights all day)"
+        },
+        {
+          "cond": "☀️ Summer (Sunny)",
+          "loc": "Works Ice Cream Stand by Museum (12:00 PM – 4:00 PM) or Beach sunbathing"
+        },
+        {
+          "cond": "❄️ Winter",
+          "loc": "Works out inside the Spa/Bathhouse in the Mountains (2:00 PM – 6:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Inside 1 River Road (bookshelf in bedroom / lifting weights all day)",
+      "variations": "☀️ Summer (Sunny): Works Ice Cream Stand by Museum (12:00 PM – 4:00 PM) or Beach sunbathing; ❄️ Winter: Works out inside the Spa/Bathhouse in the Mountains (2:00 PM – 6:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_elliott",
-        "name": "Elliott",
-        "category": "Bachelor",
-        "birthday": "Fall 5",
-        "home": "Elliott's Cabin (The Beach)",
-        "source": "\ud83c\udfe0 Elliott's Cabin | \ud83c\udf82 Fall 5",
-        "loved": "Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup",
-        "liked": "Octopus, Squid, Universal Likes (except Amaranth/Pizza/Taco)",
-        "schedule": "Beach Cabin morning; Beach shore 11:30am; Bridge by museum / library 3pm-6pm; Stardrop Saloon Friday/Sunday 5pm-11pm.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 11:30 AM",
-                "loc": "Elliott's Cabin (Writing at piano/desk)"
-            },
-            {
-                "time": "11:30 AM \u2013 3:00 PM",
-                "loc": "The Beach (Ocean shore / Pier)"
-            },
-            {
-                "time": "3:00 PM \u2013 6:00 PM",
-                "loc": "Bridge south of Museum / Library"
-            },
-            {
-                "time": "6:00 PM \u2013 11:00 PM",
-                "loc": "The Stardrop Saloon (Friday/Sunday) / Beach Cabin"
-            },
-            {
-                "time": "11:00 PM+",
-                "loc": "Beach Cabin (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup\n\ud83d\udd52 Routine: Beach Cabin -> Beach Shore -> Museum Bridge -> Saloon (Fri/Sun)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Elliott.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Elliott's Cabin (Beach)",
-                "x": 62.0,
-                "y": 85.0
-            },
-            {
-                "label": "\ud83c\udf09 River Bridge (near Museum)",
-                "x": 64.0,
-                "y": 62.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (Fri/Sun)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside Beach Cabin writing, or walks to Museum / Library (3:00 PM \u2013 6:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf7b Friday",
-                "loc": "Walks to The Stardrop Saloon (8:00 PM \u2013 11:40 PM)"
-            },
-            {
-                "cond": "\ud83d\udd04 Sunday",
-                "loc": "Stands by Beach campfire & Cindersap Forest river bridge (1:00 PM \u2013 6:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Inside Beach Cabin writing, or walks to Museum / Library (3:00 PM \u2013 6:00 PM)",
-        "variations": "\ud83c\udf7b Friday: Walks to The Stardrop Saloon (8:00 PM \u2013 11:40 PM); \ud83d\udd04 Sunday: Stands by Beach campfire & Cindersap Forest river bridge (1:00 PM \u2013 6:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_elliott",
+      "name": "Elliott",
+      "category": "Bachelor",
+      "birthday": "Fall 5",
+      "home": "Elliott's Cabin (The Beach)",
+      "source": "🏠 Elliott's Cabin | 🎂 Fall 5",
+      "loved": "Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup",
+      "liked": "Octopus, Squid, Universal Likes (except Amaranth/Pizza/Taco)",
+      "schedule": "Beach Cabin morning; Beach shore 11:30am; Bridge by museum / library 3pm-6pm; Stardrop Saloon Friday/Sunday 5pm-11pm.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 11:30 AM",
+          "loc": "Elliott's Cabin (Writing at piano/desk)"
+        },
+        {
+          "time": "11:30 AM – 3:00 PM",
+          "loc": "The Beach (Ocean shore / Pier)"
+        },
+        {
+          "time": "3:00 PM – 6:00 PM",
+          "loc": "Bridge south of Museum / Library"
+        },
+        {
+          "time": "6:00 PM – 11:00 PM",
+          "loc": "The Stardrop Saloon (Friday/Sunday) / Beach Cabin"
+        },
+        {
+          "time": "11:00 PM+",
+          "loc": "Beach Cabin (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup\n🕒 Routine: Beach Cabin -> Beach Shore -> Museum Bridge -> Saloon (Fri/Sun)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Elliott.png",
+      "mapPins": [
+        {
+          "label": "🏠 Elliott's Cabin (Beach)",
+          "x": 62.0,
+          "y": 85.0
+        },
+        {
+          "label": "🌉 River Bridge (near Museum)",
+          "x": 64.0,
+          "y": 62.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (Fri/Sun)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside Beach Cabin writing, or walks to Museum / Library (3:00 PM – 6:00 PM)"
+        },
+        {
+          "cond": "🍻 Friday",
+          "loc": "Walks to The Stardrop Saloon (8:00 PM – 11:40 PM)"
+        },
+        {
+          "cond": "🔄 Sunday",
+          "loc": "Stands by Beach campfire & Cindersap Forest river bridge (1:00 PM – 6:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Inside Beach Cabin writing, or walks to Museum / Library (3:00 PM – 6:00 PM)",
+      "variations": "🍻 Friday: Walks to The Stardrop Saloon (8:00 PM – 11:40 PM); 🔄 Sunday: Stands by Beach campfire & Cindersap Forest river bridge (1:00 PM – 6:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_harvey",
-        "name": "Harvey",
-        "category": "Bachelor",
-        "birthday": "Winter 14",
-        "home": "Harvey's Medical Clinic",
-        "source": "\ud83c\udfe0 Harvey's Medical Clinic | \ud83c\udf82 Winter 14",
-        "loved": "Coffee, Pickles, Super Meal, Truffle Oil, Wine",
-        "liked": "Blackberry, Chanterelle, Common Mushroom, Daffodil, Dandelion, Duck Egg, Duck Feather, Ginger, Hazelnut, Holly, Leek, Morel, Purple Mushroom, Quartz, Snow Yam, Spring Onion, Wild Horseradish, Winter Root",
-        "schedule": "Medical Clinic 9am-3pm daily; Town park fountain / riverbank 3pm-6pm; Stardrop Saloon 6pm-10pm; Clinic apartment at night.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Clinic Apartment (Upstairs)"
-            },
-            {
-                "time": "9:00 AM \u2013 3:00 PM",
-                "loc": "Harvey's Clinic (Counter / Exam room)"
-            },
-            {
-                "time": "3:00 PM \u2013 6:00 PM",
-                "loc": "Town Park Fountain / Riverbank / Aerobics (Tue 1pm)"
-            },
-            {
-                "time": "6:00 PM \u2013 10:00 PM",
-                "loc": "The Stardrop Saloon (or Clinic apartment)"
-            },
-            {
-                "time": "10:00 PM+",
-                "loc": "Clinic Apartment (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Coffee, Pickles, Super Meal, Truffle Oil, Wine\n\ud83d\udd52 Routine: Medical Clinic (9am-3pm) -> Park Fountain -> Saloon",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Harvey.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Harvey's Clinic & Home",
-                "x": 50.5,
-                "y": 43.0
-            },
-            {
-                "label": "\u26f2 Town Fountain & Gardens",
-                "x": 53.0,
-                "y": 46.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Medical Clinic all day -> The Stardrop Saloon (5:30 PM \u2013 10:00 PM)"
-            },
-            {
-                "cond": "\ud83e\ude7a Tue / Thu",
-                "loc": "Conducts patient checkups at Medical Clinic (8:00 AM \u2013 6:00 PM)"
-            },
-            {
-                "cond": "\ud83d\udd04 Fri / Sat",
-                "loc": "Reads at Museum / Library or sits on Town Park bridge (12:00 PM \u2013 5:30 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Medical Clinic all day -> The Stardrop Saloon (5:30 PM \u2013 10:00 PM)",
-        "variations": "\ud83e\ude7a Tue / Thu: Conducts patient checkups at Medical Clinic (8:00 AM \u2013 6:00 PM); \ud83d\udd04 Fri / Sat: Reads at Museum / Library or sits on Town Park bridge (12:00 PM \u2013 5:30 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_harvey",
+      "name": "Harvey",
+      "category": "Bachelor",
+      "birthday": "Winter 14",
+      "home": "Harvey's Medical Clinic",
+      "source": "🏠 Harvey's Medical Clinic | 🎂 Winter 14",
+      "loved": "Coffee, Pickles, Super Meal, Truffle Oil, Wine",
+      "liked": "Blackberry, Chanterelle, Common Mushroom, Daffodil, Dandelion, Duck Egg, Duck Feather, Ginger, Hazelnut, Holly, Leek, Morel, Purple Mushroom, Quartz, Snow Yam, Spring Onion, Wild Horseradish, Winter Root",
+      "schedule": "Medical Clinic 9am-3pm daily; Town park fountain / riverbank 3pm-6pm; Stardrop Saloon 6pm-10pm; Clinic apartment at night.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Clinic Apartment (Upstairs)"
+        },
+        {
+          "time": "9:00 AM – 3:00 PM",
+          "loc": "Harvey's Clinic (Counter / Exam room)"
+        },
+        {
+          "time": "3:00 PM – 6:00 PM",
+          "loc": "Town Park Fountain / Riverbank / Aerobics (Tue 1pm)"
+        },
+        {
+          "time": "6:00 PM – 10:00 PM",
+          "loc": "The Stardrop Saloon (or Clinic apartment)"
+        },
+        {
+          "time": "10:00 PM+",
+          "loc": "Clinic Apartment (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Coffee, Pickles, Super Meal, Truffle Oil, Wine\n🕒 Routine: Medical Clinic (9am-3pm) -> Park Fountain -> Saloon",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Harvey.png",
+      "mapPins": [
+        {
+          "label": "🏠 Harvey's Clinic & Home",
+          "x": 50.5,
+          "y": 43.0
+        },
+        {
+          "label": "⛲ Town Fountain & Gardens",
+          "x": 53.0,
+          "y": 46.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Medical Clinic all day -> The Stardrop Saloon (5:30 PM – 10:00 PM)"
+        },
+        {
+          "cond": "🩺 Tue / Thu",
+          "loc": "Conducts patient checkups at Medical Clinic (8:00 AM – 6:00 PM)"
+        },
+        {
+          "cond": "🔄 Fri / Sat",
+          "loc": "Reads at Museum / Library or sits on Town Park bridge (12:00 PM – 5:30 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Medical Clinic all day -> The Stardrop Saloon (5:30 PM – 10:00 PM)",
+      "variations": "🩺 Tue / Thu: Conducts patient checkups at Medical Clinic (8:00 AM – 6:00 PM); 🔄 Fri / Sat: Reads at Museum / Library or sits on Town Park bridge (12:00 PM – 5:30 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_sam",
-        "name": "Sam",
-        "category": "Bachelor",
-        "birthday": "Summer 17",
-        "home": "1 Willow Lane",
-        "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Summer 17",
-        "loved": "Cactus Fruit, Maple Bar, Pizza, Tigerseye",
-        "liked": "Eggs (except Void Egg), Joja Cola, Universal Likes (except Mayonnaise/Pickles)",
-        "schedule": "Home morning; JojaMart/Museum work (Mon/Wed); Town skatepark / river 1:30pm-6pm; Saloon Friday 4pm-10pm (playing pool/band).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 10:00 AM",
-                "loc": "1 Willow Lane (Bedroom playing guitar)"
-            },
-            {
-                "time": "10:00 AM \u2013 1:30 PM",
-                "loc": "JojaMart / Museum (Mon/Wed work) / Outside house"
-            },
-            {
-                "time": "1:30 PM \u2013 6:00 PM",
-                "loc": "Town Skatepark / Riverbank / Town Square"
-            },
-            {
-                "time": "6:00 PM \u2013 10:00 PM",
-                "loc": "The Stardrop Saloon (Friday pool/band) / 1 Willow Lane"
-            },
-            {
-                "time": "10:00 PM+",
-                "loc": "1 Willow Lane (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Cactus Fruit, Maple Bar, Pizza, Tigerseye\n\ud83d\udd52 Routine: 1 Willow Lane -> JojaMart/Museum (Mon/Wed) -> Town Skatepark -> Saloon (Fri)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Sam.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 1 Willow Lane",
-                "x": 48.0,
-                "y": 56.0
-            },
-            {
-                "label": "\ud83d\uded2 JojaMart / Museum (Mon/Wed)",
-                "x": 68.0,
-                "y": 45.0
-            },
-            {
-                "label": "\ud83d\udef9 Town Skatepark & River",
-                "x": 51.0,
-                "y": 58.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (Fri)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside 1 Willow Lane (plays guitar) -> Stardrop Saloon with Sebastian (3:00 PM \u2013 9:00 PM)"
-            },
-            {
-                "cond": "\ud83d\udcda Mon / Wed",
-                "loc": "Works part-time at Museum / Library (12:50 PM \u2013 4:00 PM) -> Skatepark"
-            },
-            {
-                "cond": "\ud83c\udfb8 Friday",
-                "loc": "Band practice at 1 Willow Lane -> Stardrop Saloon pool & arcade (3:00 PM \u2013 9:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Inside 1 Willow Lane (plays guitar) -> Stardrop Saloon with Sebastian (3:00 PM \u2013 9:00 PM)",
-        "variations": "\ud83d\udcda Mon / Wed: Works part-time at Museum / Library (12:50 PM \u2013 4:00 PM) -> Skatepark; \ud83c\udfb8 Friday: Band practice at 1 Willow Lane -> Stardrop Saloon pool & arcade (3:00 PM \u2013 9:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_sam",
+      "name": "Sam",
+      "category": "Bachelor",
+      "birthday": "Summer 17",
+      "home": "1 Willow Lane",
+      "source": "🏠 1 Willow Lane | 🎂 Summer 17",
+      "loved": "Cactus Fruit, Maple Bar, Pizza, Tigerseye",
+      "liked": "Eggs (except Void Egg), Joja Cola, Universal Likes (except Mayonnaise/Pickles)",
+      "schedule": "Home morning; JojaMart/Museum work (Mon/Wed); Town skatepark / river 1:30pm-6pm; Saloon Friday 4pm-10pm (playing pool/band).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 10:00 AM",
+          "loc": "1 Willow Lane (Bedroom playing guitar)"
+        },
+        {
+          "time": "10:00 AM – 1:30 PM",
+          "loc": "JojaMart / Museum (Mon/Wed work) / Outside house"
+        },
+        {
+          "time": "1:30 PM – 6:00 PM",
+          "loc": "Town Skatepark / Riverbank / Town Square"
+        },
+        {
+          "time": "6:00 PM – 10:00 PM",
+          "loc": "The Stardrop Saloon (Friday pool/band) / 1 Willow Lane"
+        },
+        {
+          "time": "10:00 PM+",
+          "loc": "1 Willow Lane (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Cactus Fruit, Maple Bar, Pizza, Tigerseye\n🕒 Routine: 1 Willow Lane -> JojaMart/Museum (Mon/Wed) -> Town Skatepark -> Saloon (Fri)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sam.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 1 Willow Lane",
+          "x": 48.0,
+          "y": 56.0
+        },
+        {
+          "label": "🛒 JojaMart / Museum (Mon/Wed)",
+          "x": 68.0,
+          "y": 45.0
+        },
+        {
+          "label": "🛹 Town Skatepark & River",
+          "x": 51.0,
+          "y": 58.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (Fri)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside 1 Willow Lane (plays guitar) -> Stardrop Saloon with Sebastian (3:00 PM – 9:00 PM)"
+        },
+        {
+          "cond": "📚 Mon / Wed",
+          "loc": "Works part-time at Museum / Library (12:50 PM – 4:00 PM) -> Skatepark"
+        },
+        {
+          "cond": "🎸 Friday",
+          "loc": "Band practice at 1 Willow Lane -> Stardrop Saloon pool & arcade (3:00 PM – 9:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Inside 1 Willow Lane (plays guitar) -> Stardrop Saloon with Sebastian (3:00 PM – 9:00 PM)",
+      "variations": "📚 Mon / Wed: Works part-time at Museum / Library (12:50 PM – 4:00 PM) -> Skatepark; 🎸 Friday: Band practice at 1 Willow Lane -> Stardrop Saloon pool & arcade (3:00 PM – 9:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_sebastian",
-        "name": "Sebastian",
-        "category": "Bachelor",
-        "birthday": "Winter 10",
-        "home": "24 Mountain Road (Carpenter's Basement)",
-        "source": "\ud83c\udfe0 24 Mountain Road | \ud83c\udf82 Winter 10",
-        "loved": "Frog Egg, Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg",
-        "liked": "Flounder, Quartz, Universal Likes (except Flowers/Omelet/Farmer's Lunch)",
-        "schedule": "Basement bedroom morning until 3pm; Mountain lake / pier 3:30pm-9pm; Town river (Rain); Saloon Friday 3pm-11pm playing pool with Sam.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 3:00 PM",
-                "loc": "Carpenter's Basement (Bedroom at computer)"
-            },
-            {
-                "time": "3:00 PM \u2013 9:00 PM",
-                "loc": "Mountain Lake Pier (Sunny) / Town River (Rain) / Saloon (Fri with Sam)"
-            },
-            {
-                "time": "9:00 PM \u2013 11:00 PM",
-                "loc": "Mountain Road (Near house & lake)"
-            },
-            {
-                "time": "11:00 PM \u2013 2:00 AM",
-                "loc": "Carpenter's Basement (Working / Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg, Frog Egg\n\ud83d\udd52 Routine: Carpenter's Basement (until 3pm) -> Mountain Lake Pier -> Saloon (Fri)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Sebastian.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Carpenter's Basement",
-                "x": 62.0,
-                "y": 24.0
-            },
-            {
-                "label": "\ud83c\udfa3 Mountain Lake Pier",
-                "x": 67.0,
-                "y": 28.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (Fri Pool)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Walks to The Beach pier/dock or Mountain Lake & Railroad tracks (all day)"
-            },
-            {
-                "cond": "\ud83c\udfb1 Friday",
-                "loc": "Plays pool & arcade games with Sam at The Stardrop Saloon (3:00 PM \u2013 9:30 PM)"
-            },
-            {
-                "cond": "\ud83c\udfb8 Saturday",
-                "loc": "Visits Sam's house (1 Willow Lane) for band practice (11:30 AM \u2013 6:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Walks to The Beach pier/dock or Mountain Lake & Railroad tracks (all day)",
-        "variations": "\ud83c\udfb1 Friday: Plays pool & arcade games with Sam at The Stardrop Saloon (3:00 PM \u2013 9:30 PM); \ud83c\udfb8 Saturday: Visits Sam's house (1 Willow Lane) for band practice (11:30 AM \u2013 6:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_sebastian",
+      "name": "Sebastian",
+      "category": "Bachelor",
+      "birthday": "Winter 10",
+      "home": "24 Mountain Road (Carpenter's Basement)",
+      "source": "🏠 24 Mountain Road | 🎂 Winter 10",
+      "loved": "Frog Egg, Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg",
+      "liked": "Flounder, Quartz, Universal Likes (except Flowers/Omelet/Farmer's Lunch)",
+      "schedule": "Basement bedroom morning until 3pm; Mountain lake / pier 3:30pm-9pm; Town river (Rain); Saloon Friday 3pm-11pm playing pool with Sam.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 3:00 PM",
+          "loc": "Carpenter's Basement (Bedroom at computer)"
+        },
+        {
+          "time": "3:00 PM – 9:00 PM",
+          "loc": "Mountain Lake Pier (Sunny) / Town River (Rain) / Saloon (Fri with Sam)"
+        },
+        {
+          "time": "9:00 PM – 11:00 PM",
+          "loc": "Mountain Road (Near house & lake)"
+        },
+        {
+          "time": "11:00 PM – 2:00 AM",
+          "loc": "Carpenter's Basement (Working / Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg, Frog Egg\n🕒 Routine: Carpenter's Basement (until 3pm) -> Mountain Lake Pier -> Saloon (Fri)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sebastian.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Carpenter's Basement",
+          "x": 62.0,
+          "y": 24.0
+        },
+        {
+          "label": "🎣 Mountain Lake Pier",
+          "x": 67.0,
+          "y": 28.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (Fri Pool)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Walks to The Beach pier/dock or Mountain Lake & Railroad tracks (all day)"
+        },
+        {
+          "cond": "🎱 Friday",
+          "loc": "Plays pool & arcade games with Sam at The Stardrop Saloon (3:00 PM – 9:30 PM)"
+        },
+        {
+          "cond": "🎸 Saturday",
+          "loc": "Visits Sam's house (1 Willow Lane) for band practice (11:30 AM – 6:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Walks to The Beach pier/dock or Mountain Lake & Railroad tracks (all day)",
+      "variations": "🎱 Friday: Plays pool & arcade games with Sam at The Stardrop Saloon (3:00 PM – 9:30 PM); 🎸 Saturday: Visits Sam's house (1 Willow Lane) for band practice (11:30 AM – 6:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_shane",
-        "name": "Shane",
-        "category": "Bachelor",
-        "birthday": "Spring 20",
-        "home": "Marnie's Ranch",
-        "source": "\ud83c\udfe0 Marnie's Ranch | \ud83c\udf82 Spring 20",
-        "loved": "Beer, Hot Pepper, Pepper Poppers, Pizza",
-        "liked": "All Eggs (except Void Egg), All Fruit (except Hot Pepper), Universal Likes (except Pickles/Quartz)",
-        "schedule": "JojaMart 9am-5pm (Workdays); Stardrop Saloon 5pm-11pm every single night; Marnie's Ranch weekends.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 7:10 AM",
-                "loc": "Marnie's Ranch (Kitchen)"
-            },
-            {
-                "time": "7:10 AM \u2013 5:00 PM",
-                "loc": "JojaMart (Stocking shelves Mon-Fri) / Marnie's Ranch (Weekends)"
-            },
-            {
-                "time": "5:00 PM \u2013 11:00 PM",
-                "loc": "The Stardrop Saloon (Every single night)"
-            },
-            {
-                "time": "11:00 PM+",
-                "loc": "Returns home to Marnie's Ranch to sleep"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Beer, Hot Pepper, Pepper Poppers, Pizza\n\ud83d\udd52 Routine: JojaMart (9am-5pm weekdays) -> Stardrop Saloon (5pm-11pm nightly)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Shane.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Marnie's Ranch",
-                "x": 39.0,
-                "y": 62.0
-            },
-            {
-                "label": "\ud83d\uded2 JojaMart (9am-5pm)",
-                "x": 68.0,
-                "y": 45.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (5pm-11pm)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Tends chickens at Marnie's Ranch all day -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)"
-            },
-            {
-                "cond": "\ud83d\udc14 Daily (CC Done)",
-                "loc": "Tends chickens & chores at Marnie's Ranch full-time (8:00 AM \u2013 5:00 PM) -> Saloon"
-            },
-            {
-                "cond": "\ud83c\udf7b Every Evening",
-                "loc": "Socializes in The Stardrop Saloon (5:00 PM \u2013 11:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Tends chickens at Marnie's Ranch all day -> Stardrop Saloon (5:00 PM \u2013 11:00 PM)",
-        "variations": "\ud83d\udc14 Daily (CC Done): Tends chickens & chores at Marnie's Ranch full-time (8:00 AM \u2013 5:00 PM) -> Saloon; \ud83c\udf7b Every Evening: Socializes in The Stardrop Saloon (5:00 PM \u2013 11:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_shane",
+      "name": "Shane",
+      "category": "Bachelor",
+      "birthday": "Spring 20",
+      "home": "Marnie's Ranch",
+      "source": "🏠 Marnie's Ranch | 🎂 Spring 20",
+      "loved": "Beer, Hot Pepper, Pepper Poppers, Pizza",
+      "liked": "All Eggs (except Void Egg), All Fruit (except Hot Pepper), Universal Likes (except Pickles/Quartz)",
+      "schedule": "JojaMart 9am-5pm (Workdays); Stardrop Saloon 5pm-11pm every single night; Marnie's Ranch weekends.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 7:10 AM",
+          "loc": "Marnie's Ranch (Kitchen)"
+        },
+        {
+          "time": "7:10 AM – 5:00 PM",
+          "loc": "JojaMart (Stocking shelves Mon-Fri) / Marnie's Ranch (Weekends)"
+        },
+        {
+          "time": "5:00 PM – 11:00 PM",
+          "loc": "The Stardrop Saloon (Every single night)"
+        },
+        {
+          "time": "11:00 PM+",
+          "loc": "Returns home to Marnie's Ranch to sleep"
+        }
+      ],
+      "notes": "❤️ Loved: Beer, Hot Pepper, Pepper Poppers, Pizza\n🕒 Routine: JojaMart (9am-5pm weekdays) -> Stardrop Saloon (5pm-11pm nightly)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Shane.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Marnie's Ranch",
+          "x": 39.0,
+          "y": 62.0
+        },
+        {
+          "label": "🛒 JojaMart (9am-5pm)",
+          "x": 68.0,
+          "y": 45.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (5pm-11pm)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Tends chickens at Marnie's Ranch all day -> Stardrop Saloon (5:00 PM – 11:00 PM)"
+        },
+        {
+          "cond": "🐔 Daily (CC Done)",
+          "loc": "Tends chickens & chores at Marnie's Ranch full-time (8:00 AM – 5:00 PM) -> Saloon"
+        },
+        {
+          "cond": "🍻 Every Evening",
+          "loc": "Socializes in The Stardrop Saloon (5:00 PM – 11:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Tends chickens at Marnie's Ranch all day -> Stardrop Saloon (5:00 PM – 11:00 PM)",
+      "variations": "🐔 Daily (CC Done): Tends chickens & chores at Marnie's Ranch full-time (8:00 AM – 5:00 PM) -> Saloon; 🍻 Every Evening: Socializes in The Stardrop Saloon (5:00 PM – 11:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_caroline",
-        "name": "Caroline",
-        "category": "Townsperson",
-        "birthday": "Winter 7",
-        "home": "Pierre's General Store",
-        "source": "\ud83c\udfe0 Pierre's General Store | \ud83c\udf82 Winter 7",
-        "loved": "Fish Taco, Green Tea, Summer Spangle, Tropical Curry",
-        "liked": "Daffodil, Tea Leaves, Universal Likes (except Amaranth/Duck Mayonnaise/Mayonnaise)",
-        "schedule": "Pierre's store sunroom / kitchen morning; Town square fountain 1pm-4pm; Community Center park 4pm-7pm; Aerobics Tuesday.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Pierre's Store (Kitchen)"
-            },
-            {
-                "time": "9:00 AM \u2013 1:00 PM",
-                "loc": "Pierre's Sunroom (Tea bush) / Aerobics (Tue 1pm-6pm)"
-            },
-            {
-                "time": "1:00 PM \u2013 4:00 PM",
-                "loc": "Town Square Fountain / Community Center Park"
-            },
-            {
-                "time": "4:00 PM \u2013 9:00 PM",
-                "loc": "Pierre's Store (Living Room)"
-            },
-            {
-                "time": "9:00 PM+",
-                "loc": "Pierre's Store (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Fish Taco, Green Tea, Summer Spangle, Tropical Curry\n\ud83d\udd52 Routine: Pierre's Sunroom -> Town Fountain / Community Center Park",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Caroline.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Pierre's Store",
-                "x": 52.0,
-                "y": 42.5
-            },
-            {
-                "label": "\u26f2 Town Fountain & Gardens",
-                "x": 53.0,
-                "y": 46.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Pierre's Store kitchen / living room doing chores all day"
-            },
-            {
-                "cond": "\ud83e\uddd8 Tuesday",
-                "loc": "Aerobics class in Pierre's store room (1:00 PM \u2013 4:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Friday (CC)",
-                "loc": "Community Center Crafts Room & Kitchen (1:30 PM \u2013 5:00 PM) -> Pierre's Store"
-            },
-            {
-                "cond": "\ud83c\udf3f Sunny Days",
-                "loc": "Private Sunroom in back of Pierre's Store or under Community Center tree"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Pierre's Store kitchen / living room doing chores all day",
-        "variations": "\ud83e\uddd8 Tuesday: Aerobics class in Pierre's store room (1:00 PM \u2013 4:00 PM); \ud83c\udfdb\ufe0f Friday (CC): Community Center Crafts Room & Kitchen (1:30 PM \u2013 5:00 PM) -> Pierre's Store; \ud83c\udf3f Sunny Days: Private Sunroom in back of Pierre's Store or under Community Center tree; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_caroline",
+      "name": "Caroline",
+      "category": "Townsperson",
+      "birthday": "Winter 7",
+      "home": "Pierre's General Store",
+      "source": "🏠 Pierre's General Store | 🎂 Winter 7",
+      "loved": "Fish Taco, Green Tea, Summer Spangle, Tropical Curry",
+      "liked": "Daffodil, Tea Leaves, Universal Likes (except Amaranth/Duck Mayonnaise/Mayonnaise)",
+      "schedule": "Pierre's store sunroom / kitchen morning; Town square fountain 1pm-4pm; Community Center park 4pm-7pm; Aerobics Tuesday.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Pierre's Store (Kitchen)"
+        },
+        {
+          "time": "9:00 AM – 1:00 PM",
+          "loc": "Pierre's Sunroom (Tea bush) / Aerobics (Tue 1pm-6pm)"
+        },
+        {
+          "time": "1:00 PM – 4:00 PM",
+          "loc": "Town Square Fountain / Community Center Park"
+        },
+        {
+          "time": "4:00 PM – 9:00 PM",
+          "loc": "Pierre's Store (Living Room)"
+        },
+        {
+          "time": "9:00 PM+",
+          "loc": "Pierre's Store (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Fish Taco, Green Tea, Summer Spangle, Tropical Curry\n🕒 Routine: Pierre's Sunroom -> Town Fountain / Community Center Park",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Caroline.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Pierre's Store",
+          "x": 52.0,
+          "y": 42.5
+        },
+        {
+          "label": "⛲ Town Fountain & Gardens",
+          "x": 53.0,
+          "y": 46.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Pierre's Store kitchen / living room doing chores all day"
+        },
+        {
+          "cond": "🧘 Tuesday",
+          "loc": "Aerobics class in Pierre's store room (1:00 PM – 4:00 PM)"
+        },
+        {
+          "cond": "🏛️ Friday (CC)",
+          "loc": "Community Center Crafts Room & Kitchen (1:30 PM – 5:00 PM) -> Pierre's Store"
+        },
+        {
+          "cond": "🌿 Sunny Days",
+          "loc": "Private Sunroom in back of Pierre's Store or under Community Center tree"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Pierre's Store kitchen / living room doing chores all day",
+      "variations": "🧘 Tuesday: Aerobics class in Pierre's store room (1:00 PM – 4:00 PM); 🏛️ Friday (CC): Community Center Crafts Room & Kitchen (1:30 PM – 5:00 PM) -> Pierre's Store; 🌿 Sunny Days: Private Sunroom in back of Pierre's Store or under Community Center tree; 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_clint",
-        "name": "Clint",
-        "category": "Townsperson",
-        "birthday": "Winter 26",
-        "home": "Blacksmith Shop",
-        "source": "\ud83c\udfe0 Blacksmith Shop | \ud83c\udf82 Winter 26",
-        "loved": "Amethyst, Aquamarine, Artichoke Dip, Emerald, Fiddlehead Risotto, Gold Bar, Iridium Bar, Jade, Omnigeode, Ruby, Topaz",
-        "liked": "Copper Bar, Iron Bar, Universal Likes (except Flowers)",
-        "schedule": "Blacksmith counter 9am-4pm daily; Stardrop Saloon 7pm-12am nightly; Harvey's Clinic (Friday 16th).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Blacksmith Shop (Bedroom)"
-            },
-            {
-                "time": "9:00 AM \u2013 4:00 PM",
-                "loc": "Blacksmith Shop Counter (Open for service)"
-            },
-            {
-                "time": "4:00 PM \u2013 7:00 PM",
-                "loc": "Blacksmith Shop (Furnaces / Anvil)"
-            },
-            {
-                "time": "7:00 PM \u2013 12:00 AM",
-                "loc": "The Stardrop Saloon (Bottom-right table)"
-            },
-            {
-                "time": "12:00 AM+",
-                "loc": "Returns to Blacksmith Shop"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Gold/Iridium Bar, Omni Geode, Artichoke Dip, Fiddlehead Risotto\n\ud83d\udd52 Routine: Blacksmith Shop (9am-4pm) -> Saloon (7pm-12am nightly)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Clint.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Blacksmith Shop (9am-4pm)",
-                "x": 67.0,
-                "y": 55.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (7pm-12am)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Works Blacksmith shop (9:00 AM \u2013 4:00 PM) -> Stardrop Saloon (5:00 PM \u2013 12:00 AM)"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Friday (CC)",
-                "loc": "Blacksmith CLOSED; stays inside Community Center Boiler Room (9:00 AM \u2013 5:00 PM) -> Saloon"
-            },
-            {
-                "cond": "\ud83e\ude7a Winter 16",
-                "loc": "Annual clinic checkup at Harvey's Medical Clinic (8:30 AM \u2013 4:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Works Blacksmith shop (9:00 AM \u2013 4:00 PM) -> Stardrop Saloon (5:00 PM \u2013 12:00 AM)",
-        "variations": "\ud83c\udfdb\ufe0f Friday (CC): Blacksmith CLOSED; stays inside Community Center Boiler Room (9:00 AM \u2013 5:00 PM) -> Saloon; \ud83e\ude7a Winter 16: Annual clinic checkup at Harvey's Medical Clinic (8:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_clint",
+      "name": "Clint",
+      "category": "Townsperson",
+      "birthday": "Winter 26",
+      "home": "Blacksmith Shop",
+      "source": "🏠 Blacksmith Shop | 🎂 Winter 26",
+      "loved": "Amethyst, Aquamarine, Artichoke Dip, Emerald, Fiddlehead Risotto, Gold Bar, Iridium Bar, Jade, Omnigeode, Ruby, Topaz",
+      "liked": "Copper Bar, Iron Bar, Universal Likes (except Flowers)",
+      "schedule": "Blacksmith counter 9am-4pm daily; Stardrop Saloon 7pm-12am nightly; Harvey's Clinic (Friday 16th).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Blacksmith Shop (Bedroom)"
+        },
+        {
+          "time": "9:00 AM – 4:00 PM",
+          "loc": "Blacksmith Shop Counter (Open for service)"
+        },
+        {
+          "time": "4:00 PM – 7:00 PM",
+          "loc": "Blacksmith Shop (Furnaces / Anvil)"
+        },
+        {
+          "time": "7:00 PM – 12:00 AM",
+          "loc": "The Stardrop Saloon (Bottom-right table)"
+        },
+        {
+          "time": "12:00 AM+",
+          "loc": "Returns to Blacksmith Shop"
+        }
+      ],
+      "notes": "❤️ Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Gold/Iridium Bar, Omni Geode, Artichoke Dip, Fiddlehead Risotto\n🕒 Routine: Blacksmith Shop (9am-4pm) -> Saloon (7pm-12am nightly)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Clint.png",
+      "mapPins": [
+        {
+          "label": "🏠 Blacksmith Shop (9am-4pm)",
+          "x": 67.0,
+          "y": 55.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (7pm-12am)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Works Blacksmith shop (9:00 AM – 4:00 PM) -> Stardrop Saloon (5:00 PM – 12:00 AM)"
+        },
+        {
+          "cond": "🏛️ Friday (CC)",
+          "loc": "Blacksmith CLOSED; stays inside Community Center Boiler Room (9:00 AM – 5:00 PM) -> Saloon"
+        },
+        {
+          "cond": "🩺 Winter 16",
+          "loc": "Annual clinic checkup at Harvey's Medical Clinic (8:30 AM – 4:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Works Blacksmith shop (9:00 AM – 4:00 PM) -> Stardrop Saloon (5:00 PM – 12:00 AM)",
+      "variations": "🏛️ Friday (CC): Blacksmith CLOSED; stays inside Community Center Boiler Room (9:00 AM – 5:00 PM) -> Saloon; 🩺 Winter 16: Annual clinic checkup at Harvey's Medical Clinic (8:30 AM – 4:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_demetrius",
-        "name": "Demetrius",
-        "category": "Townsperson",
-        "birthday": "Summer 19",
-        "home": "24 Mountain Road (Carpenter's Shop)",
-        "source": "\ud83c\udfe0 24 Mountain Road | \ud83c\udf82 Summer 19",
-        "loved": "Bean Hotpot, Ice Cream, Rice Pudding, Strawberry",
-        "liked": "All Eggs (except Void Egg), All Fruit (except Strawberry), Purple Mushroom, Universal Likes",
-        "schedule": "Carpenter's shop lab morning until 2pm; Mountain lake / cliff 2pm-7pm; Saloon Friday 6pm-10pm dancing with Robin.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Carpenter's Shop (Living room / Kitchen)"
-            },
-            {
-                "time": "9:00 AM \u2013 2:00 PM",
-                "loc": "Carpenter's Lab (Microscope / Research)"
-            },
-            {
-                "time": "2:00 PM \u2013 7:00 PM",
-                "loc": "Mountain Lake & Cliff (Taking notes)"
-            },
-            {
-                "time": "7:00 PM \u2013 10:00 PM",
-                "loc": "Carpenter's Shop (or Saloon Fri 6pm-10pm dancing with Robin)"
-            },
-            {
-                "time": "10:00 PM+",
-                "loc": "Carpenter's Shop (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Bean Hotpot, Ice Cream, Rice Pudding, Strawberry\n\ud83d\udd52 Routine: Carpenter's Lab -> Mountain Lake Cliff -> Saloon (Fri dancing)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Demetrius.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Carpenter's Shop",
-                "x": 62.0,
-                "y": 24.0
-            },
-            {
-                "label": "\ud83d\udd2c Mountain Lake & Cliff",
-                "x": 68.0,
-                "y": 26.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (Fri Dance)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Mountain Lab studying specimens all day"
-            },
-            {
-                "cond": "\ud83d\udc83 Friday",
-                "loc": "Dances with Robin at The Stardrop Saloon (6:00 PM \u2013 9:00 PM)"
-            },
-            {
-                "cond": "\u2600\ufe0f Summer",
-                "loc": "Observes fountain near Railroad/Spa or Mountain Lake (11:00 AM \u2013 7:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Mountain Lab studying specimens all day",
-        "variations": "\ud83d\udc83 Friday: Dances with Robin at The Stardrop Saloon (6:00 PM \u2013 9:00 PM); \u2600\ufe0f Summer: Observes fountain near Railroad/Spa or Mountain Lake (11:00 AM \u2013 7:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_demetrius",
+      "name": "Demetrius",
+      "category": "Townsperson",
+      "birthday": "Summer 19",
+      "home": "24 Mountain Road (Carpenter's Shop)",
+      "source": "🏠 24 Mountain Road | 🎂 Summer 19",
+      "loved": "Bean Hotpot, Ice Cream, Rice Pudding, Strawberry",
+      "liked": "All Eggs (except Void Egg), All Fruit (except Strawberry), Purple Mushroom, Universal Likes",
+      "schedule": "Carpenter's shop lab morning until 2pm; Mountain lake / cliff 2pm-7pm; Saloon Friday 6pm-10pm dancing with Robin.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Carpenter's Shop (Living room / Kitchen)"
+        },
+        {
+          "time": "9:00 AM – 2:00 PM",
+          "loc": "Carpenter's Lab (Microscope / Research)"
+        },
+        {
+          "time": "2:00 PM – 7:00 PM",
+          "loc": "Mountain Lake & Cliff (Taking notes)"
+        },
+        {
+          "time": "7:00 PM – 10:00 PM",
+          "loc": "Carpenter's Shop (or Saloon Fri 6pm-10pm dancing with Robin)"
+        },
+        {
+          "time": "10:00 PM+",
+          "loc": "Carpenter's Shop (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Bean Hotpot, Ice Cream, Rice Pudding, Strawberry\n🕒 Routine: Carpenter's Lab -> Mountain Lake Cliff -> Saloon (Fri dancing)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Demetrius.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Carpenter's Shop",
+          "x": 62.0,
+          "y": 24.0
+        },
+        {
+          "label": "🔬 Mountain Lake & Cliff",
+          "x": 68.0,
+          "y": 26.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (Fri Dance)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Mountain Lab studying specimens all day"
+        },
+        {
+          "cond": "💃 Friday",
+          "loc": "Dances with Robin at The Stardrop Saloon (6:00 PM – 9:00 PM)"
+        },
+        {
+          "cond": "☀️ Summer",
+          "loc": "Observes fountain near Railroad/Spa or Mountain Lake (11:00 AM – 7:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Mountain Lab studying specimens all day",
+      "variations": "💃 Friday: Dances with Robin at The Stardrop Saloon (6:00 PM – 9:00 PM); ☀️ Summer: Observes fountain near Railroad/Spa or Mountain Lake (11:00 AM – 7:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_dwarf",
-        "name": "Dwarf",
-        "category": "Townsperson",
-        "birthday": "Summer 22",
-        "home": "The Mines Entrance",
-        "source": "\ud83c\udfe0 The Mines Entrance | \ud83c\udf82 Summer 22",
-        "loved": "Amethyst, Aquamarine, Emerald, Jade, Lava Eel, Lemon Stone, Omni Geode, Ruby, Topaz",
-        "liked": "Cave Carrot, Quartz, Universal Likes",
-        "schedule": "Always at the entrance of the Mines (eastern cave past the breakable rock, 24/7).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 12:00 AM",
-                "loc": "The Mines Entrance (Eastern cave, open 24/7)"
-            },
-            {
-                "time": "12:00 AM \u2013 6:00 AM",
-                "loc": "The Mines Entrance (Always available)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Omni Geode, Lemon Stone, Lava Eel\n\ud83d\udd52 Routine: Eastern cave in the Mines entrance (24/7)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Dwarf.png",
-        "mapPins": [
-            {
-                "label": "\u26cf\ufe0f Mines Entrance Cave",
-                "x": 67.5,
-                "y": 18.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside Eastern Mines Entrance (24/7, never leaves)"
-            },
-            {
-                "cond": "\u26cf\ufe0f All Times",
-                "loc": "Always inside the Eastern Mines entrance behind the destructible stone wall"
-            }
-        ],
-        "rain": "Inside Eastern Mines Entrance (24/7, never leaves)",
-        "variations": "\u26cf\ufe0f All Times: Always inside the Eastern Mines entrance behind the destructible stone wall"
+      "id": "npc_dwarf",
+      "name": "Dwarf",
+      "category": "Townsperson",
+      "birthday": "Summer 22",
+      "home": "The Mines Entrance",
+      "source": "🏠 The Mines Entrance | 🎂 Summer 22",
+      "loved": "Amethyst, Aquamarine, Emerald, Jade, Lava Eel, Lemon Stone, Omni Geode, Ruby, Topaz",
+      "liked": "Cave Carrot, Quartz, Universal Likes",
+      "schedule": "Always at the entrance of the Mines (eastern cave past the breakable rock, 24/7).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 12:00 AM",
+          "loc": "The Mines Entrance (Eastern cave, open 24/7)"
+        },
+        {
+          "time": "12:00 AM – 6:00 AM",
+          "loc": "The Mines Entrance (Always available)"
+        }
+      ],
+      "notes": "❤️ Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Omni Geode, Lemon Stone, Lava Eel\n🕒 Routine: Eastern cave in the Mines entrance (24/7)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Dwarf.png",
+      "mapPins": [
+        {
+          "label": "⛏️ Mines Entrance Cave",
+          "x": 67.5,
+          "y": 18.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside Eastern Mines Entrance (24/7, never leaves)"
+        },
+        {
+          "cond": "⛏️ All Times",
+          "loc": "Always inside the Eastern Mines entrance behind the destructible stone wall"
+        }
+      ],
+      "rain": "Inside Eastern Mines Entrance (24/7, never leaves)",
+      "variations": "⛏️ All Times: Always inside the Eastern Mines entrance behind the destructible stone wall"
     },
     {
-        "id": "npc_evelyn",
-        "name": "Evelyn",
-        "category": "Townsperson",
-        "birthday": "Winter 2",
-        "home": "1 River Road",
-        "source": "\ud83c\udfe0 1 River Road | \ud83c\udf82 Winter 2",
-        "loved": "Beet, Chocolate Cake, Diamond, Fairy Rose, Raisins, Stuffing, Tulip",
-        "liked": "All Milk, Daffodil, Universal Likes (except All Fish/Garlic/Fried Eel/Spicy Eel)",
-        "schedule": "Home kitchen/living room 8am-1pm; Town square gardens / flowerbeds 1pm-4:30pm (sunny days).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 1:00 PM",
-                "loc": "1 River Road (Kitchen / Living Room)"
-            },
-            {
-                "time": "1:00 PM \u2013 4:30 PM",
-                "loc": "Town Square Gardens / Flowerbeds (Sunny days)"
-            },
-            {
-                "time": "4:30 PM \u2013 9:00 PM",
-                "loc": "1 River Road (Dining room / TV with George)"
-            },
-            {
-                "time": "9:00 PM+",
-                "loc": "1 River Road (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Beet, Chocolate Cake, Diamond, Fairy Rose, Raisins, Stuffing, Tulip\n\ud83d\udd52 Routine: 1 River Road -> Town Flowerbeds & Gardens (1pm-4:30pm)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Evelyn.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 1 River Road",
-                "x": 56.0,
-                "y": 43.0
-            },
-            {
-                "label": "\ud83c\udf37 Town Flowerbeds & Gardens",
-                "x": 54.0,
-                "y": 47.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside 1 River Road (kitchen / living room baking cookies) all day"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Thursday (CC)",
-                "loc": "Community Center Crafts Room & flower gardens (1:00 PM \u2013 4:30 PM)"
-            },
-            {
-                "cond": "\ud83c\udf38 Sunny Days",
-                "loc": "Tends town flower gardens near Saloon & Community Center (12:00 PM \u2013 4:30 PM)"
-            },
-            {
-                "cond": "\ud83e\ude7a Tue / Thu",
-                "loc": "Visits Harvey's Medical Clinic or stays home at 1 River Road"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Inside 1 River Road (kitchen / living room baking cookies) all day",
-        "variations": "\ud83c\udfdb\ufe0f Thursday (CC): Community Center Crafts Room & flower gardens (1:00 PM \u2013 4:30 PM); \ud83c\udf38 Sunny Days: Tends town flower gardens near Saloon & Community Center (12:00 PM \u2013 4:30 PM); \ud83e\ude7a Tue / Thu: Visits Harvey's Medical Clinic or stays home at 1 River Road; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_evelyn",
+      "name": "Evelyn",
+      "category": "Townsperson",
+      "birthday": "Winter 2",
+      "home": "1 River Road",
+      "source": "🏠 1 River Road | 🎂 Winter 2",
+      "loved": "Beet, Chocolate Cake, Diamond, Fairy Rose, Raisins, Stuffing, Tulip",
+      "liked": "All Milk, Daffodil, Universal Likes (except All Fish/Garlic/Fried Eel/Spicy Eel)",
+      "schedule": "Home kitchen/living room 8am-1pm; Town square gardens / flowerbeds 1pm-4:30pm (sunny days).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 1:00 PM",
+          "loc": "1 River Road (Kitchen / Living Room)"
+        },
+        {
+          "time": "1:00 PM – 4:30 PM",
+          "loc": "Town Square Gardens / Flowerbeds (Sunny days)"
+        },
+        {
+          "time": "4:30 PM – 9:00 PM",
+          "loc": "1 River Road (Dining room / TV with George)"
+        },
+        {
+          "time": "9:00 PM+",
+          "loc": "1 River Road (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Beet, Chocolate Cake, Diamond, Fairy Rose, Raisins, Stuffing, Tulip\n🕒 Routine: 1 River Road -> Town Flowerbeds & Gardens (1pm-4:30pm)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Evelyn.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 1 River Road",
+          "x": 56.0,
+          "y": 43.0
+        },
+        {
+          "label": "🌷 Town Flowerbeds & Gardens",
+          "x": 54.0,
+          "y": 47.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside 1 River Road (kitchen / living room baking cookies) all day"
+        },
+        {
+          "cond": "🏛️ Thursday (CC)",
+          "loc": "Community Center Crafts Room & flower gardens (1:00 PM – 4:30 PM)"
+        },
+        {
+          "cond": "🌸 Sunny Days",
+          "loc": "Tends town flower gardens near Saloon & Community Center (12:00 PM – 4:30 PM)"
+        },
+        {
+          "cond": "🩺 Tue / Thu",
+          "loc": "Visits Harvey's Medical Clinic or stays home at 1 River Road"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Inside 1 River Road (kitchen / living room baking cookies) all day",
+      "variations": "🏛️ Thursday (CC): Community Center Crafts Room & flower gardens (1:00 PM – 4:30 PM); 🌸 Sunny Days: Tends town flower gardens near Saloon & Community Center (12:00 PM – 4:30 PM); 🩺 Tue / Thu: Visits Harvey's Medical Clinic or stays home at 1 River Road; 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_george",
-        "name": "George",
-        "category": "Townsperson",
-        "birthday": "Fall 24",
-        "home": "1 River Road",
-        "source": "\ud83c\udfe0 1 River Road | \ud83c\udf82 Fall 24",
-        "loved": "Fried Mushroom, Leek",
-        "liked": "Daffodil, Universal Likes (except Flowers)",
-        "schedule": "Watching TV in living room 8am-12pm; Outside near town tree 12pm-3pm (sunny days); Clinic 23rd of each season.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 12:00 PM",
-                "loc": "1 River Road (Watching TV in Living Room)"
-            },
-            {
-                "time": "12:00 PM \u2013 3:00 PM",
-                "loc": "Outside 1 River Road under tree (Sunny days / Clinic 23rd)"
-            },
-            {
-                "time": "3:00 PM \u2013 8:00 PM",
-                "loc": "1 River Road (Watching TV in Living Room)"
-            },
-            {
-                "time": "8:00 PM+",
-                "loc": "1 River Road (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Fried Mushroom, Leek\n\ud83d\udd52 Routine: 1 River Road (Watching TV) -> Outside near town tree (12pm-3pm)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/George.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 1 River Road",
-                "x": 56.0,
-                "y": 43.0
-            },
-            {
-                "label": "\ud83c\udf33 Tree outside 1 River Rd",
-                "x": 55.5,
-                "y": 45.5
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside 1 River Road watching TV in living room all day"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Sunny Days (CC)",
-                "loc": "Sits in wheelchair outside Community Center entrance (12:00 PM \u2013 3:00 PM)"
-            },
-            {
-                "cond": "\u26ea Sunday",
-                "loc": "Yoba shrine in back room of Pierre's General Store (8:00 AM \u2013 2:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Inside 1 River Road watching TV in living room all day",
-        "variations": "\ud83c\udfdb\ufe0f Sunny Days (CC): Sits in wheelchair outside Community Center entrance (12:00 PM \u2013 3:00 PM); \u26ea Sunday: Yoba shrine in back room of Pierre's General Store (8:00 AM \u2013 2:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_george",
+      "name": "George",
+      "category": "Townsperson",
+      "birthday": "Fall 24",
+      "home": "1 River Road",
+      "source": "🏠 1 River Road | 🎂 Fall 24",
+      "loved": "Fried Mushroom, Leek",
+      "liked": "Daffodil, Universal Likes (except Flowers)",
+      "schedule": "Watching TV in living room 8am-12pm; Outside near town tree 12pm-3pm (sunny days); Clinic 23rd of each season.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 12:00 PM",
+          "loc": "1 River Road (Watching TV in Living Room)"
+        },
+        {
+          "time": "12:00 PM – 3:00 PM",
+          "loc": "Outside 1 River Road under tree (Sunny days / Clinic 23rd)"
+        },
+        {
+          "time": "3:00 PM – 8:00 PM",
+          "loc": "1 River Road (Watching TV in Living Room)"
+        },
+        {
+          "time": "8:00 PM+",
+          "loc": "1 River Road (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Fried Mushroom, Leek\n🕒 Routine: 1 River Road (Watching TV) -> Outside near town tree (12pm-3pm)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/George.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 1 River Road",
+          "x": 56.0,
+          "y": 43.0
+        },
+        {
+          "label": "🌳 Tree outside 1 River Rd",
+          "x": 55.5,
+          "y": 45.5
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside 1 River Road watching TV in living room all day"
+        },
+        {
+          "cond": "🏛️ Sunny Days (CC)",
+          "loc": "Sits in wheelchair outside Community Center entrance (12:00 PM – 3:00 PM)"
+        },
+        {
+          "cond": "⛪ Sunday",
+          "loc": "Yoba shrine in back room of Pierre's General Store (8:00 AM – 2:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Inside 1 River Road watching TV in living room all day",
+      "variations": "🏛️ Sunny Days (CC): Sits in wheelchair outside Community Center entrance (12:00 PM – 3:00 PM); ⛪ Sunday: Yoba shrine in back room of Pierre's General Store (8:00 AM – 2:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_gus",
-        "name": "Gus",
-        "category": "Townsperson",
-        "birthday": "Summer 8",
-        "home": "The Stardrop Saloon",
-        "source": "\ud83c\udfe0 The Stardrop Saloon | \ud83c\udf82 Summer 8",
-        "loved": "Diamond, Escargot, Fish Taco, Orange, Tropical Curry",
-        "liked": "Daffodil, Universal Likes (except Coleslaw)",
-        "schedule": "Inside Saloon kitchen morning; Behind Saloon bar counter 12pm to 12am daily; Island Resort (certain days).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 12:00 PM",
-                "loc": "The Stardrop Saloon (Kitchen & Pantry)"
-            },
-            {
-                "time": "12:00 PM \u2013 12:00 AM",
-                "loc": "The Stardrop Saloon (Behind the bar counter)"
-            },
-            {
-                "time": "12:00 AM+",
-                "loc": "The Stardrop Saloon (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Diamond, Escargot, Fish Taco, Orange, Tropical Curry\n\ud83d\udd52 Routine: The Stardrop Saloon bar counter (12pm-12am daily)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Gus.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (12pm-12am)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Inside The Stardrop Saloon (12:00 PM \u2013 12:00 AM)"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Tuesday (CC)",
-                "loc": "Visits Community Center Pantry / Kitchen (10:00 AM \u2013 12:00 PM) -> The Stardrop Saloon"
-            },
-            {
-                "cond": "\ud83d\uded2 Weekday Morning",
-                "loc": "Buys groceries at Pierre's General Store (8:30 AM \u2013 10:30 AM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Tends beach bar at Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on resort days)"
-            }
-        ],
-        "rain": "Inside The Stardrop Saloon (12:00 PM \u2013 12:00 AM)",
-        "variations": "\ud83c\udfdb\ufe0f Tuesday (CC): Visits Community Center Pantry / Kitchen (10:00 AM \u2013 12:00 PM) -> The Stardrop Saloon; \ud83d\uded2 Weekday Morning: Buys groceries at Pierre's General Store (8:30 AM \u2013 10:30 AM); \ud83c\udf34 Island Resort: Tends beach bar at Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on resort days)"
+      "id": "npc_gus",
+      "name": "Gus",
+      "category": "Townsperson",
+      "birthday": "Summer 8",
+      "home": "The Stardrop Saloon",
+      "source": "🏠 The Stardrop Saloon | 🎂 Summer 8",
+      "loved": "Diamond, Escargot, Fish Taco, Orange, Tropical Curry",
+      "liked": "Daffodil, Universal Likes (except Coleslaw)",
+      "schedule": "Inside Saloon kitchen morning; Behind Saloon bar counter 12pm to 12am daily; Island Resort (certain days).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 12:00 PM",
+          "loc": "The Stardrop Saloon (Kitchen & Pantry)"
+        },
+        {
+          "time": "12:00 PM – 12:00 AM",
+          "loc": "The Stardrop Saloon (Behind the bar counter)"
+        },
+        {
+          "time": "12:00 AM+",
+          "loc": "The Stardrop Saloon (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Diamond, Escargot, Fish Taco, Orange, Tropical Curry\n🕒 Routine: The Stardrop Saloon bar counter (12pm-12am daily)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Gus.png",
+      "mapPins": [
+        {
+          "label": "🍻 Stardrop Saloon (12pm-12am)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Inside The Stardrop Saloon (12:00 PM – 12:00 AM)"
+        },
+        {
+          "cond": "🏛️ Tuesday (CC)",
+          "loc": "Visits Community Center Pantry / Kitchen (10:00 AM – 12:00 PM) -> The Stardrop Saloon"
+        },
+        {
+          "cond": "🛒 Weekday Morning",
+          "loc": "Buys groceries at Pierre's General Store (8:30 AM – 10:30 AM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Tends beach bar at Ginger Island Beach Resort (11:40 AM – 6:00 PM on resort days)"
+        }
+      ],
+      "rain": "Inside The Stardrop Saloon (12:00 PM – 12:00 AM)",
+      "variations": "🏛️ Tuesday (CC): Visits Community Center Pantry / Kitchen (10:00 AM – 12:00 PM) -> The Stardrop Saloon; 🛒 Weekday Morning: Buys groceries at Pierre's General Store (8:30 AM – 10:30 AM); 🌴 Island Resort: Tends beach bar at Ginger Island Beach Resort (11:40 AM – 6:00 PM on resort days)"
     },
     {
-        "id": "npc_jas",
-        "name": "Jas",
-        "category": "Townsperson",
-        "birthday": "Summer 4",
-        "home": "Marnie's Ranch",
-        "source": "\ud83c\udfe0 Marnie's Ranch | \ud83c\udf82 Summer 4",
-        "loved": "Fairy Box, Fairy Rose, Pink Cake, Plum Pudding",
-        "liked": "Coconut, Daffodil, Universal Likes (except Artisan Goods/Vegetables)",
-        "schedule": "Forest jump-rope tree 9am-12pm; Museum library classroom with Penny (Tue/Wed/Fri 9am-2pm); Town playground.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Marnie's Ranch (Bedroom)"
-            },
-            {
-                "time": "9:00 AM \u2013 2:00 PM",
-                "loc": "Museum Library (Class with Penny Tue/Wed/Fri) / Forest Tree (Mon/Thu/Sun)"
-            },
-            {
-                "time": "2:00 PM \u2013 6:00 PM",
-                "loc": "Forest Jump-rope Tree / Town Playground"
-            },
-            {
-                "time": "6:00 PM \u2013 9:00 PM",
-                "loc": "Marnie's Ranch (Living Room)"
-            },
-            {
-                "time": "9:00 PM+",
-                "loc": "Marnie's Ranch (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Fairy Rose, Pink Cake, Plum Pudding, Fairy Box\n\ud83d\udd52 Routine: Forest jump-rope tree -> Library class with Penny (Tue/Wed/Fri) -> Town Playground",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Jas.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Marnie's Ranch",
-                "x": 39.0,
-                "y": 62.0
-            },
-            {
-                "label": "\ud83d\udcda Museum / Library (Tue/Wed/Fri)",
-                "x": 66.5,
-                "y": 66.0
-            },
-            {
-                "label": "\ud83c\udf33 Forest Tree / Jump-rope",
-                "x": 36.0,
-                "y": 67.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Marnie's Ranch bedroom / living room with Marnie all day"
-            },
-            {
-                "cond": "\ud83d\udcda Tue / Wed / Fri",
-                "loc": "School lessons at Museum with Penny (9:00 AM \u2013 2:00 PM) then Playground"
-            },
-            {
-                "cond": "\ud83e\udea2 Sat / Sun",
-                "loc": "Jump roping under large oak tree near Cindersap Forest pond (11:00 AM \u2013 4:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Marnie's Ranch bedroom / living room with Marnie all day",
-        "variations": "\ud83d\udcda Tue / Wed / Fri: School lessons at Museum with Penny (9:00 AM \u2013 2:00 PM) then Playground; \ud83e\udea2 Sat / Sun: Jump roping under large oak tree near Cindersap Forest pond (11:00 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_jas",
+      "name": "Jas",
+      "category": "Townsperson",
+      "birthday": "Summer 4",
+      "home": "Marnie's Ranch",
+      "source": "🏠 Marnie's Ranch | 🎂 Summer 4",
+      "loved": "Fairy Box, Fairy Rose, Pink Cake, Plum Pudding",
+      "liked": "Coconut, Daffodil, Universal Likes (except Artisan Goods/Vegetables)",
+      "schedule": "Forest jump-rope tree 9am-12pm; Museum library classroom with Penny (Tue/Wed/Fri 9am-2pm); Town playground.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Marnie's Ranch (Bedroom)"
+        },
+        {
+          "time": "9:00 AM – 2:00 PM",
+          "loc": "Museum Library (Class with Penny Tue/Wed/Fri) / Forest Tree (Mon/Thu/Sun)"
+        },
+        {
+          "time": "2:00 PM – 6:00 PM",
+          "loc": "Forest Jump-rope Tree / Town Playground"
+        },
+        {
+          "time": "6:00 PM – 9:00 PM",
+          "loc": "Marnie's Ranch (Living Room)"
+        },
+        {
+          "time": "9:00 PM+",
+          "loc": "Marnie's Ranch (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Fairy Rose, Pink Cake, Plum Pudding, Fairy Box\n🕒 Routine: Forest jump-rope tree -> Library class with Penny (Tue/Wed/Fri) -> Town Playground",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Jas.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Marnie's Ranch",
+          "x": 39.0,
+          "y": 62.0
+        },
+        {
+          "label": "📚 Museum / Library (Tue/Wed/Fri)",
+          "x": 66.5,
+          "y": 66.0
+        },
+        {
+          "label": "🌳 Forest Tree / Jump-rope",
+          "x": 36.0,
+          "y": 67.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Marnie's Ranch bedroom / living room with Marnie all day"
+        },
+        {
+          "cond": "📚 Tue / Wed / Fri",
+          "loc": "School lessons at Museum with Penny (9:00 AM – 2:00 PM) then Playground"
+        },
+        {
+          "cond": "🪢 Sat / Sun",
+          "loc": "Jump roping under large oak tree near Cindersap Forest pond (11:00 AM – 4:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Marnie's Ranch bedroom / living room with Marnie all day",
+      "variations": "📚 Tue / Wed / Fri: School lessons at Museum with Penny (9:00 AM – 2:00 PM) then Playground; 🪢 Sat / Sun: Jump roping under large oak tree near Cindersap Forest pond (11:00 AM – 4:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_jodi",
-        "name": "Jodi",
-        "category": "Townsperson",
-        "birthday": "Fall 11",
-        "home": "1 Willow Lane",
-        "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Fall 11",
-        "loved": "Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley",
-        "liked": "All Eggs (except Void Egg), All Fruit (except Spice Berry), All Milk, Universal Likes (except Garlic/Daffodil)",
-        "schedule": "Home kitchen morning; Town square / river 1:30pm-4pm; Pierre's Aerobics (Tuesday 1pm-6pm); Pierre's store (Sunday).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "1 Willow Lane (Kitchen)"
-            },
-            {
-                "time": "9:00 AM \u2013 1:30 PM",
-                "loc": "Pierre's Store (Sunday) / Aerobics (Tue 1pm-6pm) / 1 Willow Lane"
-            },
-            {
-                "time": "1:30 PM \u2013 4:00 PM",
-                "loc": "Town Square / Riverbank / Town Gardens"
-            },
-            {
-                "time": "4:00 PM \u2013 8:00 PM",
-                "loc": "1 Willow Lane (Kitchen cooking dinner)"
-            },
-            {
-                "time": "8:00 PM+",
-                "loc": "1 Willow Lane (Living Room / Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley\n\ud83d\udd52 Routine: 1 Willow Lane -> Pierre's Aerobics (Tue) -> Town Square / River",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Jodi.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 1 Willow Lane",
-                "x": 48.0,
-                "y": 56.0
-            },
-            {
-                "label": "\ud83d\uded2 Pierre's Store & Aerobics",
-                "x": 52.0,
-                "y": 42.5
-            },
-            {
-                "label": "\u26f2 Town Square Gardens",
-                "x": 53.0,
-                "y": 46.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "1 Willow Lane kitchen / living room doing laundry & chores"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Saturday (CC)",
-                "loc": "Community Center Main Room (2:30 PM \u2013 5:00 PM) -> returns home to 1 Willow Lane"
-            },
-            {
-                "cond": "\ud83e\uddd8 Tuesday",
-                "loc": "Aerobics class in Pierre's store (1:00 PM \u2013 6:00 PM)"
-            },
-            {
-                "cond": "\ud83d\uded2 Wed / Fri",
-                "loc": "Chats with Caroline at Pierre's Store or visits Town Square (11:30 AM \u2013 4:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "1 Willow Lane kitchen / living room doing laundry & chores",
-        "variations": "\ud83c\udfdb\ufe0f Saturday (CC): Community Center Main Room (2:30 PM \u2013 5:00 PM) -> returns home to 1 Willow Lane; \ud83e\uddd8 Tuesday: Aerobics class in Pierre's store (1:00 PM \u2013 6:00 PM); \ud83d\uded2 Wed / Fri: Chats with Caroline at Pierre's Store or visits Town Square (11:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_jodi",
+      "name": "Jodi",
+      "category": "Townsperson",
+      "birthday": "Fall 11",
+      "home": "1 Willow Lane",
+      "source": "🏠 1 Willow Lane | 🎂 Fall 11",
+      "loved": "Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley",
+      "liked": "All Eggs (except Void Egg), All Fruit (except Spice Berry), All Milk, Universal Likes (except Garlic/Daffodil)",
+      "schedule": "Home kitchen morning; Town square / river 1:30pm-4pm; Pierre's Aerobics (Tuesday 1pm-6pm); Pierre's store (Sunday).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "1 Willow Lane (Kitchen)"
+        },
+        {
+          "time": "9:00 AM – 1:30 PM",
+          "loc": "Pierre's Store (Sunday) / Aerobics (Tue 1pm-6pm) / 1 Willow Lane"
+        },
+        {
+          "time": "1:30 PM – 4:00 PM",
+          "loc": "Town Square / Riverbank / Town Gardens"
+        },
+        {
+          "time": "4:00 PM – 8:00 PM",
+          "loc": "1 Willow Lane (Kitchen cooking dinner)"
+        },
+        {
+          "time": "8:00 PM+",
+          "loc": "1 Willow Lane (Living Room / Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley\n🕒 Routine: 1 Willow Lane -> Pierre's Aerobics (Tue) -> Town Square / River",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Jodi.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 1 Willow Lane",
+          "x": 48.0,
+          "y": 56.0
+        },
+        {
+          "label": "🛒 Pierre's Store & Aerobics",
+          "x": 52.0,
+          "y": 42.5
+        },
+        {
+          "label": "⛲ Town Square Gardens",
+          "x": 53.0,
+          "y": 46.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "1 Willow Lane kitchen / living room doing laundry & chores"
+        },
+        {
+          "cond": "🏛️ Saturday (CC)",
+          "loc": "Community Center Main Room (2:30 PM – 5:00 PM) -> returns home to 1 Willow Lane"
+        },
+        {
+          "cond": "🧘 Tuesday",
+          "loc": "Aerobics class in Pierre's store (1:00 PM – 6:00 PM)"
+        },
+        {
+          "cond": "🛒 Wed / Fri",
+          "loc": "Chats with Caroline at Pierre's Store or visits Town Square (11:30 AM – 4:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "1 Willow Lane kitchen / living room doing laundry & chores",
+      "variations": "🏛️ Saturday (CC): Community Center Main Room (2:30 PM – 5:00 PM) -> returns home to 1 Willow Lane; 🧘 Tuesday: Aerobics class in Pierre's store (1:00 PM – 6:00 PM); 🛒 Wed / Fri: Chats with Caroline at Pierre's Store or visits Town Square (11:30 AM – 4:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_kent",
-        "name": "Kent",
-        "category": "Townsperson",
-        "birthday": "Spring 4",
-        "home": "1 Willow Lane",
-        "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Spring 4",
-        "loved": "Fiddlehead Risotto, Roasted Hazelnuts",
-        "liked": "All Eggs (except Void Egg), All Fruit, Daffodil, Universal Likes (except Algae Soup/Sashimi/Tortilla)",
-        "schedule": "Home morning; Under tree near 1 Willow Lane 10:30am-2pm; Town river bridge 2pm-5pm; Home living room evenings.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 10:30 AM",
-                "loc": "1 Willow Lane (Kitchen / Living Room)"
-            },
-            {
-                "time": "10:30 AM \u2013 2:00 PM",
-                "loc": "Under large tree outside 1 Willow Lane"
-            },
-            {
-                "time": "2:00 PM \u2013 5:00 PM",
-                "loc": "Town River Bridge / Town Square"
-            },
-            {
-                "time": "5:00 PM \u2013 9:00 PM",
-                "loc": "1 Willow Lane (Living Room)"
-            },
-            {
-                "time": "9:00 PM+",
-                "loc": "1 Willow Lane (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Fiddlehead Risotto, Roasted Hazelnuts\n\ud83d\udd52 Routine: 1 Willow Lane -> Tree outside house -> Town River Bridge",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Kent.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 1 Willow Lane",
-                "x": 48.0,
-                "y": 56.0
-            },
-            {
-                "label": "\ud83c\udf33 Tree outside 1 Willow Lane",
-                "x": 49.0,
-                "y": 58.0
-            },
-            {
-                "label": "\ud83c\udf09 Town River Bridge",
-                "x": 58.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "1 Willow Lane living room listening to radio all day"
-            },
-            {
-                "cond": "\ud83c\udf33 Sunny Days",
-                "loc": "Stands under willow tree near house (10:30 AM \u2013 2:00 PM) or Town river bridge"
-            },
-            {
-                "cond": "\ud83d\uddd3\ufe0f Arrives Year 2",
-                "loc": "Returns home from service on Spring 1, Year 2"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "1 Willow Lane living room listening to radio all day",
-        "variations": "\ud83c\udf33 Sunny Days: Stands under willow tree near house (10:30 AM \u2013 2:00 PM) or Town river bridge; \ud83d\uddd3\ufe0f Arrives Year 2: Returns home from service on Spring 1, Year 2; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_kent",
+      "name": "Kent",
+      "category": "Townsperson",
+      "birthday": "Spring 4",
+      "home": "1 Willow Lane",
+      "source": "🏠 1 Willow Lane | 🎂 Spring 4",
+      "loved": "Fiddlehead Risotto, Roasted Hazelnuts",
+      "liked": "All Eggs (except Void Egg), All Fruit, Daffodil, Universal Likes (except Algae Soup/Sashimi/Tortilla)",
+      "schedule": "Home morning; Under tree near 1 Willow Lane 10:30am-2pm; Town river bridge 2pm-5pm; Home living room evenings.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 10:30 AM",
+          "loc": "1 Willow Lane (Kitchen / Living Room)"
+        },
+        {
+          "time": "10:30 AM – 2:00 PM",
+          "loc": "Under large tree outside 1 Willow Lane"
+        },
+        {
+          "time": "2:00 PM – 5:00 PM",
+          "loc": "Town River Bridge / Town Square"
+        },
+        {
+          "time": "5:00 PM – 9:00 PM",
+          "loc": "1 Willow Lane (Living Room)"
+        },
+        {
+          "time": "9:00 PM+",
+          "loc": "1 Willow Lane (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Fiddlehead Risotto, Roasted Hazelnuts\n🕒 Routine: 1 Willow Lane -> Tree outside house -> Town River Bridge",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Kent.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 1 Willow Lane",
+          "x": 48.0,
+          "y": 56.0
+        },
+        {
+          "label": "🌳 Tree outside 1 Willow Lane",
+          "x": 49.0,
+          "y": 58.0
+        },
+        {
+          "label": "🌉 Town River Bridge",
+          "x": 58.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "1 Willow Lane living room listening to radio all day"
+        },
+        {
+          "cond": "🌳 Sunny Days",
+          "loc": "Stands under willow tree near house (10:30 AM – 2:00 PM) or Town river bridge"
+        },
+        {
+          "cond": "🗓️ Arrives Year 2",
+          "loc": "Returns home from service on Spring 1, Year 2"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "1 Willow Lane living room listening to radio all day",
+      "variations": "🌳 Sunny Days: Stands under willow tree near house (10:30 AM – 2:00 PM) or Town river bridge; 🗓️ Arrives Year 2: Returns home from service on Spring 1, Year 2; 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_krobus",
-        "name": "Krobus",
-        "category": "Townsperson",
-        "birthday": "Winter 1",
-        "home": "The Sewers",
-        "source": "\ud83c\udfe0 The Sewers | \ud83c\udf82 Winter 1",
-        "loved": "Diamond, Iridium Bar, Monster Compendium, Pumpkin, Void Egg, Void Mayonnaise, Wild Horseradish",
-        "liked": "Gold Bar, Quartz, Seafoam Pudding",
-        "schedule": "Always located inside The Sewers at his shop (open 24/7).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 12:00 AM",
-                "loc": "The Sewers Shop (Inside Sewers, open 24/7)"
-            },
-            {
-                "time": "12:00 AM \u2013 6:00 AM",
-                "loc": "The Sewers Shop (Always present)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Diamond, Iridium Bar, Monster Compendium, Pumpkin, Void Egg, Void Mayonnaise, Wild Horseradish\n\ud83d\udd52 Routine: Inside The Sewers at shop counter (24/7)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Krobus.png",
-        "mapPins": [
-            {
-                "label": "\ud83d\udddd\ufe0f The Sewers (Cointreau Shop)",
-                "x": 55.0,
-                "y": 66.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "The Sewers (24/7, sells specialty goods)"
-            },
-            {
-                "cond": "\ud83d\udc8e Friday",
-                "loc": "Sells Iridium Sprinklers; stands silently in The Sewers at all times"
-            }
-        ],
-        "rain": "The Sewers (24/7, sells specialty goods)",
-        "variations": "\ud83d\udc8e Friday: Sells Iridium Sprinklers; stands silently in The Sewers at all times"
+      "id": "npc_krobus",
+      "name": "Krobus",
+      "category": "Townsperson",
+      "birthday": "Winter 1",
+      "home": "The Sewers",
+      "source": "🏠 The Sewers | 🎂 Winter 1",
+      "loved": "Diamond, Iridium Bar, Monster Compendium, Pumpkin, Void Egg, Void Mayonnaise, Wild Horseradish",
+      "liked": "Gold Bar, Quartz, Seafoam Pudding",
+      "schedule": "Always located inside The Sewers at his shop (open 24/7).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 12:00 AM",
+          "loc": "The Sewers Shop (Inside Sewers, open 24/7)"
+        },
+        {
+          "time": "12:00 AM – 6:00 AM",
+          "loc": "The Sewers Shop (Always present)"
+        }
+      ],
+      "notes": "❤️ Loved: Diamond, Iridium Bar, Monster Compendium, Pumpkin, Void Egg, Void Mayonnaise, Wild Horseradish\n🕒 Routine: Inside The Sewers at shop counter (24/7)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Krobus.png",
+      "mapPins": [
+        {
+          "label": "🗝️ The Sewers (Cointreau Shop)",
+          "x": 55.0,
+          "y": 66.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "The Sewers (24/7, sells specialty goods)"
+        },
+        {
+          "cond": "💎 Friday",
+          "loc": "Sells Iridium Sprinklers; stands silently in The Sewers at all times"
+        }
+      ],
+      "rain": "The Sewers (24/7, sells specialty goods)",
+      "variations": "💎 Friday: Sells Iridium Sprinklers; stands silently in The Sewers at all times"
     },
     {
-        "id": "npc_leo",
-        "name": "Leo",
-        "category": "Townsperson",
-        "birthday": "Summer 26",
-        "home": "Ginger Island Hut / Mountain Treehouse",
-        "source": "\ud83c\udfe0 Ginger Island / Mountain Treehouse | \ud83c\udf82 Summer 26",
-        "loved": "Duck Feather, Mango, Ostrich Egg, Poi",
-        "liked": "Dragon Tooth, Nautilus Shell, Quartz, Sea Urchin",
-        "schedule": "Ginger Island Hut & Docks (Early); Mountain Treehouse near Linus / Mountain lake (after 6-heart event).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Ginger Island Hut (Early) / Mountain Treehouse (Mainland)"
-            },
-            {
-                "time": "9:00 AM \u2013 3:00 PM",
-                "loc": "Island Docks & Jungle (Early) / Mountain Lake & Linus' Tent (Mainland)"
-            },
-            {
-                "time": "3:00 PM \u2013 7:00 PM",
-                "loc": "Island Beach / Treehouse exterior / Library with Penny"
-            },
-            {
-                "time": "7:00 PM+",
-                "loc": "Island Hut / Mountain Treehouse (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Duck Feather, Mango, Ostrich Egg, Poi\n\ud83d\udd52 Routine: Ginger Island Hut -> Mountain Treehouse & Mountain Lake (after 6-Heart event)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Leo.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udf34 Ginger Island Hut",
-                "x": 68.0,
-                "y": 80.0
-            },
-            {
-                "label": "\ud83c\udfe1 Mountain Treehouse (Post 6-Heart)",
-                "x": 65.0,
-                "y": 20.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Island Hut canopy / Mountain treehouse (if moved to Valley)"
-            },
-            {
-                "cond": "\ud83e\udd9c Before 6 Hearts",
-                "loc": "Ginger Island Jungle Hut, Island Docks, and Beach (all day)"
-            },
-            {
-                "cond": "\ud83c\udfe1 After 6 Hearts",
-                "loc": "Treehouse in the Mountains next to Linus's tent (attends Museum school on Sun)"
-            }
-        ],
-        "rain": "Island Hut canopy / Mountain treehouse (if moved to Valley)",
-        "variations": "\ud83e\udd9c Before 6 Hearts: Ginger Island Jungle Hut, Island Docks, and Beach (all day); \ud83c\udfe1 After 6 Hearts: Treehouse in the Mountains next to Linus's tent (attends Museum school on Sun)"
+      "id": "npc_leo",
+      "name": "Leo",
+      "category": "Townsperson",
+      "birthday": "Summer 26",
+      "home": "Ginger Island Hut / Mountain Treehouse",
+      "source": "🏠 Ginger Island / Mountain Treehouse | 🎂 Summer 26",
+      "loved": "Duck Feather, Mango, Ostrich Egg, Poi",
+      "liked": "Dragon Tooth, Nautilus Shell, Quartz, Sea Urchin",
+      "schedule": "Ginger Island Hut & Docks (Early); Mountain Treehouse near Linus / Mountain lake (after 6-heart event).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Ginger Island Hut (Early) / Mountain Treehouse (Mainland)"
+        },
+        {
+          "time": "9:00 AM – 3:00 PM",
+          "loc": "Island Docks & Jungle (Early) / Mountain Lake & Linus' Tent (Mainland)"
+        },
+        {
+          "time": "3:00 PM – 7:00 PM",
+          "loc": "Island Beach / Treehouse exterior / Library with Penny"
+        },
+        {
+          "time": "7:00 PM+",
+          "loc": "Island Hut / Mountain Treehouse (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Duck Feather, Mango, Ostrich Egg, Poi\n🕒 Routine: Ginger Island Hut -> Mountain Treehouse & Mountain Lake (after 6-Heart event)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Leo.png",
+      "mapPins": [
+        {
+          "label": "🌴 Ginger Island Hut",
+          "x": 68.0,
+          "y": 80.0
+        },
+        {
+          "label": "🏡 Mountain Treehouse (Post 6-Heart)",
+          "x": 65.0,
+          "y": 20.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Island Hut canopy / Mountain treehouse (if moved to Valley)"
+        },
+        {
+          "cond": "🦜 Before 6 Hearts",
+          "loc": "Ginger Island Jungle Hut, Island Docks, and Beach (all day)"
+        },
+        {
+          "cond": "🏡 After 6 Hearts",
+          "loc": "Treehouse in the Mountains next to Linus's tent (attends Museum school on Sun)"
+        }
+      ],
+      "rain": "Island Hut canopy / Mountain treehouse (if moved to Valley)",
+      "variations": "🦜 Before 6 Hearts: Ginger Island Jungle Hut, Island Docks, and Beach (all day); 🏡 After 6 Hearts: Treehouse in the Mountains next to Linus's tent (attends Museum school on Sun)"
     },
     {
-        "id": "npc_lewis",
-        "name": "Lewis",
-        "category": "Townsperson",
-        "birthday": "Spring 7",
-        "home": "Mayor's Manor",
-        "source": "\ud83c\udfe0 Mayor's Manor | \ud83c\udf82 Spring 7",
-        "loved": "Autumn's Bounty, Glazed Yams, Green Tea, Hot Pepper, Vegetable Medley",
-        "liked": "Blueberry, Cactus Fruit, Coconut, Universal Likes",
-        "schedule": "Mayor's Manor morning; Town square / Pierre's store / Blacksmith 1pm-4pm; Stardrop Saloon 5pm-9pm.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Mayor's Manor (Office / Kitchen)"
-            },
-            {
-                "time": "9:00 AM \u2013 1:00 PM",
-                "loc": "Mayor's Manor / Town Square gardens"
-            },
-            {
-                "time": "1:00 PM \u2013 4:00 PM",
-                "loc": "Pierre's Store / Blacksmith / Town Square"
-            },
-            {
-                "time": "4:00 PM \u2013 9:00 PM",
-                "loc": "The Stardrop Saloon / Marnie's Ranch (certain evenings)"
-            },
-            {
-                "time": "9:00 PM+",
-                "loc": "Mayor's Manor (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Autumn's Bounty, Glazed Yams, Green Tea, Hot Pepper, Vegetable Medley\n\ud83d\udd52 Routine: Mayor's Manor -> Town Square / Pierre's Store -> Saloon (5pm-9pm)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Lewis.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Mayor's Manor",
-                "x": 58.0,
-                "y": 58.0
-            },
-            {
-                "label": "\u26f2 Town Square & Gardens",
-                "x": 53.0,
-                "y": 46.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (5pm-9pm)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM \u2013 10:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f Friday (CC)",
-                "loc": "Community Center Vault & Office (12:00 PM \u2013 4:00 PM) -> The Stardrop Saloon"
-            },
-            {
-                "cond": "\u2764\ufe0f Marnie Visits",
-                "loc": "Frequently found chatting with Marnie at her ranch or The Stardrop Saloon"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM \u2013 10:00 PM)",
-        "variations": "\ud83c\udfdb\ufe0f Friday (CC): Community Center Vault & Office (12:00 PM \u2013 4:00 PM) -> The Stardrop Saloon; \u2764\ufe0f Marnie Visits: Frequently found chatting with Marnie at her ranch or The Stardrop Saloon; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_lewis",
+      "name": "Lewis",
+      "category": "Townsperson",
+      "birthday": "Spring 7",
+      "home": "Mayor's Manor",
+      "source": "🏠 Mayor's Manor | 🎂 Spring 7",
+      "loved": "Autumn's Bounty, Glazed Yams, Green Tea, Hot Pepper, Vegetable Medley",
+      "liked": "Blueberry, Cactus Fruit, Coconut, Universal Likes",
+      "schedule": "Mayor's Manor morning; Town square / Pierre's store / Blacksmith 1pm-4pm; Stardrop Saloon 5pm-9pm.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Mayor's Manor (Office / Kitchen)"
+        },
+        {
+          "time": "9:00 AM – 1:00 PM",
+          "loc": "Mayor's Manor / Town Square gardens"
+        },
+        {
+          "time": "1:00 PM – 4:00 PM",
+          "loc": "Pierre's Store / Blacksmith / Town Square"
+        },
+        {
+          "time": "4:00 PM – 9:00 PM",
+          "loc": "The Stardrop Saloon / Marnie's Ranch (certain evenings)"
+        },
+        {
+          "time": "9:00 PM+",
+          "loc": "Mayor's Manor (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Autumn's Bounty, Glazed Yams, Green Tea, Hot Pepper, Vegetable Medley\n🕒 Routine: Mayor's Manor -> Town Square / Pierre's Store -> Saloon (5pm-9pm)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Lewis.png",
+      "mapPins": [
+        {
+          "label": "🏠 Mayor's Manor",
+          "x": 58.0,
+          "y": 58.0
+        },
+        {
+          "label": "⛲ Town Square & Gardens",
+          "x": 53.0,
+          "y": 46.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (5pm-9pm)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM – 10:00 PM)"
+        },
+        {
+          "cond": "🏛️ Friday (CC)",
+          "loc": "Community Center Vault & Office (12:00 PM – 4:00 PM) -> The Stardrop Saloon"
+        },
+        {
+          "cond": "❤️ Marnie Visits",
+          "loc": "Frequently found chatting with Marnie at her ranch or The Stardrop Saloon"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Mayor's Manor or visits The Stardrop Saloon (4:00 PM – 10:00 PM)",
+      "variations": "🏛️ Friday (CC): Community Center Vault & Office (12:00 PM – 4:00 PM) -> The Stardrop Saloon; ❤️ Marnie Visits: Frequently found chatting with Marnie at her ranch or The Stardrop Saloon; 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_linus",
-        "name": "Linus",
-        "category": "Townsperson",
-        "birthday": "Winter 3",
-        "home": "Tent (The Mountains)",
-        "source": "\ud83c\udfe0 Tent (The Mountains) | \ud83c\udf82 Winter 3",
-        "loved": "Blueberry Tart, Cactus Fruit, Coconut, Dish O' The Sea, Yam",
-        "liked": "All Eggs (except Void Egg), All Milk, All Fruit (except Cactus), All Forage (Chanterelle, Common Mushroom, Daffodil, Dandelion, Ginger, Hazelnut, Holly, Leek, Morel, Purple Mushroom, Snow Yam, Spring Onion, Wild Horseradish, Winter Root)",
-        "schedule": "Tent / campfire morning; Mountain lake cliff 10am-2pm; Mountain river 3pm-7pm; Spa exterior (Winter).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 10:00 AM",
-                "loc": "Tent & Campfire (The Mountains)"
-            },
-            {
-                "time": "10:00 AM \u2013 2:00 PM",
-                "loc": "Mountain Lake Cliff (near Mines entrance)"
-            },
-            {
-                "time": "2:00 PM \u2013 7:00 PM",
-                "loc": "Mountain River & Lake shore (Spa exterior in Winter)"
-            },
-            {
-                "time": "7:00 PM \u2013 10:00 PM",
-                "loc": "Tent Campfire (The Mountains)"
-            },
-            {
-                "time": "10:00 PM+",
-                "loc": "Linus' Tent (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Blueberry Tart, Cactus Fruit, Coconut, Dish O' The Sea, Yam\n\ud83d\udd52 Routine: Tent & Campfire -> Mountain Lake Cliff -> Mountain Lake Shore",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Linus.png",
-        "mapPins": [
-            {
-                "label": "\u26fa Linus' Tent & Campfire",
-                "x": 65.0,
-                "y": 20.0
-            },
-            {
-                "label": "\ud83c\udfde\ufe0f Mountain Lake Cliff",
-                "x": 68.0,
-                "y": 24.0
-            },
-            {
-                "label": "\u2668\ufe0f Spa / Bathhouse (Winter)",
-                "x": 54.0,
-                "y": 14.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Mountain tent or stands under large pine tree near Lake"
-            },
-            {
-                "cond": "\u2600\ufe0f Summer",
-                "loc": "Sits by Mountain Lake & Railroad fireside (11:00 AM \u2013 7:00 PM)"
-            },
-            {
-                "cond": "\u2744\ufe0f Winter",
-                "loc": "Warms up inside Spa/Bathhouse entrance lobby (2:00 PM \u2013 7:00 PM)"
-            }
-        ],
-        "rain": "Mountain tent or stands under large pine tree near Lake",
-        "variations": "\u2600\ufe0f Summer: Sits by Mountain Lake & Railroad fireside (11:00 AM \u2013 7:00 PM); \u2744\ufe0f Winter: Warms up inside Spa/Bathhouse entrance lobby (2:00 PM \u2013 7:00 PM)"
+      "id": "npc_linus",
+      "name": "Linus",
+      "category": "Townsperson",
+      "birthday": "Winter 3",
+      "home": "Tent (The Mountains)",
+      "source": "🏠 Tent (The Mountains) | 🎂 Winter 3",
+      "loved": "Blueberry Tart, Cactus Fruit, Coconut, Dish O' The Sea, Yam",
+      "liked": "All Eggs (except Void Egg), All Milk, All Fruit (except Cactus), All Forage (Chanterelle, Common Mushroom, Daffodil, Dandelion, Ginger, Hazelnut, Holly, Leek, Morel, Purple Mushroom, Snow Yam, Spring Onion, Wild Horseradish, Winter Root)",
+      "schedule": "Tent / campfire morning; Mountain lake cliff 10am-2pm; Mountain river 3pm-7pm; Spa exterior (Winter).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 10:00 AM",
+          "loc": "Tent & Campfire (The Mountains)"
+        },
+        {
+          "time": "10:00 AM – 2:00 PM",
+          "loc": "Mountain Lake Cliff (near Mines entrance)"
+        },
+        {
+          "time": "2:00 PM – 7:00 PM",
+          "loc": "Mountain River & Lake shore (Spa exterior in Winter)"
+        },
+        {
+          "time": "7:00 PM – 10:00 PM",
+          "loc": "Tent Campfire (The Mountains)"
+        },
+        {
+          "time": "10:00 PM+",
+          "loc": "Linus' Tent (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Blueberry Tart, Cactus Fruit, Coconut, Dish O' The Sea, Yam\n🕒 Routine: Tent & Campfire -> Mountain Lake Cliff -> Mountain Lake Shore",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Linus.png",
+      "mapPins": [
+        {
+          "label": "⛺ Linus' Tent & Campfire",
+          "x": 65.0,
+          "y": 20.0
+        },
+        {
+          "label": "🏞️ Mountain Lake Cliff",
+          "x": 68.0,
+          "y": 24.0
+        },
+        {
+          "label": "♨️ Spa / Bathhouse (Winter)",
+          "x": 54.0,
+          "y": 14.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Mountain tent or stands under large pine tree near Lake"
+        },
+        {
+          "cond": "☀️ Summer",
+          "loc": "Sits by Mountain Lake & Railroad fireside (11:00 AM – 7:00 PM)"
+        },
+        {
+          "cond": "❄️ Winter",
+          "loc": "Warms up inside Spa/Bathhouse entrance lobby (2:00 PM – 7:00 PM)"
+        }
+      ],
+      "rain": "Mountain tent or stands under large pine tree near Lake",
+      "variations": "☀️ Summer: Sits by Mountain Lake & Railroad fireside (11:00 AM – 7:00 PM); ❄️ Winter: Warms up inside Spa/Bathhouse entrance lobby (2:00 PM – 7:00 PM)"
     },
     {
-        "id": "npc_marnie",
-        "name": "Marnie",
-        "category": "Townsperson",
-        "birthday": "Fall 18",
-        "home": "Marnie's Ranch",
-        "source": "\ud83c\udfe0 Marnie's Ranch | \ud83c\udf82 Fall 18",
-        "loved": "Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie",
-        "liked": "All Eggs (except Void Egg), All Milk, Quartz, Universal Likes",
-        "schedule": "Ranch shop counter 9am-4pm (closed Mon/Tue); Stardrop Saloon 7pm-11pm nightly; Aerobics Tuesday.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Marnie's Ranch (Kitchen)"
-            },
-            {
-                "time": "9:00 AM \u2013 4:00 PM",
-                "loc": "Marnie's Ranch Counter (Open Wed-Sun, Closed Mon/Tue) / Aerobics (Tue)"
-            },
-            {
-                "time": "4:00 PM \u2013 7:00 PM",
-                "loc": "Marnie's Ranch (Barn / Living Room)"
-            },
-            {
-                "time": "7:00 PM \u2013 11:00 PM",
-                "loc": "The Stardrop Saloon (Every night)"
-            },
-            {
-                "time": "11:00 PM+",
-                "loc": "Marnie's Ranch (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie\n\ud83d\udd52 Routine: Marnie's Ranch (shop Wed-Sun) -> Pierre's Aerobics (Tue) -> Saloon (7pm-11pm nightly)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Marnie.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Marnie's Ranch (Shop Wed-Sun)",
-                "x": 39.0,
-                "y": 62.0
-            },
-            {
-                "label": "\ud83d\uded2 Pierre's Store (Aerobics Tue)",
-                "x": 52.0,
-                "y": 42.5
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (7pm-11pm)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Marnie's Ranch living room / tending farm animals"
-            },
-            {
-                "cond": "\ud83d\udd12 Mon / Tue",
-                "loc": "Ranch shop closed (Tue: Aerobics at Pierre's 1:00 PM \u2013 6:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf7b Evenings",
-                "loc": "Visits The Stardrop Saloon with Mayor Lewis (7:00 PM \u2013 11:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Marnie's Ranch living room / tending farm animals",
-        "variations": "\ud83d\udd12 Mon / Tue: Ranch shop closed (Tue: Aerobics at Pierre's 1:00 PM \u2013 6:00 PM); \ud83c\udf7b Evenings: Visits The Stardrop Saloon with Mayor Lewis (7:00 PM \u2013 11:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_marnie",
+      "name": "Marnie",
+      "category": "Townsperson",
+      "birthday": "Fall 18",
+      "home": "Marnie's Ranch",
+      "source": "🏠 Marnie's Ranch | 🎂 Fall 18",
+      "loved": "Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie",
+      "liked": "All Eggs (except Void Egg), All Milk, Quartz, Universal Likes",
+      "schedule": "Ranch shop counter 9am-4pm (closed Mon/Tue); Stardrop Saloon 7pm-11pm nightly; Aerobics Tuesday.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Marnie's Ranch (Kitchen)"
+        },
+        {
+          "time": "9:00 AM – 4:00 PM",
+          "loc": "Marnie's Ranch Counter (Open Wed-Sun, Closed Mon/Tue) / Aerobics (Tue)"
+        },
+        {
+          "time": "4:00 PM – 7:00 PM",
+          "loc": "Marnie's Ranch (Barn / Living Room)"
+        },
+        {
+          "time": "7:00 PM – 11:00 PM",
+          "loc": "The Stardrop Saloon (Every night)"
+        },
+        {
+          "time": "11:00 PM+",
+          "loc": "Marnie's Ranch (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie\n🕒 Routine: Marnie's Ranch (shop Wed-Sun) -> Pierre's Aerobics (Tue) -> Saloon (7pm-11pm nightly)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Marnie.png",
+      "mapPins": [
+        {
+          "label": "🏠 Marnie's Ranch (Shop Wed-Sun)",
+          "x": 39.0,
+          "y": 62.0
+        },
+        {
+          "label": "🛒 Pierre's Store (Aerobics Tue)",
+          "x": 52.0,
+          "y": 42.5
+        },
+        {
+          "label": "🍻 Stardrop Saloon (7pm-11pm)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Marnie's Ranch living room / tending farm animals"
+        },
+        {
+          "cond": "🔒 Mon / Tue",
+          "loc": "Ranch shop closed (Tue: Aerobics at Pierre's 1:00 PM – 6:00 PM)"
+        },
+        {
+          "cond": "🍻 Evenings",
+          "loc": "Visits The Stardrop Saloon with Mayor Lewis (7:00 PM – 11:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Marnie's Ranch living room / tending farm animals",
+      "variations": "🔒 Mon / Tue: Ranch shop closed (Tue: Aerobics at Pierre's 1:00 PM – 6:00 PM); 🍻 Evenings: Visits The Stardrop Saloon with Mayor Lewis (7:00 PM – 11:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_pam",
-        "name": "Pam",
-        "category": "Townsperson",
-        "birthday": "Spring 18",
-        "home": "Trailer (near Bus Stop)",
-        "source": "\ud83c\udfe0 Trailer | \ud83c\udf82 Spring 18",
-        "loved": "Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada",
-        "liked": "All Fruit (except Cactus), Daffodil, Universal Likes (except Octopus/Squid)",
-        "schedule": "Trailer morning; Bus Stop 10am-5pm (once bus repaired); Stardrop Saloon 5pm-12am nightly; JojaMart (before bus).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 8:30 AM",
-                "loc": "Trailer (near Bus Stop)"
-            },
-            {
-                "time": "8:30 AM \u2013 10:00 AM",
-                "loc": "Walks to Bus Stop (or JojaMart before bus repaired)"
-            },
-            {
-                "time": "10:00 AM \u2013 5:00 PM",
-                "loc": "Bus Stop (Driving Bus to Calico Desert)"
-            },
-            {
-                "time": "5:00 PM \u2013 12:00 AM",
-                "loc": "The Stardrop Saloon (Sitting at the bar counter)"
-            },
-            {
-                "time": "12:00 AM+",
-                "loc": "Trailer (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada\n\ud83d\udd52 Routine: Trailer -> Bus Stop (10am-5pm) -> Stardrop Saloon (5pm-12am nightly)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pam.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: Trailer",
-                "x": 59.0,
-                "y": 50.0
-            },
-            {
-                "label": "\ud83d\ude8c Bus Stop (10am-5pm)",
-                "x": 45.0,
-                "y": 42.0
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (5pm-12am)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Trailer in morning -> The Stardrop Saloon (12:00 PM \u2013 12:00 AM if Bus broken)"
-            },
-            {
-                "cond": "\ud83d\ude8c Bus Repaired",
-                "loc": "Drives Calico Desert Bus (10:10 AM \u2013 5:00 PM) -> Saloon (5:00 PM \u2013 12:00 AM)"
-            },
-            {
-                "cond": "\ud83e\ude7a Spring 25",
-                "loc": "Annual clinic checkup at Harvey's Medical Clinic (11:30 AM \u2013 4:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Trailer in morning -> The Stardrop Saloon (12:00 PM \u2013 12:00 AM if Bus broken)",
-        "variations": "\ud83d\ude8c Bus Repaired: Drives Calico Desert Bus (10:10 AM \u2013 5:00 PM) -> Saloon (5:00 PM \u2013 12:00 AM); \ud83e\ude7a Spring 25: Annual clinic checkup at Harvey's Medical Clinic (11:30 AM \u2013 4:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_pam",
+      "name": "Pam",
+      "category": "Townsperson",
+      "birthday": "Spring 18",
+      "home": "Trailer (near Bus Stop)",
+      "source": "🏠 Trailer | 🎂 Spring 18",
+      "loved": "Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada",
+      "liked": "All Fruit (except Cactus), Daffodil, Universal Likes (except Octopus/Squid)",
+      "schedule": "Trailer morning; Bus Stop 10am-5pm (once bus repaired); Stardrop Saloon 5pm-12am nightly; JojaMart (before bus).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 8:30 AM",
+          "loc": "Trailer (near Bus Stop)"
+        },
+        {
+          "time": "8:30 AM – 10:00 AM",
+          "loc": "Walks to Bus Stop (or JojaMart before bus repaired)"
+        },
+        {
+          "time": "10:00 AM – 5:00 PM",
+          "loc": "Bus Stop (Driving Bus to Calico Desert)"
+        },
+        {
+          "time": "5:00 PM – 12:00 AM",
+          "loc": "The Stardrop Saloon (Sitting at the bar counter)"
+        },
+        {
+          "time": "12:00 AM+",
+          "loc": "Trailer (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada\n🕒 Routine: Trailer -> Bus Stop (10am-5pm) -> Stardrop Saloon (5pm-12am nightly)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pam.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: Trailer",
+          "x": 59.0,
+          "y": 50.0
+        },
+        {
+          "label": "🚌 Bus Stop (10am-5pm)",
+          "x": 45.0,
+          "y": 42.0
+        },
+        {
+          "label": "🍻 Stardrop Saloon (5pm-12am)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Trailer in morning -> The Stardrop Saloon (12:00 PM – 12:00 AM if Bus broken)"
+        },
+        {
+          "cond": "🚌 Bus Repaired",
+          "loc": "Drives Calico Desert Bus (10:10 AM – 5:00 PM) -> Saloon (5:00 PM – 12:00 AM)"
+        },
+        {
+          "cond": "🩺 Spring 25",
+          "loc": "Annual clinic checkup at Harvey's Medical Clinic (11:30 AM – 4:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Trailer in morning -> The Stardrop Saloon (12:00 PM – 12:00 AM if Bus broken)",
+      "variations": "🚌 Bus Repaired: Drives Calico Desert Bus (10:10 AM – 5:00 PM) -> Saloon (5:00 PM – 12:00 AM); 🩺 Spring 25: Annual clinic checkup at Harvey's Medical Clinic (11:30 AM – 4:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_pierre",
-        "name": "Pierre",
-        "category": "Townsperson",
-        "birthday": "Spring 26",
-        "home": "Pierre's General Store",
-        "source": "\ud83c\udfe0 Pierre's General Store | \ud83c\udf82 Spring 26",
-        "loved": "Fried Calamari",
-        "liked": "All Eggs (except Void Egg), All Milk, Daffodil, Dandelion, Universal Likes (except Fish/Corn/Garlic/Parsnip/Soup)",
-        "schedule": "Store counter 9am-5pm daily (closed Wed until Community Center completed); Stardrop Saloon Friday 5pm-10pm.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Pierre's General Store (Kitchen / Bedroom)"
-            },
-            {
-                "time": "9:00 AM \u2013 5:00 PM",
-                "loc": "Pierre's General Store Counter (Open daily, Wed closed until CC)"
-            },
-            {
-                "time": "5:00 PM \u2013 7:00 PM",
-                "loc": "Pierre's General Store (Living Room / Shelves)"
-            },
-            {
-                "time": "7:00 PM \u2013 10:00 PM",
-                "loc": "The Stardrop Saloon (Friday) / Pierre's Store"
-            },
-            {
-                "time": "10:00 PM+",
-                "loc": "Pierre's General Store (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Fried Calamari\n\ud83d\udd52 Routine: Pierre's General Store counter (9am-5pm) -> Saloon (Friday 5pm-10pm)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Pierre.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Pierre's Store (9am-5pm)",
-                "x": 52.0,
-                "y": 42.5
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (Fri)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Pierre's General Store behind counter (9:00 AM \u2013 5:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udfdb\ufe0f CC Restored",
-                "loc": "Pierre's Store open 7 days/week (including Wed); gathers with town in CC/shrine on Sun"
-            },
-            {
-                "cond": "\ud83c\udf7b Evenings",
-                "loc": "Visits The Stardrop Saloon after 7:00 PM to socialize"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Pierre's General Store behind counter (9:00 AM \u2013 5:00 PM)",
-        "variations": "\ud83c\udfdb\ufe0f CC Restored: Pierre's Store open 7 days/week (including Wed); gathers with town in CC/shrine on Sun; \ud83c\udf7b Evenings: Visits The Stardrop Saloon after 7:00 PM to socialize; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_pierre",
+      "name": "Pierre",
+      "category": "Townsperson",
+      "birthday": "Spring 26",
+      "home": "Pierre's General Store",
+      "source": "🏠 Pierre's General Store | 🎂 Spring 26",
+      "loved": "Fried Calamari",
+      "liked": "All Eggs (except Void Egg), All Milk, Daffodil, Dandelion, Universal Likes (except Fish/Corn/Garlic/Parsnip/Soup)",
+      "schedule": "Store counter 9am-5pm daily (closed Wed until Community Center completed); Stardrop Saloon Friday 5pm-10pm.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Pierre's General Store (Kitchen / Bedroom)"
+        },
+        {
+          "time": "9:00 AM – 5:00 PM",
+          "loc": "Pierre's General Store Counter (Open daily, Wed closed until CC)"
+        },
+        {
+          "time": "5:00 PM – 7:00 PM",
+          "loc": "Pierre's General Store (Living Room / Shelves)"
+        },
+        {
+          "time": "7:00 PM – 10:00 PM",
+          "loc": "The Stardrop Saloon (Friday) / Pierre's Store"
+        },
+        {
+          "time": "10:00 PM+",
+          "loc": "Pierre's General Store (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Fried Calamari\n🕒 Routine: Pierre's General Store counter (9am-5pm) -> Saloon (Friday 5pm-10pm)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Pierre.png",
+      "mapPins": [
+        {
+          "label": "🏠 Pierre's Store (9am-5pm)",
+          "x": 52.0,
+          "y": 42.5
+        },
+        {
+          "label": "🍻 Stardrop Saloon (Fri)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Pierre's General Store behind counter (9:00 AM – 5:00 PM)"
+        },
+        {
+          "cond": "🏛️ CC Restored",
+          "loc": "Pierre's Store open 7 days/week (including Wed); gathers with town in CC/shrine on Sun"
+        },
+        {
+          "cond": "🍻 Evenings",
+          "loc": "Visits The Stardrop Saloon after 7:00 PM to socialize"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Pierre's General Store behind counter (9:00 AM – 5:00 PM)",
+      "variations": "🏛️ CC Restored: Pierre's Store open 7 days/week (including Wed); gathers with town in CC/shrine on Sun; 🍻 Evenings: Visits The Stardrop Saloon after 7:00 PM to socialize; 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_robin",
-        "name": "Robin",
-        "category": "Townsperson",
-        "birthday": "Fall 21",
-        "home": "24 Mountain Road (Carpenter's Shop)",
-        "source": "\ud83c\udfe0 24 Mountain Road | \ud83c\udf82 Fall 21",
-        "loved": "Goat Cheese, Peach, Spaghetti",
-        "liked": "All Milk, Hardwood, Quartz, Universal Likes",
-        "schedule": "Carpenter's shop counter 9am-5pm (closed Tuesday); Stardrop Saloon Friday 6pm-10pm dancing with Demetrius; Aerobics Tue.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Carpenter's Shop (Kitchen / Bedroom)"
-            },
-            {
-                "time": "9:00 AM \u2013 5:00 PM",
-                "loc": "Carpenter's Shop Counter (Open daily except Tuesday) / Aerobics (Tue)"
-            },
-            {
-                "time": "5:00 PM \u2013 7:00 PM",
-                "loc": "Mountain Road outside Carpenter's Shop"
-            },
-            {
-                "time": "7:00 PM \u2013 10:00 PM",
-                "loc": "The Stardrop Saloon (Friday dancing with Demetrius) / Carpenter's Shop"
-            },
-            {
-                "time": "10:00 PM+",
-                "loc": "Carpenter's Shop (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Goat Cheese, Peach, Spaghetti\n\ud83d\udd52 Routine: Carpenter's Shop (9am-5pm) -> Pierre's Aerobics (Tue) -> Saloon (Fri dancing with Demetrius)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Robin.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Carpenter's Shop (9am-5pm)",
-                "x": 62.0,
-                "y": 24.0
-            },
-            {
-                "label": "\ud83d\uded2 Pierre's Store (Aerobics Tue)",
-                "x": 52.0,
-                "y": 42.5
-            },
-            {
-                "label": "\ud83c\udf7b Stardrop Saloon (Fri Dance)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Carpenter's Shop behind counter (9:00 AM \u2013 5:00 PM)"
-            },
-            {
-                "cond": "\ud83e\uddd8 Tuesday",
-                "loc": "Carpenter Shop closed; attends aerobics at Pierre's Store (1:00 PM \u2013 6:00 PM)"
-            },
-            {
-                "cond": "\ud83d\udc83 Friday",
-                "loc": "Dances with Demetrius at The Stardrop Saloon (6:00 PM \u2013 9:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Carpenter's Shop behind counter (9:00 AM \u2013 5:00 PM)",
-        "variations": "\ud83e\uddd8 Tuesday: Carpenter Shop closed; attends aerobics at Pierre's Store (1:00 PM \u2013 6:00 PM); \ud83d\udc83 Friday: Dances with Demetrius at The Stardrop Saloon (6:00 PM \u2013 9:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_robin",
+      "name": "Robin",
+      "category": "Townsperson",
+      "birthday": "Fall 21",
+      "home": "24 Mountain Road (Carpenter's Shop)",
+      "source": "🏠 24 Mountain Road | 🎂 Fall 21",
+      "loved": "Goat Cheese, Peach, Spaghetti",
+      "liked": "All Milk, Hardwood, Quartz, Universal Likes",
+      "schedule": "Carpenter's shop counter 9am-5pm (closed Tuesday); Stardrop Saloon Friday 6pm-10pm dancing with Demetrius; Aerobics Tue.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Carpenter's Shop (Kitchen / Bedroom)"
+        },
+        {
+          "time": "9:00 AM – 5:00 PM",
+          "loc": "Carpenter's Shop Counter (Open daily except Tuesday) / Aerobics (Tue)"
+        },
+        {
+          "time": "5:00 PM – 7:00 PM",
+          "loc": "Mountain Road outside Carpenter's Shop"
+        },
+        {
+          "time": "7:00 PM – 10:00 PM",
+          "loc": "The Stardrop Saloon (Friday dancing with Demetrius) / Carpenter's Shop"
+        },
+        {
+          "time": "10:00 PM+",
+          "loc": "Carpenter's Shop (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Goat Cheese, Peach, Spaghetti\n🕒 Routine: Carpenter's Shop (9am-5pm) -> Pierre's Aerobics (Tue) -> Saloon (Fri dancing with Demetrius)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Robin.png",
+      "mapPins": [
+        {
+          "label": "🏠 Carpenter's Shop (9am-5pm)",
+          "x": 62.0,
+          "y": 24.0
+        },
+        {
+          "label": "🛒 Pierre's Store (Aerobics Tue)",
+          "x": 52.0,
+          "y": 42.5
+        },
+        {
+          "label": "🍻 Stardrop Saloon (Fri Dance)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Carpenter's Shop behind counter (9:00 AM – 5:00 PM)"
+        },
+        {
+          "cond": "🧘 Tuesday",
+          "loc": "Carpenter Shop closed; attends aerobics at Pierre's Store (1:00 PM – 6:00 PM)"
+        },
+        {
+          "cond": "💃 Friday",
+          "loc": "Dances with Demetrius at The Stardrop Saloon (6:00 PM – 9:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Carpenter's Shop behind counter (9:00 AM – 5:00 PM)",
+      "variations": "🧘 Tuesday: Carpenter Shop closed; attends aerobics at Pierre's Store (1:00 PM – 6:00 PM); 💃 Friday: Dances with Demetrius at The Stardrop Saloon (6:00 PM – 9:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_sandy",
-        "name": "Sandy",
-        "category": "Townsperson",
-        "birthday": "Fall 15",
-        "home": "Oasis Store (Calico Desert)",
-        "source": "\ud83c\udfe0 Oasis Store (Calico Desert) | \ud83c\udf82 Fall 15",
-        "loved": "Crocus, Daffodil, Mango Sticky Rice, Sweet Pea",
-        "liked": "All Fruit (except Coconut), Goat Milk, Large Goat Milk, Quartz, Wool",
-        "schedule": "Always located behind the counter at the Oasis shop in the Calico Desert (9am-11:50pm).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Oasis Store (Calico Desert)"
-            },
-            {
-                "time": "9:00 AM \u2013 11:50 PM",
-                "loc": "Oasis Store Counter (Calico Desert, open 7 days a week)"
-            },
-            {
-                "time": "11:50 PM+",
-                "loc": "Oasis Store (Calico Desert)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Crocus, Daffodil, Mango Sticky Rice, Sweet Pea\n\ud83d\udd52 Routine: Inside Oasis Store at shop counter in Calico Desert (9am-11:50pm daily)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Sandy.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udf35 Oasis Store (Calico Desert)",
-                "x": 15.0,
-                "y": 15.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Oasis Store in Calico Desert (9:00 AM \u2013 11:50 PM, 7 days/week)"
-            },
-            {
-                "cond": "\ud83c\udf35 All Times",
-                "loc": "Always inside the Oasis shop; Emily visits her on Fall 15 (Sandy's birthday)"
-            }
-        ],
-        "rain": "Oasis Store in Calico Desert (9:00 AM \u2013 11:50 PM, 7 days/week)",
-        "variations": "\ud83c\udf35 All Times: Always inside the Oasis shop; Emily visits her on Fall 15 (Sandy's birthday)"
+      "id": "npc_sandy",
+      "name": "Sandy",
+      "category": "Townsperson",
+      "birthday": "Fall 15",
+      "home": "Oasis Store (Calico Desert)",
+      "source": "🏠 Oasis Store (Calico Desert) | 🎂 Fall 15",
+      "loved": "Crocus, Daffodil, Mango Sticky Rice, Sweet Pea",
+      "liked": "All Fruit (except Coconut), Goat Milk, Large Goat Milk, Quartz, Wool",
+      "schedule": "Always located behind the counter at the Oasis shop in the Calico Desert (9am-11:50pm).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Oasis Store (Calico Desert)"
+        },
+        {
+          "time": "9:00 AM – 11:50 PM",
+          "loc": "Oasis Store Counter (Calico Desert, open 7 days a week)"
+        },
+        {
+          "time": "11:50 PM+",
+          "loc": "Oasis Store (Calico Desert)"
+        }
+      ],
+      "notes": "❤️ Loved: Crocus, Daffodil, Mango Sticky Rice, Sweet Pea\n🕒 Routine: Inside Oasis Store at shop counter in Calico Desert (9am-11:50pm daily)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Sandy.png",
+      "mapPins": [
+        {
+          "label": "🌵 Oasis Store (Calico Desert)",
+          "x": 15.0,
+          "y": 15.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Oasis Store in Calico Desert (9:00 AM – 11:50 PM, 7 days/week)"
+        },
+        {
+          "cond": "🌵 All Times",
+          "loc": "Always inside the Oasis shop; Emily visits her on Fall 15 (Sandy's birthday)"
+        }
+      ],
+      "rain": "Oasis Store in Calico Desert (9:00 AM – 11:50 PM, 7 days/week)",
+      "variations": "🌵 All Times: Always inside the Oasis shop; Emily visits her on Fall 15 (Sandy's birthday)"
     },
     {
-        "id": "npc_vincent",
-        "name": "Vincent",
-        "category": "Townsperson",
-        "birthday": "Spring 10",
-        "home": "1 Willow Lane",
-        "source": "\ud83c\udfe0 1 Willow Lane | \ud83c\udf82 Spring 10",
-        "loved": "Cranberry Candy, Ginger Ale, Grape, Pink Cake, Snail",
-        "liked": "Coconut, Daffodil, Universal Likes (except Artisan Goods/Vegetables)",
-        "schedule": "Museum library classroom with Penny (Tue/Wed/Fri 9am-2pm); Beach / town playground other days; Home evenings.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "1 Willow Lane (Bedroom)"
-            },
-            {
-                "time": "9:00 AM \u2013 2:00 PM",
-                "loc": "Museum Library (Class with Penny Tue/Wed/Fri) / Town Playground & Beach (Other days)"
-            },
-            {
-                "time": "2:00 PM \u2013 6:00 PM",
-                "loc": "Town Playground / Riverbank / Beach shore"
-            },
-            {
-                "time": "6:00 PM \u2013 8:00 PM",
-                "loc": "1 Willow Lane (Living Room)"
-            },
-            {
-                "time": "8:00 PM+",
-                "loc": "1 Willow Lane (Bedroom)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Cranberry Candy, Ginger Ale, Grape, Pink Cake, Snail\n\ud83d\udd52 Routine: Museum/Library Classroom (Tue/Wed/Fri) -> Town Playground -> The Beach",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Vincent.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Home: 1 Willow Lane",
-                "x": 48.0,
-                "y": 56.0
-            },
-            {
-                "label": "\ud83d\udcda Museum / Library (Tue/Wed/Fri)",
-                "x": 66.5,
-                "y": 66.0
-            },
-            {
-                "label": "\ud83c\udfd6\ufe0f The Beach / Playground",
-                "x": 54.0,
-                "y": 80.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "1 Willow Lane living room playing with toys all day"
-            },
-            {
-                "cond": "\ud83d\udcda Tue / Wed / Fri",
-                "loc": "Museum school lessons with Penny (9:00 AM \u2013 2:00 PM) then Town Playground"
-            },
-            {
-                "cond": "\ud83c\udfd6\ufe0f Summer (Sunny)",
-                "loc": "Plays in Beach sandbox near pier (10:00 AM \u2013 5:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "1 Willow Lane living room playing with toys all day",
-        "variations": "\ud83d\udcda Tue / Wed / Fri: Museum school lessons with Penny (9:00 AM \u2013 2:00 PM) then Town Playground; \ud83c\udfd6\ufe0f Summer (Sunny): Plays in Beach sandbox near pier (10:00 AM \u2013 5:00 PM); \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_vincent",
+      "name": "Vincent",
+      "category": "Townsperson",
+      "birthday": "Spring 10",
+      "home": "1 Willow Lane",
+      "source": "🏠 1 Willow Lane | 🎂 Spring 10",
+      "loved": "Cranberry Candy, Ginger Ale, Grape, Pink Cake, Snail",
+      "liked": "Coconut, Daffodil, Universal Likes (except Artisan Goods/Vegetables)",
+      "schedule": "Museum library classroom with Penny (Tue/Wed/Fri 9am-2pm); Beach / town playground other days; Home evenings.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "1 Willow Lane (Bedroom)"
+        },
+        {
+          "time": "9:00 AM – 2:00 PM",
+          "loc": "Museum Library (Class with Penny Tue/Wed/Fri) / Town Playground & Beach (Other days)"
+        },
+        {
+          "time": "2:00 PM – 6:00 PM",
+          "loc": "Town Playground / Riverbank / Beach shore"
+        },
+        {
+          "time": "6:00 PM – 8:00 PM",
+          "loc": "1 Willow Lane (Living Room)"
+        },
+        {
+          "time": "8:00 PM+",
+          "loc": "1 Willow Lane (Bedroom)"
+        }
+      ],
+      "notes": "❤️ Loved: Cranberry Candy, Ginger Ale, Grape, Pink Cake, Snail\n🕒 Routine: Museum/Library Classroom (Tue/Wed/Fri) -> Town Playground -> The Beach",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Vincent.png",
+      "mapPins": [
+        {
+          "label": "🏠 Home: 1 Willow Lane",
+          "x": 48.0,
+          "y": 56.0
+        },
+        {
+          "label": "📚 Museum / Library (Tue/Wed/Fri)",
+          "x": 66.5,
+          "y": 66.0
+        },
+        {
+          "label": "🏖️ The Beach / Playground",
+          "x": 54.0,
+          "y": 80.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "1 Willow Lane living room playing with toys all day"
+        },
+        {
+          "cond": "📚 Tue / Wed / Fri",
+          "loc": "Museum school lessons with Penny (9:00 AM – 2:00 PM) then Town Playground"
+        },
+        {
+          "cond": "🏖️ Summer (Sunny)",
+          "loc": "Plays in Beach sandbox near pier (10:00 AM – 5:00 PM)"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "1 Willow Lane living room playing with toys all day",
+      "variations": "📚 Tue / Wed / Fri: Museum school lessons with Penny (9:00 AM – 2:00 PM) then Town Playground; 🏖️ Summer (Sunny): Plays in Beach sandbox near pier (10:00 AM – 5:00 PM); 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_willy",
-        "name": "Willy",
-        "category": "Townsperson",
-        "birthday": "Summer 24",
-        "home": "Fish Shop (The Beach)",
-        "source": "\ud83c\udfe0 Fish Shop (The Beach) | \ud83c\udf82 Summer 24",
-        "loved": "Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon",
-        "liked": "Baked Fish, Carp Surprise, Chowder, Crispy Bass, Dish O' The Sea, Escargot, Fish Stew, Fish Taco, Fried Calamari, Fried Eel, Gold Bar, Salmon Dinner, Seafoam Pudding, Trout Soup",
-        "schedule": "Beach pier morning; Fish Shop counter 9am-5pm; Pier fishing 5pm-9pm (or Saloon eves); Saturday: Forest river 9am-2pm, Town river bridge to beach 2pm-7pm, Saloon 7pm-11pm.",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 9:00 AM",
-                "loc": "Beach Pier outside Fish Shop (Fishing)"
-            },
-            {
-                "time": "9:00 AM \u2013 5:00 PM",
-                "loc": "Willy's Fish Shop (Behind sales counter)"
-            },
-            {
-                "time": "5:00 PM \u2013 7:00 PM",
-                "loc": "Beach Pier outside shop (or Town River bridge on Sat)"
-            },
-            {
-                "time": "7:00 PM \u2013 11:00 PM",
-                "loc": "The Stardrop Saloon (Socializing / having a drink)"
-            },
-            {
-                "time": "11:00 PM+",
-                "loc": "Fish Shop Bedroom (Sleeping)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon\n\ud83d\udd52 Routine: Fish Shop (9am-5pm) -> Beach Pier -> Stardrop Saloon; Sat: Town River bridge to beach (2pm-7pm)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Willy.png",
-        "mapPins": [
-            {
-                "label": "\ud83c\udfe0 Fish Shop & Beach Pier",
-                "x": 58.0,
-                "y": 88.0
-            },
-            {
-                "label": "\ud83c\udfa3 Town River Bridge to Beach (Sat 2pm-7pm)",
-                "x": 56.0,
-                "y": 66.0
-            },
-            {
-                "label": "\ud83c\udf7b The Stardrop Saloon (Sat/Eves 7pm-11pm)",
-                "x": 55.0,
-                "y": 54.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Fishes off Beach pier in rain (6am-9am & 5pm-11pm); Fish Shop open 9am-5pm"
-            },
-            {
-                "cond": "\ud83c\udfa3 Sat Daytime",
-                "loc": "Fish Shop CLOSED; fishes at Forest river (9am-2pm), then Town River Bridge to Beach (2:00 PM \u2013 7:00 PM)"
-            },
-            {
-                "cond": "\ud83c\udf7b Sat Evening",
-                "loc": "Visits The Stardrop Saloon (7:00 PM \u2013 11:00 PM) -> returns home to Fish Shop"
-            },
-            {
-                "cond": "\ud83c\udf34 Island Resort",
-                "loc": "Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
-            }
-        ],
-        "rain": "Fishes off Beach pier in rain (6am-9am & 5pm-11pm); Fish Shop open 9am-5pm",
-        "variations": "\ud83c\udfa3 Sat Daytime: Fish Shop CLOSED; fishes at Forest river (9am-2pm), then Town River Bridge to Beach (2:00 PM \u2013 7:00 PM); \ud83c\udf7b Sat Evening: Visits The Stardrop Saloon (7:00 PM \u2013 11:00 PM) -> returns home to Fish Shop; \ud83c\udf34 Island Resort: Ginger Island Beach Resort (11:40 AM \u2013 6:00 PM on sunny days)"
+      "id": "npc_willy",
+      "name": "Willy",
+      "category": "Townsperson",
+      "birthday": "Summer 24",
+      "home": "Fish Shop (The Beach)",
+      "source": "🏠 Fish Shop (The Beach) | 🎂 Summer 24",
+      "loved": "Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon",
+      "liked": "Baked Fish, Carp Surprise, Chowder, Crispy Bass, Dish O' The Sea, Escargot, Fish Stew, Fish Taco, Fried Calamari, Fried Eel, Gold Bar, Salmon Dinner, Seafoam Pudding, Trout Soup",
+      "schedule": "Beach pier morning; Fish Shop counter 9am-5pm; Pier fishing 5pm-9pm (or Saloon eves); Saturday: Forest river 9am-2pm, Town river bridge to beach 2pm-7pm, Saloon 7pm-11pm.",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 9:00 AM",
+          "loc": "Beach Pier outside Fish Shop (Fishing)"
+        },
+        {
+          "time": "9:00 AM – 5:00 PM",
+          "loc": "Willy's Fish Shop (Behind sales counter)"
+        },
+        {
+          "time": "5:00 PM – 7:00 PM",
+          "loc": "Beach Pier outside shop (or Town River bridge on Sat)"
+        },
+        {
+          "time": "7:00 PM – 11:00 PM",
+          "loc": "The Stardrop Saloon (Socializing / having a drink)"
+        },
+        {
+          "time": "11:00 PM+",
+          "loc": "Fish Shop Bedroom (Sleeping)"
+        }
+      ],
+      "notes": "❤️ Loved: Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon\n🕒 Routine: Fish Shop (9am-5pm) -> Beach Pier -> Stardrop Saloon; Sat: Town River bridge to beach (2pm-7pm)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Willy.png",
+      "mapPins": [
+        {
+          "label": "🏠 Fish Shop & Beach Pier",
+          "x": 58.0,
+          "y": 88.0
+        },
+        {
+          "label": "🎣 Town River Bridge to Beach (Sat 2pm-7pm)",
+          "x": 56.0,
+          "y": 66.0
+        },
+        {
+          "label": "🍻 The Stardrop Saloon (Sat/Eves 7pm-11pm)",
+          "x": 55.0,
+          "y": 54.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Fishes off Beach pier in rain (6am-9am & 5pm-11pm); Fish Shop open 9am-5pm"
+        },
+        {
+          "cond": "🎣 Sat Daytime",
+          "loc": "Fish Shop CLOSED; fishes at Forest river (9am-2pm), then Town River Bridge to Beach (2:00 PM – 7:00 PM)"
+        },
+        {
+          "cond": "🍻 Sat Evening",
+          "loc": "Visits The Stardrop Saloon (7:00 PM – 11:00 PM) -> returns home to Fish Shop"
+        },
+        {
+          "cond": "🌴 Island Resort",
+          "loc": "Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
+        }
+      ],
+      "rain": "Fishes off Beach pier in rain (6am-9am & 5pm-11pm); Fish Shop open 9am-5pm",
+      "variations": "🎣 Sat Daytime: Fish Shop CLOSED; fishes at Forest river (9am-2pm), then Town River Bridge to Beach (2:00 PM – 7:00 PM); 🍻 Sat Evening: Visits The Stardrop Saloon (7:00 PM – 11:00 PM) -> returns home to Fish Shop; 🌴 Island Resort: Ginger Island Beach Resort (11:40 AM – 6:00 PM on sunny days)"
     },
     {
-        "id": "npc_wizard",
-        "name": "Wizard",
-        "category": "Townsperson",
-        "birthday": "Winter 17",
-        "home": "Wizard's Tower (Cindersap Forest)",
-        "source": "\ud83c\udfe0 Wizard's Tower | \ud83c\udf82 Winter 17",
-        "loved": "Book of Mysteries, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence",
-        "liked": "All Geode Minerals, Quartz, Universal Likes",
-        "schedule": "Always inside the Wizard's Tower in western Cindersap Forest (open 6am-11pm).",
-        "scheduleTable": [
-            {
-                "time": "6:00 AM \u2013 11:00 PM",
-                "loc": "Wizard's Tower (Western Cindersap Forest, open 6am-11pm daily)"
-            },
-            {
-                "time": "11:00 PM \u2013 6:00 AM",
-                "loc": "Wizard's Tower (Cauldron / Study)"
-            }
-        ],
-        "notes": "\u2764\ufe0f Loved: Book of Mysteries, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence\n\ud83d\udd52 Routine: Inside Wizard's Tower in western Cindersap Forest (6am-11pm daily)",
-        "img": "https://stardewvalleywiki.com/Special:FilePath/Wizard.png",
-        "mapPins": [
-            {
-                "label": "\ud83e\uddd9 Wizard's Tower (6am-11pm)",
-                "x": 24.0,
-                "y": 68.0
-            }
-        ],
-        "altTable": [
-            {
-                "cond": "\ud83c\udf27\ufe0f Rainy Days",
-                "loc": "Wizard's Tower in Cindersap Forest West (6:00 AM \u2013 11:00 PM)"
-            },
-            {
-                "cond": "\ud83d\udd2e All Times",
-                "loc": "Always inside Wizard's Tower behind cauldron / magic circle (except festival days)"
-            }
-        ],
-        "rain": "Wizard's Tower in Cindersap Forest West (6:00 AM \u2013 11:00 PM)",
-        "variations": "\ud83d\udd2e All Times: Always inside Wizard's Tower behind cauldron / magic circle (except festival days)"
+      "id": "npc_wizard",
+      "name": "Wizard",
+      "category": "Townsperson",
+      "birthday": "Winter 17",
+      "home": "Wizard's Tower (Cindersap Forest)",
+      "source": "🏠 Wizard's Tower | 🎂 Winter 17",
+      "loved": "Book of Mysteries, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence",
+      "liked": "All Geode Minerals, Quartz, Universal Likes",
+      "schedule": "Always inside the Wizard's Tower in western Cindersap Forest (open 6am-11pm).",
+      "scheduleTable": [
+        {
+          "time": "6:00 AM – 11:00 PM",
+          "loc": "Wizard's Tower (Western Cindersap Forest, open 6am-11pm daily)"
+        },
+        {
+          "time": "11:00 PM – 6:00 AM",
+          "loc": "Wizard's Tower (Cauldron / Study)"
+        }
+      ],
+      "notes": "❤️ Loved: Book of Mysteries, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence\n🕒 Routine: Inside Wizard's Tower in western Cindersap Forest (6am-11pm daily)",
+      "img": "https://stardewvalleywiki.com/Special:FilePath/Wizard.png",
+      "mapPins": [
+        {
+          "label": "🧙 Wizard's Tower (6am-11pm)",
+          "x": 24.0,
+          "y": 68.0
+        }
+      ],
+      "altTable": [
+        {
+          "cond": "🌧️ Rainy Days",
+          "loc": "Wizard's Tower in Cindersap Forest West (6:00 AM – 11:00 PM)"
+        },
+        {
+          "cond": "🔮 All Times",
+          "loc": "Always inside Wizard's Tower behind cauldron / magic circle (except festival days)"
+        }
+      ],
+      "rain": "Wizard's Tower in Cindersap Forest West (6:00 AM – 11:00 PM)",
+      "variations": "🔮 All Times: Always inside Wizard's Tower behind cauldron / magic circle (except festival days)"
     }
-]
+  ]
 };

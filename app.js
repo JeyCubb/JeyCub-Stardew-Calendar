@@ -2316,11 +2316,14 @@ function renderTrackerGridOnly() {
         const matchLocation = item.location && item.location.toLowerCase().includes(q);
         const matchZone = item.zone && item.zone.toLowerCase().includes(q);
         const matchType = item.type && item.type.toLowerCase().includes(q);
+        const matchBobber = item.bobber && item.bobber.toLowerCase().includes(q);
+        const matchBait = item.bait && item.bait.toLowerCase().includes(q);
+        const matchTackle = item.tackle && item.tackle.toLowerCase().includes(q);
         const matchSchedTable = item.scheduleTable && item.scheduleTable.some(s => (s.time && s.time.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
         const matchAltTable = item.altTable && item.altTable.some(s => (s.cond && s.cond.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
         const matchRain = item.rain && item.rain.toLowerCase().includes(q);
         const matchVariations = item.variations && item.variations.toLowerCase().includes(q);
-        if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchLocation && !matchZone && !matchType && !matchSchedTable && !matchAltTable && !matchRain && !matchVariations) {
+        if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchLocation && !matchZone && !matchType && !matchBobber && !matchBait && !matchTackle && !matchSchedTable && !matchAltTable && !matchRain && !matchVariations) {
           return false;
         }
       }
@@ -2474,6 +2477,13 @@ function renderTrackerGridOnly() {
       }
       if (diffText) {
         rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #34d399;">⚡</span> Difficulty</td><td class="t-col-val">${diffText}</td></tr>`;
+      }
+      if (item.bobber || item.tackle) {
+        const bobberVal = item.bobber || item.tackle;
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #f43f5e;">🪝</span> Bobber</td><td class="t-col-val" style="color: #fca5a5; font-weight: 500;">${bobberVal}</td></tr>`;
+      }
+      if (item.bait) {
+        rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #c084fc;">🪱</span> Bait</td><td class="t-col-val" style="color: #e9d5ff; font-weight: 500;">${item.bait}</td></tr>`;
       }
       if (limitText && limitText !== 'None') {
         rowsHtml += `<tr class="t-row-limit"><td class="t-col-key"><span class="t-key-icon" style="color: #f87171;">⚠️</span> Limit</td><td class="t-col-val">${limitText}</td></tr>`;
