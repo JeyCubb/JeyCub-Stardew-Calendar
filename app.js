@@ -1739,6 +1739,80 @@ function renderManagerList() {
       cropManagerList.appendChild(div);
     });
   }
+
+  // Update selection count badge
+  const countLabel = document.getElementById('manager-count-label');
+  if (countLabel) {
+    if (activeManagerTab === 'crops') {
+      const activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || DEFAULT_ACTIVE_CROPS;
+      countLabel.innerText = `${activeKeys.length} of ${MASTER_CROPS.length} crops selected`;
+    } else {
+      const activeKeys = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
+      countLabel.innerText = `${activeKeys.length} of ${MASTER_MACHINES.length} machines selected`;
+    }
+  }
+}
+
+// Select All & Deselect All Buttons
+const btnManagerSelectAll = document.getElementById('btn-manager-select-all');
+const btnManagerDeselectAll = document.getElementById('btn-manager-deselect-all');
+
+if (btnManagerSelectAll) {
+  btnManagerSelectAll.addEventListener('click', () => {
+    const query = cropSearchInput.value.toLowerCase().trim();
+    if (activeManagerTab === 'crops') {
+      let activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || DEFAULT_ACTIVE_CROPS;
+      const targetCrops = query 
+        ? MASTER_CROPS.filter(c => c.name.toLowerCase().includes(query) || c.type.toLowerCase().includes(query))
+        : MASTER_CROPS;
+      targetCrops.forEach(c => {
+        if (!activeKeys.includes(c.key)) activeKeys.push(c.key);
+      });
+      localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
+      populateCropDropdown();
+    } else {
+      let activeKeys = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
+      const targetMachines = query 
+        ? MASTER_MACHINES.filter(m => m.name.toLowerCase().includes(query) || m.type.toLowerCase().includes(query))
+        : MASTER_MACHINES;
+      targetMachines.forEach(m => {
+        if (!activeKeys.includes(m.key)) activeKeys.push(m.key);
+      });
+      localStorage.setItem('stardew_active_machines', JSON.stringify(activeKeys));
+      populateMachineDropdown();
+    }
+    renderManagerList();
+  });
+}
+
+if (btnManagerDeselectAll) {
+  btnManagerDeselectAll.addEventListener('click', () => {
+    const query = cropSearchInput.value.toLowerCase().trim();
+    if (activeManagerTab === 'crops') {
+      let activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || DEFAULT_ACTIVE_CROPS;
+      if (query) {
+        const targetCrops = MASTER_CROPS.filter(c => c.name.toLowerCase().includes(query) || c.type.toLowerCase().includes(query));
+        const removeKeys = targetCrops.map(c => c.key);
+        activeKeys = activeKeys.filter(k => !removeKeys.includes(k));
+      } else {
+        activeKeys = [];
+      }
+      localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
+      populateCropDropdown();
+    } else {
+      let activeKeys = JSON.parse(localStorage.getItem('stardew_active_machines')) || DEFAULT_ACTIVE_MACHINES;
+      if (query) {
+        const targetMachines = MASTER_MACHINES.filter(m => m.name.toLowerCase().includes(query) || m.type.toLowerCase().includes(query));
+        const removeKeys = targetMachines.map(m => m.key);
+        activeKeys = activeKeys.filter(k => !removeKeys.includes(k));
+      } else {
+        activeKeys = [];
+      }
+      localStorage.setItem('stardew_active_machines', JSON.stringify(activeKeys));
+      populateMachineDropdown();
+    }
+    renderManagerList();
+  });
 }
 
 // Switch Tab logic
