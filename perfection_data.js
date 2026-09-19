@@ -7229,8 +7229,12 @@ const PERFECTION_TRACKER_DATA = {
           "loc": "The Stardrop Saloon (Behind counter)"
         },
         {
-          "time": "12:30 AM+",
-          "loc": "Returns home to 2 Willow Lane"
+          "time": "12:30 AM – 1:00 AM",
+          "loc": "Leaves Saloon, walks home to 2 Willow Lane"
+        },
+        {
+          "time": "1:00 AM+",
+          "loc": "2 Willow Lane (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Cloth, Wool, Survival Burger, Parrot Egg\n🕒 Routine: Home Living Room -> Saloon Barmaid (4pm-12am)",
@@ -7881,7 +7885,11 @@ const PERFECTION_TRACKER_DATA = {
         },
         {
           "time": "11:00 PM – 2:00 AM",
-          "loc": "Carpenter's Basement (Working / Sleeping)"
+          "loc": "Carpenter's Basement (Working at computer / awake in room)"
+        },
+        {
+          "time": "2:00 AM+",
+          "loc": "Carpenter's Basement (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg, Frog Egg\n🕒 Routine: Carpenter's Basement (until 3pm) -> Mountain Lake Pier -> Saloon (Fri)",
@@ -7948,8 +7956,12 @@ const PERFECTION_TRACKER_DATA = {
           "loc": "The Stardrop Saloon (Every single night)"
         },
         {
-          "time": "11:00 PM+",
-          "loc": "Returns home to Marnie's Ranch to sleep"
+          "time": "11:00 PM – 11:40 PM",
+          "loc": "Leaves Saloon, walks home to Marnie's Ranch"
+        },
+        {
+          "time": "11:40 PM+",
+          "loc": "Marnie's Ranch (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Beer, Hot Pepper, Pepper Poppers, Pizza\n🕒 Routine: JojaMart (9am-5pm weekdays) -> Stardrop Saloon (5pm-11pm nightly)",
@@ -8091,8 +8103,12 @@ const PERFECTION_TRACKER_DATA = {
           "loc": "The Stardrop Saloon (Bottom-right table)"
         },
         {
-          "time": "12:00 AM+",
-          "loc": "Returns to Blacksmith Shop"
+          "time": "12:00 AM – 12:40 AM",
+          "loc": "Leaves Saloon, walks back to Blacksmith Shop"
+        },
+        {
+          "time": "12:40 AM+",
+          "loc": "Blacksmith Shop (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Gems (Amethyst, Aquamarine, Emerald, Jade, Ruby, Topaz), Gold/Iridium Bar, Omni Geode, Artichoke Dip, Fiddlehead Risotto\n🕒 Routine: Blacksmith Shop (9am-4pm) -> Saloon (7pm-12am nightly)",
@@ -8394,8 +8410,12 @@ const PERFECTION_TRACKER_DATA = {
           "loc": "The Stardrop Saloon (Behind the bar counter)"
         },
         {
-          "time": "12:00 AM+",
-          "loc": "The Stardrop Saloon (Bedroom)"
+          "time": "12:00 AM – 12:30 AM",
+          "loc": "The Stardrop Saloon (Closing up shop / standing in bar)"
+        },
+        {
+          "time": "12:30 AM+",
+          "loc": "The Stardrop Saloon (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Diamond, Escargot, Fish Taco, Orange, Tropical Curry\n🕒 Routine: The Stardrop Saloon bar counter (12pm-12am daily)",
@@ -8993,8 +9013,12 @@ const PERFECTION_TRACKER_DATA = {
           "loc": "The Stardrop Saloon (Sitting at the bar counter)"
         },
         {
-          "time": "12:00 AM+",
-          "loc": "Trailer (Sleeping)"
+          "time": "12:00 AM – 12:40 AM",
+          "loc": "Leaves Saloon, walks back to Trailer"
+        },
+        {
+          "time": "12:40 AM+",
+          "loc": "Trailer (In Bed / Sleeping)"
         }
       ],
       "notes": "❤️ Loved: Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada\n🕒 Routine: Trailer -> Bus Stop (10am-5pm) -> Stardrop Saloon (5pm-12am nightly)",
@@ -9303,7 +9327,7 @@ const PERFECTION_TRACKER_DATA = {
       "source": "🏠 Fish Shop (The Beach) | 🎂 Summer 24",
       "loved": "Catfish, Diamond, Iridium Bar, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon",
       "liked": "Baked Fish, Carp Surprise, Chowder, Crispy Bass, Dish O' The Sea, Escargot, Fish Stew, Fish Taco, Fried Calamari, Fried Eel, Gold Bar, Salmon Dinner, Seafoam Pudding, Trout Soup",
-      "schedule": "Fish Shop counter 9am–5pm; Pier fishing 6am–9am & 5pm–11pm; Sat Saloon 7pm–11pm; bed at 11:00pm.",
+      "schedule": "Fish Shop counter 9am–5pm; Pier fishing 6am–9am & 5pm–10pm/11pm; inside Fish Shop until midnight; bed at 12:00 AM.",
       "scheduleTable": [
         {
           "time": "6:00 AM – 9:00 AM",
@@ -9314,11 +9338,15 @@ const PERFECTION_TRACKER_DATA = {
           "loc": "Willy's Fish Shop (Behind sales counter)"
         },
         {
-          "time": "5:00 PM – 11:00 PM",
+          "time": "5:00 PM – 10:00 PM",
           "loc": "Beach Pier outside shop (Fishing) [Sat: The Stardrop Saloon 7pm–11pm]"
         },
         {
-          "time": "11:00 PM+",
+          "time": "10:00 PM – 12:00 AM",
+          "loc": "Willy's Fish Shop (Standing inside shop / winding down)"
+        },
+        {
+          "time": "12:00 AM+",
           "loc": "Fish Shop Bedroom (In Bed / Sleeping)"
         }
       ],
@@ -9344,7 +9372,7 @@ const PERFECTION_TRACKER_DATA = {
       "altTable": [
         {
           "cond": "🌧️ Rainy Days",
-          "loc": "Fishes off Beach pier in rain (6am-9am & 5pm-11pm); Fish Shop open 9am-5pm"
+          "loc": "Fishes off Beach pier in rain (6am–9am & 5pm–11:20pm Saloon); Fish Shop open 9am–5pm; inside Fish Shop until 12:00 AM"
         },
         {
           "cond": "🎣 Sat Daytime",
