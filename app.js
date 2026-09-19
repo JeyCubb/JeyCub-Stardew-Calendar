@@ -2476,7 +2476,6 @@ function renderTrackerGridOnly() {
       const timeText = item.time || '';
       const weatherText = item.weather || '';
       const diffText = item.difficulty || '';
-      const limitText = item.limit || (isLegendary ? 'Legendary Fish: Can only be caught once per save file.' : '');
 
       let rowsHtml = '';
       if (seasonText) {
@@ -2514,9 +2513,6 @@ function renderTrackerGridOnly() {
       if (item.bait) {
         const baitContent = formatItemTextWithIcons(item.bait);
         rowsHtml += `<tr><td class="t-col-key"><span class="t-key-icon" style="color: #c084fc;">🪱</span> Bait</td><td class="t-col-val" style="color: #e9d5ff; font-weight: 500;">${baitContent}</td></tr>`;
-      }
-      if (limitText && limitText !== 'None') {
-        rowsHtml += `<tr class="t-row-limit"><td class="t-col-key"><span class="t-key-icon" style="color: #f87171;">⚠️</span> Limit</td><td class="t-col-val">${limitText}</td></tr>`;
       }
 
       detailsText = `<table class="tracker-info-table"><tbody>${rowsHtml}</tbody></table>`;
