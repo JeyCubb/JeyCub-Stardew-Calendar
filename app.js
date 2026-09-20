@@ -2098,8 +2098,8 @@ window.addEventListener('keydown', (e) => {
     if (m && m.style.display && m.style.display !== 'none') return;
   }
 
-  // Handle Ctrl + Arrow to toggle between Calendar and Tracker (excluding Planner)
-  if ((e.ctrlKey || e.metaKey) && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) {
+  // 1. Ctrl + Shift + Left/Right (or Up/Down): Switch between Calendar and Tracker views
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) {
     e.preventDefault();
     const currentMode = localStorage.getItem('stardew_view_mode') || 'calendar';
     if (currentMode === 'tracker') {
@@ -2110,10 +2110,67 @@ window.addEventListener('keydown', (e) => {
     return;
   }
 
+  // 2. Shift + Left/Right (no Ctrl): Switch between Tracker categories (Shipped, Crafting, Cooking, Fish, Museum, Walnuts, Villagers)
+  if (e.shiftKey && !e.ctrlKey && !e.metaKey && !e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+    e.preventDefault();
+    // If currently on calendar or planner, switch to tracker first or navigate tracker sheets
+    const currentMode = localStorage.getItem('stardew_view_mode') || 'calendar';
+    if (currentMode !== 'tracker') {
+      setAppViewMode('tracker');
+    }
+    const curIdx = TRACKER_SHEET_ORDER.indexOf(activeTrackerSheet);
+    if (curIdx !== -1) {
+      const nextIdx = e.key === 'ArrowLeft'
+        ? (curIdx - 1 + TRACKER_SHEET_ORDER.length) % TRACKER_SHEET_ORDER.length
+        : (curIdx + 1) % TRACKER_SHEET_ORDER.length;
+      switchTrackerSheet(TRACKER_SHEET_ORDER[nextIdx]);
+    }
+    return;
+  }
+
+  // 3. Ctrl + Left/Right (no Shift): Switch between Calendar seasons (Spring, Summer, Fall, Winter, with year increments)
+  if ((e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+    e.preventDefault();
+    const currentMode = localStorage.getItem('stardew_view_mode') || 'calendar';
+    if (currentMode !== 'calendar') {
+      setAppViewMode('calendar');
+    }
+    const seasons = ['spring', 'summer', 'fall', 'winter'];
+    let currentIdx = seasons.indexOf(currentSeason);
+    if (currentIdx === -1) currentIdx = 0;
+
+    if (e.key === 'ArrowRight') {
+      if (currentIdx === 3) { // Winter -> Spring (Next Year)
+        currentYear++;
+        yearDisplay.innerText = currentYear;
+        localStorage.setItem('stardew_current_year', currentYear);
+        saveSchedule();
+        switchSeason('spring');
+      } else {
+        switchSeason(seasons[currentIdx + 1]);
+      }
+    } else if (e.key === 'ArrowLeft') {
+      if (currentIdx === 0) { // Spring -> Winter (Previous Year)
+        if (currentYear > 1) {
+          currentYear--;
+          yearDisplay.innerText = currentYear;
+          localStorage.setItem('stardew_current_year', currentYear);
+          saveSchedule();
+          switchSeason('winter');
+        }
+      } else {
+        switchSeason(seasons[currentIdx - 1]);
+      }
+    }
+    return;
+  }
+
   // Ignore special hotkeys with ctrl/cmd/alt combos
   if (e.ctrlKey || e.metaKey || e.altKey) return;
 
-  // Handle Left and Right Arrow navigation between tabs
+  // Plain Left and Right Arrow navigation:
+  // In tracker mode: cycle tracker sheets
+  // In calendar mode (when not typing in an input): cycle seasons
   if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
     const currentMode = localStorage.getItem('stardew_view_mode') || 'calendar';
 
