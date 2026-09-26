@@ -1840,12 +1840,15 @@ tabBtnCrops.addEventListener('click', () => switchManagerTab('crops'));
 tabBtnMachines.addEventListener('click', () => switchManagerTab('machines'));
 
 
+let lastOpenedDay = 1;
+
 // Items & Machines Manager Modal Handlers
 window.openCropManager = function(tab, event) {
   if (event) {
     event.stopPropagation();
     event.preventDefault();
   }
+  lastOpenedDay = activeDay || 1;
   closeModal();
   switchManagerTab(tab || 'crops');
   if (cropManagerOverlay) {
@@ -1861,6 +1864,17 @@ window.closeCropManager = function(event) {
   if (cropManagerOverlay) {
     cropManagerOverlay.style.display = 'none';
   }
+};
+
+window.returnToSelectionModal = function(event) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+  if (cropManagerOverlay) {
+    cropManagerOverlay.style.display = 'none';
+  }
+  openModal(lastOpenedDay || activeDay || 1);
 };
 
 // Open Managers
