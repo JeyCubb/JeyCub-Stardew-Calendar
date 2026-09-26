@@ -2499,37 +2499,31 @@ function renderTrackerGridOnly() {
     // 1. Search Query Filter
     if (currentTrackerSearch) {
       const q = currentTrackerSearch.toLowerCase().trim();
-      if (activeTrackerSheet === 'villagers') {
-        const matchName = item.name && item.name.toLowerCase().includes(q);
-        if (!matchName) {
-          return false;
-        }
-      } else {
-        const matchName = item.name && item.name.toLowerCase().includes(q);
-        const matchSource = item.source && item.source.toLowerCase().includes(q);
-        const matchNotes = item.notes && item.notes.toLowerCase().includes(q);
-        const matchCategory = item.category && item.category.toLowerCase().includes(q);
-        const matchDetails = item.details && item.details.toLowerCase().includes(q);
-        const matchLoved = item.loved && item.loved.toLowerCase().includes(q);
-        const matchLiked = item.liked && item.liked.toLowerCase().includes(q);
-        const matchSchedule = item.schedule && item.schedule.toLowerCase().includes(q);
-        const matchBirthday = item.birthday && item.birthday.toLowerCase().includes(q);
-        const matchIngredients = item.ingredients && item.ingredients.toLowerCase().includes(q);
-        const matchBuffs = item.buffs && item.buffs.toLowerCase().includes(q);
-        const matchDesc = item.desc && item.desc.toLowerCase().includes(q);
-        const matchLocation = item.location && item.location.toLowerCase().includes(q);
-        const matchZone = item.zone && item.zone.toLowerCase().includes(q);
-        const matchType = item.type && item.type.toLowerCase().includes(q);
-        const matchBobber = item.bobber && item.bobber.toLowerCase().includes(q);
-        const matchBait = item.bait && item.bait.toLowerCase().includes(q);
-        const matchTackle = item.tackle && item.tackle.toLowerCase().includes(q);
-        const matchSchedTable = item.scheduleTable && item.scheduleTable.some(s => (s.time && s.time.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
-        const matchAltTable = item.altTable && item.altTable.some(s => (s.cond && s.cond.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
-        const matchRain = item.rain && item.rain.toLowerCase().includes(q);
-        const matchVariations = item.variations && item.variations.toLowerCase().includes(q);
-        if (!matchName && !matchSource && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchLocation && !matchZone && !matchType && !matchBobber && !matchBait && !matchTackle && !matchSchedTable && !matchAltTable && !matchRain && !matchVariations) {
-          return false;
-        }
+      const matchName = item.name && item.name.toLowerCase().includes(q);
+      const matchSource = item.source && item.source.toLowerCase().includes(q);
+      const matchHome = item.home && item.home.toLowerCase().includes(q);
+      const matchNotes = item.notes && item.notes.toLowerCase().includes(q);
+      const matchCategory = item.category && item.category.toLowerCase().includes(q);
+      const matchDetails = item.details && item.details.toLowerCase().includes(q);
+      const matchLoved = item.loved && item.loved.toLowerCase().includes(q);
+      const matchLiked = item.liked && item.liked.toLowerCase().includes(q);
+      const matchSchedule = item.schedule && item.schedule.toLowerCase().includes(q);
+      const matchBirthday = item.birthday && item.birthday.toLowerCase().includes(q);
+      const matchIngredients = item.ingredients && item.ingredients.toLowerCase().includes(q);
+      const matchBuffs = item.buffs && item.buffs.toLowerCase().includes(q);
+      const matchDesc = item.desc && item.desc.toLowerCase().includes(q);
+      const matchLocation = item.location && item.location.toLowerCase().includes(q);
+      const matchZone = item.zone && item.zone.toLowerCase().includes(q);
+      const matchType = item.type && item.type.toLowerCase().includes(q);
+      const matchBobber = item.bobber && item.bobber.toLowerCase().includes(q);
+      const matchBait = item.bait && item.bait.toLowerCase().includes(q);
+      const matchTackle = item.tackle && item.tackle.toLowerCase().includes(q);
+      const matchSchedTable = item.scheduleTable && item.scheduleTable.some(s => (s.time && s.time.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
+      const matchAltTable = item.altTable && item.altTable.some(s => (s.cond && s.cond.toLowerCase().includes(q)) || (s.loc && s.loc.toLowerCase().includes(q)));
+      const matchRain = item.rain && item.rain.toLowerCase().includes(q);
+      const matchVariations = item.variations && item.variations.toLowerCase().includes(q);
+      if (!matchName && !matchSource && !matchHome && !matchNotes && !matchCategory && !matchDetails && !matchLoved && !matchLiked && !matchSchedule && !matchBirthday && !matchIngredients && !matchBuffs && !matchDesc && !matchLocation && !matchZone && !matchType && !matchBobber && !matchBait && !matchTackle && !matchSchedTable && !matchAltTable && !matchRain && !matchVariations) {
+        return false;
       }
     }
 
