@@ -120,8 +120,8 @@ header {
 .view-tab-btn {
   background: transparent;
   color: var(--text-muted);
-  padding: 0.26rem 0.65rem;
-  font-size: 0.72rem;
+  padding: 0.32rem 0.75rem;
+  font-size: 0.9rem;
   font-weight: 600;
   border-radius: 7px;
   border: none;
@@ -143,7 +143,7 @@ header {
 .calendar-header-controls {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .calendar-controls-left {
@@ -153,8 +153,8 @@ header {
 }
 
 .label-toggle-btn {
-  padding: 0.28rem 0.65rem;
-  font-size: 0.72rem;
+  padding: 0.32rem 0.75rem;
+  font-size: 0.88rem;
   display: flex;
   align-items: center;
   gap: 0.35rem;
@@ -168,24 +168,24 @@ header {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-glass);
   border-radius: 8px;
-  padding: 0.28rem 0.65rem;
+  padding: 0.3rem 0.7rem;
 }
 
 .year-label {
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-muted);
 }
 
 .year-btn {
-  padding: 0.12rem 0.45rem !important;
-  font-size: 0.72rem !important;
+  padding: 0.15rem 0.5rem !important;
+  font-size: 0.88rem !important;
   border-radius: 4px !important;
 }
 
 .year-display {
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.98rem;
   min-width: 14px;
   text-align: center;
 }
@@ -199,12 +199,12 @@ header {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-glass);
   color: var(--text-muted);
-  padding: 0.28rem 0.72rem;
+  padding: 0.32rem 0.8rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   font-family: inherit;
 }
 
@@ -254,11 +254,11 @@ header {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-glass);
   color: var(--text-muted);
-  padding: 0.28rem 0.68rem;
+  padding: 0.32rem 0.78rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   transition: all 0.2s ease;
   font-family: inherit;
 }
@@ -277,10 +277,10 @@ header {
    MAIN CONTAINERS & CALENDAR LAYOUT
    ========================================================================== */
 .main-container {
-  max-width: 1500px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -872,13 +872,13 @@ header {
 }
 
 .tracker-title-group h2 {
-  font-size: 1.2rem;
+  font-size: 1.38rem;
   font-weight: 700;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
 }
 
 .tracker-title-group p {
-  font-size: 0.82rem;
+  font-size: 0.96rem;
   color: var(--text-muted);
 }
 
@@ -887,13 +887,13 @@ header {
 }
 
 #tracker-progress-count {
-  font-size: 1.15rem;
+  font-size: 1.32rem;
   font-weight: 700;
   color: var(--accent-gold);
 }
 
 .tracker-progress-sub {
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
   margin-top: 2px;
 }
@@ -933,9 +933,9 @@ header {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-glass);
   color: var(--text-muted);
-  padding: 0.25rem 0.65rem;
+  padding: 0.32rem 0.75rem;
   border-radius: 6px;
-  font-size: 0.76rem;
+  font-size: 0.94rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -952,13 +952,13 @@ header {
 }
 
 .tracker-search-input {
-  padding: 0.42rem 0.8rem;
+  padding: 0.46rem 0.9rem;
   border-radius: 8px;
   border: 1px solid var(--border-glass);
   background: rgba(255, 255, 255, 0.04);
   color: var(--text-main);
-  font-size: 0.82rem;
-  min-width: 220px;
+  font-size: 0.96rem;
+  min-width: 240px;
   font-family: inherit;
   outline: none;
 }
@@ -1051,14 +1051,14 @@ header {
   min-width: 0;
 }
 .tracker-card-badge {
-  font-size: 0.68rem;
+  font-size: 0.86rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.15rem;
 }
 .tracker-card-name {
-  font-size: 0.92rem;
+  font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0;
   line-height: 1.25;
@@ -1069,19 +1069,19 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.35rem;
 }
 .tracker-card-source {
-  font-size: 0.75rem;
+  font-size: 0.94rem;
   color: var(--text-muted);
   line-height: 1.35;
   width: 100%;
 }
 .tracker-card-notes {
-  font-size: 0.72rem;
+  font-size: 0.92rem;
   color: #cbd5e1;
-  opacity: 0.85;
-  line-height: 1.3;
+  opacity: 0.9;
+  line-height: 1.35;
   width: 100%;
 }
 
@@ -1090,9 +1090,9 @@ header {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  margin-top: 0.15rem;
-  margin-bottom: 0.2rem;
-  font-size: 0.74rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.92rem;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 6px;
@@ -1108,7 +1108,7 @@ header {
   background: rgba(255, 255, 255, 0.025);
 }
 .tracker-info-table .t-col-key {
-  padding: 3.5px 6px;
+  padding: 4.5px 8px;
   color: #cbd5e1;
   font-weight: 600;
   white-space: nowrap;
@@ -1116,20 +1116,21 @@ header {
   width: 1%;
   background: rgba(255, 255, 255, 0.045);
   border-right: 1px solid rgba(255, 255, 255, 0.06);
-  font-size: 0.71rem;
+  font-size: 0.9rem;
   user-select: none;
 }
 .tracker-info-table .t-key-icon {
   display: inline-block;
-  margin-right: 2px;
+  margin-right: 3px;
 }
 .tracker-info-table .t-col-val {
-  padding: 3.5px 8px;
+  padding: 4.5px 9px;
   color: #f1f5f9;
-  line-height: 1.35;
+  line-height: 1.38;
   vertical-align: top;
   word-break: break-word;
   width: 99%;
+  font-size: 0.92rem;
 }
 .tracker-info-table .t-row-limit td {
   background: rgba(239, 68, 68, 0.12) !important;
@@ -1137,10 +1138,12 @@ header {
 .tracker-info-table .t-row-limit .t-col-key {
   color: #fca5a5 !important;
   background: rgba(239, 68, 68, 0.18) !important;
+  font-size: 0.9rem;
 }
 .tracker-info-table .t-row-limit .t-col-val {
   color: #fecaca !important;
   font-weight: 600;
+  font-size: 0.92rem;
 }
 
 /* Villager Schedule Table Styles */
@@ -1151,8 +1154,8 @@ header {
 .villager-sched-table thead th.sched-table-header {
   background: rgba(59, 130, 246, 0.16);
   color: #93c5fd;
-  padding: 3.5px 7px;
-  font-size: 0.72rem;
+  padding: 4.5px 8px;
+  font-size: 0.9rem;
   font-weight: 700;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
@@ -1160,32 +1163,34 @@ header {
 }
 .villager-sched-table .sched-time-col {
   color: #fbbf24 !important;
-  font-size: 0.69rem !important;
+  font-size: 0.88rem !important;
   font-weight: 600 !important;
   white-space: nowrap !important;
   width: 1% !important;
   background: rgba(251, 191, 36, 0.06) !important;
   border-right: 1px solid rgba(255, 255, 255, 0.07) !important;
+  padding: 4.5px 8px;
 }
 .villager-sched-table .sched-loc-col {
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   color: #e2e8f0;
-  line-height: 1.35;
+  line-height: 1.38;
+  padding: 4.5px 8px;
 }
 
 .tracker-card-quote {
   font-style: italic;
   color: #94a3b8;
-  font-size: 0.72rem;
-  margin-top: 0.25rem;
-  line-height: 1.3;
-  padding: 2px 0 2px 7px;
+  font-size: 0.88rem;
+  margin-top: 0.3rem;
+  line-height: 1.35;
+  padding: 3px 0 3px 8px;
   border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .tracker-card-cb {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 5px;
   border: 2px solid rgba(255, 255, 255, 0.25);
   background: rgba(0, 0, 0, 0.3);
