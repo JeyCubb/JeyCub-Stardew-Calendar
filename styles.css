@@ -969,20 +969,14 @@ header {
 
 .tracker-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
   padding-bottom: 2rem;
   width: 100%;
   box-sizing: border-box;
 }
 
-@media (max-width: 1200px) {
-  .tracker-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .tracker-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -991,11 +985,11 @@ header {
 .tracker-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
-  border-radius: 10px;
-  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.55rem;
   cursor: pointer;
   user-select: none;
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
@@ -1006,7 +1000,7 @@ header {
 .tracker-card:hover {
   border-color: rgba(251, 191, 36, 0.6);
   background: rgba(30, 41, 59, 0.95);
-  transform: translateY(-4px) scale(1.04);
+  transform: translateY(-4px) scale(1.02);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7), 0 0 18px rgba(251, 191, 36, 0.22);
   z-index: 40;
 }
@@ -1019,7 +1013,7 @@ header {
   opacity: 1;
   border-color: rgba(34, 197, 94, 0.7);
   background: rgba(20, 45, 30, 0.95);
-  transform: translateY(-4px) scale(1.04);
+  transform: translateY(-4px) scale(1.02);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7), 0 0 18px rgba(34, 197, 94, 0.25);
   z-index: 40;
 }
@@ -1031,16 +1025,16 @@ header {
 .tracker-card-header {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.8rem;
   width: 100%;
   min-width: 0;
 }
 
 .tracker-card-icon {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
-  min-height: 38px;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  min-height: 46px;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid var(--border-glass);
   border-radius: 8px;
@@ -1049,7 +1043,7 @@ header {
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
-  padding: 2px;
+  padding: 3px;
 }
 .tracker-card-icon img {
   width: 100%;
@@ -1063,14 +1057,14 @@ header {
   min-width: 0;
 }
 .tracker-card-badge {
-  font-size: 0.86rem;
+  font-size: 1.15rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
 }
 .tracker-card-name {
-  font-size: 1.15rem;
+  font-size: 1.45rem;
   font-weight: 700;
   margin-bottom: 0;
   line-height: 1.25;
@@ -1081,19 +1075,19 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.45rem;
 }
 .tracker-card-source {
-  font-size: 0.94rem;
+  font-size: 1.24rem;
   color: var(--text-muted);
-  line-height: 1.35;
+  line-height: 1.38;
   width: 100%;
 }
 .tracker-card-notes {
-  font-size: 0.92rem;
+  font-size: 1.22rem;
   color: #cbd5e1;
-  opacity: 0.9;
-  line-height: 1.35;
+  opacity: 0.95;
+  line-height: 1.38;
   width: 100%;
 }
 
@@ -1102,12 +1096,12 @@ header {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  margin-top: 0.2rem;
-  margin-bottom: 0.25rem;
-  font-size: 0.92rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.22rem;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
 }
 .tracker-info-table tr td {
@@ -1120,7 +1114,7 @@ header {
   background: rgba(255, 255, 255, 0.025);
 }
 .tracker-info-table .t-col-key {
-  padding: 4.5px 8px;
+  padding: 6px 10px;
   color: #cbd5e1;
   font-weight: 600;
   white-space: nowrap;
@@ -1128,21 +1122,21 @@ header {
   width: 1%;
   background: rgba(255, 255, 255, 0.045);
   border-right: 1px solid rgba(255, 255, 255, 0.06);
-  font-size: 0.9rem;
+  font-size: 1.20rem;
   user-select: none;
 }
 .tracker-info-table .t-key-icon {
   display: inline-block;
-  margin-right: 3px;
+  margin-right: 4px;
 }
 .tracker-info-table .t-col-val {
-  padding: 4.5px 9px;
+  padding: 6px 12px;
   color: #f1f5f9;
-  line-height: 1.38;
+  line-height: 1.4;
   vertical-align: top;
   word-break: break-word;
   width: 99%;
-  font-size: 0.92rem;
+  font-size: 1.22rem;
 }
 .tracker-info-table .t-row-limit td {
   background: rgba(239, 68, 68, 0.12) !important;
@@ -1150,24 +1144,24 @@ header {
 .tracker-info-table .t-row-limit .t-col-key {
   color: #fca5a5 !important;
   background: rgba(239, 68, 68, 0.18) !important;
-  font-size: 0.9rem;
+  font-size: 1.20rem;
 }
 .tracker-info-table .t-row-limit .t-col-val {
   color: #fecaca !important;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 1.22rem;
 }
 
 /* Villager Schedule Table Styles */
 .villager-sched-table {
-  margin-top: 0.35rem;
-  margin-bottom: 0.25rem;
+  margin-top: 0.45rem;
+  margin-bottom: 0.35rem;
 }
 .villager-sched-table thead th.sched-table-header {
   background: rgba(59, 130, 246, 0.16);
   color: #93c5fd;
-  padding: 4.5px 8px;
-  font-size: 0.9rem;
+  padding: 6px 10px;
+  font-size: 1.20rem;
   font-weight: 700;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
@@ -1175,35 +1169,35 @@ header {
 }
 .villager-sched-table .sched-time-col {
   color: #fbbf24 !important;
-  font-size: 0.88rem !important;
+  font-size: 1.18rem !important;
   font-weight: 600 !important;
   white-space: nowrap !important;
   width: 1% !important;
   background: rgba(251, 191, 36, 0.06) !important;
   border-right: 1px solid rgba(255, 255, 255, 0.07) !important;
-  padding: 4.5px 8px;
+  padding: 6px 10px;
 }
 .villager-sched-table .sched-loc-col {
-  font-size: 0.9rem;
+  font-size: 1.20rem;
   color: #e2e8f0;
-  line-height: 1.38;
-  padding: 4.5px 8px;
+  line-height: 1.4;
+  padding: 6px 10px;
 }
 
 .tracker-card-quote {
   font-style: italic;
   color: #94a3b8;
-  font-size: 0.88rem;
-  margin-top: 0.3rem;
-  line-height: 1.35;
-  padding: 3px 0 3px 8px;
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.18rem;
+  margin-top: 0.35rem;
+  line-height: 1.38;
+  padding: 4px 0 4px 10px;
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .tracker-card-cb {
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
   border: 2px solid rgba(255, 255, 255, 0.25);
   background: rgba(0, 0, 0, 0.3);
   display: flex;
