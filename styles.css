@@ -1166,8 +1166,8 @@ header {
 .villager-sched-table thead th.sched-table-header {
   background: rgba(59, 130, 246, 0.16);
   color: #93c5fd;
-  padding: 6px 10px;
-  font-size: 1.00rem;
+  padding: 4px 8px;
+  font-size: 0.82rem;
   font-weight: 700;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
@@ -1175,19 +1175,19 @@ header {
 }
 .villager-sched-table .sched-time-col {
   color: #fbbf24 !important;
-  font-size: 0.98rem !important;
+  font-size: 0.80rem !important;
   font-weight: 600 !important;
   white-space: nowrap !important;
   width: 1% !important;
   background: rgba(251, 191, 36, 0.06) !important;
   border-right: 1px solid rgba(255, 255, 255, 0.07) !important;
-  padding: 6px 10px;
+  padding: 4px 8px;
 }
 .villager-sched-table .sched-loc-col {
-  font-size: 1.00rem;
+  font-size: 0.82rem;
   color: #e2e8f0;
-  line-height: 1.4;
-  padding: 6px 10px;
+  line-height: 1.35;
+  padding: 4px 8px;
 }
 
 .tracker-card-quote {
@@ -1897,12 +1897,12 @@ header {
   width: 28%;
   font-weight: 700;
   white-space: nowrap;
-  font-size: 0.98rem;
+  font-size: 0.80rem;
   letter-spacing: 0.01em;
 }
 .villager-alt-table .t-col-val.alt-loc-col {
-  font-size: 1.00rem;
-  line-height: 1.4;
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
 .villager-static-map-wrapper {
