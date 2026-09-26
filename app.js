@@ -1982,6 +1982,10 @@ window.toggleTaskCompleted = function(day, taskId, event) {
    PERFECTION TRACKER ENGINE
    ========================================================================== */
 let activeTrackerSheet = localStorage.getItem('stardew_active_tracker_sheet') || 'shipped';
+if (activeTrackerSheet === 'walnuts') {
+  activeTrackerSheet = 'shipped';
+  localStorage.setItem('stardew_active_tracker_sheet', 'shipped');
+}
 let currentTrackerFilter = localStorage.getItem(`stardew_tracker_filter_${activeTrackerSheet}`) || 'all';
 let currentTrackerSearch = '';
 
@@ -2036,7 +2040,7 @@ if (btnViewPlanner) btnViewPlanner.addEventListener('click', () => setAppViewMod
 
 // Sheet tab switching
 const trackerTabBtns = document.querySelectorAll('.tracker-tab-btn');
-const TRACKER_SHEET_ORDER = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'walnuts', 'villagers'];
+const TRACKER_SHEET_ORDER = ['shipped', 'crafting', 'cooking', 'fish', 'museum', 'villagers'];
 
 function switchTrackerSheet(sheetKey) {
   trackerTabBtns.forEach(b => b.classList.remove('active'));
@@ -2110,7 +2114,7 @@ window.addEventListener('keydown', (e) => {
     return;
   }
 
-  // 2. Shift + Left/Right (no Ctrl): Switch between Tracker categories (Shipped, Crafting, Cooking, Fish, Museum, Walnuts, Villagers)
+  // 2. Shift + Left/Right (no Ctrl): Switch between Tracker categories (Shipped, Crafting, Cooking, Fish, Museum, Villagers)
   if (e.shiftKey && !e.ctrlKey && !e.metaKey && !e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
     e.preventDefault();
     // If currently on calendar or planner, switch to tracker first or navigate tracker sheets
