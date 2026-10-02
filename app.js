@@ -79,6 +79,8 @@ const CROP_IMAGES = {
   'maple_tree': 'https://stardewvalleywiki.com/Special:FilePath/Maple_Seed.png',
   'pine_tree': 'https://stardewvalleywiki.com/Special:FilePath/Pine_Cone.png',
   'mystic_tree': 'https://stardewvalleywiki.com/Special:FilePath/Mystic_Tree_Seed.png',
+  'moss_tree': 'https://stardewvalleywiki.com/Special:FilePath/Mossy_Seed.png',
+  'moss': 'https://stardewvalleywiki.com/Special:FilePath/Moss.png',
 };
 
 const MACHINE_IMAGES = {
@@ -187,7 +189,8 @@ const MASTER_CROPS = [
   { key: 'oak_tree', name: 'Oak Tree', base: 24, regrow: 7, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
   { key: 'maple_tree', name: 'Maple Tree', base: 24, regrow: 9, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
   { key: 'pine_tree', name: 'Pine Tree', base: 24, regrow: 5, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
-  { key: 'mystic_tree', name: 'Mystic Tree', base: 24, regrow: 7, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' }
+  { key: 'mystic_tree', name: 'Mystic Tree', base: 24, regrow: 7, isTree: true, isWildTree: true, activeSeason: 'all', type: 'Tree' },
+  { key: 'moss_tree', name: 'Mossy Tree', base: 24, regrow: 3, isTree: true, isWildTree: true, isMossTree: true, activeSeason: 'all', type: 'Tree' }
 ];
 
 // Helper to calculate speed growth days dynamically
@@ -402,6 +405,8 @@ const ITEM_COLORS = {
   'maple_tree': '#ea580c',   // Maple orange
   'pine_tree': '#059669',    // Pine green
   'mystic_tree': '#db2777',   // Mystic pink
+  'moss_tree': '#4ade80',    // Moss green
+  'moss': '#4ade80',         // Moss green
   // Machines / yields
   'keg_wine': '#a21caf',     // Wine violet
   'keg_beer': '#b45309',     // Amber
@@ -451,7 +456,8 @@ function applyTaskItemColor(item, task) {
       }
     }
     if (!imageKey) {
-      if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) imageKey = 'solar_panel';
+      if (cleanLabel.includes('moss')) imageKey = 'moss_tree';
+      else if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) imageKey = 'solar_panel';
       else if (cleanLabel.includes('mushroom log')) imageKey = 'mushroom_log';
       else if (cleanLabel.includes('traveling') || cleanLabel.includes('merchant') || cleanLabel.includes('salesman') || cleanLabel.includes('cart')) imageKey = 'traveling_cart';
       else if (cleanLabel.includes('wine')) imageKey = 'keg_wine';
@@ -504,6 +510,9 @@ function getTaskIconUrl(task) {
         return CROP_IMAGES[crop.key];
       }
     }
+    if (cleanLabel.includes('moss')) {
+      return CROP_IMAGES['moss'] || 'https://stardewvalleywiki.com/Special:FilePath/Moss.png';
+    }
     if (cleanLabel.includes('solar panel') || cleanLabel.includes('battery')) {
       return 'https://stardewvalleywiki.com/mediawiki/images/2/25/Battery_Pack.png';
     }
@@ -555,6 +564,12 @@ function getTaskIconUrl(task) {
     }
     if (imageKey === 'pine_tree' && task.id && (task.id.startsWith('harvest') || task.stage === 'regrow' || (task.label && task.label.includes('Tar')))) {
       return MACHINE_IMAGES['tapper_pine'] || 'https://stardewvalleywiki.com/Special:FilePath/Pine_Tar.png';
+    }
+    if (imageKey === 'moss_tree') {
+      if (task.id && task.id.startsWith('plant')) {
+        return CROP_IMAGES['moss_tree'];
+      }
+      return CROP_IMAGES['moss'] || 'https://stardewvalleywiki.com/Special:FilePath/Moss.png';
     }
     if (imageKey === 'mahogany' && task.label && (task.label.includes('Mature') || task.label.includes('Ready') || task.label.includes('Hardwood') || task.label.includes('Harvested'))) {
       return CROP_IMAGES['hardwood'] || CROP_IMAGES['mahogany'];
@@ -756,6 +771,14 @@ window.openModal = function(day, event) {
     modalTasksSection.style.display = 'none';
   }
   
+  const selectedCropVal = document.getElementById('crop-select')?.value;
+  if (selectedCropVal && CROP_GROWTH_PRESETS[selectedCropVal]?.isWildTree) {
+    const fertSelect = document.getElementById('crop-fert');
+    if (fertSelect && fertSelect.value === 'none') {
+      fertSelect.value = 'tree_fert';
+    }
+  }
+  
   modalOverlay.style.display = 'flex';
 };
 
@@ -793,7 +816,7 @@ document.getElementById('form-manual').addEventListener('submit', (e) => {
 
 // Helper to determine if a crop is viable to grow on the Main Farm in a target season
 function canGrowInSeason(cropKey, targetSeason) {
-  const wildTrees = ['mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree'];
+  const wildTrees = ['mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree', 'moss_tree'];
   if (wildTrees.includes(cropKey)) {
     return true; // Wild trees and Mahogany survive & grow in all seasons
   }
@@ -857,7 +880,9 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
   // Helper for starting action label
   let plantLabel = '';
   if (cropStage === 'regrow') {
-    if (cropKey === 'mystic_tree') {
+    if (cropKey === 'moss_tree') {
+      plantLabel = `🌿 Moss Harvested (${location})`;
+    } else if (cropKey === 'mystic_tree') {
       plantLabel = `🌳 Mystic Syrup Harvested (${location})`;
     } else if (cropKey === 'oak_tree') {
       plantLabel = `🌳 Oak Resin Harvested (${location})`;
@@ -873,7 +898,9 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
       plantLabel = `🌾 ${crop.name} Harvested (Regrow - ${location})`;
     }
   } else {
-    if (crop.key === 'mahogany') {
+    if (crop.key === 'moss_tree') {
+      plantLabel = `🌱 Mossy Seed Planted (${location})`;
+    } else if (crop.key === 'mahogany') {
       plantLabel = `🪵 Mahogany Seed Planted (${location})`;
     } else if (crop.isTree) {
       plantLabel = `🌳 ${crop.name} Planted (${location})`;
@@ -901,6 +928,7 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
 
   // Helper for ready / harvest label
   function getReadyLabel(cKey, cObj, loc, isRegrow) {
+    if (cKey === 'moss_tree') return `🌿 Moss Ready (Scythe) (${loc})`;
     if (cKey === 'mystic_tree') return `🌳 Mystic Syrup Ready (${loc})`;
     if (cKey === 'oak_tree') return `🌳 Oak Resin Ready (${loc})`;
     if (cKey === 'maple_tree') return `🌳 Maple Syrup Ready (${loc})`;
@@ -930,11 +958,13 @@ document.getElementById('form-crop').addEventListener('submit', (e) => {
     cropKey: cropKey,
     label: cropStage === 'regrow' 
       ? getReadyLabel(cropKey, crop, location, true)
-      : (crop.key === 'mahogany' 
-          ? `🪵 Mahogany Tree Mature (Hardwood) (${location})`
-          : (crop.isWildTree 
-              ? `🌳 ${crop.name} Mature (Ready for Tapper) (${location})`
-              : (crop.isTree ? `🌳 ${crop.name} Fruit Ready (${location})` : `🌾 ${crop.name} Ready (${location})`))),
+      : (crop.key === 'moss_tree'
+          ? `🌳 Mossy Tree Mature (Ready for Scythe) (${location})`
+          : (crop.key === 'mahogany' 
+              ? `🪵 Mahogany Tree Mature (Hardwood) (${location})`
+              : (crop.isWildTree 
+                  ? `🌳 ${crop.name} Mature (Ready for Tapper) (${location})`
+                  : (crop.isTree ? `🌳 ${crop.name} Fruit Ready (${location})` : `🌾 ${crop.name} Ready (${location})`)))),
     groupId: groupId,
     absDay: harvestAbs
   };
@@ -1150,6 +1180,21 @@ document.getElementById('machine-select').addEventListener('change', function() 
     document.getElementById('machine-loc').value = 'Cindersap Forest';
   }
 });
+
+// Auto-select Tree Fertilizer when choosing wild trees (including Mossy Tree)
+const cropSelectEl = document.getElementById('crop-select');
+if (cropSelectEl) {
+  cropSelectEl.addEventListener('change', function() {
+    const cropKey = this.value;
+    const cropPreset = CROP_GROWTH_PRESETS[cropKey];
+    const fertSelect = document.getElementById('crop-fert');
+    if (cropPreset && cropPreset.isWildTree) {
+      if (fertSelect) fertSelect.value = 'tree_fert';
+    } else {
+      if (fertSelect && fertSelect.value === 'tree_fert') fertSelect.value = 'none';
+    }
+  });
+}
 
 // Delete task (supports cascade delete on threads from the clicked point forward)
 window.deleteTask = function(day, id, event) {
@@ -1595,7 +1640,7 @@ let activeManagerTab = 'crops'; // 'crops' or 'machines'
 const DEFAULT_ACTIVE_CROPS = [
   'wheat', 'starfruit', 'ancient', 'strawberry', 'rhubarb', 'blueberry', 'sweetgem', 
   'cherry', 'apricot', 'orange', 'peach', 'apple', 'pomegranate', 'banana', 'mango',
-  'mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree'
+  'mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree', 'moss_tree'
 ];
 
 const DEFAULT_ACTIVE_MACHINES = [
@@ -1609,7 +1654,7 @@ const DEFAULT_ACTIVE_MACHINES = [
 function populateCropDropdown() {
   let activeKeys = JSON.parse(localStorage.getItem('stardew_active_crops')) || DEFAULT_ACTIVE_CROPS;
   // Ensure essential tree/crop options are automatically included if not present
-  ['wheat', 'mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree'].forEach(k => {
+  ['wheat', 'mahogany', 'oak_tree', 'maple_tree', 'pine_tree', 'mystic_tree', 'moss_tree'].forEach(k => {
     if (!activeKeys.includes(k)) activeKeys.push(k);
   });
   localStorage.setItem('stardew_active_crops', JSON.stringify(activeKeys));
@@ -1625,6 +1670,8 @@ function populateCropDropdown() {
     let label = c.name;
     if (c.key === 'mahogany') {
       label += ` (26d / 7d Tree Fert, ALL SEASONS)`;
+    } else if (c.key === 'moss_tree') {
+      label += ` (24d / 5d Tree Fert, 3d regrow, ALL SEASONS)`;
     } else if (c.isWildTree) {
       label += ` (${c.base}d / 5d Tree Fert, ALL SEASONS)`;
     } else if (c.isTree) {
