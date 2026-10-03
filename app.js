@@ -1181,20 +1181,6 @@ document.getElementById('machine-select').addEventListener('change', function() 
   }
 });
 
-// Auto-select Tree Fertilizer when choosing wild trees (including Mossy Tree)
-const cropSelectEl = document.getElementById('crop-select');
-if (cropSelectEl) {
-  cropSelectEl.addEventListener('change', function() {
-    const cropKey = this.value;
-    const cropPreset = CROP_GROWTH_PRESETS[cropKey];
-    const fertSelect = document.getElementById('crop-fert');
-    if (cropPreset && cropPreset.isWildTree) {
-      if (fertSelect) fertSelect.value = 'tree_fert';
-    } else {
-      if (fertSelect && fertSelect.value === 'tree_fert') fertSelect.value = 'none';
-    }
-  });
-}
 
 // Delete task (supports cascade delete on threads from the clicked point forward)
 window.deleteTask = function(day, id, event) {
