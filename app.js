@@ -2036,32 +2036,30 @@ if (activeTrackerSheet === 'walnuts') {
 let currentTrackerFilter = localStorage.getItem(`stardew_tracker_filter_${activeTrackerSheet}`) || 'all';
 let currentTrackerSearch = '';
 
-// Mode switching (Calendar vs Tracker vs Planner)
+// Mode switching (Calendar vs Tracker)
 const btnViewCalendar = document.getElementById('btn-view-calendar');
 const btnViewTracker = document.getElementById('btn-view-tracker');
-const btnViewPlanner = document.getElementById('btn-view-planner');
 const calendarMainView = document.getElementById('calendar-main-view');
 const trackerMainView = document.getElementById('tracker-main-view');
-const plannerMainView = document.getElementById('planner-main-view');
 const calendarHeaderControls = document.getElementById('calendar-header-controls');
 const trackerHeaderControls = document.getElementById('tracker-header-controls');
 
 function setAppViewMode(mode) {
+  if (mode !== 'tracker') mode = 'calendar';
   localStorage.setItem('stardew_view_mode', mode);
   
   // Set body class for bulletproof CSS-based header visibility
-  document.body.classList.remove('view-calendar', 'view-tracker', 'view-planner');
+  document.body.classList.remove('view-calendar', 'view-tracker');
   document.body.classList.add(`view-${mode}`);
 
   // Reset all mode buttons
-  [btnViewCalendar, btnViewTracker, btnViewPlanner].forEach(btn => {
+  [btnViewCalendar, btnViewTracker].forEach(btn => {
     if (btn) btn.classList.remove('active');
   });
 
   // Hide all main containers and header control rows
   if (calendarMainView) calendarMainView.style.display = 'none';
   if (trackerMainView) trackerMainView.style.display = 'none';
-  if (plannerMainView) plannerMainView.style.display = 'none';
   if (calendarHeaderControls) calendarHeaderControls.style.display = 'none';
   if (trackerHeaderControls) trackerHeaderControls.style.display = 'none';
 
@@ -2070,9 +2068,6 @@ function setAppViewMode(mode) {
     if (trackerMainView) trackerMainView.style.display = 'flex';
     if (trackerHeaderControls) trackerHeaderControls.style.display = 'flex';
     renderTrackerSheet();
-  } else if (mode === 'planner') {
-    if (btnViewPlanner) btnViewPlanner.classList.add('active');
-    if (plannerMainView) plannerMainView.style.display = 'block';
   } else {
     if (btnViewCalendar) btnViewCalendar.classList.add('active');
     if (calendarMainView) calendarMainView.style.display = 'flex';
@@ -2083,7 +2078,6 @@ function setAppViewMode(mode) {
 
 if (btnViewCalendar) btnViewCalendar.addEventListener('click', () => setAppViewMode('calendar'));
 if (btnViewTracker) btnViewTracker.addEventListener('click', () => setAppViewMode('tracker'));
-if (btnViewPlanner) btnViewPlanner.addEventListener('click', () => setAppViewMode('planner'));
 
 // Sheet tab switching
 const trackerTabBtns = document.querySelectorAll('.tracker-tab-btn');
@@ -2164,7 +2158,7 @@ window.addEventListener('keydown', (e) => {
   // 2. Shift + Left/Right (no Ctrl): Switch between Tracker categories (Shipped, Crafting, Cooking, Fish, Museum, Villagers)
   if (e.shiftKey && !e.ctrlKey && !e.metaKey && !e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
     e.preventDefault();
-    // If currently on calendar or planner, switch to tracker first or navigate tracker sheets
+    // If currently on calendar, switch to tracker first or navigate tracker sheets
     const currentMode = localStorage.getItem('stardew_view_mode') || 'calendar';
     if (currentMode !== 'tracker') {
       setAppViewMode('tracker');
@@ -2915,23 +2909,17 @@ function renderTrackerGridOnly() {
 }
 
 // Initial View mode loader
-const savedViewMode = localStorage.getItem('stardew_view_mode') || 'calendar';
+let savedViewMode = localStorage.getItem('stardew_view_mode') || 'calendar';
+if (savedViewMode === 'planner') {
+  savedViewMode = 'calendar';
+  localStorage.setItem('stardew_view_mode', 'calendar');
+}
 setAppViewMode(savedViewMode);
 
 // Global handler: prevent Ctrl + scroll wheel from zooming the main website interface
 window.addEventListener('wheel', (e) => {
   if (e.ctrlKey || e.metaKey) {
     e.preventDefault();
-    const plannerFrame = document.getElementById('planner-frame');
-    if (plannerFrame && plannerFrame.contentWindow) {
-      try {
-        const pw = plannerFrame.contentWindow;
-        if (pw.planner && pw.planner.viewport) {
-          const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
-          pw.planner.viewport.zoomPercent(zoomFactor - 1, true);
-        }
-      } catch (err) {}
-    }
   }
 }, { passive: false });
 

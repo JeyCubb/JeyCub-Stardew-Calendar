@@ -47,21 +47,12 @@ body {
 
 /* Strict Tab/Mode-Based Visibility Control (Desktop & Mobile) */
 body.view-calendar #tracker-header-controls,
-body.view-calendar #tracker-main-view,
-body.view-calendar #planner-main-view {
+body.view-calendar #tracker-main-view {
   display: none !important;
 }
 
 body.view-tracker #calendar-header-controls,
-body.view-tracker #calendar-main-view,
-body.view-tracker #planner-main-view {
-  display: none !important;
-}
-
-body.view-planner #calendar-header-controls,
-body.view-planner #tracker-header-controls,
-body.view-planner #calendar-main-view,
-body.view-planner #tracker-main-view {
+body.view-tracker #calendar-main-view {
   display: none !important;
 }
 
@@ -1224,27 +1215,7 @@ header {
   display: block;
 }
 
-/* ==========================================================================
-   FARM PLANNER VIEW
-   ========================================================================== */
-#planner-main-view {
-  width: 100vw;
-  height: calc(100vh - 44px);
-  height: calc(100dvh - 44px);
-  max-width: 100vw;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-}
 
-#planner-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: #1e1b14;
-  display: block;
-}
 
 /* ==========================================================================
    MODALS & FORMS
@@ -1774,13 +1745,7 @@ header {
     margin-top: 2px !important;
   }
 
-  /* Farm Planner View on Mobile */
-  #planner-main-view {
-    height: calc(100vh - 65px) !important;
-    height: calc(100dvh - 65px) !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-  }
+  
 
   /* Modals on Mobile */
   .modal-overlay {

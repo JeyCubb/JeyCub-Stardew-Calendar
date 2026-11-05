@@ -9,7 +9,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="styles.css?v=10.5">
+  <link rel="stylesheet" href="styles.css?v=10.6">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Firebase Core & Database SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
@@ -24,11 +24,11 @@
         <span class="app-logo-text">Stardew Valley Tracker</span>
       </h1>
 
-      <!-- Mode Switcher (Calendar vs Perfection Tracker vs Farm Planner) -->
+      <!-- Mode Switcher (Calendar vs Perfection Tracker) -->
       <div class="view-mode-selector">
         <button id="btn-view-calendar" class="view-tab-btn active">📅 Calendar</button>
         <button id="btn-view-tracker" class="view-tab-btn">⭐ Tracker</button>
-        <button id="btn-view-planner" class="view-tab-btn">🚜 Planner</button>
+
       </div>
     </div>
     
@@ -117,11 +117,6 @@
 
     <!-- Tracker Items Grid -->
     <div id="tracker-items-grid" class="tracker-grid"></div>
-  </main>
-
-  <!-- Main Farm Planner Layout -->
-  <main id="planner-main-view" style="display: none;">
-    <iframe id="planner-frame" src="https://v3.stardew.info/planner/" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
   </main>
 
 
@@ -277,8 +272,8 @@
     </div>
   </div>
 
-<script src="perfection_data.js?v=10.5"></script>
-  <script src="app.js?v=10.5"></script>
+<script src="perfection_data.js?v=10.6"></script>
+  <script src="app.js?v=10.6"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then((registrations) => {
