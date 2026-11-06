@@ -536,10 +536,10 @@ header {
 }
 
 .hide-task-labels .ready-tasks {
-  justify-content: center !important;
-  align-content: center !important;
-  align-items: center !important;
-  flex-grow: 1 !important;
+  justify-content: flex-start !important;
+  align-content: flex-start !important;
+  align-items: flex-start !important;
+  flex-grow: 0 !important;
 }
 .hide-task-labels .plant-tasks {
   display: flex !important;
@@ -903,17 +903,17 @@ header {
     flex-direction: row !important;
     flex-wrap: wrap !important;
     gap: 4px !important;
-    justify-content: center !important;
-    align-content: center !important;
-    align-items: center !important;
+    justify-content: flex-start !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
     width: 100% !important;
   }
 
   .hide-task-labels .ready-tasks {
-    justify-content: center !important;
-    align-content: center !important;
-    align-items: center !important;
-    flex-grow: 1 !important;
+    justify-content: flex-start !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-grow: 0 !important;
   }
 
   .hide-task-labels .task-item {
@@ -1752,16 +1752,16 @@ header {
     flex-direction: row !important;
     flex-wrap: wrap !important;
     gap: 3px !important;
-    justify-content: center !important;
-    align-content: center !important;
-    align-items: center !important;
+    justify-content: flex-start !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
     width: 100% !important;
   }
   .hide-task-labels .ready-tasks {
-    justify-content: center !important;
-    align-content: center !important;
-    align-items: center !important;
-    flex-grow: 1 !important;
+    justify-content: flex-start !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-grow: 0 !important;
   }
   .hide-task-labels .task-item {
     width: calc((100% - 4px) / 2) !important;
