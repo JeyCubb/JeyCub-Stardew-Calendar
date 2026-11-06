@@ -464,9 +464,9 @@ header {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
-  margin-right: 4px;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
   flex-shrink: 0;
   cursor: pointer;
 }
@@ -530,7 +530,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.2rem;
+  gap: 0.35rem;
   align-content: flex-start;
   flex-grow: 0;
 }
@@ -543,19 +543,19 @@ header {
 }
 
 .hide-task-labels .task-item {
-  width: 26px;
-  height: 26px;
+  width: 52px;
+  height: 52px;
   padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 8px;
   margin: 0;
 }
 
 .hide-task-labels .task-item img.crop-icon {
-  width: 22px !important;
-  height: 22px !important;
+  width: 44px !important;
+  height: 44px !important;
   margin-right: 0 !important;
 }
 
@@ -571,6 +571,15 @@ header {
   margin-right: 0 !important;
   width: 100% !important;
   height: 100% !important;
+}
+
+.hide-task-labels .checkmark-overlay {
+  font-size: 1.6rem !important;
+  border-radius: 8px;
+}
+
+.hide-task-labels .task-completed .task-icon-wrapper .checkmark-overlay::after {
+  font-size: 2rem !important;
 }
 
 /* ==========================================================================
@@ -704,7 +713,7 @@ header {
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item {
   width: 100% !important;
   height: auto !important;
-  min-height: 38px !important;
+  min-height: 58px !important;
   padding: 0.4rem 0.6rem !important;
   display: flex !important;
   justify-content: space-between !important;
@@ -716,9 +725,9 @@ header {
 }
 
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item img.crop-icon {
-  width: 26px !important;
-  height: 26px !important;
-  margin-right: 8px !important;
+  width: 52px !important;
+  height: 52px !important;
+  margin-right: 12px !important;
   flex-shrink: 0 !important;
 }
 
@@ -746,9 +755,9 @@ header {
 }
 
 .hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-icon-wrapper {
-  width: 26px !important;
-  height: 26px !important;
-  margin-right: 8px !important;
+  width: 52px !important;
+  height: 52px !important;
+  margin-right: 12px !important;
   flex-shrink: 0 !important;
 }
 
@@ -777,7 +786,7 @@ header {
   .hide-task-labels .day-card.has-tasks:hover .task-item {
     width: 100% !important;
     height: auto !important;
-    min-height: 38px !important;
+    min-height: 58px !important;
     padding: 0.4rem 0.6rem !important;
     display: flex !important;
     justify-content: space-between !important;
@@ -789,9 +798,9 @@ header {
   }
 
   .hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon {
-    width: 26px !important;
-    height: 26px !important;
-    margin-right: 8px !important;
+    width: 52px !important;
+    height: 52px !important;
+    margin-right: 12px !important;
     flex-shrink: 0 !important;
   }
 
@@ -819,9 +828,9 @@ header {
   }
 
   .hide-task-labels .day-card.has-tasks:hover .task-item .task-icon-wrapper {
-    width: 26px !important;
-    height: 26px !important;
-    margin-right: 8px !important;
+    width: 52px !important;
+    height: 52px !important;
+    margin-right: 12px !important;
     flex-shrink: 0 !important;
   }
 
@@ -1588,14 +1597,14 @@ header {
     min-width: 0 !important;
   }
   .task-item img.crop-icon {
-    width: 13px !important;
-    height: 13px !important;
-    margin-right: 2px !important;
+    width: 26px !important;
+    height: 26px !important;
+    margin-right: 4px !important;
   }
   .task-icon-wrapper {
-    width: 13px !important;
-    height: 13px !important;
-    margin-right: 2px !important;
+    width: 26px !important;
+    height: 26px !important;
+    margin-right: 4px !important;
   }
 
   /* Hide task labels mode on mobile (Compact Icon Grid) */
@@ -1607,21 +1616,21 @@ header {
     justify-content: flex-start !important;
   }
   .hide-task-labels .task-item {
-    width: 15px !important;
-    height: 15px !important;
+    width: 30px !important;
+    height: 30px !important;
     padding: 0 !important;
     margin: 0 !important;
     min-width: 0 !important;
     border: none !important;
   }
   .hide-task-labels .task-item img.crop-icon {
-    width: 13px !important;
-    height: 13px !important;
+    width: 26px !important;
+    height: 26px !important;
     margin-right: 0 !important;
   }
   .hide-task-labels .task-item .task-icon-wrapper {
-    width: 13px !important;
-    height: 13px !important;
+    width: 26px !important;
+    height: 26px !important;
     margin-right: 0 !important;
   }
 
