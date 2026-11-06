@@ -656,7 +656,7 @@ function renderTasksForDay(day) {
     ` : `
       <div class="task-icon-wrapper" onclick="toggleTaskCompleted(${day}, '${task.id}', event)">
         <img src="${imgUrl}" class="crop-icon" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-        <div class="checkmark-overlay">✓</div>
+        <div class="checkmark-overlay">&#10003;</div>
       </div>
     `) : '';
     
@@ -737,7 +737,7 @@ window.openModal = function(day, event) {
       ` : `
         <div class="task-icon-wrapper" onclick="toggleTaskCompleted(${day}, '${task.id}', event)">
           <img src="${imgUrl}" class="crop-icon" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-          <div class="checkmark-overlay">✓</div>
+          <div class="checkmark-overlay">&#10003;</div>
         </div>
       `) : '';
       
