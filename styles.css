@@ -558,7 +558,7 @@ header {
   overflow: hidden;
 }
 
-.hide-task-labels .task-item > div {
+.hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item > div {
   width: 100% !important;
   height: 100% !important;
   display: flex !important;
@@ -915,7 +915,7 @@ header {
     margin: 0 auto !important;
   }
 
-  .hide-task-labels .task-item > div {
+  .hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item > div {
     width: 100% !important;
     height: 100% !important;
     display: flex !important;
@@ -1743,7 +1743,7 @@ header {
     object-fit: contain !important;
     margin: 0 auto !important;
   }
-  .hide-task-labels .task-item > div {
+  .hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item > div {
     width: 100% !important;
     height: 100% !important;
     display: flex !important;
@@ -2335,4 +2335,146 @@ header {
 /* Items Manager Overlay (Above day task modal) */
 #crop-manager-overlay {
   z-index: 150000 !important;
+}
+
+/* ==========================================================================
+   UNBREAKABLE HIGH-PRIORITY HOVER / TOUCH POPOUT OVERLAYS
+   ========================================================================== */
+.hide-task-labels .day-card.has-tasks:hover .tasks-container-compact,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .tasks-container-compact {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  gap: 0.35rem !important;
+  width: 260px !important;
+  min-width: 240px !important;
+  max-width: 300px !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  max-height: 65vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  z-index: 999999 !important;
+  padding: 0.6rem 0.65rem !important;
+  box-sizing: border-box !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .tasks-list,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .tasks-list {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  gap: 0.35rem !important;
+  width: 100% !important;
+  justify-content: flex-start !important;
+  align-content: flex-start !important;
+  align-items: stretch !important;
+  flex-grow: 0 !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .ready-tasks,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .ready-tasks {
+  flex-grow: 0 !important;
+  justify-content: flex-start !important;
+  align-content: flex-start !important;
+  align-items: stretch !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .task-item,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 52px !important;
+  aspect-ratio: auto !important;
+  padding: 0.4rem 0.6rem !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  overflow: visible !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .task-item > div,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item > div {
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .task-item .task-icon-wrapper,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-icon-wrapper {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  margin: 0 10px 0 0 !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .task-item img.crop-icon,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item img.crop-icon {
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-text-container {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .task-item .task-text-container span,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-text-container span {
+  display: block !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  width: auto !important;
+  color: var(--text-main) !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .task-item .task-subtitle,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-subtitle {
+  font-size: 0.72rem !important;
+  opacity: 0.8 !important;
+  margin-top: 2px !important;
+  display: block !important;
+}
+
+.hide-task-labels .day-card.has-tasks:hover .task-item .task-delete,
+.hide-task-labels .day-card.has-tasks.touch-hover-active .task-item .task-delete {
+  display: block !important;
+  font-size: 1.1rem !important;
+  padding: 0 4px !important;
+  margin-left: 6px !important;
+  flex-shrink: 0 !important;
 }
