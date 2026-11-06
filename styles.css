@@ -551,12 +551,36 @@ header {
   justify-content: center;
   border-radius: 8px;
   margin: 0;
+  overflow: hidden;
+}
+
+.hide-task-labels .task-item > div {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hide-task-labels .task-item .task-icon-wrapper {
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .hide-task-labels .task-item img.crop-icon {
-  width: 54px !important;
-  height: 54px !important;
-  margin-right: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 88% !important;
+  max-height: 88% !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+  display: block !important;
 }
 
 .hide-task-labels .task-item .task-text-container {
@@ -565,12 +589,6 @@ header {
 
 .hide-task-labels .task-item .task-delete {
   display: none !important;
-}
-
-.hide-task-labels .task-item .task-icon-wrapper {
-  margin-right: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
 }
 
 .hide-task-labels .checkmark-overlay {
@@ -885,10 +903,20 @@ header {
     margin-right: 0 !important;
   }
 
+  .hide-task-labels .task-item > div {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .hide-task-labels .task-item .task-icon-wrapper {
     width: 100% !important;
     height: 100% !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1696,10 +1724,20 @@ header {
     object-fit: contain !important;
     margin-right: 0 !important;
   }
+  .hide-task-labels .task-item > div {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .hide-task-labels .task-item .task-icon-wrapper {
     width: 100% !important;
     height: 100% !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;

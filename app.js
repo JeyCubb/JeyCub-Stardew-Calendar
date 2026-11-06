@@ -652,7 +652,7 @@ function renderTasksForDay(day) {
     const imgUrl = getTaskIconUrl(task);
     const isStartTask = task.id && typeof task.id === 'string' && (task.id.startsWith('plant') || task.id.startsWith('load'));
     const iconHtml = imgUrl ? (isStartTask ? `
-      <img src="${imgUrl}" class="crop-icon" alt="" style="width: 40px; height: 40px; object-fit: contain; margin-right: 8px; vertical-align: middle; flex-shrink: 0;">
+      <div class="task-icon-wrapper"><img src="${imgUrl}" class="crop-icon" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block;"></div>
     ` : `
       <div class="task-icon-wrapper" onclick="toggleTaskCompleted(${day}, '${task.id}', event)">
         <img src="${imgUrl}" class="crop-icon" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block;">
@@ -733,7 +733,7 @@ window.openModal = function(day, event) {
       const imgUrl = getTaskIconUrl(task);
       const isStartTask = task.id && typeof task.id === 'string' && (task.id.startsWith('plant') || task.id.startsWith('load'));
       const iconHtml = imgUrl ? (isStartTask ? `
-        <img src="${imgUrl}" class="crop-icon" alt="" style="width: 40px; height: 40px; object-fit: contain; margin-right: 8px; vertical-align: middle; flex-shrink: 0;">
+        <div class="task-icon-wrapper"><img src="${imgUrl}" class="crop-icon" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block;"></div>
       ` : `
         <div class="task-icon-wrapper" onclick="toggleTaskCompleted(${day}, '${task.id}', event)">
           <img src="${imgUrl}" class="crop-icon" alt="" style="width: 100%; height: 100%; object-fit: contain; display: block;">
