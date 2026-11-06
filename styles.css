@@ -542,8 +542,33 @@ header {
   flex-grow: 1 !important;
 }
 .hide-task-labels .plant-tasks {
-  justify-content: flex-end;
-  align-items: flex-end;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 3px !important;
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+  align-content: flex-end !important;
+  flex-grow: 0 !important;
+}
+
+/* Darkened start/place/load action tasks: 50% smaller than ready/claimable */
+.hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item.start-action-task {
+  width: 29px !important;
+  height: 29px !important;
+  min-width: 29px !important;
+  max-width: 29px !important;
+  min-height: 29px !important;
+  max-height: 29px !important;
+  border-radius: 5px !important;
+  border-width: 1px !important;
+}
+
+.hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item.start-action-task img.crop-icon {
+  width: 23px !important;
+  height: 23px !important;
+  max-width: 82% !important;
+  max-height: 82% !important;
 }
 
 .hide-task-labels .task-item {
@@ -913,6 +938,24 @@ header {
     max-height: 44px !important;
     object-fit: contain !important;
     margin: 0 auto !important;
+  }
+
+  .hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item.start-action-task {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    max-width: 26px !important;
+    min-height: 26px !important;
+    max-height: 26px !important;
+    border-radius: 4px !important;
+    border-width: 1px !important;
+  }
+
+  .hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item.start-action-task img.crop-icon {
+    width: 21px !important;
+    height: 21px !important;
+    max-width: 82% !important;
+    max-height: 82% !important;
   }
 
   .hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item > div {
@@ -1742,6 +1785,24 @@ header {
     max-height: 40px !important;
     object-fit: contain !important;
     margin: 0 auto !important;
+  }
+
+  .hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item.start-action-task {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    min-height: 24px !important;
+    max-height: 24px !important;
+    border-radius: 4px !important;
+    border-width: 1px !important;
+  }
+
+  .hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item.start-action-task img.crop-icon {
+    width: 19px !important;
+    height: 19px !important;
+    max-width: 82% !important;
+    max-height: 82% !important;
   }
   .hide-task-labels .day-card:not(:hover):not(.touch-hover-active) .task-item > div {
     width: 100% !important;
